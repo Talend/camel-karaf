@@ -98,6 +98,8 @@
 
     <properties>
         <upstream.version>3.9.0</upstream.version>
+        <camel.features.tesb.version>3.9.0.tesb1</camel.features.tesb.version>
+        <camel-dozer.feature.tesb.version>3.9.0.tesb1</camel-dozer.feature.tesb.version>
 
         <!-- unify the encoding for all the modules -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -488,6 +490,8 @@
                             <!-- something like :
                             <my.custom.property>${my.custom.property}</my.custom.property>
                             -->
+                            <camel.features.tesb.version>${camel.features.tesb.version}</camel.features.tesb.version>
+                            <camel-dozer.feature.tesb.version>${camel-dozer.feature.tesb.version}</camel-dozer.feature.tesb.version>
                         </properties>
                     </configuration>
                     <executions>
