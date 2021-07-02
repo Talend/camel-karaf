@@ -101,7 +101,7 @@
         <camel.features.tesb.version>3.9.0.tesb1</camel.features.tesb.version>
         <camel-dozer.feature.tesb.version>3.9.0.tesb1</camel-dozer.feature.tesb.version>
         <jaxb-bundle-version.tesb.version>2.3.2_1</jaxb-bundle-version.tesb.version>
-        <activemq.tesb.version>5.16.3</activemq.tesb.version>
+        <activemq.tesb.version>5.16.3-SNAPSHOT</activemq.tesb.version> <!-- //FIXME TO BE SET TO RELEASE VERSION WHEN AVAILABLE -->
         <camel-cxf.tesb.version>3.9.0.tesb1</camel-cxf.tesb.version>
         <camel-spring-xml.tesb.version>3.9.0.tesb1</camel-spring-xml.tesb.version>
         <camel-activemq.tesb.version>3.9.0.tesb1</camel-activemq.tesb.version>
