@@ -98,7 +98,7 @@
 
     <properties>
         <upstream.version>3.9.0</upstream.version>
-        <camel.features.tesb.version>3.9.0.tesb2</camel.features.tesb.version>
+        <camel.features.tesb.version>3.9.0.tesb1</camel.features.tesb.version>
         <camel-dozer.feature.tesb.version>3.9.0.tesb1</camel-dozer.feature.tesb.version>
         <jaxb-bundle-version.tesb.version>2.3.2_1</jaxb-bundle-version.tesb.version>
         <activemq.tesb.version>5.16.3</activemq.tesb.version>
