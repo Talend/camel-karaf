@@ -110,7 +110,7 @@
             <plugin>
                 <groupId>org.apache.camel.karaf</groupId>
                 <artifactId>camel-catalog-generator-karaf-maven-plugin</artifactId>
-                <version>${project.version}</version>
+                <version>${upstream.version}</version>
                 <executions>
                     <execution>
                         <goals>
@@ -125,7 +125,7 @@
             <plugin>
                 <groupId>org.apache.camel.karaf</groupId>
                 <artifactId>camel-karaf-docs-maven-plugin</artifactId>
-                <version>${project.version}</version>
+                <version>${upstream.version}</version>
                 <executions>
                     <execution>
                         <goals>
