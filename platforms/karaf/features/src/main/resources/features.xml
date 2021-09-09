@@ -44,7 +44,7 @@
     <bundle>mvn:org.apache.camel/camel-util-json/${upstream.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-support/${upstream.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-base/${upstream.version}</bundle>
-    <bundle>mvn:org.apache.camel/camel-base-engine/${upstream.version}</bundle>
+    <bundle>mvn:org.apache.camel/camel-base-engine/${camel-base-engine.tesb.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-management/${upstream.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-core-model/${upstream.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-core-reifier/${upstream.version}</bundle>
@@ -60,7 +60,7 @@
     <bundle>mvn:org.apache.camel/camel-xml-jaxp/${upstream.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-xml-jaxb/${upstream.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-tooling-model/${upstream.version}</bundle>
-    <bundle>mvn:org.apache.camel/camel-main/${upstream.version}</bundle>
+    <bundle>mvn:org.apache.camel/camel-main/${camel-main.tesb.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-endpointdsl/${upstream.version}</bundle>
     <!-- core components -->
     <bundle>mvn:org.apache.camel.karaf/camel-bean-osgi/${upstream.version}</bundle>
