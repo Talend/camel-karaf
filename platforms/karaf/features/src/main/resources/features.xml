@@ -884,6 +884,7 @@
   <feature name='camel-groovy' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.ant/${ant-bundle-version}</bundle>
+    <bundle dependency='true'>mvn:org.codehaus.groovy/groovy/${groovy-version}</bundle>
     <bundle dependency='true'>mvn:org.codehaus.groovy/groovy-ant/${groovy-version}</bundle>
     <bundle dependency='true'>mvn:org.codehaus.groovy/groovy-cli-commons/${groovy-version}</bundle>
     <bundle dependency='true'>mvn:org.codehaus.groovy/groovy-cli-picocli/${groovy-version}</bundle>
