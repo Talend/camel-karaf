@@ -99,7 +99,7 @@
   <feature name='camel-blueprint' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
     <bundle>mvn:org.apache.camel/camel-core-xml/${upstream.version}</bundle>
-    <bundle>mvn:org.apache.camel.karaf/camel-blueprint/${upstream.version}</bundle>
+    <bundle>wrap:mvn:org.apache.camel.karaf/camel-blueprint/${upstream.version}$overwrite=merge&amp;Import-Package=org.apache.karaf.bundle.core;version="[4.2,5)";resolution:=optional,*</bundle>
     <feature>aries-blueprint</feature>
   </feature>
   <feature name='camel-spring' version='${upstream.version}' start-level='50'>
