@@ -240,6 +240,110 @@
     <bundle dependency='true'>mvn:org.apache.avro/avro/${avro-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-avro/${upstream.version}</bundle>
   </feature>
+  <feature name='camel-aws2-athena' version='${upstream.version}' start-level='50'>
+    <feature version='${upstream.version}'>camel-core</feature>
+    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aws-java-sdk2/${aws-sdk-v2-bundle-version}</bundle>
+    <bundle>mvn:org.apache.camel/camel-aws2-athena/${upstream.version}</bundle>
+  </feature>
+  <feature name='camel-aws2-cw' version='${upstream.version}' start-level='50'>
+    <feature version='${upstream.version}'>camel-core</feature>
+    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aws-java-sdk2/${aws-sdk-v2-bundle-version}</bundle>
+    <bundle>mvn:org.apache.camel/camel-aws2-cw/${upstream.version}</bundle>
+  </feature>
+  <feature name='camel-aws2-ddb' version='${upstream.version}' start-level='50'>
+    <feature version='${upstream.version}'>camel-core</feature>
+    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aws-java-sdk2/${aws-sdk-v2-bundle-version}</bundle>
+    <bundle>mvn:org.apache.camel/camel-aws2-ddb/${upstream.version}</bundle>
+  </feature>
+  <feature name='camel-aws2-ec2' version='${upstream.version}' start-level='50'>
+    <feature version='${upstream.version}'>camel-core</feature>
+    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aws-java-sdk2/${aws-sdk-v2-bundle-version}</bundle>
+    <bundle>mvn:org.apache.camel/camel-aws2-ec2/${upstream.version}</bundle>
+  </feature>
+  <feature name='camel-aws2-ecs' version='${upstream.version}' start-level='50'>
+    <feature version='${upstream.version}'>camel-core</feature>
+    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aws-java-sdk2/${aws-sdk-v2-bundle-version}</bundle>
+    <bundle>mvn:org.apache.camel/camel-aws2-ecs/${upstream.version}</bundle>
+  </feature>
+  <feature name='camel-aws2-eks' version='${upstream.version}' start-level='50'>
+    <feature version='${upstream.version}'>camel-core</feature>
+    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aws-java-sdk2/${aws-sdk-v2-bundle-version}</bundle>
+    <bundle>mvn:org.apache.camel/camel-aws2-eks/${upstream.version}</bundle>
+  </feature>
+  <feature name='camel-aws2-eventbridge' version='${upstream.version}' start-level='50'>
+    <feature version='${upstream.version}'>camel-core</feature>
+    <bundle dependency='true'>mvn:commons-io/commons-io/${commons-io-version}</bundle>
+    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aws-java-sdk2/${aws-sdk-v2-bundle-version}</bundle>
+    <bundle>mvn:org.apache.camel/camel-aws2-eventbridge/${upstream.version}</bundle>
+  </feature>
+  <feature name='camel-aws2-iam' version='${upstream.version}' start-level='50'>
+    <feature version='${upstream.version}'>camel-core</feature>
+    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aws-java-sdk2/${aws-sdk-v2-bundle-version}</bundle>
+    <bundle>mvn:org.apache.camel/camel-aws2-iam/${upstream.version}</bundle>
+  </feature>
+  <feature name='camel-aws2-kinesis' version='${upstream.version}' start-level='50'>
+    <feature version='${upstream.version}'>camel-core</feature>
+    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aws-java-sdk2/${aws-sdk-v2-bundle-version}</bundle>
+    <bundle>mvn:org.apache.camel/camel-aws2-kinesis/${upstream.version}</bundle>
+  </feature>
+  <feature name='camel-aws2-kms' version='${upstream.version}' start-level='50'>
+    <feature version='${upstream.version}'>camel-core</feature>
+    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aws-java-sdk2/${aws-sdk-v2-bundle-version}</bundle>
+    <bundle>mvn:org.apache.camel/camel-aws2-kms/${upstream.version}</bundle>
+  </feature>
+  <feature name='camel-aws2-lambda' version='${upstream.version}' start-level='50'>
+    <feature version='${upstream.version}'>camel-core</feature>
+    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aws-java-sdk2/${aws-sdk-v2-bundle-version}</bundle>
+    <bundle>mvn:org.apache.camel/camel-aws2-lambda/${upstream.version}</bundle>
+  </feature>
+  <feature name='camel-aws2-mq' version='${upstream.version}' start-level='50'>
+    <feature version='${upstream.version}'>camel-core</feature>
+    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aws-java-sdk2/${aws-sdk-v2-bundle-version}</bundle>
+    <bundle>mvn:org.apache.camel/camel-aws2-mq/${upstream.version}</bundle>
+  </feature>
+  <feature name='camel-aws2-msk' version='${upstream.version}' start-level='50'>
+    <feature version='${upstream.version}'>camel-core</feature>
+    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aws-java-sdk2/${aws-sdk-v2-bundle-version}</bundle>
+    <bundle>mvn:org.apache.camel/camel-aws2-msk/${upstream.version}</bundle>
+  </feature>
+  <feature name='camel-aws2-s3' version='${upstream.version}' start-level='50'>
+    <feature version='${upstream.version}'>camel-core</feature>
+    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aws-java-sdk2/${aws-sdk-v2-bundle-version}</bundle>
+    <bundle>mvn:org.apache.camel/camel-aws2-s3/${upstream.version}</bundle>
+  </feature>
+  <feature name='camel-aws2-ses' version='${upstream.version}' start-level='50'>
+    <feature version='${upstream.version}'>camel-core</feature>
+    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aws-java-sdk2/${aws-sdk-v2-bundle-version}</bundle>
+    <bundle dependency='true'>mvn:com.sun.mail/jakarta.mail/${jakarta-mail-version}</bundle>
+    <bundle>mvn:org.apache.camel/camel-aws2-ses/${upstream.version}</bundle>
+  </feature>
+  <feature name='camel-aws2-sns' version='${upstream.version}' start-level='50'>
+    <feature version='${upstream.version}'>camel-core</feature>
+    <bundle dependency='true'>mvn:commons-io/commons-io/${commons-io-version}</bundle>
+    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aws-java-sdk2/${aws-sdk-v2-bundle-version}</bundle>
+    <bundle>mvn:org.apache.camel/camel-aws2-sns/${upstream.version}</bundle>
+  </feature>
+  <feature name='camel-aws2-sqs' version='${upstream.version}' start-level='50'>
+    <feature version='${upstream.version}'>camel-core</feature>
+    <bundle dependency='true'>mvn:commons-io/commons-io/${commons-io-version}</bundle>
+    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aws-java-sdk2/${aws-sdk-v2-bundle-version}</bundle>
+    <bundle>mvn:org.apache.camel/camel-aws2-sqs/${upstream.version}</bundle>
+  </feature>
+  <feature name='camel-aws2-sts' version='${upstream.version}' start-level='50'>
+    <feature version='${upstream.version}'>camel-core</feature>
+    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aws-java-sdk2/${aws-sdk-v2-bundle-version}</bundle>
+    <bundle>mvn:org.apache.camel/camel-aws2-sts/${upstream.version}</bundle>
+  </feature>
+  <feature name='camel-aws2-translate' version='${upstream.version}' start-level='50'>
+    <feature version='${upstream.version}'>camel-core</feature>
+    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aws-java-sdk2/${aws-sdk-v2-bundle-version}</bundle>
+    <bundle>mvn:org.apache.camel/camel-aws2-translate/${upstream.version}</bundle>
+  </feature>
+  <feature name='camel-aws-secrets-manager' version='${upstream.version}' start-level='50'>
+    <feature version='${upstream.version}'>camel-core</feature>
+    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aws-java-sdk2/${aws-sdk-v2-bundle-version}</bundle>
+    <bundle>mvn:org.apache.camel/camel-aws-secrets-manager/${upstream.version}</bundle>
+  </feature>
   <feature name='camel-aws-xray' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
     <bundle dependency='true'>wrap:mvn:com.amazonaws/aws-xray-recorder-sdk-core/${aws-xray-version}</bundle>
