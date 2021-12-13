@@ -524,6 +524,7 @@
                             <activemq-version.tesb.version>${activemq-version.tesb.version}</activemq-version.tesb.version>
                             <camel-main.tesb.version>${camel-main.tesb.version}</camel-main.tesb.version>
                             <camel-base-engine.tesb.version>${camel-base-engine.tesb.version}</camel-base-engine.tesb.version>
+                            <camel-cxf.tesb.version>${camel-cxf.tesb.version}</camel-cxf.tesb.version>
                         </properties>
                     </configuration>
                     <executions>
