@@ -611,7 +611,7 @@
     <feature version='${cxf-version-range}'>cxf-features-logging</feature>
     <bundle>mvn:org.apache.camel/camel-attachments/${upstream.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-http-base/${upstream.version}</bundle>
-    <bundle>mvn:org.apache.camel/camel-cxf/${upstream.version}</bundle>
+    <bundle>mvn:org.apache.camel/camel-cxf/${camel-cxf.tesb.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-cxf-transport/${upstream.version}</bundle>
     <bundle>mvn:org.apache.camel.karaf/camel-cxf-blueprint/${upstream.version}</bundle>
     <bundle>mvn:org.apache.camel.karaf/camel-cxf-transport-blueprint/${upstream.version}</bundle>
