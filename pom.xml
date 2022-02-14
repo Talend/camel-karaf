@@ -106,6 +106,8 @@
         <log4j2.tesb.version>2.17.1</log4j2.tesb.version>
         <xmlsec.tesb.version>2.1.7</xmlsec.tesb.version>
         <jetty.tesb.version>9.4.43.v20210629</jetty.tesb.version>
+        <ant-bundle.tesb.version>1.10.12_1</ant-bundle.tesb.version>
+        <junit-bundle.tesb.version>4.13.2_1</junit-bundle.tesb.version>
 
         <!-- unify the encoding for all the modules -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -540,6 +542,8 @@
                             <log4j2.tesb.version>${log4j2.tesb.version}</log4j2.tesb.version>
                             <xmlsec.tesb.version>${xmlsec.tesb.version}</xmlsec.tesb.version>
                             <jetty.tesb.version>${jetty.tesb.version}</jetty.tesb.version>
+                            <ant-bundle.tesb.version>${ant-bundle.tesb.version}</ant-bundle.tesb.version>
+                            <junit-bundle.tesb.version>${junit-bundle.tesb.version}</junit-bundle.tesb.version>
                         </properties>
                     </configuration>
                     <executions>
