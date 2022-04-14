@@ -115,6 +115,10 @@
         <jedis-bundle.tesb.version>3.7.0_1</jedis-bundle.tesb.version>
         <lettuce-core.tesb.version>6.1.6.RELEASE</lettuce-core.tesb.version>
         <querydsl.tesb.version>4.4.0</querydsl.tesb.version>
+        <jackson2.tesb.version>2.13.2</jackson2.tesb.version>
+        <jackson2-databind.tesb.version>2.13.2.2</jackson2-databind.tesb.version>
+        <snakeyaml.tesb.version>1.30</snakeyaml.tesb.version>
+        <spring.tesb.version-range>[5.2,6)</spring.tesb.version-range>
 
         <!-- unify the encoding for all the modules -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -546,6 +550,10 @@
                             <jedis-bundle.tesb.version>${jedis-bundle.tesb.version}</jedis-bundle.tesb.version>
                             <lettuce-core.tesb.version>${lettuce-core.tesb.version}</lettuce-core.tesb.version>
                             <querydsl.tesb.version>${querydsl.tesb.version}</querydsl.tesb.version>
+                            <jackson2.tesb.version>${jackson2.tesb.version}</jackson2.tesb.version>
+                            <jackson2-databind.tesb.version>${jackson2-databind.tesb.version}</jackson2-databind.tesb.version>
+                            <snakeyaml.tesb.version>${snakeyaml.tesb.version}</snakeyaml.tesb.version>
+                            <spring.tesb.version-range>${spring.tesb.version-range}</spring.tesb.version-range>
                         </properties>
                     </configuration>
                     <executions>
