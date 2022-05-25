@@ -118,6 +118,7 @@
                 <artifactId>karaf-maven-plugin</artifactId>
                 <version>${karaf4-version}</version>
                 <configuration>
+                    <skip>true</skip>
                     <descriptors>
                         <descriptor>file://${project.build.directory}/classes/${features.file}</descriptor>
                         <!-- ideally, those profiles should be referenced in the features file -->

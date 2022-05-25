@@ -52,7 +52,7 @@
     <properties>
         <camel.osgi.manifest>${project.build.outputDirectory}/META-INF/MANIFEST.MF</camel.osgi.manifest>
 
-        <camel-prepare-component>true</camel-prepare-component>
+        <camel-prepare-component>false</camel-prepare-component>
     </properties>
 
     <build>
@@ -77,8 +77,8 @@
                         <Require-Capability>${camel.osgi.require.capability}</Require-Capability>
                         <Provide-Capability>${camel.osgi.provide.capability}</Provide-Capability>
                         <Implementation-Title>Apache Camel</Implementation-Title>
-                        <Implementation-Version>${project.version}</Implementation-Version>
-                        <Karaf-Info>Camel;${project.artifactId}=${project.version}</Karaf-Info>
+                        <Implementation-Version>${upstream.version}</Implementation-Version>
+                        <Karaf-Info>Camel;${project.artifactId}=${upstream.version}</Karaf-Info>
                         <_versionpolicy>${camel.osgi.import.default.version}</_versionpolicy>
                         <_failok>${camel.osgi.failok}</_failok>
                         <_removeheaders>Bnd-LastModified</_removeheaders>
@@ -99,7 +99,7 @@
                         </goals>
                         <configuration>
                             <versions>
-                                <camel.osgi.version.clean>${project.version}</camel.osgi.version.clean>
+                                <camel.osgi.version.clean>${upstream.version}</camel.osgi.version.clean>
                             </versions>
                         </configuration>
                     </execution>

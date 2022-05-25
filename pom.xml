@@ -79,10 +79,10 @@
     </modules>
 
     <scm>
-        <connection>scm:git:http://gitbox.apache.org/repos/asf/camel-karaf.git</connection>
-        <developerConnection>scm:git:https://gitbox.apache.org/repos/asf/camel-karaf.git</developerConnection>
-        <url>https://gitbox.apache.org/repos/asf?p=camel-karaf.git;a=summary</url>
-        <tag>camel-karaf-3.14.3</tag>
+        <connection>scm:git:http://github.com/Talend/camel-karaf.git</connection>
+        <developerConnection>scm:git:https://github.com/Talend/camel-karaf.git</developerConnection>
+        <url>https://github.com/Talend/camel-karaf</url>
+        <tag>HEAD</tag>
     </scm>
     <issueManagement>
         <system>jira</system>
@@ -96,7 +96,8 @@
     </distributionManagement>
 
     <properties>
-
+        <upstream.version>3.14.3</upstream.version>
+        
         <!-- unify the encoding for all the modules -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -348,72 +349,72 @@
             <dependency>
                 <groupId>org.apache.camel.karaf</groupId>
                 <artifactId>camel-blueprint</artifactId>
-                <version>${project.version}</version>
+                <version>${upstream.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.camel.karaf</groupId>
                 <artifactId>camel-blueprint-main</artifactId>
-                <version>${project.version}</version>
+                <version>${upstream.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.camel.karaf</groupId>
                 <artifactId>camel-test-blueprint</artifactId>
-                <version>${project.version}</version>
+                <version>${upstream.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.camel.karaf</groupId>
                 <artifactId>camel-cxf-blueprint</artifactId>
-                <version>${project.version}</version>
+                <version>${upstream.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.camel.karaf</groupId>
                 <artifactId>camel-cxf-transport-blueprint</artifactId>
-                <version>${project.version}</version>
+                <version>${upstream.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.camel.karaf</groupId>
                 <artifactId>camel-eventadmin</artifactId>
-                <version>${project.version}</version>
+                <version>${upstream.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.camel.karaf</groupId>
                 <artifactId>camel-kura</artifactId>
-                <version>${project.version}</version>
+                <version>${upstream.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.camel.karaf</groupId>
                 <artifactId>camel-osgi-activator</artifactId>
-                <version>${project.version}</version>
+                <version>${upstream.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.camel.karaf</groupId>
                 <artifactId>camel-paxlogging</artifactId>
-                <version>${project.version}</version>
+                <version>${upstream.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.camel.karaf</groupId>
                 <artifactId>camel-servlet-osgi</artifactId>
-                <version>${project.version}</version>
+                <version>${upstream.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.camel.karaf</groupId>
                 <artifactId>camel-test-karaf</artifactId>
-                <version>${project.version}</version>
+                <version>${upstream.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.camel.karaf</groupId>
                 <artifactId>camel-catalog-provider-karaf</artifactId>
-                <version>${project.version}</version>
+                <version>${upstream.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.camel.karaf</groupId>
                 <artifactId>camel-core-osgi</artifactId>
-                <version>${project.version}</version>
+                <version>${upstream.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.camel.karaf</groupId>
                 <artifactId>camel-commands-core</artifactId>
-                <version>${project.version}</version>
+                <version>${upstream.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.camel</groupId>
@@ -467,6 +468,14 @@
 
         <plugins>
             <plugin>
+                <groupId>io.paradoxical</groupId>
+                <artifactId>resolved-pom-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+            </plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>${maven-compiler-plugin-version}</version>
@@ -501,6 +510,51 @@
 
         <pluginManagement>
             <plugins>
+                <plugin>
+                    <groupId>io.paradoxical</groupId>
+                    <artifactId>resolved-pom-maven-plugin</artifactId>
+                    <version>1.0</version>
+                    <configuration>
+                        <properties>
+                            <revision>${revision}</revision>
+                            <upstream.version>${upstream.version}</upstream.version>
+
+                            <!-- ADD HERE ALL THE CUSTOM PROPERTIES declared in the above <properties> part -->
+                            <!-- something like :
+                            <my.custom.property>${my.custom.property}</my.custom.property>
+                            -->
+                        </properties>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <id>resolve-my-pom</id>
+                            <phase>initialize</phase>
+                            <goals>
+                                <goal>resolve-pom</goal>
+                            </goals>
+                            <configuration>
+                                <resolvedPomFile>.resolved-pom.xml</resolvedPomFile>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
+                    <groupId>org.sonatype.plugins</groupId>
+                    <artifactId>nexus-staging-maven-plugin</artifactId>
+                    <configuration>
+                        <skipLocalStaging>true</skipLocalStaging>
+                        <skipRemoteStaging>true</skipRemoteStaging>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <id>skip</id>
+                            <goals>
+                                <!-- to avoid replacement of maven-deploy-plugin -->
+                                <goal>deploy-staged</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-javadoc-plugin</artifactId>
