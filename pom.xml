@@ -97,7 +97,10 @@
 
     <properties>
         <upstream.version>3.14.3</upstream.version>
-        
+        <camel.features.tesb.version>3.14.3.20220610</camel.features.tesb.version>
+        <jaxb-bundle-version.tesb.version>2.3.2_1</jaxb-bundle-version.tesb.version>
+        <woodstox-version.tesb.version>6.2.6</woodstox-version.tesb.version>
+
         <!-- unify the encoding for all the modules -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -523,6 +526,8 @@
                             <!-- something like :
                             <my.custom.property>${my.custom.property}</my.custom.property>
                             -->
+                            <camel.features.tesb.version>${camel.features.tesb.version}</camel.features.tesb.version>
+                            <jaxb-bundle-version.tesb.version>${jaxb-bundle-version.tesb.version}</jaxb-bundle-version.tesb.version>
                         </properties>
                     </configuration>
                     <executions>
