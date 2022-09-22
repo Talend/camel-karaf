@@ -971,6 +971,48 @@
     <bundle dependency='true'>mvn:com.google.guava/guava/${google-mail-guava-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-google-mail/${upstream.version}</bundle>
   </feature>
+  <feature name='camel-google-pubsub' version='${upstream.version}' start-level='50'>
+    <feature version='${upstream.version}'>camel-core</feature>
+    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.google-cloud-pubsub/${google-cloud-pubsub-bundle-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:com.google.api/api-common/${google-pubsub-google-cloud-api-common-version}</bundle>
+    <bundle dependency='true'>mvn:com.google.protobuf/protobuf-java/${google-common-protobuf-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:com.google.api.grpc/proto-google-common-protos/${google-common-google-cloud-common-protos-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:com.google.api.grpc/proto-google-iam-v1/${google-proto-iam-version}</bundle>
+    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.guava/${google-cloud-guava-bundle-version}</bundle>
+    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.google-gax-grpc/${google-gax-bundle-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:com.google.auth/google-auth-library-oauth2-http/${grpc-google-auth-library-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:com.google.auth/google-auth-library-credentials/${grpc-google-auth-library-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:org.threeten/threetenbp/${google-pubsub-google-cloud-threetenbp-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-api/${google-http-client-opencensus-api-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:com.google.code.gson/gson/${google-common-gson-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:io.perfmark/perfmark-api/${google-cloud-perfmark-version}</bundle>
+    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.google-http-client/${google-http-client-bundle-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-contrib-http-util/${google-http-client-opencensus-api-version}</bundle>
+    <bundle dependency='true'>mvn:org.apache.httpcomponents/httpcore-osgi/${httpcore4-version}</bundle>
+    <bundle dependency='true'>mvn:org.apache.httpcomponents/httpclient-osgi/${httpclient4-version}</bundle>
+    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.grpc/${google-cloud-grpc-bundle-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:com.google.re2j/re2j/${re2j-version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-common/${google-common-netty-version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-codec/${google-common-netty-version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-codec-http/${google-common-netty-version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-codec-http2/${google-common-netty-version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-codec-socks/${google-common-netty-version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-resolver/${google-common-netty-version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-transport/${google-common-netty-version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-buffer/${google-common-netty-version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-transport-classes-epoll/${google-common-netty-version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-transport-native-unix-common/${google-common-netty-version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-handler/${google-common-netty-version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-handler-proxy/${google-common-netty-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-proto/${opencensus-proto-version}</bundle>
+    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.okhttp/${squareup-okhttp-bundle-version}</bundle>
+    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.okio/${squareup-okio-bundle-version}</bundle>
+    <bundle dependency='true'>mvn:org.bouncycastle/bcpkix-jdk18on/${google-common-bouncycastle-version}</bundle>
+    <bundle dependency='true'>mvn:org.bouncycastle/bctls-jdk18on/${google-common-bouncycastle-version}</bundle>
+    <bundle dependency='true'>mvn:org.bouncycastle/bcprov-jdk18on/${google-common-bouncycastle-version}</bundle>
+    <bundle dependency='true'>mvn:org.bouncycastle/bcutil-jdk18on/${google-common-bouncycastle-version}</bundle>
+    <bundle>mvn:org.apache.camel/camel-google-pubsub/${upstream.version}</bundle>
+  </feature>
   <feature name='camel-grape' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
     <bundle dependency='true'>mvn:org.codehaus.groovy/groovy/${groovy-version}</bundle>
@@ -1015,7 +1057,42 @@
     <bundle dependency='true'>wrap:mvn:io.krakens/java-grok/${java-grok-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-grok/${upstream.version}</bundle>
   </feature>
-
+  <feature name='camel-grpc' version='${upstream.version}' start-level='50'>
+    <feature version='${upstream.version}'>camel-core</feature>
+    <bundle dependency='true'>wrap:mvn:com.auth0/java-jwt/${grpc-java-jwt-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:com.google.auth/google-auth-library-oauth2-http/${grpc-google-auth-library-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:com.google.auth/google-auth-library-credentials/${grpc-google-auth-library-version}</bundle>
+    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.grpc/${google-cloud-grpc-bundle-version}</bundle>
+    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.guava/${google-cloud-guava-bundle-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:com.google.api.grpc/proto-google-common-protos/${google-common-google-cloud-common-protos-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:com.google.code.gson/gson/${google-common-gson-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:com.google.re2j/re2j/${re2j-version}</bundle>
+    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.okhttp/${squareup-okhttp-bundle-version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-transport/${google-common-netty-version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-buffer/${google-common-netty-version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-common/${google-common-netty-version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-resolver/${google-common-netty-version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-transport-classes-epoll/${google-common-netty-version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-transport-native-unix-common/${google-common-netty-version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-codec/${google-common-netty-version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-codec-http/${google-common-netty-version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-codec-http2/${google-common-netty-version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-handler/${google-common-netty-version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-handler-proxy/${google-common-netty-version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-codec-socks/${google-common-netty-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-api/${google-http-client-opencensus-api-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-proto/${opencensus-proto-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:io.perfmark/perfmark-api/${google-cloud-perfmark-version}</bundle>
+    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.okio/${squareup-okio-bundle-version}</bundle>
+    <bundle dependency='true'>mvn:org.bouncycastle/bcprov-jdk18on/${google-common-bouncycastle-version}</bundle>
+    <bundle dependency='true'>mvn:org.bouncycastle/bcpkix-jdk18on/${google-common-bouncycastle-version}</bundle>
+    <bundle dependency='true'>mvn:org.bouncycastle/bcutil-jdk18on/${google-common-bouncycastle-version}</bundle>
+    <bundle dependency='true'>mvn:org.bouncycastle/bctls-jdk18on/${google-common-bouncycastle-version}</bundle>
+    <bundle dependency='true'>mvn:org.javassist/javassist/${grpc-javassist-version}</bundle>
+    <bundle dependency='true'>mvn:com.google.protobuf/protobuf-java/${google-common-protobuf-version}</bundle>
+    <bundle dependency='true'>mvn:com.google.protobuf/protobuf-java-util/${google-common-protobuf-version}</bundle>
+    <bundle>mvn:org.apache.camel/camel-grpc/${upstream.version}</bundle>
+  </feature>
 
   <feature name='camel-gson' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
