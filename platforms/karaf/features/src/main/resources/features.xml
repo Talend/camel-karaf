@@ -1011,7 +1011,7 @@
     <bundle dependency='true'>mvn:org.bouncycastle/bctls-jdk18on/${google-common-bouncycastle-version}</bundle>
     <bundle dependency='true'>mvn:org.bouncycastle/bcprov-jdk18on/${google-common-bouncycastle-version}</bundle>
     <bundle dependency='true'>mvn:org.bouncycastle/bcutil-jdk18on/${google-common-bouncycastle-version}</bundle>
-    <bundle>mvn:org.apache.camel/camel-google-pubsub/${upstream.version}</bundle>
+    <bundle>mvn:org.apache.camel/camel-google-pubsub/${camel-google-pubsub.tesb.version}</bundle>
   </feature>
   <feature name='camel-grape' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
@@ -1091,7 +1091,7 @@
     <bundle dependency='true'>mvn:org.javassist/javassist/${grpc-javassist-version}</bundle>
     <bundle dependency='true'>mvn:com.google.protobuf/protobuf-java/${google-common-protobuf-version}</bundle>
     <bundle dependency='true'>mvn:com.google.protobuf/protobuf-java-util/${google-common-protobuf-version}</bundle>
-    <bundle>mvn:org.apache.camel/camel-grpc/${upstream.version}</bundle>
+    <bundle>mvn:org.apache.camel/camel-grpc/${camel-grpc.tesb.version}</bundle>
   </feature>
 
   <feature name='camel-gson' version='${upstream.version}' start-level='50'>
