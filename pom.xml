@@ -125,7 +125,7 @@
         <braintree-jackson2.tesb.version>2.13.4</braintree-jackson2.tesb.version>
         <json-validator-jackson.tesb.version>2.13.4</json-validator-jackson.tesb.version>
         <json-validator-jackson-databind.tesb.version>2.13.4.2</json-validator-jackson-databind.tesb.version>
-        <snakeyaml.tesb.version>1.30</snakeyaml.tesb.version>
+        <snakeyaml.tesb.version>1.33</snakeyaml.tesb.version>
         <jettison.tesb.version>1.5.1</jettison.tesb.version>
         <spring.tesb.version-range>[5.2,6)</spring.tesb.version-range>
 
