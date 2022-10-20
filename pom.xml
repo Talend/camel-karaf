@@ -127,6 +127,7 @@
         <json-validator-jackson-databind.tesb.version>2.13.4.2</json-validator-jackson-databind.tesb.version>
         <snakeyaml.tesb.version>1.33</snakeyaml.tesb.version>
         <jettison.tesb.version>1.5.1</jettison.tesb.version>
+        <commons-text.tesb.version>1.10.0</commons-text.tesb.version>
         <spring.tesb.version-range>[5.2,6)</spring.tesb.version-range>
 
         <!-- unify the encoding for all the modules -->
@@ -597,6 +598,7 @@
                             <json-validator-jackson-databind.tesb.version>${json-validator-jackson-databind.tesb.version}</json-validator-jackson-databind.tesb.version>
                             <snakeyaml.tesb.version>${snakeyaml.tesb.version}</snakeyaml.tesb.version>
                             <jettison.tesb.version>${jettison.tesb.version}</jettison.tesb.version>
+                            <commons-text.tesb.version>${commons-text.tesb.version}</commons-text.tesb.version>
                             <spring.tesb.version-range>${spring.tesb.version-range}</spring.tesb.version-range>
                         </properties>
                     </configuration>
