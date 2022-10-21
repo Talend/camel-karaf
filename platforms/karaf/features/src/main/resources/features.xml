@@ -2395,8 +2395,8 @@
     <bundle>mvn:org.apache.camel/camel-thrift/${upstream.version}</bundle>
   </feature>
   <feature name='camel-tika' version='${upstream.version}' start-level='50'>
-    <bundle dependency='true'>mvn:org.apache.tika/tika-core/${tika-version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.tika/tika-bundle/${tika-version}</bundle>
+    <bundle dependency='true'>mvn:org.apache.tika/tika-core/${tika.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:org.apache.tika/tika-bundle/${tika.tesb.version}</bundle>
     <feature version='${upstream.version}'>camel-core</feature>
     <bundle>mvn:org.apache.camel/camel-tika/${upstream.version}</bundle>
   </feature>
