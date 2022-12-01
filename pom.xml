@@ -604,7 +604,7 @@
                             <tika.tesb.version>${tika.tesb.version}</tika.tesb.version>
                             <commons-text.tesb.version>${commons-text.tesb.version}</commons-text.tesb.version>
                             <kafka-bundle.tesb.version>${kafka-bundle.tesb.version}</kafka-bundle.tesb.version>
-                            <sshd.tesb.version>${sshd.tesb.version}</ssh.tesb.version>
+                            <sshd.tesb.version>${sshd.tesb.version}</sshd.tesb.version>
                             <spring.tesb.version-range>${spring.tesb.version-range}</spring.tesb.version-range>
                         </properties>
                     </configuration>
