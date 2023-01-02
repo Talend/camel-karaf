@@ -97,7 +97,7 @@
 
     <properties>
         <upstream.version>3.11.1</upstream.version>
-        <camel.features.tesb.version>3.11.1.20221129</camel.features.tesb.version>
+        <camel.features.tesb.version>3.11.1.20221230</camel.features.tesb.version>
         <jaxb-bundle-version.tesb.version>2.3.2_1</jaxb-bundle-version.tesb.version>
         <woodstox-version.tesb.version>6.2.6</woodstox-version.tesb.version>
         <activemq-version.tesb.version>5.16.4</activemq-version.tesb.version>
@@ -108,8 +108,8 @@
         <camel-google-pubsub.tesb.version>3.11.1.20220926</camel-google-pubsub.tesb.version>
         <camel-grpc.tesb.version>3.11.1.20220926</camel-grpc.tesb.version>
         <xmlsec.tesb.version>2.1.7</xmlsec.tesb.version>
-        <jetty.tesb.version>9.4.48.v20220622</jetty.tesb.version>
-        <netty.tesb.version>4.1.77.Final</netty.tesb.version>
+        <jetty.tesb.version>9.4.49.v20220914</jetty.tesb.version>
+        <netty.tesb.version>4.1.85.Final</netty.tesb.version>
         <ant-bundle.tesb.version>1.10.12_1</ant-bundle.tesb.version>
         <junit-bundle.tesb.version>4.13.2_1</junit-bundle.tesb.version>
         <spring-data-redis-bundle.tesb.version>2.6.2_1</spring-data-redis-bundle.tesb.version>
@@ -118,15 +118,15 @@
         <jedis-bundle.tesb.version>3.7.0_1</jedis-bundle.tesb.version>
         <lettuce-core.tesb.version>6.1.6.RELEASE</lettuce-core.tesb.version>
         <querydsl.tesb.version>4.4.0</querydsl.tesb.version>
-        <jackson2.tesb.version>2.13.4</jackson2.tesb.version>
-        <jackson2-databind.tesb.version>2.13.4.2</jackson2-databind.tesb.version>
-        <avro-jackson.tesb.version>2.13.4</avro-jackson.tesb.version>
-        <avro-jackson-databind.tesb.version>2.13.4.2</avro-jackson-databind.tesb.version>
-        <braintree-jackson2.tesb.version>2.13.4</braintree-jackson2.tesb.version>
-        <json-validator-jackson.tesb.version>2.13.4</json-validator-jackson.tesb.version>
-        <json-validator-jackson-databind.tesb.version>2.13.4.2</json-validator-jackson-databind.tesb.version>
+        <jackson2.tesb.version>2.14.1</jackson2.tesb.version>
+        <jackson2-databind.tesb.version>2.14.1</jackson2-databind.tesb.version>
+        <avro-jackson.tesb.version>2.14.1</avro-jackson.tesb.version>
+        <avro-jackson-databind.tesb.version>2.14.1</avro-jackson-databind.tesb.version>
+        <braintree-jackson2.tesb.version>2.14.1</braintree-jackson2.tesb.version>
+        <json-validator-jackson.tesb.version>2.14.1</json-validator-jackson.tesb.version>
+        <json-validator-jackson-databind.tesb.version>2.14.1</json-validator-jackson-databind.tesb.version>
         <snakeyaml.tesb.version>1.33</snakeyaml.tesb.version>
-        <jettison.tesb.version>1.5.1</jettison.tesb.version>
+        <jettison.tesb.version>1.5.3</jettison.tesb.version>
         <tika.tesb.version>1.28.4</tika.tesb.version>
         <commons-text.tesb.version>1.10.0</commons-text.tesb.version>
         <kafka-bundle.tesb.version>2.8.2_1</kafka-bundle.tesb.version>
