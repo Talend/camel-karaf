@@ -236,7 +236,8 @@
     <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${avro-jackson-databind.tesb.version}</bundle>
     <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${avro-jackson.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.apache.commons/commons-compress/${avro-java-commons-compress-version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.avro/avro/${avro-version}</bundle>
+    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.avro/${servicemix.avro.version}</bundle>
+    <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.paranamer/${paranamer.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-avro/${upstream.version}</bundle>
   </feature>
   <feature name='camel-aws2-athena' version='${upstream.version}' start-level='50'>
@@ -1222,7 +1223,8 @@
   <feature name='camel-jackson-avro' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-jackson</feature>
     <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-avro/${jackson2.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.avro/avro/${avro-version}</bundle>
+    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.avro/${servicemix.avro.version}</bundle>
+    <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.paranamer/${paranamer.version}</bundle>
     <bundle dependency='true'>mvn:org.apache.commons/commons-compress/${avro-java-commons-compress-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-jackson-avro/${upstream.version}</bundle>
   </feature>
