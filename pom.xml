@@ -122,7 +122,7 @@
         <jackson2-databind.tesb.version>2.14.1</jackson2-databind.tesb.version>
         <avro-jackson.tesb.version>2.14.1</avro-jackson.tesb.version>
         <avro-jackson-databind.tesb.version>2.14.1</avro-jackson-databind.tesb.version>
-        <servicemix.avro.tesb.version>1.11.1_1</servicemix.avro.tesb.version>
+        <servicemix.avro.tesb.version>1.11.1_1.tesb1</servicemix.avro.tesb.version>
         <braintree-jackson2.tesb.version>2.14.1</braintree-jackson2.tesb.version>
         <json-validator-jackson.tesb.version>2.14.1</json-validator-jackson.tesb.version>
         <json-validator-jackson-databind.tesb.version>2.14.1</json-validator-jackson-databind.tesb.version>
