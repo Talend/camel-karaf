@@ -22,7 +22,7 @@
   <parent>
     <groupId>org.apache.camel.karaf</groupId>
     <artifactId>karaf</artifactId>
-    <version>3.20.2</version>
+    <version>${upstream.version}</version>
     <relativePath>../../</relativePath>
   </parent>
   <artifactId>camel-karaf-bom</artifactId>
@@ -113,7 +113,7 @@
           <dependency>
             <groupId>org.apache.camel.karaf</groupId>
             <artifactId>bom-generator</artifactId>
-            <version>${project.version}</version>
+            <version>${upstream.version}</version>
           </dependency>
         </dependencies>
       </plugin>
