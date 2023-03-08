@@ -99,6 +99,20 @@
 
         <upstream.version>3.20.2</upstream.version>
         <camel.features.tesb.version>3.20.2.20230301</camel.features.tesb.version>
+        <camel-cxf-soap.tesb.version>3.20.2.20230131</camel-cxf-soap.tesb.version>
+        <camel-cxf-rest.tesb.version>3.20.2.20230131</camel-cxf-rest.tesb.version>
+        <camel-google-pubsub.tesb.version>3.20.2.20230131</camel-google-pubsub.tesb.version>
+        <woodstox-core.tesb.version>6.4.0</woodstox-core.tesb.version>
+        <jaxb-bundle.tesb.version>2.3.2_1</jaxb-bundle.tesb.version>
+        <activemq.tesb.version>5.17.3</activemq.tesb.version>
+        <zookeeper.tesb.version>3.5.9</zookeeper.tesb.version>
+        <google-cloud-guava.tesb.version>31.1-jre</google-cloud-guava.tesb.version>
+        <google-cloud-guava.tesb.version-range>[31.1,40)</google-cloud-guava.tesb.version-range>
+        <google-cloud-guava-bundle.tesb.version>31.1_1</google-cloud-guava-bundle.tesb.version>
+        <jetty.tesb.version>9.4.50.v20221201</jetty.tesb.version>
+        <ant-bundle.tesb.version>1.10.12_1</ant-bundle.tesb.version>
+        <netty.tesb.version>4.1.89.Final</netty.tesb.version>
+
         <!-- unify the encoding for all the modules -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -536,7 +550,19 @@
                             <revision>${revision}</revision>
                             <upstream.version>${upstream.version}</upstream.version>
                             <camel.features.tesb.version>${camel.features.tesb.version}</camel.features.tesb.version>
-
+                            <camel-cxf-soap.tesb.version>${camel-cxf-soap.tesb.version}</camel-cxf-soap.tesb.version>
+                            <camel-cxf-rest.tesb.version>${camel-cxf-rest.tesb.version}</camel-cxf-rest.tesb.version>
+                            <camel-google-pubsub.tesb.version>${camel-google-pubsub.tesb.version}</camel-google-pubsub.tesb.version>
+                            <woodstox-core.tesb.version>${woodstox-core.tesb.version}</woodstox-core.tesb.version>
+                            <jaxb-bundle.tesb.version>${jaxb-bundle.tesb.version}</jaxb-bundle.tesb.version>
+                            <activemq.tesb.version>${activemq.tesb.version}</activemq.tesb.version>
+                            <zookeeper.tesb.version>${zookeeper.tesb.version}</zookeeper.tesb.version>
+                            <google-cloud-guava.tesb.version>${google-cloud-guava.tesb.version}</google-cloud-guava.tesb.version>
+                            <google-cloud-guava.tesb.version-range>${google-cloud-guava.tesb.version-range}</google-cloud-guava.tesb.version-range>
+                            <google-cloud-guava-bundle.tesb.version>${google-cloud-guava-bundle.tesb.version}</google-cloud-guava-bundle.tesb.version>
+                            <jetty.tesb.version>${jetty.tesb.version}</jetty.tesb.version>
+                            <ant-bundle.tesb.version>${ant-bundle.tesb.version}</ant-bundle.tesb.version>
+                            <netty.tesb.version>${netty.tesb.version}</netty.tesb.version>
                         </properties>
                     </configuration>
                     <executions>
