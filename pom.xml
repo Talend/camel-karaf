@@ -97,9 +97,9 @@
 
     <properties>
         <upstream.version>3.11.1</upstream.version>
-        <camel.features.tesb.version>3.11.1.20230322</camel.features.tesb.version>
+        <camel.features.tesb.version>3.11.1.20230324</camel.features.tesb.version>
         <jaxb-bundle-version.tesb.version>2.3.2_1</jaxb-bundle-version.tesb.version>
-        <woodstox-version.tesb.version>6.2.6</woodstox-version.tesb.version>
+        <woodstox-version.tesb.version>6.4.0</woodstox-version.tesb.version>
         <activemq-version.tesb.version>5.16.4</activemq-version.tesb.version>
         <log4j2.tesb.version>2.17.1</log4j2.tesb.version>
         <camel-main.tesb.version>3.11.1.tesb1</camel-main.tesb.version>
