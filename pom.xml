@@ -23,7 +23,7 @@
     <parent>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-dependencies</artifactId>
-	<version>3.20.3</version>
+        <version>3.20.3</version>
     </parent>
 
     <groupId>org.apache.camel.karaf</groupId>
@@ -97,11 +97,11 @@
 
     <properties>
 
-        <upstream.version>3.20.2</upstream.version>
-        <camel.features.tesb.version>3.20.2.20230301</camel.features.tesb.version>
-        <camel-cxf-soap.tesb.version>3.20.2.20230131</camel-cxf-soap.tesb.version>
-        <camel-cxf-rest.tesb.version>3.20.2.20230131</camel-cxf-rest.tesb.version>
-        <camel-google-pubsub.tesb.version>3.20.2.20230131</camel-google-pubsub.tesb.version>
+        <upstream.version>3.20.3</upstream.version>
+        <camel.features.tesb.version>3.20.3.20230330</camel.features.tesb.version>
+        <camel-cxf-soap.tesb.version>3.20.3.20230330</camel-cxf-soap.tesb.version>
+        <camel-cxf-rest.tesb.version>3.20.3.20230330</camel-cxf-rest.tesb.version>
+        <camel-google-pubsub.tesb.version>3.20.3.20230330</camel-google-pubsub.tesb.version>
         <woodstox-core.tesb.version>6.4.0</woodstox-core.tesb.version>
         <jaxb-bundle.tesb.version>2.3.2_1</jaxb-bundle.tesb.version>
         <activemq.tesb.version>5.17.3</activemq.tesb.version>
