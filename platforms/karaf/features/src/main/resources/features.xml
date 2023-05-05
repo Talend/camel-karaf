@@ -46,7 +46,7 @@
     <bundle>mvn:org.apache.camel/camel-management-api/${upstream.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-util/${upstream.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-util-json/${upstream.version}</bundle>
-    <bundle>mvn:org.apache.camel/camel-support/${upstream.version}</bundle>
+    <bundle>mvn:org.apache.camel/camel-support/${camel-support.tesb.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-base/${upstream.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-base-engine/${upstream.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-management/${upstream.version}</bundle>
