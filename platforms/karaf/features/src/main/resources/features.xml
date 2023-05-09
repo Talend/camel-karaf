@@ -357,7 +357,7 @@
     <bundle dependency='true'>mvn:com.google.guava/failureaccess/1.0.1</bundle>
     <bundle dependency='true'>mvn:io.dropwizard.metrics/metrics-core/3.2.6</bundle>
     <bundle dependency='true'>mvn:commons-codec/commons-codec/${commons-codec-version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.santuario/xmlsec/${xmlsec-version}</bundle>
+    <bundle dependency='true'>mvn:org.apache.santuario/xmlsec/${xmlsec.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.apache.httpcomponents/httpcore-osgi/${httpcore4-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.httpcomponents/httpclient-osgi/${httpclient4-version}</bundle>
     <bundle dependency='true'>mvn:javax.servlet/javax.servlet-api/${javax-servlet-api-version}</bundle>
@@ -399,7 +399,7 @@
     <bundle dependency='true'>mvn:com.google.guava/failureaccess/1.0.1</bundle>
     <bundle dependency='true'>mvn:io.dropwizard.metrics/metrics-core/3.2.6</bundle>
     <bundle dependency='true'>mvn:commons-codec/commons-codec/${commons-codec-version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.santuario/xmlsec/${xmlsec-version}</bundle>
+    <bundle dependency='true'>mvn:org.apache.santuario/xmlsec/${xmlsec.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.apache.httpcomponents/httpcore-osgi/${httpcore4-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.httpcomponents/httpclient-osgi/${httpclient4-version}</bundle>
     <bundle dependency='true'>mvn:javax.servlet/javax.servlet-api/${javax-servlet-api-version}</bundle>
@@ -439,7 +439,7 @@
     <bundle dependency='true'>mvn:com.google.guava/failureaccess/1.0.1</bundle>
     <bundle dependency='true'>mvn:io.dropwizard.metrics/metrics-core/3.2.6</bundle>
     <bundle dependency='true'>mvn:commons-codec/commons-codec/${commons-codec-version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.santuario/xmlsec/${xmlsec-version}</bundle>
+    <bundle dependency='true'>mvn:org.apache.santuario/xmlsec/${xmlsec.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.apache.httpcomponents/httpcore-osgi/${httpcore4-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.httpcomponents/httpclient-osgi/${httpclient4-version}</bundle>
     <bundle dependency='true'>mvn:javax.servlet/javax.servlet-api/${javax-servlet-api-version}</bundle>
@@ -483,7 +483,7 @@
     <bundle dependency='true'>mvn:com.google.guava/failureaccess/1.0.1</bundle>
     <bundle dependency='true'>mvn:io.dropwizard.metrics/metrics-core/3.2.6</bundle>
     <bundle dependency='true'>mvn:commons-codec/commons-codec/${commons-codec-version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.santuario/xmlsec/${xmlsec-version}</bundle>
+    <bundle dependency='true'>mvn:org.apache.santuario/xmlsec/${xmlsec.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.apache.httpcomponents/httpcore-osgi/${httpcore4-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.httpcomponents/httpclient-osgi/${httpclient4-version}</bundle>
     <bundle dependency='true'>mvn:javax.servlet/javax.servlet-api/${javax-servlet-api-version}</bundle>
@@ -2442,7 +2442,7 @@
     <feature version='${upstream.version}'>camel-core</feature>
     <bundle dependency='true'>mvn:commons-codec/commons-codec/${commons-codec-version}</bundle>
     <!-- <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.xalan/${xalan-bundle-version}</bundle> -->
-    <bundle dependency='true'>mvn:org.apache.santuario/xmlsec/${xmlsec-version}</bundle>
+    <bundle dependency='true'>mvn:org.apache.santuario/xmlsec/${xmlsec.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.xerces/${xerces-bundle-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.xmlresolver/${xmlresolver-bundle-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.bcel/${bcel-bundle-version}</bundle>

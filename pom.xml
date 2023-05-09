@@ -104,7 +104,7 @@
         <camel-cxf-rest.tesb.version>3.20.3.20230330</camel-cxf-rest.tesb.version>
         <camel-google-pubsub.tesb.version>3.20.3.20230330</camel-google-pubsub.tesb.version>
         <woodstox-core.tesb.version>6.4.0</woodstox-core.tesb.version>
-        <jaxb-bundle.tesb.version>2.3.2_1</jaxb-bundle.tesb.version>
+        <jaxb-bundle.tesb.version>2.3.2_3</jaxb-bundle.tesb.version>
         <activemq.tesb.version>5.17.3</activemq.tesb.version>
         <zookeeper.tesb.version>3.5.9</zookeeper.tesb.version>
         <google-cloud-guava.tesb.version>31.1-jre</google-cloud-guava.tesb.version>
@@ -118,6 +118,7 @@
         <xstream-bundle.tesb.version>1.4.20_1</xstream-bundle.tesb.version>
         <commons-net.tesb.version>3.9.0</commons-net.tesb.version>
         <log4j2.tesb.version>2.20.0</log4j2.tesb.version>
+        <xmlsec.tesb.version>2.3.0</xmlsec.tesb.version>
         <spring.tesb.version-range>[5.2,6)</spring.tesb.version-range>
 
         <!-- unify the encoding for all the modules -->
@@ -576,6 +577,7 @@
                             <xstream-bundle.tesb.version>${xstream-bundle.tesb.version}</xstream-bundle.tesb.version>
                             <commons-net.tesb.version>${commons-net.tesb.version}</commons-net.tesb.version>
                             <log4j2.tesb.version>${log4j2.tesb.version}</log4j2.tesb.version>
+                            <xmlsec.tesb.version>${xmlsec.tesb.version}</xmlsec.tesb.version>
                             <spring.tesb.version-range>${spring.tesb.version-range}</spring.tesb.version-range>
                         </properties>
                     </configuration>
