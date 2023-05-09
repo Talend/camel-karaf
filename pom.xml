@@ -117,6 +117,7 @@
         <jettison.tesb.version>1.5.4</jettison.tesb.version>
         <xstream-bundle.tesb.version>1.4.20_1</xstream-bundle.tesb.version>
         <commons-net.tesb.version>3.9.0</commons-net.tesb.version>
+        <log4j2.tesb.version>2.20.0</log4j2.tesb.version>
         <spring.tesb.version-range>[5.2,6)</spring.tesb.version-range>
 
         <!-- unify the encoding for all the modules -->
@@ -574,6 +575,7 @@
                             <jettison.tesb.version>${jettison.tesb.version}</jettison.tesb.version>
                             <xstream-bundle.tesb.version>${xstream-bundle.tesb.version}</xstream-bundle.tesb.version>
                             <commons-net.tesb.version>${commons-net.tesb.version}</commons-net.tesb.version>
+                            <log4j2.tesb.version>${log4j2.tesb.version}</log4j2.tesb.version>
                             <spring.tesb.version-range>${spring.tesb.version-range}</spring.tesb.version-range>
                         </properties>
                     </configuration>
