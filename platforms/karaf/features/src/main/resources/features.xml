@@ -362,7 +362,7 @@
     <bundle dependency='true'>mvn:org.apache.httpcomponents/httpclient-osgi/${httpclient4-version}</bundle>
     <bundle dependency='true'>mvn:javax.servlet/javax.servlet-api/${javax-servlet-api-version}</bundle>
     <bundle dependency='true'>mvn:net.minidev/json-smart/${json-smart.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:net.minidev/accessors-smart/${json-smart.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:net.minidev/accessors-smart/${accessors-smart.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.bouncycastle/bcprov-jdk18on/${bouncycastle.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.bouncycastle/bcpkix-jdk18on/${bouncycastle.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.bouncycastle/bcutil-jdk18on/${bouncycastle.tesb.version}</bundle>
@@ -404,7 +404,7 @@
     <bundle dependency='true'>mvn:org.apache.httpcomponents/httpclient-osgi/${httpclient4-version}</bundle>
     <bundle dependency='true'>mvn:javax.servlet/javax.servlet-api/${javax-servlet-api-version}</bundle>
     <bundle dependency='true'>mvn:net.minidev/json-smart/${json-smart.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:net.minidev/accessors-smart/${json-smart.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:net.minidev/accessors-smart/${accessors-smart.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.bouncycastle/bcprov-jdk18on/${bouncycastle.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.bouncycastle/bcpkix-jdk18on/${bouncycastle.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.bouncycastle/bcutil-jdk18on/${bouncycastle.tesb.version}</bundle>
@@ -444,7 +444,7 @@
     <bundle dependency='true'>mvn:org.apache.httpcomponents/httpclient-osgi/${httpclient4-version}</bundle>
     <bundle dependency='true'>mvn:javax.servlet/javax.servlet-api/${javax-servlet-api-version}</bundle>
     <bundle dependency='true'>mvn:net.minidev/json-smart/${json-smart.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:net.minidev/accessors-smart/${json-smart.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:net.minidev/accessors-smart/${accessors-smart.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.bouncycastle/bcprov-jdk18on/${bouncycastle.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.bouncycastle/bcpkix-jdk18on/${bouncycastle.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.bouncycastle/bcutil-jdk18on/${bouncycastle.tesb.version}</bundle>
@@ -488,7 +488,7 @@
     <bundle dependency='true'>mvn:org.apache.httpcomponents/httpclient-osgi/${httpclient4-version}</bundle>
     <bundle dependency='true'>mvn:javax.servlet/javax.servlet-api/${javax-servlet-api-version}</bundle>
     <bundle dependency='true'>mvn:net.minidev/json-smart/${json-smart.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:net.minidev/accessors-smart/${json-smart.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:net.minidev/accessors-smart/${accessors-smart.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.bouncycastle/bcprov-jdk18on/${bouncycastle.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.bouncycastle/bcpkix-jdk18on/${bouncycastle.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.bouncycastle/bcutil-jdk18on/${bouncycastle.tesb.version}</bundle>
@@ -1407,7 +1407,7 @@
     <feature version='${upstream.version}'>camel-core</feature>
     <bundle>mvn:com.jayway.jsonpath/json-path/${json-path-version}</bundle>
     <bundle dependency='true'>mvn:net.minidev/json-smart/${json-smart.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:net.minidev/accessors-smart/${json-smart.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:net.minidev/accessors-smart/${accessors-smart.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.ow2.asm/asm/${asm.bundle.version}</bundle>
     <bundle dependency='true'>mvn:org.ow2.asm/asm-analysis/${asm.bundle.version}</bundle>
     <bundle dependency='true'>mvn:org.ow2.asm/asm-commons/${asm.bundle.version}</bundle>
