@@ -113,7 +113,7 @@
         <jetty.tesb.version>9.4.51.v20230217</jetty.tesb.version>
         <ant-bundle.tesb.version>1.10.12_1</ant-bundle.tesb.version>
         <netty.tesb.version>4.1.89.Final</netty.tesb.version>
-        <json-smart.tesb.version>2.4.9</json-smart.tesb.version>
+        <json-smart.tesb.version>2.4.10</json-smart.tesb.version>
         <jettison.tesb.version>1.5.4</jettison.tesb.version>
         <xstream-bundle.tesb.version>1.4.20_1</xstream-bundle.tesb.version>
         <commons-net.tesb.version>3.9.0</commons-net.tesb.version>
