@@ -97,7 +97,7 @@
 
     <properties>
         <upstream.version>3.11.1</upstream.version>
-        <camel.features.tesb.version>3.11.1.20230905</camel.features.tesb.version>
+        <camel.features.tesb.version>3.11.1.20230516</camel.features.tesb.version>
         <jaxb-bundle-version.tesb.version>2.3.2_1</jaxb-bundle-version.tesb.version>
         <woodstox-version.tesb.version>6.4.0</woodstox-version.tesb.version>
         <activemq-version.tesb.version>5.16.4</activemq-version.tesb.version>
@@ -122,7 +122,6 @@
         <jackson2-databind.tesb.version>2.14.1</jackson2-databind.tesb.version>
         <avro-jackson.tesb.version>2.14.1</avro-jackson.tesb.version>
         <avro-jackson-databind.tesb.version>2.14.1</avro-jackson-databind.tesb.version>
-        <servicemix.avro.tesb.version>1.11.1_1.tesb1</servicemix.avro.tesb.version>
         <braintree-jackson2.tesb.version>2.14.1</braintree-jackson2.tesb.version>
         <json-smart.tesb.version>2.4.9</json-smart.tesb.version>
         <json-validator-jackson.tesb.version>2.14.1</json-validator-jackson.tesb.version>
