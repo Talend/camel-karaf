@@ -106,7 +106,8 @@
         <woodstox-core.tesb.version>6.4.0</woodstox-core.tesb.version>
         <jaxb-bundle.tesb.version>2.3.2_3</jaxb-bundle.tesb.version>
         <activemq.tesb.version>5.17.3</activemq.tesb.version>
-        <zookeeper.tesb.version>3.5.9</zookeeper.tesb.version>
+        <zookeeper.tesb.version>3.7.1</zookeeper.tesb.version>
+        <curator.tesb.version>5.5.0</curator.tesb.version>
         <google-cloud-guava.tesb.version>31.1-jre</google-cloud-guava.tesb.version>
         <google-cloud-guava.tesb.version-range>[31.1,40)</google-cloud-guava.tesb.version-range>
         <google-cloud-guava-bundle.tesb.version>31.1_1</google-cloud-guava-bundle.tesb.version>
@@ -568,6 +569,7 @@
                             <jaxb-bundle.tesb.version>${jaxb-bundle.tesb.version}</jaxb-bundle.tesb.version>
                             <activemq.tesb.version>${activemq.tesb.version}</activemq.tesb.version>
                             <zookeeper.tesb.version>${zookeeper.tesb.version}</zookeeper.tesb.version>
+                            <curator.tesb.version>${curator.tesb.version}</curator.tesb.version>
                             <google-cloud-guava.tesb.version>${google-cloud-guava.tesb.version}</google-cloud-guava.tesb.version>
                             <google-cloud-guava.tesb.version-range>${google-cloud-guava.tesb.version-range}</google-cloud-guava.tesb.version-range>
                             <google-cloud-guava-bundle.tesb.version>${google-cloud-guava-bundle.tesb.version}</google-cloud-guava-bundle.tesb.version>
