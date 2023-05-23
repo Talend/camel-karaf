@@ -103,6 +103,8 @@
         <camel-cxf-soap.tesb.version>3.20.3.20230330</camel-cxf-soap.tesb.version>
         <camel-cxf-rest.tesb.version>3.20.3.20230330</camel-cxf-rest.tesb.version>
         <camel-google-pubsub.tesb.version>3.20.3.20230330</camel-google-pubsub.tesb.version>
+        <camel-zookeeper.tesb.version>3.20.3.20230330</camel-zookeeper.tesb.version>
+        <camel-zookeeper-master.tesb.version>3.20.3.20230330</camel-zookeeper-master.tesb.version>
         <woodstox-core.tesb.version>6.4.0</woodstox-core.tesb.version>
         <jaxb-bundle.tesb.version>2.3.2_3</jaxb-bundle.tesb.version>
         <activemq.tesb.version>5.17.3</activemq.tesb.version>
@@ -565,6 +567,8 @@
                             <camel-cxf-soap.tesb.version>${camel-cxf-soap.tesb.version}</camel-cxf-soap.tesb.version>
                             <camel-cxf-rest.tesb.version>${camel-cxf-rest.tesb.version}</camel-cxf-rest.tesb.version>
                             <camel-google-pubsub.tesb.version>${camel-google-pubsub.tesb.version}</camel-google-pubsub.tesb.version>
+                            <camel-zookeeper.tesb.version>${camel-zookeeper.tesb.version}</camel-zookeeper.tesb.version>
+                            <camel-zookeeper-master.tesb.version>${camel-zookeeper-master.tesb.version}</camel-zookeeper-master.tesb.version>
                             <woodstox-core.tesb.version>${woodstox-core.tesb.version}</woodstox-core.tesb.version>
                             <jaxb-bundle.tesb.version>${jaxb-bundle.tesb.version}</jaxb-bundle.tesb.version>
                             <activemq.tesb.version>${activemq.tesb.version}</activemq.tesb.version>

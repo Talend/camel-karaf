@@ -2543,7 +2543,7 @@
     <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2-version}</bundle>
     <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2-version}</bundle>
     <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2-version}</bundle>
-    <bundle>mvn:org.apache.camel/camel-zookeeper/${upstream.version}</bundle>
+    <bundle>mvn:org.apache.camel/camel-zookeeper/${camel-zookeeper.tesb.version}</bundle>
   </feature>
   <feature name='camel-zookeeper-master' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
@@ -2557,7 +2557,7 @@
     <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2-version}</bundle>
     <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2-version}</bundle>
     <bundle>mvn:org.apache.camel.karaf/camel-zookeeper-master-osgi/${upstream.version}</bundle>
-    <bundle>mvn:org.apache.camel/camel-zookeeper-master/${upstream.version}</bundle>
+    <bundle>mvn:org.apache.camel/camel-zookeeper-master/${camel-zookeeper-master.tesb.version}</bundle>
   </feature>
   <feature name='zookeeper-core' version='${zookeeper.tesb.version}' start-level='50'>
     <bundle dependency='true'>wrap:mvn:org.apache.zookeeper/zookeeper/${zookeeper.tesb.version}$Bundle-SymbolicName=org.apache.zookeeper&amp;Bundle-Version=${zookeeper.tesb.version}&amp;Export-Package=org.apache.zookeeper;version=${zookeeper.tesb.version},org.apache.zookeeper.*;version=${zookeeper.tesb.version}</bundle>
