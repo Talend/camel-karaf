@@ -97,7 +97,7 @@
 
     <properties>
         <upstream.version>3.11.1</upstream.version>
-        <camel.features.tesb.version>3.11.1.20230516</camel.features.tesb.version>
+        <camel.features.tesb.version>3.11.1.20230525</camel.features.tesb.version>
         <jaxb-bundle-version.tesb.version>2.3.2_1</jaxb-bundle-version.tesb.version>
         <woodstox-version.tesb.version>6.4.0</woodstox-version.tesb.version>
         <activemq-version.tesb.version>5.16.4</activemq-version.tesb.version>
@@ -131,7 +131,7 @@
         <tika.tesb.version>1.28.4</tika.tesb.version>
         <commons-text.tesb.version>1.10.0</commons-text.tesb.version>
         <commons-net.tesb.version>3.9.0</commons-net.tesb.version>
-        <kafka-bundle.tesb.version>2.8.2_1</kafka-bundle.tesb.version>
+        <kafka-bundle.tesb.version>2.8.2_1-tesb3</kafka-bundle.tesb.version>
         <sshd.tesb.version>2.9.2</sshd.tesb.version>
         <xstream-bundle.tesb.version>1.4.20_1</xstream-bundle.tesb.version>
         <shiro.tesb.version>1.11.0</shiro.tesb.version>
