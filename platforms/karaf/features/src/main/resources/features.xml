@@ -508,7 +508,7 @@
   <feature name='camel-bean-validator' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
     <bundle>mvn:org.hibernate.validator/hibernate-validator/${hibernate-validator-version}</bundle>
-    <bundle>mvn:jakarta.validation/jakarta.validation-api/${jakarta-validation-api-version}</bundle>
+    <bundle>mvn:jakarta.validation/jakarta.validation-api/${jakarta-validation-api.tesb.version}</bundle>
     <bundle>mvn:org.jboss.logging/jboss-logging/${jboss-logging-version}</bundle>
     <bundle>mvn:com.fasterxml/classmate/${classmate-version}</bundle>
     <bundle>mvn:org.glassfish/jakarta.el/${jakarta-el-version}</bundle>
@@ -594,7 +594,7 @@
     <feature version='${upstream.version}'>camel-core</feature>
     <feature version='${cxf-version-range}'>cxf-specs</feature>
     <bundle>mvn:org.hibernate.validator/hibernate-validator/${hibernate-validator-version}</bundle>
-    <bundle>mvn:jakarta.validation/jakarta.validation-api/${jakarta-validation-api-version}</bundle>
+    <bundle>mvn:jakarta.validation/jakarta.validation-api/${jakarta-validation-api.tesb.version}</bundle>
     <bundle>mvn:org.jboss.logging/jboss-logging/${jboss-logging-version}</bundle>
     <bundle>mvn:com.fasterxml/classmate/${classmate-version}</bundle>
     <bundle>mvn:org.glassfish/jakarta.el/${jakarta-el-version}</bundle>

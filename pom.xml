@@ -124,6 +124,7 @@
         <log4j2.tesb.version>2.20.0</log4j2.tesb.version>
         <bouncycastle.tesb.version>1.73</bouncycastle.tesb.version>
         <xmlsec.tesb.version>2.3.0</xmlsec.tesb.version>
+        <jakarta-validation-api.tesb.version>2.0.2</jakarta-validation-api.tesb.version>
         <spring.tesb.version-range>[5.2,7)</spring.tesb.version-range>
 
         <!-- unify the encoding for all the modules -->
@@ -588,6 +589,7 @@
                             <log4j2.tesb.version>${log4j2.tesb.version}</log4j2.tesb.version>
                             <bouncycastle.tesb.version>${bouncycastle.tesb.version}</bouncycastle.tesb.version>
                             <xmlsec.tesb.version>${xmlsec.tesb.version}</xmlsec.tesb.version>
+                            <jakarta-validation-api.tesb.version>${jakarta-validation-api.tesb.version}</jakarta-validation-api.tesb.version>
                             <spring.tesb.version-range>${spring.tesb.version-range}</spring.tesb.version-range>
                         </properties>
                     </configuration>
