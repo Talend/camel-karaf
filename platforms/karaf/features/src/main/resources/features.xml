@@ -1598,6 +1598,19 @@
     <bundle>mvn:org.apache.camel/camel-attachments/${upstream.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-mail/${upstream.version}</bundle>
   </feature>
+  <feature name='camel-mail-microsoft-oauth' version='${upstream.version}' start-level="50">
+    <feature version='${upstream.version}'>camel-mail</feature>
+    <bundle dependency="true">mvn:com.microsoft.azure/msal4j/1.13.8</bundle>
+    <bundle dependency="true">mvn:com.nimbusds/oauth2-oidc-sdk/10.7.1</bundle>
+    <bundle dependency="true">mvn:com.nimbusds/content-type/2.2</bundle>
+    <bundle dependency="true">mvn:com.nimbusds/nimbus-jose-jwt/9.30.2</bundle>
+    <bundle dependency="true">mvn:net.minidev/asm/1.0.2</bundle>
+    <bundle dependency="true">mvn:net.minidev/json-smart/2.4.10</bundle>
+    <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-core/${jackson2-version}</bundle>
+    <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2-version}</bundle>
+    <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2-version}</bundle>
+    <bundle>mvn:org.apache.camel/camel-mail-microsoft-oauth/${upstream.version}</bundle>
+</feature>
   <feature name='camel-master' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
     <bundle>mvn:org.apache.camel/camel-master/${upstream.version}</bundle>
