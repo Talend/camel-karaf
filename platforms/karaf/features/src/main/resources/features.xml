@@ -1605,7 +1605,7 @@
     <bundle dependency="true">mvn:com.nimbusds/content-type/2.2</bundle>
     <bundle dependency="true">mvn:com.nimbusds/nimbus-jose-jwt/9.30.2</bundle>
     <bundle dependency="true">mvn:com.nimbusds/lang-tag/1.7</bundle>
-    <bundle dependency="true">mvn:net.minidev/asm/1.0.2</bundle>
+    <bundle dependency='true'>mvn:org.ow2.asm/asm/${asm.bundle.version}</bundle>
     <bundle dependency="true">mvn:net.minidev/json-smart/${json-smart.tesb.version}</bundle>
     <bundle dependency='true'>mvn:net.minidev/accessors-smart/${accessors-smart.tesb.version}</bundle>
     <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-core/${jackson2-version}</bundle>
