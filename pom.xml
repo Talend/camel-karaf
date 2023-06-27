@@ -97,7 +97,7 @@
 
     <properties>
         <upstream.version>3.11.1</upstream.version>
-        <camel.features.tesb.version>3.11.1.20230525</camel.features.tesb.version>
+        <camel.features.tesb.version>3.11.1.20230627</camel.features.tesb.version>
         <jaxb-bundle-version.tesb.version>2.3.2_1</jaxb-bundle-version.tesb.version>
         <woodstox-version.tesb.version>6.4.0</woodstox-version.tesb.version>
         <activemq-version.tesb.version>5.16.4</activemq-version.tesb.version>
@@ -136,7 +136,10 @@
         <xstream-bundle.tesb.version>1.4.20_1</xstream-bundle.tesb.version>
         <shiro.tesb.version>1.11.0</shiro.tesb.version>
         <spring.tesb.version-range>[5.2,6)</spring.tesb.version-range>
-
+        <google.protobuf-util.tesb.version>3.23.3</google.protobuf-util.tesb.version>
+        <google.protobuf.tesb.version>3.23.3</google.protobuf.tesb.version>
+        <google.guava.tesb.version>32.0.1-jre</google.guava.tesb.version>
+		
         <!-- unify the encoding for all the modules -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
