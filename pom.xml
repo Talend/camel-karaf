@@ -131,7 +131,9 @@
         <tika.tesb.version>1.28.4</tika.tesb.version>
         <commons-text.tesb.version>1.10.0</commons-text.tesb.version>
         <commons-net.tesb.version>3.9.0</commons-net.tesb.version>
-        <kafka-bundle.tesb.version>2.8.2_1-tesb3</kafka-bundle.tesb.version>
+        <!-- on hold TPRUN-5432  -->
+        <!-- <kafka-bundle.tesb.version>2.8.2_1-tesb3</kafka-bundle.tesb.version> -->
+        <kafka-bundle.tesb.version>2.8.2_1</kafka-bundle.tesb.version>
         <sshd.tesb.version>2.9.2</sshd.tesb.version>
         <xstream-bundle.tesb.version>1.4.20_1</xstream-bundle.tesb.version>
         <shiro.tesb.version>1.11.0</shiro.tesb.version>
