@@ -1419,7 +1419,8 @@
   </feature>
   <feature name='camel-kafka' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
-    <feature version='${upstream.version}'>camel-avro</feature>
+    <!-- TPRUN-5903 is on hold -->
+    <!-- <feature version='${upstream.version}'>camel-avro</feature> -->
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.kafka-clients/${kafka-bundle.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.xerial.snappy/snappy-java/${snappy-version}</bundle>
     <bundle dependency='true'>wrap:mvn:org.lz4/lz4-java/${lz4-version}</bundle>
