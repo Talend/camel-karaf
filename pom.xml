@@ -622,7 +622,7 @@
                             <spring.tesb.version-range>${spring.tesb.version-range}</spring.tesb.version-range>
                             <google.protobuf-util.tesb.version>${google.protobuf-util.tesb.version}</google.protobuf-util.tesb.version>
                             <google.protobuf.tesb.version>${google.protobuf.tesb.version}</google.protobuf.tesb.version>
-                            <google.guava.tesb.versionge>${google.guava.tesb.version}</google.guava.tesb.versionge>
+                            <google.guava.tesb.version>${google.guava.tesb.version}</google.guava.tesb.version>
                         </properties>
                     </configuration>
                     <executions>
