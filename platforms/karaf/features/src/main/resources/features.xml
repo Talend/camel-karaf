@@ -236,8 +236,8 @@
     <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${avro-jackson-databind.tesb.version}</bundle>
     <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${avro-jackson.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.apache.commons/commons-compress/${avro-java-commons-compress-version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.avro/${servicemix.avro.version}</bundle>
-    <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.paranamer/${servicemix.paranamer.version}</bundle>
+    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.avro/${avro-bundle-version}</bundle>
+    <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.paranamer/${paranamer-bundle-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-avro/${upstream.version}</bundle>
   </feature>
   <feature name='camel-aws2-athena' version='${upstream.version}' start-level='50'>
@@ -1223,8 +1223,8 @@
   <feature name='camel-jackson-avro' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-jackson</feature>
     <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-avro/${jackson2.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.avro/${servicemix.avro.version}</bundle>
-    <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.paranamer/${servicemix.paranamer.version}</bundle>
+    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.avro/${avro-bundle-version}</bundle>
+    <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.paranamer/${paranamer-bundle-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.commons/commons-compress/${avro-java-commons-compress-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-jackson-avro/${upstream.version}</bundle>
   </feature>
@@ -1419,7 +1419,8 @@
   </feature>
   <feature name='camel-kafka' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
-    <feature version='${upstream.version}'>camel-avro</feature>
+    <!-- TPRUN-5903 is on hold -->
+    <!-- <feature version='${upstream.version}'>camel-avro</feature> -->
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.kafka-clients/${kafka-bundle.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.xerial.snappy/snappy-java/${snappy-version}</bundle>
     <bundle dependency='true'>wrap:mvn:org.lz4/lz4-java/${lz4-version}</bundle>
@@ -1879,10 +1880,11 @@
   </feature>
   <feature name='camel-protobuf' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
-    <bundle dependency='true'>mvn:com.google.protobuf/protobuf-java/${protobuf-version}</bundle>
-    <bundle dependency='true'>mvn:com.google.protobuf/protobuf-java-util/${protobuf-version}</bundle>
+    <bundle dependency='true'>mvn:com.google.protobuf/protobuf-java/${google.protobuf.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.google.protobuf/protobuf-java-util/${google.protobuf-util.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.google.code.findbugs/jsr305/${google-findbugs-jsr305-version}</bundle>
     <bundle dependency='true'>mvn:commons-io/commons-io/${commons-io-version}</bundle>
-    <bundle dependency='true'>mvn:com.google.guava/guava/${protobuf-guava-version}</bundle>
+    <bundle dependency='true'>mvn:com.google.guava/guava/${google.guava.tesb.version}</bundle>
     <bundle dependency='true'>mvn:com.google.code.gson/gson/${gson-version}</bundle>
     <bundle dependency='true'>mvn:com.google.guava/failureaccess/1.0.1</bundle>
     <bundle>mvn:org.apache.camel/camel-protobuf/${upstream.version}</bundle>
