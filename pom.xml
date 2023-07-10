@@ -23,12 +23,12 @@
     <parent>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-dependencies</artifactId>
-        <version>3.20.3</version>
+        <version>3.20.6</version>
     </parent>
 
     <groupId>org.apache.camel.karaf</groupId>
     <artifactId>karaf</artifactId>
-    <version>3.20.3</version>
+    <version>3.20.6</version>
     <packaging>pom</packaging>
 
     <name>Camel Karaf</name>
@@ -97,14 +97,14 @@
 
     <properties>
 
-        <upstream.version>3.20.3</upstream.version>
-        <camel.features.tesb.version>3.20.3.20230330</camel.features.tesb.version>
-        <camel-support.tesb.version>3.20.3.20230330</camel-support.tesb.version>
-        <camel-cxf-soap.tesb.version>3.20.3.20230330</camel-cxf-soap.tesb.version>
-        <camel-cxf-rest.tesb.version>3.20.3.20230330</camel-cxf-rest.tesb.version>
-        <camel-google-pubsub.tesb.version>3.20.3.20230330</camel-google-pubsub.tesb.version>
-        <camel-zookeeper.tesb.version>3.20.3.20230330</camel-zookeeper.tesb.version>
-        <camel-zookeeper-master.tesb.version>3.20.3.20230330</camel-zookeeper-master.tesb.version>
+        <upstream.version>3.20.6</upstream.version>
+        <camel.features.tesb.version>3.20.6.20230330</camel.features.tesb.version>
+        <camel-support.tesb.version>3.20.6.20230330</camel-support.tesb.version>
+        <camel-cxf-soap.tesb.version>3.20.6.20230330</camel-cxf-soap.tesb.version>
+        <camel-cxf-rest.tesb.version>3.20.6.20230330</camel-cxf-rest.tesb.version>
+        <camel-google-pubsub.tesb.version>3.20.6.20230330</camel-google-pubsub.tesb.version>
+        <camel-zookeeper.tesb.version>3.20.6.20230330</camel-zookeeper.tesb.version>
+        <camel-zookeeper-master.tesb.version>3.20.6.20230330</camel-zookeeper-master.tesb.version>
         <woodstox-core.tesb.version>6.4.0</woodstox-core.tesb.version>
         <jaxb-bundle.tesb.version>2.3.2_3</jaxb-bundle.tesb.version>
         <activemq.tesb.version>5.17.3</activemq.tesb.version>
@@ -138,7 +138,7 @@
         <karaf4-version>4.4.2</karaf4-version>
 
         <!-- Camel target version -->
-        <camel-version>3.20.3</camel-version>
+        <camel-version>3.20.6</camel-version>
 
         <ahc-version>2.12.3</ahc-version>
         <ant-bundle-version>1.7.0_6</ant-bundle-version>
@@ -863,7 +863,7 @@
         <profile>
             <id>dev</id>
             <properties>
-                <camel-version>3.20.3</camel-version>
+                <camel-version>3.20.6</camel-version>
             </properties>
         </profile>
 
