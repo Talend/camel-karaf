@@ -108,11 +108,18 @@
         <woodstox-core.tesb.version>6.4.0</woodstox-core.tesb.version>
         <jaxb-bundle.tesb.version>2.3.2_3</jaxb-bundle.tesb.version>
         <activemq.tesb.version>5.17.4</activemq.tesb.version>
+        <activemq-osgi.tesb.version>5.17.4.20230530</activemq-osgi.tesb.version>
+        <activemq-pool.tesb.version>5.17.4.20230530</activemq-pool.tesb.version>
         <zookeeper.tesb.version>3.7.1</zookeeper.tesb.version>
         <curator.tesb.version>5.5.0</curator.tesb.version>
         <google-cloud-guava.tesb.version>32.1.1-jre</google-cloud-guava.tesb.version>
-        <google-cloud-guava.tesb.version-range>[32.1,40)</google-cloud-guava.tesb.version-range>
+        <google-cloud-guava.tesb.version-range>[31,40)</google-cloud-guava.tesb.version-range>
         <google-cloud-guava-bundle.tesb.version>31.1_1</google-cloud-guava-bundle.tesb.version>
+        <grpc-guava.tesb.version>32.1.1-jre</grpc-guava.tesb.version>
+        <jetcd-guava.tesb.version>32.1.1-jre</jetcd-guava.tesb.version>
+        <jira-guava.tesb.version>32.1.1-jre</jira-guava.tesb.version>
+        <milo-guava.tesb.version>32.1.1-jre</milo-guava.tesb.version>
+        <xchange-guava.tesb.version>32.1.1-jre</xchange-guava.tesb.version>
         <jetty.tesb.version>9.4.51.v20230217</jetty.tesb.version>
         <ant-bundle.tesb.version>1.10.12_1</ant-bundle.tesb.version>
         <netty.tesb.version>4.1.92.Final</netty.tesb.version>
@@ -573,11 +580,18 @@
                             <woodstox-core.tesb.version>${woodstox-core.tesb.version}</woodstox-core.tesb.version>
                             <jaxb-bundle.tesb.version>${jaxb-bundle.tesb.version}</jaxb-bundle.tesb.version>
                             <activemq.tesb.version>${activemq.tesb.version}</activemq.tesb.version>
+                            <activemq-osgi.tesb.version>${activemq-osgi.tesb.version}</activemq-osgi.tesb.version>
+                            <activemq-pool.tesb.version>${activemq-pool.tesb.version}</activemq-pool.tesb.version>
                             <zookeeper.tesb.version>${zookeeper.tesb.version}</zookeeper.tesb.version>
                             <curator.tesb.version>${curator.tesb.version}</curator.tesb.version>
                             <google-cloud-guava.tesb.version>${google-cloud-guava.tesb.version}</google-cloud-guava.tesb.version>
                             <google-cloud-guava.tesb.version-range>${google-cloud-guava.tesb.version-range}</google-cloud-guava.tesb.version-range>
                             <google-cloud-guava-bundle.tesb.version>${google-cloud-guava-bundle.tesb.version}</google-cloud-guava-bundle.tesb.version>
+                            <grpc-guava.tesb.version>${grpc-guava.tesb.version>}</grpc-guava.tesb.version>
+                            <jetcd-guava.tesb.version>${jetcd-guava.tesb.version}</jetcd-guava.tesb.version>
+                            <jira-guava.tesb.version>${jira-guava.tesb.version}</jira-guava.tesb.version>
+                            <milo-guava.tesb.version>${milo-guava.tesb.version}</milo-guava.tesb.version>
+                            <xchange-guava.tesb.version>${xchange-guava.tesb.version}</xchange-guava.tesb.version>
                             <jetty.tesb.version>${jetty.tesb.version}</jetty.tesb.version>
                             <ant-bundle.tesb.version>${ant-bundle.tesb.version}</ant-bundle.tesb.version>
                             <netty.tesb.version>${netty.tesb.version}</netty.tesb.version>
