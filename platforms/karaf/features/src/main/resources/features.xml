@@ -2535,10 +2535,10 @@
   <feature name='camel-zookeeper' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
     <feature version="${zookeeper.tesb.version}">zookeeper-core</feature>
-    <bundle dependency='true'>mvn:org.apache.curator/curator-framework/${curator.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.curator/curator-client/${curator.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.curator/curator-recipes/${curator.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.curator/curator-x-discovery/${curator.tesb.version}</bundle>
+    <bundle dependency='true'>wrap:mvn:org.apache.curator/curator-framework/${curator.tesb.version}$overwrite=merge&amp;Import-Package=com.google.common.*;version="${google-cloud-guava.tesb.version-range}";resolution:=optional,*;resolution:=optional</bundle>
+    <bundle dependency='true'>wrap:mvn:org.apache.curator/curator-client/${curator.tesb.version}$overwrite=merge&amp;Import-Package=com.google.common.*;version="${google-cloud-guava.tesb.version-range}";resolution:=optional,*;resolution:=optional</bundle>
+    <bundle dependency='true'>wrap:mvn:org.apache.curator/curator-recipes/${curator.tesb.version}$overwrite=merge&amp;Import-Package=com.google.common.*;version="${google-cloud-guava.tesb.version-range}";resolution:=optional,*;resolution:=optional</bundle>
+    <bundle dependency='true'>wrap:mvn:org.apache.curator/curator-x-discovery/${curator.tesb.version}$overwrite=merge&amp;Import-Package=com.google.common.*;version="${google-cloud-guava.tesb.version-range}";resolution:=optional,*;resolution:=optional</bundle>
     <bundle dependency='true'>mvn:com.google.guava/failureaccess/1.0.1</bundle>
     <bundle dependency='true'>mvn:com.google.guava/guava/${zookeeper-guava-version}</bundle>
     <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2-version}</bundle>
