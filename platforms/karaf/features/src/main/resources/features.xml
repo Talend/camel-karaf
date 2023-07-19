@@ -666,7 +666,7 @@
   <feature name='camel-couchdb' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.lightcouch/${lightcouch-bundle-version}</bundle>
-    <bundle dependency='true'>mvn:com.google.code.gson/gson/${gson-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:com.google.code.gson/gson/${gson-version}$Bundle-SymbolicName=com.google.code.gson.gson&amp;Bundle-Version=${gson-version}&amp;overwrite=merge&amp;Import-Package=com.google.common.*;version="${google-cloud-guava.tesb.version-range}",*;resolution:=optional</bundle>
     <bundle dependency='true'>mvn:commons-codec/commons-codec/${commons-codec-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.httpcomponents/httpcore-osgi/${httpcore4-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.httpcomponents/httpclient-osgi/${httpclient4-version}</bundle>
@@ -712,7 +712,7 @@
     <feature version='${upstream.version}'>camel-core</feature>
     <bundle dependency='true'>mvn:org.apache.httpcomponents/httpcore-osgi/${httpcore4-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.httpcomponents/httpclient-osgi/${httpclient4-version}</bundle>
-    <bundle dependency='true'>mvn:com.google.code.gson/gson/${gson-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:com.google.code.gson/gson/${gson-version}$Bundle-SymbolicName=com.google.code.gson.gson&amp;Bundle-Version=${gson-version}&amp;overwrite=merge&amp;Import-Package=com.google.common.*;version="${google-cloud-guava.tesb.version-range}",*;resolution:=optional</bundle>
     <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.digitalocean-api-client/${digitalocean-api-client-bundle-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-digitalocean/${upstream.version}</bundle>
@@ -965,7 +965,7 @@
     <bundle dependency='true'>wrap:mvn:com.google.cloud/google-cloud-core/${google-cloud-core-version}</bundle>
     <bundle dependency='true'>wrap:mvn:com.google.cloud/google-cloud-core-http/${google-cloud-core-version}</bundle>
     <bundle dependency='true'>mvn:com.google.code.findbugs/jsr305/${google-findbugs-jsr305-version}</bundle>
-    <bundle dependency='true'>wrap:mvn:com.google.code.gson/gson/${gson-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:com.google.code.gson/gson/${gson-version}$Bundle-SymbolicName=com.google.code.gson.gson&amp;Bundle-Version=${gson-version}&amp;overwrite=merge&amp;Import-Package=com.google.common.*;version="${google-cloud-guava.tesb.version-range}",*;resolution:=optional</bundle>
     <bundle dependency='true'>wrap:mvn:com.google.http-client/google-http-client/${google-cloud-http-client-version}</bundle>
     <bundle dependency='true'>wrap:mvn:com.google.http-client/google-http-client-appengine/${google-cloud-http-client-version}</bundle>
     <bundle dependency='true'>wrap:mvn:com.google.http-client/google-http-client-jackson2/${google-cloud-http-client-version}</bundle>
@@ -1112,7 +1112,7 @@
 
   <feature name='camel-gson' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
-    <bundle dependency='true'>mvn:com.google.code.gson/gson/${gson-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:com.google.code.gson/gson/${gson-version}$Bundle-SymbolicName=com.google.code.gson.gson&amp;Bundle-Version=${gson-version}&amp;overwrite=merge&amp;Import-Package=com.google.common.*;version="${google-cloud-guava.tesb.version-range}",*;resolution:=optional</bundle>
     <bundle>mvn:org.apache.camel/camel-gson/${upstream.version}</bundle>
   </feature>
   <feature name='camel-guava-eventbus' version='${upstream.version}' start-level='50'>
@@ -1214,7 +1214,7 @@
   <feature name='camel-ironmq' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.ironmq/${ironmq-bundle-version}</bundle>
-    <bundle dependency='true'>mvn:com.google.code.gson/gson/${gson-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:com.google.code.gson/gson/${gson-version}$Bundle-SymbolicName=com.google.code.gson.gson&amp;Bundle-Version=${gson-version}&amp;overwrite=merge&amp;Import-Package=com.google.common.*;version="${google-cloud-guava.tesb.version-range}",*;resolution:=optional</bundle>
     <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-ironmq/${upstream.version}</bundle>
   </feature>
@@ -1279,7 +1279,7 @@
     <bundle dependency='true'>mvn:org.apache.httpcomponents/httpasyncclient-osgi/${httpasyncclient-version}</bundle>
     <bundle dependency='true'>mvn:org.codehaus.jettison/jettison/${jettison.tesb.version}</bundle>
     <bundle dependency='true'>mvn:joda-time/joda-time/${jodatime2-version}</bundle>
-    <bundle dependency='true'>wrap:mvn:com.google.code.gson/gson/${gson-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:com.google.code.gson/gson/${gson-version}$Bundle-SymbolicName=com.google.code.gson.gson&amp;Bundle-Version=${gson-version}&amp;overwrite=merge&amp;Import-Package=com.google.common.*;version="${google-cloud-guava.tesb.version-range}",*;resolution:=optional</bundle>
     <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-api/${google-http-client-opencensus-api-version}</bundle>
     <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-contrib-http-util/${google-http-client-opencensus-api-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.google-http-client/${google-http-client-bundle-version}</bundle>
@@ -1365,7 +1365,7 @@
     <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2-version}</bundle>
     <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2-version}</bundle>
     <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-xml/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.google.code.gson/gson/2.10</bundle>
+    <bundle dependency='true'>mvn:com.google.code.gson/gson/2.10.1</bundle>
     <bundle dependency='true'>mvn:org.apache.commons/commons-text/${commons-text-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-jsonata/${upstream.version}</bundle>
@@ -1832,7 +1832,7 @@
     <bundle dependency='true'>mvn:com.google.protobuf/protobuf-java-util/${protobuf-version}</bundle>
     <bundle dependency='true'>mvn:commons-io/commons-io/${commons-io-version}</bundle>
     <bundle dependency='true'>mvn:com.google.guava/guava/${protobuf-guava-version}</bundle>
-    <bundle dependency='true'>mvn:com.google.code.gson/gson/${gson-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:com.google.code.gson/gson/${gson-version}$Bundle-SymbolicName=com.google.code.gson.gson&amp;Bundle-Version=${gson-version}&amp;overwrite=merge&amp;Import-Package=com.google.common.*;version="${google-cloud-guava.tesb.version-range}",*;resolution:=optional</bundle>
     <bundle dependency='true'>mvn:com.google.guava/failureaccess/1.0.1</bundle>
     <bundle dependency='true'>mvn:com.google.code.findbugs/jsr305/${google-findbugs-jsr305-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-protobuf/${upstream.version}</bundle>
@@ -1840,7 +1840,7 @@
   <feature name='camel-pubnub' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
     <bundle dependency='true'>wrap:mvn:com.pubnub/pubnub-gson/${pubnub-version}</bundle>
-    <bundle dependency='true'>mvn:com.google.code.gson/gson/${gson-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:com.google.code.gson/gson/${gson-version}$Bundle-SymbolicName=com.google.code.gson.gson&amp;Bundle-Version=${gson-version}&amp;overwrite=merge&amp;Import-Package=com.google.common.*;version="${google-cloud-guava.tesb.version-range}",*;resolution:=optional</bundle>
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.okhttp/${okclient-bundle-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.okio/${squareup-okio-bundle-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.retrofit/${squareup-retrofit2-bundle-version}</bundle>
@@ -2059,7 +2059,7 @@
     <bundle dependency='true'>mvn:org.apache.httpcomponents/httpcore-osgi/${httpcore4-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.httpcomponents/httpclient-osgi/${httpclient4-version}</bundle>
     <bundle dependency='true'>mvn:javax.servlet/javax.servlet-api/${javax-servlet-api-version}</bundle>
-    <bundle dependency='true'>mvn:com.google.code.gson/gson/${gson-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:com.google.code.gson/gson/${gson-version}$Bundle-SymbolicName=com.google.code.gson.gson&amp;Bundle-Version=${gson-version}&amp;overwrite=merge&amp;Import-Package=com.google.common.*;version="${google-cloud-guava.tesb.version-range}",*;resolution:=optional</bundle>
     <bundle dependency='true'>wrap:mvn:com.slack.api/slack-api-client/${slack-api-model-version}</bundle>
     <bundle dependency='true'>wrap:mvn:com.slack.api/slack-api-model/${slack-api-model-version}</bundle>
     <bundle dependency='true'>wrap:mvn:com.squareup.okhttp3/okhttp/${okclient-version}</bundle>
