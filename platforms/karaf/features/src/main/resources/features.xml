@@ -189,9 +189,9 @@
     <bundle dependency='true'>mvn:commons-codec/commons-codec/${commons-codec-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.httpcomponents/httpcore-osgi/${httpcore4-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.httpcomponents/httpclient-osgi/${httpclient4-version}</bundle>
-    <bundle dependency='true'>mvn:org.bouncycastle/bcprov-jdk15on/${bouncycastle-version}</bundle>
-    <bundle dependency='true'>mvn:org.bouncycastle/bcpkix-jdk15on/${bouncycastle-version}</bundle>
-    <bundle dependency='true'>mvn:org.bouncycastle/bcutil-jdk15on/${bouncycastle-version}</bundle>
+    <bundle dependency='true'>mvn:org.bouncycastle/bcprov-jdk18on/${bouncycastle.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:org.bouncycastle/bcpkix-jdk18on/${bouncycastle.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:org.bouncycastle/bcutil-jdk18on/${bouncycastle.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.apache.velocity/velocity-engine-core/${velocity-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-as2-api/${upstream.version}</bundle>
@@ -200,7 +200,7 @@
   <feature name='camel-asn1' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
     <bundle dependency='true'>mvn:com.beanit/jasn1/${jasn1-version}</bundle>
-    <bundle dependency='true'>mvn:org.bouncycastle/bcprov-jdk15on/${bouncycastle-version}</bundle>
+    <bundle dependency='true'>mvn:org.bouncycastle/bcprov-jdk18on/${bouncycastle.tesb.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-asn1/${upstream.version}</bundle>
   </feature>
   <feature name='camel-asterisk' version='${upstream.version}' start-level='50'>
@@ -464,8 +464,9 @@
     <!-- <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.xalan/${xalan-bundle-version}</bundle> -->
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.xerces/${xerces-bundle-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.xmlresolver/${xmlresolver-bundle-version}</bundle>
-    <bundle dependency='true'>mvn:org.bouncycastle/bcprov-jdk15on/${bouncycastle-version}</bundle>
-    <bundle dependency='true'>mvn:org.bouncycastle/bcpkix-jdk15on/${bouncycastle-version}</bundle>
+    <bundle dependency='true'>mvn:org.bouncycastle/bcprov-jdk18on/${bouncycastle.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:org.bouncycastle/bcutil-jdk18on/${bouncycastle.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:org.bouncycastle/bcpkix-jdk18on/${bouncycastle.tesb.version}</bundle>
     <bundle dependency='true'>mvn:com.eclipsesource.minimal-json/minimal-json/${minimal-json-version}</bundle>
     <bundle dependency='true'>mvn:org.bitbucket.b_c/jose4j/${jose4j-version}</bundle>
     <bundle dependency='true'>wrap:mvn:com.box/box-java-sdk/${box-java-sdk-version}</bundle>
@@ -590,8 +591,8 @@
   <feature name='camel-crypto' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
     <bundle dependency='true'>mvn:commons-codec/commons-codec/${commons-codec-version}</bundle>
-    <bundle dependency='true'>mvn:org.bouncycastle/bcpg-jdk15on/${bouncycastle-version}</bundle>
-    <bundle dependency='true'>mvn:org.bouncycastle/bcprov-jdk15on/${bouncycastle-version}</bundle>
+    <bundle dependency='true'>mvn:org.bouncycastle/bcpg-jdk18on/${bouncycastle.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:org.bouncycastle/bcprov-jdk18on/${bouncycastle.tesb.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-crypto/${upstream.version}</bundle>
   </feature>
   <feature name='camel-csv' version='${upstream.version}' start-level='50'>
@@ -673,10 +674,10 @@
     <bundle dependency='true'>mvn:commons-lang/commons-lang/${commons-lang-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.httpcomponents/httpcore-osgi/${httpcore4-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.httpcomponents/httpclient-osgi/${httpclient4-version}</bundle>
-    <bundle dependency='true'>mvn:org.bouncycastle/bcprov-jdk15on/${bouncycastle-version}</bundle>
-    <bundle dependency='true'>mvn:org.bouncycastle/bcmail-jdk15on/${bouncycastle-version}</bundle>
-    <bundle dependency='true'>mvn:org.bouncycastle/bcpkix-jdk15on/${bouncycastle-version}</bundle>
-    <bundle dependency='true'>mvn:org.bouncycastle/bcutil-jdk15on/${bouncycastle-version}</bundle>
+    <bundle dependency='true'>mvn:org.bouncycastle/bcprov-jdk18on/${bouncycastle.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:org.bouncycastle/bcmail-jdk18on/${bouncycastle.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:org.bouncycastle/bcpkix-jdk18on/${bouncycastle.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:org.bouncycastle/bcutil-jdk18on/${bouncycastle.tesb.version}</bundle>
     <bundle dependency='true'>wrap:mvn:com.github.luben/zstd-jni/1.3.3-3</bundle>
     <bundle dependency='true'>wrap:mvn:net.java.dev.jna/jna/5.8.0</bundle>
     <bundle dependency='true'>wrap:mvn:de.gesellix/unix-socket-factory/${unix-socket-factory-version}$Bundle-SymbolicName=de.gesellix.unix-socket-factory&amp;Bundle-Version=${unix-socket-factory-bundle-version}</bundle>
@@ -860,8 +861,8 @@
     <bundle dependency='true'>mvn:com.googlecode.javaewah/JavaEWAH/${java-ewah-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.jsch/${jsch-bundle-version}</bundle>
     <bundle dependency='true'>mvn:javax.servlet/javax.servlet-api/${javax-servlet-api-version}</bundle>
-    <bundle dependency='true'>mvn:org.bouncycastle/bcprov-jdk15on/${bouncycastle-version}</bundle>
-    <bundle dependency='true'>mvn:org.bouncycastle/bcpg-jdk15on/${bouncycastle-version}</bundle>
+    <bundle dependency='true'>mvn:org.bouncycastle/bcprov-jdk18on/${bouncycastle.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:org.bouncycastle/bcpg-jdk18on/${bouncycastle.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.apache.httpcomponents/httpcore-osgi/${httpcore4-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.httpcomponents/httpclient-osgi/${httpclient4-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-git/${upstream.version}</bundle>
@@ -1008,10 +1009,10 @@
     <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-proto/${opencensus-proto-version}$Bundle-SymbolicName=io.opencensus.opencensus-proto&amp;Bundle-Version=${opencensus-proto-version}&amp;overwrite=merge&amp;Import-Package=com.google.common.*;version="[31.1,40)",*;resolution:=optional</bundle>
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.okhttp/${squareup-okhttp-bundle-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.okio/${squareup-okio-bundle-version}</bundle>
-    <bundle dependency='true'>mvn:org.bouncycastle/bcpkix-jdk18on/${google-common-bouncycastle-version}</bundle>
-    <bundle dependency='true'>mvn:org.bouncycastle/bctls-jdk18on/${google-common-bouncycastle-version}</bundle>
-    <bundle dependency='true'>mvn:org.bouncycastle/bcprov-jdk18on/${google-common-bouncycastle-version}</bundle>
-    <bundle dependency='true'>mvn:org.bouncycastle/bcutil-jdk18on/${google-common-bouncycastle-version}</bundle>
+    <bundle dependency='true'>mvn:org.bouncycastle/bcpkix-jdk18on/${bouncycastle.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:org.bouncycastle/bctls-jdk18on/${bouncycastle.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:org.bouncycastle/bcprov-jdk18on/${bouncycastle.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:org.bouncycastle/bcutil-jdk18on/${bouncycastle.tesb.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-google-pubsub/${camel-google-pubsub.tesb.version}</bundle>
   </feature>
   <feature name='camel-grape' version='${upstream.version}' start-level='50'>
@@ -1085,10 +1086,10 @@
     <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-proto/${opencensus-proto-version}$Bundle-SymbolicName=io.opencensus.opencensus-proto&amp;Bundle-Version=${opencensus-proto-version}&amp;overwrite=merge&amp;Import-Package=com.google.common.*;version="[31.1,40)",*;resolution:=optional</bundle>
     <bundle dependency='true'>wrap:mvn:io.perfmark/perfmark-api/${google-cloud-perfmark-version}$Bundle-SymbolicName=io.perfmark.perfmark-api&amp;Bundle-Version=${google-cloud-perfmark-version}&amp;overwrite=merge&amp;Import-Package=com.google.common.*;version="[31.1,40)",*;resolution:=optional</bundle>
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.okio/${squareup-okio-bundle-version}</bundle>
-    <bundle dependency='true'>mvn:org.bouncycastle/bcprov-jdk18on/${google-common-bouncycastle-version}</bundle>
-    <bundle dependency='true'>mvn:org.bouncycastle/bcpkix-jdk18on/${google-common-bouncycastle-version}</bundle>
-    <bundle dependency='true'>mvn:org.bouncycastle/bcutil-jdk18on/${google-common-bouncycastle-version}</bundle>
-    <bundle dependency='true'>mvn:org.bouncycastle/bctls-jdk18on/${google-common-bouncycastle-version}</bundle>
+    <bundle dependency='true'>mvn:org.bouncycastle/bcprov-jdk18on/${bouncycastle.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:org.bouncycastle/bcpkix-jdk18on/${bouncycastle.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:org.bouncycastle/bcutil-jdk18on/${bouncycastle.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:org.bouncycastle/bctls-jdk18on/${bouncycastle.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.javassist/javassist/${grpc-javassist-version}</bundle>
     <bundle dependency='true'>mvn:com.google.protobuf/protobuf-java/${google-common-protobuf-version}</bundle>
     <bundle dependency='true'>mvn:com.google.protobuf/protobuf-java-util/${google-common-protobuf-version}</bundle>
@@ -1630,9 +1631,10 @@
     <bundle dependency='true'>mvn:org.jooq/jool/${jool-version}</bundle>
     <bundle dependency='true'>mvn:com.google.code.findbugs/jsr305/${google-findbugs-jsr305-version}</bundle>
     <bundle dependency='true'>mvn:com.google.code.findbugs/annotations/${google-findbugs-annotations2-version}</bundle>
-    <bundle dependency='true'>mvn:org.bouncycastle/bcprov-jdk15on/${bouncycastle-milo-version}</bundle>
-    <bundle dependency='true'>mvn:org.bouncycastle/bcpkix-jdk15on/${bouncycastle-milo-version}</bundle>     
-    <bundle dependency='true'>mvn:org.bouncycastle/bcmail-jdk15on/${bouncycastle-milo-version}</bundle>    
+    <bundle dependency='true'>mvn:org.bouncycastle/bcprov-jdk18on/${bouncycastle.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:org.bouncycastle/bcutil-jdk18on/${bouncycastle.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:org.bouncycastle/bcpkix-jdk18on/${bouncycastle.tesb.version}</bundle>     
+    <bundle dependency='true'>mvn:org.bouncycastle/bcmail-jdk18on/${bouncycastle.tesb.version}</bundle>    
     <bundle dependency='true'>mvn:io.netty/netty-common/${netty.tesb.version}</bundle>
     <bundle dependency='true'>mvn:io.netty/netty-buffer/${netty.tesb.version}</bundle>
     <bundle dependency='true'>mvn:io.netty/netty-resolver/${netty.tesb.version}</bundle>
@@ -1713,7 +1715,7 @@
   <feature name='camel-nagios' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
     <bundle dependency='true'>wrap:mvn:com.github.jsendnsca/jsendnsca/${jsendnsca-version}</bundle>
-    <bundle dependency='true'>mvn:org.bouncycastle/bcprov-jdk15on/${bouncycastle-version}</bundle>
+    <bundle dependency='true'>mvn:org.bouncycastle/bcprov-jdk18on/${bouncycastle.tesb.version}</bundle>
     <bundle dependency='true'>mvn:commons-lang/commons-lang/${commons-lang-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-nagios/${upstream.version}</bundle>
   </feature>
@@ -1847,9 +1849,10 @@
   <feature name='camel-pdf' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
     <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3-version}</bundle>
-    <bundle dependency='true'>mvn:org.bouncycastle/bcprov-jdk15on/${bouncycastle-version}</bundle>
-    <bundle dependency='true'>mvn:org.bouncycastle/bcmail-jdk15on/${bouncycastle-version}</bundle>
-    <bundle dependency='true'>mvn:org.bouncycastle/bcpkix-jdk15on/${bouncycastle-version}</bundle>
+    <bundle dependency='true'>mvn:org.bouncycastle/bcprov-jdk18on/${bouncycastle.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:org.bouncycastle/bcmail-jdk18on/${bouncycastle.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:org.bouncycastle/bcutil-jdk18on/${bouncycastle.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:org.bouncycastle/bcpkix-jdk18on/${bouncycastle.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.apache.pdfbox/pdfbox/${pdfbox-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.pdfbox/fontbox/${pdfbox-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-pdf/${upstream.version}</bundle>
@@ -2250,9 +2253,9 @@
     <feature version='${upstream.version}'>camel-core</feature>
     <bundle dependency='true'>mvn:org.apache.mina/mina-core/${mina-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.sshd/sshd-osgi/${sshd.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:org.bouncycastle/bcprov-jdk15on/${bouncycastle-version}</bundle>
-    <bundle dependency='true'>mvn:org.bouncycastle/bcpkix-jdk15on/${bouncycastle-version}</bundle>
-    <bundle dependency='true'>mvn:org.bouncycastle/bcutil-jdk15on/${bouncycastle-version}</bundle>
+    <bundle dependency='true'>mvn:org.bouncycastle/bcprov-jdk18on/${bouncycastle.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:org.bouncycastle/bcpkix-jdk18on/${bouncycastle.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:org.bouncycastle/bcutil-jdk18on/${bouncycastle.tesb.version}</bundle>
     <bundle dependency='true'>mvn:net.i2p.crypto/eddsa/${eddsa-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-ssh/${upstream.version}</bundle>
   </feature>
