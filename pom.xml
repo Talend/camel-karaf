@@ -97,7 +97,7 @@
 
     <properties>
         <upstream.version>3.11.1</upstream.version>
-        <camel.features.tesb.version>3.11.1.20230718</camel.features.tesb.version>
+        <camel.features.tesb.version>3.11.1.20230719</camel.features.tesb.version>
         <jaxb-bundle-version.tesb.version>2.3.2_1</jaxb-bundle-version.tesb.version>
         <woodstox-version.tesb.version>6.4.0</woodstox-version.tesb.version>
         <activemq-version.tesb.version>5.16.4</activemq-version.tesb.version>
@@ -141,6 +141,7 @@
         <google.protobuf-util.tesb.version>3.23.3</google.protobuf-util.tesb.version>
         <google.protobuf.tesb.version>3.23.3</google.protobuf.tesb.version>
         <google.guava.tesb.version>32.0.1-jre</google.guava.tesb.version>
+        <bouncycastle.tesb.version>1.74</bouncycastle.tesb.version>
 		
         <!-- unify the encoding for all the modules -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -623,6 +624,7 @@
                             <google.protobuf-util.tesb.version>${google.protobuf-util.tesb.version}</google.protobuf-util.tesb.version>
                             <google.protobuf.tesb.version>${google.protobuf.tesb.version}</google.protobuf.tesb.version>
                             <google.guava.tesb.version>${google.guava.tesb.version}</google.guava.tesb.version>
+                            <bouncycastle.tesb.version>${bouncycastle.tesb.version}</bouncycastle.tesb.version>
                         </properties>
                     </configuration>
                     <executions>
