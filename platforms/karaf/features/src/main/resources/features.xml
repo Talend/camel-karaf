@@ -622,10 +622,10 @@
     <bundle dependency='true'>mvn:io.netty/netty-transport/${netty.tesb.version}</bundle>
     <bundle dependency='true'>mvn:io.netty/netty-transport-native-unix-common/${netty.tesb.version}</bundle>
     <bundle dependency='true'>mvn:io.netty/netty-tcnative-classes/${netty-tcnative-classes-version}</bundle>
-    <bundle>wrap:mvn:org.eclipse.californium/californium-core/${californium-version}</bundle>
-    <bundle>wrap:mvn:org.eclipse.californium/element-connector/${californium-version}$overwrite=merge&amp;Import-Package=net.i2p.crypto.eddsa;resolution:=optional</bundle>
-    <bundle>wrap:mvn:org.eclipse.californium/element-connector-tcp-netty/${californium-version}</bundle>
-    <bundle>wrap:mvn:org.eclipse.californium/scandium/${californium-version}</bundle>
+    <bundle>wrap:mvn:org.eclipse.californium/californium-core/${californium.tesb.version}</bundle>
+    <bundle>wrap:mvn:org.eclipse.californium/element-connector/${californium.tesb.version}$overwrite=merge&amp;Import-Package=net.i2p.crypto.eddsa;resolution:=optional</bundle>
+    <bundle>wrap:mvn:org.eclipse.californium/element-connector-tcp-netty/${californium.tesb.version}</bundle>
+    <bundle>wrap:mvn:org.eclipse.californium/scandium/${californium.tesb.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-coap/${upstream.version}</bundle>
   </feature>
   <feature name='camel-cometd' version='${upstream.version}' start-level='50'>
@@ -898,21 +898,21 @@
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.xerces/${xerces-bundle-version}</bundle>
     <!-- <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.xalan/${xalan-bundle-version}</bundle> -->
     <bundle dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.xmlgraphics-commons/${xmlgraphics-commons-bundle-version}</bundle>
-    <bundle dependency="true">wrap:mvn:org.apache.xmlgraphics/batik-svg-dom/${xmlgraphics-batik-version}$Bundle-SymbolicName=org.apache.xmlgraphics.batik-svg-dom&amp;Bundle-Version=${xmlgraphics-batik-version}</bundle>
-    <bundle dependency="true">wrap:mvn:org.apache.xmlgraphics/batik-anim/${xmlgraphics-batik-version}$Bundle-SymbolicName=org.apache.xmlgraphics.batik-anim&amp;Bundle-Version=${xmlgraphics-batik-version}</bundle>
-    <bundle dependency="true">wrap:mvn:org.apache.xmlgraphics/batik-css/${xmlgraphics-batik-version}$Bundle-SymbolicName=org.apache.xmlgraphics.batik-css&amp;Bundle-Version=${xmlgraphics-batik-version}</bundle>
-    <bundle dependency="true">wrap:mvn:org.apache.xmlgraphics/batik-dom/${xmlgraphics-batik-version}$Bundle-SymbolicName=org.apache.xmlgraphics.batik-dom&amp;Bundle-Version=${xmlgraphics-batik-version}</bundle>
-    <bundle dependency="true">wrap:mvn:org.apache.xmlgraphics/batik-parser/${xmlgraphics-batik-version}$Bundle-SymbolicName=org.apache.xmlgraphics.batik-parser&amp;Bundle-Version=${xmlgraphics-batik-version}</bundle>
-    <bundle dependency="true">wrap:mvn:org.apache.xmlgraphics/batik-util/${xmlgraphics-batik-version}$Bundle-SymbolicName=org.apache.xmlgraphics.batik-util&amp;Bundle-Version=${xmlgraphics-batik-version}</bundle>
-    <bundle dependency="true">wrap:mvn:org.apache.xmlgraphics/batik-bridge/${xmlgraphics-batik-version}$Bundle-SymbolicName=org.apache.xmlgraphics.batik-bridge&amp;Bundle-Version=${xmlgraphics-batik-version}</bundle>
-    <bundle dependency="true">wrap:mvn:org.apache.xmlgraphics/batik-script/${xmlgraphics-batik-version}$Bundle-SymbolicName=org.apache.xmlgraphics.batik-script&amp;Bundle-Version=${xmlgraphics-batik-version}</bundle>
-    <bundle dependency="true">wrap:mvn:org.apache.xmlgraphics/batik-xml/${xmlgraphics-batik-version}$Bundle-SymbolicName=org.apache.xmlgraphics.batik-xml&amp;Bundle-Version=${xmlgraphics-batik-version}</bundle>
-    <bundle dependency="true">wrap:mvn:org.apache.xmlgraphics/batik-awt-util/${xmlgraphics-batik-version}$Bundle-SymbolicName=org.apache.xmlgraphics.batik-awt-util&amp;Bundle-Version=${xmlgraphics-batik-version}</bundle>
-    <bundle dependency="true">wrap:mvn:org.apache.xmlgraphics/batik-gvt/${xmlgraphics-batik-version}$Bundle-SymbolicName=org.apache.xmlgraphics.batik-gvt&amp;Bundle-Version=${xmlgraphics-batik-version}</bundle>
-    <bundle dependency="true">wrap:mvn:org.apache.xmlgraphics/batik-transcoder/${xmlgraphics-batik-version}$Bundle-SymbolicName=org.apache.xmlgraphics.batik-transcoder&amp;Bundle-Version=${xmlgraphics-batik-version}</bundle>
-    <bundle dependency="true">wrap:mvn:org.apache.xmlgraphics/batik-svggen/${xmlgraphics-batik-version}$Bundle-SymbolicName=org.apache.xmlgraphics.batik-svggen&amp;Bundle-Version=${xmlgraphics-batik-version}</bundle>
-    <bundle dependency="true">wrap:mvn:org.apache.xmlgraphics/batik-extension/${xmlgraphics-batik-version}$Bundle-SymbolicName=org.apache.xmlgraphics.batik-extension&amp;Bundle-Version=${xmlgraphics-batik-version}</bundle>
-    <bundle dependency="true">wrap:mvn:org.apache.xmlgraphics/batik-ext/${xmlgraphics-batik-version}$Bundle-SymbolicName=org.apache.xmlgraphics.batik-ext&amp;Bundle-Version=${xmlgraphics-batik-version}</bundle>
+    <bundle dependency="true">wrap:mvn:org.apache.xmlgraphics/batik-svg-dom/${xmlgraphics-batik.tesb.version}$Bundle-SymbolicName=org.apache.xmlgraphics.batik-svg-dom&amp;Bundle-Version=${xmlgraphics-batik.tesb.version}</bundle>
+    <bundle dependency="true">wrap:mvn:org.apache.xmlgraphics/batik-anim/${xmlgraphics-batik.tesb.version}$Bundle-SymbolicName=org.apache.xmlgraphics.batik-anim&amp;Bundle-Version=${xmlgraphics-batik.tesb.version}</bundle>
+    <bundle dependency="true">wrap:mvn:org.apache.xmlgraphics/batik-css/${xmlgraphics-batik.tesb.version}$Bundle-SymbolicName=org.apache.xmlgraphics.batik-css&amp;Bundle-Version=${xmlgraphics-batik.tesb.version}</bundle>
+    <bundle dependency="true">wrap:mvn:org.apache.xmlgraphics/batik-dom/${xmlgraphics-batik.tesb.version}$Bundle-SymbolicName=org.apache.xmlgraphics.batik-dom&amp;Bundle-Version=${xmlgraphics-batik.tesb.version}</bundle>
+    <bundle dependency="true">wrap:mvn:org.apache.xmlgraphics/batik-parser/${xmlgraphics-batik.tesb.version}$Bundle-SymbolicName=org.apache.xmlgraphics.batik-parser&amp;Bundle-Version=${xmlgraphics-batik.tesb.version}</bundle>
+    <bundle dependency="true">wrap:mvn:org.apache.xmlgraphics/batik-util/${xmlgraphics-batik.tesb.version}$Bundle-SymbolicName=org.apache.xmlgraphics.batik-util&amp;Bundle-Version=${xmlgraphics-batik.tesb.version}</bundle>
+    <bundle dependency="true">wrap:mvn:org.apache.xmlgraphics/batik-bridge/${xmlgraphics-batik.tesb.version}$Bundle-SymbolicName=org.apache.xmlgraphics.batik-bridge&amp;Bundle-Version=${xmlgraphics-batik.tesb.version}</bundle>
+    <bundle dependency="true">wrap:mvn:org.apache.xmlgraphics/batik-script/${xmlgraphics-batik.tesb.version}$Bundle-SymbolicName=org.apache.xmlgraphics.batik-script&amp;Bundle-Version=${xmlgraphics-batik.tesb.version}</bundle>
+    <bundle dependency="true">wrap:mvn:org.apache.xmlgraphics/batik-xml/${xmlgraphics-batik.tesb.version}$Bundle-SymbolicName=org.apache.xmlgraphics.batik-xml&amp;Bundle-Version=${xmlgraphics-batik.tesb.version}</bundle>
+    <bundle dependency="true">wrap:mvn:org.apache.xmlgraphics/batik-awt-util/${xmlgraphics-batik.tesb.version}$Bundle-SymbolicName=org.apache.xmlgraphics.batik-awt-util&amp;Bundle-Version=${xmlgraphics-batik.tesb.version}</bundle>
+    <bundle dependency="true">wrap:mvn:org.apache.xmlgraphics/batik-gvt/${xmlgraphics-batik.tesb.version}$Bundle-SymbolicName=org.apache.xmlgraphics.batik-gvt&amp;Bundle-Version=${xmlgraphics-batik.tesb.version}</bundle>
+    <bundle dependency="true">wrap:mvn:org.apache.xmlgraphics/batik-transcoder/${xmlgraphics-batik.tesb.version}$Bundle-SymbolicName=org.apache.xmlgraphics.batik-transcoder&amp;Bundle-Version=${xmlgraphics-batik.tesb.version}</bundle>
+    <bundle dependency="true">wrap:mvn:org.apache.xmlgraphics/batik-svggen/${xmlgraphics-batik.tesb.version}$Bundle-SymbolicName=org.apache.xmlgraphics.batik-svggen&amp;Bundle-Version=${xmlgraphics-batik.tesb.version}</bundle>
+    <bundle dependency="true">wrap:mvn:org.apache.xmlgraphics/batik-extension/${xmlgraphics-batik.tesb.version}$Bundle-SymbolicName=org.apache.xmlgraphics.batik-extension&amp;Bundle-Version=${xmlgraphics-batik.tesb.version}</bundle>
+    <bundle dependency="true">wrap:mvn:org.apache.xmlgraphics/batik-ext/${xmlgraphics-batik.tesb.version}$Bundle-SymbolicName=org.apache.xmlgraphics.batik-ext&amp;Bundle-Version=${xmlgraphics-batik.tesb.version}</bundle>
     <bundle dependency="true">wrap:mvn:xml-apis/xml-apis-ext/${xml-apis-ext-version}$Bundle-SymbolicName=xml-apis-ext&amp;Bundle-Version=${xml-apis-ext-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.bcel/${bcel-bundle-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.fop/${fop-bundle-version}</bundle>
@@ -1125,7 +1125,7 @@
     <feature version='${upstream.version}'>camel-core</feature>
     <feature>transaction</feature>
     <bundle dependency='true'>mvn:com.eclipsesource.minimal-json/minimal-json/${minimal-json-version}</bundle>
-    <bundle dependency='true'>mvn:com.hazelcast/hazelcast/${hazelcast-version}</bundle>
+    <bundle dependency='true'>mvn:com.hazelcast/hazelcast/${hazelcast.tesb.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-hazelcast/${upstream.version}</bundle>
   </feature>
   <feature name='camel-headersmap' version='${upstream.version}' start-level='50'>
@@ -1502,7 +1502,7 @@
   </feature>
   <feature name='camel-kudu' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
-    <bundle dependency='true'>wrap:mvn:org.apache.kudu/kudu-client/${kudu-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:org.apache.kudu/kudu-client/${kudu.tesb.version}</bundle>
     <bundle dependency='true'>wrap:mvn:org.apache.yetus/audience-annotations/${yetus-audience-annotations-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-kudu/${upstream.version}</bundle>
   </feature>
@@ -1714,7 +1714,7 @@
     <bundle dependency='true'>mvn:org.apache.httpcomponents/httpasyncclient-osgi/${httpasyncclient-version}</bundle>
     <bundle dependency='true'>mvn:commons-codec/commons-codec/${commons-codec-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3-version}</bundle>
-    <bundle dependency='true'>mvn:com.google.code.gson/gson/${olingo2-gson-version}</bundle>
+    <bundle dependency='true'>mvn:com.google.code.gson/gson/${olingo2-gson.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.apache.olingo/olingo-odata2-api/${olingo2-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.olingo-odata2-core/${olingo-odata2-core-bundle-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.jsr311-api-1.1.1/${servicemix-specs-version}</bundle>
@@ -2357,7 +2357,7 @@
     <bundle dependency='true'>mvn:io.netty/netty-resolver/${netty.tesb.version}</bundle>
     <bundle dependency='true'>mvn:io.netty/netty-resolver-dns/${netty.tesb.version}</bundle>
     <bundle dependency='true'>mvn:io.netty/netty-tcnative-classes/${netty-tcnative-classes-version}</bundle>
-    <bundle dependency='true'>mvn:com.hazelcast/hazelcast/${hazelcast-version}</bundle>
+    <bundle dependency='true'>mvn:com.hazelcast/hazelcast/${hazelcast.tesb.version}</bundle>
     <bundle dependency='true'>mvn:com.eclipsesource.minimal-json/minimal-json/${minimal-json-version}</bundle>
     <bundle dependency='true'>wrap:mvn:io.vertx/vertx-core/${vertx-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-vertx-common/${upstream.version}</bundle>

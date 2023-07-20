@@ -133,6 +133,11 @@
         <bouncycastle.tesb.version>1.74</bouncycastle.tesb.version>
         <xmlsec.tesb.version>2.3.0</xmlsec.tesb.version>
         <jakarta-validation-api.tesb.version>2.0.2</jakarta-validation-api.tesb.version>
+        <kudu.tesb.version>1.16.0</kudu.tesb.version>
+        <xmlgraphics-batik.tesb.version>1.16</xmlgraphics-batik.tesb.version>
+        <californium.tesb.version>2.7.4</californium.tesb.version>
+        <hazelcast.tesb.version>5.2.4</hazelcast.tesb.version>
+        <olingo2-gson.tesb.version>2.9.1</olingo2-gson.tesb.version>
         <spring.tesb.version-range>[5.2,7)</spring.tesb.version-range>
 
         <!-- unify the encoding for all the modules -->
@@ -606,6 +611,11 @@
                             <bouncycastle.tesb.version>${bouncycastle.tesb.version}</bouncycastle.tesb.version>
                             <xmlsec.tesb.version>${xmlsec.tesb.version}</xmlsec.tesb.version>
                             <jakarta-validation-api.tesb.version>${jakarta-validation-api.tesb.version}</jakarta-validation-api.tesb.version>
+                            <kudu.tesb.version>${kudu.tesb.version}</kudu.tesb.version>
+                            <xmlgraphics-batik.tesb.version>${xmlgraphics-batik.tesb.version}</xmlgraphics-batik.tesb.version>
+                            <californium.tesb.version>${californium.tesb.version}</californium.tesb.version>
+                            <hazelcast.tesb.version>${hazelcast.tesb.version}4</hazelcast.tesb.version>
+                            <olingo2-gson.tesb.version>${olingo2-gson.tesb.version}</olingo2-gson.tesb.version>
                             <spring.tesb.version-range>${spring.tesb.version-range}</spring.tesb.version-range>
                         </properties>
                     </configuration>
