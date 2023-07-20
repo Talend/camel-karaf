@@ -129,6 +129,7 @@
         <xstream-bundle.tesb.version>1.4.20_1</xstream-bundle.tesb.version>
         <commons-net.tesb.version>3.9.0</commons-net.tesb.version>
         <log4j2.tesb.version>2.20.0</log4j2.tesb.version>
+        <jna.tesb.version>5.13.0</jna.tesb.version>
         <bouncycastle.tesb.version>1.74</bouncycastle.tesb.version>
         <xmlsec.tesb.version>2.3.0</xmlsec.tesb.version>
         <jakarta-validation-api.tesb.version>2.0.2</jakarta-validation-api.tesb.version>
@@ -601,6 +602,7 @@
                             <xstream-bundle.tesb.version>${xstream-bundle.tesb.version}</xstream-bundle.tesb.version>
                             <commons-net.tesb.version>${commons-net.tesb.version}</commons-net.tesb.version>
                             <log4j2.tesb.version>${log4j2.tesb.version}</log4j2.tesb.version>
+                            <jna.tesb.version>${jna.tesb.version}</jna.tesb.version>
                             <bouncycastle.tesb.version>${bouncycastle.tesb.version}</bouncycastle.tesb.version>
                             <xmlsec.tesb.version>${xmlsec.tesb.version}</xmlsec.tesb.version>
                             <jakarta-validation-api.tesb.version>${jakarta-validation-api.tesb.version}</jakarta-validation-api.tesb.version>
