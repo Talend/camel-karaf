@@ -115,12 +115,16 @@
         <google-cloud-guava.tesb.version>32.1.1-jre</google-cloud-guava.tesb.version>
         <google-cloud-guava.tesb.version-range>[31,40)</google-cloud-guava.tesb.version-range>
         <google-cloud-guava-bundle.tesb.version>31.1_1</google-cloud-guava-bundle.tesb.version>
-        <grpc-guava.tesb.version>32.1.1-jre</grpc-guava.tesb.version>
-        <jetcd-guava.tesb.version>32.1.1-jre</jetcd-guava.tesb.version>
-        <jira-guava.tesb.version>32.1.1-jre</jira-guava.tesb.version>
-        <milo-guava.tesb.version>32.1.1-jre</milo-guava.tesb.version>
+        <guava-eventbus.tesb.version>32.1.1-jre</guava-eventbus.tesb.version>
+        <consul-guava.tesb.version>32.1.1-jre</consul-guava.tesb.version>
+        <docker-guava.tesb.version>32.1.1-jre</docker-guava.tesb.version>
+        <google-guava.tesb.version>32.1.1-jre</google-guava.tesb.version>
+        <influx-guava.tesb.version>32.1.1-jre</influx-guava.tesb.version>
+        <leveldb-guava.tesb.version>32.1.1-jre</leveldb-guava.tesb.version>
+        <mustache-guava.tesb.version>32.1.1-jre</mustache-guava.tesb.version>
         <protobuf-guava.tesb.version>32.1.1-jre</protobuf-guava.tesb.version>
-        <xchange-guava.tesb.version>32.1.1-jre</xchange-guava.tesb.version>
+        <swagger-java-guava.tesb.version>32.1.1-jre</swagger-java-guava.tesb.version>
+        <zookeeper-guava.tesb.version>32.1.1-jre</zookeeper-guava.tesb.version>
         <jetty.tesb.version>9.4.51.v20230217</jetty.tesb.version>
         <ant-bundle.tesb.version>1.10.12_1</ant-bundle.tesb.version>
         <netty.tesb.version>4.1.94.Final</netty.tesb.version>
@@ -597,12 +601,16 @@
                             <google-cloud-guava.tesb.version>${google-cloud-guava.tesb.version}</google-cloud-guava.tesb.version>
                             <google-cloud-guava.tesb.version-range>${google-cloud-guava.tesb.version-range}</google-cloud-guava.tesb.version-range>
                             <google-cloud-guava-bundle.tesb.version>${google-cloud-guava-bundle.tesb.version}</google-cloud-guava-bundle.tesb.version>
-                            <grpc-guava.tesb.version>${grpc-guava.tesb.version>}</grpc-guava.tesb.version>
-                            <jetcd-guava.tesb.version>${jetcd-guava.tesb.version}</jetcd-guava.tesb.version>
-                            <jira-guava.tesb.version>${jira-guava.tesb.version}</jira-guava.tesb.version>
-                            <milo-guava.tesb.version>${milo-guava.tesb.version}</milo-guava.tesb.version>
+                            <guava-eventbus.tesb.version>${guava-eventbus.tesb.version}</guava-eventbus.tesb.version>
+                            <consul-guava.tesb.version>${consul-guava.tesb.version}</consul-guava.tesb.version>
+                            <docker-guava.tesb.version>${docker-guava.tesb.version}</docker-guava.tesb.version>
+                            <google-guava.tesb.version>${google-guava.tesb.version}</google-guava.tesb.version>
+                            <influx-guava.tesb.version>${influx-guava.tesb.version}</influx-guava.tesb.version>
+                            <leveldb-guava.tesb.version>${leveldb-guava.tesb.version}</leveldb-guava.tesb.version>
+                            <mustache-guava.tesb.version>${mustache-guava.tesb.version}</mustache-guava.tesb.version>
                             <protobuf-guava.tesb.version>${protobuf-guava.tesb.version}</protobuf-guava.tesb.version>
-                            <xchange-guava.tesb.version>${xchange-guava.tesb.version}</xchange-guava.tesb.version>
+                            <swagger-java-guava.tesb.version>${swagger-java-guava.tesb.version}</swagger-java-guava.tesb.version>
+                            <zookeeper-guava.tesb.version>${zookeeper-guava.tesb.version}</zookeeper-guava.tesb.version>
                             <jetty.tesb.version>${jetty.tesb.version}</jetty.tesb.version>
                             <ant-bundle.tesb.version>${ant-bundle.tesb.version}</ant-bundle.tesb.version>
                             <netty.tesb.version>${netty.tesb.version}</netty.tesb.version>
