@@ -608,7 +608,7 @@
   <feature name='camel-cmis' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
     <feature version='${cxf-version-range}'>cxf-specs</feature>
-    <bundle dependency='true'>mvn:org.apache.chemistry.opencmis/chemistry-opencmis-osgi-client/${cmis-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:org.apache.chemistry.opencmis/chemistry-opencmis-osgi-client/${cmis-version}$overwrite=merge&amp;Import-Package=com.ctc.wstx.api;version="${cmis-woodstox-api.tesb.version-range}",*;resolution:=optional</bundle>
     <bundle>mvn:org.apache.camel/camel-cmis/${upstream.version}</bundle>
     <bundle>mvn:org.apache.camel.karaf/camel-cmis-osgi/${upstream.version}</bundle>
   </feature>
@@ -653,7 +653,7 @@
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.okhttp/${okclient-bundle-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.okio/${squareup-okio-bundle-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.retrofit/${squareup-retrofit2-bundle-version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.orbitz-consul-client/${consul-client-bundle-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.orbitz-consul-client/${consul-client-bundle-version}$overwrite=merge&amp;Import-Package=com.google.common.*;version="${google-cloud-guava.tesb.version-range}",*;resolution:=optional</bundle>
     <bundle>mvn:org.apache.camel/camel-consul/${upstream.version}</bundle>
   </feature>
   <feature name='camel-corda' version='${upstream.version}' start-level='50'>
@@ -740,7 +740,7 @@
   </feature>
   <feature name='camel-docker' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
-    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.docker-java/${docker-java-bundle-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.docker-java/${docker-java-bundle-version}$overwrite=merge&amp;Import-Package=com.google.common.*;version="${google-cloud-guava.tesb.version-range}",*;resolution:=optional</bundle>
     <bundle dependency='true'>mvn:org.apache.geronimo.specs/geronimo-annotation_1.2_spec/${geronimo-annotation-1.2-spec-version}</bundle>
     <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2-version}</bundle>
     <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2-version}</bundle>
@@ -749,6 +749,7 @@
     <bundle dependency='true'>mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-base/${jackson2-version}</bundle>
     <bundle dependency='true'>mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-json-provider/${jackson2-version}</bundle>
     <bundle dependency='true'>mvn:com.google.guava/guava/${docker-guava.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.google.guava/failureaccess/1.0.1</bundle>
     <bundle dependency='true'>mvn:io.netty/netty-resolver/${netty.tesb.version}</bundle>
     <bundle dependency='true'>mvn:io.netty/netty-common/${netty.tesb.version}</bundle>
     <bundle dependency='true'>mvn:io.netty/netty-buffer/${netty.tesb.version}</bundle>
@@ -816,7 +817,7 @@
   <feature name='camel-elasticsearch' version='${upstream.version}' start-level='50'>
     <feature version="${upstream.version}">camel-core</feature>
     <feature prerequisite='true'>wrap</feature>
-    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.elasticsearch-java/${elasticsearch-java-bundle-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.elasticsearch-java/${elasticsearch-java-bundle-version}$overwrite=merge&amp;Import-Package=org.apache.logging.log4j.*;version="${elasticsearch-log4j.tesb.version-range}",*;resolution:=optional</bundle>
     <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2-version}</bundle>
     <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2-version}</bundle>
     <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2-version}</bundle>
@@ -855,7 +856,7 @@
     <bundle dependency='true'>mvn:io.netty/netty-codec-http/${netty.tesb.version}</bundle>
     <bundle dependency='true'>mvn:io.netty/netty-codec-dns/${netty.tesb.version}</bundle>
     <bundle dependency='true'>mvn:io.netty/netty-tcnative-classes/${netty-tcnative-classes-version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.elasticsearch/${elasticsearch-rest-bundle-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.elasticsearch/${elasticsearch-rest-bundle-version}$overwrite=merge&amp;Import-Package=org.apache.logging.log4j.*;version="${elasticsearch-log4j.tesb.version-range}",*;resolution:=optional</bundle>
     <bundle dependency='true'>mvn:org.apache.logging.log4j/log4j-core/${log4j2.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.apache.logging.log4j/log4j-api/${log4j2.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.mustache-compiler/${mustache-bundle-version}</bundle>
@@ -997,6 +998,7 @@
     <bundle dependency='true'>wrap:mvn:com.google.api.grpc/proto-google-iam-v1/${google-proto-iam-version}$Bundle-SymbolicName=proto-google-iam-v1&amp;Bundle-Version=${google-proto-iam-version}&amp;overwrite=merge&amp;Import-Package=com.google.common.*;version="${google-cloud-guava.tesb.version-range}",*;resolution:=optional</bundle>
     <!-- <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.guava/${google-cloud-guava-bundle.tesb.version}</bundle> -->
     <bundle dependency='true'>mvn:com.google.guava/guava/${google-cloud-guava.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.google.guava/failureaccess/1.0.1</bundle>
     <bundle dependency='true'>wrap:mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.google-gax-grpc/${google-gax-bundle-version}$overwrite=merge&amp;Import-Package=com.google.common.*;version="${google-cloud-guava.tesb.version-range}",*;resolution:=optional</bundle>
     <bundle dependency='true'>wrap:mvn:com.google.auth/google-auth-library-oauth2-http/${grpc-google-auth-library-version}$Bundle-SymbolicName=google-auth-library-oauth2-http&amp;Bundle-Version=${grpc-google-auth-library-version}&amp;overwrite=merge&amp;Import-Package=com.google.common.*;version="${google-cloud-guava.tesb.version-range}",*;resolution:=optional</bundle>
     <bundle dependency='true'>wrap:mvn:com.google.auth/google-auth-library-credentials/${grpc-google-auth-library-version}$Bundle-SymbolicName=google-auth-library-credentials&amp;Bundle-Version=${grpc-google-auth-library-version}&amp;overwrite=merge&amp;Import-Package=com.google.common.*;version="${google-cloud-guava.tesb.version-range}",*;resolution:=optional</bundle>
@@ -1085,6 +1087,7 @@
     <bundle dependency='true'>wrap:mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.grpc/${google-cloud-grpc-bundle-version}$overwrite=merge&amp;Import-Package=com.google.common.*;version="${google-cloud-guava.tesb.version-range}",*;resolution:=optional</bundle>
     <!-- <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.guava/${google-cloud-guava-bundle.tesb.version}</bundle> -->
     <bundle dependency='true'>mvn:com.google.guava/guava/${google-cloud-guava.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.google.guava/failureaccess/1.0.1</bundle>
     <bundle dependency='true'>wrap:mvn:com.google.api.grpc/proto-google-common-protos/${google-cloud-common-protos-version}$Bundle-SymbolicName=proto-google-common-protos&amp;Bundle-Version=${google-cloud-common-protos-version}&amp;overwrite=merge&amp;Import-Package=com.google.common.*;version="${google-cloud-guava.tesb.version-range}",*;resolution:=optional</bundle>
     <bundle dependency='true'>mvn:com.google.code.gson/gson/${gson-version}</bundle>
     <bundle dependency='true'>wrap:mvn:com.google.re2j/re2j/${re2j-version}$Bundle-SymbolicName=com.google.re2j.re2j&amp;Bundle-Version=${re2j-version}.0&amp;overwrite=merge&amp;Import-Package=com.google.common.*;version="${google-cloud-guava.tesb.version-range}",*;resolution:=optional</bundle>
@@ -1124,7 +1127,7 @@
     <feature version='${upstream.version}'>camel-core</feature>
     <bundle dependency='true'>mvn:com.google.guava/guava/${guava-eventbus.tesb.version}</bundle>
     <bundle dependency='true'>mvn:com.google.guava/failureaccess/1.0.1</bundle>
-    <bundle>mvn:org.apache.camel/camel-guava-eventbus/${upstream.version}</bundle>
+    <bundle>wrap:mvn:org.apache.camel/camel-guava-eventbus/${upstream.version}$overwrite=merge&amp;Import-Package=com.google.common.*;version="${google-cloud-guava.tesb.version-range}",*;resolution:=optional</bundle>
   </feature>
   <feature name='camel-hazelcast' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
@@ -1165,6 +1168,7 @@
   <feature name='camel-iec60870' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
     <bundle dependency='true'>mvn:com.google.guava/guava/${google-guava.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.google.guava/failureaccess/1.0.1</bundle>
     <bundle dependency='true'>mvn:org.eclipse.neoscada.protocols/org.eclipse.neoscada.protocol.iec60870/${neoscada-version}</bundle>
     <bundle dependency='true'>mvn:org.eclipse.neoscada.protocols/org.eclipse.neoscada.protocol.iec60870.client/${neoscada-version}</bundle>
     <bundle dependency='true'>mvn:org.eclipse.neoscada.protocols/org.eclipse.neoscada.protocol.iec60870.client.data/${neoscada-version}</bundle>
@@ -1198,6 +1202,7 @@
   <feature name='camel-influxdb' version='${upstream.version}' start-level='50'>
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.influxdb-java/${influx-java-driver-bundle-version}</bundle>
     <bundle dependency='true'>mvn:com.google.guava/guava/${influx-guava.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.google.guava/failureaccess/1.0.1</bundle>
     <bundle dependency='true'>mvn:com.google.code.findbugs/jsr305/${google-findbugs-jsr305-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.okhttp/${okclient-bundle-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.retrofit/${squareup-retrofit2-bundle-version}</bundle>
@@ -1290,8 +1295,9 @@
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.google-http-client/${google-http-client-bundle-version}</bundle>
     <!-- <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.guava/${jira-guava-bundle-version}</bundle> -->
     <bundle dependency='true'>mvn:com.google.guava/guava/${jira-guava.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.google.guava/failureaccess/1.0.1</bundle>
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.atlassian-jira-client/${atlassian-jira-client-bundle-version}</bundle>
-    <bundle>mvn:org.apache.camel/camel-jira/${upstream.version}</bundle>
+    <bundle>wrap:mvn:org.apache.camel/camel-jira/${upstream.version}$overwrite=merge&amp;Import-Package=com.google.common.*;version="${google-cloud-guava.tesb.version-range}",*;resolution:=optional</bundle>
   </feature>
   <feature name='camel-jetty' version='${upstream.version}' start-level='50'>
     <feature>jetty</feature>
@@ -1835,7 +1841,7 @@
   <feature name='camel-protobuf' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
     <bundle dependency='true'>mvn:com.google.protobuf/protobuf-java/${protobuf-version}</bundle>
-    <bundle dependency='true'>mvn:com.google.protobuf/protobuf-java-util/${protobuf-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:com.google.protobuf/protobuf-java-util/${protobuf-version}$overwrite=merge&amp;Import-Package=com.google.common.*;version="${google-cloud-guava.tesb.version-range}",*;resolution:=optional</bundle>
     <bundle dependency='true'>mvn:commons-io/commons-io/${commons-io-version}</bundle>
     <bundle dependency='true'>mvn:com.google.guava/guava/${protobuf-guava.tesb.version}</bundle>
     <bundle dependency='true'>mvn:com.google.code.gson/gson/${gson-version}</bundle>
@@ -1944,20 +1950,22 @@
     <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3-version}</bundle>
     <bundle dependency='true'>mvn:com.google.guava/guava/${swagger-java-guava.tesb.version}</bundle>
     <bundle dependency='true'>mvn:com.google.guava/failureaccess/1.0.1</bundle>
-    <bundle dependency='true'>mvn:io.swagger/swagger-core/${swagger-java-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:io.swagger/swagger-core/${swagger-java-version}$overwrite=merge&amp;Import-Package=com.google.common.*;version="${google-cloud-guava.tesb.version-range}",*;resolution:=optional</bundle>
     <bundle dependency='true'>mvn:io.swagger/swagger-annotations/${swagger-java-version}</bundle>
     <bundle dependency='true'>mvn:io.swagger/swagger-models/${swagger-java-version}</bundle>
     <bundle dependency='true'>mvn:io.swagger/swagger-jaxrs/${swagger-java-version}</bundle>
     <bundle dependency='true'>wrap:mvn:io.swagger/swagger-parser/${swagger-java-parser-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-rest-swagger/${upstream.version}</bundle>
   </feature>
-    <feature name='camel-robotframework' version='${upstream.version}' start-level='50'>
+
+  <feature name='camel-robotframework' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
     <bundle dependency='true'>wrap:mvn:org.robotframework/robotframework/${robotframework-version}</bundle>
-	<bundle dependency='true'>wrap:mvn:org.python/jython/${jython-version}</bundle>
-	<bundle dependency='true'>wrap:mvn:org.python/jython-standalone/${jython-standalone-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:org.python/jython/${jython-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:org.python/jython-standalone/${jython-standalone-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-robotframework/${upstream.version}</bundle>
   </feature>
+
   <feature name='camel-rss' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-atom</feature>
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.jdom/${jdom-bundle-version}</bundle>
@@ -2222,10 +2230,10 @@
     <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3-version}</bundle>
     <bundle dependency='true'>mvn:com.google.guava/guava/${swagger-java-guava.tesb.version}</bundle>
     <bundle dependency='true'>mvn:com.google.guava/failureaccess/1.0.1</bundle>
-    <bundle dependency='true'>mvn:io.swagger/swagger-core/${swagger-java-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:io.swagger/swagger-core/${swagger-java-version}$overwrite=merge&amp;Import-Package=com.google.common.*;version="${google-cloud-guava.tesb.version-range}",*;resolution:=optional</bundle>
     <bundle dependency='true'>mvn:io.swagger/swagger-annotations/${swagger-java-version}</bundle>
     <bundle dependency='true'>mvn:io.swagger/swagger-models/${swagger-java-version}</bundle>
-    <bundle dependency='true'>mvn:io.swagger/swagger-jaxrs/${swagger-java-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:io.swagger/swagger-jaxrs/${swagger-java-version}$overwrite=merge&amp;Import-Package=com.google.common.*;version="${google-cloud-guava.tesb.version-range}",*;resolution:=optional</bundle>
     <bundle dependency='true'>wrap:mvn:io.swagger/swagger-parser/${swagger-java-parser-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.reflections/${reflections-bundle-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-swagger-java/${upstream.version}</bundle>
@@ -2424,7 +2432,7 @@
     <bundle dependency='true'>mvn:org.codehaus.woodstox/stax2-api/${stax2v4-api-bundle-version}</bundle>
     <bundle dependency='true'>mvn:com.google.guava/guava/${guava-eventbus.tesb.version}</bundle>
     <bundle dependency='true'>mvn:com.google.guava/failureaccess/1.0.1</bundle>
-    <bundle>mvn:org.apache.camel/camel-wordpress/${upstream.version}</bundle>
+    <bundle>wrap:mvn:org.apache.camel/camel-wordpress/${upstream.version}$overwrite=merge&amp;Import-Package=com.google.common.*;version="${google-cloud-guava.tesb.version-range}",*;resolution:=optional</bundle>
   </feature>
   <feature name='camel-workday' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
@@ -2555,15 +2563,15 @@
   <feature name='camel-zookeeper-master' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
     <feature version="${zookeeper.tesb.version}">zookeeper-core</feature>
-    <bundle dependency='true'>mvn:org.apache.curator/curator-framework/${curator.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.curator/curator-client/${curator.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.curator/curator-recipes/${curator.tesb.version}</bundle>
+    <bundle dependency='true'>wrap:mvn:org.apache.curator/curator-framework/${curator.tesb.version}$overwrite=merge&amp;Import-Package=com.google.common.*;version="${google-cloud-guava.tesb.version-range}",*;resolution:=optional</bundle>
+    <bundle dependency='true'>wrap:mvn:org.apache.curator/curator-client/${curator.tesb.version}$overwrite=merge&amp;Import-Package=com.google.common.*;version="${google-cloud-guava.tesb.version-range}",*;resolution:=optional</bundle>
+    <bundle dependency='true'>wrap:mvn:org.apache.curator/curator-recipes/${curator.tesb.version}$overwrite=merge&amp;Import-Package=com.google.common.*;version="${google-cloud-guava.tesb.version-range}",*;resolution:=optional</bundle>
     <bundle dependency='true'>mvn:com.google.guava/failureaccess/1.0.1</bundle>
     <bundle dependency='true'>mvn:com.google.guava/guava/${zookeeper-guava.tesb.version}</bundle>
     <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2-version}</bundle>
     <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2-version}</bundle>
     <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2-version}</bundle>
-    <bundle>mvn:org.apache.camel.karaf/camel-zookeeper-master-osgi/${upstream.version}</bundle>
+    <bundle>wrap:mvn:org.apache.camel.karaf/camel-zookeeper-master-osgi/${upstream.version}$overwrite=merge&amp;Import-Package=org.apache.curator.*;version="${zookeeper-curator.tesb.version-range}",*;resolution:=optional</bundle>
     <bundle>mvn:org.apache.camel/camel-zookeeper-master/${camel-zookeeper-master.tesb.version}</bundle>
   </feature>
   <feature name='zookeeper-core' version='${zookeeper.tesb.version}' start-level='50'>

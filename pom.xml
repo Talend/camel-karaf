@@ -120,6 +120,7 @@
         <docker-guava.tesb.version>32.1.1-jre</docker-guava.tesb.version>
         <google-guava.tesb.version>32.1.1-jre</google-guava.tesb.version>
         <influx-guava.tesb.version>32.1.1-jre</influx-guava.tesb.version>
+        <jira-guava.tesb.version>32.1.1-jre</jira-guava.tesb.version>
         <leveldb-guava.tesb.version>32.1.1-jre</leveldb-guava.tesb.version>
         <mustache-guava.tesb.version>32.1.1-jre</mustache-guava.tesb.version>
         <protobuf-guava.tesb.version>32.1.1-jre</protobuf-guava.tesb.version>
@@ -147,6 +148,9 @@
         <snappy.tesb.version>1.1.10.1</snappy.tesb.version>
         <opensaml-bundle.tesb.version>3.4.6_3</opensaml-bundle.tesb.version>
         <spring.tesb.version-range>[5.2,7)</spring.tesb.version-range>
+        <cmis-woodstox-api.tesb.version-range>[4.4,7)</cmis-woodstox-api.tesb.version-range>
+        <elasticsearch-log4j.tesb.version-range>[2.20,3)</elasticsearch-log4j.tesb.version-range>
+        <zookeeper-curator.tesb.version-range>[4.3,6)</zookeeper-curator.tesb.version-range>
 
         <!-- unify the encoding for all the modules -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -606,6 +610,7 @@
                             <docker-guava.tesb.version>${docker-guava.tesb.version}</docker-guava.tesb.version>
                             <google-guava.tesb.version>${google-guava.tesb.version}</google-guava.tesb.version>
                             <influx-guava.tesb.version>${influx-guava.tesb.version}</influx-guava.tesb.version>
+                            <jira-guava.tesb.version>${jira-guava.tesb.version}</jira-guava.tesb.version>
                             <leveldb-guava.tesb.version>${leveldb-guava.tesb.version}</leveldb-guava.tesb.version>
                             <mustache-guava.tesb.version>${mustache-guava.tesb.version}</mustache-guava.tesb.version>
                             <protobuf-guava.tesb.version>${protobuf-guava.tesb.version}</protobuf-guava.tesb.version>
@@ -633,6 +638,9 @@
                             <snappy.tesb.version>${snappy.tesb.version}</snappy.tesb.version>
                             <opensaml-bundle.tesb.version>${opensaml-bundle.tesb.version}</opensaml-bundle.tesb.version>
                             <spring.tesb.version-range>${spring.tesb.version-range}</spring.tesb.version-range>
+                            <cmis-woodstox-api.tesb.version-range>${cmis-woodstox-api.tesb.version-range}</cmis-woodstox-api.tesb.version-range>
+                            <elasticsearch-log4j.tesb.version-range>${elasticsearch-log4j.tesb.version-range}</elasticsearch-log4j.tesb.version-range>
+                            <zookeeper-curator.tesb.version-range>${zookeeper-curator.tesb.version-range}</zookeeper-curator.tesb.version-range>
                         </properties>
                     </configuration>
                     <executions>
