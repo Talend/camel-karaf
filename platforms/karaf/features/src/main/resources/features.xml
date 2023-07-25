@@ -1377,7 +1377,7 @@
     <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2-version}</bundle>
     <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2-version}</bundle>
     <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-xml/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.google.code.gson/gson/2.10.1</bundle>
+    <bundle dependency='true'>mvn:com.google.code.gson/gson/${jsonata-gson.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.apache.commons/commons-text/${commons-text-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-jsonata/${upstream.version}</bundle>
