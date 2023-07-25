@@ -144,7 +144,8 @@
         <californium.tesb.version>2.7.4</californium.tesb.version>
         <californium-element-connector-tcp-netty.tesb.version>2.7.2</californium-element-connector-tcp-netty.tesb.version>
         <hazelcast.tesb.version>5.2.4</hazelcast.tesb.version>
-        <olingo2-gson.tesb.version>2.9.1</olingo2-gson.tesb.version>
+        <gson.tesb.version>2.10.1</gson.tesb.version>
+        <olingo2-gson.tesb.version>2.10.1</olingo2-gson.tesb.version>
         <jsonata-gson.tesb.version>2.10.1</jsonata-gson.tesb.version>
         <snappy.tesb.version>1.1.10.1</snappy.tesb.version>
         <opensaml-bundle.tesb.version>3.4.6_3</opensaml-bundle.tesb.version>
@@ -635,6 +636,7 @@
                             <californium.tesb.version>${californium.tesb.version}</californium.tesb.version>
                             <californium-element-connector-tcp-netty.tesb.version>${californium-element-connector-tcp-netty.tesb.version}</californium-element-connector-tcp-netty.tesb.version>
                             <hazelcast.tesb.version>${hazelcast.tesb.version}4</hazelcast.tesb.version>
+                            <gson.tesb.version>${gson.tesb.version}</gson.tesb.version>
                             <olingo2-gson.tesb.version>${olingo2-gson.tesb.version}</olingo2-gson.tesb.version>
                             <jsonata-gson.tesb.version>${jsonata-gson.tesb.version}</jsonata-gson.tesb.version>
                             <snappy.tesb.version>${snappy.tesb.version}</snappy.tesb.version>
