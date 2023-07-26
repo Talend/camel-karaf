@@ -105,13 +105,25 @@
         <camel-google-pubsub.tesb.version>3.20.6.20230530</camel-google-pubsub.tesb.version>
         <camel-zookeeper.tesb.version>3.20.6.20230530</camel-zookeeper.tesb.version>
         <camel-zookeeper-master.tesb.version>3.20.6.20230530</camel-zookeeper-master.tesb.version>
-        <woodstox-core.tesb.version>6.4.0</woodstox-core.tesb.version>
-        <jaxb-bundle.tesb.version>2.3.2_3</jaxb-bundle.tesb.version>
+
         <activemq.tesb.version>5.17.4</activemq.tesb.version>
         <activemq-osgi.tesb.version>5.17.4.20230530</activemq-osgi.tesb.version>
         <activemq-pool.tesb.version>5.17.4.20230530</activemq-pool.tesb.version>
-        <zookeeper.tesb.version>3.7.1</zookeeper.tesb.version>
+        <ant-bundle.tesb.version>1.10.12_1</ant-bundle.tesb.version>
+        <avro.tesb.version>1.11.2</avro.tesb.version>
+        <avro-jackson.tesb.version>2.14.3</avro-jackson.tesb.version>
+        <bouncycastle.tesb.version>1.74</bouncycastle.tesb.version>
+        <californium.tesb.version>2.7.4</californium.tesb.version>
+        <californium-element-connector-tcp-netty.tesb.version>2.7.2</californium-element-connector-tcp-netty.tesb.version>
+        <commons-compress.tesb.version>1.22</commons-compress.tesb.version>
+        <avro-java-commons-compress.tesb.version>1.22</avro-java-commons-compress.tesb.version>
+        <docker-java-commons-compress.tesb.version>1.22</docker-java-commons-compress.tesb.version>
+        <minio-commons-compress.tesb.version>1.22</minio-commons-compress.tesb.version>
+        <commons-net.tesb.version>3.9.0</commons-net.tesb.version>
         <curator.tesb.version>5.5.0</curator.tesb.version>
+        <gson.tesb.version>2.10.1</gson.tesb.version>
+        <olingo2-gson.tesb.version>2.10.1</olingo2-gson.tesb.version>
+        <jsonata-gson.tesb.version>2.10.1</jsonata-gson.tesb.version>
         <google-cloud-guava.tesb.version>32.1.1-jre</google-cloud-guava.tesb.version>
         <google-cloud-guava.tesb.version-range>[31,40)</google-cloud-guava.tesb.version-range>
         <google-cloud-guava-bundle.tesb.version>31.1_1</google-cloud-guava-bundle.tesb.version>
@@ -126,32 +138,27 @@
         <protobuf-guava.tesb.version>32.1.1-jre</protobuf-guava.tesb.version>
         <swagger-java-guava.tesb.version>32.1.1-jre</swagger-java-guava.tesb.version>
         <zookeeper-guava.tesb.version>32.1.1-jre</zookeeper-guava.tesb.version>
+        <hazelcast.tesb.version>5.2.4</hazelcast.tesb.version>
+        <jakarta-validation-api.tesb.version>2.0.2</jakarta-validation-api.tesb.version>
+        <jaxb-bundle.tesb.version>2.3.2_3</jaxb-bundle.tesb.version>
+        <jettison.tesb.version>1.5.4</jettison.tesb.version>
         <jetty.tesb.version>9.4.51.v20230217</jetty.tesb.version>
-        <ant-bundle.tesb.version>1.10.12_1</ant-bundle.tesb.version>
-        <netty.tesb.version>4.1.94.Final</netty.tesb.version>
+        <jna.tesb.version>5.13.0</jna.tesb.version>
         <json-smart.tesb.version>2.4.10</json-smart.tesb.version>
         <accessors-smart.tesb.version>2.4.9</accessors-smart.tesb.version>
-        <jettison.tesb.version>1.5.4</jettison.tesb.version>
-        <xstream-bundle.tesb.version>1.4.20_1</xstream-bundle.tesb.version>
-        <commons-net.tesb.version>3.9.0</commons-net.tesb.version>
-        <log4j2.tesb.version>2.20.0</log4j2.tesb.version>
-        <jna.tesb.version>5.13.0</jna.tesb.version>
-        <bouncycastle.tesb.version>1.74</bouncycastle.tesb.version>
-        <xmlsec.tesb.version>2.3.0</xmlsec.tesb.version>
-        <jakarta-validation-api.tesb.version>2.0.2</jakarta-validation-api.tesb.version>
         <kudu.tesb.version>1.16.0</kudu.tesb.version>
-        <xmlgraphics-batik.tesb.version>1.16</xmlgraphics-batik.tesb.version>
-        <californium.tesb.version>2.7.4</californium.tesb.version>
-        <californium-element-connector-tcp-netty.tesb.version>2.7.2</californium-element-connector-tcp-netty.tesb.version>
-        <hazelcast.tesb.version>5.2.4</hazelcast.tesb.version>
-        <gson.tesb.version>2.10.1</gson.tesb.version>
-        <olingo2-gson.tesb.version>2.10.1</olingo2-gson.tesb.version>
-        <jsonata-gson.tesb.version>2.10.1</jsonata-gson.tesb.version>
-        <snappy.tesb.version>1.1.10.1</snappy.tesb.version>
+        <log4j2.tesb.version>2.20.0</log4j2.tesb.version>
+        <netty.tesb.version>4.1.94.Final</netty.tesb.version>
         <opensaml-bundle.tesb.version>3.4.6_3</opensaml-bundle.tesb.version>
-        <spring.tesb.version-range>[5.2,7)</spring.tesb.version-range>
+        <snappy.tesb.version>1.1.10.1</snappy.tesb.version>
+        <woodstox-core.tesb.version>6.4.0</woodstox-core.tesb.version>
+        <xmlgraphics-batik.tesb.version>1.16</xmlgraphics-batik.tesb.version>
+        <xmlsec.tesb.version>2.3.0</xmlsec.tesb.version>
+        <xstream-bundle.tesb.version>1.4.20_1</xstream-bundle.tesb.version>
+        <zookeeper.tesb.version>3.7.1</zookeeper.tesb.version>
         <cmis-woodstox-api.tesb.version-range>[4.4,7)</cmis-woodstox-api.tesb.version-range>
         <elasticsearch-log4j.tesb.version-range>[2.20,3)</elasticsearch-log4j.tesb.version-range>
+        <spring.tesb.version-range>[5.2,7)</spring.tesb.version-range>
         <zookeeper-curator.tesb.version-range>[4.3,6)</zookeeper-curator.tesb.version-range>
 
         <!-- unify the encoding for all the modules -->
@@ -620,6 +627,12 @@
                             <zookeeper-guava.tesb.version>${zookeeper-guava.tesb.version}</zookeeper-guava.tesb.version>
                             <jetty.tesb.version>${jetty.tesb.version}</jetty.tesb.version>
                             <ant-bundle.tesb.version>${ant-bundle.tesb.version}</ant-bundle.tesb.version>
+                            <avro.tesb.version>${avro.tesb.version}</avro.tesb.version>
+                            <avro-jackson.tesb.version>${avro-jackson.tesb.version}</avro-jackson.tesb.version>
+                            <commons-compress.tesb.version>${commons-compress.tesb.version}</commons-compress.tesb.version>
+                            <avro-java-commons-compress.tesb.version>${avro-java-commons-compress.tesb.version}</avro-java-commons-compress.tesb.version>
+                            <docker-java-commons-compress.tesb.version>${docker-java-commons-compress.tesb.version}</docker-java-commons-compress.tesb.version>
+                            <minio-commons-compress.tesb.version>${minio-commons-compress.tesb.version}</minio-commons-compress.tesb.version>
                             <netty.tesb.version>${netty.tesb.version}</netty.tesb.version>
                             <json-smart.tesb.version>${json-smart.tesb.version}</json-smart.tesb.version>
                             <accessors-smart.tesb.version>${accessors-smart.tesb.version}</accessors-smart.tesb.version>

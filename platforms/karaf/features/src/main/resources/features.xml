@@ -203,11 +203,11 @@
   </feature>
   <feature name='camel-avro' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${avro-jackson-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${avro-jackson-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${avro-jackson-version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.commons/commons-compress/${avro-java-commons-compress-version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.avro/avro/${avro-version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${avro-jackson.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${avro-jackson.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${avro-jackson.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:org.apache.commons/commons-compress/${avro-java-commons-compress.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:org.apache.avro/avro/${avro.tesb.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-avro/${upstream.version}</bundle>
   </feature>
   <feature name='camel-aws2-athena' version='${upstream.version}' start-level='50'>
@@ -765,7 +765,7 @@
     <bundle dependency='true'>mvn:io.netty/netty-tcnative-classes/${netty-tcnative-classes-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.jaxrs-api-2.1/${servicemix-specs-version}</bundle>
     <bundle dependency='true'>mvn:commons-codec/commons-codec/${commons-codec-version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.commons/commons-compress/${docker-java-commons-compress-version}</bundle>
+    <bundle dependency='true'>mvn:org.apache.commons/commons-compress/${docker-java-commons-compress.tesb.version}</bundle>
     <bundle dependency='true'>mvn:commons-io/commons-io/${commons-io-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3-version}</bundle>
     <bundle dependency='true'>mvn:commons-lang/commons-lang/${commons-lang-version}</bundle>
@@ -1239,8 +1239,8 @@
   <feature name='camel-jackson-avro' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-jackson</feature>
     <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-avro/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.avro/avro/${avro-version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.commons/commons-compress/${avro-java-commons-compress-version}</bundle>
+    <bundle dependency='true'>mvn:org.apache.avro/avro/${avro.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:org.apache.commons/commons-compress/${avro-java-commons-compress.tesb.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-jackson-avro/${upstream.version}</bundle>
   </feature>
   <feature name='camel-jackson-protobuf' version='${upstream.version}' start-level='50'>
@@ -1641,7 +1641,7 @@
   <feature name='camel-minio' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
     <bundle dependency='true'>wrap:mvn:io.minio/minio/${minio-version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.commons/commons-compress/${minio-commons-compress-version}</bundle>
+    <bundle dependency='true'>mvn:org.apache.commons/commons-compress/${minio-commons-compress.tesb.version}</bundle>
     <bundle dependency='true'>wrap:mvn:com.squareup.okhttp3/okhttp/${okclient-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-minio/${upstream.version}</bundle>
   </feature>
@@ -2269,7 +2269,7 @@
   <feature name='camel-tarfile' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
     <bundle>mvn:org.apache.camel/camel-tarfile/${upstream.version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.commons/commons-compress/${commons-compress-version}</bundle>
+    <bundle dependency='true'>mvn:org.apache.commons/commons-compress/${commons-compress.tesb.version}</bundle>
   </feature>
   <feature name='camel-telegram' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
@@ -2527,7 +2527,7 @@
   </feature>
   <feature name='camel-zip-deflater' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
-    <bundle dependency='true'>mvn:org.apache.commons/commons-compress/${commons-compress-version}</bundle>
+    <bundle dependency='true'>mvn:org.apache.commons/commons-compress/${commons-compress.tesb.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-zip-deflater/${upstream.version}</bundle>
   </feature>
   <feature name='camel-zipfile' version='${upstream.version}' start-level='50'>
