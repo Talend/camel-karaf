@@ -122,6 +122,7 @@
         <commons-net.tesb.version>3.9.0</commons-net.tesb.version>
         <curator.tesb.version>5.5.0</curator.tesb.version>
         <gson.tesb.version>2.10.1</gson.tesb.version>
+        <github-gson.tesb.version>2.10.1</github-gson.tesb.version>
         <olingo2-gson.tesb.version>2.10.1</olingo2-gson.tesb.version>
         <jsonata-gson.tesb.version>2.10.1</jsonata-gson.tesb.version>
         <google-cloud-guava.tesb.version>32.1.1-jre</google-cloud-guava.tesb.version>
@@ -159,6 +160,7 @@
         <zookeeper.tesb.version>3.7.1</zookeeper.tesb.version>
         <cmis-woodstox-api.tesb.version-range>[4.4,7)</cmis-woodstox-api.tesb.version-range>
         <elasticsearch-log4j.tesb.version-range>[2.20,3)</elasticsearch-log4j.tesb.version-range>
+        <github-gson.tesb.version-range>[2.2,3)</github-gson.tesb.version-range>
         <spring.tesb.version-range>[5.2,7)</spring.tesb.version-range>
         <zookeeper-curator.tesb.version-range>[4.3,6)</zookeeper-curator.tesb.version-range>
 
@@ -651,6 +653,7 @@
                             <californium-element-connector-tcp-netty.tesb.version>${californium-element-connector-tcp-netty.tesb.version}</californium-element-connector-tcp-netty.tesb.version>
                             <hazelcast.tesb.version>${hazelcast.tesb.version}4</hazelcast.tesb.version>
                             <gson.tesb.version>${gson.tesb.version}</gson.tesb.version>
+                            <github-gson.tesb.version>${github-gson.tesb.version}</github-gson.tesb.version>
                             <olingo2-gson.tesb.version>${olingo2-gson.tesb.version}</olingo2-gson.tesb.version>
                             <jsonata-gson.tesb.version>${jsonata-gson.tesb.version}</jsonata-gson.tesb.version>
                             <snappy.tesb.version>${snappy.tesb.version}</snappy.tesb.version>
@@ -659,6 +662,7 @@
                             <spring.tesb.version-range>${spring.tesb.version-range}</spring.tesb.version-range>
                             <cmis-woodstox-api.tesb.version-range>${cmis-woodstox-api.tesb.version-range}</cmis-woodstox-api.tesb.version-range>
                             <elasticsearch-log4j.tesb.version-range>${elasticsearch-log4j.tesb.version-range}</elasticsearch-log4j.tesb.version-range>
+                            <github-gson.tesb.version-range>${github-gson.tesb.version-range}</github-gson.tesb.version-range>
                             <zookeeper-curator.tesb.version-range>${zookeeper-curator.tesb.version-range}</zookeeper-curator.tesb.version-range>
                         </properties>
                     </configuration>
