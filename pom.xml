@@ -110,6 +110,7 @@
         <activemq-osgi.tesb.version>5.17.4.20230530</activemq-osgi.tesb.version>
         <activemq-pool.tesb.version>5.17.4.20230530</activemq-pool.tesb.version>
         <ant-bundle.tesb.version>1.10.12_1</ant-bundle.tesb.version>
+        <apache-drill.tesb.version>1.21.1</apache-drill.tesb.version>
         <avro.tesb.version>1.11.2</avro.tesb.version>
         <avro-jackson.tesb.version>2.14.3</avro-jackson.tesb.version>
         <bouncycastle.tesb.version>1.74</bouncycastle.tesb.version>
@@ -658,6 +659,7 @@
                             <jsonata-gson.tesb.version>${jsonata-gson.tesb.version}</jsonata-gson.tesb.version>
                             <snappy.tesb.version>${snappy.tesb.version}</snappy.tesb.version>
                             <sshd.tesb.version>${sshd.tesb.version}</sshd.tesb.version>
+                            <apache-drill.tesb.version>${apache-drill.tesb.version}</apache-drill.tesb.version>
                             <opensaml-bundle.tesb.version>${opensaml-bundle.tesb.version}</opensaml-bundle.tesb.version>
                             <spring.tesb.version-range>${spring.tesb.version-range}</spring.tesb.version-range>
                             <cmis-woodstox-api.tesb.version-range>${cmis-woodstox-api.tesb.version-range}</cmis-woodstox-api.tesb.version-range>
