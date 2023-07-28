@@ -552,7 +552,7 @@
     <bundle dependency='true'>mvn:org.bouncycastle/bcprov-jdk18on/${bouncycastle.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.bouncycastle/bcpkix-jdk18on/${bouncycastle.tesb.version}</bundle>
     <bundle dependency='true'>mvn:com.eclipsesource.minimal-json/minimal-json/${minimal-json-version}</bundle>
-    <bundle dependency='true'>mvn:org.bitbucket.b_c/jose4j/${jose4j-version}</bundle>
+    <bundle dependency='true'>mvn:org.bitbucket.b_c/jose4j/${jose4j.tesb.version}</bundle>
     <bundle dependency='true'>wrap:mvn:com.box/box-java-sdk/${box-java-sdk-version}</bundle>
     <bundle dependency='true'>mvn:com.google.code.findbugs/jsr305/${google-findbugs-jsr305-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.camel/camel-box-api/${upstream.version}</bundle>
@@ -1333,8 +1333,8 @@
     <bundle dependency='true'>mvn:org.ow2.asm/asm/${asm-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.aries/org.apache.aries.util/${aries-util-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.aries.spifly/org.apache.aries.spifly.dynamic.bundle/${aries-spifly-version}</bundle>
-    <bundle dependency='true'>wrap:mvn:org.apache.johnzon/johnzon-core/${johnzon-version}</bundle>
-    <bundle dependency='true'>wrap:mvn:org.apache.johnzon/johnzon-mapper/${johnzon-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:org.apache.johnzon/johnzon-core/${johnzon.tesb.version}</bundle>
+    <bundle dependency='true'>wrap:mvn:org.apache.johnzon/johnzon-mapper/${johnzon.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.apache.geronimo.specs/geronimo-json_1.1_spec/${geronimo-json-spec-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-johnzon/${upstream.version}</bundle>
   </feature>
@@ -1408,9 +1408,9 @@
     <bundle dependency='true'>mvn:org.ow2.asm/asm-util/${asm.bundle.version}</bundle>
     <bundle dependency='true'>mvn:org.apache.aries/org.apache.aries.util/${aries-util-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.aries.spifly/org.apache.aries.spifly.dynamic.bundle/${aries-spifly-version}</bundle>
-    <bundle dependency='true'>wrap:mvn:org.apache.johnzon/johnzon-core/${johnzon-version}</bundle>
-    <bundle dependency='true'>wrap:mvn:org.apache.johnzon/johnzon-mapper/${johnzon-version}</bundle>
-    <bundle dependency='true'>wrap:mvn:org.apache.johnzon/johnzon-jsonb/${johnzon-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:org.apache.johnzon/johnzon-core/${johnzon.tesb.version}</bundle>
+    <bundle dependency='true'>wrap:mvn:org.apache.johnzon/johnzon-mapper/${johnzon.tesb.version}</bundle>
+    <bundle dependency='true'>wrap:mvn:org.apache.johnzon/johnzon-jsonb/${johnzon.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.apache.geronimo.specs/geronimo-annotation_1.3_spec/1.3</bundle>
     <bundle dependency='true'>mvn:org.apache.geronimo.specs/geronimo-json_1.1_spec/${geronimo-json-spec-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.geronimo.specs/geronimo-jsonb_1.0_spec/${geronimo-jsonb-spec-version}</bundle>
@@ -2543,7 +2543,10 @@
     <bundle dependency='true'>mvn:io.zipkin.reporter2/zipkin-reporter-brave/${zipkin-reporter-version}</bundle>
     <bundle dependency='true'>mvn:io.zipkin.reporter2/zipkin-sender-urlconnection/${zipkin-reporter-version}</bundle>
     <bundle dependency='true'>mvn:io.zipkin.reporter2/zipkin-sender-libthrift/${zipkin-reporter-version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.thrift/libthrift/${zipkin-libthrift-version}</bundle>
+    <!-- <bundle dependency='true'>mvn:org.apache.thrift/libthrift/${zipkin-libthrift-version}</bundle> -->
+    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.libthrift/${libthrift-bundle-version}</bundle>
+    <bundle dependency='true'>mvn:org.apache.httpcomponents/httpcore-osgi/${httpcore4.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:org.apache.httpcomponents/httpclient-osgi/${httpclient4.tesb.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-zipkin/${upstream.version}</bundle>
   </feature>
   <feature name='camel-zookeeper' version='${upstream.version}' start-level='50'>
