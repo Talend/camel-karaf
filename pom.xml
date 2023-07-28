@@ -141,6 +141,8 @@
         <swagger-java-guava.tesb.version>32.1.1-jre</swagger-java-guava.tesb.version>
         <zookeeper-guava.tesb.version>32.1.1-jre</zookeeper-guava.tesb.version>
         <hazelcast.tesb.version>5.2.4</hazelcast.tesb.version>
+        <httpclient4.tesb.version>4.5.14</httpclient4.tesb.version>
+        <httpcore4.tesb.version>4.4.16</httpcore4.tesb.version>
         <jakarta-validation-api.tesb.version>2.0.2</jakarta-validation-api.tesb.version>
         <jaxb-bundle.tesb.version>2.3.2_3</jaxb-bundle.tesb.version>
         <jettison.tesb.version>1.5.4</jettison.tesb.version>
@@ -152,6 +154,7 @@
         <log4j2.tesb.version>2.20.0</log4j2.tesb.version>
         <netty.tesb.version>4.1.94.Final</netty.tesb.version>
         <opensaml-bundle.tesb.version>3.4.6_3</opensaml-bundle.tesb.version>
+        <protobuf.tesb.version>3.21.12</protobuf.tesb.version>
         <snappy.tesb.version>1.1.10.1</snappy.tesb.version>
         <sshd.tesb.version>2.10.0</sshd.tesb.version>
         <woodstox-core.tesb.version>6.4.0</woodstox-core.tesb.version>
@@ -629,6 +632,7 @@
                             <protobuf-guava.tesb.version>${protobuf-guava.tesb.version}</protobuf-guava.tesb.version>
                             <swagger-java-guava.tesb.version>${swagger-java-guava.tesb.version}</swagger-java-guava.tesb.version>
                             <zookeeper-guava.tesb.version>${zookeeper-guava.tesb.version}</zookeeper-guava.tesb.version>
+                            <protobuf.tesb.version>${protobuf.tesb.version}</protobuf.tesb.version>
                             <jetty.tesb.version>${jetty.tesb.version}</jetty.tesb.version>
                             <ant-bundle.tesb.version>${ant-bundle.tesb.version}</ant-bundle.tesb.version>
                             <avro.tesb.version>${avro.tesb.version}</avro.tesb.version>
@@ -653,6 +657,8 @@
                             <californium.tesb.version>${californium.tesb.version}</californium.tesb.version>
                             <californium-element-connector-tcp-netty.tesb.version>${californium-element-connector-tcp-netty.tesb.version}</californium-element-connector-tcp-netty.tesb.version>
                             <hazelcast.tesb.version>${hazelcast.tesb.version}4</hazelcast.tesb.version>
+                            <httpclient4.tesb.version>${httpclient4.tesb.version}</httpclient4.tesb.version>
+                            <httpcore4.tesb.version>${httpcore4.tesb.version}</httpcore4.tesb.version>
                             <gson.tesb.version>${gson.tesb.version}</gson.tesb.version>
                             <github-gson.tesb.version>${github-gson.tesb.version}</github-gson.tesb.version>
                             <olingo2-gson.tesb.version>${olingo2-gson.tesb.version}</olingo2-gson.tesb.version>
