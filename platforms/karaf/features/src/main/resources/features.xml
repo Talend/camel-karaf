@@ -1969,7 +1969,7 @@
 
   <feature name='camel-rss' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-atom</feature>
-    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.jdom/${jdom-bundle-version}</bundle>
+    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.jdom/${jdom-bundle.tesb.version}</bundle>
     <bundle dependency="true">mvn:com.rometools/rome/${rome-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-rss/${upstream.version}</bundle>
   </feature>
