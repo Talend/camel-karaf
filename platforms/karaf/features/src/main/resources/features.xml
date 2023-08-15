@@ -1287,6 +1287,7 @@
     <bundle dependency='true'>mvn:org.apache.httpcomponents/httpcore-osgi/${httpcore4.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.apache.httpcomponents/httpclient-osgi/${httpclient4.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.apache.httpcomponents/httpasyncclient-osgi/${httpasyncclient-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:org.apache.httpcomponents/httpasyncclient-cache/${httpasyncclient-version}$Bundle-SymbolicName=org.apache.httpcomponents.httpasyncclient-cache&amp;Bundle-Version=${httpasyncclient-version}&amp;Fragment-Host=org.apache.httpcomponents.httpclient&amp;Export-Package=org.apache.http.impl.client.cache</bundle>
     <bundle dependency='true'>mvn:org.codehaus.jettison/jettison/${jettison.tesb.version}</bundle>
     <bundle dependency='true'>mvn:joda-time/joda-time/${jodatime2-version}</bundle>
     <bundle dependency='true'>mvn:com.google.code.gson/gson/${gson.tesb.version}</bundle>
