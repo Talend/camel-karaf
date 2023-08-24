@@ -1644,6 +1644,7 @@
     <bundle dependency='true'>wrap:mvn:io.minio/minio/${minio-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.commons/commons-compress/${minio-commons-compress.tesb.version}</bundle>
     <bundle dependency='true'>wrap:mvn:com.squareup.okhttp3/okhttp/${okclient-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:com.carrotsearch.thirdparty/simple-xml-safe/${simple-xml-safe.tesb.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-minio/${upstream.version}</bundle>
   </feature>
   <feature name='camel-mllp' version='${upstream.version}' start-level='50'>
