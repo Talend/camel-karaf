@@ -159,7 +159,7 @@
         <opensaml-bundle.tesb.version>3.4.6_3</opensaml-bundle.tesb.version>
         <protobuf.tesb.version>3.21.12</protobuf.tesb.version>
         <simple-xml-safe.tesb.version>2.7.1</simple-xml-safe.tesb.version>
-        <snappy.tesb.version>1.1.10.1</snappy.tesb.version>
+        <snappy.tesb.version>1.1.10.3</snappy.tesb.version>
         <sshd.tesb.version>2.10.0</sshd.tesb.version>
         <woodstox-core.tesb.version>6.4.0</woodstox-core.tesb.version>
         <xmlgraphics-batik.tesb.version>1.17</xmlgraphics-batik.tesb.version>
