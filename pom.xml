@@ -98,7 +98,7 @@
     <properties>
 
         <upstream.version>3.20.6</upstream.version>
-        <camel.features.tesb.version>3.20.6.20230530</camel.features.tesb.version>
+        <camel.features.tesb.version>3.20.6.20230726</camel.features.tesb.version>
         <camel-support.tesb.version>3.20.6.20230530</camel-support.tesb.version>
         <camel-cxf-soap.tesb.version>3.20.6.20230530</camel-cxf-soap.tesb.version>
         <camel-cxf-rest.tesb.version>3.20.6.20230530</camel-cxf-rest.tesb.version>
@@ -145,6 +145,7 @@
         <httpcore4.tesb.version>4.4.16</httpcore4.tesb.version>
         <jakarta-validation-api.tesb.version>2.0.2</jakarta-validation-api.tesb.version>
         <jaxb-bundle.tesb.version>2.3.2_3</jaxb-bundle.tesb.version>
+        <jdom-bundle.tesb.version>2.0.6.1_1</jdom-bundle.tesb.version>
         <jettison.tesb.version>1.5.4</jettison.tesb.version>
         <jetty.tesb.version>9.4.51.v20230217</jetty.tesb.version>
         <jna.tesb.version>5.13.0</jna.tesb.version>
@@ -157,10 +158,11 @@
         <netty.tesb.version>4.1.94.Final</netty.tesb.version>
         <opensaml-bundle.tesb.version>3.4.6_3</opensaml-bundle.tesb.version>
         <protobuf.tesb.version>3.21.12</protobuf.tesb.version>
-        <snappy.tesb.version>1.1.10.1</snappy.tesb.version>
+        <simple-xml-safe.tesb.version>2.7.1</simple-xml-safe.tesb.version>
+        <snappy.tesb.version>1.1.10.3</snappy.tesb.version>
         <sshd.tesb.version>2.10.0</sshd.tesb.version>
         <woodstox-core.tesb.version>6.4.0</woodstox-core.tesb.version>
-        <xmlgraphics-batik.tesb.version>1.16</xmlgraphics-batik.tesb.version>
+        <xmlgraphics-batik.tesb.version>1.17</xmlgraphics-batik.tesb.version>
         <xmlsec.tesb.version>2.3.0</xmlsec.tesb.version>
         <xstream-bundle.tesb.version>1.4.20_1</xstream-bundle.tesb.version>
         <zookeeper.tesb.version>3.7.1</zookeeper.tesb.version>
@@ -615,6 +617,7 @@
                             <camel-zookeeper-master.tesb.version>${camel-zookeeper-master.tesb.version}</camel-zookeeper-master.tesb.version>
                             <woodstox-core.tesb.version>${woodstox-core.tesb.version}</woodstox-core.tesb.version>
                             <jaxb-bundle.tesb.version>${jaxb-bundle.tesb.version}</jaxb-bundle.tesb.version>
+                            <jdom-bundle.tesb.version>${jdom-bundle.tesb.version}</jdom-bundle.tesb.version>
                             <activemq.tesb.version>${activemq.tesb.version}</activemq.tesb.version>
                             <activemq-osgi.tesb.version>${activemq-osgi.tesb.version}</activemq-osgi.tesb.version>
                             <activemq-pool.tesb.version>${activemq-pool.tesb.version}</activemq-pool.tesb.version>
@@ -667,6 +670,7 @@
                             <github-gson.tesb.version>${github-gson.tesb.version}</github-gson.tesb.version>
                             <olingo2-gson.tesb.version>${olingo2-gson.tesb.version}</olingo2-gson.tesb.version>
                             <jsonata-gson.tesb.version>${jsonata-gson.tesb.version}</jsonata-gson.tesb.version>
+                            <simple-xml-safe.tesb.version>${simple-xml-safe.tesb.version}</simple-xml-safe.tesb.version>
                             <snappy.tesb.version>${snappy.tesb.version}</snappy.tesb.version>
                             <sshd.tesb.version>${sshd.tesb.version}</sshd.tesb.version>
                             <apache-drill.tesb.version>${apache-drill.tesb.version}</apache-drill.tesb.version>

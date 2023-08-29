@@ -1644,6 +1644,7 @@
     <bundle dependency='true'>wrap:mvn:io.minio/minio/${minio-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.commons/commons-compress/${minio-commons-compress.tesb.version}</bundle>
     <bundle dependency='true'>wrap:mvn:com.squareup.okhttp3/okhttp/${okclient-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:com.carrotsearch.thirdparty/simple-xml-safe/${simple-xml-safe.tesb.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-minio/${upstream.version}</bundle>
   </feature>
   <feature name='camel-mllp' version='${upstream.version}' start-level='50'>
@@ -1970,7 +1971,7 @@
 
   <feature name='camel-rss' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-atom</feature>
-    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.jdom/${jdom-bundle-version}</bundle>
+    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.jdom/${jdom-bundle.tesb.version}</bundle>
     <bundle dependency="true">mvn:com.rometools/rome/${rome-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-rss/${upstream.version}</bundle>
   </feature>
