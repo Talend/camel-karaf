@@ -153,7 +153,7 @@
         <jose4j.tesb.version>0.9.3</jose4j.tesb.version>
         <json-smart.tesb.version>2.4.10</json-smart.tesb.version>
         <accessors-smart.tesb.version>2.4.9</accessors-smart.tesb.version>
-        <kudu.tesb.version>1.16.0</kudu.tesb.version>
+        <kudu.tesb.version>1.17.0</kudu.tesb.version>
         <log4j2.tesb.version>2.20.0</log4j2.tesb.version>
         <netty.tesb.version>4.1.94.Final</netty.tesb.version>
         <opensaml-bundle.tesb.version>3.4.6_3</opensaml-bundle.tesb.version>
