@@ -98,7 +98,7 @@
     <properties>
 
         <upstream.version>3.20.6</upstream.version>
-        <camel.features.tesb.version>3.20.6.20230726</camel.features.tesb.version>
+        <camel.features.tesb.version>3.20.6.20230915</camel.features.tesb.version>
         <camel-support.tesb.version>3.20.6.20230530</camel-support.tesb.version>
         <camel-cxf-soap.tesb.version>3.20.6.20230530</camel-cxf-soap.tesb.version>
         <camel-cxf-rest.tesb.version>3.20.6.20230530</camel-cxf-rest.tesb.version>
@@ -143,6 +143,7 @@
         <hazelcast.tesb.version>5.2.4</hazelcast.tesb.version>
         <httpclient4.tesb.version>4.5.14</httpclient4.tesb.version>
         <httpcore4.tesb.version>4.4.16</httpcore4.tesb.version>
+        <jakarta-el.tesb.version>3.0.4</jakarta-el.tesb.version>
         <jakarta-validation-api.tesb.version>2.0.2</jakarta-validation-api.tesb.version>
         <jaxb-bundle.tesb.version>2.3.2_3</jaxb-bundle.tesb.version>
         <jdom-bundle.tesb.version>2.0.6.1_1</jdom-bundle.tesb.version>
@@ -658,6 +659,7 @@
                             <jna.tesb.version>${jna.tesb.version}</jna.tesb.version>
                             <bouncycastle.tesb.version>${bouncycastle.tesb.version}</bouncycastle.tesb.version>
                             <xmlsec.tesb.version>${xmlsec.tesb.version}</xmlsec.tesb.version>
+                            <jakarta-el.tesb.version>${jakarta-el.tesb.version}</jakarta-el.tesb.version>
                             <jakarta-validation-api.tesb.version>${jakarta-validation-api.tesb.version}</jakarta-validation-api.tesb.version>
                             <kudu.tesb.version>${kudu.tesb.version}</kudu.tesb.version>
                             <xmlgraphics-batik.tesb.version>${xmlgraphics-batik.tesb.version}</xmlgraphics-batik.tesb.version>
