@@ -312,11 +312,11 @@
   <feature name='camel-aws-secrets-manager' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aws-java-sdk2/${aws-sdk-v2-bundle-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-xml/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/${jackson2-version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-xml/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/${jackson2.tesb.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-aws-secrets-manager/${upstream.version}</bundle>
   </feature>
   <feature name='camel-aws-cloudtrail' version='${upstream.version}' start-level='50'>
@@ -336,13 +336,13 @@
   </feature>
   <feature name='camel-azure-storage-blob' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-xml/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/${jackson2-version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-xml/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/${jackson2.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.codehaus.woodstox/stax2-api/${stax2v4-api-bundle-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.datatype/jackson-datatype-jsr310/${jackson2-version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.datatype/jackson-datatype-jsr310/${jackson2.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.reactivestreams/reactive-streams/${reactive-streams-version}</bundle>
     <bundle dependency='true'>mvn:io.projectreactor/reactor-core/${reactor-version}</bundle>
     <bundle dependency='true'>mvn:commons-io/commons-io/${commons-io-version}</bundle>
@@ -377,13 +377,13 @@
   </feature>
   <feature name='camel-azure-storage-datalake' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-xml/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/${jackson2-version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-xml/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/${jackson2.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.codehaus.woodstox/stax2-api/${stax2v4-api-bundle-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.datatype/jackson-datatype-jsr310/${jackson2-version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.datatype/jackson-datatype-jsr310/${jackson2.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.reactivestreams/reactive-streams/${reactive-streams-version}</bundle>
     <bundle dependency='true'>mvn:io.projectreactor/reactor-core/${reactor-version}</bundle>
     <bundle dependency='true'>mvn:commons-io/commons-io/${commons-io-version}</bundle>
@@ -419,13 +419,13 @@
   </feature>
   <feature name='camel-azure-storage-queue' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-xml/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/${jackson2-version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-xml/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/${jackson2.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.codehaus.woodstox/stax2-api/${stax2v4-api-bundle-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.datatype/jackson-datatype-jsr310/${jackson2-version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.datatype/jackson-datatype-jsr310/${jackson2.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.reactivestreams/reactive-streams/${reactive-streams-version}</bundle>
     <bundle dependency='true'>mvn:io.projectreactor/reactor-core/${reactor-version}</bundle>
     <bundle dependency='true'>mvn:commons-io/commons-io/${commons-io-version}</bundle>
@@ -459,13 +459,13 @@
   </feature>
   <feature name='camel-azure-eventhubs' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-xml/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/${jackson2-version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-xml/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/${jackson2.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.codehaus.woodstox/stax2-api/${stax2v4-api-bundle-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.datatype/jackson-datatype-jsr310/${jackson2-version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.datatype/jackson-datatype-jsr310/${jackson2.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.reactivestreams/reactive-streams/${reactive-streams-version}</bundle>
     <bundle dependency='true'>mvn:io.projectreactor/reactor-core/${reactor-version}</bundle>
     <bundle dependency='true'>mvn:commons-io/commons-io/${commons-io-version}</bundle>
@@ -536,9 +536,9 @@
     <bundle dependency='true'>mvn:org.apache.httpcomponents/httpclient-osgi/${httpclient4.tesb.version}</bundle>
     <bundle dependency='true'>wrap:mvn:org.apache.httpcomponents/httpmime/${httpclient4.tesb.version}$Export-Package=org.apache.http.*;version=${httpclient4.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2-version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2.tesb.version}</bundle>
     <bundle dependency='true'>mvn:commons-io/commons-io/${commons-io-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.htmlunit/${htmlunit-bundle-version}</bundle>
     <bundle dependency='true'>wrap:mvn:org.w3c.css/sac/1.3</bundle>
@@ -560,8 +560,8 @@
   </feature>
   <feature name='camel-braintree' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.jr/jackson-jr-objects/${braintree-jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${braintree-jackson2-version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.jr/jackson-jr-objects/${braintree-jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${braintree-jackson2.tesb.version}</bundle>
     <bundle dependency='true'>mvn:com.braintreepayments.gateway/braintree-java/${braintree-gateway-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.commons/commons-csv/${commons-csv-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-braintree/${upstream.version}</bundle>
@@ -578,17 +578,17 @@
   </feature>
   <feature name='camel-cbor' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-cbor/${jackson2-version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-cbor/${jackson2.tesb.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-cbor/${upstream.version}</bundle>
   </feature>
   <feature name='camel-chatscript' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2-version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2.tesb.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-chatscript/${upstream.version}</bundle>
   </feature>
   <feature name='camel-cm-sms' version='${upstream.version}' start-level='50'>
@@ -644,12 +644,12 @@
     <bundle dependency='true'>mvn:com.google.guava/guava/${consul-guava.tesb.version}</bundle>
     <bundle dependency='true'>mvn:com.google.code.findbugs/jsr305/${google-findbugs-jsr305-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2-version}</bundle>
-    <!-- <bundle dependency='true'>wrap:mvn:com.fasterxml.jackson.datatype/jackson-datatype-guava/${jackson2-version}$overwrite=merge&amp;Import-Package=com.google.*;version="[27.1,28.0)",*</bundle> -->
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.datatype/jackson-datatype-guava/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.datatype/jackson-datatype-jdk8/${jackson2-version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2.tesb.version}</bundle>
+    <!-- <bundle dependency='true'>wrap:mvn:com.fasterxml.jackson.datatype/jackson-datatype-guava/${jackson2.tesb.version}$overwrite=merge&amp;Import-Package=com.google.*;version="[27.1,28.0)",*</bundle> -->
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.datatype/jackson-datatype-guava/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.datatype/jackson-datatype-jdk8/${jackson2.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.okhttp/${okclient-bundle-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.okio/${squareup-okio-bundle-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.retrofit/${squareup-retrofit2-bundle-version}</bundle>
@@ -742,12 +742,12 @@
     <feature version='${upstream.version}'>camel-core</feature>
     <bundle dependency='true'>wrap:mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.docker-java/${docker-java-bundle-version}$overwrite=merge&amp;Import-Package=com.google.common.*;version="${google-cloud-guava.tesb.version-range}",*;resolution:=optional</bundle>
     <bundle dependency='true'>mvn:org.apache.geronimo.specs/geronimo-annotation_1.2_spec/${geronimo-annotation-1.2-spec-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-base/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-json-provider/${jackson2-version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-base/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-json-provider/${jackson2.tesb.version}</bundle>
     <bundle dependency='true'>mvn:com.google.guava/guava/${docker-guava.tesb.version}</bundle>
     <bundle dependency='true'>mvn:com.google.guava/failureaccess/1.0.1</bundle>
     <bundle dependency='true'>mvn:io.netty/netty-resolver/${netty.tesb.version}</bundle>
@@ -803,7 +803,7 @@
   <feature name='camel-dropbox' version='${upstream.version}' start-level='50'>
     <feature version="${upstream.version}">camel-core</feature>
     <bundle dependency='true'>mvn:commons-io/commons-io/${commons-io-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2-version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2.tesb.version}</bundle>
     <bundle dependency='true'>mvn:javax.servlet/javax.servlet-api/${javax-servlet-api-version}</bundle>
     <bundle dependency='true'>mvn:com.dropbox.core/dropbox-core-sdk/${dropbox-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-dropbox/${upstream.version}</bundle>
@@ -818,9 +818,9 @@
     <feature version="${upstream.version}">camel-core</feature>
     <feature prerequisite='true'>wrap</feature>
     <bundle dependency='true'>wrap:mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.elasticsearch-java/${elasticsearch-java-bundle-version}$overwrite=merge&amp;Import-Package=org.apache.logging.log4j.*;version="${elasticsearch-log4j.tesb.version-range}",*;resolution:=optional</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2-version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.apache.httpcomponents/httpcore-osgi/${httpcore4.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.apache.httpcomponents/httpclient-osgi/${httpclient4.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.apache.httpcomponents/httpasyncclient-osgi/${httpasyncclient-version}</bundle>
@@ -833,13 +833,13 @@
   <feature name='camel-elasticsearch-rest' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
     <feature>http</feature>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-cbor/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-yaml/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-smile/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:org.yaml/snakeyaml/${snakeyaml-version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-cbor/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-yaml/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-smile/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:org.yaml/snakeyaml/${snakeyaml.tesb.version}</bundle>
     <bundle dependency='true'>mvn:com.google.guava/guava/${google-guava.tesb.version}</bundle>
     <bundle dependency='true'>mvn:com.ning/compress-lzf/${compress-lzf-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.httpcomponents/httpcore-osgi/${httpcore4.tesb.version}</bundle>
@@ -953,7 +953,7 @@
    </feature>
   <feature name='camel-google-bigquery' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2-version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2.tesb.version}</bundle>
     <bundle dependency='true'>wrap:mvn:com.google.api/api-common/${google-cloud-api-common-version}</bundle>
     <bundle dependency='true'>wrap:mvn:com.google.api-client/google-api-client/${google-cloud-api-client-version}</bundle>
     <bundle dependency='true'>wrap:mvn:com.google.api/gax/${google-cloud-gax-version}</bundle>
@@ -1230,28 +1230,28 @@
   </feature>
   <feature name='camel-jackson' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/${jackson2-version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/${jackson2.tesb.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-jackson/${upstream.version}</bundle>
   </feature>
   <feature name='camel-jackson-avro' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-jackson</feature>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-avro/${jackson2-version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-avro/${jackson2.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.apache.avro/avro/${avro.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.apache.commons/commons-compress/${avro-java-commons-compress.tesb.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-jackson-avro/${upstream.version}</bundle>
   </feature>
   <feature name='camel-jackson-protobuf' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-jackson</feature>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-protobuf/${jackson2-version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-protobuf/${jackson2.tesb.version}</bundle>
     <bundle dependency='true'>wrap:mvn:com.squareup/protoparser/4.0.3</bundle>
     <bundle>mvn:org.apache.camel/camel-jackson-protobuf/${upstream.version}</bundle>
   </feature>
   <feature name='camel-jacksonxml' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-jackson</feature>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-xml/${jackson2-version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-xml/${jackson2.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.codehaus.woodstox/stax2-api/${stax2v4-api-bundle-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-jacksonxml/${upstream.version}</bundle>
   </feature>
@@ -1364,9 +1364,9 @@
   </feature>
   <feature name='camel-jslt' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2-version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2.tesb.version}</bundle>
     <bundle dependency='true'>wrap:mvn:com.schibsted.spt.data/jslt/${jslt-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-jslt/${upstream.version}</bundle>
   </feature>
@@ -1374,10 +1374,10 @@
     <feature version='${upstream.version}'>camel-core</feature>
     <bundle dependency='true'>wrap:mvn:com.ibm.jsonata4java/JSONata4Java/${jsonata4java-version}</bundle>
     <bundle dependency='true'>wrap:mvn:org.antlr/antlr4-runtime/4.11.1</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-xml/${jackson2-version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-xml/${jackson2.tesb.version}</bundle>
     <bundle dependency='true'>mvn:com.google.code.gson/gson/${jsonata-gson.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.apache.commons/commons-text/${commons-text-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3-version}</bundle>
@@ -1386,9 +1386,9 @@
   <feature name='camel-json-validator' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
     <bundle dependency='true'>mvn:com.networknt/json-schema-validator/${networknt-json-schema-validator-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2-version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3-version}</bundle>
     <bundle dependency='true'>wrap:mvn:org.jruby.joni/joni/${joni-version}</bundle>
     <bundle dependency='true'>wrap:mvn:org.jruby.jcodings/jcodings/${jcodings-version}</bundle>
@@ -1427,10 +1427,10 @@
     <bundle dependency='true'>mvn:org.ow2.asm/asm-commons/${asm.bundle.version}</bundle>
     <bundle dependency='true'>mvn:org.ow2.asm/asm-tree/${asm.bundle.version}</bundle>
     <bundle dependency='true'>mvn:org.ow2.asm/asm-util/${asm.bundle.version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/${jackson2-version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/${jackson2.tesb.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-jsonpath/${upstream.version}</bundle>
   </feature>
   <feature name='camel-jt400' version='${upstream.version}' start-level='50'>
@@ -1457,17 +1457,17 @@
     <feature version='${upstream.version}'>camel-core</feature>
     <bundle dependency='true'>mvn:javax.validation/validation-api/${validation-1-api-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.jsr311-api-1.1.1/${servicemix-specs-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-yaml/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.datatype/jackson-datatype-jsr310/${jackson2-version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-yaml/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.datatype/jackson-datatype-jsr310/${jackson2.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.generex/${generex-bundle-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.automaton/${automaton-bundle-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.okio/${squareup-okio-bundle-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.okhttp/${okclient-bundle-version}</bundle>
     <bundle dependency='true'>mvn:com.google.code.findbugs/jsr305/${google-findbugs-jsr305-version}</bundle>
-    <bundle dependency='true'>mvn:org.yaml/snakeyaml/${snakeyaml-version}</bundle>
+    <bundle dependency='true'>mvn:org.yaml/snakeyaml/${snakeyaml.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.apache.aries.spifly/org.apache.aries.spifly.dynamic.bundle/${aries-spifly.bundle.version}</bundle>
     <bundle dependency='true'>mvn:org.ow2.asm/asm/${asm.bundle.version}</bundle>
     <bundle dependency='true'>mvn:org.ow2.asm/asm-analysis/${asm.bundle.version}</bundle>
@@ -1555,9 +1555,9 @@
   <feature name='camel-leveldb' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
     <bundle dependency='true'>wrap:mvn:org.fusesource.leveldbjni/leveldbjni-all/${leveldbjni-version}$Bundle-Version=${leveldbjni-version}&amp;Export-Package=*;-noimport:=true;version="${leveldbjni-version}"</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2-version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2.tesb.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-leveldb/${upstream.version}</bundle>
   </feature>
   <feature name='camel-leveldb-java' version='${upstream.version}' start-level='50'>
@@ -1565,9 +1565,9 @@
     <bundle dependency='true'>mvn:com.google.guava/guava/${leveldb-guava.tesb.version}</bundle>
     <bundle dependency='true'>wrap:mvn:org.iq80.leveldb/leveldb-api/${leveldb-api-version}$Bundle-Version=${leveldb-api-version}&amp;Export-Package=*;-noimport:=true;version="${leveldb-api-version}"</bundle>
     <bundle dependency='true'>wrap:mvn:org.iq80.leveldb/leveldb/${leveldb-version}$Bundle-Version=${leveldb-version}&amp;Export-Package=*;-noimport:=true;version="${leveldb-version}"</bundle>    
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2-version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2.tesb.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-leveldb/${upstream.version}</bundle>
   </feature>
   <feature name='camel-lra' version='${upstream.version}' start-level='50'>
@@ -1596,9 +1596,9 @@
     <bundle dependency='true'>mvn:io.netty/netty-handler/${netty.tesb.version}</bundle>
     <bundle dependency='true'>mvn:io.netty/netty-codec/${netty.tesb.version}</bundle>
     <bundle dependency='true'>mvn:io.netty/netty-tcnative-classes/${netty-tcnative-classes-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2-version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2.tesb.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-lumberjack/${upstream.version}</bundle>
   </feature>
   <feature name='camel-lzf' version='${upstream.version}' start-level='50'>
@@ -1621,17 +1621,17 @@
     <bundle dependency='true'>mvn:io.dropwizard.metrics/metrics-core/${metrics-version}</bundle>
     <bundle dependency='true'>mvn:io.dropwizard.metrics/metrics-jmx/${metrics-version}</bundle>
     <bundle dependency='true'>mvn:io.dropwizard.metrics/metrics-json/${metrics-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2-version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2.tesb.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-metrics/${upstream.version}</bundle>
   </feature>
   <feature name='camel-micrometer' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
     <bundle dependency='true'>wrap:mvn:io.micrometer/micrometer-core/${micrometer-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2-version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2.tesb.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-micrometer/${upstream.version}</bundle>
   </feature>
   <feature name='camel-mina' version='${upstream.version}' start-level='50'>
@@ -1752,11 +1752,11 @@
     <bundle dependency='true'>mvn:org.apache.httpcomponents/httpcore-osgi/${httpcore4.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.apache.httpcomponents/httpclient-osgi/${httpclient4.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.apache.httpcomponents/httpasyncclient-osgi/${httpasyncclient-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-xml/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/${jackson2-version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-xml/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/${jackson2.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.codehaus.woodstox/stax2-api/${stax2v4-api-bundle-version}</bundle>
     <bundle dependency='true'>mvn:com.fasterxml/aalto-xml/0.9.10</bundle>
     <bundle dependency='true'>mvn:io.netty/netty-common/${netty.tesb.version}</bundle>
@@ -1908,9 +1908,9 @@
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-data-keyvalue/${spring-data-keyvalue-bundle-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.jedis/${jedis-bundle-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.commons/commons-pool2/${commons-pool2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2-version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2.tesb.version}</bundle>
     <bundle dependency='true'>mvn:io.netty/netty-transport/${netty.tesb.version}</bundle>
     <bundle dependency='true'>mvn:io.netty/netty-buffer/${netty.tesb.version}</bundle>
     <bundle dependency='true'>mvn:io.netty/netty-common/${netty.tesb.version}</bundle>
@@ -1920,17 +1920,17 @@
   <feature name='camel-rest-openapi' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
     <feature version='${upstream.version}'>camel-http</feature>
-    <bundle dependency='true'>mvn:org.yaml/snakeyaml/${snakeyaml-version}</bundle>
+    <bundle dependency='true'>mvn:org.yaml/snakeyaml/${snakeyaml.tesb.version}</bundle>
     <bundle dependency='true'>mvn:javax.validation/validation-api/${validation-1-api-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-csv/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-smile/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-xml/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-yaml/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.module/jackson-module-jsonSchema/${jackson2-version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-csv/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-smile/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-xml/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-yaml/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.module/jackson-module-jsonSchema/${jackson2.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3-version}</bundle>
     <bundle dependency='true'>wrap:mvn:io.apicurio/apicurio-data-models/${apicurio-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-rest-openapi/${upstream.version}</bundle>
@@ -1939,17 +1939,17 @@
   <feature name='camel-rest-swagger' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
     <feature version='${upstream.version}'>camel-http</feature>
-    <bundle dependency='true'>mvn:org.yaml/snakeyaml/${snakeyaml-version}</bundle>
+    <bundle dependency='true'>mvn:org.yaml/snakeyaml/${snakeyaml.tesb.version}</bundle>
     <bundle dependency='true'>mvn:javax.validation/validation-api/${validation-1-api-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-csv/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-smile/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-xml/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-yaml/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.module/jackson-module-jsonSchema/${jackson2-version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-csv/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-smile/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-xml/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-yaml/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.module/jackson-module-jsonSchema/${jackson2.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3-version}</bundle>
     <bundle dependency='true'>mvn:com.google.guava/guava/${swagger-java-guava.tesb.version}</bundle>
     <bundle dependency='true'>mvn:com.google.guava/failureaccess/1.0.1</bundle>
@@ -1979,20 +1979,20 @@
   <feature name='camel-sap-netweaver' version='${upstream.version}' start-level='50'>
     <feature>http</feature>
     <feature version='${upstream.version}'>camel-core</feature>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2-version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2.tesb.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-sap-netweaver/${upstream.version}</bundle>
   </feature>
   <feature name='camel-salesforce' version='${upstream.version}' start-level='50'>
     <feature>jetty</feature>
     <feature version='${upstream.version}'>camel-core</feature>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-json-provider/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.module/jackson-module-jsonSchema/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.datatype/jackson-datatype-jsr310/${jackson2-version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-json-provider/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.module/jackson-module-jsonSchema/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.datatype/jackson-datatype-jsr310/${jackson2.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3-version}</bundle>
     <bundle dependency='true'>mvn:javax.validation/validation-api/${validation-1-api-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.xstream/${xstream-bundle.tesb.version}</bundle>
@@ -2027,13 +2027,13 @@
     <feature version='${cxf-version-range}'>cxf-core</feature>
     <feature version='${cxf-version-range}'>cxf-jaxrs</feature>
     <feature version='${cxf-version-range}'>cxf-rs-security-oauth2</feature>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.datatype/jackson-datatype-jsr310/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.datatype/jackson-datatype-jdk8/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-base/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-json-provider/${jackson2-version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.datatype/jackson-datatype-jsr310/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.datatype/jackson-datatype-jdk8/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-base/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-json-provider/${jackson2.tesb.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-servicenow/${upstream.version}</bundle>
   </feature>
   <feature name='camel-servlet' version='${upstream.version}' start-level='50'>
@@ -2090,7 +2090,7 @@
   </feature>
   <feature name='camel-snakeyaml' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
-    <bundle dependency='true'>mvn:org.yaml/snakeyaml/${snakeyaml-version}</bundle>
+    <bundle dependency='true'>mvn:org.yaml/snakeyaml/${snakeyaml.tesb.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-snakeyaml/${upstream.version}</bundle>
   </feature>
   <feature name='camel-snmp' version='${upstream.version}' start-level='50'>
@@ -2221,15 +2221,15 @@
     <feature>http</feature>
     <feature version='${upstream.version}'>camel-core</feature>
     <bundle dependency='true'>mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.jsr311-api-1.1.1/${servicemix-specs-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-xml/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-yaml/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-base/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-json-provider/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:org.yaml/snakeyaml/${snakeyaml-version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-xml/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-yaml/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-base/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-json-provider/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:org.yaml/snakeyaml/${snakeyaml.tesb.version}</bundle>
     <bundle dependency='true'>mvn:javax.validation/validation-api/${validation-1-api-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3-version}</bundle>
     <bundle dependency='true'>mvn:com.google.guava/guava/${swagger-java-guava.tesb.version}</bundle>
@@ -2247,16 +2247,16 @@
     <feature version='${upstream.version}'>camel-core</feature>
     <bundle dependency='true'>mvn:javax.validation/validation-api/${validation-api-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.jsr311-api-1.1.1/${servicemix-specs-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-xml/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-yaml/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-base/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-json-provider/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.datatype/jackson-datatype-jsr310/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:org.yaml/snakeyaml/${snakeyaml-version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-xml/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-yaml/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-base/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-json-provider/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.datatype/jackson-datatype-jsr310/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:org.yaml/snakeyaml/${snakeyaml.tesb.version}</bundle>
     <bundle dependency='true'>mvn:javax.validation/validation-api/${validation-1-api-version}</bundle>
     <bundle dependency='true'>wrap:mvn:io.apicurio/apicurio-data-models/${apicurio-version}</bundle>
     <bundle dependency='true'>mvn:io.swagger.core.v3/swagger-annotations/${swagger-openapi3-version}</bundle>
@@ -2279,9 +2279,9 @@
     <feature version='${upstream.version}'>camel-core</feature>
     <feature version='${upstream.version}'>camel-webhook</feature>
     <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2-version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2.tesb.version}</bundle>
     <bundle dependency='true'>mvn:io.netty/netty-buffer/${netty.tesb.version}</bundle>
     <bundle dependency='true'>mvn:io.netty/netty-codec/${netty.tesb.version}</bundle>
     <bundle dependency='true'>mvn:io.netty/netty-codec-dns/${netty.tesb.version}</bundle>
@@ -2341,9 +2341,9 @@
     <bundle dependency='true'>mvn:joda-time/joda-time/${jodatime2-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.httpcomponents/httpcore-osgi/${httpcore4.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.apache.httpcomponents/httpclient-osgi/${httpclient4.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2-version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2.tesb.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-twilio/${upstream.version}</bundle>
   </feature>
   <feature name='camel-twitter' version='${upstream.version}' start-level='50'>
@@ -2358,9 +2358,9 @@
   </feature>
   <feature name='camel-vertx' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2-version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2.tesb.version}</bundle>
     <bundle dependency='true'>mvn:io.netty/netty-common/${netty.tesb.version}</bundle>
     <bundle dependency='true'>mvn:io.netty/netty-transport/${netty.tesb.version}</bundle>
     <bundle dependency='true'>mvn:io.netty/netty-transport-native-unix-common/${netty.tesb.version}</bundle>
@@ -2392,9 +2392,9 @@
     <bundle dependency='true'>mvn:org.apache.httpcomponents/httpcore-osgi/${httpcore4.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.apache.httpcomponents/httpclient-osgi/${httpclient4.tesb.version}</bundle>
     <bundle dependency='true'>mvn:javax.servlet/javax.servlet-api/${javax-servlet-api-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2-version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2.tesb.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-weather/${upstream.version}</bundle>
   </feature>
   <feature name='camel-websocket' version='${upstream.version}' start-level='50'>
@@ -2426,13 +2426,13 @@
     <feature version='${cxf-version-range}'>cxf-jaxrs</feature>
     <feature version='${cxf-version-range}'>cxf-features-logging</feature>
     <feature version='${upstream.version}'>camel-core</feature>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-xml/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-base/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-json-provider/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/${jackson2-version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-xml/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-base/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-json-provider/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/${jackson2.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.codehaus.woodstox/stax2-api/${stax2v4-api-bundle-version}</bundle>
     <bundle dependency='true'>mvn:com.google.guava/guava/${guava-eventbus.tesb.version}</bundle>
     <bundle dependency='true'>mvn:com.google.guava/failureaccess/1.0.1</bundle>
@@ -2453,8 +2453,8 @@
   </feature>
   <feature name='camel-xj' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-xslt-saxon</feature>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2-version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2.tesb.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-xj/${upstream.version}</bundle>
   </feature>
   <feature name='camel-xmlsecurity' version='${upstream.version}' start-level='50'>
@@ -2524,9 +2524,9 @@
     <bundle dependency='true'>mvn:io.netty/netty-tcnative-classes/${netty-tcnative-classes-version}</bundle>
     <bundle dependency='true'>wrap:mvn:com.typesafe.netty/netty-reactive-streams/${netty-reactive-streams-version}</bundle>
     <bundle dependency='true'>mvn:org.reactivestreams/reactive-streams/${reactive-streams-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2-version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2.tesb.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-zendesk/${upstream.version}</bundle>
   </feature>
   <feature name='camel-zip-deflater' version='${upstream.version}' start-level='50'>
@@ -2562,9 +2562,9 @@
     <bundle dependency='true'>wrap:mvn:org.apache.curator/curator-x-discovery/${curator.tesb.version}$overwrite=merge&amp;Import-Package=com.google.common.*;version="${google-cloud-guava.tesb.version-range}";resolution:=optional,*;resolution:=optional</bundle>
     <bundle dependency='true'>mvn:com.google.guava/failureaccess/1.0.1</bundle>
     <bundle dependency='true'>mvn:com.google.guava/guava/${zookeeper-guava.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2-version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2.tesb.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-zookeeper/${camel-zookeeper.tesb.version}</bundle>
   </feature>
   <feature name='camel-zookeeper-master' version='${upstream.version}' start-level='50'>
@@ -2575,9 +2575,9 @@
     <bundle dependency='true'>wrap:mvn:org.apache.curator/curator-recipes/${curator.tesb.version}$overwrite=merge&amp;Import-Package=com.google.common.*;version="${google-cloud-guava.tesb.version-range}",*;resolution:=optional</bundle>
     <bundle dependency='true'>mvn:com.google.guava/failureaccess/1.0.1</bundle>
     <bundle dependency='true'>mvn:com.google.guava/guava/${zookeeper-guava.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2-version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2.tesb.version}</bundle>
     <bundle>wrap:mvn:org.apache.camel.karaf/camel-zookeeper-master-osgi/${upstream.version}$overwrite=merge&amp;Import-Package=org.apache.curator.*;version="${zookeeper-curator.tesb.version-range}",*;resolution:=optional</bundle>
     <bundle>mvn:org.apache.camel/camel-zookeeper-master/${camel-zookeeper-master.tesb.version}</bundle>
   </feature>
