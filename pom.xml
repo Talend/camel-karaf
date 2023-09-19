@@ -151,6 +151,7 @@
         <jdom-bundle.tesb.version>2.0.6.1_1</jdom-bundle.tesb.version>
         <jettison.tesb.version>1.5.4</jettison.tesb.version>
         <jetty.tesb.version>9.4.52.v20230823</jetty.tesb.version>
+        <jgit.tesb.version>6.6.1.202309021850-r</jgit.tesb.version>
         <jna.tesb.version>5.13.0</jna.tesb.version>
         <johnzon.tesb.version>1.2.21</johnzon.tesb.version>
         <jose4j.tesb.version>0.9.3</jose4j.tesb.version>
@@ -643,6 +644,7 @@
                             <zookeeper-guava.tesb.version>${zookeeper-guava.tesb.version}</zookeeper-guava.tesb.version>
                             <protobuf.tesb.version>${protobuf.tesb.version}</protobuf.tesb.version>
                             <jetty.tesb.version>${jetty.tesb.version}</jetty.tesb.version>
+                            <jgit.tesb.version>${jgit.tesb.version}</jgit.tesb.version>
                             <ant-bundle.tesb.version>${ant-bundle.tesb.version}</ant-bundle.tesb.version>
                             <avro.tesb.version>${avro.tesb.version}</avro.tesb.version>
                             <jackson2.tesb.version>${jackson2.tesb.version}</jackson2.tesb.version>
