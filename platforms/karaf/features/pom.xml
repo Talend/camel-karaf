@@ -134,7 +134,7 @@
                     </framework>
                     <features>
                         <!-- camel-ignite requires to install apache ignite first -->
-                        <feature>camel|camel-(?!(ignite|pgevent))*</feature>
+                        <feature>camel|camel-(?!(ignite|pgevent|mail-microsoft-oauth))*</feature>
                     </features>
                 </configuration>
                 <executions>
