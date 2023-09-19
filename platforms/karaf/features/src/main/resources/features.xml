@@ -933,7 +933,7 @@
   </feature>
   <feature name='camel-git' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
-    <bundle dependency='true'>mvn:org.eclipse.jgit/org.eclipse.jgit/${jgit-version}</bundle>
+    <bundle dependency='true'>mvn:org.eclipse.jgit/org.eclipse.jgit/${jgit.tesb.version}</bundle>
     <bundle dependency='true'>mvn:com.googlecode.javaewah/JavaEWAH/${java-ewah-version}</bundle>
     <bundle dependency='true'>wrap:mvn:com.github.mwiede/jsch/${jsch-version}$overwrite=merge&amp;Bundle-SymbolicName=org.apache.servicemix.bundles.jsch&amp;Export-Package=com.jcraft.jsch;version=0.1.55,com.jcraft.jsch.bc;version=0.1.55,com.jcraft.jsch.jbcrypt;version=0.1.55,com.jcraft.jsch.jce;version=0.1.55,com.jcraft.jsch.jgss;version=0.1.55,com.jcraft.jsch.juz;version=0.1.55,com.jcraft.jsch.jzlib;version=0.1.55,com.jcraft.jsch;version=${jsch-version},com.jcraft.jsch.bc;version=${jsch-version},com.jcraft.jsch.jbcrypt;version=${jsch-version},com.jcraft.jsch.jce;version=${jsch-version},com.jcraft.jsch.jgss;version=${jsch-version},com.jcraft.jsch.juz;version=${jsch-version},com.jcraft.jsch.jzlib;version=${jsch-version}</bundle>
     <bundle dependency='true'>mvn:javax.servlet/javax.servlet-api/${javax-servlet-api-version}</bundle>
