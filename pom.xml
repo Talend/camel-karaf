@@ -111,7 +111,7 @@
         <activemq-pool.tesb.version>5.17.4.20230530</activemq-pool.tesb.version>
         <ant-bundle.tesb.version>1.10.12_1</ant-bundle.tesb.version>
         <apache-drill.tesb.version>1.21.1</apache-drill.tesb.version>
-        <avro.tesb.version>1.11.2</avro.tesb.version>
+        <avro.tesb.version>1.11.3</avro.tesb.version>
         <avro-jackson.tesb.version>${jackson2.tesb.version}</avro-jackson.tesb.version>
         <bouncycastle.tesb.version>1.76</bouncycastle.tesb.version>
         <braintree-jackson2.tesb.version>${jackson2.tesb.version}</braintree-jackson2.tesb.version>
