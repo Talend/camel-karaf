@@ -150,7 +150,7 @@
         <jaxb-bundle.tesb.version>2.3.2_3</jaxb-bundle.tesb.version>
         <jdom-bundle.tesb.version>2.0.6.1_1</jdom-bundle.tesb.version>
         <jettison.tesb.version>1.5.4</jettison.tesb.version>
-        <jetty.tesb.version>9.4.52.v20230823</jetty.tesb.version>
+        <jetty.tesb.version>9.4.53.v20231009</jetty.tesb.version>
         <jgit.tesb.version>6.6.1.202309021850-r</jgit.tesb.version>
         <jna.tesb.version>5.13.0</jna.tesb.version>
         <johnzon.tesb.version>1.2.21</johnzon.tesb.version>
@@ -159,7 +159,7 @@
         <accessors-smart.tesb.version>2.4.9</accessors-smart.tesb.version>
         <kudu.tesb.version>1.17.0</kudu.tesb.version>
         <log4j2.tesb.version>2.20.0</log4j2.tesb.version>
-        <netty.tesb.version>4.1.94.Final</netty.tesb.version>
+        <netty.tesb.version>4.1.100.Final</netty.tesb.version>
         <opensaml-bundle.tesb.version>3.4.6_3</opensaml-bundle.tesb.version>
         <protobuf.tesb.version>3.21.12</protobuf.tesb.version>
         <simple-xml-safe.tesb.version>2.7.1</simple-xml-safe.tesb.version>
@@ -170,7 +170,7 @@
         <xmlgraphics-batik.tesb.version>1.17</xmlgraphics-batik.tesb.version>
         <xmlsec.tesb.version>2.3.0</xmlsec.tesb.version>
         <xstream-bundle.tesb.version>1.4.20_1</xstream-bundle.tesb.version>
-        <zookeeper.tesb.version>3.7.1</zookeeper.tesb.version>
+        <zookeeper.tesb.version>3.7.2</zookeeper.tesb.version>
         <cmis-woodstox-api.tesb.version-range>[4.4,7)</cmis-woodstox-api.tesb.version-range>
         <elasticsearch-log4j.tesb.version-range>[2.20,3)</elasticsearch-log4j.tesb.version-range>
         <github-gson.tesb.version-range>[2.2,3)</github-gson.tesb.version-range>
