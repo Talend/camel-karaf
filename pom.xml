@@ -98,7 +98,7 @@
     <properties>
 
         <upstream.version>3.20.6</upstream.version>
-        <camel.features.tesb.version>3.20.6.20230915</camel.features.tesb.version>
+        <camel.features.tesb.version>3.20.6.20231017</camel.features.tesb.version>
         <camel-support.tesb.version>3.20.6.20230530</camel-support.tesb.version>
         <camel-cxf-soap.tesb.version>3.20.6.20230530</camel-cxf-soap.tesb.version>
         <camel-cxf-rest.tesb.version>3.20.6.20230530</camel-cxf-rest.tesb.version>
@@ -176,6 +176,7 @@
         <github-gson.tesb.version-range>[2.2,3)</github-gson.tesb.version-range>
         <spring.tesb.version-range>[5.2,7)</spring.tesb.version-range>
         <zookeeper-curator.tesb.version-range>[4.3,6)</zookeeper-curator.tesb.version-range>
+        <kafka-bundle.tesb.version>3.4.0_1-tesb1</kafka-bundle.tesb.version>
 
         <!-- unify the encoding for all the modules -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
