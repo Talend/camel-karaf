@@ -98,7 +98,7 @@
     <properties>
 
         <upstream.version>3.20.6</upstream.version>
-        <camel.features.tesb.version>3.20.6.20231017</camel.features.tesb.version>
+        <camel.features.tesb.version>3.20.6.20231024</camel.features.tesb.version>
         <camel-support.tesb.version>3.20.6.20230530</camel-support.tesb.version>
         <camel-cxf-soap.tesb.version>3.20.6.20230530</camel-cxf-soap.tesb.version>
         <camel-cxf-rest.tesb.version>3.20.6.20230530</camel-cxf-rest.tesb.version>
@@ -117,12 +117,18 @@
         <braintree-jackson2.tesb.version>${jackson2.tesb.version}</braintree-jackson2.tesb.version>
         <californium.tesb.version>2.7.4</californium.tesb.version>
         <californium-element-connector-tcp-netty.tesb.version>2.7.2</californium-element-connector-tcp-netty.tesb.version>
+        <cassandra-driver.tesb.version>4.15.0</cassandra-driver.tesb.version>
+        <cassandra-jackson2.tesb.version>2.13.5</cassandra-jackson2.tesb.version>
+        <cassandra-jackson2-databind.tesb.version>2.13.5</cassandra-jackson2-databind.tesb.version>
+        <cassandra-metrics.tesb.version>4.1.18</cassandra-metrics.tesb.version>
+        <cassandra-shaded-guava.tesb.version>25.1-jre-graal-sub-1</cassandra-shaded-guava.tesb.version>
         <commons-compress.tesb.version>1.24.0</commons-compress.tesb.version>
         <avro-java-commons-compress.tesb.version>${commons-compress.tesb.version}</avro-java-commons-compress.tesb.version>
         <docker-java-commons-compress.tesb.version>${commons-compress.tesb.version}</docker-java-commons-compress.tesb.version>
         <minio-commons-compress.tesb.version>${commons-compress.tesb.version}</minio-commons-compress.tesb.version>
         <commons-net.tesb.version>3.9.0</commons-net.tesb.version>
         <curator.tesb.version>5.5.0</curator.tesb.version>
+        <datastax-native-protocol.tesb.version>1.5.1</datastax-native-protocol.tesb.version>
         <gson.tesb.version>2.10.1</gson.tesb.version>
         <github-gson.tesb.version>${gson.tesb.version}</github-gson.tesb.version>
         <olingo2-gson.tesb.version>${gson.tesb.version}</olingo2-gson.tesb.version>
@@ -634,6 +640,12 @@
                             <google-cloud-guava-bundle.tesb.version>${google-cloud-guava-bundle.tesb.version}</google-cloud-guava-bundle.tesb.version>
                             <guava-eventbus.tesb.version>${guava-eventbus.tesb.version}</guava-eventbus.tesb.version>
                             <consul-guava.tesb.version>${consul-guava.tesb.version}</consul-guava.tesb.version>
+                            <cassandra-driver.tesb.version>${cassandra-driver.tesb.version}</cassandra-driver.tesb.version>
+                            <cassandra-jackson2.tesb.version>${cassandra-jackson2.tesb.version}</cassandra-jackson2.tesb.version>
+                            <cassandra-jackson2-databind.tesb.version>${cassandra-jackson2-databind.tesb.version}</cassandra-jackson2-databind.tesb.version>
+                            <cassandra-metrics.tesb.version>${cassandra-metrics.tesb.version}</cassandra-metrics.tesb.version>
+                            <cassandra-shaded-guava.tesb.version>${cassandra-shaded-guava.tesb.version}</cassandra-shaded-guava.tesb.version>
+                            <datastax-native-protocol.tesb.version>${datastax-native-protocol.tesb.version}</datastax-native-protocol.tesb.version>
                             <docker-guava.tesb.version>${docker-guava.tesb.version}</docker-guava.tesb.version>
                             <google-guava.tesb.version>${google-guava.tesb.version}</google-guava.tesb.version>
                             <influx-guava.tesb.version>${influx-guava.tesb.version}</influx-guava.tesb.version>

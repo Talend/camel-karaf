@@ -576,6 +576,30 @@
     <bundle dependency="true">mvn:com.github.ben-manes.caffeine/caffeine/${caffeine-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-caffeine-lrucache/${upstream.version}</bundle>
   </feature>
+  <feature name='camel-cassandraql' version='${upstream.version}' start-level='50'>
+    <feature version='${upstream.version}'>camel-core</feature>
+    <bundle dependency='true'>mvn:com.datastax.oss/java-driver-shaded-guava/${cassandra-shaded-guava.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-resolver/${netty.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-handler/${netty.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-transport-native-epoll/${netty.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-transport-native-unix-common/${netty.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-buffer/${netty.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-common/${netty.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-transport/${netty.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-codec/${netty.tesb.version}</bundle>
+    <!-- need older metrics version -->
+    <bundle dependency='true'>mvn:io.dropwizard.metrics/metrics-core/${cassandra-metrics.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:io.dropwizard.metrics/metrics-json/${cassandra-metrics.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${cassandra-jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${cassandra-jackson2-databind.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${cassandra-jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.datastax.oss/java-driver-core/${cassandra-driver.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.datastax.oss/java-driver-query-builder/${cassandra-driver.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.typesafe/config/${typesafe-config}</bundle>
+    <bundle dependency='true'>mvn:org.hdrhistogram/HdrHistogram/${hdrhistrogram-version}</bundle>
+    <bundle dependency='true'>mvn:com.datastax.oss/native-protocol/${datastax-native-protocol.tesb.version}</bundle>
+    <bundle>mvn:org.apache.camel/camel-cassandraql/${upstream.version}</bundle>
+  </feature>
   <feature name='camel-cbor' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
     <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2.tesb.version}</bundle>
