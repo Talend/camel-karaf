@@ -98,7 +98,7 @@
     <properties>
 
         <upstream.version>3.20.6</upstream.version>
-        <camel.features.tesb.version>3.20.6.20231017</camel.features.tesb.version>
+        <camel.features.tesb.version>3.20.6.20231024</camel.features.tesb.version>
         <camel-support.tesb.version>3.20.6.20230530</camel-support.tesb.version>
         <camel-cxf-soap.tesb.version>3.20.6.20230530</camel-cxf-soap.tesb.version>
         <camel-cxf-rest.tesb.version>3.20.6.20230530</camel-cxf-rest.tesb.version>
@@ -117,12 +117,18 @@
         <braintree-jackson2.tesb.version>${jackson2.tesb.version}</braintree-jackson2.tesb.version>
         <californium.tesb.version>2.7.4</californium.tesb.version>
         <californium-element-connector-tcp-netty.tesb.version>2.7.2</californium-element-connector-tcp-netty.tesb.version>
+        <cassandra-driver.tesb.version>4.15.0</cassandra-driver.tesb.version>
+        <cassandra-jackson2.tesb.version>2.13.5</cassandra-jackson2.tesb.version>
+        <cassandra-jackson2-databind.tesb.version>2.13.5</cassandra-jackson2-databind.tesb.version>
+        <cassandra-metrics.tesb.version>4.1.18</cassandra-metrics.tesb.version>
+        <cassandra-shaded-guava.tesb.version>25.1-jre-graal-sub-1</cassandra-shaded-guava.tesb.version>
         <commons-compress.tesb.version>1.24.0</commons-compress.tesb.version>
         <avro-java-commons-compress.tesb.version>${commons-compress.tesb.version}</avro-java-commons-compress.tesb.version>
         <docker-java-commons-compress.tesb.version>${commons-compress.tesb.version}</docker-java-commons-compress.tesb.version>
         <minio-commons-compress.tesb.version>${commons-compress.tesb.version}</minio-commons-compress.tesb.version>
         <commons-net.tesb.version>3.9.0</commons-net.tesb.version>
         <curator.tesb.version>5.5.0</curator.tesb.version>
+        <datastax-native-protocol.tesb.version>1.5.1</datastax-native-protocol.tesb.version>
         <gson.tesb.version>2.10.1</gson.tesb.version>
         <github-gson.tesb.version>${gson.tesb.version}</github-gson.tesb.version>
         <olingo2-gson.tesb.version>${gson.tesb.version}</olingo2-gson.tesb.version>
@@ -141,7 +147,7 @@
         <protobuf-guava.tesb.version>32.1.1-jre</protobuf-guava.tesb.version>
         <swagger-java-guava.tesb.version>32.1.1-jre</swagger-java-guava.tesb.version>
         <zookeeper-guava.tesb.version>32.1.1-jre</zookeeper-guava.tesb.version>
-        <hazelcast.tesb.version>5.2.4</hazelcast.tesb.version>
+        <hazelcast.tesb.version>5.3.5</hazelcast.tesb.version>
         <httpclient4.tesb.version>4.5.14</httpclient4.tesb.version>
         <httpcore4.tesb.version>4.4.16</httpcore4.tesb.version>
         <jackson2.tesb.version>2.14.3</jackson2.tesb.version>
@@ -162,13 +168,14 @@
         <netty.tesb.version>4.1.100.Final</netty.tesb.version>
         <opensaml-bundle.tesb.version>3.4.6_3</opensaml-bundle.tesb.version>
         <protobuf.tesb.version>3.21.12</protobuf.tesb.version>
+        <rabbitmq-amqp-client.tesb.version>5.18.0</rabbitmq-amqp-client.tesb.version>
         <simple-xml-safe.tesb.version>2.7.1</simple-xml-safe.tesb.version>
         <snakeyaml.tesb.version>1.33</snakeyaml.tesb.version>
         <snappy.tesb.version>1.1.10.5</snappy.tesb.version>
         <sshd.tesb.version>2.10.0</sshd.tesb.version>
         <woodstox-core.tesb.version>6.4.0</woodstox-core.tesb.version>
         <xmlgraphics-batik.tesb.version>1.17</xmlgraphics-batik.tesb.version>
-        <xmlsec.tesb.version>2.3.0</xmlsec.tesb.version>
+        <xmlsec.tesb.version>2.3.4</xmlsec.tesb.version>
         <xstream-bundle.tesb.version>1.4.20_1</xstream-bundle.tesb.version>
         <zookeeper.tesb.version>3.7.2</zookeeper.tesb.version>
         <cmis-woodstox-api.tesb.version-range>[4.4,7)</cmis-woodstox-api.tesb.version-range>
@@ -634,6 +641,12 @@
                             <google-cloud-guava-bundle.tesb.version>${google-cloud-guava-bundle.tesb.version}</google-cloud-guava-bundle.tesb.version>
                             <guava-eventbus.tesb.version>${guava-eventbus.tesb.version}</guava-eventbus.tesb.version>
                             <consul-guava.tesb.version>${consul-guava.tesb.version}</consul-guava.tesb.version>
+                            <cassandra-driver.tesb.version>${cassandra-driver.tesb.version}</cassandra-driver.tesb.version>
+                            <cassandra-jackson2.tesb.version>${cassandra-jackson2.tesb.version}</cassandra-jackson2.tesb.version>
+                            <cassandra-jackson2-databind.tesb.version>${cassandra-jackson2-databind.tesb.version}</cassandra-jackson2-databind.tesb.version>
+                            <cassandra-metrics.tesb.version>${cassandra-metrics.tesb.version}</cassandra-metrics.tesb.version>
+                            <cassandra-shaded-guava.tesb.version>${cassandra-shaded-guava.tesb.version}</cassandra-shaded-guava.tesb.version>
+                            <datastax-native-protocol.tesb.version>${datastax-native-protocol.tesb.version}</datastax-native-protocol.tesb.version>
                             <docker-guava.tesb.version>${docker-guava.tesb.version}</docker-guava.tesb.version>
                             <google-guava.tesb.version>${google-guava.tesb.version}</google-guava.tesb.version>
                             <influx-guava.tesb.version>${influx-guava.tesb.version}</influx-guava.tesb.version>
@@ -680,6 +693,7 @@
                             <github-gson.tesb.version>${github-gson.tesb.version}</github-gson.tesb.version>
                             <olingo2-gson.tesb.version>${olingo2-gson.tesb.version}</olingo2-gson.tesb.version>
                             <jsonata-gson.tesb.version>${jsonata-gson.tesb.version}</jsonata-gson.tesb.version>
+                            <rabbitmq-amqp-client.tesb.version>${rabbitmq-amqp-client.tesb.version}</rabbitmq-amqp-client.tesb.version>
                             <simple-xml-safe.tesb.version>${simple-xml-safe.tesb.version}</simple-xml-safe.tesb.version>
                             <snakeyaml.tesb.version>${snakeyaml.tesb.version}</snakeyaml.tesb.version>
                             <snappy.tesb.version>${snappy.tesb.version}</snappy.tesb.version>
