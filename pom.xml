@@ -98,7 +98,7 @@
     <properties>
 
         <upstream.version>3.20.6</upstream.version>
-        <camel.features.tesb.version>3.20.6.20231024</camel.features.tesb.version>
+        <camel.features.tesb.version>3.20.6.20231201</camel.features.tesb.version>
         <camel-support.tesb.version>3.20.6.20230530</camel-support.tesb.version>
         <camel-cxf-soap.tesb.version>3.20.6.20230530</camel-cxf-soap.tesb.version>
         <camel-cxf-rest.tesb.version>3.20.6.20230530</camel-cxf-rest.tesb.version>
@@ -166,7 +166,7 @@
         <accessors-smart.tesb.version>2.4.9</accessors-smart.tesb.version>
         <kudu.tesb.version>1.17.0</kudu.tesb.version>
         <log4j2.tesb.version>2.20.0</log4j2.tesb.version>
-        <netty.tesb.version>4.1.100.Final</netty.tesb.version>
+        <netty.tesb.version>4.1.101.Final</netty.tesb.version>
         <opensaml-bundle.tesb.version>3.4.6_3</opensaml-bundle.tesb.version>
         <protobuf.tesb.version>3.21.12</protobuf.tesb.version>
         <qpid-jms-client.tesb.version>1.9.0</qpid-jms-client.tesb.version>
