@@ -107,8 +107,8 @@
         <camel-zookeeper-master.tesb.version>3.20.6.20230530</camel-zookeeper-master.tesb.version>
 
         <activemq.tesb.version>5.17.6</activemq.tesb.version>
-        <activemq-osgi.tesb.version>5.17.6.20231031</activemq-osgi.tesb.version>
-        <activemq-pool.tesb.version>5.17.6.20231031</activemq-pool.tesb.version>
+        <activemq-osgi.tesb.version>5.17.6.20231204</activemq-osgi.tesb.version>
+        <activemq-pool.tesb.version>5.17.6.20231204</activemq-pool.tesb.version>
         <ant-bundle.tesb.version>1.10.12_1</ant-bundle.tesb.version>
         <apache-drill.tesb.version>1.21.1</apache-drill.tesb.version>
         <avro.tesb.version>1.11.3</avro.tesb.version>
