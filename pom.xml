@@ -98,7 +98,7 @@
     <properties>
 
         <upstream.version>3.20.6</upstream.version>
-        <camel.features.tesb.version>3.20.6.20231207</camel.features.tesb.version>
+        <camel.features.tesb.version>3.20.6.20240119</camel.features.tesb.version>
         <camel-support.tesb.version>3.20.6.20230530</camel-support.tesb.version>
         <camel-cxf-soap.tesb.version>3.20.6.20230530</camel-cxf-soap.tesb.version>
         <camel-cxf-rest.tesb.version>3.20.6.20230530</camel-cxf-rest.tesb.version>
@@ -172,7 +172,7 @@
         <qpid-jms-client.tesb.version>1.9.0</qpid-jms-client.tesb.version>
         <qpid-proton-j.tesb.version>0.34.1</qpid-proton-j.tesb.version>
         <rabbitmq-amqp-client.tesb.version>5.18.0</rabbitmq-amqp-client.tesb.version>
-        <shiro.tesb.version>1.12.0</shiro.tesb.version>
+        <shiro.tesb.version>1.13.0</shiro.tesb.version>
         <simple-xml-safe.tesb.version>2.7.1</simple-xml-safe.tesb.version>
         <snakeyaml.tesb.version>1.33</snakeyaml.tesb.version>
         <snappy.tesb.version>1.1.10.5</snappy.tesb.version>
