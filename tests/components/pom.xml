@@ -23,20 +23,17 @@
 
     <parent>
         <groupId>org.apache.camel.karaf</groupId>
-        <artifactId>camel-karaf</artifactId>
+        <artifactId>camel-karaf-tests</artifactId>
         <version>4.4.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>camel-karaf-tests</artifactId>
+    <artifactId>camel-karaf-components-test</artifactId>
     <packaging>pom</packaging>
-    <name>Apache Camel :: Karaf :: Tests</name>
+    <name>Apache Camel :: Karaf :: Tests :: Components</name>
 
     <modules>
-        <module>camel-test-scr</module>
-        <module>camel-integration-test</module>
-        <module>components</module>
-        <!-- <module>camel-test-jms</module> -->
+        <module>camel-file</module>
     </modules>
 
 </project>
