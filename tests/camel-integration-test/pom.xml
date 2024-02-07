@@ -32,9 +32,20 @@
     <build>
         <plugins>
             <plugin>
+                <groupId>org.apache.servicemix.tooling</groupId>
+                <artifactId>depends-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>generate-depends-file</id>
+                        <goals>
+                            <goal>generate-depends-file</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
                 <groupId>org.apache.felix</groupId>
                 <artifactId>maven-bundle-plugin</artifactId>
-                <version>${felix.maven-bundle-plugin.version}</version>
                 <inherited>true</inherited>
                 <extensions>true</extensions>
                 <configuration>
@@ -43,7 +54,8 @@
                             org.apache.karaf.camel.itests
                         </Export-Package>
                         <Import-Package>
-                            org.apache.karaf.itests,org.ops4j.pax.exam,org.osgi.framework,org.junit
+                            org.apache.karaf.itests,org.ops4j.pax.exam,org.osgi.framework,org.junit,org.apache.camel.*,
+                            org.osgi.service.*
                         </Import-Package>
                     </instructions>
                     <excludeDependencies>geronimo-atinject_1.0_spec</excludeDependencies>
@@ -79,6 +91,28 @@
             <groupId>org.osgi</groupId>
             <artifactId>osgi.core</artifactId>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>osgi.core</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.service.component</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.camel.karaf</groupId>
+            <artifactId>camel-core-osgi</artifactId>
+            <version>${camel.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-api</artifactId>
+            <version>${camel.version}</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 </project>

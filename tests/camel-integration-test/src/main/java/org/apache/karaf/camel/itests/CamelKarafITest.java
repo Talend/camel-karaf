@@ -66,6 +66,7 @@ public class CamelKarafITest extends KarafTestSupport {
     }
 
     @Configuration
+    @Override
     public Option[] config() {
         Option[] options = new Option[]{
                 KarafDistributionOption.editConfigurationFilePut("etc/system.properties", "project.version", getVersion()),

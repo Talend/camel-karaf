@@ -1,0 +1,44 @@
+package org.apache.karaf.camel.itests;
+
+import java.util.ArrayList;
+
+import org.apache.camel.CamelContext;
+import org.apache.camel.builder.RouteBuilder;
+import org.apache.camel.karaf.core.OsgiClassResolver;
+import org.apache.camel.karaf.core.OsgiDefaultCamelContext;
+import org.apache.camel.model.ModelCamelContext;
+import org.apache.camel.model.RouteDefinition;
+import org.osgi.framework.BundleContext;
+import org.osgi.framework.ServiceRegistration;
+import org.osgi.service.component.ComponentContext;
+import org.osgi.service.component.annotations.Activate;
+import org.osgi.service.component.annotations.Deactivate;
+
+public abstract class AbstractCamelComponent {
+
+    protected ModelCamelContext camelContext;
+    protected ServiceRegistration<CamelContext> serviceRegistration;
+
+
+    @Activate
+    public void activate(ComponentContext componentContext) throws Exception {
+        BundleContext bundleContext = componentContext.getBundleContext();
+        OsgiDefaultCamelContext osgiDefaultCamelContext = new OsgiDefaultCamelContext(bundleContext);
+        osgiDefaultCamelContext.setClassResolver(new OsgiClassResolver(camelContext, bundleContext));
+        osgiDefaultCamelContext.getCamelContextExtension().setName("context-test");
+        camelContext = osgiDefaultCamelContext;
+        serviceRegistration = bundleContext.registerService(CamelContext.class, camelContext, null);
+        camelContext.start();
+        camelContext.addRoutes(createRouteBuilder());
+    }
+
+    @Deactivate
+    public void deactivate() throws Exception {
+        camelContext.stop();
+        camelContext.removeRouteDefinitions(new ArrayList<RouteDefinition>(camelContext.getRouteDefinitions()));
+        serviceRegistration.unregister();
+    }
+
+
+    protected abstract RouteBuilder createRouteBuilder();
+}

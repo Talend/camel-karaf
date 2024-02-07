@@ -18,22 +18,31 @@ package org.apache.karaf.camel.test;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.karaf.camel.itests.AbstractCamelComponent;
 import org.osgi.service.component.annotations.Component;
+
 @Component(
-        name = "karaf-camel-file-test",
+        name = "karaf-camel-seda-test",
         immediate = true
 )
-public class CamelComponent extends AbstractCamelComponent {
-
+public class CamelSedaComponent extends AbstractCamelComponent {
     @Override
     protected RouteBuilder createRouteBuilder() {
         return new RouteBuilder() {
-            @Override
-            public void configure() throws Exception {
-                from("file:/tmp?noop=true&delete=false").log("Received file: ${header.CamelFileName}")
-                        .setBody(constant("OK")) // Set the body of the message to "OK"
-                        .to("file:" + System.getProperty("project.target")
-                                + "?fileName=testResult.txt"); // Write the message to a file;
-            }
+                @Override
+                public void configure() throws Exception {
+
+                    from("timer://starter?repeatCount=1")
+                            .setBody(constant("OK")).to("direct:start");
+                    from("direct:start").autoStartup(true)
+                            .log("calling seda next")
+                            // send it to the seda queue that is async
+                            .to("seda:next")
+                            // return a constant response
+                            .transform(constant("OK"));
+                    from("seda:next").autoStartup(true)
+                            .log("seda next called")
+                            .to("file:"+System.getProperty("project.target")+"?fileName=testResult.txt"); // Write the message to a file
+
+                }
         };
     }
 }

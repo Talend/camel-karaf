@@ -22,8 +22,6 @@ import java.util.concurrent.TimeUnit;
 import org.awaitility.Awaitility;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.ops4j.pax.exam.Configuration;
-import org.ops4j.pax.exam.Option;
 import org.ops4j.pax.exam.junit.PaxExam;
 import org.ops4j.pax.exam.spi.reactors.ExamReactorStrategy;
 import org.ops4j.pax.exam.spi.reactors.PerClass;
@@ -31,21 +29,19 @@ import org.ops4j.pax.exam.spi.reactors.PerClass;
 
 @RunWith(PaxExam.class)
 @ExamReactorStrategy(PerClass.class)
-public class CamelFileITest extends CamelKarafITest {
+public class CamelSedaITest extends CamelKarafITest {
 
 
     @Test
-    public void testFileComponent() throws Exception {
-        installBundle("file://"+ getBaseDir() +"/camel-file-test-"+ getVersion() + ".jar",true);
-        assertBundleInstalled("camel-file-test");
-        assertBundleInstalledAndRunning("camel-file-test");
+    public void testSedaComponent() throws Exception {
+        installBundle("file://"+ getBaseDir() +"/camel-seda-test-"+ getVersion() + ".jar",true);
+        assertBundleInstalled("camel-seda-test");
+        assertBundleInstalledAndRunning("camel-seda-test");
         Path filePath  = Path.of(getBaseDir(),"testResult.txt");
         Awaitility.await().atMost(5, TimeUnit.SECONDS)
                 .until(() -> Files.exists(filePath));
         assertTrue(Files.exists(filePath));
 
     }
-
-
 
 }

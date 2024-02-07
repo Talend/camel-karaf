@@ -132,8 +132,8 @@
         <maven-shade-plugin-version>3.5.1</maven-shade-plugin-version>
         <maven-bundle-plugin-version>5.1.9</maven-bundle-plugin-version>
         <maven-compiler-plugin-version>3.11.0</maven-compiler-plugin-version>
-        <felix.maven-bundle-plugin.version>5.1.9</felix.maven-bundle-plugin.version>
-        <bnd.version.policy>[$(version;==;$(@)),$(version;+;$(@)))</bnd.version.policy>
+        <harmcrest.version>1.3_1</harmcrest.version>
+        <geronimo-atinject.version>1.2</geronimo-atinject.version>
     </properties>
 
     <dependencyManagement>
@@ -183,7 +183,18 @@
                 <artifactId>slf4j-api</artifactId>
                 <version>${slf4j.version}</version>
             </dependency>
-
+            <dependency>
+                <groupId>org.apache.servicemix.bundles</groupId>
+                <artifactId>org.apache.servicemix.bundles.hamcrest</artifactId>
+                <version>${harmcrest.version}</version>
+                <scope>runtime</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.geronimo.specs</groupId>
+                <artifactId>geronimo-atinject_1.0_spec</artifactId>
+                <version>${geronimo-atinject.version}</version>
+                <scope>test</scope>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
