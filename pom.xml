@@ -98,7 +98,7 @@
     <properties>
 
         <upstream.version>3.20.6</upstream.version>
-        <camel.features.tesb.version>3.20.6.20240122</camel.features.tesb.version>
+        <camel.features.tesb.version>3.20.6.20240209</camel.features.tesb.version>
         <camel-support.tesb.version>3.20.6.20230530</camel-support.tesb.version>
         <camel-cassandraql.tesb.version>3.20.6.20240122</camel-cassandraql.tesb.version>
         <camel-cxf-soap.tesb.version>3.20.6.20230530</camel-cxf-soap.tesb.version>
@@ -153,7 +153,8 @@
         <hazelcast.tesb.version>5.3.5</hazelcast.tesb.version>
         <httpclient4.tesb.version>4.5.14</httpclient4.tesb.version>
         <httpcore4.tesb.version>4.4.16</httpcore4.tesb.version>
-        <jackson2.tesb.version>2.14.3</jackson2.tesb.version>
+        <jackson2.tesb.version>2.16.0</jackson2.tesb.version>
+        <jackson2-dataformat-yaml.tesb.version>2.14.3</jackson2-dataformat-yaml.tesb.version>
         <jakarta-el.tesb.version>3.0.4</jakarta-el.tesb.version>
         <jakarta-validation-api.tesb.version>2.0.2</jakarta-validation-api.tesb.version>
         <jaxb-bundle.tesb.version>2.3.2_3</jaxb-bundle.tesb.version>
@@ -670,6 +671,7 @@
                             <ant-bundle.tesb.version>${ant-bundle.tesb.version}</ant-bundle.tesb.version>
                             <avro.tesb.version>${avro.tesb.version}</avro.tesb.version>
                             <jackson2.tesb.version>${jackson2.tesb.version}</jackson2.tesb.version>
+                            <jackson2-dataformat-yaml.tesb.version>${jackson2-dataformat-yaml.tesb.version}</jackson2-dataformat-yaml.tesb.version>
                             <avro-jackson.tesb.version>${avro-jackson.tesb.version}</avro-jackson.tesb.version>
                             <braintree-jackson2.tesb.version>${braintree-jackson2.tesb.version}</braintree-jackson2.tesb.version>
                             <commons-compress.tesb.version>${commons-compress.tesb.version}</commons-compress.tesb.version>
