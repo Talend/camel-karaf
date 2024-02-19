@@ -1445,7 +1445,7 @@
   </feature>
   <feature name='camel-jsonpath' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
-    <bundle>mvn:com.jayway.jsonpath/json-path/${json-path-version}</bundle>
+    <bundle>wrap:mvn:com.jayway.jsonpath/json-path/${json-path.tesb.version}$overwrite=merge&amp;Import-Package=org.slf4j;version="[1.7,3)",*;resolution:=optional</bundle>
     <bundle dependency='true'>mvn:net.minidev/json-smart/${json-smart.tesb.version}</bundle>
     <bundle dependency='true'>mvn:net.minidev/accessors-smart/${accessors-smart.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.ow2.asm/asm/${asm.bundle.version}</bundle>
