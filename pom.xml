@@ -165,8 +165,9 @@
         <jna.tesb.version>5.13.0</jna.tesb.version>
         <johnzon.tesb.version>1.2.21</johnzon.tesb.version>
         <jose4j.tesb.version>0.9.3</jose4j.tesb.version>
-        <json-smart.tesb.version>2.4.10</json-smart.tesb.version>
-        <accessors-smart.tesb.version>2.4.9</accessors-smart.tesb.version>
+        <json-path.tesb.version>2.9.0</json-path.tesb.version>
+        <json-smart.tesb.version>2.5.0</json-smart.tesb.version>
+        <accessors-smart.tesb.version>2.5.0</accessors-smart.tesb.version>
         <kudu.tesb.version>1.17.0</kudu.tesb.version>
         <log4j2.tesb.version>2.20.0</log4j2.tesb.version>
         <netty.tesb.version>4.1.101.Final</netty.tesb.version>
@@ -679,6 +680,7 @@
                             <docker-java-commons-compress.tesb.version>${docker-java-commons-compress.tesb.version}</docker-java-commons-compress.tesb.version>
                             <minio-commons-compress.tesb.version>${minio-commons-compress.tesb.version}</minio-commons-compress.tesb.version>
                             <netty.tesb.version>${netty.tesb.version}</netty.tesb.version>
+                            <json-path.tesb.version>${json-path.tesb.version}</json-path.tesb.version>
                             <json-smart.tesb.version>${json-smart.tesb.version}</json-smart.tesb.version>
                             <accessors-smart.tesb.version>${accessors-smart.tesb.version}</accessors-smart.tesb.version>
                             <jettison.tesb.version>${jettison.tesb.version}</jettison.tesb.version>
