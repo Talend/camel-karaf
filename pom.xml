@@ -124,7 +124,7 @@
         <cassandra-jackson2-databind.tesb.version>2.13.5</cassandra-jackson2-databind.tesb.version>
         <cassandra-metrics.tesb.version>4.1.18</cassandra-metrics.tesb.version>
         <cassandra-shaded-guava.tesb.version>25.1-jre-graal-sub-1</cassandra-shaded-guava.tesb.version>
-        <commons-compress.tesb.version>1.24.0</commons-compress.tesb.version>
+        <commons-compress.tesb.version>1.26.0</commons-compress.tesb.version>
         <avro-java-commons-compress.tesb.version>${commons-compress.tesb.version}</avro-java-commons-compress.tesb.version>
         <docker-java-commons-compress.tesb.version>${commons-compress.tesb.version}</docker-java-commons-compress.tesb.version>
         <minio-commons-compress.tesb.version>${commons-compress.tesb.version}</minio-commons-compress.tesb.version>
