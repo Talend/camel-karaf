@@ -7,8 +7,10 @@
         <groupId>org.apache.camel.karaf</groupId>
         <artifactId>camel-karaf-tests</artifactId>
         <version>4.4.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
+    <name>Apache Camel :: Karaf :: Tests :: Integration</name>
     <artifactId>camel-integration-test</artifactId>
 
     <dependencyManagement>
@@ -105,8 +107,8 @@
         <dependency>
             <groupId>org.apache.camel.karaf</groupId>
             <artifactId>camel-core-osgi</artifactId>
-            <version>${camel.version}</version>
             <scope>provided</scope>
+            <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.camel</groupId>
