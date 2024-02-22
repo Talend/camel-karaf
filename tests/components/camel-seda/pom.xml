@@ -10,6 +10,7 @@
     </parent>
 
     <artifactId>camel-seda-test</artifactId>
+    <name>Apache Camel :: Karaf :: Tests :: Components :: Seda</name>
 
 
 </project>
