@@ -98,8 +98,9 @@
     <properties>
 
         <upstream.version>3.20.6</upstream.version>
-        <camel.features.tesb.version>3.20.6.20240209</camel.features.tesb.version>
-        <camel-support.tesb.version>3.20.6.20230530</camel-support.tesb.version>
+        <camel.features.tesb.version>3.20.6.20240226</camel.features.tesb.version>
+        <camel-base.tesb.version>3.20.6.20240226</camel-base.tesb.version>
+        <camel-support.tesb.version>3.20.6.20240226</camel-support.tesb.version>
         <camel-cassandraql.tesb.version>3.20.6.20240122</camel-cassandraql.tesb.version>
         <camel-cxf-soap.tesb.version>3.20.6.20230530</camel-cxf-soap.tesb.version>
         <camel-cxf-rest.tesb.version>3.20.6.20230530</camel-cxf-rest.tesb.version>
@@ -630,6 +631,7 @@
                             <revision>${revision}</revision>
                             <upstream.version>${upstream.version}</upstream.version>
                             <camel.features.tesb.version>${camel.features.tesb.version}</camel.features.tesb.version>
+                            <camel-base.tesb.version>${camel-base.tesb.version}</camel-base.tesb.version>
                             <camel-support.tesb.version>${camel-support.tesb.version}</camel-support.tesb.version>
                             <camel-cassandraql.tesb.version>${camel-cassandraql.tesb.version}</camel-cassandraql.tesb.version>
                             <camel-cxf-soap.tesb.version>${camel-cxf-soap.tesb.version}</camel-cxf-soap.tesb.version>
