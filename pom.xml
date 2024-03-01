@@ -98,7 +98,7 @@
     <properties>
 
         <upstream.version>3.20.6</upstream.version>
-        <camel.features.tesb.version>3.20.6.20240226</camel.features.tesb.version>
+        <camel.features.tesb.version>3.20.6.20240320</camel.features.tesb.version>
         <camel-base.tesb.version>3.20.6.20240226</camel-base.tesb.version>
         <camel-support.tesb.version>3.20.6.20240226</camel-support.tesb.version>
         <camel-cassandraql.tesb.version>3.20.6.20240122</camel-cassandraql.tesb.version>
@@ -114,6 +114,7 @@
         <activemq-pool.tesb.version>5.17.6.20231031</activemq-pool.tesb.version>
         <ant-bundle.tesb.version>1.10.12_1</ant-bundle.tesb.version>
         <apache-drill.tesb.version>1.21.1</apache-drill.tesb.version>
+        <apache-mime4j.tesb.version>0.8.10</apache-mime4j.tesb.version>
         <avro.tesb.version>1.11.3</avro.tesb.version>
         <avro-jackson.tesb.version>${jackson2.tesb.version}</avro-jackson.tesb.version>
         <bouncycastle.tesb.version>1.76</bouncycastle.tesb.version>
@@ -129,6 +130,7 @@
         <avro-java-commons-compress.tesb.version>${commons-compress.tesb.version}</avro-java-commons-compress.tesb.version>
         <docker-java-commons-compress.tesb.version>${commons-compress.tesb.version}</docker-java-commons-compress.tesb.version>
         <minio-commons-compress.tesb.version>${commons-compress.tesb.version}</minio-commons-compress.tesb.version>
+        <commons-io1.tesb.version>1.4</commons-io1.tesb.version>
         <commons-io.tesb.version>2.14.0</commons-io.tesb.version>
         <commons-net.tesb.version>3.9.0</commons-net.tesb.version>
         <curator.tesb.version>5.5.0</curator.tesb.version>
@@ -165,7 +167,7 @@
         <jgit.tesb.version>6.6.1.202309021850-r</jgit.tesb.version>
         <jna.tesb.version>5.13.0</jna.tesb.version>
         <johnzon.tesb.version>1.2.21</johnzon.tesb.version>
-        <jose4j.tesb.version>0.9.3</jose4j.tesb.version>
+        <jose4j.tesb.version>0.9.4</jose4j.tesb.version>
         <json-path.tesb.version>2.9.0</json-path.tesb.version>
         <json-smart.tesb.version>2.5.0</json-smart.tesb.version>
         <accessors-smart.tesb.version>2.5.0</accessors-smart.tesb.version>
@@ -173,6 +175,7 @@
         <log4j2.tesb.version>2.20.0</log4j2.tesb.version>
         <netty.tesb.version>4.1.101.Final</netty.tesb.version>
         <opensaml-bundle.tesb.version>3.4.6_3</opensaml-bundle.tesb.version>
+        <pgjdbc-driver.tesb.version>42.6.1</pgjdbc-driver.tesb.version>
         <protobuf.tesb.version>3.21.12</protobuf.tesb.version>
         <qpid-jms-client.tesb.version>1.9.0</qpid-jms-client.tesb.version>
         <qpid-proton-j.tesb.version>0.34.1</qpid-proton-j.tesb.version>
@@ -689,6 +692,7 @@
                             <johnzon.tesb.version>${johnzon.tesb.version}</johnzon.tesb.version>
                             <jose4j.tesb.version>${jose4j.tesb.version}</jose4j.tesb.version>
                             <xstream-bundle.tesb.version>${xstream-bundle.tesb.version}</xstream-bundle.tesb.version>
+                            <commons-io1.tesb.version>${commons-io1.tesb.version}</commons-io1.tesb.version>
                             <commons-io.tesb.version>${commons-io.tesb.version}</commons-io.tesb.version>
                             <commons-net.tesb.version>${commons-net.tesb.version}</commons-net.tesb.version>
                             <log4j2.tesb.version>${log4j2.tesb.version}</log4j2.tesb.version>
@@ -717,7 +721,9 @@
                             <snappy.tesb.version>${snappy.tesb.version}</snappy.tesb.version>
                             <sshd.tesb.version>${sshd.tesb.version}</sshd.tesb.version>
                             <apache-drill.tesb.version>${apache-drill.tesb.version}</apache-drill.tesb.version>
+                            <apache-mime4j.tesb.version>${apache-mime4j.tesb.version}</apache-mime4j.tesb.version>
                             <opensaml-bundle.tesb.version>${opensaml-bundle.tesb.version}</opensaml-bundle.tesb.version>
+                            <pgjdbc-driver.tesb.version>${pgjdbc-driver.tesb.version}</pgjdbc-driver.tesb.version>
                             <spring.tesb.version-range>${spring.tesb.version-range}</spring.tesb.version-range>
                             <cmis-woodstox-api.tesb.version-range>${cmis-woodstox-api.tesb.version-range}</cmis-woodstox-api.tesb.version-range>
                             <elasticsearch-log4j.tesb.version-range>${elasticsearch-log4j.tesb.version-range}</elasticsearch-log4j.tesb.version-range>
