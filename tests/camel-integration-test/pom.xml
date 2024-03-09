@@ -45,47 +45,26 @@
                 <groupId>com.github.docker-java</groupId>
                 <artifactId>docker-java</artifactId>
                 <version>3.3.6</version>
-                <scope>compile</scope>
-                <exclusions>
-                    <exclusion>
-                        <groupId>org.slf4j</groupId>
-                        <artifactId>*</artifactId>
-                    </exclusion>
-                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>com.github.docker-java</groupId>
+                <artifactId>docker-java-core</artifactId>
+                <version>3.3.6</version>
             </dependency>
             <dependency>
                 <groupId>com.github.docker-java</groupId>
                 <artifactId>docker-java-transport-zerodep</artifactId>
                 <version>3.3.6</version>
-                <scope>compile</scope>
-                <exclusions>
-                    <exclusion>
-                        <groupId>org.slf4j</groupId>
-                        <artifactId>*</artifactId>
-                    </exclusion>
-                </exclusions>
             </dependency>
             <dependency>
                 <groupId>com.github.docker-java</groupId>
                 <artifactId>docker-java-api</artifactId>
                 <version>3.3.6</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>org.slf4j</groupId>
-                        <artifactId>*</artifactId>
-                    </exclusion>
-                </exclusions>
             </dependency>
             <dependency>
                 <groupId>com.github.docker-java</groupId>
                 <artifactId>docker-java-transport</artifactId>
                 <version>3.3.6</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>org.slf4j</groupId>
-                        <artifactId>*</artifactId>
-                    </exclusion>
-                </exclusions>
             </dependency>
             <dependency>
                 <groupId>org.ops4j.pax.logging</groupId>
@@ -123,29 +102,23 @@
                     <instructions>
                         <Export-Package>
                             org.apache.karaf.camel.itests*,
+                            !org.testcontainers.shaded*,
                             org.testcontainers*,
-                            org.junit*,
                             com.github.dockerjava*,
-                            com.github.docker-java*,
                             org.rnorth.ducttape*,
-                            com.fasterxml.jackson*,
+                          <!--  com.fasterxml.jackson*, -->
 <!--                            org.ops4j.pax.exam,-->
-                            org.ops4j.pax.exam.junit*,
 <!--                            org.ops4j.pax.logging,-->
 <!--                            org.ops4j.pax.logging.pax-logging-api*-->
                         </Export-Package>
                         <Import-Package>
-                            org.apache.karaf.itests,org.ops4j.pax.exam,
-                            org.ops4j.pax.logging,
-                            org.slf4j*,
-                            org.testcontainers*,
-                            com.github.dockerjava*,
-                            com.github.docker-java*,
-                            org.rnorth.ducttape*,
-                            com.fasterxml.jackson*,
-                            org.osgi.framework,org.junit*,org.apache.camel.*,
-                            org.osgi.service.*
+                            org.apache.karaf.itests,org.ops4j.pax.exam,org.osgi.framework,org.junit*,org.apache.camel.*,
+                            org.osgi.service.*,org.slf4j*,javax.net.ssl*,org.w3c.dom*
                         </Import-Package>
+                        <Private-Package>
+                            org.testcontainers.shaded*,
+                            com.fasterxml.jackson*
+                        </Private-Package>
                     </instructions>
                     <excludeDependencies>geronimo-atinject_1.0_spec</excludeDependencies>
                 </configuration>
@@ -246,7 +219,7 @@
             <artifactId>docker-java</artifactId>
             <exclusions>
                 <exclusion>
-                    <groupId>org.slf4j</groupId>
+                    <groupId>*</groupId>
                     <artifactId>*</artifactId>
                 </exclusion>
             </exclusions>
@@ -256,7 +229,7 @@
             <artifactId>docker-java-transport-zerodep</artifactId>
             <exclusions>
                 <exclusion>
-                    <groupId>org.slf4j</groupId>
+                    <groupId>*</groupId>
                     <artifactId>*</artifactId>
                 </exclusion>
             </exclusions>
@@ -266,7 +239,7 @@
             <artifactId>docker-java-api</artifactId>
             <exclusions>
                 <exclusion>
-                    <groupId>org.slf4j</groupId>
+                    <groupId>*</groupId>
                     <artifactId>*</artifactId>
                 </exclusion>
             </exclusions>
@@ -276,7 +249,17 @@
             <artifactId>docker-java-transport</artifactId>
             <exclusions>
                 <exclusion>
-                    <groupId>org.slf4j</groupId>
+                    <groupId>*</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.github.docker-java</groupId>
+            <artifactId>docker-java-core</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>*</groupId>
                     <artifactId>*</artifactId>
                 </exclusion>
             </exclusions>
