@@ -84,7 +84,7 @@ public class CamelKarafITest extends KarafTestSupport {
         //need to check with the command because the status may be Active while it's displayed as Waiting in the console
         //because of an exception for instance
         String bundles = executeCommand("bundle:list -s -t 0 |grep "+name);
-        Assert.assertTrue("bundle"+ bundle.getSymbolicName()+ " is in state " + bundle.getState() + " /" + bundles,
+        Assert.assertTrue("bundle "+ bundle.getSymbolicName()+ " is in state " + bundle.getState() + " /" + bundles,
                 bundles.contains("Active"));
     }
 
