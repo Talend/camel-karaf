@@ -15,6 +15,8 @@
  */
 package org.apache.karaf.camel.test;
 
+import java.io.IOException;
+
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.karaf.camel.itests.AbstractCamelComponent;
 import org.osgi.framework.wiring.BundleWiring;
@@ -34,17 +36,9 @@ public class CamelComponent extends AbstractCamelComponent {
     private static final String FTP_PASSWORD = "password";
     private static final String FTP_DIRECTORY = "/";
 
-    //    public static GenericContainer<?> ftpContainer =
-    //            new GenericContainer<>(DockerImageName.parse("stilliard/pure-ftpd")).withExposedPorts(FTP_PORT)
-    //                    .withEnv("PUBLICHOST", "localhost")
-    //                    .withEnv("FTP_USER_NAME", FTP_USERNAME)
-    //                    .withEnv("FTP_USER_PASS", FTP_PASSWORD)
-    //                    .withEnv("FTP_USER_HOME", FTP_DIRECTORY);
-    //    //    private static FTPClient ftpClient;
     private static final int PORT = 21;
     private static final String USER = "user";
     private static final String PASSWORD = "password";
-    private static final int FTP_TIMEOUT_IN_MILLISECONDS = 1000 * 60;
 
     private static final int PASSIVE_MODE_PORT = 21000;
 
@@ -60,8 +54,19 @@ public class CamelComponent extends AbstractCamelComponent {
                             .withExposedPorts(PORT)
                             .withEnv("USERS", USER + "|" + PASSWORD)
                             .withEnv("MIN_PORT", String.valueOf(PASSIVE_MODE_PORT))
-                            .withEnv("MAX_PORT", String.valueOf(PASSIVE_MODE_PORT));
+                            .withEnv("MAX_PORT", String.valueOf(PASSIVE_MODE_PORT))
+                                .withEnv("PUBLICHOST", "localhost")
+                                .withEnv("FTP_USER_NAME", FTP_USERNAME)
+                                .withEnv("FTP_USER_PASS", FTP_PASSWORD)
+                                .withEnv("FTP_USER_HOME", FTP_DIRECTORY);
             ftpContainer.start();
+            Thread.sleep(5000);
+            System.out.println("creating a file");
+            System.out.println(ftpContainer.execInContainer("/bin/touch", "/home/testFtp.txt"));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
         } finally {
              Thread.currentThread().setContextClassLoader(cl);
         }
@@ -74,15 +79,35 @@ public class CamelComponent extends AbstractCamelComponent {
 
     @Override
     protected RouteBuilder createRouteBuilder() {
+        try {
 
+            System.out.println(ftpContainer.execInContainer("/bin/echo", "'11111'", ">", "testFtp.txt"));
+            System.out.println(ftpContainer.execInContainer("/bin/ls", "/home"));
+            System.out.println(ftpContainer.execInContainer("/bin/pwd"));
+//            Thread.sleep(500);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         return new RouteBuilder() {
             @Override
             public void configure() throws Exception {
-                // TODO - this will be changes to FTP route
-                from("file:/tmp?noop=true&delete=false").log("Received file: ${header.CamelFileName}")
-                        .setBody(constant("OK")) // Set the body of the message to "OK"
-                        .to("file:" + System.getProperty("project.target")
-                                + "?fileName=testResult.txt"); // Write the message to a file;
+
+//                    from("file:" + filePath.toString()
+//                                    + "?fileName=testFtp.txt")
+//                            .log("Sent file: ${header.CamelFileName}")
+//                            .to(route2).
+//                                    from("ftp://localhost:21?fileName=ttcouh.txt&username=user&password=password&throwExceptionOnConnectFailed=true&maximumReconnectAttempts=0&stepwise=false&fastExistsCheck=true&disconnect=true&passiveMode=true&noop=true")
+//                    .to("file:" + System.getProperty("project.target") + "?fileName=ttcouh.txt")
+//                            .log("Downloaded file ${file:name} complete.");
+
+//                from("ftp://localhost:21/?fileName=ttcouh.txt&username=user&password=password&throwExceptionOnConnectFailed=true&maximumReconnectAttempts=0&stepwise=false&fastExistsCheck=true&disconnect=true&passiveMode=true&noop=true")
+//                        .to("file:" + System.getProperty("project.target"))
+//                        .log("Downloaded file ${file:name} complete.");
+
+                from("ftp://user:password@localhost:21/home/?fileName=testFtp.txt&noop=true&passiveMode=true&binary=true")
+                        .to("file:"+System.getProperty("project.target"));
             }
         };
     }

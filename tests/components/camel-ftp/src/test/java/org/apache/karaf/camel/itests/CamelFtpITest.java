@@ -14,128 +14,37 @@
 package org.apache.karaf.camel.itests;
 
 
-import static org.ops4j.pax.exam.CoreOptions.cleanCaches;
-import static org.ops4j.pax.exam.CoreOptions.mavenBundle;
-import static org.ops4j.pax.exam.CoreOptions.wrappedBundle;
+import static org.junit.Assert.assertTrue;
 
-import java.util.stream.Stream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.concurrent.TimeUnit;
 
-import org.junit.ClassRule;
-import org.junit.Rule;
+import org.awaitility.Awaitility;
 import org.junit.Test;
 
 import org.junit.runner.RunWith;
-import org.ops4j.pax.exam.Configuration;
-import org.ops4j.pax.exam.Option;
-import org.ops4j.pax.exam.ProbeBuilder;
-import org.ops4j.pax.exam.TestProbeBuilder;
 import org.ops4j.pax.exam.junit.PaxExam;
-import org.ops4j.pax.exam.junit.PaxExamServer;
 import org.ops4j.pax.exam.spi.reactors.ExamReactorStrategy;
 import org.ops4j.pax.exam.spi.reactors.PerClass;
-import org.osgi.framework.Constants;
-import org.testcontainers.containers.FixedHostPortGenericContainer;
-import org.testcontainers.containers.GenericContainer;
-import org.testcontainers.utility.DockerImageName;
 
 @RunWith(PaxExam.class)
-//@ExamReactorStrategy(PerClass.class)
+@ExamReactorStrategy(PerClass.class)
 public class CamelFtpITest extends CamelKarafITest {
-    //@Rule
-    //public  PaxExamServer exam = new PaxExamServer(CamelKarafITest.class);
-
-
-    //@Rule
-   /* public final FixedHostPortGenericContainer ftpContainer = new FixedHostPortGenericContainer<>(
-            "delfer/alpine-ftp-server:latest")
-            .withFixedExposedPort(PASSIVE_MODE_PORT, PASSIVE_MODE_PORT)
-            .withExposedPorts(PORT)
-            .withEnv("USERS", USER + "|" + PASSWORD)
-            .withEnv("MIN_PORT", String.valueOf(PASSIVE_MODE_PORT))
-            .withEnv("MAX_PORT", String.valueOf(PASSIVE_MODE_PORT));*/
-
-    //    @After
-    //    public void tearDownFtpServer() {
-    //        //        if (ftpClient != null && ftpClient.isConnected()) {
-    //        //            try {
-    //        //                ftpClient.logout();
-    //        //                ftpClient.disconnect();
-    //        //            } catch (Exception e) {
-    //        //                e.printStackTrace();
-    //        //            }
-    //        //        }
-    //        if (ftpContainer != null) {
-    //            ftpContainer.stop();
-    //        }
-    //    }
-
-//        @Configuration
-//        public Option[] config() {
-//            Option[] testcontainers =
-//                    {cleanCaches()
-//    //                        mavenBundle().groupId("org.testcontainers").artifactId("testcontainers").versionAsInProject().start()
-////                            wrappedBundle(mavenBundle("org.testcontainers", "testcontainers").version("1.16.3").noStart())
-//                    };
-//
-//            return Stream.of(super.config(), testcontainers).flatMap(Stream::of).toArray(Option[]::new);
-//            }
-
-//        @ProbeBuilder
-//        public TestProbeBuilder probeConfiguration(TestProbeBuilder probe) {
-//            super.probeConfiguration(probe);
-//            //make sure the needed imports are there.
-//            probe.setHeader(Constants.IMPORT_PACKAGE, "org.testcontainers.containers");
-//            return probe;
-//        }
-
-    //    @Before
-    //    public void setUp() throws Exception {
-    //        ftpContainer = new GenericContainer<>(DockerImageName.parse("stilliard/pure-ftpd"))
-    //                .withExposedPorts(FTP_PORT)
-    //                .withEnv("PUBLICHOST", "localhost")
-    //                .withEnv("FTP_USER_NAME", FTP_USERNAME)
-    //                .withEnv("FTP_USER_PASS", FTP_PASSWORD)
-    //                .withEnv("FTP_USER_HOME", FTP_DIRECTORY);
-    //        ftpContainer.start();
-    //
-    //        int mappedPort = ftpContainer.getMappedPort(FTP_PORT);
-    //    }
-
-    //    @After
-    //    public void tearDown() throws Exception {
-    //        ftpContainer = new GenericContainer<>(DockerImageName.parse("stilliard/pure-ftpd"))
-    //                .withExposedPorts(FTP_PORT)
-    //                .withEnv("PUBLICHOST", "localhost")
-    //                .withEnv("FTP_USER_NAME", FTP_USERNAME)
-    //                .withEnv("FTP_USER_PASS", FTP_PASSWORD)
-    //                .withEnv("FTP_USER_HOME", FTP_DIRECTORY);
-    //        ftpContainer.start();
-    //        if (ftpContainer != null) {
-    //            ftpContainer.stop();
-    //        }
-    //    }
-
 
     @Test
     public void testFtpComponent() throws Exception {
 
-        //ftpContainer.start();
-       // exam.apply()
-
         System.out.println("HELLLLLO!!!!");
-        //Thread.sleep(30000);
 
+        installAndAssertFeature("camel-ftp");
         installBundle("file://"+ getBaseDir() +"/camel-ftp-test-"+ getVersion() + ".jar",true);
         assertBundleInstalled("camel-ftp-test");
         assertBundleInstalledAndRunning("camel-ftp-test");
 
-       // System.out.println("FTP is created "+ftpContainer.isCreated());
-        //        Path filePath  = Path.of(getBaseDir(),"testResult.txt");
-        //        Awaitility.await().atMost(5, TimeUnit.SECONDS)
-        //                .until(() -> Files.exists(filePath));
-        //        assertTrue(Files.exists(filePath));
-        //        mavenBundle().groupId("org.testcontainers").artifactId("testcontainers").version("1.16.3").start();
-        //        installBundle(wrappedBundle(mavenBundle("org.testcontainers", "testcontainers").version("1.16.3")).getURL(), true);
-        //ftpContainer.stop();
+        Path filePath  = Path.of(getBaseDir(),"testFtp.txt");
+        Awaitility.await().atMost(15, TimeUnit.SECONDS)
+                .until(() -> Files.exists(filePath));
+        assertTrue(Files.exists(filePath));
     }
 }
