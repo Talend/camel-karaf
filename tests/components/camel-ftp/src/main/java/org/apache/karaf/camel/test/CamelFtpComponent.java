@@ -28,19 +28,18 @@ import org.testcontainers.containers.FixedHostPortGenericContainer;
         name = "karaf-camel-ftp-test",
         immediate = true
 )
-public class CamelComponent extends AbstractCamelComponent {
+public class CamelFtpComponent extends AbstractCamelComponent {
     private FixedHostPortGenericContainer ftpContainer;
 
-    private static final int FTP_PORT = 21;
     private static final String FTP_USERNAME = "user";
     private static final String FTP_PASSWORD = "password";
-    private static final String FTP_DIRECTORY = "/";
+    private static final String FTP_DIRECTORY = "/home/user/dir";
 
     private static final int PORT = 21;
     private static final String USER = "user";
     private static final String PASSWORD = "password";
 
-    private static final int PASSIVE_MODE_PORT = 21000;
+    private static final int PASSIVE_MODE_PORT = 21100;
 
 
     @Override
@@ -49,12 +48,14 @@ public class CamelComponent extends AbstractCamelComponent {
         try {
             Thread.currentThread().setContextClassLoader(context.getBundleContext().getBundle().adapt(BundleWiring.class).getClassLoader());
             ftpContainer =
-                    new FixedHostPortGenericContainer<>("delfer/alpine-ftp-server:latest").withFixedExposedPort(PASSIVE_MODE_PORT,
-                                    PASSIVE_MODE_PORT)
-                            .withExposedPorts(PORT)
-                            .withEnv("USERS", USER + "|" + PASSWORD)
+                    new FixedHostPortGenericContainer<>("delfer/alpine-ftp-server:latest")
+                            .withFixedExposedPort(PORT,PORT)
+                            .withFixedExposedPort(PASSIVE_MODE_PORT,PASSIVE_MODE_PORT)
+                            .withFixedExposedPort(PASSIVE_MODE_PORT+1,PASSIVE_MODE_PORT+1)
+                            .withFixedExposedPort(PASSIVE_MODE_PORT+2,PASSIVE_MODE_PORT+2)
+                            .withEnv("USERS", USER + "|" + PASSWORD+"|"+FTP_DIRECTORY)
                             .withEnv("MIN_PORT", String.valueOf(PASSIVE_MODE_PORT))
-                            .withEnv("MAX_PORT", String.valueOf(PASSIVE_MODE_PORT))
+                            .withEnv("MAX_PORT", String.valueOf(PASSIVE_MODE_PORT+2))
                                 .withEnv("PUBLICHOST", "localhost")
                                 .withEnv("FTP_USER_NAME", FTP_USERNAME)
                                 .withEnv("FTP_USER_PASS", FTP_PASSWORD)
@@ -62,12 +63,16 @@ public class CamelComponent extends AbstractCamelComponent {
             ftpContainer.start();
             Thread.sleep(5000);
             System.out.println("creating a file");
-            System.out.println(ftpContainer.execInContainer("/bin/touch", "/home/testFtp.txt"));
+            System.out.println(ftpContainer.execInContainer("/bin/touch", "/home/user/dir/testFtp.txt"));
         } catch (IOException e) {
             throw new RuntimeException(e);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
-        } finally {
+        } catch ( Exception e) {
+            System.out.println(e.getMessage());
+            throw e;
+        }
+        finally {
              Thread.currentThread().setContextClassLoader(cl);
         }
     }
@@ -106,7 +111,14 @@ public class CamelComponent extends AbstractCamelComponent {
 //                        .to("file:" + System.getProperty("project.target"))
 //                        .log("Downloaded file ${file:name} complete.");
 
-                from("ftp://user:password@localhost:21/home/?fileName=testFtp.txt&noop=true&passiveMode=true&binary=true")
+                /*from("ftp://user@localhost?password=password&fileName=/home/testFtp.txt&noop=true&passiveMode=true&binary=true")
+                        .log("connected to FTP")
+                        .to("file://"+System.getProperty("project.target"));*/
+
+                from("ftp://localhost/?username=user&password=password&binary=true&passiveMode=true&delay=1000")
+                        .log("ftp connected")
+//                        .pollEnrich("ftp://localhost/home/testFtp.txt")
+                        //.log("ftp download")
                         .to("file:"+System.getProperty("project.target"));
             }
         };
