@@ -107,7 +107,7 @@
         <camel.osgi.saaj.version>[2,4)</camel.osgi.saaj.version>
         <camel.opensaml.osgi.version>[4.2,5)</camel.opensaml.osgi.version>
         <camel.ehcache.osgi.version>[3,4)</camel.ehcache.osgi.version>
-        <camel.jetty.osgi.version>[11,12)</camel.jetty.osgi.version>
+        <camel.jetty.osgi.version>[12,13)</camel.jetty.osgi.version>
         <camel.osgi.netty.version>[4.1,5)</camel.osgi.netty.version>
         <camel.undertow.xnio.osgi.version>[3.8,4)</camel.undertow.xnio.osgi.version>
         <camel.undertow.osgi.version>[2.2,3)</camel.undertow.osgi.version>
@@ -136,6 +136,8 @@
         <harmcrest.version>1.3_1</harmcrest.version>
         <geronimo-atinject.version>1.2</geronimo-atinject.version>
         <mongo-java-driver-version>4.11.1</mongo-java-driver-version>
+        <jetty-version>12.0.6</jetty-version>
+        <jakarta-servlet-api-version>6.0.0</jakarta-servlet-api-version>
     </properties>
 
     <dependencyManagement>

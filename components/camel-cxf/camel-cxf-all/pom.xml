@@ -95,6 +95,9 @@
             jakarta.ws.rs*;version="${camel.osgi.jakarta.ws.rs.version}",
             jakarta.xml.soap*;version="${camel.osgi.saaj.version}",
             jakarta.servlet*;version="${camel.osgi.jakarta.servlet.version}",
+            <!-- workaround while cxf does noes not have the same version of jetty as camel, package server.session has been moved-->
+            !org.eclipse.jetty.server.session*,
+            org.eclipse.jetty.session*;version="${camel.jetty.osgi.version}",
             org.eclipse.jetty*;version="${camel.jetty.osgi.version}",
             org.glassfish.jaxb.runtime.v2;version="${camel.osgi.jakarta.bind.version}",
             javax.cache*;resolution:=optional,
@@ -277,6 +280,26 @@
                     <groupId>org.apache.cxf</groupId>
                     <artifactId>*</artifactId>
                 </exclusion>
+                <exclusion>
+                    <artifactId>jetty-http</artifactId>
+                    <groupId>org.eclipse.jetty</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>jetty-io</artifactId>
+                    <groupId>org.eclipse.jetty</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>jetty-security</artifactId>
+                    <groupId>org.eclipse.jetty</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>jetty-server</artifactId>
+                    <groupId>org.eclipse.jetty</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>jetty-util</artifactId>
+                    <groupId>org.eclipse.jetty</groupId>
+                </exclusion>
             </exclusions>
         </dependency>
         <dependency>
@@ -376,6 +399,33 @@
             <groupId>jakarta.xml.ws</groupId>
             <artifactId>jakarta.xml.ws-api</artifactId>
             <scope>provided</scope>
+        </dependency>
+        <!-- add jetty dependency excluded from cxf-rt-transports-http-jetty to set the right version -->
+        <dependency>
+            <artifactId>jetty-http</artifactId>
+            <groupId>org.eclipse.jetty</groupId>
+            <version>${jetty-version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <artifactId>jetty-io</artifactId>
+            <groupId>org.eclipse.jetty</groupId>
+            <version>${jetty-version}</version>
+        </dependency>
+        <dependency>
+            <artifactId>jetty-security</artifactId>
+            <groupId>org.eclipse.jetty</groupId>
+            <version>${jetty-version}</version>
+        </dependency>
+        <dependency>
+            <artifactId>jetty-server</artifactId>
+            <groupId>org.eclipse.jetty</groupId>
+            <version>${jetty-version}</version>
+        </dependency>
+        <dependency>
+            <artifactId>jetty-util</artifactId>
+            <groupId>org.eclipse.jetty</groupId>
+            <version>${jetty-version}</version>
         </dependency>
     </dependencies>
 

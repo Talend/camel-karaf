@@ -84,17 +84,19 @@
         <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-cbor/2.16.1</bundle>
     </feature>
 
-    <feature name="jetty" version="11.0.18">
-        <bundle dependency="true">mvn:org.eclipse.jetty/jetty-alpn-server/11.0.18</bundle>
-        <bundle dependency="true">mvn:org.eclipse.jetty/jetty-http/11.0.18</bundle>
-        <bundle dependency="true">mvn:org.eclipse.jetty/jetty-io/11.0.18</bundle>
-        <bundle dependency="true">mvn:org.eclipse.jetty/jetty-server/11.0.18</bundle>
-        <bundle dependency="true">mvn:org.eclipse.jetty/jetty-util/11.0.18</bundle>
-        <bundle dependency="true">mvn:org.eclipse.jetty/jetty-security/11.0.18</bundle>
-        <bundle dependency="true">mvn:org.eclipse.jetty.http2/http2-hpack/11.0.18</bundle>
-        <bundle dependency="true">mvn:org.eclipse.jetty.http2/http2-common/11.0.18</bundle>
-        <bundle dependency="true">mvn:org.eclipse.jetty.http2/http2-server/11.0.18</bundle>
-        <bundle dependency="true">mvn:jakarta.servlet/jakarta.servlet-api/5.0.0</bundle>
+    <feature name="jetty" version="${jetty-version}">
+        <bundle dependency="true">mvn:org.eclipse.jetty/jetty-alpn-server/${jetty-version}</bundle>
+        <bundle dependency="true">mvn:org.eclipse.jetty/jetty-http/${jetty-version}</bundle>
+        <bundle dependency="true">mvn:org.eclipse.jetty/jetty-io/${jetty-version}</bundle>
+        <bundle dependency="true">mvn:org.eclipse.jetty/jetty-server/${jetty-version}</bundle>
+        <bundle dependency="true">mvn:org.eclipse.jetty/jetty-session/${jetty-version}</bundle>
+        <bundle dependency="true">mvn:org.eclipse.jetty/jetty-jmx/${jetty-version}</bundle>
+        <bundle dependency="true">mvn:org.eclipse.jetty/jetty-util/${jetty-version}</bundle>
+        <bundle dependency="true">mvn:org.eclipse.jetty/jetty-security/${jetty-version}</bundle>
+        <bundle dependency="true">mvn:org.eclipse.jetty.http2/jetty-http2-hpack/${jetty-version}</bundle>
+        <bundle dependency="true">mvn:org.eclipse.jetty.http2/jetty-http2-common/${jetty-version}</bundle>
+        <bundle dependency="true">mvn:org.eclipse.jetty.http2/jetty-http2-server/${jetty-version}</bundle>
+        <bundle dependency="true">mvn:jakarta.servlet/jakarta.servlet-api/${jakarta-servlet-api-version}</bundle>
     </feature>
 
     <feature name="http-client" version="4.5.14">
@@ -1221,15 +1223,17 @@
 <!--        <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.atlassian-jira-client/${atlassian-jira-client-bundle-version}</bundle>-->
 <!--        <bundle>mvn:org.apache.camel/camel-jira/${project.version}</bundle>-->
 <!--    </feature>-->
-<!--    <feature name='camel-jetty' version='${project.version}' start-level='50'>-->
-<!--        <feature>jetty</feature>-->
-<!--        <feature version='${project.version}'>camel-core</feature>-->
-<!--        <bundle>mvn:org.apache.camel/camel-attachments/${project.version}</bundle>-->
-<!--        <bundle>mvn:org.apache.camel/camel-http-base/${project.version}</bundle>-->
-<!--        <bundle>mvn:org.apache.camel/camel-http-common/${project.version}</bundle>-->
-<!--        <bundle>mvn:org.apache.camel/camel-jetty-common/${project.version}</bundle>-->
-<!--        <bundle>mvn:org.apache.camel/camel-jetty/${project.version}</bundle>-->
-<!--    </feature>-->
+    <feature name='camel-jetty' version='${project.version}' start-level='50'>
+        <feature>jetty</feature>
+        <feature version='${project.version}'>camel-core</feature>
+        <bundle dependency="true">mvn:org.eclipse.jetty.ee10/jetty-ee10-servlet/${jetty-version}</bundle>
+        <bundle dependency="true">mvn:org.eclipse.jetty.ee10/jetty-ee10-servlets/${jetty-version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-attachments/${project.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-http-base/${project.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-http-common/${project.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-jetty-common/${project.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-jetty/${project.version}</bundle>
+    </feature>
     <feature name="camel-jms" version="${project.version}" start-level="50">
         <feature>camel-core</feature>
         <feature>spring-jms</feature>
