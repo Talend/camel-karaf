@@ -26,7 +26,7 @@ public class CamelFtpSimpleTest {
     @BeforeClass
     public static void setupFtpServer() {
         ftpContainer = new GenericContainer<>(DockerImageName.parse("stilliard/pure-ftpd"))
-                .withExposedPorts(FTP_PORT)
+//                .withExposedPorts(FTP_PORT)
                 .withEnv("PUBLICHOST", "localhost")
                 .withEnv("FTP_USER_NAME", FTP_USERNAME)
                 .withEnv("FTP_USER_PASS", FTP_PASSWORD)

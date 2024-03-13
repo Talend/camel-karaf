@@ -9,12 +9,23 @@
             <artifactId>commons-net</artifactId>
             <version>3.10.0</version>
             <scope>test</scope>
+
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>org.apache.camel</groupId>-->
-<!--            <artifactId>camel-ftp</artifactId>-->
-<!--            <version>${camel.version}</version>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-core</artifactId>
+            <version>${camel.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-core-languages</artifactId>
+            <version>${camel.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-ftp</artifactId>
+            <version>${camel.version}</version>
+        </dependency>
     </dependencies>
     <parent>
         <groupId>org.apache.camel.karaf</groupId>

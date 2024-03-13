@@ -2,6 +2,9 @@ package org.apache.karaf.camel.itests;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 
+import org.apache.camel.CamelContext;
+import org.apache.camel.builder.RouteBuilder;
+import org.apache.camel.impl.DefaultCamelContext;
 import org.apache.commons.net.PrintCommandListener;
 import org.apache.commons.net.ftp.FTP;
 import org.apache.commons.net.ftp.FTPClient;
@@ -35,9 +38,8 @@ public class FtpUtilsTest {
 
     private static final int PASSIVE_MODE_PORT = 21000;
 
-    private static final FixedHostPortGenericContainer ftp = new FixedHostPortGenericContainer<>(
+    private static final GenericContainer ftp = new GenericContainer<>(
             "delfer/alpine-ftp-server:latest")
-            .withFixedExposedPort(PASSIVE_MODE_PORT, PASSIVE_MODE_PORT)
             .withExposedPorts(PORT)
             .withEnv("USERS", USER + "|" + PASSWORD)
             .withEnv("MIN_PORT", String.valueOf(PASSIVE_MODE_PORT))
@@ -56,7 +58,7 @@ public class FtpUtilsTest {
     }
 
     @Test
-    public void test() throws IOException {
+    public void test() throws Exception {
         FTPClient ftpClient = new FTPClient();
         ftpClient.setDataTimeout(FTP_TIMEOUT_IN_MILLISECONDS);
         ftpClient.setConnectTimeout(FTP_TIMEOUT_IN_MILLISECONDS);
@@ -94,5 +96,28 @@ public class FtpUtilsTest {
             assertThat("FTP is connected", ftpClient.isConnected());
             ftpClient.storeFile(remoteFile, targetStream);
         }
+        System.out.println(ftp.execInContainer("/bin/touch", "/testFtp.txt"));
+
+        // Create Camel context
+        CamelContext context = new DefaultCamelContext();
+
+        // Define routes
+        context.addRoutes(new RouteBuilder() {
+            @Override
+            public void configure() throws Exception {
+                from("ftp://user:password@localhost:21/?fileName=fileonftp"
+                        + "&passiveMode=true&binary=true")
+                        .to("file:~/");
+            }
+        });
+
+        // Start Camel context
+        context.start();
+
+        // Allow the application to run for a while before shutting down
+        Thread.sleep(5000);
+
+        // Stop Camel context
+        context.stop();
     }
 }
