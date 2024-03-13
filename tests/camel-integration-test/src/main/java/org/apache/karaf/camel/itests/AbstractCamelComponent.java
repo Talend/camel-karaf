@@ -36,6 +36,7 @@ public abstract class AbstractCamelComponent {
 
     @Activate
     public void activate(ComponentContext componentContext) throws Exception {
+        setupResources(componentContext);
         BundleContext bundleContext = componentContext.getBundleContext();
         OsgiDefaultCamelContext osgiDefaultCamelContext = new OsgiDefaultCamelContext(bundleContext);
         OsgiClassResolver resolver =  new OsgiClassResolver(camelContext, bundleContext);
@@ -54,8 +55,17 @@ public abstract class AbstractCamelComponent {
         camelContext.stop();
         camelContext.removeRouteDefinitions(new ArrayList<RouteDefinition>(camelContext.getRouteDefinitions()));
         serviceRegistration.unregister();
+        tearDownResources();
     }
 
 
     protected abstract RouteBuilder createRouteBuilder();
+
+    protected void setupResources(ComponentContext context) {
+        return;
+    }
+
+    protected void tearDownResources() {
+        return;
+    }
 }

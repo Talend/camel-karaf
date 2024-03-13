@@ -147,6 +147,12 @@
             <artifactId>org.apache.servicemix.bundles.hamcrest</artifactId>
             <scope>runtime</scope>
         </dependency>
+        <dependency>
+            <groupId>org.testcontainers</groupId>
+            <artifactId>testcontainers</artifactId>
+            <version>1.19.7</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -175,7 +181,8 @@
                             org.apache.karaf.camel.test
                         </Export-Package>
                         <Import-Package>
-                            *
+                            *,
+                            org.testcontainers.dockerclient
                         </Import-Package>
                     </instructions>
                 </configuration>
