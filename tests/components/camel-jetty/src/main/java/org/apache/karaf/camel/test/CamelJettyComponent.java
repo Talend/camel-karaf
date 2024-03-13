@@ -31,7 +31,7 @@ public class CamelJettyComponent extends AbstractCamelComponent {
                 public void configure() throws Exception {
                     from("jetty://http://localhost:30001/test").transform(constant("OK"))
                             .to("direct:start");
-                    from("direct:start").autoStartup(true)
+                    from("direct:start")
                             .log("create result file")
                             .to("file:"+System.getProperty("project.target")+"?fileName=testResult.txt"); // Write the message to a file
                 }
