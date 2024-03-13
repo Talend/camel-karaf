@@ -134,6 +134,8 @@
         <maven-compiler-plugin-version>3.11.0</maven-compiler-plugin-version>
         <harmcrest.version>1.3_1</harmcrest.version>
         <geronimo-atinject.version>1.2</geronimo-atinject.version>
+
+        <jackson-version>2.16.2</jackson-version>
     </properties>
 
     <dependencyManagement>

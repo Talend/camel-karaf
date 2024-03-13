@@ -13,7 +13,6 @@
  */
 package org.apache.karaf.camel.itests;
 
-
 import static org.junit.Assert.assertTrue;
 
 import java.nio.file.Files;
@@ -22,7 +21,6 @@ import java.util.concurrent.TimeUnit;
 
 import org.awaitility.Awaitility;
 import org.junit.Test;
-
 import org.junit.runner.RunWith;
 import org.ops4j.pax.exam.junit.PaxExam;
 import org.ops4j.pax.exam.spi.reactors.ExamReactorStrategy;
@@ -35,16 +33,13 @@ public class CamelFtpITest extends CamelKarafITest {
     @Test
     public void testFtpComponent() throws Exception {
 
-        System.out.println("HELLLLLO!!!!");
-
         installAndAssertFeature("camel-ftp");
-        installBundle("file://"+ getBaseDir() +"/camel-ftp-test-"+ getVersion() + ".jar",true);
+        installBundle("file://" + getBaseDir() + "/camel-ftp-test-" + getVersion() + ".jar", true);
         assertBundleInstalled("camel-ftp-test");
         assertBundleInstalledAndRunning("camel-ftp-test");
 
-        Path filePath  = Path.of(getBaseDir(),"testFtp.txt");
-        Awaitility.await().atMost(15, TimeUnit.SECONDS)
-                .until(() -> Files.exists(filePath));
+        Path filePath = Path.of(getBaseDir(), "testFtp.txt");
+        Awaitility.await().atMost(5, TimeUnit.SECONDS).until(() -> Files.exists(filePath));
         assertTrue(Files.exists(filePath));
     }
 }

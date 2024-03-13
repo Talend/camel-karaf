@@ -40,41 +40,10 @@
                     </exclusion>
                 </exclusions>
             </dependency>
-            <!-- https://mvnrepository.com/artifact/com.github.docker-java/docker-java -->
-            <dependency>
-                <groupId>com.github.docker-java</groupId>
-                <artifactId>docker-java</artifactId>
-                <version>3.3.6</version>
-            </dependency>
-            <dependency>
-                <groupId>com.github.docker-java</groupId>
-                <artifactId>docker-java-core</artifactId>
-                <version>3.3.6</version>
-            </dependency>
-            <dependency>
-                <groupId>com.github.docker-java</groupId>
-                <artifactId>docker-java-transport-zerodep</artifactId>
-                <version>3.3.6</version>
-            </dependency>
-            <dependency>
-                <groupId>com.github.docker-java</groupId>
-                <artifactId>docker-java-api</artifactId>
-                <version>3.3.6</version>
-            </dependency>
-            <dependency>
-                <groupId>com.github.docker-java</groupId>
-                <artifactId>docker-java-transport</artifactId>
-                <version>3.3.6</version>
-            </dependency>
-            <dependency>
-                <groupId>org.ops4j.pax.logging</groupId>
-                <artifactId>pax-logging-log4j2</artifactId>
-                <version>2.2.3</version>
-            </dependency>
             <dependency>
                 <groupId>com.fasterxml.jackson.core</groupId>
                 <artifactId>jackson-annotations</artifactId>
-                <version>2.10.3</version>
+                <version>2.16.2</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -105,15 +74,19 @@
                             !org.testcontainers.shaded*,
                             org.testcontainers*,
                             com.github.dockerjava*,
-                            org.rnorth.ducttape*,
-                          <!--  com.fasterxml.jackson*, -->
-<!--                            org.ops4j.pax.exam,-->
-<!--                            org.ops4j.pax.logging,-->
-<!--                            org.ops4j.pax.logging.pax-logging-api*-->
+                            org.rnorth.ducttape*
                         </Export-Package>
                         <Import-Package>
-                            org.apache.karaf.itests,org.ops4j.pax.exam,org.osgi.framework,org.junit*,org.apache.camel.*,
-                            org.osgi.service.*,org.slf4j*,javax.net,javax.net.ssl*,org.w3c.dom*
+                            org.apache.karaf.itests,
+                            org.ops4j.pax.exam,
+                            org.osgi.framework,
+                            org.osgi.service.*,
+                            org.junit*,
+                            org.apache.camel.*,
+                            org.slf4j*,
+                            javax.net,
+                            javax.net.ssl*,
+                            org.w3c.dom*
                         </Import-Package>
                         <Private-Package>
                             org.testcontainers.shaded*,
@@ -206,60 +179,6 @@
             <exclusions>
                 <exclusion>
                     <groupId>org.slf4j</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-<!--        <dependency>-->
-<!--            <groupId>junit</groupId>-->
-<!--            <artifactId>junit</artifactId>-->
-<!--        </dependency>-->
-        <dependency>
-            <groupId>com.github.docker-java</groupId>
-            <artifactId>docker-java</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>com.github.docker-java</groupId>
-            <artifactId>docker-java-transport-zerodep</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>com.github.docker-java</groupId>
-            <artifactId>docker-java-api</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>com.github.docker-java</groupId>
-            <artifactId>docker-java-transport</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>com.github.docker-java</groupId>
-            <artifactId>docker-java-core</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
                     <artifactId>*</artifactId>
                 </exclusion>
             </exclusions>
