@@ -46,6 +46,17 @@
                 <version>${karaf.version}</version>
                 <scope>compile</scope>
             </dependency>
+            <dependency>
+                <groupId>org.testcontainers</groupId>
+                <artifactId>testcontainers</artifactId>
+                <version>${testcontainers-version}</version>
+                <scope>compile</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-annotations</artifactId>
+                <version>${jackson-version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -71,13 +82,25 @@
                 <configuration>
                     <instructions>
                         <Export-Package>
-                            org.apache.karaf.camel.itests;version=${camel.version}
+                            org.apache.karaf.camel.itests;version=${camel.version},
+                            !org.testcontainers.shaded*,
+                            org.testcontainers*,
+                            com.github.dockerjava*,
+                            org.rnorth.ducttape*
                         </Export-Package>
                         <Import-Package>
                             org.apache.karaf.itests,org.ops4j.pax.exam,org.osgi.framework,org.junit,
                             org.apache.camel*;${camel.osgi.import.camel.version},
-                            org.osgi.service.*
+                            org.osgi.service.*,
+                            org.slf4j*,
+                            javax.net,
+                            javax.net.ssl*,
+                            org.w3c.dom*
                         </Import-Package>
+                        <Private-Package>
+                            org.testcontainers.shaded*,
+                            com.fasterxml.jackson*
+                        </Private-Package>
                     </instructions>
                     <excludeDependencies>geronimo-atinject_1.0_spec</excludeDependencies>
                 </configuration>
@@ -158,6 +181,14 @@
             <artifactId>camel-base-engine</artifactId>
             <version>${project.version}</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.testcontainers</groupId>
+            <artifactId>testcontainers</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
         </dependency>
     </dependencies>
 </project>

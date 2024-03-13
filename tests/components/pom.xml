@@ -35,6 +35,7 @@
     <modules>
         <module>camel-file</module>
         <module>camel-seda</module>
+        <module>camel-ftp</module>
     </modules>
 
     <dependencyManagement>
@@ -146,6 +147,12 @@
             <artifactId>org.apache.servicemix.bundles.hamcrest</artifactId>
             <scope>runtime</scope>
         </dependency>
+        <dependency>
+            <groupId>org.testcontainers</groupId>
+            <artifactId>testcontainers</artifactId>
+            <version>${testcontainers-version}</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -175,6 +182,7 @@
                         </Export-Package>
                         <Import-Package>
                             org.apache.camel*;${camel.osgi.import.camel.version},
+                            org.testcontainers.dockerclient,
                             *
                         </Import-Package>
                     </instructions>

@@ -566,6 +566,8 @@
         <mongo-java-driver-version>4.11.1</mongo-java-driver-version>
         <velocity-version>2.3</velocity-version>
         <bouncycastle-version>1.77</bouncycastle-version>
+        <jackson-version>2.16.2</jackson-version>
+        <testcontainers-version>1.19.7</testcontainers-version>
     </properties>
     <dependencyManagement>
         <dependencies>

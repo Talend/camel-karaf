@@ -73,6 +73,7 @@ public class CamelKarafITest extends KarafTestSupport {
                 KarafDistributionOption.editConfigurationFileExtend("etc/system.properties", "project.target", getBaseDir()),
                 KarafDistributionOption.features("mvn:org.apache.camel.karaf/apache-camel/"+ getVersion() + "/xml/features", "scr","camel-core"),
                 CoreOptions.mavenBundle().groupId("org.apache.camel.karaf").artifactId("camel-integration-test").versionAsInProject(),
+                KarafDistributionOption.debugConfiguration("5005",false),
         };
         return Stream.of(super.config(), options).flatMap(Stream::of).toArray(Option[]::new);
     }
