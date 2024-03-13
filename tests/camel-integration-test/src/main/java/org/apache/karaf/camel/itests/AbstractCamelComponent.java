@@ -39,6 +39,7 @@ public abstract class AbstractCamelComponent {
 
     @Activate
     public void activate(ComponentContext componentContext) throws Exception {
+        setupResources(componentContext);
         BundleContext bundleContext = componentContext.getBundleContext();
         camelContext = new OsgiDefaultCamelContext(bundleContext);
         serviceRegistration = bundleContext.registerService(CamelContext.class, camelContext, null);
@@ -50,6 +51,7 @@ public abstract class AbstractCamelComponent {
     public void deactivate() {
         camelContext.stop();
         serviceRegistration.unregister();
+        tearDownResources();
     }
 
     public String getTestComponentName() {
@@ -72,6 +74,14 @@ public abstract class AbstractCamelComponent {
         };
     }
 
+
+    protected void setupResources(ComponentContext context) {
+        return;
+    }
+
+    protected void tearDownResources() {
+        return;
+    }
     protected boolean producerEnabled() {
         return true;
     }
