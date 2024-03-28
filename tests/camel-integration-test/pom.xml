@@ -89,7 +89,7 @@
                             org.rnorth.ducttape*
                         </Export-Package>
                         <Import-Package>
-                            org.apache.karaf.itests,org.ops4j.pax.exam,org.osgi.framework,org.junit,
+                            org.apache.karaf.itests,org.ops4j.pax.exam,org.osgi.framework,org.junit*,
                             org.apache.camel*;${camel.osgi.import.camel.version},
                             org.osgi.service.*,
                             org.awaitility*,
