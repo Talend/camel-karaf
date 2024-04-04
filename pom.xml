@@ -127,6 +127,7 @@
         <cassandra-metrics.tesb.version>4.1.18</cassandra-metrics.tesb.version>
         <cassandra-shaded-guava.tesb.version>25.1-jre-graal-sub-1</cassandra-shaded-guava.tesb.version>
         <commons-compress.tesb.version>1.26.0</commons-compress.tesb.version>
+        <commons-configuration2.tesb.version>2.10.1</commons-configuration2.tesb.version>
         <avro-java-commons-compress.tesb.version>${commons-compress.tesb.version}</avro-java-commons-compress.tesb.version>
         <docker-java-commons-compress.tesb.version>${commons-compress.tesb.version}</docker-java-commons-compress.tesb.version>
         <minio-commons-compress.tesb.version>${commons-compress.tesb.version}</minio-commons-compress.tesb.version>
@@ -682,6 +683,7 @@
                             <avro-jackson.tesb.version>${avro-jackson.tesb.version}</avro-jackson.tesb.version>
                             <braintree-jackson2.tesb.version>${braintree-jackson2.tesb.version}</braintree-jackson2.tesb.version>
                             <commons-compress.tesb.version>${commons-compress.tesb.version}</commons-compress.tesb.version>
+                            <commons-configuration2.tesb.version>${commons-configuration2.tesb.version}</commons-configuration2.tesb.version>
                             <avro-java-commons-compress.tesb.version>${avro-java-commons-compress.tesb.version}</avro-java-commons-compress.tesb.version>
                             <docker-java-commons-compress.tesb.version>${docker-java-commons-compress.tesb.version}</docker-java-commons-compress.tesb.version>
                             <minio-commons-compress.tesb.version>${minio-commons-compress.tesb.version}</minio-commons-compress.tesb.version>
