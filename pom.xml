@@ -174,7 +174,7 @@
         <accessors-smart.tesb.version>2.5.0</accessors-smart.tesb.version>
         <kudu.tesb.version>1.17.0</kudu.tesb.version>
         <log4j2.tesb.version>2.20.0</log4j2.tesb.version>
-        <netty.tesb.version>4.1.101.Final</netty.tesb.version>
+        <netty.tesb.version>4.1.108.Final</netty.tesb.version>
         <opensaml-bundle.tesb.version>3.4.6_3</opensaml-bundle.tesb.version>
         <pgjdbc-driver.tesb.version>42.6.1</pgjdbc-driver.tesb.version>
         <protobuf.tesb.version>3.21.12</protobuf.tesb.version>
