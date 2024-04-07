@@ -106,8 +106,8 @@
         <camel-cxf-rest.tesb.version>3.20.6.20230530</camel-cxf-rest.tesb.version>
         <camel-google-pubsub.tesb.version>3.20.6.20230530</camel-google-pubsub.tesb.version>
         <camel-sql.tesb.version>3.20.6.20240122</camel-sql.tesb.version>
-        <camel-zookeeper.tesb.version>3.20.6.20230530</camel-zookeeper.tesb.version>
-        <camel-zookeeper-master.tesb.version>3.20.6.20230530</camel-zookeeper-master.tesb.version>
+        <camel-zookeeper.tesb.version>3.20.6.20240320</camel-zookeeper.tesb.version>
+        <camel-zookeeper-master.tesb.version>3.20.6.20240320</camel-zookeeper-master.tesb.version>
 
         <activemq.tesb.version>5.17.6</activemq.tesb.version>
         <activemq-osgi.tesb.version>5.17.6.20231031</activemq-osgi.tesb.version>
@@ -191,7 +191,7 @@
         <xmlgraphics-batik.tesb.version>1.17</xmlgraphics-batik.tesb.version>
         <xmlsec.tesb.version>2.3.4</xmlsec.tesb.version>
         <xstream-bundle.tesb.version>1.4.20_1</xstream-bundle.tesb.version>
-        <zookeeper.tesb.version>3.7.2</zookeeper.tesb.version>
+        <zookeeper.tesb.version>3.8.4</zookeeper.tesb.version>
         <cmis-woodstox-api.tesb.version-range>[4.4,7)</cmis-woodstox-api.tesb.version-range>
         <elasticsearch-log4j.tesb.version-range>[2.20,3)</elasticsearch-log4j.tesb.version-range>
         <github-gson.tesb.version-range>[2.2,3)</github-gson.tesb.version-range>
