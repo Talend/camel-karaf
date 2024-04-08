@@ -197,7 +197,8 @@
     <bundle dependency='true'>mvn:org.apache.abdera/abdera-extensions-main/${abdera-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.abdera/abdera-i18n/${abdera-version}</bundle>
     <bundle>mvn:org.apache.abdera/abdera-parser/${abdera-version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.james/apache-mime4j-core/${apache-mime4j-version}</bundle>
+    <bundle dependency='true'>mvn:org.apache.james/apache-mime4j-core/${apache-mime4j.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:commons-io/commons-io/${commons-io1.tesb.version}</bundle>
     <bundle dependency='true'>mvn:commons-codec/commons-codec/${commons-codec-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-atom/${upstream.version}</bundle>
   </feature>
@@ -1648,7 +1649,7 @@
     <bundle dependency="true">mvn:com.microsoft.azure/msal4j/1.13.8</bundle>
     <bundle dependency="true">mvn:com.nimbusds/oauth2-oidc-sdk/10.7.1</bundle>
     <bundle dependency="true">mvn:com.nimbusds/content-type/2.2</bundle>
-    <bundle dependency="true">mvn:com.nimbusds/nimbus-jose-jwt/9.30.2</bundle>
+    <bundle dependency="true">mvn:com.nimbusds/nimbus-jose-jwt/9.37.3</bundle>
     <bundle dependency="true">mvn:com.nimbusds/lang-tag/1.7</bundle>
     <bundle dependency='true'>mvn:org.ow2.asm/asm/${asm.bundle.version}</bundle>
     <bundle dependency="true">mvn:net.minidev/json-smart/${json-smart.tesb.version}</bundle>
@@ -1866,7 +1867,7 @@
   <feature name='camel-pg-replication-slot' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
     <feature>jdbc</feature>
-    <bundle dependency='true'>mvn:org.postgresql/postgresql/${pgjdbc-driver-version}</bundle>
+    <bundle dependency='true'>mvn:org.postgresql/postgresql/${pgjdbc-driver.tesb.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-pg-replication-slot/${upstream.version}</bundle>
   </feature>
   <feature name='camel-pgevent' version='${upstream.version}' start-level='50'>
@@ -2098,7 +2099,7 @@
     <feature version='${upstream.version}'>camel-core</feature>
     <bundle dependency='true'>mvn:commons-collections/commons-collections/${commons-collections-version}</bundle>
     <bundle dependency='true'>mvn:commons-beanutils/commons-beanutils/${commons-beanutils-version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.commons/commons-configuration2/${commons-configuration2-version}</bundle>
+    <bundle dependency='true'>mvn:org.apache.commons/commons-configuration2/${commons-configuration2.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.commons/commons-text/${commons-text-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.shiro/shiro-core/${shiro.tesb.version}</bundle>
@@ -2428,7 +2429,7 @@
     <bundle dependency='true'>mvn:io.netty/netty-tcnative-classes/${netty-tcnative-classes-version}</bundle>
     <bundle dependency='true'>mvn:com.hazelcast/hazelcast/${hazelcast.tesb.version}</bundle>
     <bundle dependency='true'>mvn:com.eclipsesource.minimal-json/minimal-json/${minimal-json-version}</bundle>
-    <bundle dependency='true'>wrap:mvn:io.vertx/vertx-core/${vertx-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:io.vertx/vertx-core/${vertx.tesb.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-vertx-common/${upstream.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-vertx/${upstream.version}</bundle>
   </feature>
