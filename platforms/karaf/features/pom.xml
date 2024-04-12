@@ -30,8 +30,10 @@
     <artifactId>apache-camel</artifactId>
     <packaging>pom</packaging>
     <name>Camel Karaf :: Platforms :: Features</name>
+    <version>${revision}</version>
 
     <properties>
+        <revision>${camel.features.tesb.version}</revision>
         <features.file>features.xml</features.file>
     </properties>
 
@@ -132,7 +134,7 @@
                     </framework>
                     <features>
                         <!-- camel-ignite requires to install apache ignite first -->
-                        <feature>camel|camel-(?!(ignite|pgevent))*</feature>
+                        <feature>camel|camel-(?!(ignite|pgevent|mail-microsoft-oauth))*</feature>
                     </features>
                 </configuration>
                 <executions>
@@ -142,6 +144,21 @@
                         <goals>
                             <goal>verify</goal>
                         </goals>
+                        <configuration>
+                            <descriptors>
+                                <descriptor>mvn:org.apache.karaf.features/framework/${karaf4-version}/xml/features</descriptor>
+                                <descriptor>mvn:org.apache.karaf.features/standard/${karaf4-version}/xml/features</descriptor>
+                                <descriptor>mvn:org.apache.karaf.features/enterprise/${karaf4-version}/xml/features</descriptor>
+                                <descriptor>mvn:org.apache.karaf.features/spring/${karaf4-version}/xml/features</descriptor>
+                                <descriptor>file:${project.build.directory}/classes/verify.xml</descriptor>
+                                <descriptor>file:${project.build.directory}/classes/features.xml</descriptor>
+                            </descriptors>
+                            <distribution>org.apache.karaf.features:framework</distribution>
+                            <javase>11</javase>
+                            <framework>
+                                <feature>framework</feature>
+                            </framework>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
