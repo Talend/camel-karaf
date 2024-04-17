@@ -43,8 +43,7 @@ public class CamelJettyComponent extends AbstractCamelComponentResultMockBased {
 
     @Override
     protected void configureProducer(RouteBuilder builder, RouteDefinition producerRoute) {
-        producerRoute.setBody(builder.constant("OK"))
-                .log("calling http endpoint")
+        producerRoute.log("calling http endpoint")
                 .process(new HttpClientProcessor());
     }
 
