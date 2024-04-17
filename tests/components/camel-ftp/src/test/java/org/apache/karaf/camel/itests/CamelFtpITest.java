@@ -28,7 +28,7 @@ import org.ops4j.pax.exam.spi.reactors.PerClass;
 
 @RunWith(PaxExam.class)
 @ExamReactorStrategy(PerClass.class)
-public class CamelFtpITest extends CamelKarafITest {
+public class CamelFtpITest extends AbstractCamelKarafITest {
 
     @Test
     public void testFtpComponent() throws Exception {
