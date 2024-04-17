@@ -198,7 +198,7 @@
     <bundle dependency='true'>mvn:org.apache.abdera/abdera-i18n/${abdera-version}</bundle>
     <bundle>mvn:org.apache.abdera/abdera-parser/${abdera-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.james/apache-mime4j-core/${apache-mime4j.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:commons-io/commons-io/${commons-io1.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:commons-io/commons-io/${commons-io.tesb.version}</bundle>
     <bundle dependency='true'>mvn:commons-codec/commons-codec/${commons-codec-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-atom/${upstream.version}</bundle>
   </feature>
