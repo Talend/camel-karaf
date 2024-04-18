@@ -96,6 +96,6 @@ public abstract class AbstractCamelComponent {
     }
 
     public int getNextAvailablePort() {
-        return AbstractCamelKarafITest.getAvailablePort(30000,40000);
+        return AbstractCamelKarafITest.getAvailablePort(30000, 40000);
     }
 }
