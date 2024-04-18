@@ -95,7 +95,7 @@ public abstract class AbstractCamelKarafITest extends KarafTestSupport {
     public void init() throws Exception {
         String testComponentName = getTestComponentName();
         installRequiredFeatures();
-        installBundle("file://%s/%s-%s.jar".formatted(getBaseDir(), testComponentName, getVersion()),true);
+        installBundle("file://%s/%s-%s.jar".formatted(getBaseDir(), testComponentName, getVersion()), true);
         assertBundleInstalled(testComponentName);
         assertBundleInstalledAndRunning(testComponentName);
         initCamelContext();
