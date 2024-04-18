@@ -110,7 +110,7 @@
         <activemq-osgi.tesb.version>5.17.6.20231031</activemq-osgi.tesb.version>
         <activemq-pool.tesb.version>5.17.6.20231031</activemq-pool.tesb.version>
         <ant-bundle.tesb.version>1.10.12_1</ant-bundle.tesb.version>
-        <apache-mime4j.tesb.version>0.8.10</apache-mime4j.tesb.version>
+        <apache-mime4j.tesb.version>0.8.11</apache-mime4j.tesb.version>
         <avro.tesb.version>1.11.3</avro.tesb.version>
         <avro-jackson.tesb.version>${jackson2.tesb.version}</avro-jackson.tesb.version>
         <bouncycastle.tesb.version>1.76</bouncycastle.tesb.version>
@@ -125,7 +125,6 @@
         <avro-java-commons-compress.tesb.version>${commons-compress.tesb.version}</avro-java-commons-compress.tesb.version>
         <docker-java-commons-compress.tesb.version>${commons-compress.tesb.version}</docker-java-commons-compress.tesb.version>
         <minio-commons-compress.tesb.version>${commons-compress.tesb.version}</minio-commons-compress.tesb.version>
-        <commons-io1.tesb.version>1.4</commons-io1.tesb.version>
         <commons-io.tesb.version>2.14.0</commons-io.tesb.version>
         <curator.tesb.version>5.5.0</curator.tesb.version>
         <cxf.tesb.version>3.6.3</cxf.tesb.version>
@@ -684,7 +683,6 @@
                             <jettison.tesb.version>${jettison.tesb.version}</jettison.tesb.version>
                             <jose4j.tesb.version>${jose4j.tesb.version}</jose4j.tesb.version>
                             <xstream-bundle.tesb.version>${xstream-bundle.tesb.version}</xstream-bundle.tesb.version>
-                            <commons-io1.tesb.version>${commons-io1.tesb.version}</commons-io1.tesb.version>
                             <commons-io.tesb.version>${commons-io.tesb.version}</commons-io.tesb.version>
                             <log4j2.tesb.version>${log4j2.tesb.version}</log4j2.tesb.version>
                             <jna.tesb.version>${jna.tesb.version}</jna.tesb.version>
