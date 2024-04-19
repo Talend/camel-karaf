@@ -26,11 +26,6 @@ import org.ops4j.pax.exam.spi.reactors.PerClass;
 public class CamelJettyITest extends AbstractCamelKarafResultMockBasedITest {
 
     @Override
-    protected void installRequiredFeatures() throws Exception {
-        installAndAssertFeature("camel-jetty");
-    }
-
-    @Override
     protected void configureMock(MockEndpoint mock) {
         mock.expectedBodiesReceived("OK");
     }

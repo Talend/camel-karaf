@@ -76,6 +76,7 @@
                         <Import-Package>
                             org.apache.karaf.itests,org.ops4j.pax.exam,org.osgi.framework,org.junit,
                             org.apache.camel*;${camel.osgi.import.camel.version},
+                            org.apache.karaf.features,
                             org.osgi.service.*,
                             org.awaitility*
                         </Import-Package>

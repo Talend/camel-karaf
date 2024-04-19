@@ -101,8 +101,11 @@ public abstract class AbstractCamelKarafITest extends KarafTestSupport {
         initProducerTemplate();
     }
 
-    protected void installRequiredFeatures() throws Exception{
-        //default do nothing
+    protected void installRequiredFeatures() throws Exception {
+        String featureName = toKebabCase(this.getClass().getSimpleName()).replace("-itest", "");
+        if (null != featureService.getFeature(featureName)) {
+            installAndAssertFeature(featureName);
+        }
     }
 
     private void initCamelContext() {
