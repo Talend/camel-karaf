@@ -16,16 +16,18 @@
 package org.apache.karaf.camel.test;
 
 import java.io.IOException;
+import java.util.function.Function;
 
 import org.apache.camel.builder.RouteBuilder;
-import org.apache.karaf.camel.itests.AbstractCamelComponent;
+import org.apache.camel.model.RouteDefinition;
+import org.apache.karaf.camel.itests.AbstractCamelComponentResultMockBased;
 import org.osgi.framework.wiring.BundleWiring;
 import org.osgi.service.component.ComponentContext;
 import org.osgi.service.component.annotations.Component;
 import org.testcontainers.containers.FixedHostPortGenericContainer;
 
 @Component(name = "karaf-camel-ftp-test", immediate = true)
-public class CamelFtpComponent extends AbstractCamelComponent {
+public class CamelFtpComponent extends AbstractCamelComponentResultMockBased {
 
     private FixedHostPortGenericContainer ftpContainer;
 
@@ -76,14 +78,17 @@ public class CamelFtpComponent extends AbstractCamelComponent {
     }
 
     @Override
-    protected RouteBuilder createRouteBuilder() {
-        return new RouteBuilder() {
+    protected void configureProducer(RouteBuilder builder, RouteDefinition producerRoute) {
+        //uploads a file "test.txt" containing "OK"
+        producerRoute.log("storing file in ftp")
+                .setBody(builder.constant("OK"))
+                .to("ftp://localhost/test.txt?username=user&password=password&binary=true&passiveMode=true&delay=1000");
+    }
 
-            @Override
-            public void configure() throws Exception {
-                from("ftp://localhost/?username=user&password=password&binary=true&passiveMode=true&delay=1000").to(
-                        "file:" + System.getProperty("project.target"));
-            }
-        };
+    @Override
+    protected Function<RouteBuilder, RouteDefinition> consumerRoute() {
+        //download the file "test.txt" and get the content
+        return builder -> builder.from("ftp://localhost/test.txt?username=user&password=password&binary=true&passiveMode=true&delay=1000")
+                .convertBodyTo(String.class);
     }
 }

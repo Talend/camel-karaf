@@ -13,13 +13,7 @@
  */
 package org.apache.karaf.camel.itests;
 
-import static org.junit.Assert.assertTrue;
-
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.util.concurrent.TimeUnit;
-
-import org.awaitility.Awaitility;
+import org.apache.camel.component.mock.MockEndpoint;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.ops4j.pax.exam.junit.PaxExam;
@@ -28,18 +22,15 @@ import org.ops4j.pax.exam.spi.reactors.PerClass;
 
 @RunWith(PaxExam.class)
 @ExamReactorStrategy(PerClass.class)
-public class CamelFtpITest extends AbstractCamelKarafITest {
+public class CamelFtpITest extends AbstractCamelKarafResultMockBasedITest {
+
+    @Override
+    protected void configureMock(MockEndpoint mock) {
+        mock.expectedBodiesReceived("OK");
+    }
 
     @Test
-    public void testFtpComponent() throws Exception {
-
-        installAndAssertFeature("camel-ftp");
-        installBundle("file://" + getBaseDir() + "/camel-ftp-test-" + getVersion() + ".jar", true);
-        assertBundleInstalled("camel-ftp-test");
-        assertBundleInstalledAndRunning("camel-ftp-test");
-
-        Path filePath = Path.of(getBaseDir(), "testFtp.txt");
-        Awaitility.await().atMost(5, TimeUnit.SECONDS).until(() -> Files.exists(filePath));
-        assertTrue(Files.exists(filePath));
+    public void testResultMock() throws Exception {
+        assertMockEndpointsSatisfied();
     }
 }
