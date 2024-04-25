@@ -601,7 +601,7 @@
     <bundle dependency='true'>mvn:com.typesafe/config/${typesafe-config}</bundle>
     <bundle dependency='true'>mvn:org.hdrhistogram/HdrHistogram/${hdrhistrogram-version}</bundle>
     <bundle dependency='true'>mvn:com.datastax.oss/native-protocol/${datastax-native-protocol.tesb.version}</bundle>
-    <bundle>mvn:org.apache.camel/camel-cassandraql/${camel-cassandraql.tesb.version}</bundle>
+    <bundle>mvn:org.apache.camel/camel-cassandraql/${upstream.version}</bundle>
   </feature>
   <feature name='camel-cbor' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
@@ -736,6 +736,13 @@
     <bundle>mvn:org.apache.camel.karaf/camel-cxf-blueprint/${upstream.version}</bundle>
     <bundle>mvn:org.apache.camel.karaf/camel-cxf-transport-blueprint/${upstream.version}</bundle>
   </feature>
+  <feature name='camel-cxf-spring' version='${upstream.version}' start-level='50'>
+    <feature version='${upstream.version}'>camel-cxf</feature>
+    <bundle>mvn:org.apache.camel/camel-cxf-spring-common/${upstream.version}</bundle>
+    <bundle>mvn:org.apache.camel/camel-cxf-spring-rest/${upstream.version}</bundle>
+    <bundle>mvn:org.apache.camel/camel-cxf-spring-soap/${upstream.version}</bundle>
+    <bundle>mvn:org.apache.camel/camel-cxf-spring-transport/${upstream.version}</bundle>
+  </feature>
   <feature name='camel-digitalocean' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
     <bundle dependency='true'>mvn:org.apache.httpcomponents/httpcore-osgi/${httpcore4.tesb.version}</bundle>
@@ -810,7 +817,7 @@
   <feature name='camel-drill' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
     <feature version='${spring-version-range}'>spring-jdbc</feature>
-	<bundle dependency='true'>wrap:mvn:org.apache.drill.exec/drill-jdbc-all/${apache-drill.tesb.version}$Export-Package=org.apache.drill.*&amp;Import-Package=!org.apache.drill.*,!oadd.*&amp;Private-Package=oadd.*</bundle>
+    <bundle dependency='true'>wrap:mvn:org.apache.drill.exec/drill-jdbc-all/${apache-drill-version}$Export-Package=org.apache.drill.*&amp;Import-Package=!org.apache.drill.*,!oadd.*&amp;Private-Package=oadd.*</bundle>
     <bundle>mvn:org.apache.camel/camel-drill/${upstream.version}</bundle>
   </feature>
   <feature name='camel-dozer' version='${upstream.version}' start-level='50'>
@@ -1365,8 +1372,8 @@
     <bundle dependency='true'>mvn:org.ow2.asm/asm/${asm-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.aries/org.apache.aries.util/${aries-util-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.aries.spifly/org.apache.aries.spifly.dynamic.bundle/${aries-spifly-version}</bundle>
-    <bundle dependency='true'>wrap:mvn:org.apache.johnzon/johnzon-core/${johnzon.tesb.version}</bundle>
-    <bundle dependency='true'>wrap:mvn:org.apache.johnzon/johnzon-mapper/${johnzon.tesb.version}</bundle>
+    <bundle dependency='true'>wrap:mvn:org.apache.johnzon/johnzon-core/${johnzon-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:org.apache.johnzon/johnzon-mapper/${johnzon-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.geronimo.specs/geronimo-json_1.1_spec/${geronimo-json-spec-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-johnzon/${upstream.version}</bundle>
   </feature>
@@ -1440,9 +1447,9 @@
     <bundle dependency='true'>mvn:org.ow2.asm/asm-util/${asm.bundle.version}</bundle>
     <bundle dependency='true'>mvn:org.apache.aries/org.apache.aries.util/${aries-util-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.aries.spifly/org.apache.aries.spifly.dynamic.bundle/${aries-spifly-version}</bundle>
-    <bundle dependency='true'>wrap:mvn:org.apache.johnzon/johnzon-core/${johnzon.tesb.version}</bundle>
-    <bundle dependency='true'>wrap:mvn:org.apache.johnzon/johnzon-mapper/${johnzon.tesb.version}</bundle>
-    <bundle dependency='true'>wrap:mvn:org.apache.johnzon/johnzon-jsonb/${johnzon.tesb.version}</bundle>
+    <bundle dependency='true'>wrap:mvn:org.apache.johnzon/johnzon-core/${johnzon-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:org.apache.johnzon/johnzon-mapper/${johnzon-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:org.apache.johnzon/johnzon-jsonb/${johnzon-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.geronimo.specs/geronimo-annotation_1.3_spec/1.3</bundle>
     <bundle dependency='true'>mvn:org.apache.geronimo.specs/geronimo-json_1.1_spec/${geronimo-json-spec-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.geronimo.specs/geronimo-jsonb_1.0_spec/${geronimo-jsonb-spec-version}</bundle>
