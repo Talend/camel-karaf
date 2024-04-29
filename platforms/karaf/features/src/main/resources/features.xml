@@ -2383,7 +2383,7 @@
   </feature>
   <feature name='camel-thrift' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
-    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.libthrift/${libthrift-bundle-version}</bundle>
+    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.libthrift/${libthrift-bundle.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.apache.httpcomponents/httpcore-osgi/${httpcore4.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.apache.httpcomponents/httpclient-osgi/${httpclient4.tesb.version}</bundle>
     <bundle dependency='true'>mvn:commons-io/commons-io/${commons-io.tesb.version}</bundle>
@@ -2601,15 +2601,14 @@
   </feature>
   <feature name='camel-zipkin' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
-    <bundle dependency='true'>mvn:io.zipkin.brave/brave/${brave-zipkin-version}</bundle>
-    <bundle dependency='true'>wrap:mvn:io.zipkin.brave/brave-context-slf4j/${brave-zipkin-version}</bundle>
-    <bundle dependency='true'>mvn:io.zipkin.zipkin2/zipkin/${zipkin-version}</bundle>
-    <bundle dependency='true'>mvn:io.zipkin.reporter2/zipkin-reporter/${zipkin-reporter-version}</bundle>
-    <bundle dependency='true'>mvn:io.zipkin.reporter2/zipkin-reporter-brave/${zipkin-reporter-version}</bundle>
-    <bundle dependency='true'>mvn:io.zipkin.reporter2/zipkin-sender-urlconnection/${zipkin-reporter-version}</bundle>
-    <bundle dependency='true'>mvn:io.zipkin.reporter2/zipkin-sender-libthrift/${zipkin-reporter-version}</bundle>
-    <!-- <bundle dependency='true'>mvn:org.apache.thrift/libthrift/${zipkin-libthrift-version}</bundle> -->
-    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.libthrift/${libthrift-bundle-version}</bundle>
+    <bundle dependency='true'>mvn:io.zipkin.brave/brave/${brave-zipkin.tesb.version}</bundle>
+    <bundle dependency='true'>wrap:mvn:io.zipkin.brave/brave-context-slf4j/${brave-zipkin.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:io.zipkin.zipkin2/zipkin/${zipkin.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:io.zipkin.reporter2/zipkin-reporter/${zipkin-reporter.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:io.zipkin.reporter2/zipkin-reporter-brave/${zipkin-reporter.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:io.zipkin.reporter2/zipkin-sender-urlconnection/${zipkin-reporter.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:io.zipkin.reporter2/zipkin-sender-libthrift/${zipkin-reporter.tesb.version}</bundle>
+    <bundle dependency='true'>wrap:mvn:org.apache.thrift/libthrift/${zipkin-libthrift.tesb.version}$overwrite=merge&amp;Export-Package=org.apache.thrift;version="${zipkin-libthrift.tesb.version}",org.apache.thrift.*;version="${zipkin-libthrift.tesb.version}"</bundle>
     <bundle dependency='true'>mvn:org.apache.httpcomponents/httpcore-osgi/${httpcore4.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.apache.httpcomponents/httpclient-osgi/${httpclient4.tesb.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-zipkin/${upstream.version}</bundle>

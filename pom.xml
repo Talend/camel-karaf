@@ -132,6 +132,7 @@
         <docker-java-commons-compress.tesb.version>${commons-compress.tesb.version}</docker-java-commons-compress.tesb.version>
         <minio-commons-compress.tesb.version>${commons-compress.tesb.version}</minio-commons-compress.tesb.version>
         <!-- <commons-io1.tesb.version>1.4</commons-io1.tesb.version> -->
+        <commons-codec.tesb.version>1.16.0</commons-codec.tesb.version>
         <commons-io.tesb.version>2.14.0</commons-io.tesb.version>
         <commons-net.tesb.version>3.9.0</commons-net.tesb.version>
         <curator.tesb.version>5.5.0</curator.tesb.version>
@@ -173,6 +174,7 @@
         <json-smart.tesb.version>2.5.0</json-smart.tesb.version>
         <accessors-smart.tesb.version>2.5.0</accessors-smart.tesb.version>
         <kudu.tesb.version>1.17.0</kudu.tesb.version>
+        <libthrift-bundle.tesb.version>0.18.1_1</libthrift-bundle.tesb.version>
         <log4j2.tesb.version>2.20.0</log4j2.tesb.version>
         <netty.tesb.version>4.1.108.Final</netty.tesb.version>
         <opensaml-bundle.tesb.version>3.4.6_3</opensaml-bundle.tesb.version>
@@ -196,6 +198,10 @@
         <elasticsearch-log4j.tesb.version-range>[2.20,3)</elasticsearch-log4j.tesb.version-range>
         <github-gson.tesb.version-range>[2.2,3)</github-gson.tesb.version-range>
         <spring.tesb.version-range>[5.2,7)</spring.tesb.version-range>
+        <zipkin.tesb.version>2.27.0</zipkin.tesb.version>
+        <zipkin-reporter.tesb.version>2.17.2</zipkin-reporter.tesb.version>
+        <brave-zipkin.tesb.version>5.17.1</brave-zipkin.tesb.version>
+        <zipkin-libthrift.tesb.version>0.20.0</zipkin-libthrift.tesb.version>
         <zookeeper-curator.tesb.version-range>[4.3,6)</zookeeper-curator.tesb.version-range>
         <kafka-bundle.tesb.version>3.4.0_1-tesb1</kafka-bundle.tesb.version>
 
@@ -708,6 +714,7 @@
                             <xmlsec.tesb.version>${xmlsec.tesb.version}</xmlsec.tesb.version>
                             <jakarta-el.tesb.version>${jakarta-el.tesb.version}</jakarta-el.tesb.version>
                             <jakarta-validation-api.tesb.version>${jakarta-validation-api.tesb.version}</jakarta-validation-api.tesb.version>
+                            <libthrift-bundle.tesb.version>${libthrift-bundle.tesb.version}</libthrift-bundle.tesb.version>
                             <kudu.tesb.version>${kudu.tesb.version}</kudu.tesb.version>
                             <xmlgraphics-batik.tesb.version>${xmlgraphics-batik.tesb.version}</xmlgraphics-batik.tesb.version>
                             <californium.tesb.version>${californium.tesb.version}</californium.tesb.version>
@@ -736,6 +743,10 @@
                             <cmis-woodstox-api.tesb.version-range>${cmis-woodstox-api.tesb.version-range}</cmis-woodstox-api.tesb.version-range>
                             <elasticsearch-log4j.tesb.version-range>${elasticsearch-log4j.tesb.version-range}</elasticsearch-log4j.tesb.version-range>
                             <github-gson.tesb.version-range>${github-gson.tesb.version-range}</github-gson.tesb.version-range>
+                            <zipkin.tesb.version>${zipkin.tesb.version}</zipkin.tesb.version>
+                            <zipkin-reporter.tesb.version>${zipkin-reporter.tesb.version}</zipkin-reporter.tesb.version>
+                            <brave-zipkin.tesb.version>${brave-zipkin.tesb.version}</brave-zipkin.tesb.version>
+                            <zipkin-libthrift.tesb.version>${zipkin-libthrift.tesb.version}</zipkin-libthrift.tesb.version>
                             <zookeeper-curator.tesb.version-range>${zookeeper-curator.tesb.version-range}</zookeeper-curator.tesb.version-range>
                         </properties>
                     </configuration>
