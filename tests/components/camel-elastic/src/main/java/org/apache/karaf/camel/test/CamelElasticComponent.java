@@ -16,9 +16,12 @@
 package org.apache.karaf.camel.test;
 
 import java.io.IOException;
+import java.nio.file.Path;
 import java.util.function.Function;
 
+import org.apache.camel.CamelContext;
 import org.apache.camel.builder.RouteBuilder;
+import org.apache.camel.component.es.ElasticsearchComponent;
 import org.apache.camel.model.RouteDefinition;
 import org.apache.karaf.camel.itests.AbstractCamelComponentResultMockBased;
 import org.osgi.framework.wiring.BundleWiring;
@@ -26,21 +29,12 @@ import org.osgi.service.component.ComponentContext;
 import org.osgi.service.component.annotations.Component;
 import org.testcontainers.containers.FixedHostPortGenericContainer;
 
-@Component(name = "karaf-camel-ftp-test", immediate = true)
-public class CamelFtpComponent extends AbstractCamelComponentResultMockBased {
+@Component(name = "karaf-camel-elastic-test", immediate = true)
+public class CamelElasticComponent extends AbstractCamelComponentResultMockBased {
 
-    private FixedHostPortGenericContainer ftpContainer;
+    int port = org.apache.karaf.camel.itests.Utils.getNextAvailablePort();
 
-    private static final String FTP_USERNAME = "user";
-    private static final String FTP_PASSWORD = "password";
-    private static final String FTP_DIRECTORY = "/home/user/dir";
-
-    private static final int PORT = 21;
-    private static final String USER = "user";
-    private static final String PASSWORD = "password";
-
-    private static final int PASSIVE_MODE_PORT = 21100;
-
+   /*
     @Override
     protected void setupResources(ComponentContext context) {
         ClassLoader cl = Thread.currentThread().getContextClassLoader();
@@ -49,7 +43,7 @@ public class CamelFtpComponent extends AbstractCamelComponentResultMockBased {
                     .setContextClassLoader(context.getBundleContext().getBundle().adapt(BundleWiring.class).getClassLoader());
             //FIXME : not official images, to change to a service like in the integration test
 
-            ftpContainer = new FixedHostPortGenericContainer<>("delfer/alpine-ftp-server:latest").withFixedExposedPort(PORT, PORT)
+            ftpContainer = new FixedHostPortGenericContainer<>("docker.elastic.co/elasticsearch/elasticsearch:8.11.1").withFixedExposedPort(PORT, PORT)
                     .withFixedExposedPort(PASSIVE_MODE_PORT, PASSIVE_MODE_PORT)
                     .withFixedExposedPort(PASSIVE_MODE_PORT + 1, PASSIVE_MODE_PORT + 1)
                     .withFixedExposedPort(PASSIVE_MODE_PORT + 2, PASSIVE_MODE_PORT + 2)
@@ -67,25 +61,65 @@ public class CamelFtpComponent extends AbstractCamelComponentResultMockBased {
         } finally {
             Thread.currentThread().setContextClassLoader(cl);
         }
+    }*/
+
+    private static final String USER_NAME = "elastic";
+    private static final String PASSWORD = "s3cret";
+
+    public String getPassword() {
+        return PASSWORD;
     }
 
-    @Override
-    protected void tearDownResources() {
-        ftpContainer.stop();
+    public Path getCaFile(){
+        return Path.of(getBaseDir(),"http_ca.crt");
     }
+
+
+    @Override
+    protected void configureCamelContext(CamelContext camelContext) {
+        final ElasticsearchComponent elasticsearchComponent = new ElasticsearchComponent();
+        elasticsearchComponent.setEnableSSL(true);
+        elasticsearchComponent.setHostAddresses("localhost:%s".formatted(port));
+        elasticsearchComponent.setUser(USER_NAME);
+        elasticsearchComponent.setPassword(PASSWORD);
+        elasticsearchComponent.setCertificatePath("file:%s".formatted(getCaFile()));
+
+        camelContext.addComponent("elasticsearch",elasticsearchComponent);
+    }
+
 
     @Override
     protected void configureProducer(RouteBuilder builder, RouteDefinition producerRoute) {
+
+
         //uploads a file "test.txt" containing "OK"
-        producerRoute.log("storing file in ftp")
-                .setBody(builder.constant("OK"))
-                .to("ftp://localhost/test.txt?username=user&password=password&binary=true&passiveMode=true&delay=1000");
+        producerRoute.to("elasticsearch://elasticsearch?operation=Exists&amp;indexName={{elastic.index}}")
+                .log("Index exist: ${body}")
+                .setBody(builder.simple("""
+                        {"date": "${header.CamelTimerFiredTime}", "someKey": "someValue"}
+                        """))
+                .to("elasticsearch://elasticsearch?operation=Index&indexName={{elastic.index}}")
+                .log("Index doc : ${body}")
+                .setHeader("_ID", builder.simple("${body}"))
+                .to("elasticsearch://elasticsearch?operation=GetById&indexName={{elastic.index}}")
+                .log("Get doc: ${body}")
+                .setHeader("indexId", builder.simple("${header._ID}"))
+                .setBody(builder.constant("""
+                        {"doc": {"someKey": "someValue2"}}
+                        """))
+                .to("elasticsearch://elasticsearch?operation=Update&indexName={{elastic.index}}")
+                .log("Update doc: ${body} ")
+                .setBody(builder.simple("${header._ID}"))
+                .to("elasticsearch://elasticsearch?operation=GetById&indexName={{elastic.index}}")
+                .log("Get doc: ${body}")
+                .setBody(builder.simple("${header._ID}"))
+                .to("elasticsearch://elasticsearch?operation=Delete&indexName={{elastic.index}}")
+                .log("Delete doc: ${body}");
+
     }
 
     @Override
-    protected Function<RouteBuilder, RouteDefinition> consumerRoute() {
-        //download the file "test.txt" and get the content
-        return builder -> builder.from("ftp://localhost/test.txt?username=user&password=password&binary=true&passiveMode=true&delay=1000")
-                .convertBodyTo(String.class);
+    protected boolean consumerEnabled() {
+        return false;
     }
 }

@@ -40,6 +40,7 @@
         <module>camel-file</module>
         <module>camel-ftp</module>
         <module>camel-seda</module>
+        <module>camel-elastic</module>
         <module>camel-jetty</module>
     </modules>
 
@@ -189,7 +190,7 @@
                 <configuration>
                     <instructions>
                         <Export-Package>
-                            org.apache.karaf.camel.test;version=${camel.version}
+                            org.apache.karaf.camel.test;version=${project.version}
                         </Export-Package>
                         <Import-Package>
                             org.apache.camel*;${camel.osgi.import.camel.version},

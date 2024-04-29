@@ -39,7 +39,6 @@ public abstract class AbstractCamelComponent {
 
     @Activate
     public void activate(ComponentContext componentContext) throws Exception {
-        setupResources(componentContext);
         BundleContext bundleContext = componentContext.getBundleContext();
         camelContext = new OsgiDefaultCamelContext(bundleContext);
         serviceRegistration = bundleContext.registerService(CamelContext.class, camelContext, null);
@@ -51,7 +50,6 @@ public abstract class AbstractCamelComponent {
     public void deactivate() {
         camelContext.stop();
         serviceRegistration.unregister();
-        tearDownResources();
     }
 
     public String getTestComponentName() {
@@ -62,6 +60,7 @@ public abstract class AbstractCamelComponent {
         return new RouteBuilder() {
             @Override
             public void configure() {
+                configureCamelContext(this.getCamelContext());
                 if (producerEnabled()) {
                     configureProducer(
                             this, from("timer:producer?repeatCount=1").routeId("producer-%s".formatted(getTestComponentName()))
@@ -74,14 +73,10 @@ public abstract class AbstractCamelComponent {
         };
     }
 
-
-    protected void setupResources(ComponentContext context) {
-        return;
+    protected void configureCamelContext(CamelContext camelContext) {
+        //nothing by default
     }
 
-    protected void tearDownResources() {
-        return;
-    }
     protected boolean producerEnabled() {
         return true;
     }
@@ -103,9 +98,5 @@ public abstract class AbstractCamelComponent {
             return;
         }
         consumerRoute.routeId("consumer-%s".formatted(getTestComponentName()));
-    }
-
-    public int getNextAvailablePort() {
-        return AbstractCamelKarafITest.getAvailablePort(30000, 40000);
     }
 }
