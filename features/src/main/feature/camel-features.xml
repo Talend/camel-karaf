@@ -294,6 +294,8 @@
         <bundle dependency='true'>mvn:org.apache.qpid/qpid-jms-client/${qpid-jms-client-version}</bundle>
         <bundle dependency='true'>mvn:org.apache.qpid/proton-j/${qpid-proton-j-version}</bundle>
         <bundle dependency='true'>mvn:io.netty/netty-codec-http/${netty-version}</bundle>
+        <bundle dependency='true'>mvn:io.netty/netty-transport-classes-epoll/${netty-version}</bundle>
+        <bundle dependency='true'>mvn:io.micrometer/micrometer-observation/${micrometer-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-amqp/${project.version}</bundle>
     </feature>
 
