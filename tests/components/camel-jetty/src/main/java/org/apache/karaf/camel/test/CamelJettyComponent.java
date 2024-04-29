@@ -38,7 +38,7 @@ public class CamelJettyComponent extends AbstractCamelComponentResultMockBased {
 
     @Override
     protected Function<RouteBuilder, RouteDefinition> consumerRoute() {
-        return builder -> builder.from("jetty://http://localhost:%s/test".formatted(port)).transform(builder.constant("OK"));
+        return builder -> builder.from("jetty://http://localhost:%s/jettyTest".formatted(port)).transform(builder.constant("OK"));
     }
 
     @Override
@@ -55,16 +55,13 @@ public class CamelJettyComponent extends AbstractCamelComponentResultMockBased {
             HttpClient client = HttpClient.newHttpClient();
 
             // Create a URI for the request
-            URI uri = URI.create("http://localhost:%s/test".formatted(port));
+            URI uri = URI.create("http://localhost:%s/jettyTest".formatted(port));
 
             // Create a HttpRequest
             HttpRequest request = HttpRequest.newBuilder()
                     .uri(uri)
                     .build();
-
-            client.sendAsync(request, HttpResponse.BodyHandlers.ofString())
-                    .thenApply(HttpResponse::body)
-                    .thenAccept(System.out::println);
+            client.send(request, HttpResponse.BodyHandlers.ofString());
         }
     }
 }

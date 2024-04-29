@@ -94,6 +94,7 @@
                             org.apache.karaf.features,
                             org.osgi.service.*,
                             org.awaitility*,
+                            org.ops4j.pax.swissbox.tracker,
                             org.slf4j*,
                             javax.net,
                             javax.net.ssl*,
