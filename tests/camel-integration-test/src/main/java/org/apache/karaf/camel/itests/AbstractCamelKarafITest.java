@@ -20,6 +20,7 @@ import org.apache.camel.CamelContext;
 import org.apache.camel.ProducerTemplate;
 import org.junit.After;
 import org.junit.Before;
+import org.ops4j.pax.swissbox.tracker.ServiceLookup;
 import org.osgi.framework.Bundle;
 
 import java.net.InetAddress;
@@ -109,7 +110,7 @@ public abstract class AbstractCamelKarafITest extends KarafTestSupport {
     }
 
     private void initCamelContext() {
-        this.context = bundleContext.getService(bundleContext.getServiceReference(CamelContext.class));
+        this.context = ServiceLookup.getService(bundleContext, CamelContext.class);
     }
 
     private void initProducerTemplate() {

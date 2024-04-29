@@ -78,7 +78,8 @@
                             org.apache.camel*;${camel.osgi.import.camel.version},
                             org.apache.karaf.features,
                             org.osgi.service.*,
-                            org.awaitility*
+                            org.awaitility,
+                            org.ops4j.pax.swissbox.tracker
                         </Import-Package>
                     </instructions>
                     <excludeDependencies>geronimo-atinject_1.0_spec</excludeDependencies>
