@@ -134,6 +134,7 @@
         <!-- <commons-io1.tesb.version>1.4</commons-io1.tesb.version> -->
         <commons-codec.tesb.version>1.16.0</commons-codec.tesb.version>
         <commons-io.tesb.version>2.14.0</commons-io.tesb.version>
+        <commons-lang3.tesb.version>3.14.0</commons-lang3.tesb.version>
         <commons-net.tesb.version>3.9.0</commons-net.tesb.version>
         <curator.tesb.version>5.5.0</curator.tesb.version>
         <datastax-native-protocol.tesb.version>1.5.1</datastax-native-protocol.tesb.version>
@@ -707,6 +708,7 @@
                             <xstream-bundle.tesb.version>${xstream-bundle.tesb.version}</xstream-bundle.tesb.version>
                             <!-- <commons-io1.tesb.version>${commons-io1.tesb.version}</commons-io1.tesb.version> -->
                             <commons-io.tesb.version>${commons-io.tesb.version}</commons-io.tesb.version>
+                            <commons-lang3.tesb.version>${commons-lang3.tesb.version}</commons-lang3.tesb.version>
                             <commons-net.tesb.version>${commons-net.tesb.version}</commons-net.tesb.version>
                             <log4j2.tesb.version>${log4j2.tesb.version}</log4j2.tesb.version>
                             <jna.tesb.version>${jna.tesb.version}</jna.tesb.version>
