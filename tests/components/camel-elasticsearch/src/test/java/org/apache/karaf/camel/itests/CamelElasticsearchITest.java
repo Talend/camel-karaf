@@ -15,63 +15,82 @@ package org.apache.karaf.camel.itests;
 
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.time.Duration;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.stream.Stream;
 
 import org.apache.camel.component.mock.MockEndpoint;
-import org.apache.karaf.camel.test.CamelElasticComponent;
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.ops4j.pax.exam.ProbeBuilder;
-import org.ops4j.pax.exam.TestProbeBuilder;
+
+import org.ops4j.pax.exam.*;
 import org.ops4j.pax.exam.junit.PaxExam;
 import org.ops4j.pax.exam.spi.reactors.ExamReactorStrategy;
 import org.ops4j.pax.exam.spi.reactors.PerClass;
-import org.ops4j.pax.swissbox.tracker.ServiceLookup;
-import org.osgi.framework.Constants;
 import org.testcontainers.containers.wait.strategy.LogMessageWaitStrategy;
 import org.testcontainers.elasticsearch.ElasticsearchContainer;
 
 @RunWith(PaxExam.class)
 @ExamReactorStrategy(PerClass.class)
-public class CamelElasticITest extends AbstractCamelKarafResultMockBasedITest {
+public class CamelElasticsearchITest extends AbstractCamelKarafResultMockBasedITest {
 
+    private static final String USER_NAME = "elastic";
+    private static final String PASSWORD = "s3cret";
+    private static final int ELASTIC_SEARCH_PORT = 9200;
 
-    private ElasticsearchContainer elasticsearchContainer;
+    public String getCaFile(){
+        return Path.of(getBaseDir(),"http_ca.crt").toAbsolutePath().toString();
+    }
 
-    @Before
+    @Configuration
     @Override
-    public void init() throws Exception {
-        CamelElasticComponent component  = ServiceLookup.getService(bundleContext, CamelElasticComponent.class);
-        elasticsearchContainer
-                = new ElasticsearchContainer("docker.elastic.co/elasticsearch/elasticsearch:8.11.1")
-                        .withPassword(component.getPassword());
+    public Option[] config() {
+
+        Option[] options = initContainer().entrySet().stream()
+                .map(e -> CoreOptions.systemProperty(e.getKey()).value(e.getValue()))
+                .toArray(Option[]::new);
+        return Stream.of(super.config(), options).flatMap(Stream::of).toArray(Option[]::new);
+    }
+
+
+    public Map<String,String> initContainer()  {
+        final ElasticsearchContainer elasticsearchContainer =
+                new ElasticsearchContainer("docker.elastic.co/elasticsearch/elasticsearch:8.11.1").withPassword(PASSWORD);
         // Increase the timeout from 60 seconds to 90 seconds to ensure that it will be long enough
         // on the build pipeline
         elasticsearchContainer.setWaitStrategy(
                 new LogMessageWaitStrategy()
                         .withRegEx(".*(\"message\":\\s?\"started[\\s?|\"].*|] started\n$)")
                         .withStartupTimeout(Duration.ofSeconds(90)));
+
         elasticsearchContainer.start();
 
         elasticsearchContainer.caCertAsBytes().ifPresent(content -> {
             try {
-                Files.write(component.getCaFile(), content);
+                Files.write(Path.of(getCaFile()), content);
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
         });
-        super.init();
+        Map<String,String> properties = new HashMap<>();
+        properties.put("elasticsearch.host", elasticsearchContainer.getHost());
+        properties.put("elasticsearch.port", Integer.toString(elasticsearchContainer.getMappedPort(ELASTIC_SEARCH_PORT)));
+        properties.put("elasticsearch.username", USER_NAME);
+        properties.put("elasticsearch.password", PASSWORD);
+        properties.put("elasticsearch.cafile", getCaFile());
+        return properties;
     }
 
-    @After
-    public void destroyContainer() {
+    //FIXME : find a way to destroy the container
+   // @AfterClass
+    /*public void destroyContainer() {
         if (elasticsearchContainer != null) {
             elasticsearchContainer.stop();
         }
     }
-
+*/
     @Override
     protected void configureMock(MockEndpoint mock) {
         mock.expectedBodiesReceived("OK");
@@ -80,12 +99,6 @@ public class CamelElasticITest extends AbstractCamelKarafResultMockBasedITest {
     @Test
     public void testResultMock() throws Exception {
         assertMockEndpointsSatisfied();
-    }
-
-    @ProbeBuilder
-    public TestProbeBuilder probeConfiguration(TestProbeBuilder probe) {
-        probe.setHeader(Constants.IMPORT_PACKAGE, "org.apache.karaf.camel.test,org.testcontainers.elasticsearch");
-        return probe;
     }
 
 }
