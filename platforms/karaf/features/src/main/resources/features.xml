@@ -601,7 +601,7 @@
     <bundle dependency='true'>mvn:com.typesafe/config/${typesafe-config}</bundle>
     <bundle dependency='true'>mvn:org.hdrhistogram/HdrHistogram/${hdrhistrogram-version}</bundle>
     <bundle dependency='true'>mvn:com.datastax.oss/native-protocol/${datastax-native-protocol.tesb.version}</bundle>
-    <bundle>mvn:org.apache.camel/camel-cassandraql/${upstream.version}</bundle>
+    <bundle>mvn:org.apache.camel/camel-cassandraql/${camel-cassandraql.tesb.version}</bundle>
   </feature>
   <feature name='camel-cbor' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
