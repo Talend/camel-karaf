@@ -10,7 +10,8 @@ import java.lang.annotation.Target;
  * Annotation to specify the class that provides the methods to create all the external resources required by the test.
  * In the provider class, each public static method that returns an instance of a subtype of {@link ExternalResource}
  * with no parameters is considered as an {@link ExternalResource} supplier, so it will be invoked before executing
- * the test and {@code PaxExamWithExternalResource} will ensure that t.
+ * the test and {@code PaxExamWithExternalResource} will take care of its lifecycle making sure that it is created and
+ * destroyed outside Karaf.
  *
  * @see PaxExamWithExternalResource
  */

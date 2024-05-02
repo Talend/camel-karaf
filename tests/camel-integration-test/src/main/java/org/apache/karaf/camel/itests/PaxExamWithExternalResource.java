@@ -43,6 +43,11 @@ import org.slf4j.LoggerFactory;
 
 /**
  * A fork of {@link PaxExam} that supports external resources which can be created and destroyed outside Karaf.
+ * <p>
+ * This runner is intended to be used with {@link UseExternalResourceProvider} annotation in order to create the
+ * external resources that are needed by the test. Please note that due to the way PaxExam works, the class cannot be
+ * the same as the test class, but it can be a static inner class of it otherwise the class will need to be resolved
+ * within Karaf which is what we want to avoid.
  */
 public class PaxExamWithExternalResource extends Runner implements Filterable, Sortable {
     private static final Logger LOG = LoggerFactory.getLogger(PaxExamWithExternalResource.class);
