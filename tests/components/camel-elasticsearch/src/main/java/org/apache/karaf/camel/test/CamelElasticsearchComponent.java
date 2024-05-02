@@ -25,12 +25,15 @@ import org.osgi.service.component.annotations.Component;
 @Component(name = "karaf-camel-elasticsearch-test", immediate = true)
 public class CamelElasticsearchComponent extends AbstractCamelComponentResultMockBased {
 
+    private static final String INDEX_NAME = "testindex";
+
     @Override
     protected void configureCamelContext(CamelContext camelContext) {
-
         final ElasticsearchComponent elasticsearchComponent = new ElasticsearchComponent();
         elasticsearchComponent.setEnableSSL(true);
-        elasticsearchComponent.setHostAddresses("%s:%s".formatted(System.getProperty("elasticsearch.host"),System.getProperty("elasticsearch.port")));
+        elasticsearchComponent.setHostAddresses(
+            "%s:%s".formatted(System.getProperty("elasticsearch.host"), System.getProperty("elasticsearch.port"))
+        );
         elasticsearchComponent.setUser(System.getProperty("elasticsearch.username"));
         elasticsearchComponent.setPassword(System.getProperty("elasticsearch.password"));
         elasticsearchComponent.setCertificatePath("file:%s".formatted(System.getProperty("elasticsearch.cafile")));
@@ -42,27 +45,27 @@ public class CamelElasticsearchComponent extends AbstractCamelComponentResultMoc
     protected void configureProducer(RouteBuilder builder, RouteDefinition producerRoute) {
         //to add the mock endpoint at the end of the route, call configureConsumer
         configureConsumer(
-            producerRoute.to("elasticsearch://elasticsearch?operation=Exists&indexName=testindex")
+            producerRoute.toF("elasticsearch://elasticsearch?operation=Exists&indexName=%s", INDEX_NAME)
                     .log("Index exist: ${body}")
                     .setBody(builder.simple("""
                             {"date": "${header.CamelTimerFiredTime}", "someKey": "someValue"}
                             """))
-                    .to("elasticsearch://elasticsearch?operation=Index&indexName=testindex")
+                    .toF("elasticsearch://elasticsearch?operation=Index&indexName=%s", INDEX_NAME)
                     .log("Index doc : ${body}")
                     .setHeader("_ID", builder.simple("${body}"))
-                    .to("elasticsearch://elasticsearch?operation=GetById&indexName=testindex")
+                    .toF("elasticsearch://elasticsearch?operation=GetById&indexName=%s", INDEX_NAME)
                     .log("Get doc: ${body}")
                     .setHeader("indexId", builder.simple("${header._ID}"))
                     .setBody(builder.constant("""
                             {"doc": {"someKey": "someValue2"}}
                             """))
-                    .to("elasticsearch://elasticsearch?operation=Update&indexName=testindex")
+                    .toF("elasticsearch://elasticsearch?operation=Update&indexName=%s", INDEX_NAME)
                     .log("Update doc: ${body} ")
                     .setBody(builder.simple("${header._ID}"))
-                    .to("elasticsearch://elasticsearch?operation=GetById&indexName=testindex")
+                    .toF("elasticsearch://elasticsearch?operation=GetById&indexName=%s", INDEX_NAME)
                     .log("Get doc: ${body}")
                     .setBody(builder.simple("${header._ID}"))
-                    .to("elasticsearch://elasticsearch?operation=Delete&indexName=testindex")
+                    .toF("elasticsearch://elasticsearch?operation=Delete&indexName=%s", INDEX_NAME)
                     .log("Delete doc: ${body}")
                     .setBody(builder.constant("OK"))
         );
