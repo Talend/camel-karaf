@@ -1094,6 +1094,8 @@
         <bundle>mvn:org.apache.camel.karaf/camel-attachments/${project.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-http-base/${project.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-http-common/${project.version}</bundle>
+        <feature version="[6,7)">jakarta-servlet</feature>
+        <bundle dependency="true">wrap:mvn:org.apache.httpcomponents.core5/httpcore5-h2/${httpcore-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-http/${project.version}</bundle>
     </feature>
     <feature name='camel-ical' version='${project.version}' start-level='50'>
