@@ -1069,6 +1069,22 @@
     <bundle dependency='true'>mvn:org.bouncycastle/bcutil-jdk18on/${bouncycastle.tesb.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-google-pubsub/${camel-google-pubsub.tesb.version}</bundle>
   </feature>
+  <feature name='camel-google-storage' version='${upstream.version}' start-level='50'>
+    <feature version='${upstream.version}'>camel-core</feature>
+    <bundle dependency='true'>mvn:com.google.guava/guava/${google-cloud-guava.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.google.guava/failureaccess/1.0.1</bundle>
+    <bundle dependency='true'>mvn:org.apache.httpcomponents/httpcore-osgi/${httpcore4.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:org.apache.httpcomponents/httpclient-osgi/${httpclient4.tesb.version}</bundle>
+    <bundle dependency='true'>wrap:mvn:com.google.api/gax/${google-cloud-gax-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:com.google.auth/google-auth-library-credentials/${google-cloud-auth-library-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:com.google.auth/google-auth-library-oauth2-http/${google-cloud-auth-library-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:com.google.cloud/google-cloud-core/${google-cloud-core-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:com.google.cloud/google-cloud-storage/2.7.2</bundle>
+    <bundle dependency='true'>wrap:mvn:com.google.http-client/google-http-client/${google-cloud-http-client-version}$overwrite=merge&amp;Import-Package=com.google.common.base;version="${google-cloud-guava.tesb.version-range}",*</bundle>
+    <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-api/${google-http-client-opencensus-api-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-contrib-http-util/${google-http-client-opencensus-api-version}</bundle>
+    <bundle>mvn:org.apache.camel/camel-google-storage/${upstream.version}</bundle>
+  </feature>
   <feature name='camel-grape' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
     <bundle dependency='true'>mvn:org.codehaus.groovy/groovy/${groovy-version}</bundle>
