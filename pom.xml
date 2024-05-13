@@ -143,10 +143,10 @@
         <olingo2-gson.tesb.version>${gson.tesb.version}</olingo2-gson.tesb.version>
         <jsonata-gson.tesb.version>${gson.tesb.version}</jsonata-gson.tesb.version>
         <google-api-services-storage.tesb.version>v1-rev20220509-1.32.1</google-api-services-storage.tesb.version>
-        <google-cloud-storage.tesb.version>2.7.2</google-cloud-storage.tesb.version>
         <google-cloud-guava.tesb.version>32.1.3-jre</google-cloud-guava.tesb.version>
         <google-cloud-guava.tesb.version-range>[32,40)</google-cloud-guava.tesb.version-range>
         <google-cloud-guava-bundle.tesb.version>31.1_1</google-cloud-guava-bundle.tesb.version>
+        <google-cloud-storage.tesb.version>2.7.2</google-cloud-storage.tesb.version>
         <grpc-context.tesb.version>1.46.0</grpc-context.tesb.version>
         <guava-eventbus.tesb.version>32.1.3-jre</guava-eventbus.tesb.version>
         <consul-guava.tesb.version>32.1.3-jre</consul-guava.tesb.version>
@@ -668,10 +668,10 @@
                             <zookeeper.tesb.version>${zookeeper.tesb.version}</zookeeper.tesb.version>
                             <curator.tesb.version>${curator.tesb.version}</curator.tesb.version>
                             <google-api-services-storage.tesb.version>${google-api-services-storage.tesb.version}</google-api-services-storage.tesb.version>
-                            <google-cloud-storage.tesb.version>${google-cloud-storage.tesb.version}</google-cloud-storage.tesb.version>
                             <google-cloud-guava.tesb.version>${google-cloud-guava.tesb.version}</google-cloud-guava.tesb.version>
                             <google-cloud-guava.tesb.version-range>${google-cloud-guava.tesb.version-range}</google-cloud-guava.tesb.version-range>
                             <google-cloud-guava-bundle.tesb.version>${google-cloud-guava-bundle.tesb.version}</google-cloud-guava-bundle.tesb.version>
+                            <google-cloud-storage.tesb.version>${google-cloud-storage.tesb.version}</google-cloud-storage.tesb.version>
                             <grpc-context.tesb.version>${grpc-context.tesb.version}</grpc-context.tesb.version>
                             <guava-eventbus.tesb.version>${guava-eventbus.tesb.version}</guava-eventbus.tesb.version>
                             <consul-guava.tesb.version>${consul-guava.tesb.version}</consul-guava.tesb.version>
