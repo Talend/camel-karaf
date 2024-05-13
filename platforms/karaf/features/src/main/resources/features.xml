@@ -1083,7 +1083,7 @@
     <bundle dependency='true'>wrap:mvn:com.google.cloud/google-cloud-storage/${google-cloud-storage.tesb.version}$Bundle-SymbolicName=com.google.cloud.google-cloud-storage&amp;Bundle-Version=${google-cloud-storage.tesb.version}</bundle>
     <bundle dependency='true'>wrap:mvn:com.google.http-client/google-http-client-appengine/${google-cloud-http-client-version}$Bundle-SymbolicName=com.google.http-client.google-http-client-appengine&amp;Bundle-Version=${google-cloud-http-client-version}</bundle>
     <bundle dependency='true'>wrap:mvn:com.google.http-client/google-http-client-jackson2/${google-cloud-http-client-version}$Bundle-SymbolicName=com.google.http-client.google-http-client-jackson2&amp;Bundle-Version=${google-cloud-http-client-version}</bundle>
-    <bundle dependency='true'>wrap:mvn:io.grpc/grpc-context/${grpc-context.tesb.versio}$Bundle-SymbolicName=io.grpc.grpc-context&amp;Bundle-Version=${grpc-context.tesb.version}</bundle>
+    <bundle dependency='true'>wrap:mvn:io.grpc/grpc-context/${grpc-context.tesb.version}$Bundle-SymbolicName=io.grpc.grpc-context&amp;Bundle-Version=${grpc-context.tesb.version}</bundle>
     <!-- google-api-client -->
     <bundle dependency='true'>mvn:org.apache.httpcomponents/httpclient-osgi/${httpclient4.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.apache.httpcomponents/httpcore-osgi/${httpcore4.tesb.version}</bundle>
