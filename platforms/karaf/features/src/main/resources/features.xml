@@ -1069,6 +1069,35 @@
     <bundle dependency='true'>mvn:org.bouncycastle/bcutil-jdk18on/${bouncycastle.tesb.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-google-pubsub/${camel-google-pubsub.tesb.version}</bundle>
   </feature>
+  <feature name='camel-google-storage' version='${upstream.version}' start-level='50'>
+    <feature version='${upstream.version}'>camel-core</feature>
+    <bundle dependency='true'>mvn:org.threeten/threetenbp/${google-cloud-threetenbp-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:com.google.api/api-common/${google-cloud-api-common-version}$Bundle-SymbolicName=com.google.api.api-common&amp;Bundle-Version=${google-cloud-api-common-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:com.google.api/gax/${google-cloud-gax-version}$Bundle-SymbolicName=com.google.api.gax&amp;Bundle-Version=${google-cloud-gax-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:com.google.api/gax-httpjson/${google-cloud-gax-httpjson-version}$Bundle-SymbolicName=com.google.api.gax-httpjson&amp;Bundle-Version=${google-cloud-gax-httpjson-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:com.google.apis/google-api-services-storage/${google-api-services-storage.tesb.version}$Bundle-SymbolicName=com.google.apis.google-api-services-storage</bundle>
+    <bundle dependency='true'>wrap:mvn:com.google.auth/google-auth-library-credentials/${google-cloud-auth-library-version}$Bundle-SymbolicName=com.google.auth.google-auth-library-credentials&amp;Bundle-Version=${google-cloud-auth-library-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:com.google.auth/google-auth-library-oauth2-http/${google-cloud-auth-library-version}$Bundle-SymbolicName=com.google.auth.google-auth-library-oauth2-http&amp;Bundle-Version=${google-cloud-auth-library-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:com.google.cloud/google-cloud-core/${google-cloud-core-version}$Bundle-SymbolicName=com.google.cloud.google-cloud-core&amp;Bundle-Version=${google-cloud-core-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:com.google.cloud/google-cloud-core-http/${google-cloud-core-version}$Bundle-SymbolicName=com.google.cloud.google-cloud-core-http&amp;Bundle-Version=${google-cloud-core-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:com.google.cloud/google-cloud-storage/${google-cloud-storage.tesb.version}$Bundle-SymbolicName=com.google.cloud.google-cloud-storage&amp;Bundle-Version=${google-cloud-storage.tesb.version}</bundle>
+    <bundle dependency='true'>wrap:mvn:com.google.http-client/google-http-client-appengine/${google-cloud-http-client-version}$Bundle-SymbolicName=com.google.http-client.google-http-client-appengine&amp;Bundle-Version=${google-cloud-http-client-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:com.google.http-client/google-http-client-jackson2/${google-cloud-http-client-version}$Bundle-SymbolicName=com.google.http-client.google-http-client-jackson2&amp;Bundle-Version=${google-cloud-http-client-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:io.grpc/grpc-context/${grpc-context.tesb.version}$Bundle-SymbolicName=io.grpc.grpc-context&amp;Bundle-Version=${grpc-context.tesb.version}</bundle>
+    <!-- google-api-client -->
+    <bundle dependency='true'>mvn:org.apache.httpcomponents/httpclient-osgi/${httpclient4.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:org.apache.httpcomponents/httpcore-osgi/${httpcore4.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.google.guava/failureaccess/1.0.1</bundle>
+    <bundle dependency='true'>mvn:com.google.guava/guava/${google-cloud-guava.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.google.http-client/google-http-client-apache-v2/${google-cloud-http-client-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:com.google.http-client/google-http-client/${google-cloud-http-client-version}$Bundle-SymbolicName=com.google.http-client.google-http-client&amp;Bundle-Version=${google-cloud-http-client-version}&amp;overwrite=merge&amp;Import-Package=com.google.common.*;version="${google-cloud-guava.tesb.version-range}",*</bundle>
+    <bundle dependency='true'>wrap:mvn:com.google.http-client/google-http-client-gson/${google-cloud-http-client-version}$Bundle-SymbolicName=com.google.http-client.google-http-client-gson&amp;Bundle-Version=${google-cloud-http-client-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:com.google.oauth-client/google-oauth-client/${google-cloud-oauth-client-version}$Bundle-SymbolicName=com.google.oauth-client.google-oauth-client&amp;Bundle-Version=${google-cloud-oauth-client-version}&amp;overwrite=merge&amp;Import-Package=com.google.common.*;version="${google-cloud-guava.tesb.version-range}",*</bundle>
+    <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-api/${google-http-client-opencensus-api-version}$Bundle-SymbolicName=io.opencensus.opencensus-api&amp;Bundle-Version=${google-http-client-opencensus-api-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-contrib-http-util/${google-http-client-opencensus-api-version}$Bundle-SymbolicName=io.opencensus.opencensus-contrib-http-util&amp;Bundle-Version=${google-http-client-opencensus-api-version}</bundle>
+    <bundle>wrap:mvn:com.google.api-client/google-api-client/${google-cloud-api-client-version}$Bundle-SymbolicName=com.google.api-client.google-api-client&amp;Bundle-Version=${google-cloud-api-client-version}&amp;overwrite=merge&amp;Import-Package=com.google.common.*;version="${google-cloud-guava.tesb.version-range}",*</bundle>
+    <bundle>mvn:org.apache.camel/camel-google-storage/${upstream.version}</bundle>
+  </feature>
   <feature name='camel-grape' version='${upstream.version}' start-level='50'>
     <feature version='${upstream.version}'>camel-core</feature>
     <bundle dependency='true'>mvn:org.codehaus.groovy/groovy/${groovy-version}</bundle>
