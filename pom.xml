@@ -98,7 +98,7 @@
     <properties>
 
         <upstream.version>3.20.9</upstream.version>
-        <camel.features.tesb.version>3.20.9.20240508</camel.features.tesb.version>
+        <camel.features.tesb.version>3.20.9.20240515</camel.features.tesb.version>
         <camel-base.tesb.version>3.20.9.20240425</camel-base.tesb.version>
         <camel-support.tesb.version>3.20.9.20240425</camel-support.tesb.version>
         <camel-cassandraql.tesb.version>3.20.9.20240425</camel-cassandraql.tesb.version>
@@ -108,6 +108,7 @@
         <camel-sql.tesb.version>3.20.9.20240425</camel-sql.tesb.version>
         <camel-zookeeper.tesb.version>3.20.9.20240425</camel-zookeeper.tesb.version>
         <camel-zookeeper-master.tesb.version>3.20.9.20240425</camel-zookeeper-master.tesb.version>
+        <camel.tesb.version-range>[3.20,3.21)</camel.tesb.version-range>
 
         <activemq.tesb.version>5.17.6</activemq.tesb.version>
         <activemq-osgi.tesb.version>5.17.6.20231031</activemq-osgi.tesb.version>
@@ -659,6 +660,7 @@
                             <camel-sql.tesb.version>${camel-sql.tesb.version}</camel-sql.tesb.version>
                             <camel-zookeeper.tesb.version>${camel-zookeeper.tesb.version}</camel-zookeeper.tesb.version>
                             <camel-zookeeper-master.tesb.version>${camel-zookeeper-master.tesb.version}</camel-zookeeper-master.tesb.version>
+                            <camel.tesb.version-range>${camel.tesb.version-range}</camel.tesb.version-range>
                             <woodstox-core.tesb.version>${woodstox-core.tesb.version}</woodstox-core.tesb.version>
                             <jaxb-bundle.tesb.version>${jaxb-bundle.tesb.version}</jaxb-bundle.tesb.version>
                             <jdom-bundle.tesb.version>${jdom-bundle.tesb.version}</jdom-bundle.tesb.version>
