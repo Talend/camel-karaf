@@ -710,6 +710,7 @@
     <bundle dependency='true'>mvn:commons-codec/commons-codec/${commons-codec.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.bouncycastle/bcpg-jdk18on/${bouncycastle.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.bouncycastle/bcprov-jdk18on/${bouncycastle.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:org.bouncycastle/bcutil-jdk18on/${bouncycastle.tesb.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-crypto/${upstream.version}</bundle>
   </feature>
   <feature name='camel-csv' version='${upstream.version}' start-level='50'>
@@ -974,6 +975,7 @@
     <bundle dependency='true'>mvn:javax.servlet/javax.servlet-api/${javax-servlet-api-version}</bundle>
     <bundle dependency='true'>mvn:org.bouncycastle/bcprov-jdk18on/${bouncycastle.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.bouncycastle/bcpg-jdk18on/${bouncycastle.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:org.bouncycastle/bcutil-jdk18on/${bouncycastle.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.apache.httpcomponents/httpcore-osgi/${httpcore4.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.apache.httpcomponents/httpclient-osgi/${httpclient4.tesb.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-git/${upstream.version}</bundle>

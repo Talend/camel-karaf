@@ -98,7 +98,7 @@
     <properties>
 
         <upstream.version>3.20.9</upstream.version>
-        <camel.features.tesb.version>3.20.9.20240515</camel.features.tesb.version>
+        <camel.features.tesb.version>3.20.9.20240520</camel.features.tesb.version>
         <camel-base.tesb.version>3.20.9.20240425</camel-base.tesb.version>
         <camel-support.tesb.version>3.20.9.20240425</camel-support.tesb.version>
         <camel-cassandraql.tesb.version>3.20.9.20240425</camel-cassandraql.tesb.version>
@@ -118,7 +118,7 @@
         <apache-mime4j.tesb.version>0.8.11</apache-mime4j.tesb.version>
         <avro.tesb.version>1.11.3</avro.tesb.version>
         <avro-jackson.tesb.version>${jackson2.tesb.version}</avro-jackson.tesb.version>
-        <bouncycastle.tesb.version>1.77</bouncycastle.tesb.version>
+        <bouncycastle.tesb.version>1.78.1</bouncycastle.tesb.version>
         <braintree-jackson2.tesb.version>${jackson2.tesb.version}</braintree-jackson2.tesb.version>
         <californium.tesb.version>2.7.4</californium.tesb.version>
         <californium-element-connector-tcp-netty.tesb.version>2.7.2</californium-element-connector-tcp-netty.tesb.version>
