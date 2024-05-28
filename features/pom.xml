@@ -79,7 +79,7 @@
                         <feature>framework</feature>
                     </framework>
                     <features>
-                        <feature>camel*</feature>
+                        <feature>camel-azure-storage-blob</feature>
                     </features>
                 </configuration>
                 <executions>
