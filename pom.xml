@@ -98,7 +98,7 @@
     <properties>
 
         <upstream.version>3.20.9</upstream.version>
-        <camel.features.tesb.version>3.20.9.20240520</camel.features.tesb.version>
+        <camel.features.tesb.version>3.20.9.20240618</camel.features.tesb.version>
         <camel-base.tesb.version>3.20.9.20240425</camel-base.tesb.version>
         <camel-support.tesb.version>3.20.9.20240425</camel-support.tesb.version>
         <camel-cassandraql.tesb.version>3.20.9.20240425</camel-cassandraql.tesb.version>
@@ -139,6 +139,7 @@
         <commons-net.tesb.version>3.9.0</commons-net.tesb.version>
         <curator.tesb.version>5.5.0</curator.tesb.version>
         <datastax-native-protocol.tesb.version>1.5.1</datastax-native-protocol.tesb.version>
+        <djl.tesb.version>0.28.0</djl.tesb.version>
         <gson.tesb.version>2.10.1</gson.tesb.version>
         <github-gson.tesb.version>${gson.tesb.version}</github-gson.tesb.version>
         <olingo2-gson.tesb.version>${gson.tesb.version}</olingo2-gson.tesb.version>
@@ -718,6 +719,7 @@
                             <commons-io.tesb.version>${commons-io.tesb.version}</commons-io.tesb.version>
                             <commons-lang3.tesb.version>${commons-lang3.tesb.version}</commons-lang3.tesb.version>
                             <commons-net.tesb.version>${commons-net.tesb.version}</commons-net.tesb.version>
+                            <djl.tesb.version>${djl.tesb.version}</djl.tesb.version>
                             <log4j2.tesb.version>${log4j2.tesb.version}</log4j2.tesb.version>
                             <jna.tesb.version>${jna.tesb.version}</jna.tesb.version>
                             <bouncycastle.tesb.version>${bouncycastle.tesb.version}</bouncycastle.tesb.version>

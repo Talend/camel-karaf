@@ -761,10 +761,10 @@
   </feature>
   <feature name='camel-djl' version='${upstream.version}' start-level='50'>
     <feature version='${camel.tesb.version-range}'>camel-core</feature>
-    <bundle dependency='true'>wrap:mvn:ai.djl/api/${djl-version}</bundle>
-    <bundle dependency='true'>wrap:mvn:ai.djl/model-zoo/${djl-version}</bundle>
-    <bundle dependency='true'>wrap:mvn:ai.djl.mxnet/mxnet-model-zoo/${djl-version}</bundle>
-    <bundle dependency='true'>wrap:mvn:ai.djl.mxnet/mxnet-engine/${djl-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:ai.djl/api/${djl.tesb.version}</bundle>
+    <bundle dependency='true'>wrap:mvn:ai.djl/model-zoo/${djl.tesb.version}</bundle>
+    <bundle dependency='true'>wrap:mvn:ai.djl.mxnet/mxnet-model-zoo/${djl.tesb.version}</bundle>
+    <bundle dependency='true'>wrap:mvn:ai.djl.mxnet/mxnet-engine/${djl.tesb.version}</bundle>
     <bundle dependency='true'>wrap:mvn:ai.djl.mxnet/mxnet-native-auto/${djl-mxnet-native-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-djl/${upstream.version}</bundle>
   </feature>
