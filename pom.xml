@@ -98,7 +98,7 @@
     <properties>
 
         <upstream.version>3.20.9</upstream.version>
-        <camel.features.tesb.version>3.20.9.20240618</camel.features.tesb.version>
+        <camel.features.tesb.version>3.20.9.20240725</camel.features.tesb.version>
         <camel-base.tesb.version>3.20.9.20240425</camel-base.tesb.version>
         <camel-support.tesb.version>3.20.9.20240425</camel-support.tesb.version>
         <camel-cassandraql.tesb.version>3.20.9.20240425</camel-cassandraql.tesb.version>
@@ -133,8 +133,8 @@
         <docker-java-commons-compress.tesb.version>${commons-compress.tesb.version}</docker-java-commons-compress.tesb.version>
         <minio-commons-compress.tesb.version>${commons-compress.tesb.version}</minio-commons-compress.tesb.version>
         <!-- <commons-io1.tesb.version>1.4</commons-io1.tesb.version> -->
-        <commons-codec.tesb.version>1.16.0</commons-codec.tesb.version>
-        <commons-io.tesb.version>2.14.0</commons-io.tesb.version>
+        <commons-codec.tesb.version>1.17.0</commons-codec.tesb.version>
+        <commons-io.tesb.version>2.16.1</commons-io.tesb.version>
         <commons-lang3.tesb.version>3.14.0</commons-lang3.tesb.version>
         <commons-net.tesb.version>3.9.0</commons-net.tesb.version>
         <curator.tesb.version>5.5.0</curator.tesb.version>
@@ -171,7 +171,7 @@
         <jaxb-bundle.tesb.version>2.3.2_3</jaxb-bundle.tesb.version>
         <jdom-bundle.tesb.version>2.0.6.1_1</jdom-bundle.tesb.version>
         <jettison.tesb.version>1.5.4</jettison.tesb.version>
-        <jetty.tesb.version>9.4.54.v20240208</jetty.tesb.version>
+        <jetty.tesb.version>9.4.55.v20240627</jetty.tesb.version>
         <jgit.tesb.version>6.6.1.202309021850-r</jgit.tesb.version>
         <jna.tesb.version>5.13.0</jna.tesb.version>
         <!-- <johnzon.tesb.version>1.2.21</johnzon.tesb.version> -->
@@ -182,7 +182,7 @@
         <kudu.tesb.version>1.17.0</kudu.tesb.version>
         <libthrift-bundle.tesb.version>0.18.1_1</libthrift-bundle.tesb.version>
         <log4j2.tesb.version>2.20.0</log4j2.tesb.version>
-        <netty.tesb.version>4.1.108.Final</netty.tesb.version>
+        <netty.tesb.version>4.1.111.Final</netty.tesb.version>
         <opensaml-bundle.tesb.version>3.4.6_3</opensaml-bundle.tesb.version>
         <pgjdbc-driver.tesb.version>42.6.1</pgjdbc-driver.tesb.version>
         <protobuf.tesb.version>3.21.12</protobuf.tesb.version>
