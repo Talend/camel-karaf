@@ -210,6 +210,8 @@
         <zipkin-libthrift.tesb.version>0.20.0</zipkin-libthrift.tesb.version>
         <zookeeper-curator.tesb.version-range>[4.3,6)</zookeeper-curator.tesb.version-range>
         <kafka-bundle.tesb.version>3.4.0_1-tesb1</kafka-bundle.tesb.version>
+        <xerces-bundle.tesb.version>2.12.2.tesb1_1</xerces-bundle.tesb.version>
+        <xalan-bundle.tesb.version>2.7.3_3</xalan-bundle.tesb.version>
 
         <!-- unify the encoding for all the modules -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -759,6 +761,8 @@
                             <zipkin-reporter.tesb.version>${zipkin-reporter.tesb.version}</zipkin-reporter.tesb.version>
                             <brave-zipkin.tesb.version>${brave-zipkin.tesb.version}</brave-zipkin.tesb.version>
                             <zipkin-libthrift.tesb.version>${zipkin-libthrift.tesb.version}</zipkin-libthrift.tesb.version>
+                            <xerces-bundle.tesb.version>${xerces-bundle.tesb.version}</xerces-bundle.tesb.version>
+                            <xalan-bundle.tesb.version>${xalan-bundle.tesb.version}</xalan-bundle.tesb.version>
                             <zookeeper-curator.tesb.version-range>${zookeeper-curator.tesb.version-range}</zookeeper-curator.tesb.version-range>
                         </properties>
                     </configuration>
