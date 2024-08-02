@@ -1873,10 +1873,10 @@
   <feature name='camel-opentelemetry' version='${upstream.version}' start-level='50'>
     <feature version='${camel.tesb.version-range}'>camel-core</feature>
     <feature version='${camel.tesb.version-range}'>camel-tracing</feature>
-    <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-api/${opentelemetry-version}</bundle>
-    <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-sdk/${opentelemetry-version}</bundle>
-    <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-context/${opentelemetry-version}</bundle>
-    <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-semconv/${opentelemetry-alpha-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-api/${opentelemetry.tesb.version}$Bundle-SymbolicName=opentelemetry-api&amp;Bundle-Version=${opentelemetry.tesb.version}</bundle>
+    <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-sdk/${opentelemetry.tesb.version}$Bundle-SymbolicName=opentelemetry-sdk&amp;Bundle-Version=${opentelemetry.tesb.version}</bundle>
+    <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-context/${opentelemetry.tesb.version}$Bundle-SymbolicName=opentelemetry-context&amp;Bundle-Version=${opentelemetry.tesb.version}</bundle>
+    <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-semconv/${opentelemetry-alpha.tesb.version}$Bundle-SymbolicName=opentelemetry-semconv&amp;Bundle-Version=${opentelemetry-alpha.tesb.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-opentelemetry/${upstream.version}</bundle>
   </feature>
   <feature name='camel-paho' version='${upstream.version}' start-level='50'>
