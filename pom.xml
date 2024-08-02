@@ -182,8 +182,11 @@
         <kudu.tesb.version>1.17.0</kudu.tesb.version>
         <libthrift-bundle.tesb.version>0.18.1_1</libthrift-bundle.tesb.version>
         <log4j2.tesb.version>2.20.0</log4j2.tesb.version>
+        <metrics.tesb.version>4.2.26</metrics.tesb.version>
         <netty.tesb.version>4.1.111.Final</netty.tesb.version>
         <opensaml-bundle.tesb.version>3.4.6_3</opensaml-bundle.tesb.version>
+        <opentelemetry.tesb.version>1.34.1</opentelemetry.tesb.version>
+        <opentelemetry-alpha.tesb.version>1.26.0-alpha</opentelemetry-alpha.tesb.version>
         <pgjdbc-driver.tesb.version>42.6.1</pgjdbc-driver.tesb.version>
         <protobuf.tesb.version>3.21.12</protobuf.tesb.version>
         <qpid-jms-client.tesb.version>1.9.0</qpid-jms-client.tesb.version>
@@ -729,6 +732,7 @@
                             <jakarta-el.tesb.version>${jakarta-el.tesb.version}</jakarta-el.tesb.version>
                             <jakarta-validation-api.tesb.version>${jakarta-validation-api.tesb.version}</jakarta-validation-api.tesb.version>
                             <libthrift-bundle.tesb.version>${libthrift-bundle.tesb.version}</libthrift-bundle.tesb.version>
+                            <metrics.tesb.version>${metrics.tesb.version}</metrics.tesb.version>
                             <kudu.tesb.version>${kudu.tesb.version}</kudu.tesb.version>
                             <xmlgraphics-batik.tesb.version>${xmlgraphics-batik.tesb.version}</xmlgraphics-batik.tesb.version>
                             <californium.tesb.version>${californium.tesb.version}</californium.tesb.version>
@@ -751,6 +755,8 @@
                             <!-- <apache-drill.tesb.version>${apache-drill.tesb.version}</apache-drill.tesb.version> -->
                             <apache-mime4j.tesb.version>${apache-mime4j.tesb.version}</apache-mime4j.tesb.version>
                             <opensaml-bundle.tesb.version>${opensaml-bundle.tesb.version}</opensaml-bundle.tesb.version>
+                            <opentelemetry.tesb.version>${opentelemetry.tesb.version}</opentelemetry.tesb.version>
+                            <opentelemetry-alpha.tesb.version>${opentelemetry-alpha.tesb.version}</opentelemetry-alpha.tesb.version>
                             <pgjdbc-driver.tesb.version>${pgjdbc-driver.tesb.version}</pgjdbc-driver.tesb.version>
                             <vertx.tesb.version>${vertx.tesb.version}</vertx.tesb.version>
                             <spring.tesb.version-range>${spring.tesb.version-range}</spring.tesb.version-range>
