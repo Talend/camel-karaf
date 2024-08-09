@@ -69,7 +69,7 @@
                 <configuration>
                     <instructions>
                         <Export-Package>
-                            org.apache.karaf.camel.itests;version=${project.version},
+                            org.apache.karaf.camel.itests;version=${upstream.version},
                         </Export-Package>
                         <Import-Package>
                             org.apache.karaf.itests,
@@ -138,7 +138,7 @@
             <groupId>org.apache.camel.karaf</groupId>
             <artifactId>camel-core-osgi</artifactId>
             <scope>provided</scope>
-            <version>${project.version}</version>
+            <version>${upstream.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.camel</groupId>
@@ -155,31 +155,31 @@
         <dependency>
             <groupId>org.apache.camel.karaf</groupId>
             <artifactId>camel-core-model</artifactId>
-            <version>${project.version}</version>
+            <version>${upstream.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.camel.karaf</groupId>
             <artifactId>camel-core-engine</artifactId>
-            <version>${project.version}</version>
+            <version>${upstream.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.camel.karaf</groupId>
             <artifactId>camel-base-engine</artifactId>
-            <version>${project.version}</version>
+            <version>${upstream.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.camel.karaf</groupId>
             <artifactId>camel-mock</artifactId>
-            <version>${project.version}</version>
+            <version>${upstream.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.camel.karaf</groupId>
             <artifactId>camel-blueprint</artifactId>
-            <version>${project.version}</version>
+            <version>${upstream.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>

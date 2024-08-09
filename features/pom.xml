@@ -70,7 +70,7 @@
             <plugin>
                 <groupId>org.apache.camel.karaf</groupId>
                 <artifactId>camel-karaf-feature-maven-plugin</artifactId>
-                <version>${project.version}</version>
+                <version>${upstream.version}</version>
                 <executions>
                     <execution>
                         <goals>
