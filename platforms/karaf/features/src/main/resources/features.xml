@@ -111,8 +111,9 @@
     <feature version='${spring-version-range}'>spring-tx</feature>
     <feature version='${camel.tesb.version-range}'>camel-core</feature>
     <bundle>mvn:org.apache.camel/camel-core-xml/${upstream.version}</bundle>
-    <bundle>mvn:org.apache.camel/camel-spring/${upstream.version}</bundle>
+    <bundle>mvn:org.apache.camel/camel-spring/${camel-spring.tesb.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-spring-xml/${upstream.version}</bundle>
+    <bundle>mvn:org.apache.camel/camel-cron/${upstream.version}</bundle>
   </feature>
 
   <!-- the following features are sorted A..Z -->
