@@ -100,7 +100,7 @@
                         <feature>framework</feature>
                     </framework>
                     <features>
-                        <feature>camel*</feature>
+                        <feature>camel|camel-(?!(robotframework|other))*</feature>
                     </features>
                 </configuration>
                 <executions>

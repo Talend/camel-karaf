@@ -303,7 +303,7 @@
         <feature version='${camel-osgi-spring-version}'>spring-tx</feature>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <bundle>mvn:org.apache.camel.karaf/camel-core-xml/${upstream.version}</bundle>
-        <bundle>mvn:org.apache.camel.karaf/camel-spring/${upstream.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-spring/${camel-spring.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-spring-xml/${upstream.version}</bundle>
     </feature>
 
@@ -865,7 +865,7 @@
         <bundle>mvn:org.apache.camel.karaf/camel-attachments/${upstream.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-http-base/${upstream.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-http-common/${upstream.version}</bundle>
-        <bundle>mvn:org.apache.camel.karaf/camel-cxf-all/${upstream.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-cxf-all/${camel-cxf-all.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-cxf-blueprint/${upstream.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-cxf-transport-blueprint/${upstream.version}</bundle>
     </feature>
