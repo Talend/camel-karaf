@@ -95,6 +95,13 @@
         <camel-cxf-rest.tesb.version>4.7.0.20240820</camel-cxf-rest.tesb.version>
         <camel-spring.tesb.version>4.7.0.20240820</camel-spring.tesb.version>
 
+        <jetty11.tesb.version>11.0.21</jetty11.tesb.version>
+        <jetty12.tesb.version>12.0.10</jetty12.tesb.version>
+        <jetty.tesb.version>${jetty12.tesb.version}</jetty.tesb.version>
+        <jetty11.tesb.version-range>[11,12)</jetty11.tesb.version-range>
+        <jetty12.tesb.version-range>[12,13)</jetty12.tesb.version-range>
+        <jetty.tesb.version-range>${jetty12.tesb.version-range}</jetty.tesb.version-range>
+
         <jdk-version>17</jdk-version>
 
         <camel-version>4.7.0</camel-version>
@@ -673,6 +680,12 @@
                             <camel-cxf-soap.tesb.version>${camel-cxf-soap.tesb.version}</camel-cxf-soap.tesb.version>
                             <camel-cxf-rest.tesb.version>${camel-cxf-rest.tesb.version}</camel-cxf-rest.tesb.version>
                             <camel-spring.tesb.version>${camel-spring.tesb.version}</camel-spring.tesb.version>
+                            <jetty11.tesb.version>${jetty11.tesb.version}</jetty11.tesb.version>
+                            <jetty12.tesb.version>${jetty12.tesb.version}</jetty12.tesb.version>
+                            <jetty.tesb.version>${jetty.tesb.version}</jetty.tesb.version>
+                            <jetty11.tesb.version-range>${jetty11.tesb.version-range}</jetty11.tesb.version-range>
+                            <jetty12.tesb.version-range>${jetty12.tesb.version-range}</jetty12.tesb.version-range>
+                            <jetty.tesb.version-range>${jetty.tesb.version-range}</jetty.tesb.version-range>
                         </properties>
                     </configuration>
                     <executions>
