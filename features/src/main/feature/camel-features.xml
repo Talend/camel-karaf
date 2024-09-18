@@ -138,8 +138,8 @@
     </feature>
 
     <feature name="http-client" version="${httpclient-version}">
-        <bundle dependency="true">wrap:mvn:org.apache.httpcomponents.core5/httpcore5/${httpclient-version}</bundle>
-        <bundle dependency="true">wrap:mvn:org.apache.httpcomponents.client5/httpclient5/${httpclient-version}</bundle>
+        <bundle dependency="true">wrap:mvn:org.apache.httpcomponents.core5/httpcore5/${httpclient-version}$Bundle-SymbolicName=org.apache.httpcore5&amp;Bundle-Version=${httpclient-version}&amp;</bundle>
+        <bundle dependency="true">wrap:mvn:org.apache.httpcomponents.client5/httpclient5/${httpclient-version}$Bundle-SymbolicName=org.apache.httpclient5&amp;Bundle-Version=${httpclient-version}&amp;</bundle>
     </feature>
 
     <feature name="netty" version="${netty-version}">
@@ -221,6 +221,12 @@
     <feature name="guava" version="${guava32-version}">
         <bundle dependency='true'>mvn:com.google.guava/guava/${guava32-version}</bundle>
         <bundle dependency='true'>mvn:com.google.guava/failureaccess/${auto-detect-version}</bundle>
+    </feature>
+
+    <!-- Wrapped zookeeper jars. -->
+    <feature name='zookeeper-core' version='${zookeeper-version}' start-level='50'>
+        <bundle dependency='true'>wrap:mvn:org.apache.zookeeper/zookeeper/${zookeeper-version}$Bundle-SymbolicName=org.apache.zookeeper&amp;Bundle-Version=${zookeeper-version}&amp;Export-Package=org.apache.zookeeper;version=${zookeeper-version},org.apache.zookeeper.*;version=${zookeeper-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:org.apache.zookeeper/zookeeper-jute/${zookeeper-version}$Bundle-SymbolicName=org.apache.zookeeper-jute&amp;Bundle-Version=${zookeeper-version}&amp;Fragment-Host=org.apache.zookeeper&amp;Export-Package=org.apache.jute;version=${zookeeper-version},org.apache.zookeeper.*;version=${zookeeper-version}</bundle>
     </feature>
 
     <!-- Apache Camel core features -->
@@ -3007,8 +3013,9 @@
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version='${camel-osgi-jackson2-version}'>jackson</feature>
         <feature version="[32,33)">guava</feature>
-        <bundle dependency='true'>wrap:mvn:org.apache.zookeeper/zookeeper/${zookeeper-version}$Export-Package=org.apache.zookeeper*;version=${zookeeper-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:org.apache.zookeeper/zookeeper-jute/${zookeeper-version}$Export-Package=org.apache.*;version=${zookeeper-version}</bundle>
+        <feature version="[3,4)">zookeeper-core</feature>
+        <!-- <bundle dependency='true'>wrap:mvn:org.apache.zookeeper/zookeeper/${zookeeper-version}$Export-Package=org.apache.zookeeper*;version=${zookeeper-version}</bundle> -->
+        <!-- <bundle dependency='true'>wrap:mvn:org.apache.zookeeper/zookeeper-jute/${zookeeper-version}$Export-Package=org.apache.*;version=${zookeeper-version}</bundle> -->
         <bundle dependency='true'>mvn:org.apache.curator/curator-client/${curator-version}</bundle>
         <bundle dependency='true'>mvn:org.apache.curator/curator-framework/${curator-version}</bundle>
         <bundle dependency='true'>mvn:org.apache.curator/curator-recipes/${curator-version}</bundle>
@@ -3019,8 +3026,9 @@
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version='${camel-osgi-jackson2-version}'>jackson</feature>
         <feature version="[32,33)">guava</feature>
-        <bundle dependency='true'>wrap:mvn:org.apache.zookeeper/zookeeper/${zookeeper-version}$Export-Package=org.apache.zookeeper*;version=${zookeeper-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:org.apache.zookeeper/zookeeper-jute/${zookeeper-version}$Export-Package=org.apache.*;version=${zookeeper-version}</bundle>
+        <feature version="[3,4)">zookeeper-core</feature>
+        <!-- <bundle dependency='true'>wrap:mvn:org.apache.zookeeper/zookeeper/${zookeeper-version}$Export-Package=org.apache.zookeeper*;version=${zookeeper-version}</bundle> -->
+        <!-- <bundle dependency='true'>wrap:mvn:org.apache.zookeeper/zookeeper-jute/${zookeeper-version}$Export-Package=org.apache.*;version=${zookeeper-version}</bundle> -->
         <bundle dependency='true'>mvn:org.apache.curator/curator-client/${curator-version}</bundle>
         <bundle dependency='true'>mvn:org.apache.curator/curator-framework/${curator-version}</bundle>
         <bundle dependency='true'>mvn:org.apache.curator/curator-recipes/${curator-version}</bundle>
