@@ -433,7 +433,30 @@
     <bundle dependency='true'>mvn:org.reactivestreams/reactive-streams/${reactive-streams-version}</bundle>
     <bundle dependency='true'>mvn:io.projectreactor/reactor-core/${reactor-version}</bundle>
     <bundle dependency='true'>mvn:commons-io/commons-io/${commons-io.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.azure-core/${azure-core-bundle-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:io.micrometer/micrometer-core/${micrometer-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:com.azure/azure-json/${azure-json-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:com.azure/azure-xml/${azure-xml-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:com.azure/azure-core-http-netty/${azure-core-http-netty-version}$SPI-Provider=com.azure.core.http.HttpClientProvider&amp;Import-Package=reactor.netty.http.client;resolution:=mandatory,*</bundle>
+    <bundle dependency='true'>mvn:io.projectreactor.netty/reactor-netty-core/1.0.23</bundle>
+    <bundle dependency='true'>mvn:io.projectreactor.netty/reactor-netty-http/1.0.23</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-resolver/${netty.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-resolver-dns/${netty.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-common/${netty.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-buffer/${netty.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-transport/${netty.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-handler/${netty.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-transport-native-epoll/${netty.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-transport-classes-epoll/${netty.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-transport-native-unix-common/${netty.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-transport-native-kqueue/${netty.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-transport-classes-kqueue/${netty.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-codec-dns/${netty.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-codec-socks/${netty.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-handler-proxy/${netty.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-codec/${netty.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-codec-http/${netty.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-codec-http2/${netty.tesb.version}</bundle>
+    <bundle dependency='true'>wrap:mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.azure-core/${azure-core-bundle-version}$SPI-Consumer=*&amp;overwrite=merge&amp;Import-Package=com.azure.core.http.netty;resolution:=mandatory,com.fasterxml.jackson.*;resolution:=mandatory;version="[2.9,3)",reactor.*;resolution:=optional;version="[3,4)",org.reactivestreams;resolution:=optional;version="[1.0,2)",org.slf4j*;resolution:=optional;version="[1.7,2)",com.azure.json,com.azure.xml,javax.xml.stream</bundle>
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.azure-storage-common/${azure-storage-common-bundle-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.azure-storage-queue/${azure-storage-queue-bundle-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.azure-identity/${azure-identity-bundle-version}</bundle>
