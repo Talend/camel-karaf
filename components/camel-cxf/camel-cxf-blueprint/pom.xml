@@ -33,8 +33,8 @@
     <properties>
         <firstVersion>3.2.0</firstVersion>
         <camel.osgi.export>
-            org.apache.camel.component.cxf.blueprint.helpers;version=${project.version},
-            org.apache.camel.component.cxf.blueprint.jaxrs;version=${project.version},
+            org.apache.camel.component.cxf.blueprint.helpers;version=${upstream.version},
+            org.apache.camel.component.cxf.blueprint.jaxrs;version=${upstream.version},
         </camel.osgi.export>
         <camel-osgi-camel-import>
             org.apache.camel.component.cxf.helpers;${camel-osgi-import-camel-version},
@@ -70,14 +70,14 @@
         <dependency>
             <groupId>org.apache.camel.karaf</groupId>
             <artifactId>camel-blueprint</artifactId>
-            <version>${project.version}</version>
+            <version>${upstream.version}</version>
             <scope>provided</scope>
             <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>org.apache.camel.karaf</groupId>
             <artifactId>camel-cxf-all</artifactId>
-            <version>${project.version}</version>
+            <version>${upstream.version}</version>
             <scope>provided</scope>
             <optional>true</optional>
         </dependency>

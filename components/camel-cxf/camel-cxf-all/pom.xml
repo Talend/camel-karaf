@@ -31,37 +31,39 @@
     <artifactId>camel-cxf-all</artifactId>
     <packaging>bundle</packaging>
     <name>Apache Camel :: Karaf :: Components :: CXF :: All in one</name>
+    <version>${revision}</version>
 
     <properties>
+        <revision>${camel-cxf-all.tesb.version}</revision>
         <camel.osgi.export>
-            org.apache.camel.component.cxf.osgi;version=${project.version},
+            org.apache.camel.component.cxf.osgi;version=${upstream.version},
             org.apache.camel.component.cxf.common;version=${camel-version},
             org.apache.camel.component.cxf.common.header;version=${camel-version},
             org.apache.camel.component.cxf.common.message;version=${camel-version},
             org.apache.camel.component.cxf.converter;version=${camel-version},
             org.apache.camel.component.cxf.util;version=${camel-version},
-            org.apache.camel.component.cxf.bus.blueprint;version=${project.version},
-            org.apache.camel.component.cxf.bus.osgi;version=${project.version},
-            org.apache.camel.component.cxf.configuration.blueprint;version=${project.version},
-            org.apache.camel.component.cxf.helpers;version=${project.version},
+            org.apache.camel.component.cxf.bus.blueprint;version=${upstream.version},
+            org.apache.camel.component.cxf.bus.osgi;version=${upstream.version},
+            org.apache.camel.component.cxf.configuration.blueprint;version=${upstream.version},
+            org.apache.camel.component.cxf.helpers;version=${upstream.version},
             org.apache.camel.component.cxf.jaxrs;version="${camel-version}",
-            org.apache.camel.component.cxf.ext.logging.osgi;version=${project.version},
-            org.apache.camel.component.cxf.jaxrs.blueprint;version=${project.version},
-            org.apache.camel.component.cxf.jaxws.blueprint;version=${project.version},
-            org.apache.camel.component.cxf.frontend.blueprint;version=${project.version},
-            org.apache.camel.component.cxf.jaxrs.client.blueprint;version=${project.version},
-            org.apache.camel.component.cxf.transport.http.osgi;version=${project.version},
-            org.apache.camel.component.cxf.transport.http.blueprint;version=${project.version},
-            org.apache.camel.component.cxf.servlet.blueprint;version=${project.version},
-            org.apache.camel.component.cxf.ws.addressing.blueprint;version=${project.version},
-            org.apache.camel.component.cxf.ws.policy.blueprint;version=${project.version},
+            org.apache.camel.component.cxf.ext.logging.osgi;version=${upstream.version},
+            org.apache.camel.component.cxf.jaxrs.blueprint;version=${upstream.version},
+            org.apache.camel.component.cxf.jaxws.blueprint;version=${upstream.version},
+            org.apache.camel.component.cxf.frontend.blueprint;version=${upstream.version},
+            org.apache.camel.component.cxf.jaxrs.client.blueprint;version=${upstream.version},
+            org.apache.camel.component.cxf.transport.http.osgi;version=${upstream.version},
+            org.apache.camel.component.cxf.transport.http.blueprint;version=${upstream.version},
+            org.apache.camel.component.cxf.servlet.blueprint;version=${upstream.version},
+            org.apache.camel.component.cxf.ws.addressing.blueprint;version=${upstream.version},
+            org.apache.camel.component.cxf.ws.policy.blueprint;version=${upstream.version},
             org.apache.camel.component.cxf.feature;version=${camel-version},
             org.apache.camel.component.cxf.interceptors;version=${camel-version},
             org.apache.camel.component.cxf.jaxws;version=${camel-version},
             org.apache.camel.component.cxf.transport;version=${camel-version},
             org.apache.camel.component.cxf.transport.header;version=${camel-version},
             org.apache.camel.component.cxf.transport.message;version=${camel-version},
-            org.apache.camel.component.cxf.binding.soap.blueprint;version=${project.version},
+            org.apache.camel.component.cxf.binding.soap.blueprint;version=${upstream.version},
             org.apache.cxf*;version=${cxf-version},
         </camel.osgi.export>
         <camel.osgi.activator>org.apache.camel.component.cxf.osgi.MainActivator</camel.osgi.activator>
@@ -170,7 +172,7 @@
         <dependency>
             <groupId>org.apache.camel</groupId>
             <artifactId>camel-cxf-rest</artifactId>
-            <version>${camel-version}</version>
+            <version>${camel-cxf-rest.tesb.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.camel</groupId>
@@ -324,7 +326,7 @@
         <dependency>
             <groupId>org.apache.camel</groupId>
             <artifactId>camel-cxf-soap</artifactId>
-            <version>${camel-version}</version>
+            <version>${camel-cxf-soap.tesb.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.camel</groupId>

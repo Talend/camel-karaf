@@ -31,8 +31,10 @@
     <artifactId>apache-camel</artifactId>
     <packaging>pom</packaging>
     <name>Apache Camel :: Karaf :: Features</name>
+    <version>${revision}</version>
 
     <properties>
+        <revision>${camel-features.tesb.version}</revision>
         <spi-consumer>SPI-Consumer=*</spi-consumer>
     </properties>
 
@@ -70,7 +72,7 @@
             <plugin>
                 <groupId>org.apache.camel.karaf</groupId>
                 <artifactId>camel-karaf-feature-maven-plugin</artifactId>
-                <version>${project.version}</version>
+                <version>${upstream.version}</version>
                 <executions>
                     <execution>
                         <goals>
@@ -100,7 +102,7 @@
                         <feature>framework</feature>
                     </framework>
                     <features>
-                        <feature>camel*</feature>
+                        <feature>camel|camel-(?!(robotframework|other))*</feature>
                     </features>
                 </configuration>
                 <executions>

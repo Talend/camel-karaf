@@ -74,11 +74,11 @@
     </modules>
 
     <scm>
-        <connection>scm:git:https://github.com/apache/camel-karaf</connection>
-        <developerConnection>scm:git:https://github.com/apache/camel-karaf</developerConnection>
-        <url>scm:git:https://github.com/apache/camel-karaf</url>
-      <tag>camel-karaf-4.8.1</tag>
-  </scm>
+        <connection>scm:git:http://github.com/Talend/camel-karaf.git</connection>
+        <developerConnection>scm:git:https://github.com/Talend/camel-karaf.git</developerConnection>
+        <url>https://github.com/Talend/camel-karaf</url>
+        <tag>HEAD</tag>
+    </scm>
 
     <issueManagement>
         <system>github</system>
@@ -87,6 +87,29 @@
 
     <!-- TODO use Karaf/Camel bom -->
     <properties>
+        <upstream.version>4.8.1</upstream.version>
+        <camel-features.tesb.version>4.8.1.20240820</camel-features.tesb.version>
+        <camel-support.tesb.version>4.8.1.20240820</camel-support.tesb.version>
+        <camel-cxf-all.tesb.version>4.8.1.20240820</camel-cxf-all.tesb.version>
+        <camel-cxf-soap.tesb.version>4.8.1.20240820</camel-cxf-soap.tesb.version>
+        <camel-cxf-rest.tesb.version>4.8.1.20240820</camel-cxf-rest.tesb.version>
+        <camel-spring.tesb.version>4.8.1.20240820</camel-spring.tesb.version>
+
+        <jetty11.tesb.version>11.0.21</jetty11.tesb.version>
+        <jetty12.tesb.version>12.0.10</jetty12.tesb.version>
+        <jetty.tesb.version>${jetty12.tesb.version}</jetty.tesb.version>
+        <jetty11.tesb.version-range>[11,12)</jetty11.tesb.version-range>
+        <jetty12.tesb.version-range>[12,13)</jetty12.tesb.version-range>
+        <jetty.tesb.version-range>${jetty12.tesb.version-range}</jetty.tesb.version-range>
+        <jaxb3-istack.tesb.version>4.0.1</jaxb3-istack.tesb.version>
+        <jaxb3-fastinfoset.tesb.version>2.0.0</jaxb3-fastinfoset.tesb.version>
+        <jaxb3-staxex.tesb.version>2.0.1</jaxb3-staxex.tesb.version>
+        <jaxb3-dtd-parser.tesb.version>1.4.5</jaxb3-dtd-parser.tesb.version>
+        <jaxb-istack.tesb.version>4.1.2</jaxb-istack.tesb.version>
+        <jaxb-fastinfoset.tesb.version>2.1.1</jaxb-fastinfoset.tesb.version>
+        <jaxb-staxex.tesb.version>2.1.0</jaxb-staxex.tesb.version>
+        <jaxb-dtd-parser.tesb.version>1.5.1</jaxb-dtd-parser.tesb.version>
+
         <jdk-version>17</jdk-version>
         <maven.compiler.source>${jdk-version}</maven.compiler.source>
         <maven.compiler.target>${jdk-version}</maven.compiler.target>
@@ -666,6 +689,49 @@
         <pluginManagement>
             <plugins>
                 <plugin>
+                    <groupId>io.paradoxical</groupId>
+                    <artifactId>resolved-pom-maven-plugin</artifactId>
+                    <version>1.0</version>
+                    <configuration>
+                        <properties>
+                            <revision>${revision}</revision>
+                            <upstream.version>${upstream.version}</upstream.version>
+                            <camel.features.tesb.version>${camel.features.tesb.version}</camel.features.tesb.version>
+                            <camel-support.tesb.version>${camel-support.tesb.version}</camel-support.tesb.version>
+                            <camel-cxf-all.tesb.version>${camel-cxf-all.tesb.version}</camel-cxf-all.tesb.version>
+                            <camel-cxf-soap.tesb.version>${camel-cxf-soap.tesb.version}</camel-cxf-soap.tesb.version>
+                            <camel-cxf-rest.tesb.version>${camel-cxf-rest.tesb.version}</camel-cxf-rest.tesb.version>
+                            <camel-spring.tesb.version>${camel-spring.tesb.version}</camel-spring.tesb.version>
+                            <jetty11.tesb.version>${jetty11.tesb.version}</jetty11.tesb.version>
+                            <jetty12.tesb.version>${jetty12.tesb.version}</jetty12.tesb.version>
+                            <jetty.tesb.version>${jetty.tesb.version}</jetty.tesb.version>
+                            <jetty11.tesb.version-range>${jetty11.tesb.version-range}</jetty11.tesb.version-range>
+                            <jetty12.tesb.version-range>${jetty12.tesb.version-range}</jetty12.tesb.version-range>
+                            <jetty.tesb.version-range>${jetty.tesb.version-range}</jetty.tesb.version-range>
+                            <jaxb3-istack.tesb.version>${jaxb3-istack.tesb.version}</jaxb3-istack.tesb.version>
+                            <jaxb3-fastinfoset.tesb.version>${jaxb3-fastinfoset.tesb.version}</jaxb3-fastinfoset.tesb.version>
+                            <jaxb3-staxex.tesb.version>${jaxb3-staxex.tesb.version}</jaxb3-staxex.tesb.version>
+                            <jaxb3-dtd-parser.tesb.version>${jaxb3-dtd-parser.tesb.version}</jaxb3-dtd-parser.tesb.version>
+                            <jaxb-istack.tesb.version>${jaxb-istack.tesb.version}</jaxb-istack.tesb.version>
+                            <jaxb-fastinfoset.tesb.version>${jaxb-fastinfoset.tesb.version}</jaxb-fastinfoset.tesb.version>
+                            <jaxb-staxex.tesb.version>${jaxb-staxex.tesb.version}</jaxb-staxex.tesb.version>
+                            <jaxb-dtd-parser.tesb.version>${jaxb-dtd-parser.tesb.version}</jaxb-dtd-parser.tesb.version>
+                        </properties>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <id>resolve-my-pom</id>
+                            <phase>initialize</phase>
+                            <goals>
+                                <goal>resolve-pom</goal>
+                            </goals>
+                            <configuration>
+                                <resolvedPomFile>.resolved-pom.xml</resolvedPomFile>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-shade-plugin</artifactId>
                     <version>${maven-shade-plugin-version}</version>
@@ -704,6 +770,10 @@
         </pluginManagement>
 
         <plugins>
+            <plugin>
+                <groupId>io.paradoxical</groupId>
+                <artifactId>resolved-pom-maven-plugin</artifactId>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>

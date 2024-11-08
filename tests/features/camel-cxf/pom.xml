@@ -75,8 +75,8 @@
                                 <include>**/*Test.java</include>
                             </includes>
                             <systemPropertyVariables>
-                                <camel.karaf.version>${project.version}</camel.karaf.version>
-                                <project.version>${project.version}</project.version>
+                                <camel.karaf.version>${upstream.version}</camel.karaf.version>
+                                <project.version>${upstream.version}</project.version>
                                 <project.target>${project.build.directory}</project.target>
                                 <users.file.location>${users.file.location}</users.file.location>
                                 <org.ops4j.pax.logging.DefaultServiceLog.level>WARN</org.ops4j.pax.logging.DefaultServiceLog.level>

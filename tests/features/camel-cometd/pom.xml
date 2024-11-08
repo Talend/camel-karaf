@@ -38,7 +38,7 @@
                 <configuration>
                     <instructions>
                         <Export-Package>
-                            org.apache.karaf.camel.test;version=${project.version}
+                            org.apache.karaf.camel.test;version=${upstream.version}
                         </Export-Package>
                         <Import-Package>
                             !org.apache.karaf.camel.test,
@@ -61,7 +61,7 @@
                         </goals>
                         <configuration>
                             <versions>
-                                <karaf.osgi.version>${project.version}</karaf.osgi.version>
+                                <karaf.osgi.version>${upstream.version}</karaf.osgi.version>
                             </versions>
                         </configuration>
                     </execution>
