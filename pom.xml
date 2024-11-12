@@ -117,7 +117,7 @@
         <ant-bundle.tesb.version>1.10.12_1</ant-bundle.tesb.version>
         <!-- <apache-drill.tesb.version>1.21.1</apache-drill.tesb.version> -->
         <apache-mime4j.tesb.version>0.8.11</apache-mime4j.tesb.version>
-        <avro.tesb.version>1.11.3</avro.tesb.version>
+        <avro.tesb.version>1.11.4</avro.tesb.version>
         <avro-jackson.tesb.version>${jackson2.tesb.version}</avro-jackson.tesb.version>
         <bouncycastle.tesb.version>1.78.1</bouncycastle.tesb.version>
         <braintree-jackson2.tesb.version>${jackson2.tesb.version}</braintree-jackson2.tesb.version>
