@@ -275,9 +275,9 @@
     </feature>
 
     <!-- Wrapped zookeeper jars. -->
-    <feature name='zookeeper-core' version='${zookeeper-version}' start-level='50'>
-        <bundle dependency='true'>wrap:mvn:org.apache.zookeeper/zookeeper/${zookeeper-version}$Bundle-SymbolicName=org.apache.zookeeper&amp;Bundle-Version=${zookeeper-version}&amp;Export-Package=org.apache.zookeeper;version=${zookeeper-version},org.apache.zookeeper.*;version=${zookeeper-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:org.apache.zookeeper/zookeeper-jute/${zookeeper-version}$Bundle-SymbolicName=org.apache.zookeeper-jute&amp;Bundle-Version=${zookeeper-version}&amp;Fragment-Host=org.apache.zookeeper&amp;Export-Package=org.apache.jute;version=${zookeeper-version},org.apache.zookeeper.*;version=${zookeeper-version}</bundle>
+    <feature name='zookeeper-core' version='${zookeeper.tesb.version}' start-level='50'>
+        <bundle dependency='true'>wrap:mvn:org.apache.zookeeper/zookeeper/${zookeeper-server.tesb.version}$Bundle-SymbolicName=org.apache.zookeeper&amp;Bundle-Version=${zookeeper.tesb.version}&amp;Export-Package=org.apache.zookeeper;version=${zookeeper.tesb.version},org.apache.zookeeper.*;version=${zookeeper.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:org.apache.zookeeper/zookeeper-jute/${zookeeper.tesb.version}$Bundle-SymbolicName=org.apache.zookeeper-jute&amp;Bundle-Version=${zookeeper.tesb.version}&amp;Fragment-Host=org.apache.zookeeper&amp;Export-Package=org.apache.jute;version=${zookeeper.tesb.version},org.apache.zookeeper.*;version=${zookeeper.tesb.version}</bundle>
     </feature>
 
     <!-- Apache Camel core features -->

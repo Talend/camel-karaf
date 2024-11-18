@@ -96,7 +96,7 @@
         <camel-spring.tesb.version>4.8.1.20240820</camel-spring.tesb.version>
 
         <jetty11.tesb.version>11.0.21</jetty11.tesb.version>
-        <jetty12.tesb.version>12.0.10</jetty12.tesb.version>
+        <jetty12.tesb.version>12.0.15</jetty12.tesb.version>
         <jetty.tesb.version>${jetty12.tesb.version}</jetty.tesb.version>
         <jetty11.tesb.version-range>[11,12)</jetty11.tesb.version-range>
         <jetty12.tesb.version-range>[12,13)</jetty12.tesb.version-range>
@@ -109,6 +109,8 @@
         <jaxb-fastinfoset.tesb.version>2.1.1</jaxb-fastinfoset.tesb.version>
         <jaxb-staxex.tesb.version>2.1.0</jaxb-staxex.tesb.version>
         <jaxb-dtd-parser.tesb.version>1.5.1</jaxb-dtd-parser.tesb.version>
+        <zookeeper.tesb.version>3.9.3</zookeeper.tesb.version>
+        <zookeeper-server.tesb.version>3.9.3.jetty12.1</zookeeper-server.tesb.version>
 
         <jdk-version>17</jdk-version>
         <maven.compiler.source>${jdk-version}</maven.compiler.source>
@@ -716,6 +718,8 @@
                             <jaxb-fastinfoset.tesb.version>${jaxb-fastinfoset.tesb.version}</jaxb-fastinfoset.tesb.version>
                             <jaxb-staxex.tesb.version>${jaxb-staxex.tesb.version}</jaxb-staxex.tesb.version>
                             <jaxb-dtd-parser.tesb.version>${jaxb-dtd-parser.tesb.version}</jaxb-dtd-parser.tesb.version>
+                            <zookeeper.tesb.version>${zookeeper.tesb.version}</zookeeper.tesb.version>
+                            <zookeeper-server.tesb.version>${zookeeper-server.tesb.version}</zookeeper-server.tesb.version>
                         </properties>
                     </configuration>
                     <executions>
