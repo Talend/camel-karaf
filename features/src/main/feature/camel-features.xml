@@ -945,13 +945,13 @@
         <bundle>mvn:org.apache.camel.karaf/camel-http-base/${upstream.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-http-common/${upstream.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-cxf-all/${camel-cxf-all.tesb.version}</bundle>
-        <bundle>mvn:org.apache.camel.karaf/camel-cxf-blueprint/${upstream.version}</bundle>
-        <bundle>mvn:org.apache.camel.karaf/camel-cxf-transport-blueprint/${upstream.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-cxf-blueprint/${camel-cxf.tesb.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-cxf-transport-blueprint/${camel-cxf.tesb.version}</bundle>
     </feature>
     <feature name='camel-cxf-spring' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-cxf</feature>
         <feature version='${camel-osgi-version-range}'>camel-spring</feature>
-        <bundle>mvn:org.apache.camel.karaf/camel-cxf-spring-all/${upstream.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-cxf-spring-all/${camel-cxf.tesb.version}</bundle>
     </feature>
     <feature name='camel-datasonnet' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>

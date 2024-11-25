@@ -64,7 +64,7 @@
             org.apache.camel.component.cxf.transport.header;version=${camel-version},
             org.apache.camel.component.cxf.transport.message;version=${camel-version},
             org.apache.camel.component.cxf.binding.soap.blueprint;version=${upstream.version},
-            org.apache.cxf*;version=${cxf-version},
+            org.apache.cxf*;version=${cxf.tesb.version},
         </camel.osgi.export>
         <camel.osgi.activator>org.apache.camel.component.cxf.osgi.MainActivator</camel.osgi.activator>
         <camel-osgi-camel-import>
@@ -150,7 +150,7 @@
         <dependency>
             <groupId>org.apache.camel</groupId>
             <artifactId>camel-cxf-common</artifactId>
-            <version>${camel-version}</version>
+            <version>${camel-cxf.tesb.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.camel</groupId>
@@ -161,7 +161,7 @@
         <dependency>
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-core</artifactId>
-            <version>${cxf-version}</version>
+            <version>${cxf.tesb.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.cxf</groupId>
@@ -183,7 +183,7 @@
         <dependency>
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-rt-bindings-soap</artifactId>
-            <version>${cxf-version}</version>
+            <version>${cxf.tesb.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.cxf</groupId>
@@ -194,7 +194,7 @@
         <dependency>
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-rt-databinding-jaxb</artifactId>
-            <version>${cxf-version}</version>
+            <version>${cxf.tesb.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.cxf</groupId>
@@ -205,7 +205,7 @@
         <dependency>
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-rt-features-logging</artifactId>
-            <version>${cxf-version}</version>
+            <version>${cxf.tesb.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.cxf</groupId>
@@ -216,7 +216,7 @@
         <dependency>
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-rt-frontend-jaxrs</artifactId>
-            <version>${cxf-version}</version>
+            <version>${cxf.tesb.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.cxf</groupId>
@@ -227,7 +227,7 @@
         <dependency>
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-rt-frontend-jaxws</artifactId>
-            <version>${cxf-version}</version>
+            <version>${cxf.tesb.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.cxf</groupId>
@@ -238,7 +238,7 @@
         <dependency>
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-rt-frontend-simple</artifactId>
-            <version>${cxf-version}</version>
+            <version>${cxf.tesb.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.cxf</groupId>
@@ -249,7 +249,7 @@
         <dependency>
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-rt-rs-client</artifactId>
-            <version>${cxf-version}</version>
+            <version>${cxf.tesb.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.cxf</groupId>
@@ -260,7 +260,7 @@
         <dependency>
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-rt-transports-http</artifactId>
-            <version>${cxf-version}</version>
+            <version>${cxf.tesb.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.cxf</groupId>
@@ -271,7 +271,7 @@
         <dependency>
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-rt-ws-addr</artifactId>
-            <version>${cxf-version}</version>
+            <version>${cxf.tesb.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.cxf</groupId>
@@ -282,7 +282,7 @@
         <dependency>
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-rt-ws-policy</artifactId>
-            <version>${cxf-version}</version>
+            <version>${cxf.tesb.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.cxf</groupId>
@@ -293,7 +293,7 @@
         <dependency>
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-rt-wsdl</artifactId>
-            <version>${cxf-version}</version>
+            <version>${cxf.tesb.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.cxf</groupId>
@@ -304,7 +304,7 @@
         <dependency>
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-rt-bindings-xml</artifactId>
-            <version>${cxf-version}</version>
+            <version>${cxf.tesb.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.cxf</groupId>
@@ -315,7 +315,7 @@
         <dependency>
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-rt-security</artifactId>
-            <version>${cxf-version}</version>
+            <version>${cxf.tesb.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.cxf</groupId>
@@ -337,7 +337,7 @@
         <dependency>
             <groupId>org.apache.camel</groupId>
             <artifactId>camel-cxf-transport</artifactId>
-            <version>${camel-version}</version>
+            <version>${camel-cxf.tesb.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.camel</groupId>
