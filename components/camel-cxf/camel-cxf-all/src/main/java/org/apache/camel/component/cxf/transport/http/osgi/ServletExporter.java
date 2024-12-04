@@ -121,8 +121,7 @@ class ServletExporter implements ManagedService {
         HttpContext context = httpService.createDefaultHttpContext();
         try {
             LOG.log(Level.INFO, "Registering new instance of \"" + alias + "\" servlet");
-            // TODO: use the registerServlet method when upgrading to OSGI CMPN 8
-//            httpService.registerServlet(alias, servlet, sprops, context);
+            httpService.registerServlet(alias, servlet, sprops, context);
         } catch (Exception e) {
             LOG.log(Level.WARNING, "Error registering CXF OSGi servlet " + e.getMessage(), e);
         }
