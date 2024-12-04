@@ -106,6 +106,7 @@
             org.osgi.util*,
             org.osgi.service*,
             org.osgi.framework*,
+            org.ops4j.pax.web.service.http.*,
             org.apache.aries.blueprint*,
             org.xml.sax,
             javax.xml*,

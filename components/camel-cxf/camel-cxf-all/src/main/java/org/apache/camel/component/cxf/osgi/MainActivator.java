@@ -20,8 +20,6 @@ package org.apache.camel.component.cxf.osgi;
 import java.util.List;
 
 import org.apache.camel.component.cxf.bus.osgi.CXFActivator;
-import org.apache.camel.component.cxf.transport.http.osgi.HTTPTransportActivator;
-// import org.apache.camel.component.cxf.transport.http_jetty.osgi.HTTPJettyTransportActivator;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 
@@ -35,8 +33,7 @@ public class MainActivator implements BundleActivator {
             new org.apache.camel.component.cxf.jaxws.blueprint.Activator(),
             new org.apache.camel.component.cxf.frontend.blueprint.Activator(),
             new org.apache.camel.component.cxf.jaxrs.client.blueprint.Activator(),
-            new HTTPTransportActivator(),
-//             new HTTPJettyTransportActivator(),
+            new org.apache.cxf.transport.http.osgi.HTTPTransportActivator(),
             new org.apache.camel.component.cxf.ws.addressing.blueprint.Activator(),
             new org.apache.camel.component.cxf.ws.policy.blueprint.Activator());
 
