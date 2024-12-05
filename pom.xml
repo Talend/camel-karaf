@@ -604,12 +604,15 @@
         <osgi-resource-locator-version>2.5.0-b42</osgi-resource-locator-version>
         <osgi-service-event-version>1.4.1</osgi-service-event-version>
         <osgi-service-component-version>1.5.1</osgi-service-component-version>
+        <osgi-service-cm-version>1.6.1</osgi-service-cm-version>
+        <osgi-service-servlet-version>2.0.0</osgi-service-servlet-version>
         <osgi-version>8.0.0</osgi-version>
         <sal-api-version>5.1.4</sal-api-version>
         <servicemix-specs-version>10</servicemix-specs-version>
         <servicemix-spring-jms-version>6.1.6</servicemix-spring-jms-version>
         <slf4j-version>2.0.13</slf4j-version>
         <spring-amqp-version>3.1.7</spring-amqp-version>
+        <tesb-pax-web-api-version>9.99.0</tesb-pax-web-api-version>
 
         <!-- Plugin versions -->
         <maven-antrun-plugin-version>3.1.0</maven-antrun-plugin-version>
@@ -652,6 +655,16 @@
                 <version>${osgi-service-component-version}</version>
             </dependency>
             <dependency>
+                <groupId>org.osgi</groupId>
+                <artifactId>org.osgi.service.servlet</artifactId>
+                <version>${osgi-service-servlet-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.osgi</groupId>
+                <artifactId>org.osgi.service.cm</artifactId>
+                <version>${osgi-service-cm-version}</version>
+            </dependency>
+            <dependency>
                 <groupId>org.apache.karaf.shell</groupId>
                 <artifactId>org.apache.karaf.shell.core</artifactId>
                 <version>${karaf-version}</version>
@@ -687,6 +700,12 @@
                 <artifactId>geronimo-atinject_1.0_spec</artifactId>
                 <version>${geronimo-atinject-version}</version>
                 <scope>test</scope>
+            </dependency>
+            <!-- temporary dependency to get the HTTPService class , maybe later use the Whiteboard to rely only on the OSGI specs -->
+            <dependency>
+                <groupId>org.ops4j.pax.web</groupId>
+                <artifactId>pax-web-api</artifactId>
+                <version>${tesb-pax-web-api-version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

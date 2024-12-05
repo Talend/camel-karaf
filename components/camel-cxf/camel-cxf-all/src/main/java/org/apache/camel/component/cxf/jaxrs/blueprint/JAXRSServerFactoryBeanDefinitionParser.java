@@ -141,7 +141,7 @@ public class JAXRSServerFactoryBeanDefinitionParser extends SimpleBPBeanDefiniti
         MutableBeanMetadata bean = (MutableBeanMetadata)super.parse(element, context);
 
         bean.setInitMethod("init");
-        bean.setDestroyMethod("close");
+        bean.setDestroyMethod("destroy");
         // We don't really want to delay the registration of our Server
         bean.setActivation(ComponentMetadata.ACTIVATION_EAGER);
         return bean;
