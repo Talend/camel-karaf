@@ -17,10 +17,10 @@
 
 package org.apache.camel.component.cxf.transport.http.osgi;
 
+import org.apache.cxf.BusFactory;
 import org.apache.cxf.common.util.CollectionUtils;
 import org.apache.cxf.common.util.PropertyUtils;
 import org.apache.cxf.transport.http.DestinationRegistry;
-import org.apache.cxf.transport.http.DestinationRegistryImpl;
 import org.apache.cxf.transport.http.HTTPConduitConfigurer;
 import org.apache.cxf.transport.http.HTTPTransportFactory;
 import org.ops4j.pax.web.service.http.HttpService;
@@ -51,8 +51,10 @@ public class HTTPTransportActivator implements BundleActivator {
             return;
         }
 
-        DestinationRegistry destinationRegistry = new DestinationRegistryImpl();
-        HTTPTransportFactory transportFactory = new HTTPTransportFactory(destinationRegistry);
+        //don't use constructor, use the extension manager to register the object
+
+        HTTPTransportFactory transportFactory =  BusFactory.getDefaultBus().getExtension(HTTPTransportFactory.class);
+        DestinationRegistry destinationRegistry = transportFactory.getRegistry();
 
         HttpServiceTrackerCust customizer = new HttpServiceTrackerCust(destinationRegistry, context);
         httpServiceTracker = new ServiceTracker<>(context, HttpService.class, customizer);

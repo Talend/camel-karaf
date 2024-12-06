@@ -15,14 +15,14 @@
  * limitations under the License.
  */
 
-package org.apache.camel.component.cxf.binding.soap.blueprint;
+package org.apache.camel.component.cxf.blueprint.binding.soap;
 
 import org.w3c.dom.Element;
 
 import org.apache.aries.blueprint.ParserContext;
 import org.apache.aries.blueprint.mutable.MutableBeanMetadata;
 import org.apache.aries.blueprint.mutable.MutablePassThroughMetadata;
-import org.apache.camel.component.cxf.configuration.blueprint.AbstractBPBeanDefinitionParser;
+import org.apache.camel.component.cxf.blueprint.configuration.AbstractBPBeanDefinitionParser;
 import org.apache.cxf.binding.soap.SoapBindingConfiguration;
 import org.osgi.service.blueprint.reflect.Metadata;
 
