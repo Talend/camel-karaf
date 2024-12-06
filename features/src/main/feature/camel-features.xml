@@ -353,7 +353,7 @@
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature>aries-blueprint</feature>
         <bundle>mvn:org.apache.camel.karaf/camel-core-xml/${upstream.version}</bundle>
-        <bundle>mvn:org.apache.camel.karaf/camel-blueprint/${upstream.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-blueprint/${camel-blueprint.tesb.version}</bundle>
     </feature>
     <feature name='camel-spring' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-spring-version}'>spring</feature>

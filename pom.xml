@@ -95,6 +95,7 @@
         <camel-cxf-soap.tesb.version>4.8.1.20240820</camel-cxf-soap.tesb.version>
         <camel-cxf-rest.tesb.version>4.8.1.20240820</camel-cxf-rest.tesb.version>
         <camel-spring.tesb.version>4.8.1.20240820</camel-spring.tesb.version>
+        <camel-blueprint.tesb.version>4.8.1.20240820</camel-blueprint.tesb.version>
 
         <cxf.tesb.version>4.1.0.1-SNAPSHOT</cxf.tesb.version>
         <jetty11.tesb.version>11.0.21</jetty11.tesb.version>
