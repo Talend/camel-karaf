@@ -258,7 +258,7 @@
   <feature name='camel-aws2-kinesis' version='${upstream.version}' start-level='50'>
     <feature version='${camel.tesb.version-range}'>camel-core</feature>
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aws-java-sdk2/${aws-sdk-v2-bundle-version}</bundle>
-    <bundle>mvn:org.apache.camel/camel-aws2-kinesis/${upstream.version}</bundle>
+    <bundle>mvn:org.apache.camel/camel-aws2-kinesis/${camel-aws.tesb.version}</bundle>
   </feature>
   <feature name='camel-aws2-kms' version='${upstream.version}' start-level='50'>
     <feature version='${camel.tesb.version-range}'>camel-core</feature>
