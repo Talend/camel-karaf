@@ -25,11 +25,11 @@ import java.util.logging.Logger;
 
 import jakarta.servlet.Servlet;
 import org.apache.cxf.common.logging.LogUtils;
+import org.ops4j.pax.web.service.http.HttpContext;
+import org.ops4j.pax.web.service.http.HttpService;
 import org.osgi.framework.ServiceRegistration;
 import org.osgi.service.cm.ConfigurationException;
 import org.osgi.service.cm.ManagedService;
-import org.osgi.service.http.HttpContext;
-import org.osgi.service.http.HttpService;
 
 class ServletExporter implements ManagedService {
     protected static final Logger LOG = LogUtils.getL7dLogger(ServletExporter.class);
@@ -121,8 +121,7 @@ class ServletExporter implements ManagedService {
         HttpContext context = httpService.createDefaultHttpContext();
         try {
             LOG.log(Level.INFO, "Registering new instance of \"" + alias + "\" servlet");
-            // TODO: use the registerServlet method when upgrading to OSGI CMPN 8
-//            httpService.registerServlet(alias, servlet, sprops, context);
+            httpService.registerServlet(alias, servlet, sprops, context);
         } catch (Exception e) {
             LOG.log(Level.WARNING, "Error registering CXF OSGi servlet " + e.getMessage(), e);
         }
