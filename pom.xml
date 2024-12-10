@@ -557,7 +557,7 @@
         <camel-osgi-spring-version>[6.1,6.2)</camel-osgi-spring-version>
         <camel-osgi-saaj-version>[2,4)</camel-osgi-saaj-version>
         <camel-osgi-slf4j-version>[2,3)</camel-osgi-slf4j-version>
-        <camel-osgi-cxf-version>[4.0,4.1)</camel-osgi-cxf-version>
+        <camel-osgi-cxf-version>[4.0,4.2)</camel-osgi-cxf-version>
 
         <!-- Camel Karaf OSGI version ranges -->
         <camel-osgi-version-clean>4.8</camel-osgi-version-clean>

@@ -37,7 +37,7 @@
         <revision>${camel-cxf-all.tesb.version}</revision>
         <camel.osgi.export>
             org.apache.camel.component.cxf*;version=${camel-version},
-            org.apache.cxf*;version=${cxf-version},
+            org.apache.cxf*;version=${cxf.tesb.version},
         </camel.osgi.export>
         <camel.osgi.activator>org.apache.camel.component.cxf.osgi.MainActivator</camel.osgi.activator>
         <camel-osgi-camel-import>
@@ -127,6 +127,10 @@
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.camel</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.apache.cxf</groupId>
                     <artifactId>*</artifactId>
                 </exclusion>
             </exclusions>
@@ -275,12 +279,27 @@
             </exclusions>
         </dependency>
         <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-rt-transports-jms</artifactId>
+            <version>${cxf.tesb.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.apache.cxf</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
             <groupId>org.apache.camel</groupId>
             <artifactId>camel-cxf-soap</artifactId>
             <version>${camel-cxf-soap.tesb.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.camel</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.apache.cxf</groupId>
                     <artifactId>*</artifactId>
                 </exclusion>
             </exclusions>
@@ -292,6 +311,10 @@
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.camel</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.apache.cxf</groupId>
                     <artifactId>*</artifactId>
                 </exclusion>
             </exclusions>
@@ -348,6 +371,7 @@
                                     <include>org.apache.cxf:cxf-rt-frontend-jaxws</include>
                                     <include>org.apache.cxf:cxf-rt-frontend-simple</include>
                                     <include>org.apache.cxf:cxf-rt-transports-http</include>
+                                    <include>org.apache.cxf:cxf-rt-transports-jms</include>
                                     <include>org.apache.cxf:cxf-rt-cxf-rt-security</include>
                                     <include>org.apache.cxf:cxf-rt-cxf-rt-rs-client</include>
                                     <include>org.apache.cxf:cxf-rt-ws-addr</include>
