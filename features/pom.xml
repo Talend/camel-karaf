@@ -102,7 +102,7 @@
                         <feature>framework</feature>
                     </framework>
                     <features>
-                        <feature>acamel|acamel-(?!(robotframework|other))*</feature>
+                        <feature>camel|camel-(?!(robotframework|other))*</feature>
                     </features>
                 </configuration>
                 <executions>
