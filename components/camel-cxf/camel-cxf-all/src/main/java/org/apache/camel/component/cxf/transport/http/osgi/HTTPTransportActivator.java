@@ -20,6 +20,7 @@ package org.apache.camel.component.cxf.transport.http.osgi;
 import org.apache.cxf.BusFactory;
 import org.apache.cxf.common.util.CollectionUtils;
 import org.apache.cxf.common.util.PropertyUtils;
+import org.apache.cxf.transport.DestinationFactory;
 import org.apache.cxf.transport.http.DestinationRegistry;
 import org.apache.cxf.transport.http.HTTPConduitConfigurer;
 import org.apache.cxf.transport.http.HTTPTransportFactory;
@@ -62,6 +63,8 @@ public class HTTPTransportActivator implements BundleActivator {
 
         context.registerService(DestinationRegistry.class.getName(), destinationRegistry, null);
         context.registerService(HTTPTransportFactory.class.getName(), transportFactory, null);
+        //registers it also for the interface, as DestinationFactoryManagerImpl looks by DestinationFactory
+        context.registerService(DestinationFactory.class.getName(), transportFactory, null);
     }
 
     private <T> ServiceRegistration<T> registerService(BundleContext context, Class<T> serviceInterface,
