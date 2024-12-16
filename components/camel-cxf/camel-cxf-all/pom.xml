@@ -140,7 +140,7 @@
         <dependency>
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-rt-bindings-soap</artifactId>
-            <version>${cxf.tesb.version}</version>
+            <version>${cxf-version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.cxf</groupId>
@@ -151,7 +151,7 @@
         <dependency>
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-rt-databinding-jaxb</artifactId>
-            <version>${cxf.tesb.version}</version>
+            <version>${cxf-version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.cxf</groupId>
@@ -162,7 +162,7 @@
         <dependency>
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-rt-features-logging</artifactId>
-            <version>${cxf.tesb.version}</version>
+            <version>${cxf-version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.cxf</groupId>
@@ -173,7 +173,7 @@
         <dependency>
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-rt-frontend-jaxrs</artifactId>
-            <version>${cxf.tesb.version}</version>
+            <version>${cxf-version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.cxf</groupId>
@@ -184,7 +184,7 @@
         <dependency>
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-rt-frontend-jaxws</artifactId>
-            <version>${cxf.tesb.version}</version>
+            <version>${cxf-version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.cxf</groupId>
@@ -195,7 +195,7 @@
         <dependency>
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-rt-frontend-simple</artifactId>
-            <version>${cxf.tesb.version}</version>
+            <version>${cxf-version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.cxf</groupId>
@@ -206,7 +206,7 @@
         <dependency>
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-rt-rs-client</artifactId>
-            <version>${cxf.tesb.version}</version>
+            <version>${cxf-version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.cxf</groupId>
@@ -217,7 +217,7 @@
         <dependency>
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-rt-transports-http</artifactId>
-            <version>${cxf.tesb.version}</version>
+            <version>${cxf-version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.cxf</groupId>
@@ -228,7 +228,7 @@
         <dependency>
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-rt-ws-addr</artifactId>
-            <version>${cxf.tesb.version}</version>
+            <version>${cxf-version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.cxf</groupId>
@@ -239,7 +239,7 @@
         <dependency>
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-rt-ws-policy</artifactId>
-            <version>${cxf.tesb.version}</version>
+            <version>${cxf-version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.cxf</groupId>
@@ -250,7 +250,7 @@
         <dependency>
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-rt-wsdl</artifactId>
-            <version>${cxf.tesb.version}</version>
+            <version>${cxf-version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.cxf</groupId>
@@ -261,7 +261,7 @@
         <dependency>
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-rt-bindings-xml</artifactId>
-            <version>${cxf.tesb.version}</version>
+            <version>${cxf-version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.cxf</groupId>
@@ -272,7 +272,7 @@
         <dependency>
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-rt-security</artifactId>
-            <version>${cxf.tesb.version}</version>
+            <version>${cxf-version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.cxf</groupId>
