@@ -760,15 +760,11 @@
     <feature name='camel-bonita' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version='${camel-osgi-jackson2-version}'>jackson</feature>
-        <feature version="[5,6)">jakarta-servlet</feature>
         <feature version="[3,4)">jaxb-runtime</feature>
+        <feature version="[4,5)">camel-cxf</feature>
         <bundle dependency="true">mvn:org.apache.ws.xmlschema/xmlschema-core/${auto-detect-version}</bundle>
         <bundle dependency='true'>mvn:com.fasterxml.jackson.jakarta.rs/jackson-jakarta-rs-base/${jackson2-version}</bundle>
         <bundle dependency='true'>mvn:com.fasterxml.jackson.jakarta.rs/jackson-jakarta-rs-json-provider/${jackson2-version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.cxf/cxf-core/${cxf-version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.cxf/cxf-rt-security/${cxf-version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.cxf/cxf-rt-frontend-jaxrs/${cxf-version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.cxf/cxf-rt-transports-http/${cxf-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-bonita/${upstream.version}</bundle>
     </feature>
     <feature name='camel-box' version='${upstream.version}' start-level='50'>
