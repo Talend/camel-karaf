@@ -90,13 +90,16 @@
         <upstream.version>4.8.1</upstream.version>
         <camel-features.tesb.version>4.8.1.20240820</camel-features.tesb.version>
         <camel-support.tesb.version>4.8.1.20240820</camel-support.tesb.version>
+        <camel-cxf.tesb.version>4.8.1.20240820</camel-cxf.tesb.version>
         <camel-cxf-all.tesb.version>4.8.1.20240820</camel-cxf-all.tesb.version>
         <camel-cxf-soap.tesb.version>4.8.1.20240820</camel-cxf-soap.tesb.version>
         <camel-cxf-rest.tesb.version>4.8.1.20240820</camel-cxf-rest.tesb.version>
         <camel-spring.tesb.version>4.8.1.20240820</camel-spring.tesb.version>
+        <camel-blueprint.tesb.version>4.8.1.20240820</camel-blueprint.tesb.version>
 
+        <cxf.tesb.version>4.1.0.20241216</cxf.tesb.version>
         <jetty11.tesb.version>11.0.21</jetty11.tesb.version>
-        <jetty12.tesb.version>12.0.10</jetty12.tesb.version>
+        <jetty12.tesb.version>12.0.15</jetty12.tesb.version>
         <jetty.tesb.version>${jetty12.tesb.version}</jetty.tesb.version>
         <jetty11.tesb.version-range>[11,12)</jetty11.tesb.version-range>
         <jetty12.tesb.version-range>[12,13)</jetty12.tesb.version-range>
@@ -109,6 +112,10 @@
         <jaxb-fastinfoset.tesb.version>2.1.1</jaxb-fastinfoset.tesb.version>
         <jaxb-staxex.tesb.version>2.1.0</jaxb-staxex.tesb.version>
         <jaxb-dtd-parser.tesb.version>1.5.1</jaxb-dtd-parser.tesb.version>
+        <zookeeper.tesb.version>3.9.3</zookeeper.tesb.version>
+        <zookeeper-server.tesb.version>3.9.3.jetty12.1</zookeeper-server.tesb.version>
+        <camel-osgi-cxf.tesb.version>[4.1,4.2)</camel-osgi-cxf.tesb.version>
+        <camel-osgi-jetty.tesb.version>[12,13)</camel-osgi-jetty.tesb.version>
 
         <jdk-version>17</jdk-version>
         <maven.compiler.source>${jdk-version}</maven.compiler.source>
@@ -184,10 +191,10 @@
         <consul-client-version>1.4.1</consul-client-version>
         <couchbase-client-version>3.7.2</couchbase-client-version>
         <curator-version>5.7.0</curator-version>
-        <cxf-version>4.0.5</cxf-version>
-        <cxf-codegen-plugin-version>4.0.5</cxf-codegen-plugin-version>
-        <cxf-xjc-plugin-version>4.0.2</cxf-xjc-plugin-version>
-        <cxf-xjc-utils-version>4.0.2</cxf-xjc-utils-version>
+        <cxf-version>4.1.0</cxf-version>
+        <cxf-codegen-plugin-version>4.1.0</cxf-codegen-plugin-version>
+        <cxf-xjc-plugin-version>4.1.0</cxf-xjc-plugin-version>
+        <cxf-xjc-utils-version>4.1.0</cxf-xjc-utils-version>
         <datasonnet-mapper-version>2.5.2-jakarta4</datasonnet-mapper-version>
         <debezium-version>2.7.1.Final</debezium-version>
         <debezium-mysql-connector-version>8.4.0</debezium-mysql-connector-version>
@@ -479,7 +486,7 @@
         <spring-data-redis-version>3.3.3</spring-data-redis-version>
         <spring-ldap-version>3.2.6</spring-ldap-version>
         <spring-vault-core-version>3.1.2</spring-vault-core-version>
-        <spring-version>6.1.12</spring-version>
+        <spring-version>6.1.13</spring-version>
         <spring-rabbitmq-version>3.1.7</spring-rabbitmq-version>
         <spring-security-version>6.3.3</spring-security-version>
         <spring-ws-version>4.0.11</spring-ws-version>
@@ -550,7 +557,7 @@
         <camel-osgi-spring-version>[6.1,6.2)</camel-osgi-spring-version>
         <camel-osgi-saaj-version>[2,4)</camel-osgi-saaj-version>
         <camel-osgi-slf4j-version>[2,3)</camel-osgi-slf4j-version>
-        <camel-osgi-cxf-version>[4.0,4.1)</camel-osgi-cxf-version>
+        <camel-osgi-cxf-version>[4.0,4.2)</camel-osgi-cxf-version>
 
         <!-- Camel Karaf OSGI version ranges -->
         <camel-osgi-version-clean>4.8</camel-osgi-version-clean>
@@ -598,12 +605,15 @@
         <osgi-resource-locator-version>2.5.0-b42</osgi-resource-locator-version>
         <osgi-service-event-version>1.4.1</osgi-service-event-version>
         <osgi-service-component-version>1.5.1</osgi-service-component-version>
+        <osgi-service-cm-version>1.6.1</osgi-service-cm-version>
+        <osgi-service-servlet-version>2.0.0</osgi-service-servlet-version>
         <osgi-version>8.0.0</osgi-version>
         <sal-api-version>5.1.4</sal-api-version>
         <servicemix-specs-version>10</servicemix-specs-version>
         <servicemix-spring-jms-version>6.1.6</servicemix-spring-jms-version>
         <slf4j-version>2.0.13</slf4j-version>
         <spring-amqp-version>3.1.7</spring-amqp-version>
+        <tesb-pax-web-api-version>9.99.0</tesb-pax-web-api-version>
 
         <!-- Plugin versions -->
         <maven-antrun-plugin-version>3.1.0</maven-antrun-plugin-version>
@@ -646,6 +656,16 @@
                 <version>${osgi-service-component-version}</version>
             </dependency>
             <dependency>
+                <groupId>org.osgi</groupId>
+                <artifactId>org.osgi.service.servlet</artifactId>
+                <version>${osgi-service-servlet-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.osgi</groupId>
+                <artifactId>org.osgi.service.cm</artifactId>
+                <version>${osgi-service-cm-version}</version>
+            </dependency>
+            <dependency>
                 <groupId>org.apache.karaf.shell</groupId>
                 <artifactId>org.apache.karaf.shell.core</artifactId>
                 <version>${karaf-version}</version>
@@ -682,6 +702,12 @@
                 <version>${geronimo-atinject-version}</version>
                 <scope>test</scope>
             </dependency>
+            <!-- temporary dependency to get the HTTPService class , maybe later use the Whiteboard to rely only on the OSGI specs -->
+            <dependency>
+                <groupId>org.ops4j.pax.web</groupId>
+                <artifactId>pax-web-api</artifactId>
+                <version>${tesb-pax-web-api-version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -698,10 +724,12 @@
                             <upstream.version>${upstream.version}</upstream.version>
                             <camel.features.tesb.version>${camel.features.tesb.version}</camel.features.tesb.version>
                             <camel-support.tesb.version>${camel-support.tesb.version}</camel-support.tesb.version>
+                            <camel-cxf.tesb.version>${camel-cxf.tesb.version}</camel-cxf.tesb.version>
                             <camel-cxf-all.tesb.version>${camel-cxf-all.tesb.version}</camel-cxf-all.tesb.version>
                             <camel-cxf-soap.tesb.version>${camel-cxf-soap.tesb.version}</camel-cxf-soap.tesb.version>
                             <camel-cxf-rest.tesb.version>${camel-cxf-rest.tesb.version}</camel-cxf-rest.tesb.version>
                             <camel-spring.tesb.version>${camel-spring.tesb.version}</camel-spring.tesb.version>
+                            <cxf.tesb.version>${cxf.tesb.version}</cxf.tesb.version>
                             <jetty11.tesb.version>${jetty11.tesb.version}</jetty11.tesb.version>
                             <jetty12.tesb.version>${jetty12.tesb.version}</jetty12.tesb.version>
                             <jetty.tesb.version>${jetty.tesb.version}</jetty.tesb.version>
@@ -716,6 +744,8 @@
                             <jaxb-fastinfoset.tesb.version>${jaxb-fastinfoset.tesb.version}</jaxb-fastinfoset.tesb.version>
                             <jaxb-staxex.tesb.version>${jaxb-staxex.tesb.version}</jaxb-staxex.tesb.version>
                             <jaxb-dtd-parser.tesb.version>${jaxb-dtd-parser.tesb.version}</jaxb-dtd-parser.tesb.version>
+                            <zookeeper.tesb.version>${zookeeper.tesb.version}</zookeeper.tesb.version>
+                            <zookeeper-server.tesb.version>${zookeeper-server.tesb.version}</zookeeper-server.tesb.version>
                         </properties>
                     </configuration>
                     <executions>

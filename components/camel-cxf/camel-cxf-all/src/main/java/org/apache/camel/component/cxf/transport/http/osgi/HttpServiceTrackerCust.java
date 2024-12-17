@@ -21,13 +21,13 @@ import jakarta.servlet.Servlet;
 import org.apache.cxf.common.util.CollectionUtils;
 import org.apache.cxf.transport.http.DestinationRegistry;
 import org.apache.cxf.transport.servlet.CXFNonSpringServlet;
+import org.ops4j.pax.web.service.http.HttpService;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.Constants;
 import org.osgi.framework.ServiceReference;
 import org.osgi.framework.ServiceRegistration;
 import org.osgi.service.cm.ConfigurationException;
 import org.osgi.service.cm.ManagedService;
-import org.osgi.service.http.HttpService;
 import org.osgi.util.tracker.ServiceTrackerCustomizer;
 
 final class HttpServiceTrackerCust implements ServiceTrackerCustomizer<HttpService, HttpService> {

@@ -275,9 +275,9 @@
     </feature>
 
     <!-- Wrapped zookeeper jars. -->
-    <feature name='zookeeper-core' version='${zookeeper-version}' start-level='50'>
-        <bundle dependency='true'>wrap:mvn:org.apache.zookeeper/zookeeper/${zookeeper-version}$Bundle-SymbolicName=org.apache.zookeeper&amp;Bundle-Version=${zookeeper-version}&amp;Export-Package=org.apache.zookeeper;version=${zookeeper-version},org.apache.zookeeper.*;version=${zookeeper-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:org.apache.zookeeper/zookeeper-jute/${zookeeper-version}$Bundle-SymbolicName=org.apache.zookeeper-jute&amp;Bundle-Version=${zookeeper-version}&amp;Fragment-Host=org.apache.zookeeper&amp;Export-Package=org.apache.jute;version=${zookeeper-version},org.apache.zookeeper.*;version=${zookeeper-version}</bundle>
+    <feature name='zookeeper-core' version='${zookeeper.tesb.version}' start-level='50'>
+        <bundle dependency='true'>wrap:mvn:org.apache.zookeeper/zookeeper/${zookeeper-server.tesb.version}$Bundle-SymbolicName=org.apache.zookeeper&amp;Bundle-Version=${zookeeper.tesb.version}&amp;Export-Package=org.apache.zookeeper;version=${zookeeper.tesb.version},org.apache.zookeeper.*;version=${zookeeper.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:org.apache.zookeeper/zookeeper-jute/${zookeeper.tesb.version}$Bundle-SymbolicName=org.apache.zookeeper-jute&amp;Bundle-Version=${zookeeper.tesb.version}&amp;Fragment-Host=org.apache.zookeeper&amp;Export-Package=org.apache.jute;version=${zookeeper.tesb.version},org.apache.zookeeper.*;version=${zookeeper.tesb.version}</bundle>
     </feature>
 
     <!-- Apache Camel core features -->
@@ -353,7 +353,7 @@
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature>aries-blueprint</feature>
         <bundle>mvn:org.apache.camel.karaf/camel-core-xml/${upstream.version}</bundle>
-        <bundle>mvn:org.apache.camel.karaf/camel-blueprint/${upstream.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-blueprint/${camel-blueprint.tesb.version}</bundle>
     </feature>
     <feature name='camel-spring' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-spring-version}'>spring</feature>
@@ -760,15 +760,11 @@
     <feature name='camel-bonita' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version='${camel-osgi-jackson2-version}'>jackson</feature>
-        <feature version="[5,6)">jakarta-servlet</feature>
         <feature version="[3,4)">jaxb-runtime</feature>
+        <feature version="[4,5)">camel-cxf</feature>
         <bundle dependency="true">mvn:org.apache.ws.xmlschema/xmlschema-core/${auto-detect-version}</bundle>
         <bundle dependency='true'>mvn:com.fasterxml.jackson.jakarta.rs/jackson-jakarta-rs-base/${jackson2-version}</bundle>
         <bundle dependency='true'>mvn:com.fasterxml.jackson.jakarta.rs/jackson-jakarta-rs-json-provider/${jackson2-version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.cxf/cxf-core/${cxf-version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.cxf/cxf-rt-security/${cxf-version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.cxf/cxf-rt-frontend-jaxrs/${cxf-version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.cxf/cxf-rt-transports-http/${cxf-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-bonita/${upstream.version}</bundle>
     </feature>
     <feature name='camel-box' version='${upstream.version}' start-level='50'>
@@ -936,6 +932,7 @@
         <feature version="[6,7)">jakarta-servlet</feature>
         <feature version="${camel-osgi-jakarta-jws-version}">jakarta-jws</feature>
         <feature version="[3,4)">jakarta-validation</feature>
+        <bundle dependency="true">mvn:org.ops4j.pax.web/pax-web-api/${tesb-pax-web-api-version}</bundle>
         <bundle dependency="true">mvn:org.glassfish.hk2/osgi-resource-locator/${osgi-resource-locator-version}</bundle>
         <bundle dependency="true">mvn:org.apache.neethi/neethi/${auto-detect-version}</bundle>
         <bundle dependency="true">mvn:org.apache.ws.xmlschema/xmlschema-core/${auto-detect-version}</bundle>
@@ -945,13 +942,13 @@
         <bundle>mvn:org.apache.camel.karaf/camel-http-base/${upstream.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-http-common/${upstream.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-cxf-all/${camel-cxf-all.tesb.version}</bundle>
-        <bundle>mvn:org.apache.camel.karaf/camel-cxf-blueprint/${upstream.version}</bundle>
-        <bundle>mvn:org.apache.camel.karaf/camel-cxf-transport-blueprint/${upstream.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-cxf-blueprint/${camel-cxf.tesb.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-cxf-transport-blueprint/${camel-cxf.tesb.version}</bundle>
     </feature>
     <feature name='camel-cxf-spring' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-cxf</feature>
         <feature version='${camel-osgi-version-range}'>camel-spring</feature>
-        <bundle>mvn:org.apache.camel.karaf/camel-cxf-spring-all/${upstream.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-cxf-spring-all/${camel-cxf.tesb.version}</bundle>
     </feature>
     <feature name='camel-datasonnet' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
@@ -1768,16 +1765,6 @@
     <feature name="camel-jms" version="${upstream.version}" start-level="50">
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version="${camel-osgi-spring-version}">spring-jms</feature>
-        <!-- The SMX bundle of Spring JMS doesn't contain micrometer as part of its import packages, see https://issues.apache.org/jira/browse/SM-5706,
-            so we need to override the imports by wrapping the bundle until it is fixed in the SMX bundle project and in Karaf.
-            The Bundle-Version is updated by Bundle-Version=${spring-version}.2 so that the updated bundle is used
-            instead of the one provided by Karaf.
-        -->
-        <!-- Workaround START -->
-        <bundle start-level="30">wrap:mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-jms/${servicemix-spring-jms-version}_1$overwrite=merge&amp;Import-package=io.micrometer;resolution:=optional,*;resolution:=optional&amp;Bundle-Version=${servicemix-spring-jms-version}.2</bundle>
-        <!-- Workaround END -->
-        <bundle dependency='true'>mvn:io.micrometer/micrometer-observation/${micrometer-version}</bundle>
-        <bundle dependency='true'>mvn:io.micrometer/micrometer-commons/${micrometer-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-jms/${upstream.version}</bundle>
     </feature>
     <feature name='camel-jmx' version='${upstream.version}' start-level='50'>
@@ -2650,19 +2637,15 @@
     <feature name='camel-servicenow' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version='${camel-osgi-jackson2-version}'>jackson</feature>
+        <feature version='${camel-osgi-version-range}'>camel-cxf</feature>
+        <feature version="[4,5)">jaxb-runtime</feature>
         <feature version="[5,6)">jakarta-servlet</feature>
         <bundle dependency='true'>mvn:com.fasterxml.jackson.datatype/jackson-datatype-jsr310/${jackson2-version}</bundle>
         <bundle dependency='true'>mvn:com.fasterxml.jackson.datatype/jackson-datatype-jdk8/${jackson2-version}</bundle>
         <bundle dependency='true'>mvn:com.fasterxml.jackson.jakarta.rs/jackson-jakarta-rs-base/${jackson2-version}</bundle>
         <bundle dependency='true'>mvn:com.fasterxml.jackson.jakarta.rs/jackson-jakarta-rs-json-provider/${jackson2-version}</bundle>
         <bundle dependency='true'>mvn:org.apache.ws.xmlschema/xmlschema-core/${auto-detect-version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.cxf/cxf-core/${cxf-version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.cxf/cxf-rt-rs-client/${cxf-version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.cxf/cxf-rt-rs-security-oauth2/${cxf-version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.cxf/cxf-rt-frontend-jaxrs/${cxf-version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.cxf/cxf-rt-security/${cxf-version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.cxf/cxf-rt-transports-http/${cxf-version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.cxf/cxf-rt-rs-json-basic/${cxf-version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.cxf/cxf-rt-rs-security-oauth2/${cxf.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.apache.cxf/cxf-rt-rs-security-jose-jaxrs/${cxf-version}</bundle>
         <bundle dependency='true'>mvn:org.apache.cxf/cxf-rt-rs-security-jose/${cxf-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-servicenow/${upstream.version}</bundle>

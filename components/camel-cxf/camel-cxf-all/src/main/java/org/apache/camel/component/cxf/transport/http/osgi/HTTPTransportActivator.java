@@ -17,27 +17,26 @@
 
 package org.apache.camel.component.cxf.transport.http.osgi;
 
-import org.apache.camel.component.cxf.bus.blueprint.BlueprintNameSpaceHandlerFactory;
-import org.apache.camel.component.cxf.bus.blueprint.NamespaceHandlerRegisterer;
-import org.apache.camel.component.cxf.transport.http.blueprint.HttpBPHandler;
+import org.apache.cxf.BusFactory;
 import org.apache.cxf.common.util.CollectionUtils;
 import org.apache.cxf.common.util.PropertyUtils;
+import org.apache.cxf.transport.DestinationFactory;
 import org.apache.cxf.transport.http.DestinationRegistry;
-import org.apache.cxf.transport.http.DestinationRegistryImpl;
 import org.apache.cxf.transport.http.HTTPConduitConfigurer;
 import org.apache.cxf.transport.http.HTTPTransportFactory;
+import org.ops4j.pax.web.service.http.HttpService;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.Constants;
 import org.osgi.framework.ServiceRegistration;
 import org.osgi.service.cm.ManagedServiceFactory;
-import org.osgi.service.http.HttpService;
 import org.osgi.util.tracker.ServiceTracker;
 
 public class HTTPTransportActivator implements BundleActivator {
     private static final String DISABLE_DEFAULT_HTTP_TRANSPORT = "org.apache.cxf.osgi.http.transport.disable";
     private ServiceTracker<HttpService, ?> httpServiceTracker;
 
+    @Override
     public void start(final BundleContext context) throws Exception {
 
         ConfigAdminHttpConduitConfigurer conduitConfigurer = new ConfigAdminHttpConduitConfigurer();
@@ -53,25 +52,19 @@ public class HTTPTransportActivator implements BundleActivator {
             return;
         }
 
-        DestinationRegistry destinationRegistry = new DestinationRegistryImpl();
-        HTTPTransportFactory transportFactory = new HTTPTransportFactory(destinationRegistry);
+        //don't use constructor, use the extension manager to register the object
 
-//        HttpServiceTrackerCust customizer = new HttpServiceTrackerCust(destinationRegistry, context);
-//        httpServiceTracker = new ServiceTracker<>(context, HttpService.class, customizer);
-//        httpServiceTracker.open();
+        HTTPTransportFactory transportFactory =  BusFactory.getDefaultBus().getExtension(HTTPTransportFactory.class);
+        DestinationRegistry destinationRegistry = transportFactory.getRegistry();
+
+        HttpServiceTrackerCust customizer = new HttpServiceTrackerCust(destinationRegistry, context);
+        httpServiceTracker = new ServiceTracker<>(context, HttpService.class, customizer);
+        httpServiceTracker.open();
 
         context.registerService(DestinationRegistry.class.getName(), destinationRegistry, null);
         context.registerService(HTTPTransportFactory.class.getName(), transportFactory, null);
-
-        BlueprintNameSpaceHandlerFactory factory = new BlueprintNameSpaceHandlerFactory() {
-
-            @Override
-            public Object createNamespaceHandler() {
-                return new HttpBPHandler();
-            }
-        };
-        NamespaceHandlerRegisterer.register(context, factory,
-                "http://cxf.apache.org/transports/http/configuration");
+        //registers it also for the interface, as DestinationFactoryManagerImpl looks by DestinationFactory
+        context.registerService(DestinationFactory.class.getName(), transportFactory, null);
     }
 
     private <T> ServiceRegistration<T> registerService(BundleContext context, Class<T> serviceInterface,
@@ -80,6 +73,7 @@ public class HTTPTransportActivator implements BundleActivator {
                 CollectionUtils.singletonDictionary(Constants.SERVICE_PID, servicePid));
     }
 
+    @Override
     public void stop(BundleContext context) throws Exception {
         if (httpServiceTracker != null) {
             httpServiceTracker.close();

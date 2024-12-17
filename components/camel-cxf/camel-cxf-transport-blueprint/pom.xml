@@ -30,14 +30,16 @@
     <artifactId>camel-cxf-transport-blueprint</artifactId>
     <packaging>bundle</packaging>
     <name>Apache Camel :: Karaf :: Components :: CXF ::  Transport Blueprint</name>
+    <version>${revision}</version>
 
     <properties>
+        <revision>${camel-cxf.tesb.version}</revision>
         <firstVersion>3.2.0</firstVersion>
         <camel.osgi.export>
             org.apache.camel.component.cxf.transport.blueprint;version=${upstream.version},
         </camel.osgi.export>
         <camel-osgi-camel-import>
-            org.apache.camel.component.cxf.helpers;${camel-osgi-import-camel-version},
+            org.apache.camel.component.cxf.blueprint.helpers;${camel-osgi-import-camel-version},
         </camel-osgi-camel-import>
         <camel.osgi.import>
             jakarta.xml.bind*;version="${camel-osgi-jakarta-bind-version}",
@@ -50,7 +52,7 @@
         <dependency>
             <groupId>org.apache.camel</groupId>
             <artifactId>camel-cxf-transport</artifactId>
-            <version>${camel-version}</version>
+            <version>${camel-cxf.tesb.version}</version>
         </dependency>
 
         <!-- OSGi, Blueprint -->
@@ -64,13 +66,13 @@
         <dependency>
             <groupId>org.apache.camel.karaf</groupId>
             <artifactId>camel-cxf-blueprint</artifactId>
-            <version>${upstream.version}</version>
+            <version>${camel-cxf.tesb.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.camel.karaf</groupId>
             <artifactId>camel-cxf-all</artifactId>
-            <version>${upstream.version}</version>
+            <version>${camel-cxf-all.tesb.version}</version>
             <scope>provided</scope>
             <optional>true</optional>
         </dependency>
