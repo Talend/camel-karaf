@@ -35,6 +35,8 @@
     <properties>
         <revision>${camel.features.tesb.version}</revision>
         <features.file>features.xml</features.file>
+        <spi-consumer>SPI-Consumer=*</spi-consumer>
+        <spi-provider>SPI-Provider=*</spi-provider>
     </properties>
 
     <!-- The validate plugin will export these provided dependencies bundles export packages first -->
