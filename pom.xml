@@ -104,6 +104,7 @@
         <jetty11.tesb.version-range>[11,12)</jetty11.tesb.version-range>
         <jetty12.tesb.version-range>[12,13)</jetty12.tesb.version-range>
         <jetty.tesb.version-range>${jetty12.tesb.version-range}</jetty.tesb.version-range>
+        <async-http-client.tesb.version>2.12.4</async-http-client.tesb.version>
         <jaxb3-istack.tesb.version>4.0.1</jaxb3-istack.tesb.version>
         <jaxb3-fastinfoset.tesb.version>2.0.0</jaxb3-fastinfoset.tesb.version>
         <jaxb3-staxex.tesb.version>2.0.1</jaxb3-staxex.tesb.version>
@@ -112,6 +113,13 @@
         <jaxb-fastinfoset.tesb.version>2.1.1</jaxb-fastinfoset.tesb.version>
         <jaxb-staxex.tesb.version>2.1.0</jaxb-staxex.tesb.version>
         <jaxb-dtd-parser.tesb.version>1.5.1</jaxb-dtd-parser.tesb.version>
+        <jython-standalone.tesb.version>${jython-version}</jython-standalone.tesb.version>
+        <kudu.tesb.version>1.17.1</kudu.tesb.version>
+        <mina.tesb.version>2.2.4</mina.tesb.version>
+        <protobuf.tesb.version>3.25.5</protobuf.tesb.version>
+        <pulsar.tesb.version>3.3.3</pulsar.tesb.version>
+        <velocity.tesb.version>2.4.1</velocity.tesb.version>
+        <wildfly-elytron.tesb.version>2.2.7.Final</wildfly-elytron.tesb.version>
         <zookeeper.tesb.version>3.9.3</zookeeper.tesb.version>
         <zookeeper-server.tesb.version>3.9.3.jetty12.1</zookeeper-server.tesb.version>
         <camel-osgi-cxf.tesb.version>[4.1,4.2)</camel-osgi-cxf.tesb.version>
@@ -736,6 +744,7 @@
                             <jetty11.tesb.version-range>${jetty11.tesb.version-range}</jetty11.tesb.version-range>
                             <jetty12.tesb.version-range>${jetty12.tesb.version-range}</jetty12.tesb.version-range>
                             <jetty.tesb.version-range>${jetty.tesb.version-range}</jetty.tesb.version-range>
+                            <async-http-client.tesb.version>${async-http-client.tesb.version}</async-http-client.tesb.version>
                             <jaxb3-istack.tesb.version>${jaxb3-istack.tesb.version}</jaxb3-istack.tesb.version>
                             <jaxb3-fastinfoset.tesb.version>${jaxb3-fastinfoset.tesb.version}</jaxb3-fastinfoset.tesb.version>
                             <jaxb3-staxex.tesb.version>${jaxb3-staxex.tesb.version}</jaxb3-staxex.tesb.version>
@@ -744,6 +753,13 @@
                             <jaxb-fastinfoset.tesb.version>${jaxb-fastinfoset.tesb.version}</jaxb-fastinfoset.tesb.version>
                             <jaxb-staxex.tesb.version>${jaxb-staxex.tesb.version}</jaxb-staxex.tesb.version>
                             <jaxb-dtd-parser.tesb.version>${jaxb-dtd-parser.tesb.version}</jaxb-dtd-parser.tesb.version>
+                            <jython-standalone.tesb.version>${jython-standalone.tesb.version}</jython-standalone.tesb.version>
+                            <kudu.tesb.version>${kudu.tesb.version}</kudu.tesb.version>
+                            <mina.tesb.version>${mina.tesb.version}</mina.tesb.version>
+                            <protobuf.tesb.version>${protobuf.tesb.version}</protobuf.tesb.version>
+                            <pulsar.tesb.version>${pulsar.tesb.version}</pulsar.tesb.version>
+                            <velocity.tesb.version>${velocity.tesb.version}</velocity.tesb.version>
+                            <wildfly-elytron.tesb.version>${wildfly-elytron.tesb.version}</wildfly-elytron.tesb.version>
                             <zookeeper.tesb.version>${zookeeper.tesb.version}</zookeeper.tesb.version>
                             <zookeeper-server.tesb.version>${zookeeper-server.tesb.version}</zookeeper-server.tesb.version>
                         </properties>
