@@ -413,7 +413,7 @@
         <bundle dependency='true'>wrap:mvn:org.apache.httpcomponents.core5/httpcore5-h2/${httpclient-version}$Bundle-SymbolicName=org.apache.httpcore5.h2&amp;Bundle-Version=${httpclient-version}</bundle>
         <!-- Wrap protocol used to export a private package that is used by camel-as2  -->
         <bundle dependency='true'>wrap:mvn:org.bouncycastle/bcutil-jdk18on/${bouncycastle-version}$overwrite=merge&amp;Export-Package=org.bouncycastle.*;version=${bouncycastle-version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.velocity/velocity-engine-core/${velocity-version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.velocity/velocity-engine-core/${velocity.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-as2/${upstream.version}</bundle>
     </feature>
@@ -1009,8 +1009,8 @@
         <!-- Use the wrap protocol to make org.antlr.v4.gui optional-->
         <bundle>wrap:mvn:org.antlr/antlr4-runtime/${auto-detect-version}$overwrite=merge&amp;Import-Package=org.antlr.v4.gui*;resolution:=optional,*</bundle>
         <bundle>wrap:mvn:io.debezium/debezium-storage-kafka/${auto-detect-version}</bundle>
-        <bundle dependency='true'>mvn:com.google.protobuf/protobuf-java/${auto-detect-version}</bundle>
-        <bundle dependency='true'>mvn:com.google.protobuf/protobuf-java-util/${auto-detect-version}</bundle>
+        <bundle dependency='true'>mvn:com.google.protobuf/protobuf-java/${protobuf.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:com.google.protobuf/protobuf-java-util/${protobuf.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.oracle.database.nls/orai18n/${auto-detect-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.oracle.database.jdbc/ojdbc8/${auto-detect-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-debezium-oracle/${upstream.version}</bundle>
@@ -1019,7 +1019,7 @@
         <feature version='${camel-osgi-version-range}'>camel-debezium-common</feature>
         <bundle dependency='true'>wrap:mvn:io.debezium/debezium-connector-postgres/${debezium-version}</bundle>
         <bundle dependency='true'>mvn:org.postgresql/postgresql/${auto-detect-version}</bundle>
-        <bundle dependency='true'>mvn:com.google.protobuf/protobuf-java/${auto-detect-version}</bundle>
+        <bundle dependency='true'>mvn:com.google.protobuf/protobuf-java/${protobuf.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-debezium-postgres/${upstream.version}</bundle>
     </feature>
     <feature name='camel-debezium-sqlserver' version='${upstream.version}' start-level='50'>
@@ -1145,7 +1145,7 @@
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version='${camel-osgi-version-range}'>camel-undertow</feature>
         <bundle dependency='true'>wrap:mvn:org.wildfly.security.elytron-web/undertow-server/${elytron-web}</bundle>
-        <bundle dependency='true'>wrap:mvn:org.wildfly.security/wildfly-elytron/${wildfly-elytron}</bundle>
+        <bundle dependency='true'>wrap:mvn:org.wildfly.security/wildfly-elytron/${wildfly-elytron.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-elytron/${upstream.version}</bundle>
     </feature>
     <feature name='camel-etcd3' version='${upstream.version}' start-level='50'>
@@ -1500,7 +1500,7 @@
     <feature name='camel-hl7' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-netty</feature>
         <bundle dependency='true'>wrap:mvn:ca.uhn.hapi/hapi-base/${hapi-version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.mina/mina-core/${mina-version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.mina/mina-core/${mina.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-hl7/${upstream.version}</bundle>
     </feature>
     <feature name='camel-http' version='${upstream.version}' start-level='50'>
@@ -1945,7 +1945,7 @@
     </feature>
     <feature name='camel-kudu' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
-        <bundle dependency='true'>wrap:mvn:org.apache.kudu/kudu-client/${kudu-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:org.apache.kudu/kudu-client/${kudu.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-kudu/${upstream.version}</bundle>
     </feature>
     <feature name='camel-langchain4j-chat' version='${upstream.version}' start-level='50'>
@@ -2003,7 +2003,7 @@
         <bundle dependency='true'>mvn:org.apache.commons/commons-collections4/${commons-collections4-version}</bundle>
         <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3-version}</bundle>
         <bundle dependency='true'>mvn:org.apache.commons/commons-pool2/${commons-pool2-version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.mina/mina-core/${mina-version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.mina/mina-core/${mina.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-ldif/${upstream.version}</bundle>
     </feature>
     <feature name='camel-leveldb' version='${upstream.version}' start-level='50'>
@@ -2140,7 +2140,7 @@
     </feature>
     <feature name='camel-mina' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
-        <bundle dependency='true'>mvn:org.apache.mina/mina-core/${auto-detect-version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.mina/mina-core/${mina.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-mina/${upstream.version}</bundle>
     </feature>
     <feature name='camel-minio' version='${upstream.version}' start-level='50'>
@@ -2456,7 +2456,7 @@
     </feature>
     <feature name='camel-pulsar' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
-        <bundle dependency='true'>wrap:mvn:org.apache.pulsar/pulsar-client-admin/${pulsar-version}$Export-Package=org.apache.pulsar*;version=${pulsar-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:org.apache.pulsar/pulsar-client-admin/${pulsar.tesb.version}$Export-Package=org.apache.pulsar*;version=${pulsar.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-pulsar/${upstream.version}</bundle>
     </feature>
     <feature name='camel-python' version='${upstream.version}' start-level='50'>
@@ -2488,7 +2488,7 @@
         <feature version='${upstream.version}'>camel-core</feature>
         <bundle dependency='true'>mvn:org.quickfixj/quickfixj-core/${quickfixj-version}</bundle>
         <bundle dependency='true'>mvn:org.quickfixj/quickfixj-messages-all/${quickfixj-version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.mina/mina-core/${mina-version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.mina/mina-core/${mina.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-quickfix/${upstream.version}</bundle>
     </feature>
     <feature name='camel-reactive-executor-tomcat' version='${upstream.version}' start-level='50'>
@@ -2563,7 +2563,7 @@
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <bundle dependency='true'>wrap:mvn:org.robotframework/robotframework/${robotframework-version}</bundle>
         <bundle dependency='true'>wrap:mvn:org.python/jython/${jython-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:org.python/jython-standalone/${jython-standalone-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:org.python/jython-standalone/${jython-standalone.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-robotframework/${upstream.version}</bundle>
     </feature>
     <feature name='camel-rocketmq' version='${upstream.version}' start-level='50'>
@@ -3006,7 +3006,7 @@
     </feature>
     <feature name='camel-velocity' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
-        <bundle dependency='true'>mvn:org.apache.velocity/velocity-engine-core/${velocity-version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.velocity/velocity-engine-core/${velocity.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-velocity/${upstream.version}</bundle>
     </feature>
@@ -3116,8 +3116,8 @@
     <feature name='camel-zendesk' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version='[4.1,5)'>netty</feature>
-        <bundle dependency='true'>mvn:org.asynchttpclient/async-http-client/${auto-detect-version}</bundle>
-        <bundle dependency='true'>mvn:org.asynchttpclient/async-http-client-netty-utils/${auto-detect-version}</bundle>
+        <bundle dependency='true'>mvn:org.asynchttpclient/async-http-client/${async-http-client.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:org.asynchttpclient/async-http-client-netty-utils/${async-http-client.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.cloudbees.thirdparty/zendesk-java-client/${zendesk-client-version}</bundle>
         <bundle dependency='true'>mvn:io.netty/netty-handler-proxy/${netty-version}</bundle>
         <bundle dependency='true'>mvn:io.netty/netty-codec-http/${netty-version}</bundle>
