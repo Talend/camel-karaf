@@ -566,6 +566,7 @@
         <bundle dependency='true'>wrap:mvn:software.amazon.kinesis/amazon-kinesis-client/${amazon-kinesis-client-version}</bundle>
         <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/dynamodb/${aws-java-sdk2-version}</bundle>
         <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/cloudwatch/${aws-java-sdk2-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/aws-json-protocol/${aws-java-sdk2-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-aws2-kinesis/${upstream.version}</bundle>
     </feature>
     <feature name='camel-aws2-kms' version='${upstream.version}' start-level='50'>
