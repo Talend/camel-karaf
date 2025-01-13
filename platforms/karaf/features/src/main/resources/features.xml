@@ -175,7 +175,7 @@
     <bundle dependency='true'>mvn:org.bouncycastle/bcprov-jdk18on/${bouncycastle.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.bouncycastle/bcpkix-jdk18on/${bouncycastle.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.bouncycastle/bcutil-jdk18on/${bouncycastle.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.velocity/velocity-engine-core/${velocity-version}</bundle>
+    <bundle dependency='true'>mvn:org.apache.velocity/velocity-engine-core/${velocity.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3.tesb.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-as2-api/${upstream.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-as2/${upstream.version}</bundle>
@@ -378,6 +378,8 @@
     <bundle dependency='true'>mvn:org.ow2.asm/asm-tree/${asm.bundle.version}</bundle>
     <bundle dependency='true'>mvn:org.ow2.asm/asm-util/${asm.bundle.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-azure-storage-blob/${upstream.version}</bundle>
+    <bundle dependency="true">wrap:mvn:com.azure/azure-xml/1.0.0$Bundle-Version=1.0.0</bundle>
+    <bundle dependency="true">wrap:mvn:com.azure/azure-json/1.1.0$Bundle-Version=1.1.0</bundle>
   </feature>
   <feature name='camel-azure-storage-datalake' version='${upstream.version}' start-level='50'>
     <feature version='${camel.tesb.version-range}'>camel-core</feature>
@@ -420,6 +422,8 @@
     <bundle dependency='true'>mvn:org.ow2.asm/asm-tree/${asm.bundle.version}</bundle>
     <bundle dependency='true'>mvn:org.ow2.asm/asm-util/${asm.bundle.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-azure-storage-datalake/${upstream.version}</bundle>
+    <bundle dependency="true">wrap:mvn:com.azure/azure-xml/1.0.0$Bundle-Version=1.0.0</bundle>
+    <bundle dependency="true">wrap:mvn:com.azure/azure-json/1.1.0$Bundle-Version=1.1.0</bundle>
   </feature>
   <feature name='camel-azure-storage-queue' version='${upstream.version}' start-level='50'>
     <feature version='${camel.tesb.version-range}'>camel-core</feature>
@@ -437,8 +441,8 @@
     <bundle dependency='true'>wrap:mvn:com.azure/azure-json/${azure-json-version}</bundle>
     <bundle dependency='true'>wrap:mvn:com.azure/azure-xml/${azure-xml-version}</bundle>
     <bundle dependency='true'>wrap:mvn:com.azure/azure-core-http-netty/${azure-core-http-netty-version}$SPI-Provider=com.azure.core.http.HttpClientProvider&amp;Import-Package=reactor.netty.http.client;resolution:=mandatory,*</bundle>
-    <bundle dependency='true'>mvn:io.projectreactor.netty/reactor-netty-core/1.0.23</bundle>
-    <bundle dependency='true'>mvn:io.projectreactor.netty/reactor-netty-http/1.0.23</bundle>
+    <bundle dependency='true'>mvn:io.projectreactor.netty/reactor-netty-core/${reactor-netty.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:io.projectreactor.netty/reactor-netty-http/${reactor-netty.tesb.version}</bundle>
     <bundle dependency='true'>mvn:io.netty/netty-resolver/${netty.tesb.version}</bundle>
     <bundle dependency='true'>mvn:io.netty/netty-resolver-dns/${netty.tesb.version}</bundle>
     <bundle dependency='true'>mvn:io.netty/netty-common/${netty.tesb.version}</bundle>
@@ -1235,7 +1239,7 @@
   </feature>
   <feature name='camel-hl7' version='${upstream.version}' start-level='50'>
     <feature version='${camel.tesb.version-range}'>camel-netty</feature>
-    <bundle dependency='true'>mvn:org.apache.mina/mina-core/${mina-version}</bundle>
+    <bundle dependency='true'>mvn:org.apache.mina/mina-core/${mina.tesb.version}</bundle>
     <bundle dependency='true'>mvn:ca.uhn.hapi/hapi-osgi-base/${hapi-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-hl7/${upstream.version}</bundle>
   </feature>
@@ -1645,7 +1649,7 @@
     <bundle dependency='true'>mvn:org.apache.commons/commons-collections4/${commons-collections4-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.apache.commons/commons-pool2/${commons-pool2-version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.mina/mina-core/${mina-version}</bundle>
+    <bundle dependency='true'>mvn:org.apache.mina/mina-core/${mina.tesb.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-ldif/${upstream.version}</bundle>
   </feature>
   <feature name='camel-leveldb' version='${upstream.version}' start-level='50'>
@@ -1748,7 +1752,7 @@
   </feature>
   <feature name='camel-mina' version='${upstream.version}' start-level='50'>
     <feature version='${camel.tesb.version-range}'>camel-core</feature>
-    <bundle dependency='true'>mvn:org.apache.mina/mina-core/${mina-version}</bundle>
+    <bundle dependency='true'>mvn:org.apache.mina/mina-core/${mina.tesb.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-mina/${upstream.version}</bundle>
   </feature>
   <feature name='camel-minio' version='${upstream.version}' start-level='50'>
@@ -1990,7 +1994,7 @@
   </feature>
   <feature name='camel-quickfix' version='${upstream.version}' start-level='50'>
     <feature version='${camel.tesb.version-range}'>camel-core</feature>
-    <bundle dependency='true'>mvn:org.apache.mina/mina-core/${mina-version}</bundle>
+    <bundle dependency='true'>mvn:org.apache.mina/mina-core/${mina.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.xmlresolver/${xmlresolver-bundle-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.saxon/${saxon-bundle-version}</bundle>
     <bundle>mvn:org.quickfixj/quickfixj-all/${quickfixj-version}</bundle>
@@ -2297,7 +2301,7 @@
   </feature>
   <feature name='camel-ssh' version='${upstream.version}' start-level='50'>
     <feature version='${camel.tesb.version-range}'>camel-core</feature>
-    <bundle dependency='true'>mvn:org.apache.mina/mina-core/${mina-version}</bundle>
+    <bundle dependency='true'>mvn:org.apache.mina/mina-core/${mina.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.apache.sshd/sshd-osgi/${sshd.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.bouncycastle/bcprov-jdk18on/${bouncycastle.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.bouncycastle/bcpkix-jdk18on/${bouncycastle.tesb.version}</bundle>
@@ -2503,7 +2507,7 @@
   </feature>
   <feature name='camel-velocity' version='${upstream.version}' start-level='50'>
     <feature version='${camel.tesb.version-range}'>camel-core</feature>
-    <bundle dependency='true'>mvn:org.apache.velocity/velocity-engine-core/${velocity-version}</bundle>
+    <bundle dependency='true'>mvn:org.apache.velocity/velocity-engine-core/${velocity.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3.tesb.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-velocity/${upstream.version}</bundle>
   </feature>
@@ -2627,8 +2631,8 @@
   <feature name='camel-zendesk' version='${upstream.version}' start-level='50'>
     <feature version='${camel.tesb.version-range}'>camel-core</feature>
     <bundle dependency='true'>wrap:mvn:com.cloudbees.thirdparty/zendesk-java-client/${zendesk-client-version}</bundle>
-    <bundle dependency='true'>wrap:mvn:org.asynchttpclient/async-http-client/${ahc-version}$Export-Package=org.asynchttpclient.*;version=${ahc-version}</bundle>
-    <bundle dependency='true'>wrap:mvn:org.asynchttpclient/async-http-client-netty-utils/${ahc-version}$Export-Package=org.asynchttpclient.netty.util.*;version=${ahc-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:org.asynchttpclient/async-http-client/${ahc.tesb.version}$Export-Package=org.asynchttpclient.*;version=${ahc.tesb.version}</bundle>
+    <bundle dependency='true'>wrap:mvn:org.asynchttpclient/async-http-client-netty-utils/${ahc.tesb.version}$Export-Package=org.asynchttpclient.netty.util.*;version=${ahc.tesb.version}</bundle>
     <bundle dependency='true'>mvn:io.netty/netty-resolver/${netty.tesb.version}</bundle>
     <bundle dependency='true'>mvn:io.netty/netty-common/${netty.tesb.version}</bundle>
     <bundle dependency='true'>mvn:io.netty/netty-buffer/${netty.tesb.version}</bundle>
