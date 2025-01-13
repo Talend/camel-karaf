@@ -33,6 +33,34 @@
     <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.jaxb-runtime/${jaxb-bundle.tesb.version}</bundle>
   </feature>
 
+  <feature name="awssdk" version="${aws-java-sdk2-version}" start-level="50">
+    <bundle dependency='true'>mvn:org.apache.httpcomponents/httpcore-osgi/${httpcore4.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:org.apache.httpcomponents/httpclient-osgi/${httpclient4.tesb.version}</bundle>
+    <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/auth/${aws-java-sdk2-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/aws-core/${aws-java-sdk2-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/sdk-core/${aws-java-sdk2-version}$${spi-consumer}</bundle>
+<!--    <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/retries-spi/${aws-java-sdk2-version}</bundle>-->
+<!--    <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/retries/${aws-java-sdk2-version}</bundle>-->
+    <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/http-client-spi/${aws-java-sdk2-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/apache-client/${aws-java-sdk2-version}$${spi-provider}</bundle>
+    <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/regions/${aws-java-sdk2-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/utils/${aws-java-sdk2-version}</bundle>
+<!--    <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/identity-spi/${aws-java-sdk2-version}</bundle>-->
+    <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/profiles/${aws-java-sdk2-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/endpoints-spi/${aws-java-sdk2-version}</bundle>
+<!--    <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/http-auth-spi/${aws-java-sdk2-version}</bundle>-->
+<!--    <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/http-auth-aws/${aws-java-sdk2-version}</bundle>-->
+<!--    <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/http-auth/${aws-java-sdk2-version}</bundle>-->
+    <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/metrics-spi/${aws-java-sdk2-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/aws-query-protocol/${aws-java-sdk2-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/protocol-core/${aws-java-sdk2-version}</bundle>
+<!--    <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/checksums/${aws-java-sdk2-version}</bundle>-->
+<!--    <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/checksums-spi/${aws-java-sdk2-version}</bundle>-->
+    <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/json-utils/${aws-java-sdk2-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/third-party-jackson-core/${aws-java-sdk2-version}</bundle>
+    <bundle dependency='true'>mvn:org.reactivestreams/reactive-streams/${reactive-streams-version}</bundle>
+  </feature>
+
   <feature name='camel' version='${upstream.version}' start-level='50'>
     <feature prerequisite='true'>wrap</feature> <!-- some camel features needs wrap -->
     <feature version='${camel.tesb.version-range}'>camel-core</feature>
@@ -216,116 +244,148 @@
   </feature>
   <feature name='camel-aws2-athena' version='${upstream.version}' start-level='50'>
     <feature version='${camel.tesb.version-range}'>camel-core</feature>
-    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aws-java-sdk2/${aws-sdk-v2-bundle-version}</bundle>
+    <feature version="${aws-java-sdk2-version}">awssdk</feature>
+    <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/athena/${aws-java-sdk2-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-aws2-athena/${upstream.version}</bundle>
   </feature>
   <feature name='camel-aws2-cw' version='${upstream.version}' start-level='50'>
     <feature version='${camel.tesb.version-range}'>camel-core</feature>
-    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aws-java-sdk2/${aws-sdk-v2-bundle-version}</bundle>
+    <feature version="${aws-java-sdk2-version}">awssdk</feature>
+    <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/cloudwatch/${aws-java-sdk2-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-aws2-cw/${upstream.version}</bundle>
   </feature>
   <feature name='camel-aws2-ddb' version='${upstream.version}' start-level='50'>
     <feature version='${camel.tesb.version-range}'>camel-core</feature>
-    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aws-java-sdk2/${aws-sdk-v2-bundle-version}</bundle>
+    <feature version="${aws-java-sdk2-version}">awssdk</feature>
+    <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/dynamodb/${aws-java-sdk2-version}</bundle>
+    <bundle dependency='true'>mvn:com.google.code.gson/gson/${gson-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-aws2-ddb/${upstream.version}</bundle>
   </feature>
   <feature name='camel-aws2-ec2' version='${upstream.version}' start-level='50'>
     <feature version='${camel.tesb.version-range}'>camel-core</feature>
-    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aws-java-sdk2/${aws-sdk-v2-bundle-version}</bundle>
+    <feature version="${aws-java-sdk2-version}">awssdk</feature>
+    <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/ec2/${aws-java-sdk2-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-aws2-ec2/${upstream.version}</bundle>
   </feature>
   <feature name='camel-aws2-ecs' version='${upstream.version}' start-level='50'>
     <feature version='${camel.tesb.version-range}'>camel-core</feature>
-    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aws-java-sdk2/${aws-sdk-v2-bundle-version}</bundle>
+    <feature version="${aws-java-sdk2-version}">awssdk</feature>
+    <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/ecs/${aws-java-sdk2-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-aws2-ecs/${upstream.version}</bundle>
   </feature>
   <feature name='camel-aws2-eks' version='${upstream.version}' start-level='50'>
     <feature version='${camel.tesb.version-range}'>camel-core</feature>
-    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aws-java-sdk2/${aws-sdk-v2-bundle-version}</bundle>
+    <feature version="${aws-java-sdk2-version}">awssdk</feature>
+    <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/eks/${aws-java-sdk2-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/aws-json-protocol/${aws-java-sdk2-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-aws2-eks/${upstream.version}</bundle>
   </feature>
   <feature name='camel-aws2-eventbridge' version='${upstream.version}' start-level='50'>
     <feature version='${camel.tesb.version-range}'>camel-core</feature>
     <bundle dependency='true'>mvn:commons-io/commons-io/${commons-io.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aws-java-sdk2/${aws-sdk-v2-bundle-version}</bundle>
+    <feature version="${aws-java-sdk2-version}">awssdk</feature>
+    <bundle dependency='true'>mvn:commons-io/commons-io/${commons-io.tesb.version}</bundle>
+    <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/eventbridge/${aws-java-sdk2-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-aws2-eventbridge/${upstream.version}</bundle>
   </feature>
   <feature name='camel-aws2-iam' version='${upstream.version}' start-level='50'>
     <feature version='${camel.tesb.version-range}'>camel-core</feature>
-    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aws-java-sdk2/${aws-sdk-v2-bundle-version}</bundle>
+    <feature version="${aws-java-sdk2-version}">awssdk</feature>
+    <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/iam/${aws-java-sdk2-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-aws2-iam/${upstream.version}</bundle>
   </feature>
   <feature name='camel-aws2-kinesis' version='${upstream.version}' start-level='50'>
     <feature version='${camel.tesb.version-range}'>camel-core</feature>
-    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aws-java-sdk2/${aws-sdk-v2-bundle-version}</bundle>
+    <feature version="${aws-java-sdk2-version}">awssdk</feature>
+    <bundle dependency="true">wrap:mvn:software.amazon.awssdk/netty-nio-client/${aws-java-sdk2-version}</bundle>
+    <bundle dependency="true">wrap:mvn:software.amazon.awssdk/firehose/${aws-java-sdk2-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/kinesis/${aws-java-sdk2-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/dynamodb/${aws-java-sdk2-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/cloudwatch/${aws-java-sdk2-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-aws2-kinesis/${camel-aws.tesb.version}</bundle>
   </feature>
   <feature name='camel-aws2-kms' version='${upstream.version}' start-level='50'>
     <feature version='${camel.tesb.version-range}'>camel-core</feature>
-    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aws-java-sdk2/${aws-sdk-v2-bundle-version}</bundle>
+    <feature version="${aws-java-sdk2-version}">awssdk</feature>
+    <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/kms/${aws-java-sdk2-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-aws2-kms/${upstream.version}</bundle>
   </feature>
   <feature name='camel-aws2-lambda' version='${upstream.version}' start-level='50'>
     <feature version='${camel.tesb.version-range}'>camel-core</feature>
-    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aws-java-sdk2/${aws-sdk-v2-bundle-version}</bundle>
+    <feature version="${aws-java-sdk2-version}">awssdk</feature>
+    <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/lambda/${aws-java-sdk2-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-aws2-lambda/${upstream.version}</bundle>
   </feature>
   <feature name='camel-aws2-mq' version='${upstream.version}' start-level='50'>
     <feature version='${camel.tesb.version-range}'>camel-core</feature>
-    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aws-java-sdk2/${aws-sdk-v2-bundle-version}</bundle>
+    <feature version="${aws-java-sdk2-version}">awssdk</feature>
+    <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/mq/${aws-java-sdk2-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/aws-json-protocol/${aws-java-sdk2-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-aws2-mq/${upstream.version}</bundle>
   </feature>
   <feature name='camel-aws2-msk' version='${upstream.version}' start-level='50'>
     <feature version='${camel.tesb.version-range}'>camel-core</feature>
-    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aws-java-sdk2/${aws-sdk-v2-bundle-version}</bundle>
+    <feature version="${aws-java-sdk2-version}">awssdk</feature>
+    <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/kafka/${aws-java-sdk2-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-aws2-msk/${upstream.version}</bundle>
   </feature>
   <feature name='camel-aws2-s3' version='${upstream.version}' start-level='50'>
     <feature version='${camel.tesb.version-range}'>camel-core</feature>
-    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aws-java-sdk2/${aws-sdk-v2-bundle-version}</bundle>
+    <feature version="${aws-java-sdk2-version}">awssdk</feature>
+    <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/s3/${aws-java-sdk2-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/aws-xml-protocol/${aws-java-sdk2-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-aws2-s3/${upstream.version}</bundle>
   </feature>
   <feature name='camel-aws2-ses' version='${upstream.version}' start-level='50'>
     <feature version='${camel.tesb.version-range}'>camel-core</feature>
-    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aws-java-sdk2/${aws-sdk-v2-bundle-version}</bundle>
+    <feature version="${aws-java-sdk2-version}">awssdk</feature>
+    <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/ses/${aws-java-sdk2-version}</bundle>
     <bundle dependency='true'>mvn:com.sun.mail/jakarta.mail/${jakarta-mail-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-aws2-ses/${upstream.version}</bundle>
   </feature>
   <feature name='camel-aws2-sns' version='${upstream.version}' start-level='50'>
     <feature version='${camel.tesb.version-range}'>camel-core</feature>
+    <feature version="${aws-java-sdk2-version}">awssdk</feature>
     <bundle dependency='true'>mvn:commons-io/commons-io/${commons-io.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aws-java-sdk2/${aws-sdk-v2-bundle-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/sns/${aws-java-sdk2-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-aws2-sns/${upstream.version}</bundle>
   </feature>
   <feature name='camel-aws2-sqs' version='${upstream.version}' start-level='50'>
     <feature version='${camel.tesb.version-range}'>camel-core</feature>
+    <feature version="${aws-java-sdk2-version}">awssdk</feature>
     <bundle dependency='true'>mvn:commons-io/commons-io/${commons-io.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aws-java-sdk2/${aws-sdk-v2-bundle-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/sqs/${aws-java-sdk2-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/aws-json-protocol/${aws-java-sdk2-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-aws2-sqs/${upstream.version}</bundle>
   </feature>
   <feature name='camel-aws2-sts' version='${upstream.version}' start-level='50'>
     <feature version='${camel.tesb.version-range}'>camel-core</feature>
-    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aws-java-sdk2/${aws-sdk-v2-bundle-version}</bundle>
+    <feature version="${aws-java-sdk2-version}">awssdk</feature>
+    <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/sts/${aws-java-sdk2-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-aws2-sts/${upstream.version}</bundle>
   </feature>
   <feature name='camel-aws2-translate' version='${upstream.version}' start-level='50'>
     <feature version='${camel.tesb.version-range}'>camel-core</feature>
-    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aws-java-sdk2/${aws-sdk-v2-bundle-version}</bundle>
+    <feature version="${aws-java-sdk2-version}">awssdk</feature>
+    <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/translate/${aws-java-sdk2-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-aws2-translate/${upstream.version}</bundle>
   </feature>
   <feature name='camel-aws-secrets-manager' version='${upstream.version}' start-level='50'>
     <feature version='${camel.tesb.version-range}'>camel-core</feature>
-    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aws-java-sdk2/${aws-sdk-v2-bundle-version}</bundle>
+    <feature version="${aws-java-sdk2-version}">awssdk</feature>
     <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2.tesb.version}</bundle>
     <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2.tesb.version}</bundle>
     <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2.tesb.version}</bundle>
     <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-xml/${jackson2.tesb.version}</bundle>
     <bundle dependency='true'>mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/cloudtrail/${aws-java-sdk2-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/secretsmanager/${aws-java-sdk2-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-aws-secrets-manager/${upstream.version}</bundle>
   </feature>
   <feature name='camel-aws-cloudtrail' version='${upstream.version}' start-level='50'>
     <feature version='${camel.tesb.version-range}'>camel-core</feature>
-    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aws-java-sdk2/${aws-sdk-v2-bundle-version}</bundle>
+    <feature version="${aws-java-sdk2-version}">awssdk</feature>
+    <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/cloudtrail/${aws-java-sdk2-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-aws-cloudtrail/${upstream.version}</bundle>
   </feature>
   <feature name='camel-aws-xray' version='${upstream.version}' start-level='50'>
@@ -350,6 +410,8 @@
     <bundle dependency='true'>mvn:org.reactivestreams/reactive-streams/${reactive-streams-version}</bundle>
     <bundle dependency='true'>mvn:io.projectreactor/reactor-core/${reactor-version}</bundle>
     <bundle dependency='true'>mvn:commons-io/commons-io/${commons-io.tesb.version}</bundle>
+    <bundle dependency='true'>wrap:mvn:com.azure/azure-json/${azure-json-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:com.azure/azure-xml/${azure-xml-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.azure-core/${azure-core-bundle-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.azure-storage-common/${azure-storage-common-bundle-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.azure-storage-blob/${azure-storage-blob-bundle-version}</bundle>
@@ -393,6 +455,8 @@
     <bundle dependency='true'>mvn:org.reactivestreams/reactive-streams/${reactive-streams-version}</bundle>
     <bundle dependency='true'>mvn:io.projectreactor/reactor-core/${reactor-version}</bundle>
     <bundle dependency='true'>mvn:commons-io/commons-io/${commons-io.tesb.version}</bundle>
+    <bundle dependency='true'>wrap:mvn:com.azure/azure-json/${azure-json-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:com.azure/azure-xml/${azure-xml-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.azure-core/${azure-core-bundle-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.azure-storage-common/${azure-storage-common-bundle-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.azure-storage-blob/${azure-storage-blob-bundle-version}</bundle>
@@ -503,6 +567,8 @@
     <bundle dependency='true'>mvn:org.apache.qpid/qpid-jms-client/${qpid-jms-client.tesb.version}</bundle>
     <bundle dependency='true'>mvn:org.apache.qpid/proton-j/${qpid-proton-j.tesb.version}</bundle>
     <feature version='${camel.tesb.version-range}'>camel-azure-storage-blob</feature>
+    <bundle dependency='true'>wrap:mvn:com.azure/azure-json/${azure-json-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:com.azure/azure-xml/${azure-xml-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.azure-core/${azure-core-bundle-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.azure-core-amqp/${azure-core-amqp-bundle-version}</bundle>
     <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.azure-messaging-eventhubs/${azure-messaging-eventhubs-bundle-version}</bundle>
