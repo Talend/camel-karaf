@@ -569,7 +569,7 @@
         <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/aws-json-protocol/${aws-java-sdk2-version}</bundle>
         <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/aws-cbor-protocol/${aws-java-sdk2-version}</bundle>
         <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/third-party-jackson-dataformat-cbor/${aws-java-sdk2-version}</bundle>
-        <bundle>mvn:org.apache.camel.karaf/camel-aws2-kinesis/${project.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-aws2-kinesis/${upstream.version}</bundle>
     </feature>
     <feature name='camel-aws2-kms' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
