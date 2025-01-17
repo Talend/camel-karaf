@@ -2562,13 +2562,15 @@
         <bundle dependency='true'>mvn:commons-io/commons-io/${commons-io-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-rest-openapi/${upstream.version}</bundle>
     </feature>
-    <feature name='camel-robotframework' version='${upstream.version}' start-level='50'>
+    <!-- Disabled because of security vulnerabilities from embedded commons-compress 1.19 -->
+    <!-- CVE-2021-35515, CVE-2021-35516, CVE-2021-35517, CVE-2021-36090, CVE-2024-25710 -->
+    <!-- <feature name='camel-robotframework' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <bundle dependency='true'>wrap:mvn:org.robotframework/robotframework/${robotframework-version}</bundle>
         <bundle dependency='true'>wrap:mvn:org.python/jython/${jython-version}</bundle>
         <bundle dependency='true'>wrap:mvn:org.python/jython-standalone/${jython-standalone.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-robotframework/${upstream.version}</bundle>
-    </feature>
+    </feature> -->
     <feature name='camel-rocketmq' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3-version}</bundle>
