@@ -174,7 +174,7 @@
         <jettison.tesb.version>1.5.4</jettison.tesb.version>
         <jetty.tesb.version>9.4.56.v20240826</jetty.tesb.version>
         <jgit.tesb.version>6.6.1.202309021850-r</jgit.tesb.version>
-        <jna.tesb.version>5.13.0</jna.tesb.version>
+        <jna.tesb.version>5.14.0</jna.tesb.version>
         <!-- <johnzon.tesb.version>1.2.21</johnzon.tesb.version> -->
         <jose4j.tesb.version>0.9.4</jose4j.tesb.version>
         <json-path.tesb.version>2.9.0</json-path.tesb.version>

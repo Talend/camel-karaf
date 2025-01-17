@@ -258,7 +258,7 @@
     <feature version='${camel.tesb.version-range}'>camel-core</feature>
     <feature version="${aws-java-sdk2-version}">awssdk</feature>
     <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/dynamodb/${aws-java-sdk2-version}</bundle>
-    <bundle dependency='true'>mvn:com.google.code.gson/gson/${gson-version}</bundle>
+    <bundle dependency='true'>mvn:com.google.code.gson/gson/${gson.tesb.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-aws2-ddb/${upstream.version}</bundle>
   </feature>
   <feature name='camel-aws2-ec2' version='${upstream.version}' start-level='50'>
@@ -440,8 +440,6 @@
     <bundle dependency='true'>mvn:org.ow2.asm/asm-tree/${asm.bundle.version}</bundle>
     <bundle dependency='true'>mvn:org.ow2.asm/asm-util/${asm.bundle.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-azure-storage-blob/${upstream.version}</bundle>
-    <bundle dependency="true">wrap:mvn:com.azure/azure-xml/1.0.0$Bundle-Version=1.0.0</bundle>
-    <bundle dependency="true">wrap:mvn:com.azure/azure-json/1.1.0$Bundle-Version=1.1.0</bundle>
   </feature>
   <feature name='camel-azure-storage-datalake' version='${upstream.version}' start-level='50'>
     <feature version='${camel.tesb.version-range}'>camel-core</feature>
@@ -486,8 +484,6 @@
     <bundle dependency='true'>mvn:org.ow2.asm/asm-tree/${asm.bundle.version}</bundle>
     <bundle dependency='true'>mvn:org.ow2.asm/asm-util/${asm.bundle.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-azure-storage-datalake/${upstream.version}</bundle>
-    <bundle dependency="true">wrap:mvn:com.azure/azure-xml/1.0.0$Bundle-Version=1.0.0</bundle>
-    <bundle dependency="true">wrap:mvn:com.azure/azure-json/1.1.0$Bundle-Version=1.1.0</bundle>
   </feature>
   <feature name='camel-azure-storage-queue' version='${upstream.version}' start-level='50'>
     <feature version='${camel.tesb.version-range}'>camel-core</feature>
