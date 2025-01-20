@@ -237,11 +237,11 @@
         <bundle dependency='true'>mvn:com.fasterxml.jackson.datatype/jackson-datatype-jsr310/${jackson2.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.azure/azure-core/${azure-core-version}$${spi-consumer}&amp;Import-Package=*;resolution:=optional,com.fasterxml.jackson.dataformat.xml.deser;resolution:=optional,com.fasterxml.jackson.dataformat.xml.ser;resolution:=optional</bundle>
         <bundle dependency='true'>wrap:mvn:com.azure/azure-identity/${azure-identity-version}$Import-Package=com.sun.jna,*;resolution:=optional</bundle>
-        <bundle dependency='true'>mvn:io.projectreactor/reactor-core/${auto-detect-version}</bundle>
-        <bundle dependency='true'>mvn:net.java.dev.jna/jna/${auto-detect-version}</bundle>
+        <bundle dependency='true'>mvn:io.projectreactor/reactor-core/${reactor-version}</bundle>
+        <bundle dependency='true'>mvn:net.java.dev.jna/jna/${jna.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.reactivestreams/reactive-streams/${reactive-streams-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:com.azure/azure-xml/${auto-detect-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:com.azure/azure-json/${auto-detect-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:com.azure/azure-xml/${azure-xml.tesb.version}$Bundle-SymbolicName=azure-xml&amp;Bundle-Version=${azure-xml.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:com.azure/azure-json/${azure-json.tesb.version}$Bundle-SymbolicName=azure-json&amp;Bundle-Version=${azure-json.tesb.version}</bundle>
     </feature>
     <feature name="azure-msal4j" version="${azure-core-version}" start-level="50">
         <bundle dependency='true'>mvn:com.nimbusds/content-type/${auto-detect-version}</bundle>
