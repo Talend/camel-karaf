@@ -302,6 +302,9 @@
     <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/kinesis/${aws-java-sdk2-version}</bundle>
     <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/dynamodb/${aws-java-sdk2-version}</bundle>
     <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/cloudwatch/${aws-java-sdk2-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/aws-json-protocol/${aws-java-sdk2-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/aws-cbor-protocol/${aws-java-sdk2-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/third-party-jackson-dataformat-cbor/${aws-java-sdk2-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-aws2-kinesis/${camel-aws.tesb.version}</bundle>
   </feature>
   <feature name='camel-aws2-kms' version='${upstream.version}' start-level='50'>
