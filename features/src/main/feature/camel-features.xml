@@ -145,6 +145,7 @@
     <feature name="jetty" version="${jetty11.tesb.version}">
         <feature version="[5,6)">jakarta-servlet</feature>
         <bundle dependency="true">mvn:org.eclipse.jetty/jetty-alpn-server/${jetty11.tesb.version}</bundle>
+        <bundle dependency="true">mvn:org.eclipse.jetty/jetty-alpn-java-server/${jetty11.tesb.version}</bundle>
         <bundle dependency="true">mvn:org.eclipse.jetty/jetty-http/${jetty11.tesb.version}</bundle>
         <bundle dependency="true">mvn:org.eclipse.jetty/jetty-io/${jetty11.tesb.version}</bundle>
         <bundle dependency="true">mvn:org.eclipse.jetty/jetty-server/${jetty11.tesb.version}</bundle>
@@ -158,6 +159,7 @@
     <feature name="jetty" version="${jetty12.tesb.version}">
         <feature version="[6,7)">jakarta-servlet</feature>
         <bundle dependency="true">mvn:org.eclipse.jetty/jetty-alpn-server/${jetty12.tesb.version}</bundle>
+        <bundle dependency="true">mvn:org.eclipse.jetty/jetty-alpn-java-server/${jetty12.tesb.version}</bundle>
         <bundle dependency="true">mvn:org.eclipse.jetty/jetty-http/${jetty12.tesb.version}</bundle>
         <bundle dependency="true">mvn:org.eclipse.jetty/jetty-io/${jetty12.tesb.version}</bundle>
         <bundle dependency="true">mvn:org.eclipse.jetty/jetty-server/${jetty12.tesb.version}</bundle>
@@ -168,8 +170,6 @@
         <bundle dependency="true">mvn:org.eclipse.jetty.http2/jetty-http2-hpack/${jetty12.tesb.version}</bundle>
         <bundle dependency="true">mvn:org.eclipse.jetty.http2/jetty-http2-common/${jetty12.tesb.version}</bundle>
         <bundle dependency="true">mvn:org.eclipse.jetty.http2/jetty-http2-server/${jetty12.tesb.version}</bundle>
-        <bundle dependency="true">mvn:org.eclipse.jetty/jetty-alpn-java-client/${jetty12.tesb.version}</bundle>
-        <bundle dependency="true">mvn:org.eclipse.jetty/jetty-alpn-java-server/${jetty12.tesb.version}</bundle>
     </feature>
 
     <feature name="http-client" version="${httpclient4-version}">
@@ -2639,6 +2639,7 @@
         <bundle dependency='true'>mvn:org.cometd.java/cometd-java-client-http-common/${cometd-java-client-version}</bundle>
         <bundle dependency='true'>mvn:org.cometd.java/cometd-java-common/${cometd-java-client-version}</bundle>
         <bundle dependency='true'>mvn:org.eclipse.jetty/jetty-alpn-client/${jetty12.tesb.version}</bundle>
+        <bundle dependency="true">mvn:org.eclipse.jetty/jetty-alpn-java-client/${jetty12.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:org.eclipse.jetty/jetty-client/${jetty12.tesb.version}$overwrite=merge&amp;Export-Package=org*;version=${jetty12.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:tech.allegro.schema.json2avro/converter/${auto-detect-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-salesforce/${upstream.version}</bundle>
