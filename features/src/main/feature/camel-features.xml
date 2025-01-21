@@ -338,7 +338,7 @@
         <bundle>mvn:org.apache.camel.karaf/camel-xpath/${upstream.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-xslt/${upstream.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-directvm/${upstream.version}</bundle>
-        <bundle>mvn:org.apache.camel.karaf/camel-vm/${upstream.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-vm/${camel-vm.tesb.version}</bundle>
         <conditional>
             <condition>shell</condition>
             <bundle>mvn:org.apache.camel.karaf/camel-karaf-shell/${upstream.version}</bundle>
