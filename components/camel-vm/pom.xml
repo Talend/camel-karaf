@@ -31,8 +31,10 @@
     <artifactId>camel-vm</artifactId>
     <packaging>bundle</packaging>
     <name>Apache Camel :: Karaf :: Components :: VM</name>
+    <version>${revision}</version>
 
     <properties>
+        <revision>${camel-vm.tesb.version}</revision>
         <camel.osgi.export>
             org.apache.camel.karaf.component.vm.*;version=${camel-version}
         </camel.osgi.export>
