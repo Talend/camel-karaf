@@ -168,6 +168,8 @@
         <bundle dependency="true">mvn:org.eclipse.jetty.http2/jetty-http2-hpack/${jetty12.tesb.version}</bundle>
         <bundle dependency="true">mvn:org.eclipse.jetty.http2/jetty-http2-common/${jetty12.tesb.version}</bundle>
         <bundle dependency="true">mvn:org.eclipse.jetty.http2/jetty-http2-server/${jetty12.tesb.version}</bundle>
+        <bundle dependency="true">mvn:org.eclipse.jetty/jetty-alpn-java-client/${jetty12.tesb.version}</bundle>
+        <bundle dependency="true">mvn:org.eclipse.jetty/jetty-alpn-java-server/${jetty12.tesb.version}</bundle>
     </feature>
 
     <feature name="http-client" version="${httpclient4-version}">
