@@ -957,7 +957,8 @@
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version='${camel-osgi-jackson2.tesb.version}'>jackson</feature>
         <bundle dependency='true'>mvn:com.fasterxml.jackson.module/jackson-module-afterburner/${jackson2.tesb.version}</bundle>
-        <bundle dependency='true'>wrap:mvn:org.apache.kafka/kafka-clients/${kafka-version}</bundle>
+        <bundle dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.kafka-clients/${kafka-bundle.tesb.version}</bundle>
+        <bundle dependency="true">mvn:org.lz4/lz4-java/${auto-detect-version}</bundle>
         <!-- Api, runtime and transform have split packages so we merge all into api -->
         <bundle dependency='true'>wrap:mvn:org.apache.kafka/connect-runtime/${kafka-version}$Fragment-Host=org.apache.kafka.connect-api;bundle-version=${kafka-version}</bundle>
         <bundle dependency='true'>wrap:mvn:org.apache.kafka/connect-transforms/${kafka-version}$Fragment-Host=org.apache.kafka.connect-api;bundle-version=${kafka-version}</bundle>
