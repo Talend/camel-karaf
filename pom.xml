@@ -117,6 +117,7 @@
         <jaxb-staxex.tesb.version>2.1.0</jaxb-staxex.tesb.version>
         <jaxb-dtd-parser.tesb.version>1.5.1</jaxb-dtd-parser.tesb.version>
         <jython-standalone.tesb.version>${jython-version}</jython-standalone.tesb.version>
+        <kafka-bundle.tesb.version>3.8.1-tesb1</kafka-bundle.tesb.version>
         <kudu.tesb.version>1.17.1</kudu.tesb.version>
         <mina.tesb.version>2.2.4</mina.tesb.version>
         <paranamer.tesb.version>2.8</paranamer.tesb.version>
