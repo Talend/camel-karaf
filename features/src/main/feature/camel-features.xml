@@ -1762,6 +1762,11 @@
         <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-contrib-http-util/${auto-detect-version}</bundle>
         <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-api/${auto-detect-version}</bundle>
         <bundle dependency='true'>mvn:joda-time/joda-time/${auto-detect-version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.httpcomponents/httpasyncclient-osgi/${auto-detect-version:alias=org.apache.httpcomponents/httpasyncclient}</bundle>
+        <bundle dependency='true'>wrap:mvn:org.apache.httpcomponents/httpasyncclient-cache/${auto-detect-version}$Fragment-Host=org.apache.httpcomponents.httpclient;bundle-version=${httpclient4-version}</bundle>
+        <bundle dependency='true'>mvn:io.atlassian.fugue/fugue/${atlassian-fugue-version}</bundle>
+        <!-- Wrap protocol used to work around the wrong version range used for the osgiresourcelocator [1,2)  -->
+        <bundle dependency='true'>wrap:mvn:org.glassfish.jersey.core/jersey-common/${auto-detect-version}$overwrite=merge&amp;Import-Package=org.glassfish.hk2.osgiresourcelocator;version:="[2,3)",*;resolution:=optional</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-jira/${upstream.version}</bundle>
     </feature>
     <feature name='camel-jfr' version='${upstream.version}' start-level='50'>
