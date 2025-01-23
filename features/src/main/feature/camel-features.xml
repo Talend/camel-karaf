@@ -49,9 +49,9 @@
         <bundle dependency="true">mvn:jakarta.validation/jakarta.validation-api/${jakarta-validation-api-version}</bundle>
     </feature>
 
-    <feature name="jakarta-jws" version="${jakarta-jws-api-version}">
+    <!-- <feature name="jakarta-jws" version="${jakarta-jws-api-version}">
         <bundle dependency="true">mvn:jakarta.jws/jakarta.jws-api/${jakarta-jws-api-version}</bundle>
-    </feature>
+    </feature> -->
 
     <feature name="jaxb-runtime" version="${jaxb3-core-version}">
         <feature version="[3,4)">jakarta-xml-bind</feature>
@@ -925,7 +925,7 @@
         <feature version='${camel-osgi-version-range}'>camel-blueprint</feature>
         <feature version='${camel-osgi-version-range}'>camel-spring</feature>
         <feature version="[6,7)">jakarta-servlet</feature>
-        <feature version="${camel-osgi-jakarta-jws-version}">jakarta-jws</feature>
+        <feature version="${camel-osgi-jakarta-xml-ws-version}">jakarta-xml-ws</feature>
         <feature version="[3,4)">jakarta-validation</feature>
         <bundle dependency="true">mvn:org.ops4j.pax.web/pax-web-api/${tesb-pax-web-api-version}</bundle>
         <bundle dependency="true">mvn:org.glassfish.hk2/osgi-resource-locator/${osgi-resource-locator-version}</bundle>
