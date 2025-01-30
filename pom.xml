@@ -97,6 +97,7 @@
         <camel-cxf-rest.tesb.version>4.8.1.20240820</camel-cxf-rest.tesb.version>
         <camel-spring.tesb.version>4.8.1.20240820</camel-spring.tesb.version>
         <camel-blueprint.tesb.version>4.8.1.20240820</camel-blueprint.tesb.version>
+        <camel-tooling.tesb.version>4.8.1.20240820</camel-tooling.tesb.version>
 
         <cxf.tesb.version>4.1.0.1</cxf.tesb.version>
         <jetty11.tesb.version>11.0.21</jetty11.tesb.version>
@@ -748,6 +749,7 @@
                             <camel-cxf-soap.tesb.version>${camel-cxf-soap.tesb.version}</camel-cxf-soap.tesb.version>
                             <camel-cxf-rest.tesb.version>${camel-cxf-rest.tesb.version}</camel-cxf-rest.tesb.version>
                             <camel-spring.tesb.version>${camel-spring.tesb.version}</camel-spring.tesb.version>
+                            <camel-tooling.tesb.version>${camel-tooling.tesb.version}</camel-tooling.tesb.version>
                             <cxf.tesb.version>${cxf.tesb.version}</cxf.tesb.version>
                             <jetty11.tesb.version>${jetty11.tesb.version}</jetty11.tesb.version>
                             <jetty12.tesb.version>${jetty12.tesb.version}</jetty12.tesb.version>

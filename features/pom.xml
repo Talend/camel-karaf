@@ -72,7 +72,7 @@
             <plugin>
                 <groupId>org.apache.camel.karaf</groupId>
                 <artifactId>camel-karaf-feature-maven-plugin</artifactId>
-                <version>${upstream.version}</version>
+                <version>${camel-tooling.tesb.version}</version>
                 <executions>
                     <execution>
                         <goals>
