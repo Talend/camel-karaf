@@ -1049,8 +1049,8 @@
     </feature>
     <feature name='camel-djl' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
-        <bundle dependency='true'>wrap:mvn:ai.djl/api/${djl-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:ai.djl.timeseries/timeseries/${djl-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:ai.djl/api/${djl.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:ai.djl.timeseries/timeseries/${djl.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-djl/${upstream.version}</bundle>
     </feature>
     <feature name='camel-dns' version='${upstream.version}' start-level='50'>
