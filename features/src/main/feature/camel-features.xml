@@ -126,6 +126,7 @@
         <bundle dependency='true'>mvn:org.bouncycastle/bcprov-jdk18on/${bouncycastle.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.bouncycastle/bcpg-jdk18on/${bouncycastle.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.bouncycastle/bcpkix-jdk18on/${bouncycastle.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:org.bouncycastle/bcutil-jdk18on/${bouncycastle.tesb.version}</bundle>
     </feature>
 
     <feature name="jackson" version="${jackson2.tesb.version}">
@@ -2850,8 +2851,8 @@
         <feature version='[4.1,5)'>netty</feature>
         <bundle dependency='true'>mvn:org.reactivestreams/reactive-streams/${reactive-streams-version}</bundle>
         <bundle dependency='true'>mvn:io.projectreactor/reactor-core/${reactor-version}</bundle>
-        <bundle dependency='true'>mvn:io.projectreactor.netty/reactor-netty-core/${reactor-netty.tesb.version}</bundle>
-        <bundle dependency='true'>mvn:io.projectreactor.netty/reactor-netty-http/${reactor-netty.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:io.projectreactor.netty/reactor-netty-core/${reactor-netty-version}</bundle>
+        <bundle dependency='true'>mvn:io.projectreactor.netty/reactor-netty-http/${reactor-netty-version}</bundle>
         <bundle dependency='true'>mvn:io.netty/netty-transport-classes-epoll/${netty.tesb.version}</bundle>
         <bundle dependency='true'>mvn:io.netty/netty-handler-proxy/${netty.tesb.version}</bundle>
         <bundle dependency='true'>mvn:io.netty/netty-resolver-dns/${netty.tesb.version}</bundle>
