@@ -127,6 +127,7 @@
         <protobuf.tesb.version>3.25.5</protobuf.tesb.version>
         <pulsar.tesb.version>3.3.3</pulsar.tesb.version>
         <spring.tesb.version>6.1.14</spring.tesb.version>
+        <spring-ldap.tesb.version>3.2.10</spring-ldap.tesb.version>
         <spring-security.tesb.version>6.3.6</spring-security.tesb.version>
         <velocity.tesb.version>2.4.1</velocity.tesb.version>
         <wildfly-elytron.tesb.version>2.2.7.Final</wildfly-elytron.tesb.version>
@@ -786,6 +787,7 @@
                             <protobuf.tesb.version>${protobuf.tesb.version}</protobuf.tesb.version>
                             <pulsar.tesb.version>${pulsar.tesb.version}</pulsar.tesb.version>
                             <spring.tesb.version>${spring.tesb.version}</spring.tesb.version>
+                            <spring-ldap.tesb.version>${spring-ldap.tesb.version}</spring-ldap.tesb.version>
                             <spring-security.tesb.version>${spring-security.tesb.version}</spring-security.tesb.version>
                             <velocity.tesb.version>${velocity.tesb.version}</velocity.tesb.version>
                             <wildfly-elytron.tesb.version>${wildfly-elytron.tesb.version}</wildfly-elytron.tesb.version>
