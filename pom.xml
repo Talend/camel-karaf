@@ -100,7 +100,8 @@
         <camel-tooling.tesb.version>4.8.1.20240820</camel-tooling.tesb.version>
 
         <cxf.tesb.version>4.1.0.1</cxf.tesb.version>
-        <jetty11.tesb.version>11.0.21</jetty11.tesb.version>
+        <jetty9.tesb.version>9.4.57.v20241219</jetty9.tesb.version>
+        <jetty11.tesb.version>11.0.24</jetty11.tesb.version>
         <jetty12.tesb.version>12.0.15</jetty12.tesb.version>
         <jetty.tesb.version>${jetty12.tesb.version}</jetty.tesb.version>
         <jetty11.tesb.version-range>[11,12)</jetty11.tesb.version-range>
@@ -121,10 +122,13 @@
         <kafka-bundle.tesb.version>3.8.1-tesb1</kafka-bundle.tesb.version>
         <kudu.tesb.version>1.17.1</kudu.tesb.version>
         <mina.tesb.version>2.2.4</mina.tesb.version>
+        <netty.tesb.version>4.1.115.Final</netty.tesb.version>
         <paranamer.tesb.version>2.8</paranamer.tesb.version>
         <protobuf.tesb.version>3.25.5</protobuf.tesb.version>
         <pulsar.tesb.version>3.3.3</pulsar.tesb.version>
         <spring.tesb.version>6.1.14</spring.tesb.version>
+        <spring-ldap.tesb.version>3.2.10</spring-ldap.tesb.version>
+        <spring-security.tesb.version>6.3.6</spring-security.tesb.version>
         <velocity.tesb.version>2.4.1</velocity.tesb.version>
         <wildfly-elytron.tesb.version>2.2.7.Final</wildfly-elytron.tesb.version>
         <zookeeper.tesb.version>3.9.3</zookeeper.tesb.version>
@@ -134,8 +138,13 @@
         <camel-osgi-jackson2.tesb.version>[2.18,2.19)</camel-osgi-jackson2.tesb.version>
         <azure-json.tesb.version>1.3.0</azure-json.tesb.version>
         <azure-xml.tesb.version>1.1.0</azure-xml.tesb.version>
+        <bouncycastle.tesb.version>1.78.1</bouncycastle.tesb.version>
+        <couchbase-client.tesb.version>3.7.7</couchbase-client.tesb.version>
+        <fop.tesb.version>2.10</fop.tesb.version>
         <jna.tesb.version>5.14.0</jna.tesb.version>
+        <jte.tesb.version>3.1.16</jte.tesb.version>
         <djl.tesb.version>0.31.1</djl.tesb.version>
+        <squareup-okio.tesb.version>1.17.6</squareup-okio.tesb.version>
 
         <jdk-version>17</jdk-version>
         <maven.compiler.source>${jdk-version}</maven.compiler.source>
@@ -752,6 +761,7 @@
                             <camel-spring.tesb.version>${camel-spring.tesb.version}</camel-spring.tesb.version>
                             <camel-tooling.tesb.version>${camel-tooling.tesb.version}</camel-tooling.tesb.version>
                             <cxf.tesb.version>${cxf.tesb.version}</cxf.tesb.version>
+                            <jetty9.tesb.version>${jetty9.tesb.version}</jetty9.tesb.version>
                             <jetty11.tesb.version>${jetty11.tesb.version}</jetty11.tesb.version>
                             <jetty12.tesb.version>${jetty12.tesb.version}</jetty12.tesb.version>
                             <jetty.tesb.version>${jetty.tesb.version}</jetty.tesb.version>
@@ -772,18 +782,26 @@
                             <jython-standalone.tesb.version>${jython-standalone.tesb.version}</jython-standalone.tesb.version>
                             <kudu.tesb.version>${kudu.tesb.version}</kudu.tesb.version>
                             <mina.tesb.version>${mina.tesb.version}</mina.tesb.version>
+                            <netty.tesb.version>${netty.tesb.version}</netty.tesb.version>
                             <paranamer.tesb.version>${paranamer.tesb.version}</paranamer.tesb.version>
                             <protobuf.tesb.version>${protobuf.tesb.version}</protobuf.tesb.version>
                             <pulsar.tesb.version>${pulsar.tesb.version}</pulsar.tesb.version>
                             <spring.tesb.version>${spring.tesb.version}</spring.tesb.version>
+                            <spring-ldap.tesb.version>${spring-ldap.tesb.version}</spring-ldap.tesb.version>
+                            <spring-security.tesb.version>${spring-security.tesb.version}</spring-security.tesb.version>
                             <velocity.tesb.version>${velocity.tesb.version}</velocity.tesb.version>
                             <wildfly-elytron.tesb.version>${wildfly-elytron.tesb.version}</wildfly-elytron.tesb.version>
                             <zookeeper.tesb.version>${zookeeper.tesb.version}</zookeeper.tesb.version>
                             <zookeeper-server.tesb.version>${zookeeper-server.tesb.version}</zookeeper-server.tesb.version>
                             <azure-json.tesb.version>${azure-json.tesb.version}</azure-json.tesb.version>
                             <azure-xml.tesb.version>${azure-xml.tesb.version}</azure-xml.tesb.version>
+                            <bouncycastle.tesb.version>${bouncycastle.tesb.version}</bouncycastle.tesb.version>
+                            <couchbase-client.tesb.version>${couchbase-client.tesb.version}</couchbase-client.tesb.version>
+                            <fop.tesb.version>${fop.tesb.version}</fop.tesb.version>
                             <jna.tesb.version>${jna.tesb.version}</jna.tesb.version>
+                            <jte.tesb.version>${jte.tesb.version}</jte.tesb.version>
                             <djl.tesb.version>${djl.tesb.version}</djl.tesb.version>
+                            <squareup-okio.tesb.version>${squareup-okio.tesb.version}</squareup-okio.tesb.version>
                         </properties>
                     </configuration>
                     <executions>
