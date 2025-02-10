@@ -61,6 +61,56 @@
     <bundle dependency='true'>mvn:org.reactivestreams/reactive-streams/${reactive-streams-version}</bundle>
   </feature>
 
+  <feature name="azure" version="${azure-core-version}" start-level="50">
+    <feature version='[${azure-core-version},2)'>azure-msal4j</feature>
+    <feature version='${camel-osgi-jackson2.tesb.version}'>jackson</feature>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-xml/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.datatype/jackson-datatype-jsr310/${jackson2.tesb.version}</bundle>
+    <bundle dependency='true'>wrap:mvn:com.azure/azure-core/${azure-core-bundle-version}$${spi-consumer}</bundle>
+    <bundle dependency='true'>wrap:mvn:com.azure/azure-identity/${azure-identity-bundle-version}$Import-Package=com.sun.jna,*;resolution:=optional</bundle>
+    <bundle dependency='true'>mvn:io.projectreactor/reactor-core/${reactor-version}</bundle>
+    <bundle dependency='true'>mvn:net.java.dev.jna/jna/${jna.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:org.reactivestreams/reactive-streams/${reactive-streams-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:com.azure/azure-xml/${azure-xml-version}$Bundle-SymbolicName=azure-xml&amp;Bundle-Version=${azure-xml-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:com.azure/azure-json/${azure-json-version}$Bundle-SymbolicName=azure-json&amp;Bundle-Version=${azure-json-version}</bundle>
+  </feature>
+  <feature name="azure-msal4j" version="${azure-core-version}" start-level="50">
+    <bundle dependency='true'>mvn:com.nimbusds/content-type/2.2</bundle>
+    <bundle dependency='true'>mvn:com.nimbusds/lang-tag/1.6</bundle>
+    <bundle dependency='true'>mvn:com.nimbusds/nimbus-jose-jwt/9.22</bundle>
+    <bundle dependency='true'>mvn:com.nimbusds/oauth2-oidc-sdk/9.35</bundle>
+    <bundle dependency='true'>mvn:net.minidev/accessors-smart/${accessors-smart.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:net.minidev/json-smart/${json-smart-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:com.github.stephenc.jcip/jcip-annotations/1.0-1</bundle>
+    <bundle dependency='true'>wrap:mvn:com.microsoft.azure/msal4j/1.13.3$overwrite=merge&amp;Import-Package=com.sun.net.httpserver;resolution:=optional,*&amp;Export-Package=com.microsoft.aad.*</bundle>
+  </feature>
+  <feature name="azure-storage" version="${azure-core-version}" start-level="50">
+    <feature version='[${azure-core-version},2)'>azure</feature>
+    <bundle dependency='true'>wrap:mvn:com.azure/azure-storage-common/12.19.1</bundle>
+  </feature>
+  <feature name="azure-eventhubs" version="${azure-core-version}" start-level="50">
+    <feature version='[${azure-core-version},2)'>azure-storage</feature>
+    <bundle dependency='true'>wrap:mvn:com.azure/azure-core-amqp/${azure-core-amqp-bundle-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:com.azure/azure-messaging-eventhubs/${azure-messaging-eventhubs-bundle-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:com.azure/azure-messaging-eventhubs-checkpointstore-blob/${azure-messaging-eventhubs-checkpointstore-blob-bundle-version}</bundle>
+  </feature>
+  <feature name="jackson" version="${jackson2.tesb.version}">
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2.tesb.version}</bundle>
+    <!-- wrap needed to add the missing SPI-Provider clause to the manifest -->
+    <bundle dependency='true'>wrap:mvn:com.fasterxml.jackson.core/jackson-core/${jackson2.tesb.version}$overwrite=merge</bundle>
+    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2.tesb.version}</bundle>
+  </feature>
+  <feature name="netty" version="${netty.tesb.version}">
+    <bundle dependency='true'>mvn:io.netty/netty-buffer/${netty.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-common/${netty.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-codec/${netty.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-codec-http/${netty.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-handler/${netty.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-resolver/${netty.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-transport/${netty.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-transport-native-unix-common/${netty.tesb.version}</bundle>
+  </feature>
+
   <feature name='camel' version='${upstream.version}' start-level='50'>
     <feature prerequisite='true'>wrap</feature> <!-- some camel features needs wrap -->
     <feature version='${camel.tesb.version-range}'>camel-core</feature>
@@ -403,198 +453,42 @@
   </feature>
   <feature name='camel-azure-storage-blob' version='${upstream.version}' start-level='50'>
     <feature version='${camel.tesb.version-range}'>camel-core</feature>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-xml/${jackson2.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/${jackson2.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:org.codehaus.woodstox/stax2-api/${stax2v4-api-bundle-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.datatype/jackson-datatype-jsr310/${jackson2.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:org.reactivestreams/reactive-streams/${reactive-streams-version}</bundle>
-    <bundle dependency='true'>mvn:io.projectreactor/reactor-core/${reactor-version}</bundle>
-    <bundle dependency='true'>mvn:commons-io/commons-io/${commons-io.tesb.version}</bundle>
-    <bundle dependency='true'>wrap:mvn:com.azure/azure-json/${azure-json-version}</bundle>
-    <bundle dependency='true'>wrap:mvn:com.azure/azure-xml/${azure-xml-version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.azure-core/${azure-core-bundle-version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.azure-storage-common/${azure-storage-common-bundle-version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.azure-storage-blob/${azure-storage-blob-bundle-version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.azure-storage-blob-changefeed/${azure-storage-blob-changefeed-bundle-version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.azure-identity/${azure-identity-bundle-version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.opensaml/${opensaml-bundle.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:com.google.code.findbugs/jsr305/${google-findbugs-jsr305-version}</bundle>
-    <bundle dependency='true'>mvn:joda-time/joda-time/${jodatime2-version}</bundle>
-    <bundle dependency='true'>mvn:com.google.guava/guava/${guava-eventbus.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:com.google.guava/failureaccess/1.0.1</bundle>
-    <bundle dependency='true'>mvn:io.dropwizard.metrics/metrics-core/3.2.6</bundle>
-    <bundle dependency='true'>mvn:commons-codec/commons-codec/${commons-codec.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.santuario/xmlsec/${xmlsec.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.httpcomponents/httpcore-osgi/${httpcore4.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.httpcomponents/httpclient-osgi/${httpclient4.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:javax.servlet/javax.servlet-api/${javax-servlet-api-version}</bundle>
-    <bundle dependency='true'>mvn:net.minidev/json-smart/${json-smart.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:net.minidev/accessors-smart/${accessors-smart.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:org.bouncycastle/bcprov-jdk18on/${bouncycastle.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:org.bouncycastle/bcpkix-jdk18on/${bouncycastle.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:org.bouncycastle/bcutil-jdk18on/${bouncycastle.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:org.cryptacular/cryptacular/1.2.5</bundle>
-    <bundle dependency='true'>mvn:org.ow2.asm/asm/${asm.bundle.version}</bundle>
-    <bundle dependency='true'>mvn:org.ow2.asm/asm-analysis/${asm.bundle.version}</bundle>
-    <bundle dependency='true'>mvn:org.ow2.asm/asm-commons/${asm.bundle.version}</bundle>
-    <bundle dependency='true'>mvn:org.ow2.asm/asm-tree/${asm.bundle.version}</bundle>
-    <bundle dependency='true'>mvn:org.ow2.asm/asm-util/${asm.bundle.version}</bundle>
+    <feature version='[${azure-core-version},2)'>azure-storage</feature>
+    <feature version='[4.1,5)'>netty</feature>
+    <bundle dependency='true'>wrap:mvn:com.azure/azure-storage-blob/${azure-storage-blob-bundle-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:com.azure/azure-storage-blob-changefeed/${azure-storage-blob-changefeed-bundle-version}</bundle>
+<!--    <bundle>wrap:mvn:com.azure/azure-core-http-netty/${azure-core-http-netty-version}</bundle>-->
+    <bundle>wrap:mvn:com.azure/azure-core-http-netty/1.12.7$SPI-Provider=com.azure.core.http.HttpClientProvider&amp;Import-Package=reactor.netty.http.client;resolution:=mandatory,*</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-codec-http/${netty.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-codec-http2/${netty.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-transport-native-unix-common/${netty.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-transport-native-epoll/${netty.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-transport-classes-epoll/${netty.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-handler-proxy/${netty.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-codec-socks/${netty.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-resolver-dns/${netty.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-codec-dns/${netty.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:io.projectreactor.netty/reactor-netty-core/1.0.23</bundle>
+    <bundle dependency='true'>mvn:io.projectreactor.netty/reactor-netty-http/1.0.23</bundle>
     <bundle>mvn:org.apache.camel/camel-azure-storage-blob/${upstream.version}</bundle>
   </feature>
   <feature name='camel-azure-storage-datalake' version='${upstream.version}' start-level='50'>
     <feature version='${camel.tesb.version-range}'>camel-core</feature>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-xml/${jackson2.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/${jackson2.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:org.codehaus.woodstox/stax2-api/${stax2v4-api-bundle-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.datatype/jackson-datatype-jsr310/${jackson2.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:org.reactivestreams/reactive-streams/${reactive-streams-version}</bundle>
-    <bundle dependency='true'>mvn:io.projectreactor/reactor-core/${reactor-version}</bundle>
-    <bundle dependency='true'>mvn:commons-io/commons-io/${commons-io.tesb.version}</bundle>
-    <bundle dependency='true'>wrap:mvn:com.azure/azure-json/${azure-json-version}</bundle>
-    <bundle dependency='true'>wrap:mvn:com.azure/azure-xml/${azure-xml-version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.azure-core/${azure-core-bundle-version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.azure-storage-common/${azure-storage-common-bundle-version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.azure-storage-blob/${azure-storage-blob-bundle-version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.azure-storage-blob-changefeed/${azure-storage-blob-changefeed-bundle-version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.azure-storage-file-datalake/${azure-storage-blob-datalake-bundle-version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.azure-identity/${azure-identity-bundle-version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.opensaml/${opensaml-bundle.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:com.google.code.findbugs/jsr305/${google-findbugs-jsr305-version}</bundle>
-    <bundle dependency='true'>mvn:joda-time/joda-time/${jodatime2-version}</bundle>
-    <bundle dependency='true'>mvn:com.google.guava/guava/${guava-eventbus.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:com.google.guava/failureaccess/1.0.1</bundle>
-    <bundle dependency='true'>mvn:io.dropwizard.metrics/metrics-core/3.2.6</bundle>
-    <bundle dependency='true'>mvn:commons-codec/commons-codec/${commons-codec.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.santuario/xmlsec/${xmlsec.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.httpcomponents/httpcore-osgi/${httpcore4.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.httpcomponents/httpclient-osgi/${httpclient4.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:javax.servlet/javax.servlet-api/${javax-servlet-api-version}</bundle>
-    <bundle dependency='true'>mvn:net.minidev/json-smart/${json-smart.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:net.minidev/accessors-smart/${accessors-smart.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:org.bouncycastle/bcprov-jdk18on/${bouncycastle.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:org.bouncycastle/bcpkix-jdk18on/${bouncycastle.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:org.bouncycastle/bcutil-jdk18on/${bouncycastle.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:org.cryptacular/cryptacular/1.2.5</bundle>
-    <bundle dependency='true'>mvn:org.ow2.asm/asm/${asm.bundle.version}</bundle>
-    <bundle dependency='true'>mvn:org.ow2.asm/asm-analysis/${asm.bundle.version}</bundle>
-    <bundle dependency='true'>mvn:org.ow2.asm/asm-commons/${asm.bundle.version}</bundle>
-    <bundle dependency='true'>mvn:org.ow2.asm/asm-tree/${asm.bundle.version}</bundle>
-    <bundle dependency='true'>mvn:org.ow2.asm/asm-util/${asm.bundle.version}</bundle>
+    <feature version='[${azure-core-version},2)'>azure-storage</feature>
+    <bundle dependency='true'>mvn:commons-io/commons-io/${commons-io-version}</bundle>
+    <bundle dependency='true'>wrap:mvn:com.azure/azure-storage-file-datalake/${azure-storage-blob-datalake-bundle-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-azure-storage-datalake/${upstream.version}</bundle>
   </feature>
   <feature name='camel-azure-storage-queue' version='${upstream.version}' start-level='50'>
     <feature version='${camel.tesb.version-range}'>camel-core</feature>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-xml/${jackson2.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/${jackson2.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:org.codehaus.woodstox/stax2-api/${stax2v4-api-bundle-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.datatype/jackson-datatype-jsr310/${jackson2.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:org.reactivestreams/reactive-streams/${reactive-streams-version}</bundle>
-    <bundle dependency='true'>mvn:io.projectreactor/reactor-core/${reactor-version}</bundle>
-    <bundle dependency='true'>mvn:commons-io/commons-io/${commons-io.tesb.version}</bundle>
-    <bundle dependency='true'>wrap:mvn:io.micrometer/micrometer-core/${micrometer-version}</bundle>
-    <bundle dependency='true'>wrap:mvn:com.azure/azure-json/${azure-json-version}</bundle>
-    <bundle dependency='true'>wrap:mvn:com.azure/azure-xml/${azure-xml-version}</bundle>
-    <bundle dependency='true'>wrap:mvn:com.azure/azure-core-http-netty/${azure-core-http-netty-version}$SPI-Provider=com.azure.core.http.HttpClientProvider&amp;Import-Package=reactor.netty.http.client;resolution:=mandatory,*</bundle>
-    <bundle dependency='true'>mvn:io.projectreactor.netty/reactor-netty-core/${reactor-netty.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:io.projectreactor.netty/reactor-netty-http/${reactor-netty.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:io.netty/netty-resolver/${netty.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:io.netty/netty-resolver-dns/${netty.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:io.netty/netty-common/${netty.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:io.netty/netty-buffer/${netty.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:io.netty/netty-transport/${netty.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:io.netty/netty-handler/${netty.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:io.netty/netty-transport-native-epoll/${netty.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:io.netty/netty-transport-classes-epoll/${netty.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:io.netty/netty-transport-native-unix-common/${netty.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:io.netty/netty-transport-native-kqueue/${netty.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:io.netty/netty-transport-classes-kqueue/${netty.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:io.netty/netty-codec-dns/${netty.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:io.netty/netty-codec-socks/${netty.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:io.netty/netty-handler-proxy/${netty.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:io.netty/netty-codec/${netty.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:io.netty/netty-codec-http/${netty.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:io.netty/netty-codec-http2/${netty.tesb.version}</bundle>
-    <bundle dependency='true'>wrap:mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.azure-core/${azure-core-bundle-version}$SPI-Consumer=*&amp;overwrite=merge&amp;Import-Package=com.azure.core.http.netty;resolution:=mandatory,com.fasterxml.jackson.*;resolution:=mandatory;version="[2.9,3)",reactor.*;resolution:=optional;version="[3,4)",org.reactivestreams;resolution:=optional;version="[1.0,2)",org.slf4j*;resolution:=optional;version="[1.7,2)",com.azure.json,com.azure.xml,javax.xml.stream</bundle>
-    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.azure-storage-common/${azure-storage-common-bundle-version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.azure-storage-queue/${azure-storage-queue-bundle-version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.azure-identity/${azure-identity-bundle-version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.opensaml/${opensaml-bundle.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:com.google.code.findbugs/jsr305/${google-findbugs-jsr305-version}</bundle>
-    <bundle dependency='true'>mvn:joda-time/joda-time/${jodatime2-version}</bundle>
-    <bundle dependency='true'>mvn:com.google.guava/guava/${guava-eventbus.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:com.google.guava/failureaccess/1.0.1</bundle>
-    <bundle dependency='true'>mvn:io.dropwizard.metrics/metrics-core/3.2.6</bundle>
-    <bundle dependency='true'>mvn:commons-codec/commons-codec/${commons-codec.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.santuario/xmlsec/${xmlsec.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.httpcomponents/httpcore-osgi/${httpcore4.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.httpcomponents/httpclient-osgi/${httpclient4.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:javax.servlet/javax.servlet-api/${javax-servlet-api-version}</bundle>
-    <bundle dependency='true'>mvn:net.minidev/json-smart/${json-smart.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:net.minidev/accessors-smart/${accessors-smart.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:org.bouncycastle/bcprov-jdk18on/${bouncycastle.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:org.bouncycastle/bcpkix-jdk18on/${bouncycastle.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:org.bouncycastle/bcutil-jdk18on/${bouncycastle.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:org.cryptacular/cryptacular/1.2.5</bundle>
-    <bundle dependency='true'>mvn:org.ow2.asm/asm/${asm.bundle.version}</bundle>
-    <bundle dependency='true'>mvn:org.ow2.asm/asm-analysis/${asm.bundle.version}</bundle>
-    <bundle dependency='true'>mvn:org.ow2.asm/asm-commons/${asm.bundle.version}</bundle>
-    <bundle dependency='true'>mvn:org.ow2.asm/asm-tree/${asm.bundle.version}</bundle>
-    <bundle dependency='true'>mvn:org.ow2.asm/asm-util/${asm.bundle.version}</bundle>
+    <feature version='[${azure-core-version},2)'>azure-storage</feature>
+    <bundle dependency='true'>wrap:mvn:com.azure/azure-storage-queue/${azure-storage-queue-bundle-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-azure-storage-queue/${upstream.version}</bundle>
   </feature>
   <feature name='camel-azure-eventhubs' version='${upstream.version}' start-level='50'>
     <feature version='${camel.tesb.version-range}'>camel-core</feature>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-xml/${jackson2.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/${jackson2.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:org.codehaus.woodstox/stax2-api/${stax2v4-api-bundle-version}</bundle>
-    <bundle dependency='true'>mvn:com.fasterxml.jackson.datatype/jackson-datatype-jsr310/${jackson2.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:org.reactivestreams/reactive-streams/${reactive-streams-version}</bundle>
-    <bundle dependency='true'>mvn:io.projectreactor/reactor-core/${reactor-version}</bundle>
-    <bundle dependency='true'>mvn:commons-io/commons-io/${commons-io.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.qpid/qpid-jms-client/${qpid-jms-client.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.qpid/proton-j/${qpid-proton-j.tesb.version}</bundle>
-    <feature version='${camel.tesb.version-range}'>camel-azure-storage-blob</feature>
-    <bundle dependency='true'>wrap:mvn:com.azure/azure-json/${azure-json-version}</bundle>
-    <bundle dependency='true'>wrap:mvn:com.azure/azure-xml/${azure-xml-version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.azure-core/${azure-core-bundle-version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.azure-core-amqp/${azure-core-amqp-bundle-version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.azure-messaging-eventhubs/${azure-messaging-eventhubs-bundle-version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.azure-messaging-eventhubs-checkpointstore-blob/${azure-messaging-eventhubs-checkpointstore-blob-bundle-version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.azure-identity/${azure-identity-bundle-version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.opensaml/${opensaml-bundle.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:com.google.code.findbugs/jsr305/${google-findbugs-jsr305-version}</bundle>
-    <bundle dependency='true'>mvn:joda-time/joda-time/${jodatime2-version}</bundle>
-    <bundle dependency='true'>mvn:com.google.guava/guava/${guava-eventbus.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:com.google.guava/failureaccess/1.0.1</bundle>
-    <bundle dependency='true'>mvn:io.dropwizard.metrics/metrics-core/3.2.6</bundle>
-    <bundle dependency='true'>mvn:commons-codec/commons-codec/${commons-codec.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.santuario/xmlsec/${xmlsec.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.httpcomponents/httpcore-osgi/${httpcore4.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:org.apache.httpcomponents/httpclient-osgi/${httpclient4.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:javax.servlet/javax.servlet-api/${javax-servlet-api-version}</bundle>
-    <bundle dependency='true'>mvn:net.minidev/json-smart/${json-smart.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:net.minidev/accessors-smart/${accessors-smart.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:org.bouncycastle/bcprov-jdk18on/${bouncycastle.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:org.bouncycastle/bcpkix-jdk18on/${bouncycastle.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:org.bouncycastle/bcutil-jdk18on/${bouncycastle.tesb.version}</bundle>
-    <bundle dependency='true'>mvn:org.cryptacular/cryptacular/1.2.5</bundle>
-    <bundle dependency='true'>mvn:org.ow2.asm/asm/${asm.bundle.version}</bundle>
-    <bundle dependency='true'>mvn:org.ow2.asm/asm-analysis/${asm.bundle.version}</bundle>
-    <bundle dependency='true'>mvn:org.ow2.asm/asm-commons/${asm.bundle.version}</bundle>
-    <bundle dependency='true'>mvn:org.ow2.asm/asm-tree/${asm.bundle.version}</bundle>
-    <bundle dependency='true'>mvn:org.ow2.asm/asm-util/${asm.bundle.version}</bundle>
+    <feature version='[${azure-core-version},2)'>azure-eventhubs</feature>
+    <bundle dependency='true'>wrap:mvn:com.azure/azure-storage-blob/${azure-storage-blob-bundle-version}</bundle>
     <bundle>mvn:org.apache.camel/camel-azure-eventhubs/${upstream.version}</bundle>
   </feature>
   <feature name='camel-base64' version='${upstream.version}' start-level='50'>

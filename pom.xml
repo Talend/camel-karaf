@@ -106,6 +106,7 @@
         <camel-cxf-rest.tesb.version>3.20.9.20240425</camel-cxf-rest.tesb.version>
         <camel-google-pubsub.tesb.version>3.20.9.20240425</camel-google-pubsub.tesb.version>
         <camel-spring.tesb.version>3.20.9.20240815</camel-spring.tesb.version>
+        <camel-osgi-jackson2.tesb.version>[2.17,2.18)</camel-osgi-jackson2.tesb.version>
         <camel-sql.tesb.version>3.20.9.20240425</camel-sql.tesb.version>
         <camel-zookeeper.tesb.version>3.20.9.20240425</camel-zookeeper.tesb.version>
         <camel-zookeeper-master.tesb.version>3.20.9.20240425</camel-zookeeper-master.tesb.version>
@@ -253,19 +254,20 @@
         <avalon-bundle-version>4.3.1_1</avalon-bundle-version>
         <avro-java-commons-compress-version>1.21</avro-java-commons-compress-version>
         <avro-jackson-version>2.12.3</avro-jackson-version>
+        <azure-core-version>1.34.0</azure-core-version>
         <azure-json-version>1.3.0</azure-json-version>
         <azure-xml-version>1.1.0</azure-xml-version>
-        <azure-core-bundle-version>1.34.0_1</azure-core-bundle-version>
+        <azure-core-bundle-version>1.34.0</azure-core-bundle-version>
         <azure-core-http-netty-version>1.12.7</azure-core-http-netty-version>
-        <azure-core-amqp-bundle-version>2.0.3_1</azure-core-amqp-bundle-version>
-        <azure-identity-bundle-version>1.5.0_1</azure-identity-bundle-version>
-        <azure-messaging-eventhubs-bundle-version>5.8.0_1</azure-messaging-eventhubs-bundle-version>
-        <azure-messaging-eventhubs-checkpointstore-blob-bundle-version>1.8.0_1</azure-messaging-eventhubs-checkpointstore-blob-bundle-version>
-        <azure-storage-common-bundle-version>12.19.0_1</azure-storage-common-bundle-version>
-        <azure-storage-blob-bundle-version>12.12.0_1</azure-storage-blob-bundle-version>
-        <azure-storage-blob-changefeed-bundle-version>12.0.0-beta8_1</azure-storage-blob-changefeed-bundle-version>
-        <azure-storage-blob-datalake-bundle-version>12.5.1_1</azure-storage-blob-datalake-bundle-version>
-        <azure-storage-queue-bundle-version>12.15.1_1</azure-storage-queue-bundle-version>
+        <azure-core-amqp-bundle-version>2.8.0</azure-core-amqp-bundle-version>
+        <azure-identity-bundle-version>1.7.0</azure-identity-bundle-version>
+        <azure-messaging-eventhubs-bundle-version>5.15.0</azure-messaging-eventhubs-bundle-version>
+        <azure-messaging-eventhubs-checkpointstore-blob-bundle-version>1.16.1</azure-messaging-eventhubs-checkpointstore-blob-bundle-version>
+        <azure-storage-common-bundle-version>12.19.1</azure-storage-common-bundle-version>
+        <azure-storage-blob-bundle-version>12.20.1</azure-storage-blob-bundle-version>
+        <azure-storage-blob-changefeed-bundle-version>12.0.0-beta.18</azure-storage-blob-changefeed-bundle-version>
+        <azure-storage-blob-datalake-bundle-version>12.13.1</azure-storage-blob-datalake-bundle-version>
+        <azure-storage-queue-bundle-version>12.15.1</azure-storage-queue-bundle-version>
         <azure-guava-version>20.0</azure-guava-version>
         <backport-util-concurrent-version>3.1</backport-util-concurrent-version>
         <bcel-bundle-version>5.2_4</bcel-bundle-version>
