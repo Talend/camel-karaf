@@ -140,7 +140,7 @@
         <commons-net.tesb.version>3.9.0</commons-net.tesb.version>
         <curator.tesb.version>5.5.0</curator.tesb.version>
         <datastax-native-protocol.tesb.version>1.5.1</datastax-native-protocol.tesb.version>
-        <djl.tesb.version>0.28.0</djl.tesb.version>
+        <djl.tesb.version>0.31.1</djl.tesb.version>
         <gson.tesb.version>2.10.1</gson.tesb.version>
         <github-gson.tesb.version>${gson.tesb.version}</github-gson.tesb.version>
         <olingo2-gson.tesb.version>${gson.tesb.version}</olingo2-gson.tesb.version>
