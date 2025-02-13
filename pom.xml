@@ -97,7 +97,7 @@
 
     <properties>
         <upstream.version>3.20.9</upstream.version>
-        <camel.features.tesb.version>3.20.9.20250210</camel.features.tesb.version>
+        <camel.features.tesb.version>3.20.9.20250213</camel.features.tesb.version>
         <camel-base.tesb.version>3.20.9.20240425</camel-base.tesb.version>
         <camel-support.tesb.version>3.20.9.20240425</camel-support.tesb.version>
         <camel-aws.tesb.version>3.20.9.20241202</camel-aws.tesb.version>
@@ -190,6 +190,7 @@
         <opensaml-bundle.tesb.version>3.4.6_3</opensaml-bundle.tesb.version>
         <opentelemetry.tesb.version>1.34.1</opentelemetry.tesb.version>
         <opentelemetry-alpha.tesb.version>1.26.0-alpha</opentelemetry-alpha.tesb.version>
+        <opentelemetry-alpha.bundle.tesb.version>1.26.0.alpha</opentelemetry-alpha.bundle.tesb.version>
         <pgjdbc-driver.tesb.version>42.6.1</pgjdbc-driver.tesb.version>
         <protobuf.tesb.version>3.25.5</protobuf.tesb.version>
         <qpid-jms-client.tesb.version>1.9.0</qpid-jms-client.tesb.version>
@@ -770,6 +771,7 @@
                             <opensaml-bundle.tesb.version>${opensaml-bundle.tesb.version}</opensaml-bundle.tesb.version>
                             <opentelemetry.tesb.version>${opentelemetry.tesb.version}</opentelemetry.tesb.version>
                             <opentelemetry-alpha.tesb.version>${opentelemetry-alpha.tesb.version}</opentelemetry-alpha.tesb.version>
+                            <opentelemetry-alpha.bundle.tesb.version>${opentelemetry-alpha.bundle.tesb.version}</opentelemetry-alpha.bundle.tesb.version>
                             <pgjdbc-driver.tesb.version>${pgjdbc-driver.tesb.version}</pgjdbc-driver.tesb.version>
                             <vertx.tesb.version>${vertx.tesb.version}</vertx.tesb.version>
                             <spring.tesb.version-range>${spring.tesb.version-range}</spring.tesb.version-range>
