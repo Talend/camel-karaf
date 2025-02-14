@@ -1356,6 +1356,7 @@
         <bundle dependency='true'>wrap:mvn:io.grpc/grpc-googleapis/${grpc-version}</bundle>
         <bundle dependency='true'>wrap:mvn:io.grpc/grpc-xds/${grpc-version}</bundle>
         <bundle dependency='true'>wrap:mvn:io.grpc/grpc-services/${grpc-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.grpc/grpc-auth/${grpc-version}</bundle>
         <bundle dependency='true'>wrap:mvn:io.grpc/grpc-util/${grpc-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-google-pubsub/${upstream.version}</bundle>
     </feature>
