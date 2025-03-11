@@ -288,7 +288,7 @@
         <bundle>mvn:org.apache.camel.karaf/camel-management-api/${upstream.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-util/${upstream.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-util-json/${upstream.version}</bundle>
-        <bundle>mvn:org.apache.camel.karaf/camel-support/${upstream.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-support/${camel-support.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-base/${upstream.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-base-engine/${upstream.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-management/${upstream.version}</bundle>
