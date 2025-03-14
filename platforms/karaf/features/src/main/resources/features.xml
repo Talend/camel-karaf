@@ -483,6 +483,18 @@
     <feature version='${camel.tesb.version-range}'>camel-core</feature>
     <feature version='[${azure-core-version},2)'>azure-storage</feature>
     <bundle dependency='true'>wrap:mvn:com.azure/azure-storage-queue/${azure-storage-queue-bundle-version}</bundle>
+    <bundle>wrap:mvn:com.azure/azure-core-http-netty/1.12.7$SPI-Provider=com.azure.core.http.HttpClientProvider&amp;Import-Package=reactor.netty.http.client;resolution:=mandatory,*</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-codec-http/${netty.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-codec-http2/${netty.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-transport-native-unix-common/${netty.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-transport-native-epoll/${netty.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-transport-classes-epoll/${netty.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-handler-proxy/${netty.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-codec-socks/${netty.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-resolver-dns/${netty.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:io.netty/netty-codec-dns/${netty.tesb.version}</bundle>
+    <bundle dependency='true'>mvn:io.projectreactor.netty/reactor-netty-core/1.0.23</bundle>
+    <bundle dependency='true'>mvn:io.projectreactor.netty/reactor-netty-http/1.0.23</bundle>
     <bundle>mvn:org.apache.camel/camel-azure-storage-queue/${upstream.version}</bundle>
   </feature>
   <feature name='camel-azure-eventhubs' version='${upstream.version}' start-level='50'>
