@@ -140,6 +140,7 @@
         <azure-json.tesb.version>1.3.0</azure-json.tesb.version>
         <azure-xml.tesb.version>1.1.0</azure-xml.tesb.version>
         <bouncycastle.tesb.version>1.78.1</bouncycastle.tesb.version>
+        <commons-pool2.tesb.version>2.12.1</commons-pool2.tesb.version>
         <couchbase-client.tesb.version>3.7.7</couchbase-client.tesb.version>
         <fop.tesb.version>2.10</fop.tesb.version>
         <jna.tesb.version>5.14.0</jna.tesb.version>
@@ -148,6 +149,8 @@
         <squareup-okio.tesb.version>1.17.6</squareup-okio.tesb.version>
         <activemq6.tesb.version>6.1.6</activemq6.tesb.version>
         <smallrye-fault-tolerance.tesb.version>6.9.0</smallrye-fault-tolerance.tesb.version>
+        <stax2-api.tesb.version>4.2.2</stax2-api.tesb.version>
+        <woodstox-core.tesb.version>7.1.0</woodstox-core.tesb.version>
 
         <jdk-version>17</jdk-version>
         <maven.compiler.source>${jdk-version}</maven.compiler.source>
@@ -800,6 +803,7 @@
                             <azure-json.tesb.version>${azure-json.tesb.version}</azure-json.tesb.version>
                             <azure-xml.tesb.version>${azure-xml.tesb.version}</azure-xml.tesb.version>
                             <bouncycastle.tesb.version>${bouncycastle.tesb.version}</bouncycastle.tesb.version>
+                            <commons-pool2.tesb.version>${commons-pool2.tesb.version}</commons-pool2.tesb.version>
                             <couchbase-client.tesb.version>${couchbase-client.tesb.version}</couchbase-client.tesb.version>
                             <fop.tesb.version>${fop.tesb.version}</fop.tesb.version>
                             <jna.tesb.version>${jna.tesb.version}</jna.tesb.version>
@@ -808,6 +812,8 @@
                             <squareup-okio.tesb.version>${squareup-okio.tesb.version}</squareup-okio.tesb.version>
                             <activemq6.tesb.version>${activemq6.tesb.version}</activemq6.tesb.version>
                             <smallrye-fault-tolerance.tesb.version>${smallrye-fault-tolerance.tesb.version}</smallrye-fault-tolerance.tesb.version>
+                            <stax2-api.tesb.version>${stax2-api.tesb.version}</stax2-api.tesb.version>
+                            <woodstox-core.tesb.version>${woodstox-core.tesb.version}</woodstox-core.tesb.version>
                         </properties>
                     </configuration>
                     <executions>
