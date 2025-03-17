@@ -2147,8 +2147,8 @@
     </feature>
     <feature name='camel-microprofile-fault-tolerance' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
-        <bundle dependency='true'>wrap:mvn:io.smallrye/smallrye-fault-tolerance/${smallrye-fault-tolerance-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:io.smallrye/smallrye-fault-tolerance-core/${smallrye-fault-tolerance-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.smallrye/smallrye-fault-tolerance/${smallrye-fault-tolerance.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.smallrye/smallrye-fault-tolerance-core/${smallrye-fault-tolerance.tesb.version}</bundle>
         <!-- Use the wrap protocol to change the version of cdi-api for something that matches with the runtime -->
         <bundle dependency='true'>wrap:mvn:org.eclipse.microprofile.fault-tolerance/microprofile-fault-tolerance-api/${microprofile-fault-tolerance-version}$overwrite=merge&amp;Import-Package=jakarta.enterprise.util*;version='[4,5)',*</bundle>
         <bundle dependency='true'>mvn:jakarta.enterprise/jakarta.enterprise.cdi-api/${jakarta-enterprise-cdi-api-version}</bundle>

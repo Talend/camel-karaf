@@ -147,6 +147,7 @@
         <djl.tesb.version>0.31.1</djl.tesb.version>
         <squareup-okio.tesb.version>1.17.6</squareup-okio.tesb.version>
         <activemq6.tesb.version>6.1.6</activemq6.tesb.version>
+        <smallrye-fault-tolerance.tesb.version>6.9.0</smallrye-fault-tolerance.tesb.version>
 
         <jdk-version>17</jdk-version>
         <maven.compiler.source>${jdk-version}</maven.compiler.source>
@@ -806,6 +807,7 @@
                             <djl.tesb.version>${djl.tesb.version}</djl.tesb.version>
                             <squareup-okio.tesb.version>${squareup-okio.tesb.version}</squareup-okio.tesb.version>
                             <activemq6.tesb.version>${activemq6.tesb.version}</activemq6.tesb.version>
+                            <smallrye-fault-tolerance.tesb.version>${smallrye-fault-tolerance.tesb.version}</smallrye-fault-tolerance.tesb.version>
                         </properties>
                     </configuration>
                     <executions>
