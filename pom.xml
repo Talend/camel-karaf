@@ -109,7 +109,7 @@
         <jetty.tesb.version-range>${jetty12.tesb.version-range}</jetty.tesb.version-range>
         <async-http-client.tesb.version>2.12.4</async-http-client.tesb.version>
         <jackson-asl.tesb.version>1.9.16-TALEND</jackson-asl.tesb.version>
-        <jackson2.tesb.version>2.18.2</jackson2.tesb.version>
+        <jackson2.tesb.version>2.18.3</jackson2.tesb.version>
         <jaxb3-istack.tesb.version>4.0.1</jaxb3-istack.tesb.version>
         <jaxb3-fastinfoset.tesb.version>2.0.0</jaxb3-fastinfoset.tesb.version>
         <jaxb3-staxex.tesb.version>2.0.1</jaxb3-staxex.tesb.version>
@@ -146,6 +146,7 @@
         <jte.tesb.version>3.1.16</jte.tesb.version>
         <djl.tesb.version>0.31.1</djl.tesb.version>
         <squareup-okio.tesb.version>1.17.6</squareup-okio.tesb.version>
+        <activemq6.tesb.version>6.1.6</activemq6.tesb.version>
 
         <jdk-version>17</jdk-version>
         <maven.compiler.source>${jdk-version}</maven.compiler.source>
@@ -804,6 +805,7 @@
                             <jte.tesb.version>${jte.tesb.version}</jte.tesb.version>
                             <djl.tesb.version>${djl.tesb.version}</djl.tesb.version>
                             <squareup-okio.tesb.version>${squareup-okio.tesb.version}</squareup-okio.tesb.version>
+                            <activemq6.tesb.version>${activemq6.tesb.version}</activemq6.tesb.version>
                         </properties>
                     </configuration>
                     <executions>

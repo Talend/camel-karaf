@@ -367,7 +367,7 @@
     </feature>
     <feature name='camel-activemq6' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-jms</feature>
-        <bundle dependency='true'>mvn:org.apache.activemq/activemq-client/${activemq6-version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.activemq/activemq-client/${activemq6.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.fusesource.hawtbuf/hawtbuf/${auto-detect-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-activemq6/${upstream.version}</bundle>
     </feature>
