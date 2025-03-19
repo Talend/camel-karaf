@@ -101,7 +101,7 @@
                         <feature>framework</feature>
                     </framework>
                     <features>
-                        <feature>camel*</feature>
+                        <feature>camel-azure-eventhubs</feature>
                     </features>
                 </configuration>
                 <executions>
