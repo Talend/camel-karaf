@@ -661,6 +661,7 @@
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version='[${azure-core-version},2)'>azure-eventhubs</feature>
         <feature version='[4.1,5)'>netty</feature>
+        <bundle>wrap:mvn:com.azure/azure-core-http-netty/${auto-detect-version}</bundle>
         <bundle dependency='true'>mvn:io.netty/netty-codec-http/${netty.tesb.version}</bundle>
         <bundle dependency='true'>mvn:io.netty/netty-codec-http2/${netty.tesb.version}</bundle>
         <bundle dependency='true'>mvn:io.netty/netty-transport-native-unix-common/${netty.tesb.version}</bundle>
@@ -672,7 +673,6 @@
         <bundle dependency='true'>mvn:io.netty/netty-codec-dns/${netty.tesb.version}</bundle>
         <bundle dependency='true'>mvn:io.projectreactor.netty/reactor-netty-core/${auto-detect-version}</bundle>
         <bundle dependency='true'>mvn:io.projectreactor.netty/reactor-netty-http/${auto-detect-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:com.azure/azure-core-http-netty/${auto-detect-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.azure/azure-storage-blob/${azure-storage-blob-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-azure-eventhubs/${upstream.version}</bundle>
     </feature>  
