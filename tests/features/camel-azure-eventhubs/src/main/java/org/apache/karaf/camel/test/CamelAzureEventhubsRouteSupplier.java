@@ -21,6 +21,8 @@ import static org.apache.camel.component.azure.eventhubs.EventHubsConstants.PART
 
 import java.util.function.Function;
 import com.azure.messaging.eventhubs.EventHubProducerAsyncClient;
+import com.azure.storage.blob.BlobContainerAsyncClient;
+import com.azure.storage.blob.BlobContainerClientBuilder;
 import org.apache.camel.CamelContext;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.component.azure.eventhubs.EventHubsComponent;
@@ -53,9 +55,16 @@ public class CamelAzureEventhubsRouteSupplier extends AbstractCamelSingleFeature
         String namespace = System.getProperty("eventHubs.namespace");
         String eventHubName = System.getProperty("eventHubs.eventHubName");
 
+        BlobContainerAsyncClient blobContainerAsyncClient = new BlobContainerClientBuilder()
+                .connectionString("UseDevelopmentStorage=true")
+                .containerName("sample-container")
+                .buildAsyncClient();
+        blobContainerAsyncClient.createIfNotExists().block();
+
         final EventHubsConfiguration configuration = new EventHubsConfiguration();
         configuration.setConnectionString(connectionString);
         //configuration.setCredentialType(CONNECTION_STRING);
+
 
         configuration.setBlobAccountName(DEFAULT_ACCOUNT_NAME);
         configuration.setBlobAccessKey(DEFAULT_ACCOUNT_KEY);
