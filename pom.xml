@@ -91,6 +91,8 @@
         <camel-features.tesb.version>4.8.1.20250310</camel-features.tesb.version>
         <camel-support.tesb.version>4.8.1.20250310</camel-support.tesb.version>
         <camel-vm.tesb.version>4.8.1.20240820</camel-vm.tesb.version>
+        <camel-activemq.tesb.version>4.8.1.20250320</camel-activemq.tesb.version>
+        <camel-activemq6.tesb.version>4.8.1.20250320</camel-activemq6.tesb.version>
         <camel-cxf.tesb.version>4.8.1.20240820</camel-cxf.tesb.version>
         <camel-cxf-all.tesb.version>4.8.1.20240820</camel-cxf-all.tesb.version>
         <camel-cxf-soap.tesb.version>4.8.1.20240820</camel-cxf-soap.tesb.version>
@@ -148,6 +150,7 @@
         <djl.tesb.version>0.31.1</djl.tesb.version>
         <squareup-okio.tesb.version>1.17.6</squareup-okio.tesb.version>
         <activemq6.tesb.version>6.1.6</activemq6.tesb.version>
+        <pooled-jms.tesb.version>3.1.7</pooled-jms.tesb.version>
         <smallrye-fault-tolerance.tesb.version>6.9.0</smallrye-fault-tolerance.tesb.version>
         <stax2-api.tesb.version>4.2.2</stax2-api.tesb.version>
         <woodstox-core.tesb.version>7.1.0</woodstox-core.tesb.version>
@@ -760,6 +763,8 @@
                             <camel.features.tesb.version>${camel.features.tesb.version}</camel.features.tesb.version>
                             <camel-support.tesb.version>${camel-support.tesb.version}</camel-support.tesb.version>
                             <camel-vm.tesb.version>${camel-vm.tesb.version}</camel-vm.tesb.version>
+                            <camel-activemq.tesb.version>${camel-activemq.tesb.version}</camel-activemq.tesb.version>
+                            <camel-activemq6.tesb.version>${camel-activemq6.tesb.version}</camel-activemq6.tesb.version>
                             <camel-cxf.tesb.version>${camel-cxf.tesb.version}</camel-cxf.tesb.version>
                             <camel-cxf-all.tesb.version>${camel-cxf-all.tesb.version}</camel-cxf-all.tesb.version>
                             <camel-cxf-soap.tesb.version>${camel-cxf-soap.tesb.version}</camel-cxf-soap.tesb.version>
@@ -811,6 +816,7 @@
                             <djl.tesb.version>${djl.tesb.version}</djl.tesb.version>
                             <squareup-okio.tesb.version>${squareup-okio.tesb.version}</squareup-okio.tesb.version>
                             <activemq6.tesb.version>${activemq6.tesb.version}</activemq6.tesb.version>
+                            <pooled-jms.tesb.version>${pooled-jms.tesb.version}</pooled-jms.tesb.version>
                             <smallrye-fault-tolerance.tesb.version>${smallrye-fault-tolerance.tesb.version}</smallrye-fault-tolerance.tesb.version>
                             <stax2-api.tesb.version>${stax2-api.tesb.version}</stax2-api.tesb.version>
                             <woodstox-core.tesb.version>${woodstox-core.tesb.version}</woodstox-core.tesb.version>

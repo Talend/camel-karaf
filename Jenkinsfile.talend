@@ -1,5 +1,5 @@
 @Library('esb') _
  
 Fork(
-        MVN_MODULES: ':camel-karaf-feature-maven-plugin,org.apache.camel.karaf:camel-support,org.apache.camel.karaf:camel-vm,org.apache.camel.karaf:camel-blueprint,org.apache.camel.karaf:camel-cxf-all,org.apache.camel.karaf:camel-cxf-blueprint,org.apache.camel.karaf:camel-cxf-spring-all,org.apache.camel.karaf:camel-cxf-transport-blueprint,org.apache.camel.karaf:camel-spring,org.apache.camel.karaf:apache-camel'
+        MVN_MODULES: ':camel-karaf-feature-maven-plugin,org.apache.camel.karaf:camel-support,org.apache.camel.karaf:camel-vm,org.apache.camel.karaf:camel-blueprint,org.apache.camel.karaf:camel-activemq,org.apache.camel.karaf:camel-activemq6,org.apache.camel.karaf:camel-cxf-all,org.apache.camel.karaf:camel-cxf-blueprint,org.apache.camel.karaf:camel-cxf-spring-all,org.apache.camel.karaf:camel-cxf-transport-blueprint,org.apache.camel.karaf:camel-spring,org.apache.camel.karaf:apache-camel'
 )
