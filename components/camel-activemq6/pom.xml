@@ -31,12 +31,15 @@
     <artifactId>camel-activemq6</artifactId>
     <packaging>bundle</packaging>
     <name>Apache Camel :: Karaf :: Components :: ActiveMQ 6.x</name>
+    <version>${revision}</version>
 
     <properties>
+        <revision>${camel-activemq6.tesb.version}</revision>
         <camel.osgi.export>
             org.apache.camel*;version=${camel-version}
         </camel.osgi.export>
         <camel.osgi.import>
+            org.messaginghub.pooled.jms;version="[3,4)",
             *
         </camel.osgi.import>
     </properties>
@@ -45,7 +48,7 @@
         <dependency>
             <groupId>org.apache.camel</groupId>
             <artifactId>camel-activemq6</artifactId>
-            <version>${camel-version}</version>
+            <version>${camel-activemq6.tesb.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.camel</groupId>
