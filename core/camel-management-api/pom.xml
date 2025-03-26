@@ -31,8 +31,10 @@
     <artifactId>camel-management-api</artifactId>
     <packaging>bundle</packaging>
     <name>Apache Camel :: Karaf :: Core :: Management API</name>
+    <version>${revision}</version>
 
     <properties>
+        <revision>${camel-management-api.tesb.version}</revision>
         <camel.osgi.export>
             org.apache.camel*;version=${camel-version}
         </camel.osgi.export>
@@ -45,7 +47,7 @@
         <dependency>
             <groupId>org.apache.camel</groupId>
             <artifactId>camel-management-api</artifactId>
-            <version>${camel-version}</version>
+            <version>${camel-management-api.tesb.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.camel</groupId>
