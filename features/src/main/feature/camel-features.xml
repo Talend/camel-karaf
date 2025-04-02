@@ -2280,7 +2280,7 @@
         <bundle dependency='true'>mvn:io.micrometer/micrometer-observation/${micrometer.tesb.version}</bundle>
         <bundle dependency='true'>mvn:io.micrometer/micrometer-commons/${micrometer.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:io.micrometer/micrometer-tracing/${micrometer-tracing.tesb.version}</bundle>
-        <bundle>mvn:org.apache.camel.karaf/camel-observation/${upstream.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-observation/${camel-observation.tesb.version}</bundle>
     </feature>
     <feature name='camel-ognl' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
@@ -2542,8 +2542,8 @@
     </feature>
     <feature name='camel-quickfix' version='${upstream.version}' start-level='50'>
         <feature version='${upstream.version}'>camel-core</feature>
-        <bundle dependency='true'>mvn:org.quickfixj/quickfixj-core/${quickfixj-version}</bundle>
-        <bundle dependency='true'>mvn:org.quickfixj/quickfixj-messages-all/${quickfixj-version}</bundle>
+        <bundle dependency='true'>mvn:org.quickfixj/quickfixj-core/${quickfixj.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:org.quickfixj/quickfixj-messages-all/${quickfixj.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.apache.mina/mina-core/${mina.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-quickfix/${upstream.version}</bundle>
     </feature>
@@ -2806,8 +2806,8 @@
     <feature name='camel-spring-batch' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version='${camel-osgi-spring-version}'>spring</feature>
-        <bundle dependency='true'>wrap:mvn:org.springframework.batch/spring-batch-core/${spring-batch-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:org.springframework.batch/spring-batch-infrastructure/${spring-batch-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:org.springframework.batch/spring-batch-core/${spring-batch.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:org.springframework.batch/spring-batch-infrastructure/${spring-batch.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-spring-batch/${upstream.version}</bundle>
     </feature>
     <feature name='camel-spring-jdbc' version='${upstream.version}' start-level='50'>
@@ -2838,8 +2838,8 @@
     <feature name='camel-spring-redis' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version='${camel-osgi-spring-version}'>spring-tx</feature>
-        <bundle dependency='true'>wrap:mvn:org.springframework.data/spring-data-commons/${spring-data-redis-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:org.springframework.data/spring-data-redis/${spring-data-redis-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:org.springframework.data/spring-data-commons/${spring-data-redis.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:org.springframework.data/spring-data-redis/${spring-data-redis.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-spring-redis/${upstream.version}</bundle>
     </feature>
     <feature name='camel-spring-security' version='${upstream.version}' start-level='50'>
@@ -2853,8 +2853,8 @@
         <feature version='${camel-osgi-version-range}'>camel-xslt-saxon</feature>
         <feature version='${camel-osgi-spring-version}'>spring</feature>
         <feature version="[6,7)">jakarta-servlet</feature>
-        <bundle dependency='true'>wrap:mvn:org.springframework.ws/spring-ws-core/${spring-ws-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:org.springframework.ws/spring-xml/${spring-ws-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:org.springframework.ws/spring-ws-core/${spring-ws.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:org.springframework.ws/spring-xml/${spring-ws.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.apache.camel.karaf/camel-attachments/${upstream.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-spring-ws/${upstream.version}</bundle>
     </feature>
@@ -2882,8 +2882,8 @@
         <feature version='[4.1,5)'>netty</feature>
         <bundle dependency='true'>mvn:org.reactivestreams/reactive-streams/${reactive-streams-version}</bundle>
         <bundle dependency='true'>mvn:io.projectreactor/reactor-core/${reactor-version}</bundle>
-        <bundle dependency='true'>mvn:io.projectreactor.netty/reactor-netty-core/${reactor-netty-version}</bundle>
-        <bundle dependency='true'>mvn:io.projectreactor.netty/reactor-netty-http/${reactor-netty-version}</bundle>
+        <bundle dependency='true'>mvn:io.projectreactor.netty/reactor-netty-core/${reactor-netty.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:io.projectreactor.netty/reactor-netty-http/${reactor-netty.tesb.version}</bundle>
         <bundle dependency='true'>mvn:io.netty/netty-transport-classes-epoll/${netty.tesb.version}</bundle>
         <bundle dependency='true'>mvn:io.netty/netty-handler-proxy/${netty.tesb.version}</bundle>
         <bundle dependency='true'>mvn:io.netty/netty-resolver-dns/${netty.tesb.version}</bundle>
@@ -3023,7 +3023,7 @@
         <bundle dependency='true'>mvn:org.wildfly.client/wildfly-client-config/${auto-detect-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-attachments/${upstream.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-http-base/${upstream.version}</bundle>
-        <bundle>mvn:org.apache.camel.karaf/camel-undertow/${upstream.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-undertow/${camel-undertow.tesb.version}</bundle>
     </feature>
     <feature name='camel-undertow-spring-security' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
