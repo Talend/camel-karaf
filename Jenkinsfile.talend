@@ -49,6 +49,7 @@ org.apache.camel.karaf:camel-langchain4j-tools,\
 org.apache.camel.karaf:camel-mina,\
 org.apache.camel.karaf:camel-minio,\
 org.apache.camel.karaf:camel-mongodb,\
+org.apache.camel.karaf:camel-observation,\
 org.apache.camel.karaf:camel-pdf,\
 org.apache.camel.karaf:camel-quartz,\
 org.apache.camel.karaf:camel-ref,\
@@ -58,6 +59,7 @@ org.apache.camel.karaf:camel-smb,\
 org.apache.camel.karaf:camel-spring,\
 org.apache.camel.karaf:camel-sql,\
 org.apache.camel.karaf:camel-tracing,\
+org.apache.camel.karaf:camel-undertow,\
 org.apache.camel.karaf:camel-vertx-http,\
 \
 org.apache.camel.karaf:apache-camel\
