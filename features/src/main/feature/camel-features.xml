@@ -2670,7 +2670,7 @@
         <bundle dependency='true'>mvn:org.eclipse.jetty/jetty-alpn-client/${jetty12.tesb.version}</bundle>
         <bundle dependency="true">mvn:org.eclipse.jetty/jetty-alpn-java-client/${jetty12.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:org.eclipse.jetty/jetty-client/${jetty12.tesb.version}$overwrite=merge&amp;Export-Package=org*;version=${jetty12.tesb.version}</bundle>
-        <bundle dependency='true'>wrap:mvn:tech.allegro.schema.json2avro/converter/${auto-detect-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:tech.allegro.schema.json2avro/converter/${json2avro.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-salesforce/${camel-salesforce.tesb.version}</bundle>
     </feature>   
     <feature name='camel-sap-netweaver' version='${upstream.version}' start-level='50'>

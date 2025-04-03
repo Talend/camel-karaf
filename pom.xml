@@ -192,6 +192,7 @@
         <jolokia.tesb.version>2.1.2</jolokia.tesb.version>
         <jooq.tesb.version>3.19.14</jooq.tesb.version>
         <json-smart.tesb.version>2.5.2</json-smart.tesb.version>
+        <json2avro.tesb.version>0.2.15</json2avro.tesb.version>
         <jte.tesb.version>3.1.16</jte.tesb.version>
         <jython-standalone.tesb.version>${jython-version}</jython-standalone.tesb.version>
         <kafka.tesb.version>3.8.1</kafka.tesb.version>
@@ -935,6 +936,7 @@
                             <jolokia.tesb.version>${jolokia.tesb.version}</jolokia.tesb.version>
                             <jooq.tesb.version>${jooq.tesb.version}</jooq.tesb.version>
                             <json-smart.tesb.version>${json-smart.tesb.version}</json-smart.tesb.version>
+                            <json2avro.tesb.version>${json2avro.tesb.version}</json2avro.tesb.version>
                             <jte.tesb.version>${jte.tesb.version}</jte.tesb.version>
                             <jython-standalone.tesb.version>${jython-standalone.tesb.version}</jython-standalone.tesb.version>
                             <kafka.tesb.version>${kafka.tesb.version}</kafka.tesb.version>
