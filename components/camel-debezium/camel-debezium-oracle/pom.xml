@@ -31,8 +31,10 @@
     <artifactId>camel-debezium-oracle</artifactId>
     <packaging>bundle</packaging>
     <name>Apache Camel :: Karaf :: Components :: Debezium :: Debezium Oracle</name>
+    <version>${revision}</version>
 
     <properties>
+        <revision>${camel-debezium-oracle.tesb.version}</revision>
         <camel.osgi.export>
             org.apache.camel*;version=${camel-version}
         </camel.osgi.export>
@@ -45,7 +47,7 @@
         <dependency>
             <groupId>org.apache.camel</groupId>
             <artifactId>camel-debezium-oracle</artifactId>
-            <version>${camel-version}</version>
+            <version>${camel-debezium-oracle.tesb.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.camel</groupId>

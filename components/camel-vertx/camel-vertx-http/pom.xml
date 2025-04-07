@@ -31,8 +31,10 @@
     <artifactId>camel-vertx-http</artifactId>
     <packaging>bundle</packaging>
     <name>Apache Camel :: Karaf :: Components :: Vertx HTTP</name>
+    <version>${revision}</version>
 
     <properties>
+        <revision>${camel-vertx-http.tesb.version}</revision>
         <camel.osgi.export>
             org.apache.camel*;version=${camel-version}
         </camel.osgi.export>
@@ -45,7 +47,7 @@
         <dependency>
             <groupId>org.apache.camel</groupId>
             <artifactId>camel-vertx-http</artifactId>
-            <version>${camel-version}</version>
+            <version>${camel-vertx-http.tesb.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.camel</groupId>
