@@ -1901,7 +1901,7 @@
     <feature name='camel-jsonb' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <bundle dependency='true'>mvn:jakarta.json/jakarta.json-api/${jakarta-json-api-version}</bundle>
-        <bundle dependency='true'>mvn:jakarta.json.bind/jakarta.json.bind-api/${jakarta-json-bind-api-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:jakarta.json.bind/jakarta.json.bind-api/${jakarta-json-bind-api-version}$overwrite=merge&amp;Bundle-SymbolicName=jakarta.json.bind-api&amp;Bundle-Version=${jakarta-json-bind-api-version}</bundle>
         <bundle dependency='true'>mvn:org.eclipse/yasson/${yasson-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-jsonb/${upstream.version}</bundle>
     </feature>
