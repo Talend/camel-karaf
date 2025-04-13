@@ -222,7 +222,7 @@
         <squareup-okio.tesb.version>1.17.6</squareup-okio.tesb.version>
         <stax2-api.tesb.version>4.2.2</stax2-api.tesb.version>
         <velocity.tesb.version>2.4.1</velocity.tesb.version>
-        <wildfly-elytron.tesb.version>2.2.7.Final</wildfly-elytron.tesb.version>
+        <wildfly-elytron.tesb.version>2.2.10.Final</wildfly-elytron.tesb.version>
         <woodstox-core.tesb.version>7.1.0</woodstox-core.tesb.version>
         <zookeeper.tesb.version>3.9.3</zookeeper.tesb.version>
         <zookeeper-server.tesb.version>3.9.3.jetty12.1</zookeeper-server.tesb.version>
