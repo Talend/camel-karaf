@@ -34,7 +34,7 @@
 
     <feature name="jakarta-xml-bind" version="${jakarta-xml-bind-api-version}">
         <feature version="[2.1,3)">jakarta-activation</feature>
-        <bundle dependency="true">wrap:mvn:jakarta.xml.bind/jakarta.xml.bind-api/${jakarta-xml-bind-api-version}$overwrite=merge&amp;Bundle-SymbolicName=jakarta.xml.bind-api-40</bundle>
+        <bundle dependency="true">wrap:mvn:jakarta.xml.bind/jakarta.xml.bind-api/${jakarta-xml-bind-api-version}$overwrite=merge&amp;Bundle-Name=Jakarta%20XML%20Binding%20API&amp;Bundle-SymbolicName=jakarta.xml.bind-api-40&amp;Bundle-Version=${jakarta-xml-bind-api-version}</bundle>
     </feature>
 
     <feature name="jakarta-xml-ws" version="${jakarta-xml-ws-api-version}">
@@ -115,7 +115,7 @@
     </feature>
 
     <feature name="jakarta-servlet" version="${jakarta-servlet-api-version}">
-        <bundle dependency="true">wrap:mvn:jakarta.servlet/jakarta.servlet-api/${jakarta-servlet-api-version}$overwrite=merge&amp;Bundle-SymbolicName=jakarta.servlet-api-61</bundle>
+        <bundle dependency="true">wrap:mvn:jakarta.servlet/jakarta.servlet-api/${jakarta-servlet-api-version}$overwrite=merge&amp;Bundle-Name=Jakarta%20Servlet&amp;Bundle-SymbolicName=jakarta.servlet-api-61&amp;Bundle-Version=${jakarta-servlet-api-version}</bundle>
     </feature>
 
     <feature name="jakarta-soap" version="${jakarta-xml-soap-api-version}">
@@ -259,13 +259,13 @@
     </feature>
     <feature name="guava" version="${guava-version}">
         <bundle dependency='true'>mvn:com.google.guava/guava/${guava-version}</bundle>
-        <bundle dependency='true'>mvn:com.google.guava/failureaccess/${auto-detect-version}</bundle>
+        <bundle dependency='true'>mvn:com.google.guava/failureaccess/${failureaccess.tesb.version}</bundle>
     </feature>
 
     <!--For use where version 33 is not allowed -->
     <feature name="guava" version="${guava32-version}">
         <bundle dependency='true'>mvn:com.google.guava/guava/${guava32-version}</bundle>
-        <bundle dependency='true'>mvn:com.google.guava/failureaccess/${auto-detect-version}</bundle>
+        <bundle dependency='true'>mvn:com.google.guava/failureaccess/${failureaccess.tesb.version}</bundle>
     </feature>
 
     <!-- Wrapped zookeeper jars. -->

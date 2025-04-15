@@ -169,6 +169,7 @@
         <commons-pool2.tesb.version>2.12.1</commons-pool2.tesb.version>
         <couchbase-client.tesb.version>3.7.7</couchbase-client.tesb.version>
         <djl.tesb.version>0.31.1</djl.tesb.version>
+        <failureaccess.tesb.version>1.0.2</failureaccess.tesb.version>
         <fop.tesb.version>2.10</fop.tesb.version>
         <google-cloud-bigquery.tesb.version>2.42.1</google-cloud-bigquery.tesb.version>
         <google-cloud-core.tesb.version>2.42.0</google-cloud-core.tesb.version>
@@ -914,6 +915,7 @@
                             <commons-pool2.tesb.version>${commons-pool2.tesb.version}</commons-pool2.tesb.version>
                             <couchbase-client.tesb.version>${couchbase-client.tesb.version}</couchbase-client.tesb.version>
                             <djl.tesb.version>${djl.tesb.version}</djl.tesb.version>
+                            <failureaccess.tesb.version>${failureaccess.tesb.version}</failureaccess.tesb.version>
                             <fop.tesb.version>${fop.tesb.version}</fop.tesb.version>
                             <google-cloud-bigquery.tesb.version>${google-cloud-bigquery.tesb.version}</google-cloud-bigquery.tesb.version>
                             <google-cloud-core.tesb.version>${google-cloud-core.tesb.version}</google-cloud-core.tesb.version>
