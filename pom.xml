@@ -88,7 +88,7 @@
     <!-- TODO use Karaf/Camel bom -->
     <properties>
         <upstream.version>4.8.1</upstream.version>
-        <camel-features.tesb.version>4.8.1.20250320</camel-features.tesb.version>
+        <camel-features.tesb.version>4.8.1.20250410</camel-features.tesb.version>
         <camel-support.tesb.version>4.8.1.20250320</camel-support.tesb.version>
         <camel-vm.tesb.version>4.8.1.20250320</camel-vm.tesb.version>
         <camel-activemq.tesb.version>4.8.1.20250320</camel-activemq.tesb.version>
@@ -99,7 +99,7 @@
         <camel-cxf-rest.tesb.version>4.8.1.20250320</camel-cxf-rest.tesb.version>
         <camel-spring.tesb.version>4.8.1.20250320</camel-spring.tesb.version>
         <camel-blueprint.tesb.version>4.8.1.20250320</camel-blueprint.tesb.version>
-        <camel-tooling.tesb.version>4.8.1.20250320</camel-tooling.tesb.version>
+        <camel-tooling.tesb.version>4.8.1.20250410</camel-tooling.tesb.version>
         <camel-langchain4j-tools.tesb.version>4.8.1.20250320</camel-langchain4j-tools.tesb.version>
         <camel-as2-api.tesb.version>4.8.1.20250320</camel-as2-api.tesb.version>
         <camel-as2.tesb.version>4.8.1.20250320</camel-as2.tesb.version>
@@ -166,6 +166,7 @@
         <azure-xml.tesb.version>1.1.0</azure-xml.tesb.version>
         <beanio.tesb.version>3.2.0</beanio.tesb.version>
         <bouncycastle.tesb.version>1.78.1</bouncycastle.tesb.version>
+        <commons-io.tesb.version>2.18.0</commons-io.tesb.version>
         <commons-pool2.tesb.version>2.12.1</commons-pool2.tesb.version>
         <couchbase-client.tesb.version>3.7.7</couchbase-client.tesb.version>
         <djl.tesb.version>0.31.1</djl.tesb.version>
@@ -222,6 +223,7 @@
         <spring-ws.tesb.version>4.0.12</spring-ws.tesb.version>
         <squareup-okio.tesb.version>1.17.6</squareup-okio.tesb.version>
         <stax2-api.tesb.version>4.2.2</stax2-api.tesb.version>
+        <typesafe-config.tesb.version>1.4.2</typesafe-config.tesb.version>
         <velocity.tesb.version>2.4.1</velocity.tesb.version>
         <wildfly-elytron.tesb.version>2.2.10.Final</wildfly-elytron.tesb.version>
         <woodstox-core.tesb.version>7.1.0</woodstox-core.tesb.version>
@@ -912,6 +914,7 @@
                             <azure-xml.tesb.version>${azure-xml.tesb.version}</azure-xml.tesb.version>
                             <beanio.tesb.version>${beanio.tesb.version}</beanio.tesb.version>
                             <bouncycastle.tesb.version>${bouncycastle.tesb.version}</bouncycastle.tesb.version>
+                            <commons-io.tesb.version>${commons-io.tesb.version}</commons-io.tesb.version>
                             <commons-pool2.tesb.version>${commons-pool2.tesb.version}</commons-pool2.tesb.version>
                             <couchbase-client.tesb.version>${couchbase-client.tesb.version}</couchbase-client.tesb.version>
                             <djl.tesb.version>${djl.tesb.version}</djl.tesb.version>
@@ -967,6 +970,7 @@
                             <spring-ws.tesb.version>${spring-ws.tesb.version}</spring-ws.tesb.version>
                             <squareup-okio.tesb.version>${squareup-okio.tesb.version}</squareup-okio.tesb.version>
                             <stax2-api.tesb.version>${stax2-api.tesb.version}</stax2-api.tesb.version>
+                            <typesafe-config.tesb.version>${typesafe-config.tesb.version}</typesafe-config.tesb.version>
                             <velocity.tesb.version>${velocity.tesb.version}</velocity.tesb.version>
                             <wildfly-elytron.tesb.version>${wildfly-elytron.tesb.version}</wildfly-elytron.tesb.version>
                             <woodstox-core.tesb.version>${woodstox-core.tesb.version}</woodstox-core.tesb.version>

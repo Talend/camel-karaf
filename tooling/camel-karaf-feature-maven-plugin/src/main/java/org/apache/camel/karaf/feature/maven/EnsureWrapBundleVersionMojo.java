@@ -67,6 +67,11 @@ public class EnsureWrapBundleVersionMojo extends AbstractWrapBundleMojo {
             return updateExistingVersion(location, bundleVersionHeader);
         }
 
+        if (location.contains(MERGE_BUNDLE_HEADERS)) {
+            // Wrapping an OSGi bundle, preserve manifest headers
+            return location;
+        }
+
         String instructions = wrappedBundle.getInstructions();
         StringBuilder sb = new StringBuilder(location);
 
