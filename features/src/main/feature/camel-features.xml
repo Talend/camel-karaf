@@ -2458,7 +2458,7 @@
         <bundle dependency='true'>wrap:mvn:org.jolokia/jolokia-service-jmx/${jolokia.tesb.version}$overwrite=merge&amp;Export-Package=org.jolokia.*;version=${jolokia.tesb.version}</bundle>
         <!-- Use the wrap protocol because it doesn't export org.jolokia.service.serializer -->
         <bundle dependency='true'>wrap:mvn:org.jolokia/jolokia-service-serializer/${jolokia.tesb.version}$overwrite=merge&amp;Export-Package=org.jolokia.*;version=${jolokia.tesb.version}</bundle>
-        <bundle>mvn:org.apache.camel.karaf/camel-platform-http-jolokia/${upstream.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-platform-http-jolokia/${camel-platform-http-jolokia.tesb.version}</bundle>
     </feature>
     <feature name='camel-platform-http-main' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-platform-http-vertx</feature>
