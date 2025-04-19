@@ -130,9 +130,9 @@
     </feature>
 
     <feature name="jackson" version="${jackson2.tesb.version}">
-        <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2.tesb.version}.spiprov</bundle>
         <!-- wrap needed to add the missing SPI-Provider clause to the manifest -->
-        <bundle dependency='true'>wrap:mvn:com.fasterxml.jackson.core/jackson-core/${jackson2.tesb.version}$overwrite=merge</bundle>
+        <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2.tesb.version}.spiprov</bundle>
         <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2.tesb.version}</bundle>
     </feature>
 
@@ -1126,7 +1126,7 @@
         <feature version="[6,7)">jakarta-servlet</feature>
         <bundle dependency='true'>mvn:com.google.code.findbugs/jsr305/${auto-detect-version}</bundle>
         <bundle dependency='true'>mvn:commons-io/commons-io/${commons-io.tesb.version}</bundle>
-        <bundle dependency='true'>wrap:mvn:com.fasterxml.jackson.core/jackson-core/${jackson2.tesb.version}$overwrite=merge</bundle>
+        <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2.tesb.version}.spiprov</bundle>
         <bundle dependency='true'>mvn:com.dropbox.core/dropbox-core-sdk/${dropbox-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-dropbox/${upstream.version}</bundle>
     </feature>
