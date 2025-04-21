@@ -24,6 +24,7 @@ import com.azure.messaging.eventhubs.EventHubProducerAsyncClient;
 import com.azure.messaging.eventhubs.checkpointstore.blob.BlobCheckpointStore;
 import com.azure.storage.blob.BlobContainerAsyncClient;
 import com.azure.storage.blob.BlobContainerClientBuilder;
+import com.azure.storage.common.StorageSharedKeyCredential;
 import com.nimbusds.jose.util.Base64;
 import org.apache.camel.CamelContext;
 import org.apache.camel.builder.RouteBuilder;
@@ -41,6 +42,7 @@ import org.osgi.service.component.annotations.Component;
 )
 public class CamelAzureEventhubsRouteSupplier extends AbstractCamelSingleFeatureResultMockBasedRouteSupplier {
 
+    private static final String COMPONENT_NAME = "azure-eventhubsAA";
     public static final String TEST_EVENT_CONTENT = "This is the event content!";
 
     private static final String DEFAULT_ACCOUNT_NAME = "devstoreaccount1";
@@ -56,49 +58,28 @@ public class CamelAzureEventhubsRouteSupplier extends AbstractCamelSingleFeature
         String connectionString = System.getProperty("eventHubs.connectionString");
         String namespace = System.getProperty("eventHubs.namespace");
         String eventHubName = System.getProperty("eventHubs.eventHubName");
-//
-//        BlobContainerAsyncClient blobContainerAsyncClient = new BlobContainerClientBuilder()
-//                .connectionString("UseDevelopmentStorage=true")
-//                .containerName("sample-container")
-//                .buildAsyncClient();
-//        blobContainerAsyncClient.createIfNotExists().block();
-
-        //configuration.setCredentialType(CONNECTION_STRING);
-
-
-//        configuration.setBlobAccountName(DEFAULT_ACCOUNT_NAME);
-//        configuration.setBlobAccessKey(DEFAULT_ACCOUNT_KEY);
-//        configuration.setBlobContainerName("sample-container");
-//        configuration.setNamespace(namespace);
-//        configuration.setEventHubName(eventHubName);
-
-//        final EventHubsConfiguration configuration = new EventHubsConfiguration();
-//        configuration.setConnectionString(connectionString);
-//        configuration.set
-        //configuration.setCheckpointStore(new BlobCheckpointStore(blobContainerAsyncClient));
 
         // Create and configure EventHubsConfiguration
         EventHubsConfiguration configuration = new EventHubsConfiguration();
         configuration.setConnectionString(connectionString);
-
-        // Mock Blob Storage settings for local testing (since you're using an emulator)
-        configuration.setBlobAccountName("devstoreaccount1"); // Dummy value for emulator
-        configuration.setBlobAccessKey(Base64.encode("SAS_KEY_VALUE").toString());
         configuration.setBlobContainerName("sample-container"); // Dummy value for emulator
-        configuration.setBlobStorageSharedKeyCredential();
+
+        StorageSharedKeyCredential credential =
+                new StorageSharedKeyCredential(DEFAULT_ACCOUNT_NAME, DEFAULT_ACCOUNT_KEY);
+        configuration.setBlobStorageSharedKeyCredential(credential);
 
         final EventHubsComponent eventHubsComponent = new EventHubsComponent();
         eventHubsComponent.setConfiguration(configuration);
 
-        camelContext.addComponent("azure-eventhubs", eventHubsComponent);
+        camelContext.addComponent(COMPONENT_NAME, eventHubsComponent);
     }
 
     @Override
     protected Function<RouteBuilder, RouteDefinition> consumerRoute() {
         return builder -> builder
                 //.from("azure-eventhubs")
-                //.from("azure-eventhubs://emulatorNs1/eh1")
-                .fromF("azure-eventhubs:emulatorNs1/eh1?connectionString=RAW(%s)", connectionString)
+                .fromF("%s://emulatorNs1/eh1", COMPONENT_NAME)
+                //.fromF("azure-eventhubs:emulatorNs1/eh1?connectionString=RAW(%s)", connectionString)
                 //.fromF("azure-eventhubs:?connectionString=RAW(%s)", connectionString)
                 .log("Received Event: ${body}");
     }
@@ -109,9 +90,9 @@ public class CamelAzureEventhubsRouteSupplier extends AbstractCamelSingleFeature
                 .log("connection string: ${body}")
                 .setBody(constant(TEST_EVENT_CONTENT))
                 //.to("azure-eventhubs")
-                //.to("azure-eventhubs://emulatorNs1/eh1")
+                .toF("%s://emulatorNs1/eh1", COMPONENT_NAME)
                 //.toF("azure-eventhubs:%s/%s?connectionString=RAW(%s)", namespace, eventHubName, connectionString)
-                .toF("azure-eventhubs:emulatorNs1/eh1?connectionString=RAW(%s)", connectionString)
+                //.toF("azure-eventhubs:emulatorNs1/eh1?connectionString=RAW(%s)", connectionString)
                 //.toF("azure-eventhubs:?connectionString=RAW(%s)", connectionString)
                 .log("Sent event : ${body}");
     }

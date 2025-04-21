@@ -34,7 +34,7 @@ import org.testcontainers.azure.EventHubsEmulatorContainer;
 @ExamReactorStrategy(PerClass.class)
 public class CamelAzureEventhubsITest extends AbstractCamelSingleFeatureResultMockBasedRouteITest {
 
-    private static final int AMQP_ORIGINAL_PORT = 5672;
+    private static final int AMQP_ORIGINAL_PORT = 5672;//5672
     private static final String DEFAULT_NAMESPACE = "emulatorNs1";
     private static final String DEFAULT_EVENT_HUB_NAME = "eh1";
     private static final String DEFAULT_ACCOUNT_NAME = "devstoreaccount1";
@@ -56,7 +56,11 @@ public class CamelAzureEventhubsITest extends AbstractCamelSingleFeatureResultMo
         static Network network = Network.newNetwork();
 
         static AzuriteContainer azuriteContainer = new AzuriteContainer("mcr.microsoft.com/azure-storage/azurite:3.31.0")
-                .withNetwork(network);
+                .withNetwork(network)
+                .withExposedPorts(10000, 10001, 10002)
+                .waitingFor(Wait.forListeningPort()); // Expose default ports just in case
+
+
 
 
         public static GenericContainerResource<AzuriteContainer> createAzuriteContainer() {
@@ -78,7 +82,9 @@ public class CamelAzureEventhubsITest extends AbstractCamelSingleFeatureResultMo
 
                 String connectionString = eventHubsEmulatorContainer.getConnectionString();
                 // workaround for camel                         "Endpoint=sb://%s:%d;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=SAS_KEY_VALUE;EntityPath=%s;UseDevelopmentEmulator=true;",
-                connectionString = connectionString + "EntityPath=" + DEFAULT_EVENT_HUB_NAME + ";";
+                connectionString = connectionString
+                        // + "DevelopmentStorageProxyUri=http://azurite;"
+                        + "EntityPath=" + DEFAULT_EVENT_HUB_NAME + ";";
                 resource.setProperty("eventHubs.connectionString", connectionString);
                 resource.setProperty("eventHubs.namespace", DEFAULT_NAMESPACE);
                 resource.setProperty("eventHubs.eventHubName", DEFAULT_EVENT_HUB_NAME);
