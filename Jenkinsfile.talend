@@ -51,6 +51,7 @@ org.apache.camel.karaf:camel-minio,\
 org.apache.camel.karaf:camel-mongodb,\
 org.apache.camel.karaf:camel-observation,\
 org.apache.camel.karaf:camel-pdf,\
+org.apache.camel.karaf:camel-platform-http-jolokia,\
 org.apache.camel.karaf:camel-quartz,\
 org.apache.camel.karaf:camel-ref,\
 org.apache.camel.karaf:camel-rest-openapi,\
