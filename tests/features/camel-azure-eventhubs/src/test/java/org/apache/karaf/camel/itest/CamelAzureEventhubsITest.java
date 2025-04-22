@@ -14,6 +14,7 @@
 package org.apache.karaf.camel.itest;
 
 import static org.apache.karaf.camel.test.CamelAzureEventhubsRouteSupplier.TEST_EVENT_CONTENT;
+import static org.awaitility.Awaitility.await;
 
 import org.apache.camel.component.mock.MockEndpoint;
 import org.apache.karaf.camel.itests.AbstractCamelSingleFeatureResultMockBasedRouteITest;
@@ -28,6 +29,7 @@ import org.testcontainers.azure.AzuriteContainer;
 import org.testcontainers.containers.wait.strategy.Wait;
 import org.testcontainers.containers.Network;
 import org.testcontainers.azure.EventHubsEmulatorContainer;
+import java.util.concurrent.TimeUnit;
 
 @CamelKarafTestHint(externalResourceProvider = CamelAzureEventhubsITest.ExternalResourceProviders.class)
 @RunWith(PaxExamWithExternalResource.class)
@@ -55,26 +57,35 @@ public class CamelAzureEventhubsITest extends AbstractCamelSingleFeatureResultMo
 
         static Network network = Network.newNetwork();
 
-        static AzuriteContainer azuriteContainer = new AzuriteContainer("mcr.microsoft.com/azure-storage/azurite:3.31.0")
-                .withNetwork(network)
-                .withExposedPorts(10000, 10001, 10002)
-                .waitingFor(Wait.forListeningPort()); // Expose default ports just in case
-
-
+        static AzuriteContainer azuriteContainer;
 
 
         public static GenericContainerResource<AzuriteContainer> createAzuriteContainer() {
-            return new GenericContainerResource(azuriteContainer);
+
+            azuriteContainer = new AzuriteContainer("mcr.microsoft.com/azure-storage/azurite:3.31.0")
+                    .withNetwork(network)
+                    .withExposedPorts(10000, 10001, 10002)
+                    .waitingFor(Wait.forListeningPort()); // Expose default ports just in case
+
+            return new GenericContainerResource<>(azuriteContainer, resource -> {
+                resource.setProperty("azurite.connectionString", azuriteContainer.getConnectionString());
+            });
+
         }
 
         public static GenericContainerResource<EventHubsEmulatorContainer> createEventHubsEmulatorContainer() {
+
+            await()
+                .pollInterval(5, TimeUnit.SECONDS)
+                .atMost(5, TimeUnit.MINUTES)
+                .until(() -> azuriteContainer != null);
 
             EventHubsEmulatorContainer eventHubsEmulatorContainer = new EventHubsEmulatorContainer(
                     "mcr.microsoft.com/azure-messaging/eventhubs-emulator:2.1.0"
             )
                     .acceptLicense()
                     .withNetwork(network)
-                    .withAzuriteContainer(azuriteContainer)
+                    .withAzuriteContainer(azuriteContainer) // has dependsOn call inside which waits for the container to be active
                     .withExposedPorts(AMQP_ORIGINAL_PORT)
                     .waitingFor(Wait.forListeningPort());
 

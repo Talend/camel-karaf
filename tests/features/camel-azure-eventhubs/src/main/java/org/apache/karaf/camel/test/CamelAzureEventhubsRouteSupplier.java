@@ -18,7 +18,8 @@ package org.apache.karaf.camel.test;
 import static org.apache.camel.builder.Builder.constant;
 import static org.apache.camel.component.azure.eventhubs.CredentialType.CONNECTION_STRING;
 import static org.apache.camel.component.azure.eventhubs.EventHubsConstants.PARTITION_ID;
-
+import com.azure.messaging.eventhubs.checkpointstore.blob.BlobCheckpointStore;
+import java.time.Duration;
 import java.util.function.Function;
 import com.azure.messaging.eventhubs.EventHubProducerAsyncClient;
 import com.azure.messaging.eventhubs.checkpointstore.blob.BlobCheckpointStore;
@@ -34,6 +35,8 @@ import org.apache.camel.model.RouteDefinition;
 import org.apache.karaf.camel.itests.AbstractCamelSingleFeatureResultMockBasedRouteSupplier;
 import org.apache.karaf.camel.itests.CamelRouteSupplier;
 import org.osgi.service.component.annotations.Component;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @Component(
         name = "karaf-camel-azure-eventhubs-test",
@@ -48,13 +51,17 @@ public class CamelAzureEventhubsRouteSupplier extends AbstractCamelSingleFeature
     private static final String DEFAULT_ACCOUNT_NAME = "devstoreaccount1";
     private static final String DEFAULT_ACCOUNT_KEY
             = "Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==";
+    private static final Logger log = LoggerFactory.getLogger(CamelAzureEventhubsRouteSupplier.class);
 
     String connectionString = System.getProperty("eventHubs.connectionString");
     String namespace = System.getProperty("eventHubs.namespace");
     String eventHubName = System.getProperty("eventHubs.eventHubName");
 
+    BlobContainerAsyncClient client;
+
     @Override
     public void configure(CamelContext camelContext) {
+        String azuriteConnectionString = System.getProperty("azurite.connectionString");
         String connectionString = System.getProperty("eventHubs.connectionString");
         String namespace = System.getProperty("eventHubs.namespace");
         String eventHubName = System.getProperty("eventHubs.eventHubName");
@@ -68,11 +75,28 @@ public class CamelAzureEventhubsRouteSupplier extends AbstractCamelSingleFeature
                 new StorageSharedKeyCredential(DEFAULT_ACCOUNT_NAME, DEFAULT_ACCOUNT_KEY);
         configuration.setBlobStorageSharedKeyCredential(credential);
 
+
+
+        // start
+        client = new BlobContainerClientBuilder()
+                .connectionString(azuriteConnectionString)
+                .containerName(configuration.getBlobContainerName())
+                .credential(configuration.getBlobStorageSharedKeyCredential())
+                .buildAsyncClient();
+
+        BlobCheckpointStore checkpointStore = new BlobCheckpointStore(client);
+        configuration.setCheckpointStore(checkpointStore);
+
+        //   end
+
+
+
         final EventHubsComponent eventHubsComponent = new EventHubsComponent();
         eventHubsComponent.setConfiguration(configuration);
 
         camelContext.addComponent(COMPONENT_NAME, eventHubsComponent);
     }
+
 
     @Override
     protected Function<RouteBuilder, RouteDefinition> consumerRoute() {
@@ -88,6 +112,11 @@ public class CamelAzureEventhubsRouteSupplier extends AbstractCamelSingleFeature
     protected void configureProducer(RouteBuilder builder, RouteDefinition producerRoute) {
         producerRoute
                 .log("connection string: ${body}")
+                .process( exchange -> {
+                    log.info("Create container - START");
+                    client.createIfNotExists().block(Duration.ofMinutes(10)); // create the blob container synchronously
+                    log.info("Create container - END");
+                })
                 .setBody(constant(TEST_EVENT_CONTENT))
                 //.to("azure-eventhubs")
                 .toF("%s://emulatorNs1/eh1", COMPONENT_NAME)
