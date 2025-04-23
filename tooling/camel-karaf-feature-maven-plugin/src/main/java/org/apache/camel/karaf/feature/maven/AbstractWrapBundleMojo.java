@@ -22,6 +22,8 @@ import org.apache.karaf.features.internal.model.Feature;
 
 public abstract class AbstractWrapBundleMojo extends AbstractFeaturesMojo {
 
+    protected static final String MERGE_BUNDLE_HEADERS = "overwrite=merge";
+
     @Override
     protected void processFeature(Feature feature) {
         boolean processed = false;
