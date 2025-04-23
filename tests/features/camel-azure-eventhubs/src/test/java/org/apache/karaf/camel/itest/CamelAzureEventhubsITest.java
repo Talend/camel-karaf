@@ -57,16 +57,13 @@ public class CamelAzureEventhubsITest extends AbstractCamelSingleFeatureResultMo
 
         static Network network = Network.newNetwork();
 
-        static AzuriteContainer azuriteContainer;
+        static AzuriteContainer azuriteContainer = new AzuriteContainer("mcr.microsoft.com/azure-storage/azurite:3.31.0")
+                .withNetwork(network)
+                .withExposedPorts(10000, 10001, 10002)
+                .waitingFor(Wait.forListeningPort()); // Expose default ports just in case;
 
 
         public static GenericContainerResource<AzuriteContainer> createAzuriteContainer() {
-
-            azuriteContainer = new AzuriteContainer("mcr.microsoft.com/azure-storage/azurite:3.31.0")
-                    .withNetwork(network)
-                    .withExposedPorts(10000, 10001, 10002)
-                    .waitingFor(Wait.forListeningPort()); // Expose default ports just in case
-
             return new GenericContainerResource<>(azuriteContainer, resource -> {
                 resource.setProperty("azurite.connectionString", azuriteContainer.getConnectionString());
             });
@@ -75,10 +72,7 @@ public class CamelAzureEventhubsITest extends AbstractCamelSingleFeatureResultMo
 
         public static GenericContainerResource<EventHubsEmulatorContainer> createEventHubsEmulatorContainer() {
 
-            await()
-                .pollInterval(5, TimeUnit.SECONDS)
-                .atMost(5, TimeUnit.MINUTES)
-                .until(() -> azuriteContainer != null);
+
 
             EventHubsEmulatorContainer eventHubsEmulatorContainer = new EventHubsEmulatorContainer(
                     "mcr.microsoft.com/azure-messaging/eventhubs-emulator:2.1.0"
@@ -86,7 +80,7 @@ public class CamelAzureEventhubsITest extends AbstractCamelSingleFeatureResultMo
                     .acceptLicense()
                     .withNetwork(network)
                     .withAzuriteContainer(azuriteContainer) // has dependsOn call inside which waits for the container to be active
-                    .withExposedPorts(AMQP_ORIGINAL_PORT)
+                    .withExposedPorts(AMQP_ORIGINAL_PORT, 5671)
                     .waitingFor(Wait.forListeningPort());
 
             return new GenericContainerResource<>(eventHubsEmulatorContainer, resource -> {
@@ -96,6 +90,7 @@ public class CamelAzureEventhubsITest extends AbstractCamelSingleFeatureResultMo
                 connectionString = connectionString
                         // + "DevelopmentStorageProxyUri=http://azurite;"
                         + "EntityPath=" + DEFAULT_EVENT_HUB_NAME + ";";
+//                connectionString = connectionString.replace("UseDevelopmentEmulator=true;", "");
                 resource.setProperty("eventHubs.connectionString", connectionString);
                 resource.setProperty("eventHubs.namespace", DEFAULT_NAMESPACE);
                 resource.setProperty("eventHubs.eventHubName", DEFAULT_EVENT_HUB_NAME);

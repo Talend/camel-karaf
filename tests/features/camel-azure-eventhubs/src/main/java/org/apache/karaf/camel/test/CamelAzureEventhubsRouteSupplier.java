@@ -53,10 +53,6 @@ public class CamelAzureEventhubsRouteSupplier extends AbstractCamelSingleFeature
             = "Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==";
     private static final Logger log = LoggerFactory.getLogger(CamelAzureEventhubsRouteSupplier.class);
 
-    String connectionString = System.getProperty("eventHubs.connectionString");
-    String namespace = System.getProperty("eventHubs.namespace");
-    String eventHubName = System.getProperty("eventHubs.eventHubName");
-
     BlobContainerAsyncClient client;
 
     @Override
@@ -91,6 +87,7 @@ public class CamelAzureEventhubsRouteSupplier extends AbstractCamelSingleFeature
 
 
 
+
         final EventHubsComponent eventHubsComponent = new EventHubsComponent();
         eventHubsComponent.setConfiguration(configuration);
 
@@ -98,13 +95,15 @@ public class CamelAzureEventhubsRouteSupplier extends AbstractCamelSingleFeature
     }
 
 
+//    @Override
+//    protected boolean consumerEnabled() {
+//        return false;
+//    }
+
     @Override
     protected Function<RouteBuilder, RouteDefinition> consumerRoute() {
         return builder -> builder
-                //.from("azure-eventhubs")
                 .fromF("%s://emulatorNs1/eh1", COMPONENT_NAME)
-                //.fromF("azure-eventhubs:emulatorNs1/eh1?connectionString=RAW(%s)", connectionString)
-                //.fromF("azure-eventhubs:?connectionString=RAW(%s)", connectionString)
                 .log("Received Event: ${body}");
     }
 
@@ -118,11 +117,7 @@ public class CamelAzureEventhubsRouteSupplier extends AbstractCamelSingleFeature
                     log.info("Create container - END");
                 })
                 .setBody(constant(TEST_EVENT_CONTENT))
-                //.to("azure-eventhubs")
                 .toF("%s://emulatorNs1/eh1", COMPONENT_NAME)
-                //.toF("azure-eventhubs:%s/%s?connectionString=RAW(%s)", namespace, eventHubName, connectionString)
-                //.toF("azure-eventhubs:emulatorNs1/eh1?connectionString=RAW(%s)", connectionString)
-                //.toF("azure-eventhubs:?connectionString=RAW(%s)", connectionString)
                 .log("Sent event : ${body}");
     }
 }
