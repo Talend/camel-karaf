@@ -1124,7 +1124,7 @@
     <feature name='camel-dropbox' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version="[6,7)">jakarta-servlet</feature>
-        <bundle dependency='true'>mvn:com.google.code.findbugs/jsr305/${auto-detect-version}</bundle>
+        <bundle dependency='true'>mvn:com.google.code.findbugs/jsr305/${jsr305.tesb.version}</bundle>
         <bundle dependency='true'>mvn:commons-io/commons-io/${commons-io.tesb.version}</bundle>
         <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2.tesb.version}.spiprov</bundle>
         <bundle dependency='true'>mvn:com.dropbox.core/dropbox-core-sdk/${dropbox-version}</bundle>
@@ -2500,7 +2500,7 @@
         <bundle dependency='true'>mvn:com.google.protobuf/protobuf-java-util/${protobuf-version}</bundle>
         <bundle dependency='true'>mvn:commons-io/commons-io/${commons-io.tesb.version}</bundle>
         <bundle dependency='true'>mvn:com.google.code.gson/gson/${gson-version}</bundle>
-        <bundle dependency='true'>mvn:com.google.code.findbugs/jsr305/${auto-detect-version}</bundle>
+        <bundle dependency='true'>mvn:com.google.code.findbugs/jsr305/${jsr305.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-protobuf/${upstream.version}</bundle>
     </feature>
     <feature name='camel-pubnub' version='${upstream.version}' start-level='50'>
