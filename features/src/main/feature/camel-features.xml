@@ -1276,10 +1276,12 @@
         <bundle dependency='true'>wrap:mvn:com.google.apis/google-api-services-bigquery/${auto-detect-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.auth/google-auth-library-credentials/${google-auth-library-oauth2-http-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.auth/google-auth-library-oauth2-http/${google-auth-library-oauth2-http-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-api/${auto-detect-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-contrib-http-util/${auto-detect-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-api/${auto-detect-version}$Import-Package=javax.annotation;version="[3,4)",*</bundle>
+        <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-contrib-http-util/${auto-detect-version}$Import-Package=javax.annotation;version="[3,4)",*</bundle>
+        <bundle dependency='true'>wrap:mvn:io.grpc/grpc-api/${grpc-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.api.grpc/proto-google-common-protos/${auto-detect-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.cloud/google-cloud-bigquery/${auto-detect-version}</bundle>
+        <bundle dependency='true'>mvn:com.google.code.findbugs/jsr305/${jsr305.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-google-bigquery/${upstream.version}</bundle>
     </feature>
     <feature name='camel-google-calendar' version='${upstream.version}' start-level='50'>
@@ -1290,13 +1292,15 @@
         <bundle dependency='true'>wrap:mvn:com.google.http-client/google-http-client/${google-cloud-http-client-version}$overwrite=merge&amp;Import-Package=com.google.common*;version="[33,34)",*</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.auth/google-auth-library-credentials/${google-auth-library-oauth2-http-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.auth/google-auth-library-oauth2-http/${google-auth-library-oauth2-http-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-api/${auto-detect-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-contrib-http-util/${auto-detect-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-api/${auto-detect-version}$Import-Package=javax.annotation;version="[3,4)",*</bundle>
+        <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-contrib-http-util/${auto-detect-version}$Import-Package=javax.annotation;version="[3,4)",*</bundle>
+        <bundle dependency='true'>wrap:mvn:io.grpc/grpc-api/${grpc-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.oauth-client/google-oauth-client/${google-oauth-client-version}$overwrite=merge&amp;Import-Package=com.google.common*;version="[33,34)",*</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.http-client/google-http-client-gson/${google-cloud-http-client-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.http-client/google-http-client-apache-v2/${google-cloud-http-client-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.http-client/google-http-client-jackson2/${google-cloud-http-client-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.apis/google-api-services-calendar/${google-api-services-calendar-version}</bundle>
+        <bundle dependency='true'>mvn:com.google.code.findbugs/jsr305/${jsr305.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-google-calendar/${upstream.version}</bundle>
     </feature>
     <feature name='camel-google-drive' version='${upstream.version}' start-level='50'>
@@ -1315,8 +1319,10 @@
         <bundle dependency='true'>mvn:com.google.oauth-client/google-oauth-client-java6/${google-oauth-client-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.oauth-client/google-oauth-client/${google-oauth-client-version}$overwrite=merge&amp;Import-Package=com.google.common*;version="[33,34)",*</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.oauth-client/google-oauth-client-jetty/${google-oauth-client-version}$overwrite=merge&amp;Import-Package=com.sun.net.httpserver;resolution:=optional,*</bundle>
-        <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-api/${auto-detect-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-contrib-http-util/${auto-detect-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-api/${auto-detect-version}$Import-Package=javax.annotation;version="[3,4)",*</bundle>
+        <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-contrib-http-util/${auto-detect-version}$Import-Package=javax.annotation;version="[3,4)",*</bundle>
+        <bundle dependency='true'>wrap:mvn:io.grpc/grpc-api/${grpc-version}</bundle>
+        <bundle dependency='true'>mvn:com.google.code.findbugs/jsr305/${jsr305.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-google-drive/${upstream.version}</bundle>
     </feature>
     <feature name='camel-google-functions' version='${upstream.version}' start-level='50'>
@@ -1329,8 +1335,10 @@
         <bundle dependency='true'>wrap:mvn:com.google.auth/google-auth-library-credentials/${grpc-google-auth-library-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.cloud/google-cloud-functions/${google-cloud-functions-bom-version}</bundle>
         <bundle dependency='true'>mvn:com.google.protobuf/protobuf-java/${protobuf-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-api/${auto-detect-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-contrib-http-util/${auto-detect-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-api/${auto-detect-version}$Import-Package=javax.annotation;version="[3,4)",*</bundle>
+        <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-contrib-http-util/${auto-detect-version}$Import-Package=javax.annotation;version="[3,4)",*</bundle>
+        <bundle dependency='true'>wrap:mvn:io.grpc/grpc-api/${grpc-version}</bundle>
+        <bundle dependency='true'>mvn:com.google.code.findbugs/jsr305/${jsr305.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-google-functions/${upstream.version}</bundle>
     </feature>
     <feature name='camel-google-mail' version='${upstream.version}' start-level='50'>
@@ -1342,12 +1350,14 @@
         <bundle dependency='true'>wrap:mvn:com.google.oauth-client/google-oauth-client/${google-oauth-client-version}$overwrite=merge&amp;Import-Package=com.google.common*;version="[33,34)",*</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.auth/google-auth-library-credentials/${google-auth-library-oauth2-http-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.auth/google-auth-library-oauth2-http/${google-auth-library-oauth2-http-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-api/${auto-detect-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-contrib-http-util/${auto-detect-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-api/${auto-detect-version}$Import-Package=javax.annotation;version="[3,4)",*</bundle>
+        <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-contrib-http-util/${auto-detect-version}$Import-Package=javax.annotation;version="[3,4)",*</bundle>
+        <bundle dependency='true'>wrap:mvn:io.grpc/grpc-api/${grpc-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.http-client/google-http-client-gson/${google-cloud-http-client-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.http-client/google-http-client-apache-v2/${google-cloud-http-client-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.http-client/google-http-client-jackson2/${google-cloud-http-client-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.apis/google-api-services-gmail/${google-api-services-mail-version}</bundle>
+        <bundle dependency='true'>mvn:com.google.code.findbugs/jsr305/${jsr305.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-google-mail/${upstream.version}</bundle>
     </feature>
     <feature name='camel-google-pubsub' version='${upstream.version}' start-level='50'>
@@ -1366,8 +1376,8 @@
         <bundle dependency='true'>mvn:org.threeten/threetenbp/${auto-detect-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.http-client/google-http-client/${google-cloud-http-client-version}$overwrite=merge&amp;Import-Package=com.google.common*;version="[33,34)",*;resolution:=optional</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.http-client/google-http-client-gson/${google-cloud-http-client-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-api/${auto-detect-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-contrib-http-util/${auto-detect-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-api/${auto-detect-version}$Import-Package=javax.annotation;version="[3,4)",*</bundle>
+        <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-contrib-http-util/${auto-detect-version}$Import-Package=javax.annotation;version="[3,4)",*</bundle>
         <bundle dependency='true'>wrap:mvn:io.grpc/grpc-protobuf/${grpc-version}</bundle>
         <bundle dependency='true'>wrap:mvn:io.grpc/grpc-protobuf-lite/${grpc-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.api.grpc/proto-google-iam-v1/${auto-detect-version}</bundle>
@@ -1388,6 +1398,7 @@
         <bundle dependency='true'>wrap:mvn:io.grpc/grpc-services/${grpc-version}</bundle>
         <bundle dependency='true'>wrap:mvn:io.grpc/grpc-auth/${grpc-version}</bundle>
         <bundle dependency='true'>wrap:mvn:io.grpc/grpc-util/${grpc-version}</bundle>
+        <bundle dependency='true'>mvn:com.google.code.findbugs/jsr305/${jsr305.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-google-pubsub/${upstream.version}</bundle>
     </feature>
     <feature name='camel-google-pubsub-lite' version='${upstream.version}' start-level='50'>
@@ -1430,9 +1441,11 @@
         <bundle dependency='true'>wrap:mvn:com.google.http-client/google-http-client-jackson2/${google-cloud-http-client-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.auth/google-auth-library-oauth2-http/${grpc-google-auth-library-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.auth/google-auth-library-credentials/${grpc-google-auth-library-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-contrib-http-util/${auto-detect-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-api/${auto-detect-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-contrib-http-util/${auto-detect-version}$Import-Package=javax.annotation;version="[3,4)",*</bundle>
+        <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-api/${auto-detect-version}$Import-Package=javax.annotation;version="[3,4)",*</bundle>
+        <bundle dependency='true'>wrap:mvn:io.grpc/grpc-api/${grpc-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.apis/google-api-services-sheets/${google-api-services-sheets-version}</bundle>
+        <bundle dependency='true'>mvn:com.google.code.findbugs/jsr305/${jsr305.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-google-sheets/${upstream.version}</bundle>
     </feature>
     <feature name='camel-google-storage' version='${upstream.version}' start-level='50'>
@@ -1459,8 +1472,9 @@
         <bundle dependency='true'>wrap:mvn:com.google.http-client/google-http-client-jackson2/${google-cloud-http-client-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.oauth-client/google-oauth-client/${google-oauth-client-version}$overwrite=merge&amp;Import-Package=com.google.common*;version="[33,34)",*</bundle>
         <bundle dependency='true'>wrap:mvn:io.grpc/grpc-api/${grpc-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-api/${auto-detect-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-contrib-http-util/${auto-detect-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-api/${auto-detect-version}$Import-Package=javax.annotation;version="[3,4)",*</bundle>
+        <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-contrib-http-util/${auto-detect-version}$Import-Package=javax.annotation;version="[3,4)",*</bundle>
+        <bundle dependency='true'>mvn:com.google.code.findbugs/jsr305/${jsr305.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-google-storage/${upstream.version}</bundle>
     </feature>
     <feature name='camel-grape' version='${upstream.version}' start-level='50'>
@@ -1792,14 +1806,16 @@
         <bundle dependency='true'>wrap:mvn:com.google.http-client/google-http-client/${auto-detect-version}$overwrite=merge&amp;Import-Package=com.google.common*;version="[33,34)",*</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.http-client/google-http-client-gson/${auto-detect-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.oauth-client/google-oauth-client/${google-oauth-client-version}$overwrite=merge&amp;Import-Package=com.google.common*;version="[33,34)",*</bundle>
-        <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-contrib-http-util/${auto-detect-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-api/${auto-detect-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-contrib-http-util/${auto-detect-version}$Import-Package=javax.annotation;version="[3,4)",*</bundle>
+        <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-api/${auto-detect-version}$Import-Package=javax.annotation;version="[3,4)",*</bundle>
+        <bundle dependency='true'>wrap:mvn:io.grpc/grpc-api/${grpc-version}</bundle>
         <bundle dependency='true'>mvn:joda-time/joda-time/${auto-detect-version}</bundle>
         <bundle dependency='true'>mvn:org.apache.httpcomponents/httpasyncclient-osgi/${auto-detect-version:alias=org.apache.httpcomponents/httpasyncclient}</bundle>
         <bundle dependency='true'>wrap:mvn:org.apache.httpcomponents/httpasyncclient-cache/${auto-detect-version}$Fragment-Host=org.apache.httpcomponents.httpclient;bundle-version=${httpclient4-version}</bundle>
         <bundle dependency='true'>mvn:io.atlassian.fugue/fugue/${atlassian-fugue-version}</bundle>
         <!-- Wrap protocol used to work around the wrong version range used for the osgiresourcelocator [1,2)  -->
         <bundle dependency='true'>wrap:mvn:org.glassfish.jersey.core/jersey-common/${auto-detect-version}$overwrite=merge&amp;Import-Package=org.glassfish.hk2.osgiresourcelocator;version:="[2,3)",*;resolution:=optional</bundle>
+        <bundle dependency='true'>mvn:com.google.code.findbugs/jsr305/${jsr305.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-jira/${upstream.version}</bundle>
     </feature>
     <feature name='camel-jfr' version='${upstream.version}' start-level='50'>
