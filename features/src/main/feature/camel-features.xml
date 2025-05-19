@@ -2846,12 +2846,12 @@
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version='${camel-osgi-spring-version}'>spring-tx</feature>
         <feature version='${camel-osgi-spring-version}'>spring-messaging</feature>
+        <bundle dependency='true'>wrap:mvn:org.springframework.amqp/spring-rabbit/${spring-rabbit.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:org.springframework.retry/spring-retry/${auto-detect-version}</bundle>
         <bundle dependency='true'>mvn:com.rabbitmq/amqp-client/${auto-detect-version}</bundle>
         <bundle dependency='true'>wrap:mvn:io.micrometer/micrometer-commons/${micrometer.tesb.version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
         <bundle dependency='true'>mvn:io.micrometer/micrometer-observation/${micrometer.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:io.micrometer/micrometer-core/${micrometer.tesb.version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
-        <bundle>wrap:mvn:org.springframework.amqp/spring-rabbit/${spring-rabbit.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-spring-rabbitmq/${upstream.version}</bundle>
     </feature>
     <feature name='camel-spring-redis' version='${upstream.version}' start-level='50'>
