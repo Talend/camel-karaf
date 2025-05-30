@@ -2859,6 +2859,10 @@
         <feature version='${camel-osgi-spring-version}'>spring-tx</feature>
         <bundle dependency='true'>wrap:mvn:org.springframework.data/spring-data-commons/${spring-data-redis.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:org.springframework.data/spring-data-redis/${spring-data-redis.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.commons/commons-pool2/${commons-pool2.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:com.google.code.gson/gson/${gson-version}</bundle>
+        <bundle dependency="true">mvn:org.json/json/${auto-detect-version}</bundle>
+        <bundle>mvn:redis.clients/jedis/${auto-detect-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-spring-redis/${upstream.version}</bundle>
     </feature>
     <feature name='camel-spring-security' version='${upstream.version}' start-level='50'>
