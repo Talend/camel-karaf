@@ -107,7 +107,7 @@
 
     <feature name="activation-runtime" version="${angus-activation-version}">
         <feature version="[2.1,3)">jakarta-activation</feature>
-        <bundle dependency="true">mvn:org.eclipse.angus/angus-activation/${angus-activation-version}</bundle>
+        <bundle dependency="true">wrap:mvn:org.eclipse.angus/angus-activation/${angus-activation-version}$overwrite=merge</bundle>
     </feature>
 
     <feature name="jakarta-servlet" version="${jakarta-servlet5-api-version}">
@@ -1624,7 +1624,7 @@
     <feature name='camel-ical' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3-version}</bundle>
-        <bundle dependency='true'>mvn:commons-beanutils/commons-beanutils/${commons-beanutils-version}</bundle>
+        <bundle dependency='true'>mvn:commons-beanutils/commons-beanutils/${commons-beanutils.tesb.version}</bundle>
         <bundle dependency='true'>mvn:commons-collections/commons-collections/${commons-collections-version}</bundle>
         <bundle dependency='true'>wrap:mvn:org.mnode.ical4j/ical4j/${ical4j-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-ical/${upstream.version}</bundle>
@@ -2112,7 +2112,7 @@
         <feature prerequisite="true">spifly</feature>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <bundle dependency="true">mvn:jakarta.mail/jakarta.mail-api/${auto-detect-version}</bundle>
-        <bundle dependency='true'>mvn:org.eclipse.angus/angus-mail/${angus-mail-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:org.eclipse.angus/angus-mail/${angus-mail-version}$overwrite=merge</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-attachments/${upstream.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-mail/${upstream.version}</bundle>
     </feature>
@@ -2747,7 +2747,7 @@
         <bundle dependency='true'>mvn:org.apache.shiro/shiro-crypto-cipher/${shiro-version}</bundle>
         <bundle dependency='true'>mvn:org.apache.shiro/shiro-crypto-hash/${shiro-version}</bundle>
         <bundle dependency='true'>mvn:jakarta.annotation/jakarta.annotation-api/${auto-detect-version}</bundle>
-        <bundle dependency='true'>mvn:commons-beanutils/commons-beanutils/${commons-beanutils-version}</bundle>
+        <bundle dependency='true'>mvn:commons-beanutils/commons-beanutils/${commons-beanutils.tesb.version}</bundle>
         <bundle dependency='true'>mvn:commons-collections/commons-collections/${commons-collections-version}</bundle>
         <bundle dependency='true'>wrap:mvn:org.apache.shiro/shiro-jakarta-ee/${shiro-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-shiro/${upstream.version}</bundle>
@@ -2816,7 +2816,7 @@
         <feature version='${camel-osgi-jackson2.tesb.version}'>jackson</feature>
         <feature version='[5,6)'>http-client</feature>
         <bundle dependency='true'>mvn:commons-validator/commons-validator/${commons-validator-version}</bundle>
-        <bundle dependency='true'>mvn:commons-beanutils/commons-beanutils/${commons-beanutils-version}</bundle>
+        <bundle dependency='true'>mvn:commons-beanutils/commons-beanutils/${commons-beanutils.tesb.version}</bundle>
         <bundle dependency='true'>mvn:commons-collections/commons-collections/${commons-collections-version}</bundle>
         <bundle dependency='true'>mvn:commons-digester/commons-digester/${auto-detect-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-splunk-hec/${upstream.version}</bundle>

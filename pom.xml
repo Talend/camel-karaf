@@ -167,6 +167,7 @@
         <azure-xml.tesb.version>1.1.0</azure-xml.tesb.version>
         <beanio.tesb.version>3.2.0</beanio.tesb.version>
         <bouncycastle.tesb.version>1.78.1</bouncycastle.tesb.version>
+        <commons-beanutils.tesb.version>1.11.0</commons-beanutils.tesb.version>
         <commons-io.tesb.version>2.18.0</commons-io.tesb.version>
         <commons-pool2.tesb.version>2.12.1</commons-pool2.tesb.version>
         <couchbase-client.tesb.version>3.7.9</couchbase-client.tesb.version>
@@ -919,6 +920,7 @@
                             <azure-xml.tesb.version>${azure-xml.tesb.version}</azure-xml.tesb.version>
                             <beanio.tesb.version>${beanio.tesb.version}</beanio.tesb.version>
                             <bouncycastle.tesb.version>${bouncycastle.tesb.version}</bouncycastle.tesb.version>
+                            <commons-beanutils.tesb.version>${commons-beanutils.tesb.version}</commons-beanutils.tesb.version>
                             <commons-io.tesb.version>${commons-io.tesb.version}</commons-io.tesb.version>
                             <commons-pool2.tesb.version>${commons-pool2.tesb.version}</commons-pool2.tesb.version>
                             <couchbase-client.tesb.version>${couchbase-client.tesb.version}</couchbase-client.tesb.version>
