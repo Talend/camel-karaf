@@ -2111,8 +2111,9 @@
     <feature name='camel-mail' version='${upstream.version}' start-level='50'>
         <feature prerequisite="true">spifly</feature>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
-        <bundle dependency="true">mvn:jakarta.mail/jakarta.mail-api/${auto-detect-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:org.eclipse.angus/angus-mail/${angus-mail-version}$overwrite=merge</bundle>
+        <!-- <bundle dependency="true">mvn:jakarta.mail/jakarta.mail-api/${auto-detect-version}</bundle> -->
+        <!-- <bundle dependency='true'>wrap:mvn:org.eclipse.angus/angus-mail/${angus-mail-version}$overwrite=merge</bundle> -->
+        <bundle dependency='true'>wrap:mvn:org.eclipse.angus/jakarta.mail/${angus-mail-version}$overwrite=merge</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-attachments/${upstream.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-mail/${upstream.version}</bundle>
     </feature>
