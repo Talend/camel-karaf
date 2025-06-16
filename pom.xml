@@ -171,6 +171,7 @@
         <commons-io.tesb.version>2.18.0</commons-io.tesb.version>
         <commons-pool2.tesb.version>2.12.1</commons-pool2.tesb.version>
         <couchbase-client.tesb.version>3.7.9</couchbase-client.tesb.version>
+        <curator.tesb.version>5.8.0.tesb1</curator.tesb.version>
         <djl.tesb.version>0.31.1</djl.tesb.version>
         <failureaccess.tesb.version>1.0.2</failureaccess.tesb.version>
         <fop.tesb.version>2.10</fop.tesb.version>
@@ -924,6 +925,7 @@
                             <commons-io.tesb.version>${commons-io.tesb.version}</commons-io.tesb.version>
                             <commons-pool2.tesb.version>${commons-pool2.tesb.version}</commons-pool2.tesb.version>
                             <couchbase-client.tesb.version>${couchbase-client.tesb.version}</couchbase-client.tesb.version>
+                            <curator.tesb.version>${curator.tesb.version}</curator.tesb.version>
                             <djl.tesb.version>${djl.tesb.version}</djl.tesb.version>
                             <failureaccess.tesb.version>${failureaccess.tesb.version}</failureaccess.tesb.version>
                             <fop.tesb.version>${fop.tesb.version}</fop.tesb.version>
