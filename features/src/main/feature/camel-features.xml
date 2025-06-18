@@ -3224,7 +3224,7 @@
     <feature name='camel-zookeeper' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version='${camel-osgi-jackson2.tesb.version}'>jackson</feature>
-        <feature version="[33,34)">guava</feature>
+        <feature version="[32,34)">guava</feature>
         <feature version="[3,4)">zookeeper-core</feature>
         <!-- <bundle dependency='true'>wrap:mvn:org.apache.zookeeper/zookeeper/${zookeeper-version}$Export-Package=org.apache.zookeeper*;version=${zookeeper-version}</bundle> -->
         <!-- <bundle dependency='true'>wrap:mvn:org.apache.zookeeper/zookeeper-jute/${zookeeper-version}$Export-Package=org.apache.*;version=${zookeeper-version}</bundle> -->
@@ -3237,7 +3237,7 @@
     <feature name='camel-zookeeper-master' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version='${camel-osgi-jackson2.tesb.version}'>jackson</feature>
-        <feature version="[33,34)">guava</feature>
+        <feature version="[32,34)">guava</feature>
         <feature version="[3,4)">zookeeper-core</feature>
         <!-- <bundle dependency='true'>wrap:mvn:org.apache.zookeeper/zookeeper/${zookeeper-version}$Export-Package=org.apache.zookeeper*;version=${zookeeper-version}</bundle> -->
         <!-- <bundle dependency='true'>wrap:mvn:org.apache.zookeeper/zookeeper-jute/${zookeeper-version}$Export-Package=org.apache.*;version=${zookeeper-version}</bundle> -->
