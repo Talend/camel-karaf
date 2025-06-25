@@ -88,7 +88,7 @@
     <!-- TODO use Karaf/Camel bom -->
     <properties>
         <upstream.version>4.8.1</upstream.version>
-        <camel-features.tesb.version>4.8.1.20250530</camel-features.tesb.version>
+        <camel-features.tesb.version>4.8.1.20250625</camel-features.tesb.version>
         <camel-support.tesb.version>4.8.1.20250320</camel-support.tesb.version>
         <camel-vm.tesb.version>4.8.1.20250320</camel-vm.tesb.version>
         <camel-activemq.tesb.version>4.8.1.20250320</camel-activemq.tesb.version>
@@ -133,7 +133,7 @@
         <camel-quartz.tesb.version>4.8.1.20250320</camel-quartz.tesb.version>
         <camel-ref.tesb.version>4.8.1.20250320</camel-ref.tesb.version>
         <camel-rest-openapi.tesb.version>4.8.1.20250320</camel-rest-openapi.tesb.version>
-        <camel-salesforce.tesb.version>4.8.1.20250320</camel-salesforce.tesb.version>
+        <camel-salesforce.tesb.version>4.8.1.20250625</camel-salesforce.tesb.version>
         <camel-smb.tesb.version>4.8.1.20250320</camel-smb.tesb.version>
         <camel-sql.tesb.version>4.8.1.20250320</camel-sql.tesb.version>
         <camel-tracing.tesb.version>4.8.1.20250320</camel-tracing.tesb.version>
