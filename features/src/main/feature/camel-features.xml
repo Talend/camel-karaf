@@ -1558,7 +1558,7 @@
     </feature>
     <feature name='camel-hazelcast' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
-        <bundle dependency='true'>mvn:com.hazelcast/hazelcast/${hazelcast-version}</bundle>
+        <bundle dependency='true'>mvn:com.hazelcast/hazelcast/${hazelcast.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-hazelcast/${upstream.version}</bundle>
     </feature>
     <feature name='camel-headersmap' version='${upstream.version}' start-level='50'>
@@ -2449,7 +2449,7 @@
     </feature>
     <feature name='camel-pg-replication-slot' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
-        <bundle dependency='true'>mvn:org.postgresql/postgresql/${pgjdbc-driver-version}</bundle>
+        <bundle dependency='true'>mvn:org.postgresql/postgresql/${pgjdbc-driver.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-pg-replication-slot/${upstream.version}</bundle>
     </feature>
     <feature name='camel-pgevent' version='${upstream.version}' start-level='50'>

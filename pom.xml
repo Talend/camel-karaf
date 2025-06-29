@@ -187,6 +187,7 @@
         <google-cloud-secretmanager.tesb.version>2.48.0</google-cloud-secretmanager.tesb.version>
         <google-cloud-storage-version>2.42.0</google-cloud-storage-version>
         <groovy.tesb.version>4.0.25</groovy.tesb.version>
+        <hazelcast.tesb.version>5.5.0.tesb1</hazelcast.tesb.version>
         <httpcore.tesb.version>5.3.4</httpcore.tesb.version>
         <httpclient.tesb.version>5.5</httpclient.tesb.version>
         <infinispan.tesb.version>15.0.11.Final</infinispan.tesb.version>
@@ -222,6 +223,7 @@
         <netty.tesb.version>4.1.119.Final</netty.tesb.version>
         <paranamer.tesb.version>2.8</paranamer.tesb.version>
         <parquet-avro.tesb.version>1.15.2</parquet-avro.tesb.version>
+        <pgjdbc-driver.tesb.version>42.7.4</pgjdbc-driver.tesb.version>
         <pooled-jms.tesb.version>3.1.7</pooled-jms.tesb.version>
         <protobuf.tesb.version>3.25.5</protobuf.tesb.version>
         <pulsar.tesb.version>3.3.3</pulsar.tesb.version>
@@ -952,6 +954,7 @@
                             <google-cloud-secretmanager.tesb.version>${google-cloud-secretmanager.tesb.version}</google-cloud-secretmanager.tesb.version>
                             <google-cloud-storage-version>${google-cloud-storage-version}</google-cloud-storage-version>
                             <groovy.tesb.version>${groovy.tesb.version}</groovy.tesb.version>
+                            <hazelcast.tesb.version>${hazelcast.tesb.version}</hazelcast.tesb.version>
                             <httpcore.tesb.version>${httpcore.tesb.version}</httpcore.tesb.version>
                             <httpclient.tesb.version>${httpclient.tesb.version}</httpclient.tesb.version>
                             <infinispan.tesb.version>${infinispan.tesb.version}</infinispan.tesb.version>
@@ -987,6 +990,7 @@
                             <netty.tesb.version>${netty.tesb.version}</netty.tesb.version>
                             <paranamer.tesb.version>${paranamer.tesb.version}</paranamer.tesb.version>
                             <parquet-avro.tesb.version>${parquet-avro.tesb.version}</parquet-avro.tesb.version>
+                            <pgjdbc-driver.tesb.version>${pgjdbc-driver.tesb.version}</pgjdbc-driver.tesb.version>
                             <pooled-jms.tesb.version>${pooled-jms.tesb.version}</pooled-jms.tesb.version>
                             <protobuf.tesb.version>${protobuf.tesb.version}</protobuf.tesb.version>
                             <pulsar.tesb.version>${pulsar.tesb.version}</pulsar.tesb.version>
