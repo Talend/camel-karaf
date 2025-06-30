@@ -25,7 +25,9 @@
     </feature>
 
     <feature name="jakarta-annotation" version="${jakarta-annotation2-api-version}">
-        <bundle dependency="true">mvn:jakarta.annotation/jakarta.annotation-api/${jakarta-annotation2-api-version}</bundle>
+        <!-- <bundle dependency="true">mvn:jakarta.annotation/jakarta.annotation-api/${jakarta-annotation2-api-version}</bundle> -->
+        <bundle dependency="true">mvn:jakarta.annotation/jakarta.annotation-api/${jakarta-annotation-api-version}</bundle>
+        <bundle dependency="true">mvn:org.ops4j.pax.web/pax-web-compatibility-annotation/${pax-web.tesb.version}</bundle>
     </feature>
 
     <feature name="jakarta-annotation" version="${jakarta-annotation-api-version}">
@@ -33,8 +35,10 @@
     </feature>
 
     <feature name="jakarta-xml-bind" version="${jakarta-xml-bind3-api-version}">
-        <feature version="[2,3)">jakarta-activation</feature>
-        <bundle dependency="true">mvn:jakarta.xml.bind/jakarta.xml.bind-api/${jakarta-xml-bind3-api-version}</bundle>
+        <feature version="[2.1,3)">jakarta-activation</feature>
+        <!-- <bundle dependency="true">mvn:jakarta.xml.bind/jakarta.xml.bind-api/${jakarta-xml-bind3-api-version}</bundle> -->
+        <bundle dependency="true">mvn:jakarta.xml.bind/jakarta.xml.bind-api/${jakarta-xml-bind-api-version}</bundle>
+        <bundle dependency="true">mvn:org.ops4j.pax.web/pax-web-compatibility-jaxb3/${pax-web.tesb.version}</bundle>
     </feature>
 
     <feature name="jakarta-xml-bind" version="${jakarta-xml-bind-api-version}">

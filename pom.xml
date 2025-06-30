@@ -223,6 +223,7 @@
         <netty.tesb.version>4.1.119.Final</netty.tesb.version>
         <paranamer.tesb.version>2.8</paranamer.tesb.version>
         <parquet-avro.tesb.version>1.15.2</parquet-avro.tesb.version>
+        <pax-web.tesb.version>11.0.0</pax-web.tesb.version>
         <pgjdbc-driver.tesb.version>42.7.7</pgjdbc-driver.tesb.version>
         <pooled-jms.tesb.version>3.1.7</pooled-jms.tesb.version>
         <protobuf.tesb.version>3.25.5</protobuf.tesb.version>
@@ -748,7 +749,7 @@
         <servicemix-spring-jms-version>6.1.6</servicemix-spring-jms-version>
         <slf4j-version>2.0.13</slf4j-version>
         <spring-amqp-version>3.1.7</spring-amqp-version>
-        <tesb-pax-web-api-version>9.99.0</tesb-pax-web-api-version>
+        <tesb-pax-web-api-version>11.0.0</tesb-pax-web-api-version>
 
         <!-- Plugin versions -->
         <maven-antrun-plugin-version>3.1.0</maven-antrun-plugin-version>
@@ -990,6 +991,7 @@
                             <netty.tesb.version>${netty.tesb.version}</netty.tesb.version>
                             <paranamer.tesb.version>${paranamer.tesb.version}</paranamer.tesb.version>
                             <parquet-avro.tesb.version>${parquet-avro.tesb.version}</parquet-avro.tesb.version>
+                            <pax-web.tesb.version>${pax-web.tesb.version}</pax-web.tesb.version>
                             <pgjdbc-driver.tesb.version>${pgjdbc-driver.tesb.version}</pgjdbc-driver.tesb.version>
                             <pooled-jms.tesb.version>${pooled-jms.tesb.version}</pooled-jms.tesb.version>
                             <protobuf.tesb.version>${protobuf.tesb.version}</protobuf.tesb.version>
