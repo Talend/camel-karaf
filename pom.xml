@@ -203,6 +203,7 @@
         <jaxb-fastinfoset.tesb.version>2.1.1</jaxb-fastinfoset.tesb.version>
         <jaxb-staxex.tesb.version>2.1.0</jaxb-staxex.tesb.version>
         <jaxb-dtd-parser.tesb.version>1.5.1</jaxb-dtd-parser.tesb.version>
+        <jboss-logging.tesb.version>3.6.1.Final</jboss-logging.tesb.version>
         <jna.tesb.version>5.14.0</jna.tesb.version>
         <jolokia.tesb.version>2.2.8</jolokia.tesb.version>
         <jooq.tesb.version>3.19.14</jooq.tesb.version>
@@ -971,6 +972,7 @@
                             <jaxb-fastinfoset.tesb.version>${jaxb-fastinfoset.tesb.version}</jaxb-fastinfoset.tesb.version>
                             <jaxb-staxex.tesb.version>${jaxb-staxex.tesb.version}</jaxb-staxex.tesb.version>
                             <jaxb-dtd-parser.tesb.version>${jaxb-dtd-parser.tesb.version}</jaxb-dtd-parser.tesb.version>
+                            <jboss-logging.tesb.version>${jboss-logging.tesb.version}</jboss-logging.tesb.version>
                             <jna.tesb.version>${jna.tesb.version}</jna.tesb.version>
                             <jolokia.tesb.version>${jolokia.tesb.version}</jolokia.tesb.version>
                             <jooq.tesb.version>${jooq.tesb.version}</jooq.tesb.version>
