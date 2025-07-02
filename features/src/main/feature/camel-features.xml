@@ -120,7 +120,8 @@
     </feature>
 
     <feature name="jakarta-servlet" version="${jakarta-servlet5-api-version}">
-        <bundle dependency="true">mvn:jakarta.servlet/jakarta.servlet-api/${jakarta-servlet5-api-version}</bundle>
+        <bundle dependency="true">mvn:jakarta.servlet/jakarta.servlet-api/${jakarta-servlet-api-version}</bundle>
+        <bundle dependency="true">mvn:org.ops4j.pax.web/pax-web-compatibility-servlet/11.0.0</bundle>
     </feature>
 
     <feature name="jakarta-servlet" version="${jakarta-servlet-api-version}">
@@ -469,7 +470,8 @@
         <bundle dependency='true'>mvn:org.eclipse.jetty/jetty-security/${jetty9.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.eclipse.jetty/jetty-util/${jetty9.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.eclipse.jetty/jetty-util-ajax/${jetty9.tesb.version}</bundle>
-        <bundle dependency='true'>mvn:javax.servlet/javax.servlet-api/${javax-servlet3-api-version}</bundle>
+        <bundle dependency='true'>mvn:jakarta.servlet/jakarta.servlet-api/4.0.4</bundle>
+        <bundle dependency="true">mvn:org.ops4j.pax.web/pax-web-compatibility-servlet31/11.0.0</bundle>
         <bundle dependency='true'>mvn:org.apache.avro/avro-ipc/${avro-ipc-netty-version}</bundle>
         <!-- Use the wrap protocol to import the same version of javax.servlet-api as the rest-->
         <bundle dependency='true'>wrap:mvn:org.apache.avro/avro-ipc-jetty/${avro-ipc-jetty-version}$overwrite=merge&amp;Import-Package=javax.servlet*;version:="[3.1,4)",*</bundle>
