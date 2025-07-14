@@ -1169,13 +1169,15 @@
         <bundle dependency='true'>wrap:mvn:org.elasticsearch.client/elasticsearch-rest-client-sniffer/${elasticsearch-java-client-sniffer-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-elasticsearch-rest-client/${upstream.version}</bundle>
     </feature>
-    <feature name='camel-elytron' version='${upstream.version}' start-level='50'>
+    <!-- camel-elytron is disabled because of CVE-2024-1233 -->
+    <feature name='camel-elytron' version='${upstream.version}' start-level='50'/>
+    <!-- <feature name='camel-elytron' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version='${camel-osgi-version-range}'>camel-undertow</feature>
         <bundle dependency='true'>wrap:mvn:org.wildfly.security.elytron-web/undertow-server/${elytron-web}</bundle>
         <bundle dependency='true'>wrap:mvn:org.wildfly.security/wildfly-elytron/${wildfly-elytron.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-elytron/${upstream.version}</bundle>
-    </feature>
+    </feature> -->
     <feature name='camel-etcd3' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version='${camel-osgi-jackson2.tesb.version}'>jackson</feature>
@@ -1553,7 +1555,7 @@
     </feature>
     <feature name='camel-hazelcast' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
-        <bundle dependency='true'>mvn:com.hazelcast/hazelcast/${hazelcast-version}</bundle>
+        <bundle dependency='true'>mvn:com.hazelcast/hazelcast/${hazelcast.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-hazelcast/${upstream.version}</bundle>
     </feature>
     <feature name='camel-headersmap' version='${upstream.version}' start-level='50'>
@@ -2444,7 +2446,7 @@
     </feature>
     <feature name='camel-pg-replication-slot' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
-        <bundle dependency='true'>mvn:org.postgresql/postgresql/${pgjdbc-driver-version}</bundle>
+        <bundle dependency='true'>mvn:org.postgresql/postgresql/${pgjdbc-driver.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-pg-replication-slot/${upstream.version}</bundle>
     </feature>
     <feature name='camel-pgevent' version='${upstream.version}' start-level='50'>
