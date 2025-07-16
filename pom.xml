@@ -187,6 +187,7 @@
         <infinispan.tesb.version>15.0.11.Final</infinispan.tesb.version>
         <jackson-asl.tesb.version>1.9.16-TALEND</jackson-asl.tesb.version>
         <jackson2.tesb.version>2.18.3</jackson2.tesb.version>
+        <jackrabbit.tesb.version>2.22.1</jackrabbit.tesb.version>
         <jaxb3-istack.tesb.version>4.0.1</jaxb3-istack.tesb.version>
         <jaxb3-fastinfoset.tesb.version>2.0.0</jaxb3-fastinfoset.tesb.version>
         <jaxb3-staxex.tesb.version>2.0.1</jaxb3-staxex.tesb.version>
@@ -943,6 +944,7 @@
                             <infinispan.tesb.version>${infinispan.tesb.version}</infinispan.tesb.version>
                             <jackson-asl.tesb.version>${jackson-asl.tesb.version}</jackson-asl.tesb.version>
                             <jackson2.tesb.version>${jackson2.tesb.version}</jackson2.tesb.version>
+                            <jackrabbit.tesb.version>${jackrabbit.tesb.version}</jackrabbit.tesb.version>
                             <jaxb3-istack.tesb.version>${jaxb3-istack.tesb.version}</jaxb3-istack.tesb.version>
                             <jaxb3-fastinfoset.tesb.version>${jaxb3-fastinfoset.tesb.version}</jaxb3-fastinfoset.tesb.version>
                             <jaxb3-staxex.tesb.version>${jaxb3-staxex.tesb.version}</jaxb3-staxex.tesb.version>
