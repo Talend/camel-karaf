@@ -88,7 +88,7 @@
     <!-- TODO use Karaf/Camel bom -->
     <properties>
         <upstream.version>4.8.1</upstream.version>
-        <camel-features.tesb.version>4.8.1.20250625</camel-features.tesb.version>
+        <camel-features.tesb.version>4.8.1.20250630</camel-features.tesb.version>
         <camel-support.tesb.version>4.8.1.20250320</camel-support.tesb.version>
         <camel-vm.tesb.version>4.8.1.20250320</camel-vm.tesb.version>
         <camel-activemq.tesb.version>4.8.1.20250320</camel-activemq.tesb.version>
@@ -183,9 +183,11 @@
         <google-cloud-secretmanager.tesb.version>2.48.0</google-cloud-secretmanager.tesb.version>
         <google-cloud-storage-version>2.42.0</google-cloud-storage-version>
         <groovy.tesb.version>4.0.25</groovy.tesb.version>
+        <hazelcast.tesb.version>5.5.0.tesb1</hazelcast.tesb.version>
         <infinispan.tesb.version>15.0.11.Final</infinispan.tesb.version>
         <jackson-asl.tesb.version>1.9.16-TALEND</jackson-asl.tesb.version>
         <jackson2.tesb.version>2.18.3</jackson2.tesb.version>
+        <jackrabbit.tesb.version>2.22.1</jackrabbit.tesb.version>
         <jaxb3-istack.tesb.version>4.0.1</jaxb3-istack.tesb.version>
         <jaxb3-fastinfoset.tesb.version>2.0.0</jaxb3-fastinfoset.tesb.version>
         <jaxb3-staxex.tesb.version>2.0.1</jaxb3-staxex.tesb.version>
@@ -213,6 +215,7 @@
         <netty.tesb.version>4.1.119.Final</netty.tesb.version>
         <paranamer.tesb.version>2.8</paranamer.tesb.version>
         <parquet-avro.tesb.version>1.15.2</parquet-avro.tesb.version>
+        <pgjdbc-driver.tesb.version>42.7.7</pgjdbc-driver.tesb.version>
         <pooled-jms.tesb.version>3.1.7</pooled-jms.tesb.version>
         <protobuf.tesb.version>3.25.5</protobuf.tesb.version>
         <pulsar.tesb.version>3.3.3</pulsar.tesb.version>
@@ -937,9 +940,11 @@
                             <google-cloud-secretmanager.tesb.version>${google-cloud-secretmanager.tesb.version}</google-cloud-secretmanager.tesb.version>
                             <google-cloud-storage-version>${google-cloud-storage-version}</google-cloud-storage-version>
                             <groovy.tesb.version>${groovy.tesb.version}</groovy.tesb.version>
+                            <hazelcast.tesb.version>${hazelcast.tesb.version}</hazelcast.tesb.version>
                             <infinispan.tesb.version>${infinispan.tesb.version}</infinispan.tesb.version>
                             <jackson-asl.tesb.version>${jackson-asl.tesb.version}</jackson-asl.tesb.version>
                             <jackson2.tesb.version>${jackson2.tesb.version}</jackson2.tesb.version>
+                            <jackrabbit.tesb.version>${jackrabbit.tesb.version}</jackrabbit.tesb.version>
                             <jaxb3-istack.tesb.version>${jaxb3-istack.tesb.version}</jaxb3-istack.tesb.version>
                             <jaxb3-fastinfoset.tesb.version>${jaxb3-fastinfoset.tesb.version}</jaxb3-fastinfoset.tesb.version>
                             <jaxb3-staxex.tesb.version>${jaxb3-staxex.tesb.version}</jaxb3-staxex.tesb.version>
@@ -967,6 +972,7 @@
                             <netty.tesb.version>${netty.tesb.version}</netty.tesb.version>
                             <paranamer.tesb.version>${paranamer.tesb.version}</paranamer.tesb.version>
                             <parquet-avro.tesb.version>${parquet-avro.tesb.version}</parquet-avro.tesb.version>
+                            <pgjdbc-driver.tesb.version>${pgjdbc-driver.tesb.version}</pgjdbc-driver.tesb.version>
                             <pooled-jms.tesb.version>${pooled-jms.tesb.version}</pooled-jms.tesb.version>
                             <protobuf.tesb.version>${protobuf.tesb.version}</protobuf.tesb.version>
                             <pulsar.tesb.version>${pulsar.tesb.version}</pulsar.tesb.version>
