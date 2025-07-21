@@ -422,7 +422,7 @@
         <!-- Wrap protocol used to export a private package that is used by camel-as2  -->
         <bundle dependency='true'>wrap:mvn:org.bouncycastle/bcutil-jdk18on/${bouncycastle.tesb.version}$overwrite=merge&amp;Export-Package=org.bouncycastle.*;version=${bouncycastle.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.apache.velocity/velocity-engine-core/${velocity.tesb.version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3-version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-as2/${camel-as2.tesb.version}</bundle>
     </feature>
     <feature name='camel-asn1' version='${upstream.version}' start-level='50'>
@@ -459,7 +459,7 @@
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version='${camel-osgi-jackson2.tesb.version}'>jackson</feature>
         <feature version='[4.1,5)'>netty</feature>
-        <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3-version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.apache.commons/commons-compress/${commons-compress-version}</bundle>
         <bundle dependency='true'>mvn:commons-io/commons-io/${commons-io.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.apache.avro/avro/${avro-version}</bundle>
@@ -912,7 +912,7 @@
         <bundle dependency='true'>wrap:mvn:com.squareup.okio/okio-jvm/${consul-okio-version}</bundle>
         <bundle dependency='true'>mvn:com.fasterxml.jackson.datatype/jackson-datatype-jdk8/${jackson2.tesb.version}</bundle>
         <bundle dependency='true'>mvn:com.fasterxml.jackson.datatype/jackson-datatype-guava/${jackson2.tesb.version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3-version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-consul/${upstream.version}</bundle>
     </feature>
     <feature name='camel-couchbase' version='${upstream.version}' start-level='50'>
@@ -937,7 +937,7 @@
         'okhttp' was chosen as the host because 'okhttp-urlconnection' contains only one package with 2 classes -->
         <bundle dependency='true'>wrap:mvn:com.squareup.okhttp3/okhttp/${squareup-okhttp-version}$Bundle-SymbolicName=com.squareup.okhttp3.okhttp</bundle>
         <bundle dependency='true'>wrap:mvn:com.squareup.okhttp3/okhttp-urlconnection/${squareup-okhttp-version}$Fragment-Host=com.squareup.okhttp3.okhttp;bundle-version=${squareup-okhttp-version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3-version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-couchdb/${upstream.version}</bundle>
     </feature>
     <feature name="camel-cron" version="${upstream.version}" start-level="50">
@@ -1083,7 +1083,7 @@
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version="[4,5)">http-client</feature>
         <bundle dependency='true'>mvn:com.google.code.gson/gson/${gson-version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3-version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.digitalocean-api-client/${digitalocean-api-client-version}_1</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-digitalocean/${upstream.version}</bundle>
     </feature>
@@ -1117,7 +1117,7 @@
         <bundle dependency='true'>wrap:mvn:com.github.docker-java/docker-java-transport/${docker-java-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.github.docker-java/docker-java-transport-jersey/${docker-java-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.github.docker-java/docker-java-transport-netty/${docker-java-version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3-version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-docker/${upstream.version}</bundle>
     </feature>
     <feature name='camel-drill' version='${upstream.version}' start-level='50'>
@@ -1131,7 +1131,7 @@
         <bundle dependency='true'>mvn:io.dropwizard.metrics/metrics-jmx/${metrics.tesb.version}</bundle>
         <bundle dependency='true'>mvn:io.dropwizard.metrics/metrics-jvm/${metrics.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.apache.commons/commons-text/${commons-text-version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3-version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.carrotsearch/hppc/0.10.0</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-drill/${camel-drill.tesb.version}</bundle>
     </feature>
@@ -1219,7 +1219,7 @@
         <feature version='[33,34)'>guava</feature>
         <bundle dependency='true'>mvn:com.fasterxml.jackson.datatype/jackson-datatype-jsr310/${jackson2.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.apache.commons/commons-text/${commons-text-version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3-version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3.tesb.version}</bundle>
         <bundle dependency='true'>mvn:commons-io/commons-io/${commons-io.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-api/${auto-detect-version}</bundle>
         <bundle dependency='true'>wrap:mvn:io.opentelemetry.instrumentation/opentelemetry-instrumentation-annotations/${auto-detect-version}</bundle>
@@ -1497,7 +1497,7 @@
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <bundle dependency='true'>mvn:org.apache.groovy/groovy/${groovy.tesb.version}</bundle>
         <bundle dependency='true'>mvn:commons-io/commons-io/${commons-io.tesb.version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3-version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-grape/${upstream.version}</bundle>
     </feature>
     <feature name='camel-graphql' version='${upstream.version}' start-level='50'>
@@ -1634,12 +1634,12 @@
     <feature name='camel-huaweicloud-smn' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-huaweicloud-common</feature>
         <bundle dependency='true'>wrap:mvn:com.huaweicloud.sdk/huaweicloud-sdk-smn/${huaweicloud-sdk-version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3-version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-huaweicloud-smn/${upstream.version}</bundle>
     </feature>
     <feature name='camel-ical' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
-        <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3-version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3.tesb.version}</bundle>
         <bundle dependency='true'>mvn:commons-beanutils/commons-beanutils/${commons-beanutils.tesb.version}</bundle>
         <bundle dependency='true'>mvn:commons-collections/commons-collections/${commons-collections-version}</bundle>
         <bundle dependency='true'>wrap:mvn:org.mnode.ical4j/ical4j/${ical4j-version}</bundle>
@@ -1736,7 +1736,7 @@
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.ironmq/${ironmq-version}_1</bundle>
         <bundle dependency='true'>mvn:com.google.code.gson/gson/${gson-version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3-version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-ironmq/${upstream.version}</bundle>
     </feature>
     <feature name='camel-jackson' version='${upstream.version}' start-level='50'>
@@ -2090,7 +2090,7 @@
         <bundle dependency='true'>mvn:org.apache.directory.server/apacheds-core-api/${apacheds-version}</bundle>
         <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.antlr/${auto-detect-version}</bundle>
         <bundle dependency='true'>mvn:org.apache.commons/commons-collections4/${commons-collections4.tesb.version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3-version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.apache.commons/commons-pool2/${commons-pool2.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.apache.mina/mina-core/${mina.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-ldif/${upstream.version}</bundle>
@@ -2325,7 +2325,7 @@
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version="[4,5)">http-client</feature>
         <bundle dependency='true'>mvn:org.apache.httpcomponents/httpasyncclient-osgi/${httpasyncclient-version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3-version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3.tesb.version}</bundle>
         <bundle dependency='true'>mvn:com.google.code.gson/gson/${gson-version}</bundle>
         <bundle dependency='true'>mvn:org.apache.olingo/olingo-odata2-api/${olingo2-version}</bundle>
         <bundle dependency='true'>wrap:mvn:org.apache.olingo/olingo-odata2-core/${olingo2-version}$overwrite=merge&amp;Import-Package=com.*,org.*,javax.xml.*</bundle>
@@ -2344,7 +2344,7 @@
         <bundle dependency='true'>wrap:mvn:org.apache.olingo/odata-server-core/${auto-detect-version}$overwrite=merge&amp;Export-Package=org.apache.olingo.*;version=${auto-detect-version}</bundle>
         <bundle dependency='true'>wrap:mvn:org.apache.olingo/odata-client-core/${auto-detect-version}$overwrite=merge&amp;Export-Package=org.apache.olingo.client.core*;version=${auto-detect-version}</bundle>
         <bundle dependency='true'>mvn:commons-io/commons-io/${commons-io.tesb.version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3-version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.apache.httpcomponents/httpasyncclient-osgi/${httpasyncclient-version}</bundle>
         <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-xml/${jackson2.tesb.version}</bundle>
         <bundle dependency='true'>mvn:com.fasterxml/aalto-xml/${auto-detect-version}</bundle>
@@ -2372,7 +2372,7 @@
         <bundle dependency='true'>mvn:io.swagger.core.v3/swagger-annotations-jakarta/${swagger-openapi3-version}</bundle>
         <bundle dependency='true'>mvn:io.swagger.core.v3/swagger-models-jakarta/${swagger-openapi3-version}</bundle>
         <bundle dependency='true'>mvn:io.swagger.core.v3/swagger-core-jakarta/${swagger-openapi3-version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3-version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-openapi-java/${upstream.version}</bundle>
     </feature>
     <feature name='camel-openapi-validator' version='${upstream.version}' start-level='50'>
@@ -2450,7 +2450,7 @@
     </feature>
     <feature name='camel-pdf' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
-        <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3-version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.apache.pdfbox/pdfbox/${pdfbox-version}</bundle>
         <bundle dependency='true'>mvn:org.apache.pdfbox/pdfbox-io/${pdfbox-version}</bundle>
         <bundle dependency='true'>mvn:org.apache.pdfbox/fontbox/${pdfbox-version}</bundle>
@@ -2520,7 +2520,7 @@
         <bundle dependency='true'>mvn:org.yaml/snakeyaml/${snakeyaml.tesb.version}</bundle>
         <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-yaml/${jackson2.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.apache.commons/commons-collections4/${commons-collections4.tesb.version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3-version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.apache.commons/commons-math3/${commons-math3-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-plc4x/${upstream.version}</bundle>
     </feature>
@@ -2661,7 +2661,7 @@
     </feature> -->
     <feature name='camel-rocketmq' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
-        <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3-version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:org.apache.rocketmq/rocketmq-acl/${rocketmq-version}</bundle>
         <bundle dependency='true'>wrap:mvn:org.apache.rocketmq/rocketmq-client/${rocketmq-version}</bundle>
         <bundle dependency='true'>wrap:mvn:org.apache.rocketmq/rocketmq-common/${rocketmq-version}</bundle>
@@ -2695,7 +2695,7 @@
         <bundle dependency='true'>mvn:org.apache.avro/avro/${avro-version}</bundle>
         <bundle dependency='true'>mvn:org.apache.commons/commons-compress/${commons-compress-version}</bundle>
         <bundle dependency='true'>mvn:commons-io/commons-io/${commons-io.tesb.version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3-version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.cometd.java/cometd-java-api-common/${cometd-java-client-version}</bundle>
         <bundle dependency='true'>mvn:org.cometd.java/cometd-java-api-client/${cometd-java-client-version}</bundle>
         <bundle dependency='true'>mvn:org.cometd.java/cometd-java-client-common/${cometd-java-client-version}</bundle>
@@ -2988,7 +2988,7 @@
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version='${camel-osgi-version-range}'>camel-webhook</feature>
         <feature version='${camel-osgi-jackson2.tesb.version}'>jackson</feature>
-        <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3-version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-telegram/${upstream.version}</bundle>
     </feature>
     <feature name='camel-test' version='${upstream.version}' start-level='50'>
@@ -3107,7 +3107,7 @@
     <feature name='camel-velocity' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <bundle dependency='true'>mvn:org.apache.velocity/velocity-engine-core/${velocity.tesb.version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3-version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-velocity/${upstream.version}</bundle>
     </feature>
     <feature name='camel-wal' version='${upstream.version}' start-level='50'>
