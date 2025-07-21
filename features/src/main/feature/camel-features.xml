@@ -249,8 +249,8 @@
     <feature name="azure-msal4j" version="${azure-core-version}" start-level="50">
         <bundle dependency='true'>mvn:com.nimbusds/content-type/${auto-detect-version}</bundle>
         <bundle dependency='true'>mvn:com.nimbusds/lang-tag/${auto-detect-version}</bundle>
-        <bundle dependency='true'>mvn:com.nimbusds/nimbus-jose-jwt/${nimbus-jose-jwt}</bundle>
-        <bundle dependency='true'>mvn:com.nimbusds/oauth2-oidc-sdk/${auto-detect-version}</bundle>
+        <bundle dependency='true'>mvn:com.nimbusds/nimbus-jose-jwt/${nimbus-jose-jwt.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:com.nimbusds/oauth2-oidc-sdk/${oauth2-oidc-sdk.tesb.version}</bundle>
         <bundle dependency='true'>mvn:net.minidev/accessors-smart/${json-smart.tesb.version}</bundle>
         <bundle dependency='true'>mvn:net.minidev/json-smart/${json-smart.tesb.version}</bundle>    
         <bundle dependency='true'>wrap:mvn:com.github.stephenc.jcip/jcip-annotations/${auto-detect-version}</bundle>

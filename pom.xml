@@ -226,6 +226,8 @@
         <micrometer-tracing.tesb.version>1.3.9</micrometer-tracing.tesb.version>
         <mina.tesb.version>2.2.4</mina.tesb.version>
         <netty.tesb.version>4.1.119.Final</netty.tesb.version>
+        <nimbus-jose-jwt.tesb.version>10.4</nimbus-jose-jwt.tesb.version>
+        <oauth2-oidc-sdk.tesb.version>11.26</oauth2-oidc-sdk.tesb.version>
         <paranamer.tesb.version>2.8</paranamer.tesb.version>
         <parquet-avro.tesb.version>1.15.2</parquet-avro.tesb.version>
         <pax-web.tesb.version>11.0.0</pax-web.tesb.version>
@@ -999,6 +1001,8 @@
                             <micrometer-tracing.tesb.version>${micrometer-tracing.tesb.version}</micrometer-tracing.tesb.version>
                             <mina.tesb.version>${mina.tesb.version}</mina.tesb.version>
                             <netty.tesb.version>${netty.tesb.version}</netty.tesb.version>
+                            <nimbus-jose-jwt.tesb.version>${nimbus-jose-jwt.tesb.version}</nimbus-jose-jwt.tesb.version>
+                            <oauth2-oidc-sdk.tesb.version>${oauth2-oidc-sdk.tesb.version}</oauth2-oidc-sdk.tesb.version>
                             <paranamer.tesb.version>${paranamer.tesb.version}</paranamer.tesb.version>
                             <parquet-avro.tesb.version>${parquet-avro.tesb.version}</parquet-avro.tesb.version>
                             <pax-web.tesb.version>${pax-web.tesb.version}</pax-web.tesb.version>
