@@ -240,7 +240,7 @@
         <bundle dependency='true'>mvn:com.fasterxml.jackson.datatype/jackson-datatype-jsr310/${jackson2.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.azure/azure-core/${azure-core-version}$${spi-consumer}&amp;Import-Package=*;resolution:=optional,com.fasterxml.jackson.dataformat.xml.deser;resolution:=optional,com.fasterxml.jackson.dataformat.xml.ser;resolution:=optional</bundle>
         <bundle dependency='true'>wrap:mvn:com.azure/azure-identity/${azure-identity-version}$Import-Package=com.sun.jna,*;resolution:=optional</bundle>
-        <bundle dependency='true'>mvn:io.projectreactor/reactor-core/${reactor-version}</bundle>
+        <bundle dependency='true'>mvn:io.projectreactor/reactor-core/${reactor.tesb.version}</bundle>
         <bundle dependency='true'>mvn:net.java.dev.jna/jna/${jna.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.reactivestreams/reactive-streams/${reactive-streams-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.azure/azure-xml/${azure-xml.tesb.version}$Bundle-SymbolicName=azure-xml&amp;Bundle-Version=${azure-xml.tesb.version}</bundle>
@@ -677,6 +677,7 @@
         <feature version='[${azure-core-version},2)'>azure-eventhubs</feature>
         <feature version='[4.1,5)'>netty</feature>
         <bundle>wrap:mvn:com.azure/azure-core-http-netty/${auto-detect-version}</bundle>
+        <bundle dependency='true'>mvn:com.google.code.findbugs/jsr305/${jsr305.tesb.version}</bundle>
         <bundle dependency='true'>mvn:io.netty/netty-codec-http/${netty.tesb.version}</bundle>
         <bundle dependency='true'>mvn:io.netty/netty-codec-http2/${netty.tesb.version}</bundle>
         <bundle dependency='true'>mvn:io.netty/netty-transport-native-unix-common/${netty.tesb.version}</bundle>
@@ -686,6 +687,8 @@
         <bundle dependency='true'>mvn:io.netty/netty-codec-socks/${netty.tesb.version}</bundle>
         <bundle dependency='true'>mvn:io.netty/netty-resolver-dns/${netty.tesb.version}</bundle>
         <bundle dependency='true'>mvn:io.netty/netty-codec-dns/${netty.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:io.netty.incubator/netty-incubator-codec-native-quic/0.0.73.Final</bundle>
+        <bundle dependency='true'>mvn:io.netty.incubator/netty-incubator-codec-classes-quic/0.0.73.Final</bundle>
         <bundle dependency='true'>mvn:io.projectreactor.netty/reactor-netty-core/${reactor-netty.tesb.version}</bundle>
         <bundle dependency='true'>mvn:io.projectreactor.netty/reactor-netty-http/${reactor-netty.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.azure/azure-storage-blob/${azure-storage-blob-version}</bundle>
@@ -725,6 +728,7 @@
         <bundle dependency='true'>wrap:mvn:com.azure/azure-storage-blob/${azure-storage-blob-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.azure/azure-storage-blob-changefeed/${azure-storage-blob-changefeed-version}</bundle>
         <bundle>wrap:mvn:com.azure/azure-core-http-netty/${auto-detect-version}</bundle>
+        <bundle dependency='true'>mvn:com.google.code.findbugs/jsr305/${jsr305.tesb.version}</bundle>
         <bundle dependency='true'>mvn:io.netty/netty-codec-http/${netty.tesb.version}</bundle>
         <bundle dependency='true'>mvn:io.netty/netty-codec-http2/${netty.tesb.version}</bundle>
         <bundle dependency='true'>mvn:io.netty/netty-transport-native-unix-common/${netty.tesb.version}</bundle>
@@ -734,6 +738,8 @@
         <bundle dependency='true'>mvn:io.netty/netty-codec-socks/${netty.tesb.version}</bundle>
         <bundle dependency='true'>mvn:io.netty/netty-resolver-dns/${netty.tesb.version}</bundle>
         <bundle dependency='true'>mvn:io.netty/netty-codec-dns/${netty.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:io.netty.incubator/netty-incubator-codec-native-quic/0.0.73.Final</bundle>
+        <bundle dependency='true'>mvn:io.netty.incubator/netty-incubator-codec-classes-quic/0.0.73.Final</bundle>
         <bundle dependency='true'>mvn:io.projectreactor.netty/reactor-netty-core/${reactor-netty.tesb.version}</bundle>
         <bundle dependency='true'>mvn:io.projectreactor.netty/reactor-netty-http/${reactor-netty.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-azure-storage-blob/${upstream.version}</bundle>
@@ -750,6 +756,7 @@
         <feature version='[${azure-core-version},2)'>azure-storage</feature>
         <feature version='[4.1,5)'>netty</feature>
         <bundle>wrap:mvn:com.azure/azure-core-http-netty/${auto-detect-version}</bundle>
+        <bundle dependency='true'>mvn:com.google.code.findbugs/jsr305/${jsr305.tesb.version}</bundle>
         <bundle dependency='true'>mvn:io.netty/netty-codec-http/${netty.tesb.version}</bundle>
         <bundle dependency='true'>mvn:io.netty/netty-codec-http2/${netty.tesb.version}</bundle>
         <bundle dependency='true'>mvn:io.netty/netty-transport-native-unix-common/${netty.tesb.version}</bundle>
@@ -759,6 +766,8 @@
         <bundle dependency='true'>mvn:io.netty/netty-codec-socks/${netty.tesb.version}</bundle>
         <bundle dependency='true'>mvn:io.netty/netty-resolver-dns/${netty.tesb.version}</bundle>
         <bundle dependency='true'>mvn:io.netty/netty-codec-dns/${netty.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:io.netty.incubator/netty-incubator-codec-native-quic/0.0.73.Final</bundle>
+        <bundle dependency='true'>mvn:io.netty.incubator/netty-incubator-codec-classes-quic/0.0.73.Final</bundle>
         <bundle dependency='true'>mvn:io.projectreactor.netty/reactor-netty-core/${reactor-netty.tesb.version}</bundle>
         <bundle dependency='true'>mvn:io.projectreactor.netty/reactor-netty-http/${reactor-netty.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.azure/azure-storage-queue/${auto-detect-version}</bundle>
@@ -919,7 +928,7 @@
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <bundle dependency='true'>mvn:com.couchbase.client/core-io/${couchbase-client.tesb.version}</bundle>
         <bundle dependency='true'>mvn:com.couchbase.client/java-client/${couchbase-client.tesb.version}</bundle>
-        <bundle dependency='true'>mvn:io.projectreactor/reactor-core/${reactor-version}</bundle>
+        <bundle dependency='true'>mvn:io.projectreactor/reactor-core/${reactor.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.reactivestreams/reactive-streams/${reactive-streams-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-couchbase/${upstream.version}</bundle>
     </feature>
@@ -2599,7 +2608,7 @@
     </feature>
     <feature name='camel-reactor' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-reactive-streams</feature>
-        <bundle dependency='true'>mvn:io.projectreactor/reactor-core/${reactor-version}</bundle>
+        <bundle dependency='true'>mvn:io.projectreactor/reactor-core/${reactor.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-reactor/${upstream.version}</bundle>
     </feature>
     <feature name='camel-redis' version='${upstream.version}' start-level='50'>
@@ -2623,7 +2632,7 @@
         <bundle dependency='true'>mvn:org.reactivestreams/reactive-streams/${reactive-streams-version}</bundle>
         <bundle dependency='true'>mvn:javax.cache/cache-api/${jcache-version}</bundle>
         <bundle dependency='true'>mvn:net.bytebuddy/byte-buddy/${bytebuddy.tesb.version}</bundle>
-        <bundle dependency='true'>mvn:io.projectreactor/reactor-core/${reactor-version}</bundle>
+        <bundle dependency='true'>mvn:io.projectreactor/reactor-core/${reactor.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.yaml/snakeyaml/${snakeyaml.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-redis/${upstream.version}</bundle>
     </feature>
@@ -2921,8 +2930,9 @@
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version='${camel-osgi-jackson2.tesb.version}'>jackson</feature>
         <feature version='[4.1,5)'>netty</feature>
+        <bundle dependency='true'>mvn:com.google.code.findbugs/jsr305/${jsr305.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.reactivestreams/reactive-streams/${reactive-streams-version}</bundle>
-        <bundle dependency='true'>mvn:io.projectreactor/reactor-core/${reactor-version}</bundle>
+        <bundle dependency='true'>mvn:io.projectreactor/reactor-core/${reactor.tesb.version}</bundle>
         <bundle dependency='true'>mvn:io.projectreactor.netty/reactor-netty-core/${reactor-netty.tesb.version}</bundle>
         <bundle dependency='true'>mvn:io.projectreactor.netty/reactor-netty-http/${reactor-netty.tesb.version}</bundle>
         <bundle dependency='true'>mvn:io.netty/netty-transport-classes-epoll/${netty.tesb.version}</bundle>
@@ -2932,6 +2942,8 @@
         <bundle dependency='true'>mvn:io.netty/netty-codec-socks/${netty.tesb.version}</bundle>
         <bundle dependency='true'>mvn:io.netty/netty-codec-http/${netty.tesb.version}</bundle>
         <bundle dependency='true'>mvn:io.netty/netty-codec-http2/${netty.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:io.netty.incubator/netty-incubator-codec-native-quic/0.0.73.Final</bundle>
+        <bundle dependency='true'>mvn:io.netty.incubator/netty-incubator-codec-classes-quic/0.0.73.Final</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-stitch/${upstream.version}</bundle>
     </feature>
     <feature name='camel-stomp' version='${upstream.version}' start-level='50'>

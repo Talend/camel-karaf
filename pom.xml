@@ -236,7 +236,8 @@
         <protobuf.tesb.version>3.25.5</protobuf.tesb.version>
         <pulsar.tesb.version>3.3.3</pulsar.tesb.version>
         <quickfixj.tesb.version>2.3.2</quickfixj.tesb.version>
-        <reactor-netty.tesb.version>1.1.28</reactor-netty.tesb.version>
+        <reactor.tesb.version>3.7.8</reactor.tesb.version>
+        <reactor-netty.tesb.version>1.2.8</reactor-netty.tesb.version>
         <slf4j.tesb.version>2.0.17</slf4j.tesb.version>
         <smallrye-fault-tolerance.tesb.version>6.9.0</smallrye-fault-tolerance.tesb.version>
         <snakeyaml.tesb.version>2.4</snakeyaml.tesb.version>
@@ -1011,6 +1012,7 @@
                             <protobuf.tesb.version>${protobuf.tesb.version}</protobuf.tesb.version>
                             <pulsar.tesb.version>${pulsar.tesb.version}</pulsar.tesb.version>
                             <quickfixj.tesb.version>${quickfixj.tesb.version}</quickfixj.tesb.version>
+                            <reactor.tesb.version>${reactor.tesb.version}</reactor.tesb.version>
                             <reactor-netty.tesb.version>${reactor-netty.tesb.version}</reactor-netty.tesb.version>
                             <smallrye-fault-tolerance.tesb.version>${smallrye-fault-tolerance.tesb.version}</smallrye-fault-tolerance.tesb.version>
                             <snakeyaml.tesb.version>${snakeyaml.tesb.version}</snakeyaml.tesb.version>
