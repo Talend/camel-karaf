@@ -38,6 +38,7 @@ org.apache.camel.karaf:camel-debezium-oracle,\
 org.apache.camel.karaf:camel-debezium-postgres,\
 org.apache.camel.karaf:camel-debezium-sqlserver,\
 org.apache.camel.karaf:camel-direct,\
+org.apache.camel.karaf:camel-drill,\
 org.apache.camel.karaf:camel-dynamic-router,\
 org.apache.camel.karaf:camel-file,\
 org.apache.camel.karaf:camel-http,\

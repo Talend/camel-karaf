@@ -88,13 +88,13 @@
     <!-- TODO use Karaf/Camel bom -->
     <properties>
         <upstream.version>4.8.1</upstream.version>
-        <camel-features.tesb.version>4.8.1.20250630</camel-features.tesb.version>
+        <camel-features.tesb.version>4.8.1.20250701</camel-features.tesb.version>
         <camel-support.tesb.version>4.8.1.20250320</camel-support.tesb.version>
         <camel-vm.tesb.version>4.8.1.20250320</camel-vm.tesb.version>
         <camel-activemq.tesb.version>4.8.1.20250320</camel-activemq.tesb.version>
         <camel-activemq6.tesb.version>4.8.1.20250320</camel-activemq6.tesb.version>
         <camel-cxf.tesb.version>4.8.1.20250320</camel-cxf.tesb.version>
-        <camel-cxf-all.tesb.version>4.8.1.20250320</camel-cxf-all.tesb.version>
+        <camel-cxf-all.tesb.version>4.8.1.20250701</camel-cxf-all.tesb.version>
         <camel-cxf-soap.tesb.version>4.8.1.20250320</camel-cxf-soap.tesb.version>
         <camel-cxf-rest.tesb.version>4.8.1.20250320</camel-cxf-rest.tesb.version>
         <camel-spring.tesb.version>4.8.1.20250320</camel-spring.tesb.version>
@@ -117,6 +117,7 @@
         <camel-debezium-postgres.tesb.version>4.8.1.20250320</camel-debezium-postgres.tesb.version>
         <camel-debezium-sqlserver.tesb.version>4.8.1.20250320</camel-debezium-sqlserver.tesb.version>
         <camel-direct.tesb.version>4.8.1.20250320</camel-direct.tesb.version>
+        <camel-drill.tesb.version>4.8.1.20250701</camel-drill.tesb.version>
         <camel-dynamic-router.tesb.version>4.8.1.20250320</camel-dynamic-router.tesb.version>
         <camel-file.tesb.version>4.8.1.20250320</camel-file.tesb.version>
         <camel-http.tesb.version>4.8.1.20250320</camel-http.tesb.version>
@@ -152,23 +153,29 @@
         <camel-management-api.tesb.version>4.8.1.20250320</camel-management-api.tesb.version>
         <!-- <camel-support.tesb.version>4.8.1.20250320</camel-support.tesb.version> -->
 
-        <cxf.tesb.version>4.1.0.1</cxf.tesb.version>
+        <cxf.tesb.version>4.1.0.2</cxf.tesb.version>
         <jetty9.tesb.version>9.4.57.v20241219</jetty9.tesb.version>
         <jetty11.tesb.version>11.0.24</jetty11.tesb.version>
-        <jetty12.tesb.version>12.0.18</jetty12.tesb.version>
+        <jetty12.tesb.version>12.0.22</jetty12.tesb.version>
         <jetty.tesb.version>${jetty12.tesb.version}</jetty.tesb.version>
         <jetty11.tesb.version-range>[11,12)</jetty11.tesb.version-range>
         <jetty12.tesb.version-range>[12,13)</jetty12.tesb.version-range>
         <jetty.tesb.version-range>${jetty12.tesb.version-range}</jetty.tesb.version-range>
         <activemq6.tesb.version>6.1.6</activemq6.tesb.version>
         <activemq-artemis.tesb.version>2.40.0</activemq-artemis.tesb.version>
+        <apache-drill.tesb.version>1.22.0</apache-drill.tesb.version>
+        <asm.tesb.version>9.8</asm.tesb.version>
         <async-http-client.tesb.version>2.12.4</async-http-client.tesb.version>
         <azure-json.tesb.version>1.3.0</azure-json.tesb.version>
         <azure-xml.tesb.version>1.1.0</azure-xml.tesb.version>
         <beanio.tesb.version>3.2.0</beanio.tesb.version>
-        <bouncycastle.tesb.version>1.78.1</bouncycastle.tesb.version>
+        <bouncycastle.tesb.version>1.81</bouncycastle.tesb.version>
+        <bytebuddy.tesb.version>1.17.5</bytebuddy.tesb.version>
         <commons-beanutils.tesb.version>1.11.0</commons-beanutils.tesb.version>
-        <commons-io.tesb.version>2.18.0</commons-io.tesb.version>
+        <commons-codec.tesb.version>1.18.0</commons-codec.tesb.version>
+        <commons-collections4.tesb.version>4.5.0</commons-collections4.tesb.version>
+        <commons-lang3.tesb.version>3.18.0</commons-lang3.tesb.version>
+        <commons-io.tesb.version>2.19.0</commons-io.tesb.version>
         <commons-pool2.tesb.version>2.12.1</commons-pool2.tesb.version>
         <couchbase-client.tesb.version>3.7.9</couchbase-client.tesb.version>
         <curator.tesb.version>5.8.0.tesb1</curator.tesb.version>
@@ -184,10 +191,14 @@
         <google-cloud-storage-version>2.42.0</google-cloud-storage-version>
         <groovy.tesb.version>4.0.25</groovy.tesb.version>
         <hazelcast.tesb.version>5.5.0.tesb1</hazelcast.tesb.version>
+        <httpcore.tesb.version>5.3.4</httpcore.tesb.version>
+        <httpclient.tesb.version>5.5</httpclient.tesb.version>
         <infinispan.tesb.version>15.0.11.Final</infinispan.tesb.version>
         <jackson-asl.tesb.version>1.9.16-TALEND</jackson-asl.tesb.version>
-        <jackson2.tesb.version>2.18.3</jackson2.tesb.version>
+        <jackson2.tesb.version>2.19.0</jackson2.tesb.version>
         <jackrabbit.tesb.version>2.22.1</jackrabbit.tesb.version>
+        <jakarta-el5-api.tesb.version>5.0.1</jakarta-el5-api.tesb.version>
+        <jakarta-validation-api.tesb.version>3.1.1</jakarta-validation-api.tesb.version>
         <jaxb3-istack.tesb.version>4.0.1</jaxb3-istack.tesb.version>
         <jaxb3-fastinfoset.tesb.version>2.0.0</jaxb3-fastinfoset.tesb.version>
         <jaxb3-staxex.tesb.version>2.0.1</jaxb3-staxex.tesb.version>
@@ -196,39 +207,46 @@
         <jaxb-fastinfoset.tesb.version>2.1.1</jaxb-fastinfoset.tesb.version>
         <jaxb-staxex.tesb.version>2.1.0</jaxb-staxex.tesb.version>
         <jaxb-dtd-parser.tesb.version>1.5.1</jaxb-dtd-parser.tesb.version>
+        <jboss-logging.tesb.version>3.6.1.Final</jboss-logging.tesb.version>
         <jna.tesb.version>5.14.0</jna.tesb.version>
         <jolokia.tesb.version>2.2.8</jolokia.tesb.version>
         <jooq.tesb.version>3.19.14</jooq.tesb.version>
         <json-smart.tesb.version>2.5.2</json-smart.tesb.version>
         <json2avro.tesb.version>0.2.15</json2avro.tesb.version>
+        <jsoup.tesb.version>1.20.1</jsoup.tesb.version>
         <jsr305.tesb.version>3.0.2.tesb1</jsr305.tesb.version>
         <jte.tesb.version>3.1.16</jte.tesb.version>
         <jython-standalone.tesb.version>${jython-version}</jython-standalone.tesb.version>
         <kafka.tesb.version>3.8.1</kafka.tesb.version>
         <kafka-bundle.tesb.version>3.8.1-tesb1</kafka-bundle.tesb.version>
-        <kudu.tesb.version>1.17.1</kudu.tesb.version>
+        <kudu.tesb.version>1.18.0</kudu.tesb.version>
         <logback.tesb.version>1.5.18</logback.tesb.version>
         <metrics.tesb.version>4.2.30</metrics.tesb.version>
         <micrometer.tesb.version>1.13.11</micrometer.tesb.version>
         <micrometer-tracing.tesb.version>1.3.9</micrometer-tracing.tesb.version>
         <mina.tesb.version>2.2.4</mina.tesb.version>
         <netty.tesb.version>4.1.119.Final</netty.tesb.version>
+        <nimbus-jose-jwt.tesb.version>10.4</nimbus-jose-jwt.tesb.version>
+        <oauth2-oidc-sdk.tesb.version>11.26</oauth2-oidc-sdk.tesb.version>
         <paranamer.tesb.version>2.8</paranamer.tesb.version>
         <parquet-avro.tesb.version>1.15.2</parquet-avro.tesb.version>
+        <pax-web.tesb.version>11.0.0</pax-web.tesb.version>
         <pgjdbc-driver.tesb.version>42.7.7</pgjdbc-driver.tesb.version>
         <pooled-jms.tesb.version>3.1.7</pooled-jms.tesb.version>
         <protobuf.tesb.version>3.25.5</protobuf.tesb.version>
         <pulsar.tesb.version>3.3.3</pulsar.tesb.version>
         <quickfixj.tesb.version>2.3.2</quickfixj.tesb.version>
-        <reactor-netty.tesb.version>1.1.28</reactor-netty.tesb.version>
+        <reactor.tesb.version>3.7.8</reactor.tesb.version>
+        <reactor-netty.tesb.version>1.2.8</reactor-netty.tesb.version>
         <slf4j.tesb.version>2.0.17</slf4j.tesb.version>
         <smallrye-fault-tolerance.tesb.version>6.9.0</smallrye-fault-tolerance.tesb.version>
-        <spring.tesb.version>6.1.18</spring.tesb.version>
+        <snakeyaml.tesb.version>2.4</snakeyaml.tesb.version>
+        <spring.tesb.version>6.1.21</spring.tesb.version>
         <spring-batch.tesb.version>5.1.3</spring-batch.tesb.version>
         <spring-data-redis.tesb.version>3.3.10</spring-data-redis.tesb.version>
         <spring-ldap.tesb.version>3.2.11</spring-ldap.tesb.version>
         <spring-rabbit.tesb.version>3.2.5</spring-rabbit.tesb.version>
-        <spring-security.tesb.version>6.3.8</spring-security.tesb.version>
+        <spring-security.tesb.version>6.3.10</spring-security.tesb.version>
         <spring-ws.tesb.version>4.0.12</spring-ws.tesb.version>
         <squareup-okio.tesb.version>1.17.6</squareup-okio.tesb.version>
         <stax2-api.tesb.version>4.2.2</stax2-api.tesb.version>
@@ -240,7 +258,8 @@
         <zookeeper-server.tesb.version>3.9.3.jetty12.1</zookeeper-server.tesb.version>
         <camel-osgi-cxf.tesb.version>[4.1,4.2)</camel-osgi-cxf.tesb.version>
         <camel-osgi-jetty.tesb.version>[12,13)</camel-osgi-jetty.tesb.version>
-        <camel-osgi-jackson2.tesb.version>[2.18,2.19)</camel-osgi-jackson2.tesb.version>
+        <camel-osgi-jackson2.tesb.version>[2.18,2.20)</camel-osgi-jackson2.tesb.version>
+        <camel-osgi-jakarta-annotation.tesb.version>[3,4)</camel-osgi-jakarta-annotation.tesb.version>
 
         <jdk-version>17</jdk-version>
         <maven.compiler.source>${jdk-version}</maven.compiler.source>
@@ -316,8 +335,8 @@
         <consul-client-version>1.4.1</consul-client-version>
         <couchbase-client-version>3.7.2</couchbase-client-version>
         <curator-version>5.7.0</curator-version>
-        <cxf-version>4.1.0.1</cxf-version>
-        <cxf-codegen-plugin-version>4.1.0.1</cxf-codegen-plugin-version>
+        <cxf-version>4.1.0.2</cxf-version>
+        <cxf-codegen-plugin-version>4.1.0.2</cxf-codegen-plugin-version>
         <cxf-xjc-plugin-version>4.1.0</cxf-xjc-plugin-version>
         <cxf-xjc-utils-version>4.1.0</cxf-xjc-utils-version>
         <datasonnet-mapper-version>2.5.2-jakarta4</datasonnet-mapper-version>
@@ -738,7 +757,7 @@
         <servicemix-spring-jms-version>6.1.6</servicemix-spring-jms-version>
         <slf4j-version>2.0.13</slf4j-version>
         <spring-amqp-version>3.1.7</spring-amqp-version>
-        <tesb-pax-web-api-version>9.99.0</tesb-pax-web-api-version>
+        <tesb-pax-web-api-version>11.0.0</tesb-pax-web-api-version>
 
         <!-- Plugin versions -->
         <maven-antrun-plugin-version>3.1.0</maven-antrun-plugin-version>
@@ -875,6 +894,7 @@
                             <camel-debezium-postgres.tesb.version>${camel-debezium-postgres.tesb.version}</camel-debezium-postgres.tesb.version>
                             <camel-debezium-sqlserver.tesb.version>${camel-debezium-sqlserver.tesb.version}</camel-debezium-sqlserver.tesb.version>
                             <camel-direct.tesb.version>${camel-direct.tesb.version}</camel-direct.tesb.version>
+                            <camel-drill.tesb.version>${camel-drill.tesb.version}</camel-drill.tesb.version>
                             <camel-dynamic-router.tesb.version>${camel-dynamic-router.tesb.version}</camel-dynamic-router.tesb.version>
                             <camel-file.tesb.version>${camel-file.tesb.version}</camel-file.tesb.version>
                             <camel-http.tesb.version>${camel-http.tesb.version}</camel-http.tesb.version>
@@ -919,13 +939,19 @@
                             <jetty.tesb.version-range>${jetty.tesb.version-range}</jetty.tesb.version-range>
                             <activemq6.tesb.version>${activemq6.tesb.version}</activemq6.tesb.version>
                             <activemq-artemis.tesb.version>${activemq-artemis.tesb.version}</activemq-artemis.tesb.version>
+                            <apache-drill.tesb.version>${apache-drill.tesb.version>}</apache-drill.tesb.version>
+                            <asm.tesb.version>${asm.tesb.version}</asm.tesb.version>
                             <async-http-client.tesb.version>${async-http-client.tesb.version}</async-http-client.tesb.version>
                             <azure-json.tesb.version>${azure-json.tesb.version}</azure-json.tesb.version>
                             <azure-xml.tesb.version>${azure-xml.tesb.version}</azure-xml.tesb.version>
                             <beanio.tesb.version>${beanio.tesb.version}</beanio.tesb.version>
                             <bouncycastle.tesb.version>${bouncycastle.tesb.version}</bouncycastle.tesb.version>
+                            <bytebuddy.tesb.version>${bytebuddy.tesb.version}</bytebuddy.tesb.version>
                             <commons-beanutils.tesb.version>${commons-beanutils.tesb.version}</commons-beanutils.tesb.version>
+                            <commons-codec.tesb.version>${commons-codec.tesb.version}</commons-codec.tesb.version>
+                            <commons-collections4.tesb.version>${commons-collections4.tesb.version}</commons-collections4.tesb.version>
                             <commons-io.tesb.version>${commons-io.tesb.version}</commons-io.tesb.version>
+                            <commons-lang3.tesb.version>${commons-lang3.tesb.version}</commons-lang3.tesb.version>
                             <commons-pool2.tesb.version>${commons-pool2.tesb.version}</commons-pool2.tesb.version>
                             <couchbase-client.tesb.version>${couchbase-client.tesb.version}</couchbase-client.tesb.version>
                             <curator.tesb.version>${curator.tesb.version}</curator.tesb.version>
@@ -941,10 +967,14 @@
                             <google-cloud-storage-version>${google-cloud-storage-version}</google-cloud-storage-version>
                             <groovy.tesb.version>${groovy.tesb.version}</groovy.tesb.version>
                             <hazelcast.tesb.version>${hazelcast.tesb.version}</hazelcast.tesb.version>
+                            <httpcore.tesb.version>${httpcore.tesb.version}</httpcore.tesb.version>
+                            <httpclient.tesb.version>${httpclient.tesb.version}</httpclient.tesb.version>
                             <infinispan.tesb.version>${infinispan.tesb.version}</infinispan.tesb.version>
                             <jackson-asl.tesb.version>${jackson-asl.tesb.version}</jackson-asl.tesb.version>
                             <jackson2.tesb.version>${jackson2.tesb.version}</jackson2.tesb.version>
                             <jackrabbit.tesb.version>${jackrabbit.tesb.version}</jackrabbit.tesb.version>
+                            <jakarta-el5-api.tesb.version>${jakarta-el5-api.tesb.version}</jakarta-el5-api.tesb.version>
+                            <jakarta-validation-api.tesb.version>${jakarta-validation-api.tesb.version}</jakarta-validation-api.tesb.version>
                             <jaxb3-istack.tesb.version>${jaxb3-istack.tesb.version}</jaxb3-istack.tesb.version>
                             <jaxb3-fastinfoset.tesb.version>${jaxb3-fastinfoset.tesb.version}</jaxb3-fastinfoset.tesb.version>
                             <jaxb3-staxex.tesb.version>${jaxb3-staxex.tesb.version}</jaxb3-staxex.tesb.version>
@@ -953,11 +983,13 @@
                             <jaxb-fastinfoset.tesb.version>${jaxb-fastinfoset.tesb.version}</jaxb-fastinfoset.tesb.version>
                             <jaxb-staxex.tesb.version>${jaxb-staxex.tesb.version}</jaxb-staxex.tesb.version>
                             <jaxb-dtd-parser.tesb.version>${jaxb-dtd-parser.tesb.version}</jaxb-dtd-parser.tesb.version>
+                            <jboss-logging.tesb.version>${jboss-logging.tesb.version}</jboss-logging.tesb.version>
                             <jna.tesb.version>${jna.tesb.version}</jna.tesb.version>
                             <jolokia.tesb.version>${jolokia.tesb.version}</jolokia.tesb.version>
                             <jooq.tesb.version>${jooq.tesb.version}</jooq.tesb.version>
                             <json-smart.tesb.version>${json-smart.tesb.version}</json-smart.tesb.version>
                             <json2avro.tesb.version>${json2avro.tesb.version}</json2avro.tesb.version>
+                            <jsoup.tesb.version>${jsoup.tesb.version}</jsoup.tesb.version>
                             <jsr305.tesb.version>${jsr305.tesb.version}</jsr305.tesb.version>
                             <jte.tesb.version>${jte.tesb.version}</jte.tesb.version>
                             <jython-standalone.tesb.version>${jython-standalone.tesb.version}</jython-standalone.tesb.version>
@@ -970,15 +1002,20 @@
                             <micrometer-tracing.tesb.version>${micrometer-tracing.tesb.version}</micrometer-tracing.tesb.version>
                             <mina.tesb.version>${mina.tesb.version}</mina.tesb.version>
                             <netty.tesb.version>${netty.tesb.version}</netty.tesb.version>
+                            <nimbus-jose-jwt.tesb.version>${nimbus-jose-jwt.tesb.version}</nimbus-jose-jwt.tesb.version>
+                            <oauth2-oidc-sdk.tesb.version>${oauth2-oidc-sdk.tesb.version}</oauth2-oidc-sdk.tesb.version>
                             <paranamer.tesb.version>${paranamer.tesb.version}</paranamer.tesb.version>
                             <parquet-avro.tesb.version>${parquet-avro.tesb.version}</parquet-avro.tesb.version>
+                            <pax-web.tesb.version>${pax-web.tesb.version}</pax-web.tesb.version>
                             <pgjdbc-driver.tesb.version>${pgjdbc-driver.tesb.version}</pgjdbc-driver.tesb.version>
                             <pooled-jms.tesb.version>${pooled-jms.tesb.version}</pooled-jms.tesb.version>
                             <protobuf.tesb.version>${protobuf.tesb.version}</protobuf.tesb.version>
                             <pulsar.tesb.version>${pulsar.tesb.version}</pulsar.tesb.version>
                             <quickfixj.tesb.version>${quickfixj.tesb.version}</quickfixj.tesb.version>
+                            <reactor.tesb.version>${reactor.tesb.version}</reactor.tesb.version>
                             <reactor-netty.tesb.version>${reactor-netty.tesb.version}</reactor-netty.tesb.version>
                             <smallrye-fault-tolerance.tesb.version>${smallrye-fault-tolerance.tesb.version}</smallrye-fault-tolerance.tesb.version>
+                            <snakeyaml.tesb.version>${snakeyaml.tesb.version}</snakeyaml.tesb.version>
                             <spring.tesb.version>${spring.tesb.version}</spring.tesb.version>
                             <spring-batch.tesb.version>${spring-batch.tesb.version}</spring-batch.tesb.version>
                             <spring-data-redis.tesb.version>${spring-data-redis.tesb.version}</spring-data-redis.tesb.version>
