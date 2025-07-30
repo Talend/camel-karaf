@@ -143,14 +143,14 @@
         <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson216-version}</bundle>
     </feature>
 
-    <feature name="jetty" version="${jetty11.tesb.version}">
+    <!-- <feature name="jetty" version="${jetty11.tesb.version}">
         <feature version="[5,6)">jakarta-servlet</feature>
         <bundle dependency="true">mvn:org.eclipse.jetty/jetty-http/${jetty11.tesb.version}</bundle>
         <bundle dependency="true">mvn:org.eclipse.jetty/jetty-io/${jetty11.tesb.version}</bundle>
         <bundle dependency="true">mvn:org.eclipse.jetty/jetty-server/${jetty11.tesb.version}</bundle>
         <bundle dependency="true">mvn:org.eclipse.jetty/jetty-util/${jetty11.tesb.version}</bundle>
         <bundle dependency="true">mvn:org.eclipse.jetty/jetty-security/${jetty11.tesb.version}</bundle>
-    </feature>
+    </feature> -->
 
     <feature name="jetty" version="${jetty12.tesb.version}">
         <feature version="[6,7)">jakarta-servlet</feature>
