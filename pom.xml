@@ -156,7 +156,7 @@
         <cxf.tesb.version>4.1.0.2</cxf.tesb.version>
         <jetty9.tesb.version>9.4.57.v20241219</jetty9.tesb.version>
         <jetty11.tesb.version>11.0.24</jetty11.tesb.version>
-        <jetty12.tesb.version>12.0.22</jetty12.tesb.version>
+        <jetty12.tesb.version>12.0.23</jetty12.tesb.version>
         <jetty.tesb.version>${jetty12.tesb.version}</jetty.tesb.version>
         <jetty11.tesb.version-range>[11,12)</jetty11.tesb.version-range>
         <jetty12.tesb.version-range>[12,13)</jetty12.tesb.version-range>
@@ -170,12 +170,13 @@
         <azure-xml.tesb.version>1.1.0</azure-xml.tesb.version>
         <beanio.tesb.version>3.2.0</beanio.tesb.version>
         <bouncycastle.tesb.version>1.81</bouncycastle.tesb.version>
-        <bytebuddy.tesb.version>1.17.5</bytebuddy.tesb.version>
+        <bytebuddy.tesb.version>1.17.6</bytebuddy.tesb.version>
         <commons-beanutils.tesb.version>1.11.0</commons-beanutils.tesb.version>
-        <commons-codec.tesb.version>1.18.0</commons-codec.tesb.version>
+        <commons-codec.tesb.version>1.19.0</commons-codec.tesb.version>
         <commons-collections4.tesb.version>4.5.0</commons-collections4.tesb.version>
+        <commons-compress.tesb.version>1.28.0</commons-compress.tesb.version>
         <commons-lang3.tesb.version>3.18.0</commons-lang3.tesb.version>
-        <commons-io.tesb.version>2.19.0</commons-io.tesb.version>
+        <commons-io.tesb.version>2.20.0</commons-io.tesb.version>
         <commons-pool2.tesb.version>2.12.1</commons-pool2.tesb.version>
         <couchbase-client.tesb.version>3.7.9</couchbase-client.tesb.version>
         <curator.tesb.version>5.8.0.tesb1</curator.tesb.version>
@@ -195,7 +196,7 @@
         <httpclient.tesb.version>5.5</httpclient.tesb.version>
         <infinispan.tesb.version>15.0.11.Final</infinispan.tesb.version>
         <jackson-asl.tesb.version>1.9.16-TALEND</jackson-asl.tesb.version>
-        <jackson2.tesb.version>2.19.0</jackson2.tesb.version>
+        <jackson2.tesb.version>2.19.2</jackson2.tesb.version>
         <jackrabbit.tesb.version>2.22.1</jackrabbit.tesb.version>
         <jakarta-el5-api.tesb.version>5.0.1</jakarta-el5-api.tesb.version>
         <jakarta-validation-api.tesb.version>3.1.1</jakarta-validation-api.tesb.version>
@@ -213,7 +214,7 @@
         <jooq.tesb.version>3.19.14</jooq.tesb.version>
         <json-smart.tesb.version>2.5.2</json-smart.tesb.version>
         <json2avro.tesb.version>0.2.15</json2avro.tesb.version>
-        <jsoup.tesb.version>1.20.1</jsoup.tesb.version>
+        <jsoup.tesb.version>1.21.1</jsoup.tesb.version>
         <jsr305.tesb.version>3.0.2.tesb1</jsr305.tesb.version>
         <jte.tesb.version>3.1.16</jte.tesb.version>
         <jython-standalone.tesb.version>${jython-version}</jython-standalone.tesb.version>
@@ -230,7 +231,7 @@
         <oauth2-oidc-sdk.tesb.version>11.26</oauth2-oidc-sdk.tesb.version>
         <paranamer.tesb.version>2.8</paranamer.tesb.version>
         <parquet-avro.tesb.version>1.15.2</parquet-avro.tesb.version>
-        <pax-web.tesb.version>11.0.0</pax-web.tesb.version>
+        <pax-web.tesb.version>11.0.1</pax-web.tesb.version>
         <pgjdbc-driver.tesb.version>42.7.7</pgjdbc-driver.tesb.version>
         <pooled-jms.tesb.version>3.1.7</pooled-jms.tesb.version>
         <protobuf.tesb.version>3.25.5</protobuf.tesb.version>
@@ -757,7 +758,7 @@
         <servicemix-spring-jms-version>6.1.6</servicemix-spring-jms-version>
         <slf4j-version>2.0.13</slf4j-version>
         <spring-amqp-version>3.1.7</spring-amqp-version>
-        <tesb-pax-web-api-version>11.0.0</tesb-pax-web-api-version>
+        <tesb-pax-web-api-version>11.0.1</tesb-pax-web-api-version>
 
         <!-- Plugin versions -->
         <maven-antrun-plugin-version>3.1.0</maven-antrun-plugin-version>
@@ -950,6 +951,7 @@
                             <commons-beanutils.tesb.version>${commons-beanutils.tesb.version}</commons-beanutils.tesb.version>
                             <commons-codec.tesb.version>${commons-codec.tesb.version}</commons-codec.tesb.version>
                             <commons-collections4.tesb.version>${commons-collections4.tesb.version}</commons-collections4.tesb.version>
+                            <commons-compress.tesb.version>${commons-compress.tesb.version}</commons-compress.tesb.version>
                             <commons-io.tesb.version>${commons-io.tesb.version}</commons-io.tesb.version>
                             <commons-lang3.tesb.version>${commons-lang3.tesb.version}</commons-lang3.tesb.version>
                             <commons-pool2.tesb.version>${commons-pool2.tesb.version}</commons-pool2.tesb.version>
