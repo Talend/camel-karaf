@@ -163,6 +163,7 @@
         <jetty.tesb.version-range>${jetty12.tesb.version-range}</jetty.tesb.version-range>
         <activemq6.tesb.version>6.1.6</activemq6.tesb.version>
         <activemq-artemis.tesb.version>2.40.0</activemq-artemis.tesb.version>
+        <angus-mail.tesb.version>2.0.4</angus-mail.tesb.version>
         <apache-drill.tesb.version>1.22.0</apache-drill.tesb.version>
         <asm.tesb.version>9.8</asm.tesb.version>
         <async-http-client.tesb.version>2.12.4</async-http-client.tesb.version>
@@ -942,6 +943,7 @@
                             <jetty.tesb.version-range>${jetty.tesb.version-range}</jetty.tesb.version-range>
                             <activemq6.tesb.version>${activemq6.tesb.version}</activemq6.tesb.version>
                             <activemq-artemis.tesb.version>${activemq-artemis.tesb.version}</activemq-artemis.tesb.version>
+                            <angus-mail.tesb.version>${angus-mail.tesb.version}</angus-mail.tesb.version>
                             <apache-drill.tesb.version>${apache-drill.tesb.version>}</apache-drill.tesb.version>
                             <asm.tesb.version>${asm.tesb.version}</asm.tesb.version>
                             <async-http-client.tesb.version>${async-http-client.tesb.version}</async-http-client.tesb.version>
