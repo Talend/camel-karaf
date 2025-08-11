@@ -121,7 +121,7 @@
 
     <feature name="jakarta-servlet" version="${jakarta-servlet5-api-version}">
         <bundle dependency="true">mvn:jakarta.servlet/jakarta.servlet-api/${jakarta-servlet-api-version}</bundle>
-        <bundle dependency="true">mvn:org.ops4j.pax.web/pax-web-compatibility-servlet/11.0.0</bundle>
+        <bundle dependency="true">mvn:org.ops4j.pax.web/pax-web-compatibility-servlet/${pax-web.tesb.version}</bundle>
     </feature>
 
     <feature name="jakarta-servlet" version="${jakarta-servlet-api-version}">
@@ -471,7 +471,7 @@
         <bundle dependency='true'>mvn:org.eclipse.jetty/jetty-util/${jetty9.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.eclipse.jetty/jetty-util-ajax/${jetty9.tesb.version}</bundle>
         <bundle dependency='true'>mvn:jakarta.servlet/jakarta.servlet-api/4.0.4</bundle>
-        <bundle dependency="true">mvn:org.ops4j.pax.web/pax-web-compatibility-servlet31/11.0.0</bundle>
+        <bundle dependency="true">mvn:org.ops4j.pax.web/pax-web-compatibility-servlet31/${pax-web.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.apache.avro/avro-ipc/${avro-ipc-netty-version}</bundle>
         <!-- Use the wrap protocol to import the same version of javax.servlet-api as the rest-->
         <bundle dependency='true'>wrap:mvn:org.apache.avro/avro-ipc-jetty/${avro-ipc-jetty-version}$overwrite=merge&amp;Import-Package=javax.servlet*;version:="[3.1,4)",*</bundle>
@@ -556,7 +556,7 @@
     <feature name='camel-aws2-eventbridge' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version="${aws-java-sdk2-version}">awssdk</feature>
-        <bundle dependency='true'>mvn:commons-io/commons-io/${auto-detect-version}</bundle>
+        <bundle dependency='true'>mvn:commons-io/commons-io/${commons-io.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/eventbridge/${aws-java-sdk2-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-aws2-eventbridge/${upstream.version}</bundle>
     </feature>
@@ -788,7 +788,7 @@
         <bundle dependency='true'>mvn:org.glassfish.expressly/expressly/${auto-detect-version}</bundle>
         <!-- <bundle dependency='true'>mvn:jakarta.el/jakarta.el-api/${jakarta-el5-api.tesb.version}</bundle> -->
         <bundle dependency='true'>mvn:jakarta.el/jakarta.el-api/${jakarta-el-api-version}</bundle>
-        <bundle dependency='true'>mvn:org.ops4j.pax.web/pax-web-compatibility-el/11.0.0</bundle>
+        <bundle dependency='true'>mvn:org.ops4j.pax.web/pax-web-compatibility-el/${pax-web.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-bean-validator/${upstream.version}</bundle>
     </feature>
     <feature name='camel-barcode' version='${upstream.version}' start-level='50'>
