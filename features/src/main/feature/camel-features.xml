@@ -2249,7 +2249,10 @@
         <bundle dependency='true'>wrap:mvn:io.minio/minio/${auto-detect-version}</bundle>
         <bundle dependency='true'>mvn:commons-io/commons-io/${commons-io.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.apache.commons/commons-compress/${commons-compress.tesb.version}</bundle>
-        <bundle dependency='true'>wrap:mvn:com.squareup.okhttp3/okhttp/${auto-detect-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:com.squareup.okhttp3/okhttp/${auto-detect-version}$overwrite=merge&amp;Bundle-Name=Wrap%20of%20okhttp&amp;Bundle-SymbolicName=wrap_com_squareup_okhttp3&amp;Import-Package=android*;resolution:=optional,dalvik*;resolution:=optional,javax*,kotlin*,okhttp3*,okio*;version='[3,4)',org*;resolution:=optional,sun*;resolution:=optional</bundle>
+        <bundle dependency='true'>wrap:mvn:org.jetbrains.kotlin/kotlin-stdlib/${auto-detect-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:com.squareup.okio/okio/${auto-detect-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:com.squareup.okio/okio-jvm/${auto-detect-version}$overwrite=merge&amp;Bundle-Name=Wrap%20of%20Okio%20Jvm&amp;Bundle-SymbolicName=wrap_com_squareup_okio_jvm&amp;Export-Package=okio;version=${auto-detect-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-minio/${camel-minio.tesb.version}</bundle>
     </feature>
     <feature name='camel-mllp' version='${upstream.version}' start-level='50'>
