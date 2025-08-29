@@ -2050,7 +2050,7 @@
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version='${camel-osgi-jackson2.tesb.version}'>jackson</feature>
         <bundle dependency='true'>mvn:org.reactivestreams/reactive-streams/${reactive-streams-version}</bundle>
-        <bundle dependency='true'>mvn:io.projectreactor/reactor-core/${reactor.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:io.projectreactor/reactor-core/${reactor-version}</bundle>
         <bundle dependency='true'>wrap:mvn:dev.langchain4j/langchain4j-core/${langchain4j-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-langchain4j-tools/${camel-langchain4j-tools.tesb.version}</bundle>
     </feature>
@@ -2213,7 +2213,7 @@
     </feature>
     <feature name='camel-milvus' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
-        <bundle dependency='true'>wrap:mvn:dev.langchain4j/langchain4j-core/${langchain4j.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:dev.langchain4j/langchain4j-core/${langchain4j-version}</bundle>
         <bundle dependency='true'>wrap:mvn:io.milvus/milvus-sdk-java/${milvus-client-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-milvus/${upstream.version}</bundle>
     </feature>
@@ -2459,7 +2459,7 @@
     </feature>
     <feature name='camel-pinecone' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
-        <bundle dependency='true'>wrap:mvn:dev.langchain4j/langchain4j-core/${langchain4j.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:dev.langchain4j/langchain4j-core/${langchain4j-version}</bundle>
         <bundle dependency='true'>wrap:mvn:io.pinecone/pinecone-client/${pinecone-client-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-pinecone/${upstream.version}</bundle>
     </feature>
@@ -2547,7 +2547,7 @@
     <feature name='camel-qdrant' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version="[33,34)">guava</feature>
-        <bundle dependency='true'>wrap:mvn:dev.langchain4j/langchain4j-core/${langchain4j.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:dev.langchain4j/langchain4j-core/${langchain4j-version}</bundle>
         <bundle dependency='true'>wrap:mvn:io.qdrant/client/${qdrant-client-version}</bundle>
         <bundle dependency='true'>wrap:mvn:io.grpc/grpc-api/${grpc-version}</bundle>
         <bundle dependency='true'>wrap:mvn:io.grpc/grpc-protobuf/${grpc-version}</bundle>
