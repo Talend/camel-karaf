@@ -198,7 +198,7 @@
         <infinispan.tesb.version>15.0.11.Final</infinispan.tesb.version>
         <jackson-asl.tesb.version>1.9.16-TALEND</jackson-asl.tesb.version>
         <jackson2.tesb.version>2.19.2</jackson2.tesb.version>
-        <jackrabbit.tesb.version>2.22.1</jackrabbit.tesb.version>
+        <jackrabbit.tesb.version>2.22.2</jackrabbit.tesb.version>
         <jakarta-el5-api.tesb.version>5.0.1</jakarta-el5-api.tesb.version>
         <jakarta-json-bind-api.tesb.version>3.0.1.tesb1</jakarta-json-bind-api.tesb.version>
         <jakarta-validation-api.tesb.version>3.1.1</jakarta-validation-api.tesb.version>
