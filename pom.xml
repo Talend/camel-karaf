@@ -230,7 +230,7 @@
         <micrometer.tesb.version>1.13.11</micrometer.tesb.version>
         <micrometer-tracing.tesb.version>1.3.9</micrometer-tracing.tesb.version>
         <mina.tesb.version>2.2.4</mina.tesb.version>
-        <netty.tesb.version>4.1.119.Final</netty.tesb.version>
+        <netty.tesb.version>4.1.127.Final</netty.tesb.version>
         <nimbus-jose-jwt.tesb.version>10.4</nimbus-jose-jwt.tesb.version>
         <oauth2-oidc-sdk.tesb.version>11.26</oauth2-oidc-sdk.tesb.version>
         <paranamer.tesb.version>2.8</paranamer.tesb.version>
@@ -246,7 +246,7 @@
         <slf4j.tesb.version>2.0.17</slf4j.tesb.version>
         <smallrye-fault-tolerance.tesb.version>6.9.0</smallrye-fault-tolerance.tesb.version>
         <snakeyaml.tesb.version>2.4</snakeyaml.tesb.version>
-        <spring.tesb.version>6.1.21</spring.tesb.version>
+        <spring.tesb.version>6.2.10</spring.tesb.version>
         <spring-batch.tesb.version>5.1.3</spring-batch.tesb.version>
         <spring-data-redis.tesb.version>3.3.10</spring-data-redis.tesb.version>
         <spring-ldap.tesb.version>3.2.11</spring-ldap.tesb.version>
