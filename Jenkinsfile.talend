@@ -30,6 +30,7 @@ org.apache.camel.karaf:camel-cxf-all,\
 org.apache.camel.karaf:camel-cxf-blueprint,\
 org.apache.camel.karaf:camel-cxf-spring-all,\
 org.apache.camel.karaf:camel-cxf-transport-blueprint,\
+org.apache.camel.karaf:camel-cxf-transport-jetty,\
 org.apache.camel.karaf:camel-debezium-common,\
 org.apache.camel.karaf:camel-debezium-db2,\
 org.apache.camel.karaf:camel-debezium-mongodb,\

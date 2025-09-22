@@ -23,15 +23,17 @@
     <parent>
         <groupId>org.apache.camel.karaf</groupId>
         <artifactId>camel-cxf-parent</artifactId>
-        <version>4.10.6-SNAPSHOT</version>
+        <version>4.8.1</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
     <artifactId>camel-cxf-transport-jetty</artifactId>
     <packaging>bundle</packaging>
-    <name>Apache Camel :: Karaf :: Components :: CXF ::  Transport Jetty</name>
+    <name>Apache Camel :: Karaf :: Components :: CXF :: Transport Jetty</name>
+    <version>${revision}</version>
 
     <properties>
+        <revision>${camel-cxf.tesb.version}</revision>
         <camel.osgi.export>
             org.apache.camel.component.cxf.transport.jetty*;version=${camel-version},
             org.apache.cxf.transport.http_jetty*;version=${cxf-version},
@@ -39,7 +41,7 @@
         </camel.osgi.export>
         <camel.osgi.activator>org.apache.camel.component.cxf.transport.jetty.osgi.HTTPJettyTransportActivator</camel.osgi.activator>
         <camel.osgi.import>
-            jakarta.annotation;version="${camel-osgi-jakarta-annotation2-version}",
+            jakarta.annotation;version="${camel-osgi-jakarta-annotation-version}",
             jakarta.servlet*;version="${camel-osgi-jakarta-servlet-version}",
             jakarta.xml.bind*;version="${camel-osgi-jakarta-bind-version}",
             javax.management*,
@@ -76,13 +78,13 @@
         <dependency>
             <groupId>org.apache.camel.karaf</groupId>
             <artifactId>camel-cxf-blueprint</artifactId>
-            <version>${project.version}</version>
+            <version>${camel-cxf.tesb.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.camel.karaf</groupId>
             <artifactId>camel-cxf-all</artifactId>
-            <version>${project.version}</version>
+            <version>${camel-cxf-all.tesb.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
