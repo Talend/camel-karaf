@@ -1141,7 +1141,7 @@
         <bundle dependency='true'>mvn:io.dropwizard.metrics/metrics-core/${metrics.tesb.version}</bundle>
         <bundle dependency='true'>mvn:io.dropwizard.metrics/metrics-jmx/${metrics.tesb.version}</bundle>
         <bundle dependency='true'>mvn:io.dropwizard.metrics/metrics-jvm/${metrics.tesb.version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.commons/commons-text/${commons-text-version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.commons/commons-text/${commons-text.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.carrotsearch/hppc/0.10.0</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-drill/${camel-drill.tesb.version}</bundle>
@@ -1229,7 +1229,7 @@
         <feature version="[4,5)">http-client</feature>
         <feature version='[33,34)'>guava</feature>
         <bundle dependency='true'>mvn:com.fasterxml.jackson.datatype/jackson-datatype-jsr310/${jackson2.tesb.version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.commons/commons-text/${commons-text-version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.commons/commons-text/${commons-text.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3.tesb.version}</bundle>
         <bundle dependency='true'>mvn:commons-io/commons-io/${commons-io.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-api/${auto-detect-version}</bundle>
