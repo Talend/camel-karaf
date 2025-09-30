@@ -179,6 +179,7 @@
         <commons-lang3.tesb.version>3.18.0</commons-lang3.tesb.version>
         <commons-io.tesb.version>2.20.0</commons-io.tesb.version>
         <commons-pool2.tesb.version>2.12.1</commons-pool2.tesb.version>
+        <commons-text.tesb.version>1.14.0</commons-text.tesb.version>
         <couchbase-client.tesb.version>3.7.9</couchbase-client.tesb.version>
         <curator.tesb.version>5.8.0.tesb1</curator.tesb.version>
         <djl.tesb.version>0.31.1</djl.tesb.version>
@@ -211,7 +212,7 @@
         <jaxb-staxex.tesb.version>2.1.0</jaxb-staxex.tesb.version>
         <jaxb-dtd-parser.tesb.version>1.5.1</jaxb-dtd-parser.tesb.version>
         <jboss-logging.tesb.version>3.6.1.Final</jboss-logging.tesb.version>
-        <jna.tesb.version>5.14.0</jna.tesb.version>
+        <jna.tesb.version>5.17.0</jna.tesb.version>
         <jolokia.tesb.version>2.2.8</jolokia.tesb.version>
         <jooq.tesb.version>3.19.14</jooq.tesb.version>
         <json-smart.tesb.version>2.5.2</json-smart.tesb.version>
@@ -960,6 +961,7 @@
                             <commons-io.tesb.version>${commons-io.tesb.version}</commons-io.tesb.version>
                             <commons-lang3.tesb.version>${commons-lang3.tesb.version}</commons-lang3.tesb.version>
                             <commons-pool2.tesb.version>${commons-pool2.tesb.version}</commons-pool2.tesb.version>
+                            <commons-text.tesb.version>${commons-text.tesb.version}</commons-text.tesb.version>
                             <couchbase-client.tesb.version>${couchbase-client.tesb.version}</couchbase-client.tesb.version>
                             <curator.tesb.version>${curator.tesb.version}</curator.tesb.version>
                             <djl.tesb.version>${djl.tesb.version}</djl.tesb.version>
@@ -1286,5 +1288,30 @@
             </build>
         </profile>
     </profiles>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>talend-public</id>
+            <name>Talend Open Source Public group</name>
+            <url>https://artifacts-oss.talend.com/nexus/content/groups/public</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </pluginRepository>
+        <pluginRepository>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>thirdparty-releases</id>
+            <name>Third party releases</name>
+            <url>https://artifacts-zl.talend.com/nexus/content/repositories/thirdparty-releases</url>
+        </pluginRepository>
+    </pluginRepositories>
 
 </project>
