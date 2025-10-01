@@ -2248,7 +2248,7 @@
     </feature>
     <feature name='camel-minio' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
-        <bundle dependency='true'>wrap:mvn:io.minio/minio/${auto-detect-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.minio/minio/${minio.tesb.version}</bundle>
         <bundle dependency='true'>mvn:commons-io/commons-io/${commons-io.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.apache.commons/commons-compress/${commons-compress.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.squareup.okhttp3/okhttp/${auto-detect-version}</bundle>
