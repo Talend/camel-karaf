@@ -224,6 +224,7 @@
         <kafka.tesb.version>3.8.1</kafka.tesb.version>
         <kafka-bundle.tesb.version>3.8.1-tesb1</kafka-bundle.tesb.version>
         <karaf-framework.tesb.version>4.4.6.20250901</karaf-framework.tesb.version>
+        <kotlin.tesb.version>2.2.20</kotlin.tesb.version>
         <kudu.tesb.version>1.18.0</kudu.tesb.version>
         <langchain4j.tesb.version>0.36.2</langchain4j.tesb.version>
         <logback.tesb.version>1.5.18</logback.tesb.version>
@@ -235,6 +236,8 @@
         <netty.tesb.version>4.1.127.Final</netty.tesb.version>
         <nimbus-jose-jwt.tesb.version>10.4</nimbus-jose-jwt.tesb.version>
         <oauth2-oidc-sdk.tesb.version>11.26</oauth2-oidc-sdk.tesb.version>
+        <okhttp.tesb.version>5.1.0</okhttp.tesb.version>
+        <okio.tesb.version>3.16.0</okio.tesb.version>
         <paranamer.tesb.version>2.8</paranamer.tesb.version>
         <parquet-avro.tesb.version>1.15.2</parquet-avro.tesb.version>
         <pax-web.tesb.version>11.0.1</pax-web.tesb.version>
@@ -1007,6 +1010,7 @@
                             <kafka.tesb.version>${kafka.tesb.version}</kafka.tesb.version>
                             <kafka-bundle.tesb.version>${kafka-bundle.tesb.version}</kafka-bundle.tesb.version>
                             <karaf-framework.tesb.version>${karaf-framework.tesb.version}</karaf-framework.tesb.version>
+                            <kotlin.tesb.version>${kotlin.tesb.version}</kotlin.tesb.version>
                             <kudu.tesb.version>${kudu.tesb.version}</kudu.tesb.version>
                             <langchain4j.tesb.version>${langchain4j.tesb.version}</langchain4j.tesb.version>
                             <logback.tesb.version>${logback.tesb.version}</logback.tesb.version>
@@ -1018,6 +1022,8 @@
                             <netty.tesb.version>${netty.tesb.version}</netty.tesb.version>
                             <nimbus-jose-jwt.tesb.version>${nimbus-jose-jwt.tesb.version}</nimbus-jose-jwt.tesb.version>
                             <oauth2-oidc-sdk.tesb.version>${oauth2-oidc-sdk.tesb.version}</oauth2-oidc-sdk.tesb.version>
+                            <okhttp.tesb.version>${okhttp.tesb.version}</okhttp.tesb.version>
+                            <okio.tesb.version>${okio.tesb.version}</okio.tesb.version>
                             <paranamer.tesb.version>${paranamer.tesb.version}</paranamer.tesb.version>
                             <parquet-avro.tesb.version>${parquet-avro.tesb.version}</parquet-avro.tesb.version>
                             <pax-web.tesb.version>${pax-web.tesb.version}</pax-web.tesb.version>
