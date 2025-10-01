@@ -260,8 +260,8 @@
         <velocity.tesb.version>2.4.1</velocity.tesb.version>
         <wildfly-elytron.tesb.version>2.2.10.Final</wildfly-elytron.tesb.version>
         <woodstox-core.tesb.version>7.1.0</woodstox-core.tesb.version>
-        <zookeeper.tesb.version>3.9.3</zookeeper.tesb.version>
-        <zookeeper-server.tesb.version>3.9.3.jetty12.1</zookeeper-server.tesb.version>
+        <zookeeper.tesb.version>3.9.4</zookeeper.tesb.version>
+        <zookeeper-server.tesb.version>3.9.4.jetty12.1</zookeeper-server.tesb.version>
         <camel-osgi-cxf.tesb.version>[4.1,4.2)</camel-osgi-cxf.tesb.version>
         <camel-osgi-jetty.tesb.version>[12,13)</camel-osgi-jetty.tesb.version>
         <camel-osgi-jackson2.tesb.version>[2.18,2.20)</camel-osgi-jackson2.tesb.version>
