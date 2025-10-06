@@ -54,12 +54,6 @@
             org.osgi.service*,
             org.osgi.util*,
             org.slf4j,
-            org.springframework.beans;resolution:=optional;version="${camel-osgi-spring-version}",
-            org.springframework.beans.factory;resolution:=optional;version="${camel-osgi-spring-version}",
-            org.springframework.beans.factory.config;resolution:=optional;version="${camel-osgi-spring-version}",
-            org.springframework.beans.factory.support;resolution:=optional;version="${camel-osgi-spring-version}",
-            org.springframework.beans.factory.xml;resolution:=optional;version="${camel-osgi-spring-version}",
-            org.springframework.context;resolution:=optional;version="${camel-osgi-spring-version}",
             org.w3c*
         </camel.osgi.import>
         <camel.osgi.export.service>
@@ -136,14 +130,6 @@
                                     <include>org.apache.cxf:cxf-rt-transports-http-jetty</include>
                                 </includes>
                             </artifactSet>
-                            <filters>
-                                <filter>
-                                    <artifact>org.apache.cxf:cxf-rt-transports-http-jetty</artifact>
-                                    <excludes>
-                                        <exclude>META-INF/blueprint.handlers</exclude>
-                                    </excludes>
-                                </filter>
-                            </filters>
                         </configuration>
                     </execution>
                 </executions>
