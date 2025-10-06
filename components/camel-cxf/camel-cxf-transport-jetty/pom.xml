@@ -27,42 +27,54 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>camel-cxf-transport-blueprint</artifactId>
+    <artifactId>camel-cxf-transport-jetty</artifactId>
     <packaging>bundle</packaging>
-    <name>Apache Camel :: Karaf :: Components :: CXF :: Transport Blueprint</name>
+    <name>Apache Camel :: Karaf :: Components :: CXF :: Transport Jetty</name>
     <version>${revision}</version>
 
     <properties>
         <revision>${camel-cxf.tesb.version}</revision>
-        <firstVersion>3.2.0</firstVersion>
         <camel.osgi.export>
-            org.apache.camel.component.cxf.transport.blueprint;version=${upstream.version},
+            org.apache.camel.component.cxf.transport.jetty*;version=${camel-version},
+            org.apache.cxf.transport.http_jetty*;version=${cxf-version},
+            org.apache.cxf.transports.http_jetty*;version=${cxf-version}
         </camel.osgi.export>
-        <camel-osgi-camel-import>
-            org.apache.camel.component.cxf.blueprint.helpers;${camel-osgi-import-camel-version},
-        </camel-osgi-camel-import>
+        <camel.osgi.activator>org.apache.camel.component.cxf.transport.jetty.osgi.HTTPJettyTransportActivator</camel.osgi.activator>
         <camel.osgi.import>
+            jakarta.annotation;version="${camel-osgi-jakarta-annotation-version}",
+            jakarta.servlet*;version="${camel-osgi-jakarta-servlet-version}",
             jakarta.xml.bind*;version="${camel-osgi-jakarta-bind-version}",
-            org.apache.aries.blueprint,
-            org.slf4j
+            javax.management*,
+            javax.net*,
+            javax.xml*,
+            org.apache.aries.blueprint*,
+            org.apache.cxf.*;version="${camel-osgi-cxf-version}",
+            org.eclipse.jetty*;resolution:=optional;version="${jetty-version}",
+            org.osgi.framework*,
+            org.osgi.service*,
+            org.osgi.util*,
+            org.slf4j,
+            org.w3c*
         </camel.osgi.import>
+        <camel.osgi.export.service>
+            org.apache.aries.blueprint.NamespaceHandler;osgi.service.blueprint.namespace="http://cxf.apache.org/transports/http-jetty/configuration"
+        </camel.osgi.export.service>
     </properties>
-    <dependencies>
 
+    <dependencies>
         <dependency>
-            <groupId>org.apache.camel</groupId>
-            <artifactId>camel-cxf-transport</artifactId>
-            <version>${camel-cxf.tesb.version}</version>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-rt-transports-http-jetty</artifactId>
+            <version>${cxf-version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.apache.cxf</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <!-- OSGi, Blueprint -->
-        <dependency>
-            <groupId>org.apache.camel.karaf</groupId>
-            <artifactId>camel-blueprint</artifactId>
-            <version>${upstream.version}</version>
-            <scope>provided</scope>
-            <optional>true</optional>
-        </dependency>
         <dependency>
             <groupId>org.apache.camel.karaf</groupId>
             <artifactId>camel-cxf-blueprint</artifactId>
@@ -74,7 +86,6 @@
             <artifactId>camel-cxf-all</artifactId>
             <version>${camel-cxf-all.tesb.version}</version>
             <scope>provided</scope>
-            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>org.osgi</groupId>
@@ -91,29 +102,34 @@
             <artifactId>org.apache.aries.blueprint.core</artifactId>
             <scope>provided</scope>
         </dependency>
-
     </dependencies>
 
     <build>
+        <resources>
+            <resource>
+                <directory>${project.basedir}/src/main/resources</directory>
+            </resource>
+            <resource>
+                <directory>../../../src/main/resources</directory>
+                <filtering>false</filtering>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>build-helper-maven-plugin</artifactId>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
                 <executions>
                     <execution>
-                        <id>attach-artifacts</id>
                         <phase>package</phase>
                         <goals>
-                            <goal>attach-artifact</goal>
+                            <goal>shade</goal>
                         </goals>
                         <configuration>
-                            <artifacts>
-                                <artifact>
-                                    <file>./src/main/resources/schema/blueprint/camel.xsd</file>
-                                    <classifier>blueprint</classifier>
-                                    <type>xsd</type>
-                                </artifact>
-                            </artifacts>
+                            <artifactSet>
+                                <includes>
+                                    <include>org.apache.cxf:cxf-rt-transports-http-jetty</include>
+                                </includes>
+                            </artifactSet>
                         </configuration>
                     </execution>
                 </executions>

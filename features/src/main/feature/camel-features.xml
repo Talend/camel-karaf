@@ -997,6 +997,12 @@
         <bundle>mvn:org.apache.camel.karaf/camel-cxf-blueprint/${camel-cxf.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-cxf-transport-blueprint/${camel-cxf.tesb.version}</bundle>
     </feature>
+    <feature name='camel-cxf-jetty' version='${upstream.version}' start-level='50'>
+        <feature version="[12,13)">jetty</feature>
+        <feature version='${camel-osgi-version-range}'>camel-cxf</feature>
+        <bundle dependency='true'>mvn:org.eclipse.jetty.ee10/jetty-ee10-servlet/${jetty12.tesb.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-cxf-transport-jetty/${camel-cxf.tesb.version}</bundle>
+    </feature>
     <feature name='camel-cxf-spring' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-cxf</feature>
         <feature version='${camel-osgi-version-range}'>camel-spring</feature>

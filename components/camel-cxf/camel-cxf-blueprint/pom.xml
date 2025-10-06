@@ -81,12 +81,12 @@
         <dependency>
             <groupId>org.apache.camel</groupId>
             <artifactId>camel-cxf-soap</artifactId>
-            <version>${camel-cxf.tesb.version}</version>
+            <version>${camel-cxf-soap.tesb.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.camel</groupId>
             <artifactId>camel-cxf-rest</artifactId>
-            <version>${camel-cxf.tesb.version}</version>
+            <version>${camel-cxf-rest.tesb.version}</version>
         </dependency>
 
         <!-- OSGi, Blueprint -->
