@@ -915,12 +915,11 @@
         <feature version='${camel-osgi-jackson2.tesb.version}'>jackson</feature>
         <feature version='[33,34)'>guava</feature>
         <bundle dependency='true'>wrap:mvn:org.kiwiproject/consul-client/${consul-client-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:com.squareup.okhttp3/okhttp/${consul-okhttp3-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:org.jetbrains.kotlin/kotlin-stdlib/${consul-kotlin-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:com.squareup.okhttp3/okhttp-jvm/${okhttp.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:org.jetbrains.kotlin/kotlin-stdlib/${kotlin.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.squareup.retrofit2/retrofit/${auto-detect-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.squareup.retrofit2/converter-jackson/${auto-detect-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:com.squareup.okio/okio/${consul-okio-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:com.squareup.okio/okio-jvm/${consul-okio-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:com.squareup.okio/okio-jvm/${okio.tesb.version}</bundle>
         <bundle dependency='true'>mvn:com.fasterxml.jackson.datatype/jackson-datatype-jdk8/${jackson2.tesb.version}</bundle>
         <bundle dependency='true'>mvn:com.fasterxml.jackson.datatype/jackson-datatype-guava/${jackson2.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3.tesb.version}</bundle>
@@ -1726,20 +1725,17 @@
         <bundle dependency='true'>wrap:mvn:com.influxdb/influxdb-client-java/${influx-client-java-driver-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.influxdb/influxdb-client-core/${influx-client-java-driver-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.influxdb/influxdb-client-utils/${influx-client-java-driver-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:com.squareup.okhttp3/logging-interceptor/${auto-detect-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:com.squareup.okhttp3/okhttp/${auto-detect-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:com.squareup.okhttp3/logging-interceptor/${okhttp.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:com.squareup.okhttp3/okhttp-jvm/${okhttp.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.squareup.retrofit2/adapter-rxjava3/${auto-detect-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.squareup.retrofit2/converter-scalars/${auto-detect-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.squareup.retrofit2/converter-gson/${auto-detect-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.squareup.retrofit2/retrofit/${auto-detect-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:org.jetbrains.kotlin/kotlin-reflect/${kotlin-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:org.jetbrains.kotlin/kotlin-stdlib/${auto-detect-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:org.jetbrains.kotlin/kotlin-reflect/${kotlin.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:org.jetbrains.kotlin/kotlin-stdlib/${kotlin.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:org.reactivestreams/reactive-streams/${auto-detect-version}</bundle>
         <bundle dependency='true'>wrap:mvn:io.reactivex.rxjava3/rxjava/${auto-detect-version}$overwrite=merge&amp;Export-Package=io.reactivex.rxjava3.internal*,*</bundle>
-        <bundle dependency='true'>wrap:mvn:org.jetbrains.kotlin/kotlin-stdlib-jdk8/${auto-detect-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:org.jetbrains.kotlin/kotlin-stdlib-jdk7/${auto-detect-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:com.squareup.okio/okio/${auto-detect-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:com.squareup.okio/okio-jvm/${auto-detect-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:com.squareup.okio/okio-jvm/${okio.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:org.jetbrains/annotations/${auto-detect-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.code.gson/gson/${gson-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-influxdb2/${upstream.version}</bundle>
@@ -2254,10 +2250,12 @@
     </feature>
     <feature name='camel-minio' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
-        <bundle dependency='true'>wrap:mvn:io.minio/minio/${auto-detect-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.minio/minio/${minio.tesb.version}</bundle>
         <bundle dependency='true'>mvn:commons-io/commons-io/${commons-io.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.apache.commons/commons-compress/${commons-compress.tesb.version}</bundle>
-        <bundle dependency='true'>wrap:mvn:com.squareup.okhttp3/okhttp/${auto-detect-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:com.squareup.okhttp3/okhttp-jvm/${okhttp.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:com.squareup.okio/okio-jvm/${okio.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:org.jetbrains.kotlin/kotlin-stdlib/${kotlin.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-minio/${camel-minio.tesb.version}</bundle>
     </feature>
     <feature name='camel-mllp' version='${upstream.version}' start-level='50'>
