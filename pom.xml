@@ -100,7 +100,7 @@
         <camel-spring.tesb.version>4.8.1.20250320</camel-spring.tesb.version>
         <camel-blueprint.tesb.version>4.8.1.20250320</camel-blueprint.tesb.version>
         <camel-tooling.tesb.version>4.8.1.20250410</camel-tooling.tesb.version>
-        <camel-langchain4j-tools.tesb.version>4.8.1.20250320</camel-langchain4j-tools.tesb.version>
+        <camel-langchain4j-tools.tesb.version>4.8.1.20251016</camel-langchain4j-tools.tesb.version>
         <camel-as2-api.tesb.version>4.8.1.20250320</camel-as2-api.tesb.version>
         <camel-as2.tesb.version>4.8.1.20250320</camel-as2.tesb.version>
         <camel-aws2-kinesis.tesb.version>4.8.1.20250320</camel-aws2-kinesis.tesb.version>
