@@ -2079,7 +2079,6 @@
         <bundle dependency="true">wrap:mvn:dev.langchain4j/langchain4j-mcp/${langchain4j-mcp.tesb.version}</bundle>
         <bundle dependency="true">wrap:mvn:com.squareup.okhttp3/okhttp/${okhttp4.tesb.version}</bundle>
         <bundle dependency="true">wrap:mvn:com.squareup.okhttp3/okhttp-sse/${okhttp4.tesb.version}</bundle>
-        <bundle dependency="true">wrap:mvn:com.squareup.okio/okio/${okio.tesb.version}</bundle>
         <bundle dependency="true">wrap:mvn:com.squareup.okio/okio-jvm/${okio.tesb.version}</bundle>
         <bundle dependency="true">wrap:mvn:org.jetbrains.kotlin/kotlin-stdlib-common/${kotlin-stdlib-common.tesb.version}</bundle>
         <bundle dependency="true">wrap:mvn:org.jetbrains.kotlin/kotlin-stdlib/${kotlin.tesb.version}</bundle>
