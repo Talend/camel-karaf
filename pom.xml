@@ -1031,6 +1031,7 @@
                             <nimbus-jose-jwt.tesb.version>${nimbus-jose-jwt.tesb.version}</nimbus-jose-jwt.tesb.version>
                             <oauth2-oidc-sdk.tesb.version>${oauth2-oidc-sdk.tesb.version}</oauth2-oidc-sdk.tesb.version>
                             <okhttp.tesb.version>${okhttp.tesb.version}</okhttp.tesb.version>
+                            <okhttp4.tesb.version>${okhttp4.tesb.version}</okhttp4.tesb.version>
                             <okio.tesb.version>${okio.tesb.version}</okio.tesb.version>
                             <opennlp.tesb.version>${opennlp.tesb.version}</opennlp.tesb.version>
                             <paranamer.tesb.version>${paranamer.tesb.version}</paranamer.tesb.version>
