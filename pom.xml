@@ -240,7 +240,7 @@
         <nimbus-jose-jwt.tesb.version>10.4</nimbus-jose-jwt.tesb.version>
         <oauth2-oidc-sdk.tesb.version>11.26</oauth2-oidc-sdk.tesb.version>
         <okhttp.tesb.version>5.1.0</okhttp.tesb.version>
-        <okhttp4.tesb.version>4.12.O</okhttp4.tesb.version>
+        <okhttp4.tesb.version>4.12.0</okhttp4.tesb.version>
         <okio.tesb.version>3.16.0</okio.tesb.version>
         <opennlp.tesb.version>2.5.4</opennlp.tesb.version>
         <paranamer.tesb.version>2.8</paranamer.tesb.version>
@@ -1305,6 +1305,20 @@
             </build>
         </profile>
     </profiles>
+
+    <repositories>
+        <repository>
+            <id>atlassian</id>
+            <url>https://packages.atlassian.com/maven-external/</url>
+            <name>atlassian external repo</name>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+    </repositories>
 
     <pluginRepositories>
         <pluginRepository>
