@@ -31,11 +31,13 @@
     <artifactId>camel-cxf-all</artifactId>
     <packaging>bundle</packaging>
     <name>Apache Camel :: Karaf :: Components :: CXF :: All in one</name>
+    <version>${revision}</version>
 
     <properties>
+        <revision>${camel-cxf-all.tesb.version}</revision>
         <camel.osgi.export>
             org.apache.camel.component.cxf*;version=${camel-version},
-            org.apache.cxf*;version=${cxf-version},
+            org.apache.cxf*;version=${cxf.tesb.version},
         </camel.osgi.export>
         <camel.osgi.activator>org.apache.camel.component.cxf.osgi.MainActivator</camel.osgi.activator>
         <camel-osgi-camel-import>
@@ -47,6 +49,8 @@
             com.sun.xml.internal.messaging.saaj.soap;resolution:=optional,
             com.ctc.wstx*;resolution:=optional,
             org.codehaus.stax2*;resolution:=optional,
+            org.codehaus.jettison*;resolution:=optional,
+            org.dom4j*;resolution:=optional,
             com.sun.msv*;resolution:=optional,
             com.sun.tools*;resolution:=optional,
             com.sun.xml*;resolution:=optional,
@@ -65,7 +69,7 @@
             jakarta.xml.ws*;version="${camel-osgi-jakarta-xml-ws-version}",
             jakarta.xml.bind*;version="${camel-osgi-jakarta-bind-version}",
             jakarta.validation*;resolution:=optional;version="${camel-osgi-jakarta-validation-version}",
-            jakarta.jws*;version="${camel-osgi-jakarta-jws-version}",
+            jakarta.jws*;version="${camel-osgi-jakarta-xml-ws-version}",
             jakarta.ws.rs*;version="${camel-osgi-jakarta-ws-rs-version}",
             jakarta.xml.soap*;version="${camel-osgi-saaj-version}",
             jakarta.servlet*;version="${camel-osgi-jakarta-servlet-version}",
@@ -77,6 +81,7 @@
             org.osgi.util*,
             org.osgi.service*,
             org.osgi.framework*,
+            org.ops4j.pax.web.service.http.*,
             org.xml.sax,
             javax.xml*,
             javax.management*,
@@ -98,7 +103,7 @@
         <dependency>
             <groupId>org.apache.camel</groupId>
             <artifactId>camel-cxf-common</artifactId>
-            <version>${camel-version}</version>
+            <version>${camel-cxf.tesb.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.camel</groupId>
@@ -109,7 +114,7 @@
         <dependency>
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-core</artifactId>
-            <version>${cxf-version}</version>
+            <version>${cxf.tesb.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.cxf</groupId>
@@ -120,10 +125,14 @@
         <dependency>
             <groupId>org.apache.camel</groupId>
             <artifactId>camel-cxf-rest</artifactId>
-            <version>${camel-version}</version>
+            <version>${camel-cxf-rest.tesb.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.camel</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.apache.cxf</groupId>
                     <artifactId>*</artifactId>
                 </exclusion>
             </exclusions>
@@ -329,10 +338,14 @@
         <dependency>
             <groupId>org.apache.camel</groupId>
             <artifactId>camel-cxf-soap</artifactId>
-            <version>${camel-version}</version>
+            <version>${camel-cxf-soap.tesb.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.camel</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.apache.cxf</groupId>
                     <artifactId>*</artifactId>
                 </exclusion>
             </exclusions>
@@ -340,10 +353,14 @@
         <dependency>
             <groupId>org.apache.camel</groupId>
             <artifactId>camel-cxf-transport</artifactId>
-            <version>${camel-version}</version>
+            <version>${camel-cxf.tesb.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.camel</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.apache.cxf</groupId>
                     <artifactId>*</artifactId>
                 </exclusion>
             </exclusions>
@@ -355,9 +372,18 @@
         </dependency>
         <dependency>
             <groupId>org.osgi</groupId>
-            <artifactId>osgi.cmpn</artifactId>
+            <artifactId>org.osgi.service.servlet</artifactId>
             <scope>provided</scope>
-            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.service.cm</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.ops4j.pax.web</groupId>
+            <artifactId>pax-web-api</artifactId>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>jakarta.xml.ws</groupId>

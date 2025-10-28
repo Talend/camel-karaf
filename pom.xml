@@ -74,11 +74,11 @@
     </modules>
 
     <scm>
-        <connection>scm:git:https://github.com/apache/camel-karaf</connection>
-        <developerConnection>scm:git:https://github.com/apache/camel-karaf</developerConnection>
-        <url>scm:git:https://github.com/apache/camel-karaf</url>
-      <tag>camel-karaf-4.10.5</tag>
-  </scm>
+        <connection>scm:git:http://github.com/Talend/camel-karaf.git</connection>
+        <developerConnection>scm:git:https://github.com/Talend/camel-karaf.git</developerConnection>
+        <url>https://github.com/Talend/camel-karaf</url>
+        <tag>HEAD</tag>
+    </scm>
 
     <issueManagement>
         <system>github</system>
@@ -87,6 +87,105 @@
 
     <!-- TODO use Karaf/Camel bom -->
     <properties>
+        <upstream.version>4.10.5</upstream.version>
+        <camel-features.tesb.version>4.10.5.20251010</camel-features.tesb.version>
+        <camel-activemq.tesb.version>4.10.5.20251010</camel-activemq.tesb.version>
+        <camel-activemq6.tesb.version>4.10.5.20251010</camel-activemq6.tesb.version>
+        <camel-cxf.tesb.version>4.10.5.20251010</camel-cxf.tesb.version>
+        <camel-cxf-all.tesb.version>4.10.5.20251010</camel-cxf-all.tesb.version>
+        <camel-cxf-soap.tesb.version>4.10.5.20251010</camel-cxf-soap.tesb.version>
+        <camel-cxf-rest.tesb.version>4.10.5.20251010</camel-cxf-rest.tesb.version>
+        <camel-spring.tesb.version>4.10.5.20251010</camel-spring.tesb.version>
+        <camel-tooling.tesb.version>4.10.5.20251010</camel-tooling.tesb.version>
+        <camel-langchain4j-chat.tesb.version>4.10.5.20251010</camel-langchain4j-chat.tesb.version>
+        <camel-langchain4j-tools.tesb.version>4.10.5.20251010</camel-langchain4j-tools.tesb.version>
+        <camel-drill.tesb.version>4.10.5.20251010</camel-drill.tesb.version>
+
+        <cxf.tesb.version>4.1.0.2</cxf.tesb.version>
+        <jetty9.tesb.version>9.4.57.v20241219</jetty9.tesb.version>
+        <jetty11.tesb.version>11.0.26</jetty11.tesb.version>
+        <jetty12.tesb.version>12.0.26</jetty12.tesb.version>
+        <jetty.tesb.version>${jetty12.tesb.version}</jetty.tesb.version>
+        <jetty11.tesb.version-range>[11,12)</jetty11.tesb.version-range>
+        <jetty12.tesb.version-range>[12,13)</jetty12.tesb.version-range>
+        <jetty.tesb.version-range>${jetty12.tesb.version-range}</jetty.tesb.version-range>
+        <activemq6.tesb.version>6.1.6</activemq6.tesb.version>
+        <activemq-artemis.tesb.version>2.40.0</activemq-artemis.tesb.version>
+        <angus-mail.tesb.version>2.0.4</angus-mail.tesb.version>
+        <apache-drill.tesb.version>1.22.0</apache-drill.tesb.version>
+        <asm.tesb.version>9.8</asm.tesb.version>
+        <bouncycastle.tesb.version>1.81</bouncycastle.tesb.version>
+        <bytebuddy.tesb.version>1.17.6</bytebuddy.tesb.version>
+        <commons-codec.tesb.version>1.19.0</commons-codec.tesb.version>
+        <commons-collections4.tesb.version>4.5.0</commons-collections4.tesb.version>
+        <commons-compress.tesb.version>1.28.0</commons-compress.tesb.version>
+        <commons-lang3.tesb.version>3.18.0</commons-lang3.tesb.version>
+        <commons-io.tesb.version>2.20.0</commons-io.tesb.version>
+        <commons-text.tesb.version>1.14.0</commons-text.tesb.version>
+        <couchbase-client.tesb.version>3.7.9</couchbase-client.tesb.version>
+        <curator.tesb.version>5.8.0.tesb1</curator.tesb.version>
+        <failureaccess.tesb.version>1.0.2</failureaccess.tesb.version>
+        <hazelcast.tesb.version>5.5.0.tesb1</hazelcast.tesb.version>
+        <httpclient.tesb.version>5.5</httpclient.tesb.version>
+        <jackson-asl.tesb.version>1.9.16-TALEND</jackson-asl.tesb.version>
+        <jackson2.tesb.version>2.19.2</jackson2.tesb.version>
+        <jackrabbit.tesb.version>2.22.2</jackrabbit.tesb.version>
+        <jakarta-el5-api.tesb.version>5.0.1</jakarta-el5-api.tesb.version>
+        <jakarta-json-bind-api.tesb.version>3.0.1.tesb1</jakarta-json-bind-api.tesb.version>
+        <jakarta-validation-api.tesb.version>3.1.1</jakarta-validation-api.tesb.version>
+        <jaxb3-istack.tesb.version>4.0.1</jaxb3-istack.tesb.version>
+        <jaxb3-fastinfoset.tesb.version>2.0.0</jaxb3-fastinfoset.tesb.version>
+        <jaxb3-staxex.tesb.version>2.0.1</jaxb3-staxex.tesb.version>
+        <jaxb3-dtd-parser.tesb.version>1.4.5</jaxb3-dtd-parser.tesb.version>
+        <jaxb-istack.tesb.version>4.1.2</jaxb-istack.tesb.version>
+        <jaxb-fastinfoset.tesb.version>2.1.1</jaxb-fastinfoset.tesb.version>
+        <jaxb-staxex.tesb.version>2.1.0</jaxb-staxex.tesb.version>
+        <jaxb-dtd-parser.tesb.version>1.5.1</jaxb-dtd-parser.tesb.version>
+        <jna.tesb.version>5.17.0</jna.tesb.version>
+        <jolokia.tesb.version>2.2.8</jolokia.tesb.version>
+        <json2avro.tesb.version>0.2.15</json2avro.tesb.version>
+        <jsoup.tesb.version>1.21.1</jsoup.tesb.version>
+        <jsr305.tesb.version>3.0.2.tesb1</jsr305.tesb.version>
+        <jython-standalone.tesb.version>${jython-version}</jython-standalone.tesb.version>
+        <kafka.tesb.version>3.8.1</kafka.tesb.version>
+        <kafka-bundle.tesb.version>3.8.1-tesb1</kafka-bundle.tesb.version>
+        <karaf-framework.tesb.version>4.4.6.20250901</karaf-framework.tesb.version>
+        <kotlin.tesb.version>2.2.20</kotlin.tesb.version>
+        <kudu.tesb.version>1.18.0</kudu.tesb.version>
+        <langchain4j.tesb.version>1.0.0</langchain4j.tesb.version>
+        <langchain4j0.tesb.version>0.36.2</langchain4j0.tesb.version>
+        <logback.tesb.version>1.5.18</logback.tesb.version>
+        <minio.tesb.version>8.6.0</minio.tesb.version>
+        <netty.tesb.version>4.1.127.Final</netty.tesb.version>
+        <nimbus-jose-jwt.tesb.version>10.4</nimbus-jose-jwt.tesb.version>
+        <oauth2-oidc-sdk.tesb.version>11.26</oauth2-oidc-sdk.tesb.version>
+        <okhttp.tesb.version>5.1.0</okhttp.tesb.version>
+        <okio.tesb.version>3.16.0</okio.tesb.version>
+        <paranamer.tesb.version>2.8</paranamer.tesb.version>
+        <parquet-avro.tesb.version>1.15.2</parquet-avro.tesb.version>
+        <pax-web.tesb.version>11.0.1</pax-web.tesb.version>
+        <pgjdbc-driver.tesb.version>42.7.7</pgjdbc-driver.tesb.version>
+        <protobuf.tesb.version>3.25.5</protobuf.tesb.version>
+        <reactor.tesb.version>3.7.8</reactor.tesb.version>
+        <reactor-netty.tesb.version>1.2.8</reactor-netty.tesb.version>
+        <slf4j.tesb.version>2.0.17</slf4j.tesb.version>
+        <smallrye-fault-tolerance.tesb.version>6.9.0</smallrye-fault-tolerance.tesb.version>
+        <snakeyaml.tesb.version>2.4</snakeyaml.tesb.version>
+        <spring.tesb.version>6.2.11</spring.tesb.version>
+        <squareup-okio.tesb.version>1.17.6</squareup-okio.tesb.version>
+        <stax2-api.tesb.version>4.2.2</stax2-api.tesb.version>
+        <typesafe-config.tesb.version>1.4.2</typesafe-config.tesb.version>
+        <wildfly-elytron.tesb.version>2.2.10.Final</wildfly-elytron.tesb.version>
+        <zookeeper.tesb.version>3.9.4</zookeeper.tesb.version>
+        <zookeeper-server.tesb.version>3.9.4.jetty12.1</zookeeper-server.tesb.version>
+        <camel-osgi-cxf.tesb.version>[4.1,4.2)</camel-osgi-cxf.tesb.version>
+        <camel-osgi-jetty.tesb.version>[12,13)</camel-osgi-jetty.tesb.version>
+        <camel-osgi-jackson2.tesb.version>[2.18,2.20)</camel-osgi-jackson2.tesb.version>
+        <camel-osgi-jakarta-annotation.tesb.version>[3,4)</camel-osgi-jakarta-annotation.tesb.version>
+        <osgi-service-servlet.tesb.version>2.0.0</osgi-service-servlet.tesb.version>
+        <osgi-service-cm.tesb.version>1.6.1</osgi-service-cm.tesb.version>
+        <tesb-pax-web-api.tesb.version>11.0.1</tesb-pax-web-api.tesb.version>
+
         <jdk-version>17</jdk-version>
         <maven.compiler.source>${jdk-version}</maven.compiler.source>
         <maven.compiler.target>${jdk-version}</maven.compiler.target>
@@ -633,6 +732,16 @@
                 <version>${osgi-service-component-version}</version>
             </dependency>
             <dependency>
+                <groupId>org.osgi</groupId>
+                <artifactId>org.osgi.service.servlet</artifactId>
+                <version>${osgi-service-servlet.tesb.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.osgi</groupId>
+                <artifactId>org.osgi.service.cm</artifactId>
+                <version>${osgi-service-cm.tesb.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>org.apache.karaf.shell</groupId>
                 <artifactId>org.apache.karaf.shell.core</artifactId>
                 <version>${karaf-version}</version>
@@ -669,12 +778,132 @@
                 <version>${geronimo-atinject-version}</version>
                 <scope>test</scope>
             </dependency>
+            <!-- temporary dependency to get the HTTPService class , maybe later use the Whiteboard to rely only on the OSGI specs -->
+            <dependency>
+                <groupId>org.ops4j.pax.web</groupId>
+                <artifactId>pax-web-api</artifactId>
+                <version>${tesb-pax-web-api.tesb.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
     <build>
         <pluginManagement>
             <plugins>
+                <plugin>
+                    <groupId>io.paradoxical</groupId>
+                    <artifactId>resolved-pom-maven-plugin</artifactId>
+                    <version>1.0</version>
+                    <configuration>
+                        <properties>
+                            <revision>${revision}</revision>
+                            <upstream.version>${upstream.version}</upstream.version>
+                            <camel.features.tesb.version>${camel.features.tesb.version}</camel.features.tesb.version>
+                            <camel-activemq.tesb.version>${camel-activemq.tesb.version}</camel-activemq.tesb.version>
+                            <camel-activemq6.tesb.version>${camel-activemq6.tesb.version}</camel-activemq6.tesb.version>
+                            <camel-cxf.tesb.version>${camel-cxf.tesb.version}</camel-cxf.tesb.version>
+                            <camel-cxf-all.tesb.version>${camel-cxf-all.tesb.version}</camel-cxf-all.tesb.version>
+                            <camel-cxf-soap.tesb.version>${camel-cxf-soap.tesb.version}</camel-cxf-soap.tesb.version>
+                            <camel-cxf-rest.tesb.version>${camel-cxf-rest.tesb.version}</camel-cxf-rest.tesb.version>
+                            <camel-spring.tesb.version>${camel-spring.tesb.version}</camel-spring.tesb.version>
+                            <camel-tooling.tesb.version>${camel-tooling.tesb.version}</camel-tooling.tesb.version>
+                            <camel-langchain4j-chat.tesb.version>${camel-langchain4j-chat.tesb.version}</camel-langchain4j-chat.tesb.version>
+                            <camel-langchain4j-tools.tesb.version>${camel-langchain4j-tools.tesb.version}</camel-langchain4j-tools.tesb.version>
+                            <camel-drill.tesb.version>${camel-drill.tesb.version}</camel-drill.tesb.version>
+                            <cxf.tesb.version>${cxf.tesb.version}</cxf.tesb.version>
+                            <jetty9.tesb.version>${jetty9.tesb.version}</jetty9.tesb.version>
+                            <jetty11.tesb.version>${jetty11.tesb.version}</jetty11.tesb.version>
+                            <jetty12.tesb.version>${jetty12.tesb.version}</jetty12.tesb.version>
+                            <jetty.tesb.version>${jetty.tesb.version}</jetty.tesb.version>
+                            <jetty11.tesb.version-range>${jetty11.tesb.version-range}</jetty11.tesb.version-range>
+                            <jetty12.tesb.version-range>${jetty12.tesb.version-range}</jetty12.tesb.version-range>
+                            <jetty.tesb.version-range>${jetty.tesb.version-range}</jetty.tesb.version-range>
+                            <activemq6.tesb.version>${activemq6.tesb.version}</activemq6.tesb.version>
+                            <activemq-artemis.tesb.version>${activemq-artemis.tesb.version}</activemq-artemis.tesb.version>
+                            <angus-mail.tesb.version>${angus-mail.tesb.version}</angus-mail.tesb.version>
+                            <apache-drill.tesb.version>${apache-drill.tesb.version>}</apache-drill.tesb.version>
+                            <asm.tesb.version>${asm.tesb.version}</asm.tesb.version>
+                            <bouncycastle.tesb.version>${bouncycastle.tesb.version}</bouncycastle.tesb.version>
+                            <bytebuddy.tesb.version>${bytebuddy.tesb.version}</bytebuddy.tesb.version>
+                            <commons-codec.tesb.version>${commons-codec.tesb.version}</commons-codec.tesb.version>
+                            <commons-collections4.tesb.version>${commons-collections4.tesb.version}</commons-collections4.tesb.version>
+                            <commons-compress.tesb.version>${commons-compress.tesb.version}</commons-compress.tesb.version>
+                            <commons-io.tesb.version>${commons-io.tesb.version}</commons-io.tesb.version>
+                            <commons-lang3.tesb.version>${commons-lang3.tesb.version}</commons-lang3.tesb.version>
+                            <commons-text.tesb.version>${commons-text.tesb.version}</commons-text.tesb.version>
+                            <couchbase-client.tesb.version>${couchbase-client.tesb.version}</couchbase-client.tesb.version>
+                            <curator.tesb.version>${curator.tesb.version}</curator.tesb.version>
+                            <failureaccess.tesb.version>${failureaccess.tesb.version}</failureaccess.tesb.version>
+                            <hazelcast.tesb.version>${hazelcast.tesb.version}</hazelcast.tesb.version>
+                            <httpclient.tesb.version>${httpclient.tesb.version}</httpclient.tesb.version>
+                            <jackson-asl.tesb.version>${jackson-asl.tesb.version}</jackson-asl.tesb.version>
+                            <jackson2.tesb.version>${jackson2.tesb.version}</jackson2.tesb.version>
+                            <jackrabbit.tesb.version>${jackrabbit.tesb.version}</jackrabbit.tesb.version>
+                            <jakarta-el5-api.tesb.version>${jakarta-el5-api.tesb.version}</jakarta-el5-api.tesb.version>
+                            <jakarta-json-bind-api.tesb.version>${jakarta-json-bind-api.tesb.version}</jakarta-json-bind-api.tesb.version>
+                            <jakarta-validation-api.tesb.version>${jakarta-validation-api.tesb.version}</jakarta-validation-api.tesb.version>
+                            <jaxb3-istack.tesb.version>${jaxb3-istack.tesb.version}</jaxb3-istack.tesb.version>
+                            <jaxb3-fastinfoset.tesb.version>${jaxb3-fastinfoset.tesb.version}</jaxb3-fastinfoset.tesb.version>
+                            <jaxb3-staxex.tesb.version>${jaxb3-staxex.tesb.version}</jaxb3-staxex.tesb.version>
+                            <jaxb3-dtd-parser.tesb.version>${jaxb3-dtd-parser.tesb.version}</jaxb3-dtd-parser.tesb.version>
+                            <jaxb-istack.tesb.version>${jaxb-istack.tesb.version}</jaxb-istack.tesb.version>
+                            <jaxb-fastinfoset.tesb.version>${jaxb-fastinfoset.tesb.version}</jaxb-fastinfoset.tesb.version>
+                            <jaxb-staxex.tesb.version>${jaxb-staxex.tesb.version}</jaxb-staxex.tesb.version>
+                            <jaxb-dtd-parser.tesb.version>${jaxb-dtd-parser.tesb.version}</jaxb-dtd-parser.tesb.version>
+                            <jna.tesb.version>${jna.tesb.version}</jna.tesb.version>
+                            <jolokia.tesb.version>${jolokia.tesb.version}</jolokia.tesb.version>
+                            <json2avro.tesb.version>${json2avro.tesb.version}</json2avro.tesb.version>
+                            <jsoup.tesb.version>${jsoup.tesb.version}</jsoup.tesb.version>
+                            <jsr305.tesb.version>${jsr305.tesb.version}</jsr305.tesb.version>
+                            <jython-standalone.tesb.version>${jython-standalone.tesb.version}</jython-standalone.tesb.version>
+                            <kafka.tesb.version>${kafka.tesb.version}</kafka.tesb.version>
+                            <kafka-bundle.tesb.version>${kafka-bundle.tesb.version}</kafka-bundle.tesb.version>
+                            <karaf-framework.tesb.version>${karaf-framework.tesb.version}</karaf-framework.tesb.version>
+                            <kotlin.tesb.version>${kotlin.tesb.version}</kotlin.tesb.version>
+                            <kudu.tesb.version>${kudu.tesb.version}</kudu.tesb.version>
+                            <langchain4j.tesb.version>${langchain4j.tesb.version}</langchain4j.tesb.version>
+                            <langchain4j0.tesb.version>${langchain4j0.tesb.version}</langchain4j0.tesb.version>
+                            <logback.tesb.version>${logback.tesb.version}</logback.tesb.version>
+                            <minio.tesb.version>${minio.tesb.version}</minio.tesb.version>
+                            <netty.tesb.version>${netty.tesb.version}</netty.tesb.version>
+                            <nimbus-jose-jwt.tesb.version>${nimbus-jose-jwt.tesb.version}</nimbus-jose-jwt.tesb.version>
+                            <oauth2-oidc-sdk.tesb.version>${oauth2-oidc-sdk.tesb.version}</oauth2-oidc-sdk.tesb.version>
+                            <okhttp.tesb.version>${okhttp.tesb.version}</okhttp.tesb.version>
+                            <okio.tesb.version>${okio.tesb.version}</okio.tesb.version>
+                            <paranamer.tesb.version>${paranamer.tesb.version}</paranamer.tesb.version>
+                            <parquet-avro.tesb.version>${parquet-avro.tesb.version}</parquet-avro.tesb.version>
+                            <pax-web.tesb.version>${pax-web.tesb.version}</pax-web.tesb.version>
+                            <pgjdbc-driver.tesb.version>${pgjdbc-driver.tesb.version}</pgjdbc-driver.tesb.version>
+                            <protobuf.tesb.version>${protobuf.tesb.version}</protobuf.tesb.version>
+                            <reactor.tesb.version>${reactor.tesb.version}</reactor.tesb.version>
+                            <reactor-netty.tesb.version>${reactor-netty.tesb.version}</reactor-netty.tesb.version>
+                            <smallrye-fault-tolerance.tesb.version>${smallrye-fault-tolerance.tesb.version}</smallrye-fault-tolerance.tesb.version>
+                            <snakeyaml.tesb.version>${snakeyaml.tesb.version}</snakeyaml.tesb.version>
+                            <spring.tesb.version>${spring.tesb.version}</spring.tesb.version>
+                            <squareup-okio.tesb.version>${squareup-okio.tesb.version}</squareup-okio.tesb.version>
+                            <stax2-api.tesb.version>${stax2-api.tesb.version}</stax2-api.tesb.version>
+                            <typesafe-config.tesb.version>${typesafe-config.tesb.version}</typesafe-config.tesb.version>
+                            <wildfly-elytron.tesb.version>${wildfly-elytron.tesb.version}</wildfly-elytron.tesb.version>
+                            <zookeeper.tesb.version>${zookeeper.tesb.version}</zookeeper.tesb.version>
+                            <zookeeper-server.tesb.version>${zookeeper-server.tesb.version}</zookeeper-server.tesb.version>
+                            <osgi-service-servlet.tesb.version>${osgi-service-servlet.tesb.version}</osgi-service-servlet.tesb.version>
+                            <osgi-service-cm.tesb.version>${osgi-service-cm.tesb.version}</osgi-service-cm.tesb.version>
+                            <tesb-pax-web-api.tesb.version>${tesb-pax-web-api.tesb.version}</tesb-pax-web-api.tesb.version>
+                        </properties>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <id>resolve-my-pom</id>
+                            <phase>initialize</phase>
+                            <goals>
+                                <goal>resolve-pom</goal>
+                            </goals>
+                            <configuration>
+                                <resolvedPomFile>.resolved-pom.xml</resolvedPomFile>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-shade-plugin</artifactId>
@@ -712,6 +941,10 @@
         </pluginManagement>
 
         <plugins>
+            <plugin>
+                <groupId>io.paradoxical</groupId>
+                <artifactId>resolved-pom-maven-plugin</artifactId>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-remote-resources-plugin</artifactId>
@@ -915,5 +1148,30 @@
             </build>
         </profile>
     </profiles>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>talend-public</id>
+            <name>Talend Open Source Public group</name>
+            <url>https://artifacts-oss.talend.com/nexus/content/groups/public</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </pluginRepository>
+        <pluginRepository>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>thirdparty-releases</id>
+            <name>Third party releases</name>
+            <url>https://artifacts-zl.talend.com/nexus/content/repositories/thirdparty-releases</url>
+        </pluginRepository>
+    </pluginRepositories>
 
 </project>

@@ -17,18 +17,19 @@
 
 package org.apache.camel.component.cxf.transport.http.osgi;
 
+import org.apache.cxf.BusFactory;
 import org.apache.cxf.common.util.CollectionUtils;
 import org.apache.cxf.common.util.PropertyUtils;
+import org.apache.cxf.transport.DestinationFactory;
 import org.apache.cxf.transport.http.DestinationRegistry;
-import org.apache.cxf.transport.http.DestinationRegistryImpl;
 import org.apache.cxf.transport.http.HTTPConduitConfigurer;
 import org.apache.cxf.transport.http.HTTPTransportFactory;
+import org.ops4j.pax.web.service.http.HttpService;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.Constants;
 import org.osgi.framework.ServiceRegistration;
 import org.osgi.service.cm.ManagedServiceFactory;
-import org.osgi.service.http.HttpService;
 import org.osgi.util.tracker.ServiceTracker;
 
 public class HTTPTransportActivator implements BundleActivator {
@@ -51,16 +52,19 @@ public class HTTPTransportActivator implements BundleActivator {
             return;
         }
 
-        DestinationRegistry destinationRegistry = new DestinationRegistryImpl();
-        HTTPTransportFactory transportFactory = new HTTPTransportFactory(destinationRegistry);
+        //don't use constructor, use the extension manager to register the object
 
-        // HttpService is no longer available in OSGI 8
-//        HttpServiceTrackerCust customizer = new HttpServiceTrackerCust(destinationRegistry, context);
-//        httpServiceTracker = new ServiceTracker<>(context, HttpService.class, customizer);
-//        httpServiceTracker.open();
+        HTTPTransportFactory transportFactory =  BusFactory.getDefaultBus().getExtension(HTTPTransportFactory.class);
+        DestinationRegistry destinationRegistry = transportFactory.getRegistry();
+
+        HttpServiceTrackerCust customizer = new HttpServiceTrackerCust(destinationRegistry, context);
+        httpServiceTracker = new ServiceTracker<>(context, HttpService.class, customizer);
+        httpServiceTracker.open();
 
         context.registerService(DestinationRegistry.class.getName(), destinationRegistry, null);
         context.registerService(HTTPTransportFactory.class.getName(), transportFactory, null);
+        //registers it also for the interface, as DestinationFactoryManagerImpl looks by DestinationFactory
+        context.registerService(DestinationFactory.class.getName(), transportFactory, null);
     }
 
     private <T> ServiceRegistration<T> registerService(BundleContext context, Class<T> serviceInterface,

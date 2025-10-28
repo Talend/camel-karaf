@@ -31,8 +31,10 @@
     <artifactId>camel-cxf-spring-all</artifactId>
     <packaging>bundle</packaging>
     <name>Apache Camel :: Karaf :: Components :: CXF :: Spring All in one</name>
+    <version>${revision}</version>
 
     <properties>
+        <revision>${camel-cxf.tesb.version}</revision>
         <camel.osgi.export>
             org.apache.camel.component.cxf.spring;version=${camel-version},
             org.apache.camel.component.cxf.spring.jaxrs;version=${camel-version},
@@ -46,13 +48,13 @@
             org.springframework.core*;version="${camel-osgi-spring-version}",
             org.springframework.util*;version="${camel-osgi-spring-version}",
             org.springframework.web*;version="${camel-osgi-spring-version}",
-            org.apache.cxf.*;version="${camel-osgi-cxf-version}",
+            org.apache.cxf.*;version="${camel-osgi-cxf.tesb.version}",
             jakarta.activation;version="${camel-osgi-jakarta-activation-version}",
             jakarta.annotation;version="${camel-osgi-jakarta-annotation2-version}",
             jakarta.xml.ws*;version="${camel-osgi-jakarta-xml-ws-version}",
             jakarta.xml.bind*;version="${camel-osgi-jakarta-bind-version}",
             jakarta.validation*;resolution:=optional;version="${camel-osgi-jakarta-validation-version}",
-            jakarta.jws*;version="${camel-osgi-jakarta-jws-version}",
+            jakarta.jws*;version="${camel-osgi-jakarta-xml-ws-version}",
             jakarta.ws.rs*;version="${camel-osgi-jakarta-ws-rs-version}",
             jakarta.xml.soap*;version="${camel-osgi-saaj-version}",
             jakarta.servlet*;version="${camel-osgi-jakarta-servlet-version}",
@@ -64,7 +66,7 @@
         <dependency>
             <groupId>org.apache.camel</groupId>
             <artifactId>camel-cxf-spring-common</artifactId>
-            <version>${camel-version}</version>
+            <version>${camel-cxf.tesb.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.camel</groupId>
@@ -75,7 +77,7 @@
         <dependency>
             <groupId>org.apache.camel</groupId>
             <artifactId>camel-cxf-spring-rest</artifactId>
-            <version>${camel-version}</version>
+            <version>${camel-cxf.tesb.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.camel</groupId>
@@ -86,7 +88,7 @@
         <dependency>
             <groupId>org.apache.camel</groupId>
             <artifactId>camel-cxf-spring-soap</artifactId>
-            <version>${camel-version}</version>
+            <version>${camel-cxf.tesb.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.camel</groupId>
@@ -97,7 +99,7 @@
         <dependency>
             <groupId>org.apache.camel</groupId>
             <artifactId>camel-cxf-spring-transport</artifactId>
-            <version>${camel-version}</version>
+            <version>${camel-cxf.tesb.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.camel</groupId>

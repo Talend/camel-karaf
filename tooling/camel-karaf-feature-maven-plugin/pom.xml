@@ -17,28 +17,30 @@
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    
+
     <parent>
         <groupId>org.apache.camel.karaf</groupId>
         <artifactId>tooling</artifactId>
         <version>4.10.5</version>
     </parent>
-    
+
     <artifactId>camel-karaf-feature-maven-plugin</artifactId>
     <packaging>maven-plugin</packaging>
     <name>Apache Camel :: Karaf :: Tooling :: Feature Maven Plugin</name>
+    <version>${revision}</version>
 
     <properties>
+        <revision>${camel-tooling.tesb.version}</revision>
         <felix-utils-version>1.11.8</felix-utils-version>
     </properties>
-    
+
     <dependencies>
         <dependency>
             <groupId>org.apache.karaf.features</groupId>
             <artifactId>org.apache.karaf.features.core</artifactId>
             <version>${karaf-version}</version>
         </dependency>
-         
+
         <dependency>
             <groupId>org.osgi</groupId>
             <artifactId>osgi.core</artifactId>
@@ -82,7 +84,7 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-    
+
     <build>
         <resources>
             <resource>
@@ -104,7 +106,7 @@
                     </execution>
                 </executions>
             </plugin>
-            
+
             <!-- tests -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -112,5 +114,5 @@
             </plugin>
         </plugins>
     </build>
-    
+
 </project>

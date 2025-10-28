@@ -31,8 +31,10 @@
     <artifactId>camel-drill</artifactId>
     <packaging>bundle</packaging>
     <name>Apache Camel :: Karaf :: Components :: Drill</name>
+    <version>${revision}</version>
 
     <properties>
+        <revision>${camel-drill.tesb.version}</revision>
         <camel.osgi.export>
             org.apache.camel*;version=${camel-version},
             org.apache.drill*;version=${apache-drill-version},
@@ -59,7 +61,7 @@
         <dependency>
             <groupId>org.apache.camel</groupId>
             <artifactId>camel-drill</artifactId>
-            <version>${camel-version}</version>
+            <version>${camel-drill.tesb.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.camel</groupId>
@@ -74,12 +76,12 @@
         <dependency>
             <groupId>org.apache.drill.exec</groupId>
             <artifactId>drill-jdbc</artifactId>
-            <version>${apache-drill-version}</version>
+            <version>${apache-drill.tesb.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.drill.exec</groupId>
             <artifactId>drill-java-exec</artifactId>
-            <version>${apache-drill-version}</version>
+            <version>${apache-drill.tesb.version}</version>
         </dependency>
     </dependencies>
 

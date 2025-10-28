@@ -1,0 +1,20 @@
+@Library('esb') _
+ 
+Fork(
+        MVN_MODULES: '''\
+org.apache.camel.karaf:camel-karaf-feature-maven-plugin,\
+\
+org.apache.camel.karaf:camel-activemq,\
+org.apache.camel.karaf:camel-activemq6,\
+org.apache.camel.karaf:camel-cxf-all,\
+org.apache.camel.karaf:camel-cxf-blueprint,\
+org.apache.camel.karaf:camel-cxf-spring-all,\
+org.apache.camel.karaf:camel-cxf-transport-blueprint,\
+org.apache.camel.karaf:camel-cxf-transport-jetty,\
+org.apache.camel.karaf:camel-drill,\
+org.apache.camel.karaf:camel-langchain4j-chat,\
+org.apache.camel.karaf:camel-langchain4j-tools,\
+\
+org.apache.camel.karaf:apache-camel\
+'''
+)

@@ -60,13 +60,13 @@
         <dependency>
             <groupId>org.apache.camel.karaf</groupId>
             <artifactId>camel-integration-test</artifactId>
-            <version>${project.version}</version>
+            <version>${upstream.version}</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.camel.karaf</groupId>
             <artifactId>camel-core-osgi</artifactId>
-            <version>${project.version}</version>
+            <version>${upstream.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -85,7 +85,7 @@
         <dependency>
             <groupId>org.apache.camel.karaf</groupId>
             <artifactId>camel-api</artifactId>
-            <version>${project.version}</version>
+            <version>${upstream.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -182,7 +182,7 @@
                 <configuration>
                     <instructions>
                         <Export-Package>
-                            org.apache.karaf.camel.examples.test;version=${project.version}
+                            org.apache.karaf.camel.examples.test;version=${upstream.version}
                         </Export-Package>
                         <Import-Package>
                             org.apache.camel*;${camel-osgi-import-camel-version},
@@ -199,7 +199,7 @@
                         </goals>
                         <configuration>
                             <versions>
-                                <karaf.osgi.version>${project.version}</karaf.osgi.version>
+                                <karaf.osgi.version>${upstream.version}</karaf.osgi.version>
                             </versions>
                         </configuration>
                     </execution>
@@ -230,7 +230,7 @@
                                 <include>**/*Test.java</include>
                             </includes>
                             <systemPropertyVariables>
-                                <project.version>${project.version}</project.version>
+                                <project.version>${upstream.version}</project.version>
                                 <project.target>${project.build.directory}</project.target>
                                 <org.ops4j.pax.logging.DefaultServiceLog.level>WARN</org.ops4j.pax.logging.DefaultServiceLog.level>
                             </systemPropertyVariables>

@@ -31,8 +31,10 @@
     <artifactId>apache-camel</artifactId>
     <packaging>pom</packaging>
     <name>Apache Camel :: Karaf :: Features</name>
+    <version>${revision}</version>
 
     <properties>
+        <revision>${camel-features.tesb.version}</revision>
         <spi-consumer>SPI-Consumer=*</spi-consumer>
     </properties>
 
@@ -40,7 +42,7 @@
         <dependency>
             <groupId>org.apache.karaf.features</groupId>
             <artifactId>framework</artifactId>
-            <version>${karaf-version}</version>
+            <version>${karaf-framework.tesb.version}</version>
             <type>kar</type>
             <scope>provided</scope>
         </dependency>
@@ -69,7 +71,7 @@
             <plugin>
                 <groupId>org.apache.camel.karaf</groupId>
                 <artifactId>camel-karaf-feature-maven-plugin</artifactId>
-                <version>${project.version}</version>
+                <version>${camel-tooling.tesb.version}</version>
                 <executions>
                     <execution>
                         <goals>
@@ -92,8 +94,10 @@
                     <descriptors>
                         <descriptor>file:${project.build.directory}/feature/camel-features.xml</descriptor>
                         <descriptor>file:${project.build.directory}/feature/spring-features.xml</descriptor>
-                        <descriptor>mvn:org.apache.karaf.features/specs/${karaf-version}/xml/features</descriptor>
-                        <descriptor>mvn:org.apache.karaf.features/spring/${karaf-version}/xml/features</descriptor>
+                        <descriptor>mvn:org.apache.karaf.features/specs/${karaf-framework.tesb.version}/xml/features</descriptor>
+                        <descriptor>mvn:org.apache.karaf.features/standard/${karaf-framework.tesb.version}/xml/features</descriptor>
+                        <descriptor>mvn:org.apache.karaf.features/spring/${karaf-framework.tesb.version}/xml/features</descriptor>
+                        <descriptor>mvn:org.apache.karaf.features/framework/${karaf-framework.tesb.version}/xml/features</descriptor>
                     </descriptors>
                     <distribution>org.apache.karaf.features:framework</distribution>
                     <javase>${jdk-version}</javase>
@@ -101,7 +105,7 @@
                         <feature>framework</feature>
                     </framework>
                     <features>
-                        <feature>camel*</feature>
+                        <feature>camel|camel-(?!(robotframework|other))*</feature>
                     </features>
                 </configuration>
                 <executions>

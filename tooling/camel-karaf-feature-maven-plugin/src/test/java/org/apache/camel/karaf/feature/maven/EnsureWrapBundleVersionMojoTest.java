@@ -38,15 +38,29 @@ public class EnsureWrapBundleVersionMojoTest {
         assertEquals(expected, ensureVersionMojo.processLocation(wrappedBundle));
 
         // add bundle version at the end but not as first wrap protocol option
+        bundle.setLocation("wrap:mvn:org.apache.olingo/odata-server-core/5.0.0$overwrite=full");
+        expected = "wrap:mvn:org.apache.olingo/odata-server-core/5.0.0$overwrite=full&Bundle-Version=5.0.0";
+        wrappedBundle = WrappedBundle.fromBundle(bundle);
+        assertNotNull(wrappedBundle);
+        assertEquals(expected, ensureVersionMojo.processLocation(wrappedBundle));
+
+        // add bundle version at the end but not as first wrap protocol option
         bundle.setLocation("wrap:mvn:org.apache.olingo/odata-server-core/5.0.0$overwrite=merge");
-        expected = "wrap:mvn:org.apache.olingo/odata-server-core/5.0.0$overwrite=merge&Bundle-Version=5.0.0";
+        expected = "wrap:mvn:org.apache.olingo/odata-server-core/5.0.0$overwrite=merge";
+        wrappedBundle = WrappedBundle.fromBundle(bundle);
+        assertNotNull(wrappedBundle);
+        assertEquals(expected, ensureVersionMojo.processLocation(wrappedBundle));
+
+        // add bundle version before existing wrap protocol header that should be declared after
+        bundle.setLocation("wrap:mvn:org.apache.olingo/odata-server-core/5.0.0$overwrite=full&Export-Package=org.apache.olingo.*;version=5.0.0");
+        expected = "wrap:mvn:org.apache.olingo/odata-server-core/5.0.0$overwrite=full&Bundle-Version=5.0.0&Export-Package=org.apache.olingo.*;version=5.0.0";
         wrappedBundle = WrappedBundle.fromBundle(bundle);
         assertNotNull(wrappedBundle);
         assertEquals(expected, ensureVersionMojo.processLocation(wrappedBundle));
 
         // add bundle version before existing wrap protocol header that should be declared after
         bundle.setLocation("wrap:mvn:org.apache.olingo/odata-server-core/5.0.0$overwrite=merge&Export-Package=org.apache.olingo.*;version=5.0.0");
-        expected = "wrap:mvn:org.apache.olingo/odata-server-core/5.0.0$overwrite=merge&Bundle-Version=5.0.0&Export-Package=org.apache.olingo.*;version=5.0.0";
+        expected = "wrap:mvn:org.apache.olingo/odata-server-core/5.0.0$overwrite=merge&Export-Package=org.apache.olingo.*;version=5.0.0";
         wrappedBundle = WrappedBundle.fromBundle(bundle);
         assertNotNull(wrappedBundle);
         assertEquals(expected, ensureVersionMojo.processLocation(wrappedBundle));

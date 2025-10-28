@@ -85,6 +85,10 @@ public class EnsureWrapBundleNameMojo extends AbstractWrapBundleMojo {
 
     String processLocation(WrappedBundle wrappedBundle) throws Exception {
         String location = wrappedBundle.getBundle().getLocation();
+        if (location.contains(MERGE_BUNDLE_HEADERS)) {
+            // Wrapping an OSGi bundle, preserve manifest headers
+            return location;
+        }
         String instructions = wrappedBundle.getInstructions();
         boolean dollarNeeded = instructions == null || !instructions.contains("$");
 

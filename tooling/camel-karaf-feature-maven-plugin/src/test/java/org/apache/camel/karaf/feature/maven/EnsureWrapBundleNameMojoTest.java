@@ -37,22 +37,43 @@ public class EnsureWrapBundleNameMojoTest {
         assertEquals(expected, ensureNameMojo.processLocation(wrappedBundle));
 
         // add bundle name at the end but not as first wrap protocol option
+        bundle.setLocation("wrap:mvn:org.apache.olingo/odata-server-core/5.0.0$overwrite=full");
+        expected = "wrap:mvn:org.apache.olingo/odata-server-core/5.0.0$overwrite=full&Bundle-Name=Wrap%20of%20Odata%20Server%20Core&Bundle-SymbolicName=wrap_org.apache.olingo.odata-server-core";
+        wrappedBundle = WrappedBundle.fromBundle(bundle);
+        assertNotNull(wrappedBundle);
+        assertEquals(expected, ensureNameMojo.processLocation(wrappedBundle));
+
+        // no bundle name added with "override=merge"
         bundle.setLocation("wrap:mvn:org.apache.olingo/odata-server-core/5.0.0$overwrite=merge");
-        expected = "wrap:mvn:org.apache.olingo/odata-server-core/5.0.0$overwrite=merge&Bundle-Name=Wrap%20of%20Odata%20Server%20Core&Bundle-SymbolicName=wrap_org.apache.olingo.odata-server-core";
+        expected = "wrap:mvn:org.apache.olingo/odata-server-core/5.0.0$overwrite=merge";
         wrappedBundle = WrappedBundle.fromBundle(bundle);
         assertNotNull(wrappedBundle);
         assertEquals(expected, ensureNameMojo.processLocation(wrappedBundle));
 
         // add bundle name before existing wrap protocol header that should be declared after
+        bundle.setLocation("wrap:mvn:org.apache.olingo/odata-server-core/5.0.0$overwrite=full&Export-Package=org.apache.olingo.*;version=5.0.0");
+        expected = "wrap:mvn:org.apache.olingo/odata-server-core/5.0.0$overwrite=full&Bundle-Name=Wrap%20of%20Odata%20Server%20Core&Bundle-SymbolicName=wrap_org.apache.olingo.odata-server-core&Export-Package=org.apache.olingo.*;version=5.0.0";
+        wrappedBundle = WrappedBundle.fromBundle(bundle);
+        assertNotNull(wrappedBundle);
+        assertEquals(expected, ensureNameMojo.processLocation(wrappedBundle));
+
+        // no bundle name added with "override=merge"
         bundle.setLocation("wrap:mvn:org.apache.olingo/odata-server-core/5.0.0$overwrite=merge&Export-Package=org.apache.olingo.*;version=5.0.0");
-        expected = "wrap:mvn:org.apache.olingo/odata-server-core/5.0.0$overwrite=merge&Bundle-Name=Wrap%20of%20Odata%20Server%20Core&Bundle-SymbolicName=wrap_org.apache.olingo.odata-server-core&Export-Package=org.apache.olingo.*;version=5.0.0";
+        expected = "wrap:mvn:org.apache.olingo/odata-server-core/5.0.0$overwrite=merge&Export-Package=org.apache.olingo.*;version=5.0.0";
         wrappedBundle = WrappedBundle.fromBundle(bundle);
         assertNotNull(wrappedBundle);
         assertEquals(expected, ensureNameMojo.processLocation(wrappedBundle));
 
         // add bundle name before existing wrap protocol header that should be declared after
+        bundle.setLocation("wrap:mvn:org.apache.olingo/odata-server-core/5.0.0$overwrite=full&Bundle-Version=5.0.0&Export-Package=org.apache.olingo.*;version=5.0.0");
+        expected = "wrap:mvn:org.apache.olingo/odata-server-core/5.0.0$overwrite=full&Bundle-Name=Wrap%20of%20Odata%20Server%20Core&Bundle-SymbolicName=wrap_org.apache.olingo.odata-server-core&Bundle-Version=5.0.0&Export-Package=org.apache.olingo.*;version=5.0.0";
+        wrappedBundle = WrappedBundle.fromBundle(bundle);
+        assertNotNull(wrappedBundle);
+        assertEquals(expected, ensureNameMojo.processLocation(wrappedBundle));
+
+        // no bundle name added with "override=merge"
         bundle.setLocation("wrap:mvn:org.apache.olingo/odata-server-core/5.0.0$overwrite=merge&Bundle-Version=5.0.0&Export-Package=org.apache.olingo.*;version=5.0.0");
-        expected = "wrap:mvn:org.apache.olingo/odata-server-core/5.0.0$overwrite=merge&Bundle-Name=Wrap%20of%20Odata%20Server%20Core&Bundle-SymbolicName=wrap_org.apache.olingo.odata-server-core&Bundle-Version=5.0.0&Export-Package=org.apache.olingo.*;version=5.0.0";
+        expected = "wrap:mvn:org.apache.olingo/odata-server-core/5.0.0$overwrite=merge&Bundle-Version=5.0.0&Export-Package=org.apache.olingo.*;version=5.0.0";
         wrappedBundle = WrappedBundle.fromBundle(bundle);
         assertNotNull(wrappedBundle);
         assertEquals(expected, ensureNameMojo.processLocation(wrappedBundle));

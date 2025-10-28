@@ -17,7 +17,7 @@
     limitations under the License.
 
 -->
-<features xmlns="http://karaf.apache.org/xmlns/features/v1.6.0" name="camel-${project.version}">
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.6.0" name="camel-${upstream.version}">
 
     <!-- TODO: specs will be provided by Apache Karaf 4.5.x spec features repository. However, in order to have Camel 4.x working on Karaf 4.4.x, we define spec features here -->
     <feature name="jakarta-activation" version="${jakarta-activation-version}">
@@ -26,30 +26,30 @@
 
     <!-- Apache Camel core features -->
 
-    <feature name="camel" version="${project.version}" start-level="50">
+    <feature name="camel" version="${upstream.version}" start-level="50">
         <feature prerequisite="true">wrap</feature>
         <feature version="${camel-osgi-version-range}">camel-core</feature>
         <feature version="${camel-osgi-version-range}">camel-blueprint</feature>
     </feature>
 
-    <feature name="camel-core" version="${project.version}" start-level="50">
+    <feature name="camel-core" version="${upstream.version}" start-level="50">
         <feature version="[${servicemix-specs-version},11)">xml-specs-api</feature>
         <bundle dependency="true">mvn:commons-codec/commons-codec/${commons-codec-version}</bundle>
     </feature>
 
     <!-- the following features are sorted A..Z -->
 
-    <feature name='camel-a' version='${project.version}' start-level='50'>
+    <feature name='camel-a' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-jms</feature>
         <bundle dependency='true'>mvn:org.apache.activemq/activemq-client/${activemq-version}</bundle>
         <bundle dependency='true'>mvn:org.fusesource.hawtbuf/hawtbuf/${auto-detect-version}</bundle>
-        <bundle>mvn:org.apache.camel.karaf/camel-a/${project.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-a/${upstream.version}</bundle>
     </feature>
-    <feature name='camel-c' version='${project.version}' start-level='50'>
+    <feature name='camel-c' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-jms</feature>
         <bundle dependency='true'>mvn:org.apache.activemq/activemq-client/${activemq-version}</bundle>
         <bundle dependency='true'>mvn:org.fusesource.hawtbuf/hawtbuf/${auto-detect-version}</bundle>
-        <bundle>mvn:org.apache.camel.karaf/camel-c/${project.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-c/${upstream.version}</bundle>
     </feature>
 
 </features>
