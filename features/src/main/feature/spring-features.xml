@@ -20,6 +20,7 @@
 <features xmlns="http://karaf.apache.org/xmlns/features/v1.5.0" name="spring-${spring.tesb.version}">
 
     <feature name="spring" version="${spring.tesb.version}">
+        <feature prerequisite="true">wrap</feature>
         <bundle start-level="30">wrap:mvn:org.springframework/spring-core/${spring.tesb.version}$Export-Package=org.springframework.*;version=${spring.tesb.version}</bundle>
         <bundle start-level="30">wrap:mvn:org.springframework/spring-expression/${spring.tesb.version}$Export-Package=org.springframework.*;version=${spring.tesb.version}</bundle>
         <bundle start-level="30">wrap:mvn:org.springframework/spring-beans/${spring.tesb.version}$Export-Package=org.springframework.*;version=${spring.tesb.version}</bundle>
@@ -29,28 +30,33 @@
     </feature>
 
     <feature name="spring-jms" version="${spring.tesb.version}">
+        <feature prerequisite="true">wrap</feature>
         <feature version="${camel-osgi-spring-version}">spring-tx</feature>
         <bundle dependency="true" start-level="10">mvn:jakarta.jms/jakarta.jms-api/${jakarta-jms-api-version}</bundle>
         <bundle start-level="30">wrap:mvn:org.springframework/spring-jms/${spring.tesb.version}$Export-Package=org.springframework.*;version=${spring.tesb.version}</bundle>
     </feature>
 
     <feature name="spring-tx" version="${spring.tesb.version}">
+        <feature prerequisite="true">wrap</feature>
         <feature version="${camel-osgi-spring-version}">spring</feature>
         <bundle dependency="true" start-level="10">mvn:jakarta.transaction/jakarta.transaction-api/${jakarta-transaction-api-version}</bundle>
         <bundle start-level="30">wrap:mvn:org.springframework/spring-tx/${spring.tesb.version}$Export-Package=org.springframework.*;version=${spring.tesb.version}</bundle>
     </feature>
 
     <feature name="spring-orm" version="${spring.tesb.version}">
+        <feature prerequisite="true">wrap</feature>
         <feature version='${camel-osgi-spring-version}'>spring-jdbc</feature>
         <bundle start-level="30">wrap:mvn:org.springframework/spring-orm/${spring.tesb.version}$Export-Package=org.springframework.*;version=${spring.tesb.version}</bundle>
     </feature>
 
     <feature name="spring-jdbc" version="${spring.tesb.version}">
+        <feature prerequisite="true">wrap</feature>
         <feature version='${camel-osgi-spring-version}'>spring-tx</feature>
         <bundle start-level="30">wrap:mvn:org.springframework/spring-jdbc/${spring.tesb.version}$Export-Package=org.springframework.*;version=${spring.tesb.version}</bundle>
     </feature>
 
     <feature name="spring-messaging" version="${spring.tesb.version}">
+        <feature prerequisite="true">wrap</feature>
         <feature version='${camel-osgi-spring-version}'>spring</feature>
         <bundle start-level="30">wrap:mvn:org.springframework/spring-messaging/${spring.tesb.version}$Export-Package=org.springframework.*;version=${spring.tesb.version}</bundle>
     </feature>
