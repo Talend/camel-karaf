@@ -26,7 +26,7 @@
         <bundle start-level="30">wrap:mvn:org.springframework/spring-beans/${spring.tesb.version}$Bundle-Name=Spring%20Beans&amp;Bundle-SymbolicName=org.springframework.spring-beans&amp;Bundle-Version=${spring.tesb.version}&amp;Export-Package=org.springframework.*;version=${spring.tesb.version}</bundle>
         <bundle start-level="30">wrap:mvn:org.springframework/spring-aop/${spring.tesb.version}$Bundle-Name=Spring%20AOP&amp;Bundle-SymbolicName=org.springframework.spring-aop&amp;Bundle-Version=${spring.tesb.version}&amp;Export-Package=org.*;version=${spring.tesb.version}</bundle>
         <bundle start-level="30">wrap:mvn:org.springframework/spring-context/${spring.tesb.version}$Bundle-Name=Spring%20Context&amp;Bundle-SymbolicName=org.springframework.spring-context&amp;Bundle-Version=${spring.tesb.version}&amp;Export-Package=org.springframework.*;version=${spring.tesb.version}</bundle>
-        <bundle start-level="30">wrap:mvn:org.springframework/spring-context-support/${spring.tesb.version}$Export-Package=org.springframework.*;version=${spring.tesb.version}</bundle>
+        <bundle start-level="30">wrap:mvn:org.springframework/spring-context-support/${spring.tesb.version}$Bundle-Name=Spring%20Context%20Support&amp;Bundle-SymbolicName=org.springframework.spring-context-support&amp;Bundle-Version=${spring.tesb.version}&amp;Export-Package=org.springframework.*;version=${spring.tesb.version}</bundle>
     </feature>
 
     <feature name="spring-jms" version="${spring.tesb.version}">
