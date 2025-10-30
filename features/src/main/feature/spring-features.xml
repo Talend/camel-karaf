@@ -21,11 +21,11 @@
 
     <feature name="spring" version="${spring.tesb.version}">
         <feature prerequisite="true">wrap</feature>
-        <bundle start-level="30">wrap:mvn:org.springframework/spring-core/${spring.tesb.version}$Export-Package=org.springframework.*;version=${spring.tesb.version}</bundle>
-        <bundle start-level="30">wrap:mvn:org.springframework/spring-expression/${spring.tesb.version}$Export-Package=org.springframework.*;version=${spring.tesb.version}</bundle>
-        <bundle start-level="30">wrap:mvn:org.springframework/spring-beans/${spring.tesb.version}$Export-Package=org.springframework.*;version=${spring.tesb.version}</bundle>
-        <bundle start-level="30">wrap:mvn:org.springframework/spring-aop/${spring.tesb.version}$Export-Package=org.*;version=${spring.tesb.version}</bundle>
-        <bundle start-level="30">wrap:mvn:org.springframework/spring-context/${spring.tesb.version}$Export-Package=org.springframework.*;version=${spring.tesb.version}</bundle>
+        <bundle start-level="30">wrap:mvn:org.springframework/spring-core/${spring.tesb.version}$Bundle-Name=Spring%20Core&amp;Bundle-SymbolicName=org.springframework.spring-core&amp;Bundle-Version=${spring.tesb.version}&amp;Export-Package=org.springframework.*;version=${spring.tesb.version}</bundle>
+        <bundle start-level="30">wrap:mvn:org.springframework/spring-expression/${spring.tesb.version}$Bundle-Name=Spring%20Expression&amp;Bundle-SymbolicName=org.springframework.spring-expression&amp;Bundle-Version=${spring.tesb.version}&amp;Export-Package=org.springframework.*;version=${spring.tesb.version}</bundle>
+        <bundle start-level="30">wrap:mvn:org.springframework/spring-beans/${spring.tesb.version}$Bundle-Name=Spring%20Beans&amp;Bundle-SymbolicName=org.springframework.spring-beans&amp;Bundle-Version=${spring.tesb.version}&amp;Export-Package=org.springframework.*;version=${spring.tesb.version}</bundle>
+        <bundle start-level="30">wrap:mvn:org.springframework/spring-aop/${spring.tesb.version}$Bundle-Name=Spring%20AOP&amp;Bundle-SymbolicName=org.springframework.spring-aop&amp;Bundle-Version=${spring.tesb.version}&amp;Export-Package=org.*;version=${spring.tesb.version}</bundle>
+        <bundle start-level="30">wrap:mvn:org.springframework/spring-context/${spring.tesb.version}$Bundle-Name=Spring%20Context&amp;Bundle-SymbolicName=org.springframework.spring-context&amp;Bundle-Version=${spring.tesb.version}&amp;Export-Package=org.springframework.*;version=${spring.tesb.version}</bundle>
         <bundle start-level="30">wrap:mvn:org.springframework/spring-context-support/${spring.tesb.version}$Export-Package=org.springframework.*;version=${spring.tesb.version}</bundle>
     </feature>
 
@@ -33,31 +33,31 @@
         <feature prerequisite="true">wrap</feature>
         <feature version="${camel-osgi-spring-version}">spring-tx</feature>
         <bundle dependency="true" start-level="10">mvn:jakarta.jms/jakarta.jms-api/${jakarta-jms-api-version}</bundle>
-        <bundle start-level="30">wrap:mvn:org.springframework/spring-jms/${spring.tesb.version}$Export-Package=org.springframework.*;version=${spring.tesb.version}</bundle>
+        <bundle start-level="30">wrap:mvn:org.springframework/spring-jms/${spring.tesb.version}$Bundle-Name=Spring%20JMS&amp;Bundle-SymbolicName=org.springframework.spring-jms&amp;Bundle-Version=${spring.tesb.version}&amp;Export-Package=org.springframework.*;version=${spring.tesb.version}</bundle>
     </feature>
 
     <feature name="spring-tx" version="${spring.tesb.version}">
         <feature prerequisite="true">wrap</feature>
         <feature version="${camel-osgi-spring-version}">spring</feature>
         <bundle dependency="true" start-level="10">mvn:jakarta.transaction/jakarta.transaction-api/${jakarta-transaction-api-version}</bundle>
-        <bundle start-level="30">wrap:mvn:org.springframework/spring-tx/${spring.tesb.version}$Export-Package=org.springframework.*;version=${spring.tesb.version}</bundle>
+        <bundle start-level="30">wrap:mvn:org.springframework/spring-tx/${spring.tesb.version}$Bundle-Name=Spring%20TX&amp;Bundle-SymbolicName=org.springframework.spring-tx&amp;Bundle-Version=${spring.tesb.version}&amp;Export-Package=org.springframework.*;version=${spring.tesb.version}</bundle>
     </feature>
 
     <feature name="spring-orm" version="${spring.tesb.version}">
         <feature prerequisite="true">wrap</feature>
         <feature version='${camel-osgi-spring-version}'>spring-jdbc</feature>
-        <bundle start-level="30">wrap:mvn:org.springframework/spring-orm/${spring.tesb.version}$Export-Package=org.springframework.*;version=${spring.tesb.version}</bundle>
+        <bundle start-level="30">wrap:mvn:org.springframework/spring-orm/${spring.tesb.version}$Bundle-Name=Spring%20ORM&amp;Bundle-SymbolicName=org.springframework.spring-orm&amp;Bundle-Version=${spring.tesb.version}&amp;Export-Package=org.springframework.*;version=${spring.tesb.version}</bundle>
     </feature>
 
     <feature name="spring-jdbc" version="${spring.tesb.version}">
         <feature prerequisite="true">wrap</feature>
         <feature version='${camel-osgi-spring-version}'>spring-tx</feature>
-        <bundle start-level="30">wrap:mvn:org.springframework/spring-jdbc/${spring.tesb.version}$Export-Package=org.springframework.*;version=${spring.tesb.version}</bundle>
+        <bundle start-level="30">wrap:mvn:org.springframework/spring-jdbc/${spring.tesb.version}$Bundle-Name=Spring%20JDBC&amp;Bundle-SymbolicName=org.springframework.spring-jdbc&amp;Bundle-Version=${spring.tesb.version}&amp;Export-Package=org.springframework.*;version=${spring.tesb.version}</bundle>
     </feature>
 
     <feature name="spring-messaging" version="${spring.tesb.version}">
         <feature prerequisite="true">wrap</feature>
         <feature version='${camel-osgi-spring-version}'>spring</feature>
-        <bundle start-level="30">wrap:mvn:org.springframework/spring-messaging/${spring.tesb.version}$Export-Package=org.springframework.*;version=${spring.tesb.version}</bundle>
+        <bundle start-level="30">wrap:mvn:org.springframework/spring-messaging/${spring.tesb.version}$Bundle-Name=Spring%20Messaging&amp;Bundle-SymbolicName=org.springframework.spring-messaging&amp;Bundle-Version=${spring.tesb.version}&amp;Export-Package=org.springframework.*;version=${spring.tesb.version}</bundle>
     </feature>
 </features>
