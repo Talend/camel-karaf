@@ -404,11 +404,11 @@
         <bundle>wrap:mvn:com.arangodb/core/${auto-detect-version}$${spi-consumer}</bundle>
         <bundle>wrap:mvn:com.arangodb/http-protocol/${auto-detect-version}</bundle>
         <bundle>wrap:mvn:com.arangodb/jackson-serde-json/${auto-detect-version}$${spi-consumer}</bundle>
-        <bundle dependency='true'>wrap:mvn:io.vertx/vertx-core/${vertx-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:io.vertx/vertx-web-client/${vertx-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:io.vertx/vertx-web-common/${vertx-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:io.vertx/vertx-uri-template/${vertx-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:io.vertx/vertx-auth-common/${vertx-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.vertx/vertx-core/${vertx.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.vertx/vertx-web-client/${vertx.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.vertx/vertx-web-common/${vertx.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.vertx/vertx-uri-template/${vertx.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.vertx/vertx-auth-common/${vertx.tesb.version}</bundle>
         <bundle dependency='true'>mvn:io.netty/netty-codec-http/${netty.tesb.version}</bundle>
         <bundle dependency='true'>mvn:io.netty/netty-codec-http2/${netty.tesb.version}</bundle>
         <bundle dependency='true'>mvn:io.netty/netty-handler-proxy/${netty.tesb.version}</bundle>
@@ -1999,9 +1999,9 @@
     </feature>
     <feature name='camel-knative-http' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-knative</feature>
-        <bundle dependency='true'>wrap:mvn:io.vertx/vertx-core/${vertx-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:io.vertx/vertx-web/${vertx-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:io.vertx/vertx-web-client/${vertx-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.vertx/vertx-core/${vertx.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.vertx/vertx-web/${vertx.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.vertx/vertx-web-client/${vertx.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-knative-http/${camel-knative-http.tesb.version}</bundle>
     </feature>
     <feature name='camel-kubernetes' version='${upstream.version}' start-level='50'>
@@ -2083,6 +2083,8 @@
         <bundle dependency="true">wrap:mvn:org.jetbrains.kotlin/kotlin-stdlib-common/${kotlin-stdlib-common.tesb.version}</bundle>
         <bundle dependency="true">wrap:mvn:org.jetbrains.kotlin/kotlin-stdlib/${kotlin.tesb.version}</bundle>
         <bundle dependency="true">wrap:mvn:org.jetbrains/annotations/${auto-detect-version}</bundle>
+        <bundle dependency='true'>mvn:org.reactivestreams/reactive-streams/${reactive-streams-version}</bundle>
+        <bundle dependency='true'>mvn:io.projectreactor/reactor-core/${reactor.tesb.version}</bundle>
     </feature>
     <feature name='camel-langchain4j-tokenizer' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
@@ -2518,8 +2520,8 @@
         <feature version='${camel-osgi-version-range}'>camel-platform-http</feature>
         <feature version='[4.1,5)'>netty</feature>
         <feature version="[5,6)">jakarta-servlet</feature>
-        <bundle dependency='true'>wrap:mvn:io.vertx/vertx-core/${vertx-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:io.vertx/vertx-web/${vertx-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.vertx/vertx-core/${vertx.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.vertx/vertx-web/${vertx.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:org.jolokia/jolokia-json/${jolokia.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:org.jolokia/jolokia-agent-jvm/${jolokia.tesb.version}</bundle>
         <!-- Use the wrap protocol to work-around problems with exported and imported packages -->
@@ -2532,17 +2534,17 @@
     </feature>
     <feature name='camel-platform-http-main' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-platform-http-vertx</feature>
-        <bundle dependency='true'>wrap:mvn:io.vertx/vertx-auth-properties/${vertx-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:io.vertx/vertx-auth-jwt/${vertx-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.vertx/vertx-auth-properties/${vertx.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.vertx/vertx-auth-jwt/${vertx.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-platform-http-main/${upstream.version}</bundle>
     </feature>
     <feature name='camel-platform-http-vertx' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-platform-http</feature>
         <feature version='${camel-osgi-version-range}'>camel-vertx-common</feature>
         <bundle dependency='true'>mvn:org.apache.camel.karaf/camel-attachments/${upstream.version}</bundle>
-        <bundle dependency='true'>wrap:mvn:io.vertx/vertx-auth-common/${vertx-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:io.vertx/vertx-auth-properties/${vertx-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:io.vertx/vertx-web/${vertx-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.vertx/vertx-auth-common/${vertx.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.vertx/vertx-auth-properties/${vertx.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.vertx/vertx-web/${vertx.tesb.version}</bundle>
         <bundle dependency='true'>mvn:io.netty/netty-codec-http/${netty.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-platform-http-vertx/${upstream.version}</bundle>
     </feature>
@@ -2624,7 +2626,7 @@
     <feature name='camel-reactive-executor-vertx' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version='[4.1,5)'>netty</feature>
-        <bundle dependency='true'>wrap:mvn:io.vertx/vertx-core/${vertx-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.vertx/vertx-core/${vertx.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-reactive-executor-vertx/${upstream.version}</bundle>
     </feature>
     <feature name='camel-reactive-streams' version='${upstream.version}' start-level='50'>
@@ -3056,7 +3058,7 @@
     </feature>
     <feature name='camel-threadpoolfactory-vertx' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
-        <bundle dependency='true'>wrap:mvn:io.vertx/vertx-core/${vertx-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.vertx/vertx-core/${vertx.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-threadpoolfactory-vertx/${upstream.version}</bundle>
     </feature>
     <feature name='camel-thrift' version='${upstream.version}' start-level='50'>
@@ -3097,8 +3099,8 @@
     <feature name='camel-undertow' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version="[6,7)">jakarta-servlet</feature>
-        <bundle dependency='true'>mvn:io.undertow/undertow-core/${undertow-version}</bundle>
-        <bundle dependency='true'>mvn:io.undertow/undertow-servlet/${undertow-version}</bundle>
+        <bundle dependency='true'>mvn:io.undertow/undertow-core/${undertow.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:io.undertow/undertow-servlet/${undertow.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:org.wildfly.common/wildfly-common/${auto-detect-version}$Export-Package=*;version=${auto-detect-version}</bundle>
         <bundle dependency='true'>mvn:org.jboss.xnio/xnio-api/${auto-detect-version}</bundle>
         <bundle dependency='true'>mvn:org.jboss.xnio/xnio-nio/${auto-detect-version}</bundle>
@@ -3131,19 +3133,19 @@
     <feature name='camel-vertx-common' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version='[4.1,5)'>netty</feature>
-        <bundle dependency='true'>wrap:mvn:io.vertx/vertx-core/${vertx-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.vertx/vertx-core/${vertx.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-vertx-common/${upstream.version}</bundle>
     </feature>
     <feature name='camel-vertx-http' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-vertx-common</feature>
         <bundle dependency='true'>mvn:org.apache.camel.karaf/camel-http-base/${upstream.version}</bundle>
-        <bundle dependency='true'>wrap:mvn:io.vertx/vertx-web-client/${vertx-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:io.vertx/vertx-web-common/${vertx-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.vertx/vertx-web-client/${vertx.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.vertx/vertx-web-common/${vertx.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-vertx-http/${camel-vertx-http.tesb.version}</bundle>
     </feature>
     <feature name='camel-vertx-websocket' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-vertx-common</feature>
-        <bundle dependency='true'>wrap:mvn:io.vertx/vertx-web/${vertx-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.vertx/vertx-web/${vertx.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-vertx-websocket/${upstream.version}</bundle>
     </feature>
     <feature name='camel-velocity' version='${upstream.version}' start-level='50'>

@@ -88,7 +88,7 @@
     <!-- TODO use Karaf/Camel bom -->
     <properties>
         <upstream.version>4.8.1</upstream.version>
-        <camel-features.tesb.version>4.8.1.20251107</camel-features.tesb.version>
+        <camel-features.tesb.version>4.8.1.20251106</camel-features.tesb.version>
         <camel-support.tesb.version>4.8.1.20250320</camel-support.tesb.version>
         <camel-vm.tesb.version>4.8.1.20250320</camel-vm.tesb.version>
         <camel-activemq.tesb.version>4.8.1.20250320</camel-activemq.tesb.version>
@@ -266,7 +266,9 @@
         <squareup-okio.tesb.version>1.17.6</squareup-okio.tesb.version>
         <stax2-api.tesb.version>4.2.2</stax2-api.tesb.version>
         <typesafe-config.tesb.version>1.4.2</typesafe-config.tesb.version>
+        <undertow.tesb.version>2.3.20.Final</undertow.tesb.version>
         <velocity.tesb.version>2.4.1</velocity.tesb.version>
+        <vertx.tesb.version>4.5.22</vertx.tesb.version>
         <wildfly-elytron.tesb.version>2.2.10.Final</wildfly-elytron.tesb.version>
         <woodstox-core.tesb.version>7.1.0</woodstox-core.tesb.version>
         <zookeeper.tesb.version>3.9.4</zookeeper.tesb.version>
@@ -1056,7 +1058,9 @@
                             <squareup-okio.tesb.version>${squareup-okio.tesb.version}</squareup-okio.tesb.version>
                             <stax2-api.tesb.version>${stax2-api.tesb.version}</stax2-api.tesb.version>
                             <typesafe-config.tesb.version>${typesafe-config.tesb.version}</typesafe-config.tesb.version>
+                            <undertow.tesb.version>${undertow.tesb.version}</undertow.tesb.version>
                             <velocity.tesb.version>${velocity.tesb.version}</velocity.tesb.version>
+                            <vertx.tesb.version>${vertx.tesb.version}</vertx.tesb.version>
                             <wildfly-elytron.tesb.version>${wildfly-elytron.tesb.version}</wildfly-elytron.tesb.version>
                             <woodstox-core.tesb.version>${woodstox-core.tesb.version}</woodstox-core.tesb.version>
                             <zookeeper.tesb.version>${zookeeper.tesb.version}</zookeeper.tesb.version>
