@@ -88,7 +88,7 @@
     <!-- TODO use Karaf/Camel bom -->
     <properties>
         <upstream.version>4.8.1</upstream.version>
-        <camel-features.tesb.version>4.8.1.20251001</camel-features.tesb.version>
+        <camel-features.tesb.version>4.8.1.20251107</camel-features.tesb.version>
         <camel-support.tesb.version>4.8.1.20250320</camel-support.tesb.version>
         <camel-vm.tesb.version>4.8.1.20250320</camel-vm.tesb.version>
         <camel-activemq.tesb.version>4.8.1.20250320</camel-activemq.tesb.version>
@@ -512,7 +512,7 @@
         <jsch-version>0.2.19</jsch-version>
         <javax-json-api-version>1.1.4</javax-json-api-version>
         <jsonassert-version>1.5.3</jsonassert-version>
-        <json-path-version>2.9.0</json-path-version>
+        <json-path-version>2.9.1</json-path-version>
         <json-patch-version>1.13</json-patch-version>
         <json-smart-version>2.5.1</json-smart-version>
         <jsonata-version>0.9.7</jsonata-version>
