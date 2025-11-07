@@ -264,8 +264,8 @@
         <bundle dependency='true'>mvn:com.nimbusds/lang-tag/${auto-detect-version}</bundle>
         <bundle dependency='true'>mvn:com.nimbusds/nimbus-jose-jwt/${nimbus-jose-jwt.tesb.version}</bundle>
         <bundle dependency='true'>mvn:com.nimbusds/oauth2-oidc-sdk/${oauth2-oidc-sdk.tesb.version}</bundle>
-        <bundle dependency='true'>mvn:net.minidev/accessors-smart/${json-smart-version}</bundle>
-        <bundle dependency='true'>mvn:net.minidev/json-smart/${json-smart-version}</bundle>    
+        <bundle dependency='true'>mvn:net.minidev/accessors-smart/${json-smart.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:net.minidev/json-smart/${json-smart.tesb.version}</bundle>    
         <bundle dependency='true'>wrap:mvn:com.github.stephenc.jcip/jcip-annotations/${auto-detect-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.microsoft.azure/msal4j/${msal4j-version}$overwrite=merge&amp;Import-Package=com.sun.net.httpserver;resolution:=optional,*</bundle>
     </feature>
@@ -1334,9 +1334,9 @@
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version='[5,6)'>http-client</feature>
         <bundle dependency='true'>wrap:mvn:com.google.maps/google-maps-services/${google-maps-services-version}</bundle>
-        <bundle dependency='true'>mvn:com.jayway.jsonpath/json-path/${json-path-version}</bundle>
-        <bundle dependency='true'>mvn:net.minidev/json-smart/${json-smart-version}</bundle>
-        <bundle dependency='true'>mvn:net.minidev/accessors-smart/${json-smart-version}</bundle>
+        <bundle dependency='true'>mvn:com.jayway.jsonpath/json-path/${json-path.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:net.minidev/json-smart/${json-smart.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:net.minidev/accessors-smart/${json-smart.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.ow2.asm/asm/${asm.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-geocoder/${upstream.version}</bundle>
     </feature>
@@ -2019,9 +2019,9 @@
     <feature name='camel-jsonpath' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version='${camel-osgi-jackson2.tesb.version}'>jackson</feature>
-        <bundle dependency='true'>mvn:com.jayway.jsonpath/json-path/${json-path-version}</bundle>
-        <bundle dependency='true'>mvn:net.minidev/json-smart/${json-smart-version}</bundle>
-        <bundle dependency='true'>mvn:net.minidev/accessors-smart/${json-smart-version}</bundle>
+        <bundle dependency='true'>mvn:com.jayway.jsonpath/json-path/${json-path.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:net.minidev/json-smart/${json-smart.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:net.minidev/accessors-smart/${json-smart.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.ow2.asm/asm/${asm.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-jsonpath/${upstream.version}</bundle>
     </feature>

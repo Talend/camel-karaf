@@ -144,6 +144,8 @@
         <jna.tesb.version>5.17.0</jna.tesb.version>
         <jolokia.tesb.version>2.2.8</jolokia.tesb.version>
         <json2avro.tesb.version>0.2.15</json2avro.tesb.version>
+        <json-path.tesb.version>2.10.1</json-path.tesb.version>
+        <json-smart.tesb.version>2.6.0</json-smart.tesb.version>
         <jsoup.tesb.version>1.21.1</jsoup.tesb.version>
         <jsr305.tesb.version>3.0.2.tesb1</jsr305.tesb.version>
         <jtokkit.tesb.version>1.1.0</jtokkit.tesb.version>
@@ -860,6 +862,8 @@
                             <jna.tesb.version>${jna.tesb.version}</jna.tesb.version>
                             <jolokia.tesb.version>${jolokia.tesb.version}</jolokia.tesb.version>
                             <json2avro.tesb.version>${json2avro.tesb.version}</json2avro.tesb.version>
+                            <json-path.tesb.version>${json-path.tesb.version}</json-path.tesb.version>
+                            <json-smart.tesb.version>${json-smart.tesb.version>}</json-smart.tesb.version>
                             <jsoup.tesb.version>${jsoup.tesb.version}</jsoup.tesb.version>
                             <jsr305.tesb.version>${jsr305.tesb.version}</jsr305.tesb.version>
                             <jtokkit.tesb.version>${jtokkit.tesb.version}</jtokkit.tesb.version>
