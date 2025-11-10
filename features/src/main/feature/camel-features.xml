@@ -1301,8 +1301,8 @@
         <bundle dependency='true'>mvn:org.flowable/flowable-eventsubscription-service-api/${flowable-version}</bundle>
         <bundle dependency='true'>mvn:org.flowable/flowable-variable-service-api/${flowable-version}</bundle>
         <bundle dependency='true'>mvn:org.flowable/flowable-bpmn-model/${flowable-version}</bundle>
-        <bundle dependency='true'>mvn:commons-io/commons-io/${auto-detect-version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${auto-detect-version}</bundle>
+        <bundle dependency='true'>mvn:commons-io/commons-io/${commons-io.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3.tesb.version}</bundle>
         <bundle dependency='true'>mvn:com.fasterxml.uuid/java-uuid-generator/${auto-detect-version}</bundle>
         <bundle dependency='true'>mvn:org.mybatis/mybatis/${auto-detect-version}</bundle>
         <bundle dependency='true'>mvn:joda-time/joda-time/${auto-detect-version}</bundle>
@@ -2255,7 +2255,7 @@
         <feature version='${camel-osgi-version-range}'>camel-mail</feature>
         <feature version='${camel-osgi-jackson2.tesb.version}'>jackson</feature>
         <bundle dependency='true'>mvn:org.ow2.asm/asm/${asm.tesb.version}</bundle>
-        <bundle dependency='true'>mvn:com.nimbusds/nimbus-jose-jwt/9.40</bundle>
+        <bundle dependency='true'>mvn:com.nimbusds/nimbus-jose-jwt/${nimbus-jose-jwt.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-mail-microsoft-oauth/${upstream.version}</bundle>
     </feature>
     <feature name='camel-mapstruct' version='${upstream.version}' start-level='50'>
@@ -3051,8 +3051,8 @@ Chain 2:
     <feature name='camel-spring-security' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version='${camel-osgi-spring-version}'>spring</feature>
-        <bundle dependency='true'>wrap:mvn:org.springframework.security/spring-security-core/${spring-security-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:org.springframework.security/spring-security-config/${spring-security-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:org.springframework.security/spring-security-core/${spring-security.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:org.springframework.security/spring-security-config/${spring-security.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-spring-security/${upstream.version}</bundle>
     </feature>
     <feature name='camel-spring-ws' version='${upstream.version}' start-level='50'>
@@ -3260,10 +3260,10 @@ Chain 2:
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version='${camel-osgi-version-range}'>camel-undertow</feature>
         <feature version='${camel-osgi-spring-version}'>spring</feature>
-        <bundle dependency='true'>wrap:mvn:org.springframework.security/spring-security-core/${spring-security-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:org.springframework.security/spring-security-oauth2-client/${spring-security-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:org.springframework.security/spring-security-oauth2-jose/${spring-security-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:org.springframework.security/spring-security-oauth2-resource-server/${spring-security-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:org.springframework.security/spring-security-core/${spring-security.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:org.springframework.security/spring-security-oauth2-client/${spring-security.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:org.springframework.security/spring-security-oauth2-jose/${spring-security.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:org.springframework.security/spring-security-oauth2-resource-server/${spring-security.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-undertow-spring-security/${upstream.version}</bundle>
     </feature>
     <feature name='camel-univocity-parsers' version='${upstream.version}' start-level='50'>

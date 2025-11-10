@@ -179,6 +179,7 @@
         <smallrye-fault-tolerance.tesb.version>6.9.0</smallrye-fault-tolerance.tesb.version>
         <snakeyaml.tesb.version>2.4</snakeyaml.tesb.version>
         <spring.tesb.version>6.2.11</spring.tesb.version>
+        <spring-security.tesb.version>6.4.12</spring-security.tesb.version>
         <squareup-okio.tesb.version>1.17.6</squareup-okio.tesb.version>
         <stax2-api.tesb.version>4.2.2</stax2-api.tesb.version>
         <typesafe-config.tesb.version>1.4.2</typesafe-config.tesb.version>
@@ -896,6 +897,7 @@
                             <smallrye-fault-tolerance.tesb.version>${smallrye-fault-tolerance.tesb.version}</smallrye-fault-tolerance.tesb.version>
                             <snakeyaml.tesb.version>${snakeyaml.tesb.version}</snakeyaml.tesb.version>
                             <spring.tesb.version>${spring.tesb.version}</spring.tesb.version>
+                            <spring-security.tesb.version>${spring-security.tesb.version}</spring-security.tesb.version>
                             <squareup-okio.tesb.version>${squareup-okio.tesb.version}</squareup-okio.tesb.version>
                             <stax2-api.tesb.version>${stax2-api.tesb.version}</stax2-api.tesb.version>
                             <typesafe-config.tesb.version>${typesafe-config.tesb.version}</typesafe-config.tesb.version>
