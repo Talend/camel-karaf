@@ -110,10 +110,11 @@
         <jetty12.tesb.version-range>[12,13)</jetty12.tesb.version-range>
         <jetty.tesb.version-range>${jetty12.tesb.version-range}</jetty.tesb.version-range>
         <activemq6.tesb.version>6.1.6</activemq6.tesb.version>
-        <activemq-artemis.tesb.version>2.40.0</activemq-artemis.tesb.version>
+        <activemq-artemis.tesb.version>2.42.0</activemq-artemis.tesb.version>
         <angus-mail.tesb.version>2.0.4</angus-mail.tesb.version>
         <apache-drill.tesb.version>1.22.0</apache-drill.tesb.version>
         <asm.tesb.version>9.8</asm.tesb.version>
+        <awaitility.tesb.version>4.3.0</awaitility.tesb.version>
         <bouncycastle.tesb.version>1.81</bouncycastle.tesb.version>
         <bytebuddy.tesb.version>1.17.6</bytebuddy.tesb.version>
         <commons-codec.tesb.version>1.19.0</commons-codec.tesb.version>
@@ -159,7 +160,11 @@
         <langchain4j.tesb.version>1.0.0</langchain4j.tesb.version>
         <langchain4j-mcp.tesb.version>1.0.0-beta5</langchain4j-mcp.tesb.version>
         <langchain4j0.tesb.version>0.36.2</langchain4j0.tesb.version>
+        <littleproxy.tesb.version>2.4.3</littleproxy.tesb.version>
         <logback.tesb.version>1.5.18</logback.tesb.version>
+        <lucene.tesb.version>9.12.1</lucene.tesb.version>
+        <micrometer.tesb.version>1.14.9</micrometer.tesb.version>
+        <micrometer-tracing.tesb.version>1.4.8</micrometer-tracing.tesb.version>
         <minio.tesb.version>8.6.0</minio.tesb.version>
         <netty.tesb.version>4.1.127.Final</netty.tesb.version>
         <nimbus-jose-jwt.tesb.version>10.4</nimbus-jose-jwt.tesb.version>
@@ -168,6 +173,8 @@
         <okhttp4.tesb.version>4.12.0</okhttp4.tesb.version>
         <okio.tesb.version>3.16.0</okio.tesb.version>
         <opennlp.tesb.version>2.5.4</opennlp.tesb.version>
+        <opentelemetry.tesb.version>1.52.0</opentelemetry.tesb.version>
+        <opentelemetry-semconv.tesb.version>1.29.0-alpha</opentelemetry-semconv.tesb.version>
         <paranamer.tesb.version>2.8</paranamer.tesb.version>
         <parquet-avro.tesb.version>1.15.2</parquet-avro.tesb.version>
         <pax-web.tesb.version>11.0.1</pax-web.tesb.version>
@@ -179,13 +186,17 @@
         <smallrye-fault-tolerance.tesb.version>6.9.0</smallrye-fault-tolerance.tesb.version>
         <snakeyaml.tesb.version>2.4</snakeyaml.tesb.version>
         <spring.tesb.version>6.2.11</spring.tesb.version>
+        <spring-ldap.tesb.version>3.2.13</spring-ldap.tesb.version>
         <spring-security.tesb.version>6.4.12</spring-security.tesb.version>
         <squareup-okio.tesb.version>1.17.6</squareup-okio.tesb.version>
         <stax2-api.tesb.version>4.2.2</stax2-api.tesb.version>
+        <swagger-openapi3.tesb.version>2.2.34</swagger-openapi3.tesb.version>
         <typesafe-config.tesb.version>1.4.2</typesafe-config.tesb.version>
         <undertow.tesb.version>2.3.20.Final</undertow.tesb.version>
         <vertx.tesb.version>4.5.22</vertx.tesb.version>
         <wildfly-elytron.tesb.version>2.2.10.Final</wildfly-elytron.tesb.version>
+        <wiremock.tesb.version>3.13.1</wiremock.tesb.version>
+        <woodstox-core.tesb.version>7.1.1</woodstox-core.tesb.version>
         <zookeeper.tesb.version>3.9.4</zookeeper.tesb.version>
         <zookeeper-server.tesb.version>3.9.4.jetty12.1</zookeeper-server.tesb.version>
         <camel-osgi-cxf.tesb.version>[4.1,4.2)</camel-osgi-cxf.tesb.version>
@@ -833,6 +844,7 @@
                             <angus-mail.tesb.version>${angus-mail.tesb.version}</angus-mail.tesb.version>
                             <apache-drill.tesb.version>${apache-drill.tesb.version>}</apache-drill.tesb.version>
                             <asm.tesb.version>${asm.tesb.version}</asm.tesb.version>
+                            <awaitility.tesb.version>${awaitility.tesb.version}</awaitility.tesb.version>
                             <bouncycastle.tesb.version>${bouncycastle.tesb.version}</bouncycastle.tesb.version>
                             <bytebuddy.tesb.version>${bytebuddy.tesb.version}</bytebuddy.tesb.version>
                             <commons-codec.tesb.version>${commons-codec.tesb.version}</commons-codec.tesb.version>
@@ -878,7 +890,11 @@
                             <langchain4j.tesb.version>${langchain4j.tesb.version}</langchain4j.tesb.version>
                             <langchain4j-mcp.tesb.version>${langchain4j-mcp.tesb.version}</langchain4j-mcp.tesb.version>
                             <langchain4j0.tesb.version>${langchain4j0.tesb.version}</langchain4j0.tesb.version>
+                            <littleproxy.tesb.version>${littleproxy.tesb.version}</littleproxy.tesb.version>
                             <logback.tesb.version>${logback.tesb.version}</logback.tesb.version>
+                            <lucene.tesb.version>${lucene.tesb.version}</lucene.tesb.version>
+                            <micrometer.tesb.version>${micrometer.tesb.version}</micrometer.tesb.version>
+                            <micrometer-tracing.tesb.version>${micrometer-tracing.tesb.version}</micrometer-tracing.tesb.version>
                             <minio.tesb.version>${minio.tesb.version}</minio.tesb.version>
                             <netty.tesb.version>${netty.tesb.version}</netty.tesb.version>
                             <nimbus-jose-jwt.tesb.version>${nimbus-jose-jwt.tesb.version}</nimbus-jose-jwt.tesb.version>
@@ -887,6 +903,8 @@
                             <okhttp4.tesb.version>${okhttp4.tesb.version}</okhttp4.tesb.version>
                             <okio.tesb.version>${okio.tesb.version}</okio.tesb.version>
                             <opennlp.tesb.version>${opennlp.tesb.version}</opennlp.tesb.version>
+                            <opentelemetry.tesb.version>${opentelemetry.tesb.version}</opentelemetry.tesb.version>
+                            <opentelemetry-semconv.tesb.version>${opentelemetry-semconv.tesb.version}</opentelemetry-semconv.tesb.version>
                             <paranamer.tesb.version>${paranamer.tesb.version}</paranamer.tesb.version>
                             <parquet-avro.tesb.version>${parquet-avro.tesb.version}</parquet-avro.tesb.version>
                             <pax-web.tesb.version>${pax-web.tesb.version}</pax-web.tesb.version>
@@ -897,13 +915,17 @@
                             <smallrye-fault-tolerance.tesb.version>${smallrye-fault-tolerance.tesb.version}</smallrye-fault-tolerance.tesb.version>
                             <snakeyaml.tesb.version>${snakeyaml.tesb.version}</snakeyaml.tesb.version>
                             <spring.tesb.version>${spring.tesb.version}</spring.tesb.version>
+                            <spring-ldap.tesb.version>${spring-ldap.tesb.version}</spring-ldap.tesb.version>
                             <spring-security.tesb.version>${spring-security.tesb.version}</spring-security.tesb.version>
                             <squareup-okio.tesb.version>${squareup-okio.tesb.version}</squareup-okio.tesb.version>
                             <stax2-api.tesb.version>${stax2-api.tesb.version}</stax2-api.tesb.version>
+                            <swagger-openapi3.tesb.version>${swagger-openapi3.tesb.version}</swagger-openapi3.tesb.version>
                             <typesafe-config.tesb.version>${typesafe-config.tesb.version}</typesafe-config.tesb.version>
                             <undertow.tesb.version>${undertow.tesb.version}</undertow.tesb.version>
                             <vertx.tesb.version>${vertx.tesb.version}</vertx.tesb.version>
                             <wildfly-elytron.tesb.version>${wildfly-elytron.tesb.version}</wildfly-elytron.tesb.version>
+                            <wiremock.tesb.version>${wiremock.tesb.version}</wiremock.tesb.version>
+                            <woodstox-core.tesb.version>${woodstox-core.tesb.version}</woodstox-core.tesb.version>
                             <zookeeper.tesb.version>${zookeeper.tesb.version}</zookeeper.tesb.version>
                             <zookeeper-server.tesb.version>${zookeeper-server.tesb.version}</zookeeper-server.tesb.version>
                             <osgi-service-servlet.tesb.version>${osgi-service-servlet.tesb.version}</osgi-service-servlet.tesb.version>

@@ -217,7 +217,7 @@
         <feature version="${camel-osgi-jakarta-bind-version}">jaxb-runtime</feature>
         <feature version="${camel-osgi-jakarta-activation-runtime-version}">activation-runtime</feature>
         <bundle>mvn:org.codehaus.woodstox/stax2-api/${stax2-api.tesb.version}</bundle>
-        <bundle>mvn:com.fasterxml.woodstox/woodstox-core/${woodstox-core-version}</bundle>
+        <bundle>mvn:com.fasterxml.woodstox/woodstox-core/${woodstox-core.tesb.version}</bundle>
     </feature>
 
     <feature name="awssdk" version="${aws-java-sdk2-version}" start-level="50">
@@ -1206,8 +1206,8 @@
         <bundle dependency="true">mvn:org.glassfish.hk2/osgi-resource-locator/${osgi-resource-locator-version}</bundle>
         <bundle dependency="true">mvn:org.eclipse.parsson/parsson/${parson-version}</bundle>
         <bundle dependency='true'>mvn:jakarta.json/jakarta.json-api/${jakarta-json-api-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-api/${opentelemetry-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-context/${opentelemetry-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-api/${opentelemetry.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-context/${opentelemetry.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:org.apache.httpcomponents/httpasyncclient/${httpasyncclient-version}</bundle>
         <bundle dependency='true'>wrap:mvn:co.elastic.clients/elasticsearch-java/${elasticsearch-java-client-version}</bundle>
         <bundle dependency='true'>wrap:mvn:org.elasticsearch.client/elasticsearch-rest-client/${elasticsearch-java-client-version}</bundle>
@@ -1264,7 +1264,7 @@
         <bundle dependency='true'>mvn:org.apache.commons/commons-text/${commons-text.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3.tesb.version}</bundle>
         <bundle dependency='true'>mvn:commons-io/commons-io/${commons-io.tesb.version}</bundle>
-        <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-api/${auto-detect-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-api/${opentelemetry.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:io.opentelemetry.instrumentation/opentelemetry-instrumentation-annotations/${auto-detect-version}</bundle>
         <bundle dependency='true'>mvn:ca.uhn.hapi.fhir/hapi-fhir-base/${hapi-fhir-version}</bundle>
         <bundle dependency='true'>mvn:ca.uhn.hapi.fhir/hapi-fhir-client/${hapi-fhir-version}</bundle>
@@ -1483,9 +1483,9 @@
         <bundle dependency='true'>wrap:mvn:io.grpc/grpc-services/${grpc-version}</bundle>
         <bundle dependency='true'>wrap:mvn:io.grpc/grpc-auth/${grpc-version}</bundle>
         <bundle dependency='true'>wrap:mvn:io.grpc/grpc-util/${grpc-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-api/${auto-detect-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-context/${auto-detect-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-semconv/${auto-detect-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-api/${opentelemetry.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-context/${opentelemetry.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-semconv/${opentelemetry-semconv.tesb.version}</bundle>
         <bundle dependency='true'>mvn:com.google.code.findbugs/jsr305/${jsr305.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-google-pubsub/${upstream.version}</bundle>
     </feature>
@@ -1926,8 +1926,8 @@
         <!-- Workaround START -->
         <bundle start-level="30">wrap:mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-jms/${servicemix-spring-jms-version}_1$overwrite=merge&amp;Import-package=io.micrometer;resolution:=optional,*;resolution:=optional&amp;Bundle-Version=${servicemix-spring-jms-version}.2</bundle>
         <!-- Workaround END -->
-        <bundle dependency='true'>mvn:io.micrometer/micrometer-observation/${micrometer-version}</bundle>
-        <bundle dependency='true'>mvn:io.micrometer/micrometer-commons/${micrometer-version}</bundle>
+        <bundle dependency='true'>mvn:io.micrometer/micrometer-observation/${micrometer.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:io.micrometer/micrometer-commons/${micrometer.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-jms/${upstream.version}</bundle>
     </feature>
     <feature name='camel-jmx' version='${upstream.version}' start-level='50'>
@@ -2225,9 +2225,9 @@
     </feature>
     <feature name='camel-lucene' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
-        <bundle dependency='true'>wrap:mvn:org.apache.lucene/lucene-core/${lucene-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:org.apache.lucene/lucene-queryparser/${lucene-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:org.apache.lucene/lucene-analysis-common/${lucene-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:org.apache.lucene/lucene-core/${lucene.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:org.apache.lucene/lucene-queryparser/${lucene.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:org.apache.lucene/lucene-analysis-common/${lucene.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-lucene/${upstream.version}</bundle>
     </feature>
     <feature name='camel-lumberjack' version='${upstream.version}' start-level='50'>
@@ -2278,9 +2278,9 @@
     <feature name='camel-micrometer' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version='${camel-osgi-jackson2.tesb.version}'>jackson</feature>
-        <bundle dependency='true'>wrap:mvn:io.micrometer/micrometer-core/${micrometer-version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
-        <bundle dependency='true'>mvn:io.micrometer/micrometer-commons/${micrometer-version}</bundle>
-        <bundle dependency='true'>mvn:io.micrometer/micrometer-registry-jmx/${micrometer-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.micrometer/micrometer-core/${micrometer.tesb.version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
+        <bundle dependency='true'>mvn:io.micrometer/micrometer-commons/${micrometer.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:io.micrometer/micrometer-registry-jmx/${micrometer.tesb.version}</bundle>
         <bundle dependency='true'>mvn:io.dropwizard.metrics/metrics-core/${metrics-version}</bundle>
         <bundle dependency='true'>mvn:io.dropwizard.metrics/metrics-jmx/${metrics-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-micrometer/${upstream.version}</bundle>
@@ -2297,7 +2297,7 @@
         <bundle dependency='true'>mvn:io.prometheus/prometheus-metrics-tracer-otel/${auto-detect-version:alias=io.prometheus/prometheus-metrics-tracer-common}</bundle>
         <bundle dependency='true'>mvn:io.prometheus/prometheus-metrics-tracer-otel-agent/${auto-detect-version:alias=io.prometheus/prometheus-metrics-tracer-common}</bundle>
         <bundle dependency='true'>wrap:mvn:io.prometheus/prometheus-metrics-config/${auto-detect-version}</bundle>
-        <bundle dependency='true'>mvn:io.micrometer/micrometer-registry-prometheus/${micrometer-version}</bundle>
+        <bundle dependency='true'>mvn:io.micrometer/micrometer-registry-prometheus/${micrometer.tesb.version}</bundle>
         <bundle dependency='true'>mvn:com.google.protobuf/protobuf-java/${protobuf4-version}</bundle>
         <bundle dependency='true'>mvn:io.smallrye/jandex/${jandex-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-micrometer-prometheus/${upstream.version}</bundle>
@@ -2445,9 +2445,9 @@
     </feature>
     <feature name='camel-observation' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-tracing</feature>
-        <bundle dependency='true'>mvn:io.micrometer/micrometer-observation/${micrometer-version}</bundle>
-        <bundle dependency='true'>mvn:io.micrometer/micrometer-commons/${micrometer-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:io.micrometer/micrometer-tracing/${micrometer-tracing-version}</bundle>
+        <bundle dependency='true'>mvn:io.micrometer/micrometer-observation/${micrometer.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:io.micrometer/micrometer-commons/${micrometer.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.micrometer/micrometer-tracing/${micrometer-tracing.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-observation/${upstream.version}</bundle>
     </feature>
     <feature name='camel-ognl' version='${upstream.version}' start-level='50'>
@@ -2504,9 +2504,9 @@
         <bundle dependency='true'>mvn:org.yaml/snakeyaml/${snakeyaml.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:io.swagger.parser.v3/swagger-parser-core/${swagger-openapi3-java-parser-version}</bundle>
         <bundle dependency='true'>wrap:mvn:io.swagger.parser.v3/swagger-parser-v3/${swagger-openapi3-java-parser-version}</bundle>
-        <bundle dependency='true'>mvn:io.swagger.core.v3/swagger-annotations-jakarta/${swagger-openapi3-version}</bundle>
-        <bundle dependency='true'>mvn:io.swagger.core.v3/swagger-models-jakarta/${swagger-openapi3-version}</bundle>
-        <bundle dependency='true'>mvn:io.swagger.core.v3/swagger-core-jakarta/${swagger-openapi3-version}</bundle>
+        <bundle dependency='true'>mvn:io.swagger.core.v3/swagger-annotations-jakarta/${swagger-openapi3.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:io.swagger.core.v3/swagger-models-jakarta/${swagger-openapi3.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:io.swagger.core.v3/swagger-core-jakarta/${swagger-openapi3.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-openapi-java/${upstream.version}</bundle>
     </feature>
@@ -2548,10 +2548,10 @@
     <feature name='camel-opentelemetry' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version='${camel-osgi-version-range}'>camel-tracing</feature>
-        <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-api/${opentelemetry-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-sdk/${opentelemetry-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-context/${opentelemetry-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-semconv/${opentelemetry-alpha-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-api/${opentelemetry.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-sdk/${opentelemetry.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-context/${opentelemetry.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-semconv/${opentelemetry-semconv.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-opentelemetry/${upstream.version}</bundle>
     </feature>
     <feature name='camel-optaplanner' version='${upstream.version}' start-level='50'>
@@ -2779,8 +2779,8 @@
         <feature version='${camel-osgi-jackson2.tesb.version}'>jackson</feature>
         <bundle dependency='true'>wrap:mvn:io.swagger.parser.v3/swagger-parser-core/${swagger-openapi3-java-parser-version}</bundle>
         <bundle dependency='true'>wrap:mvn:io.swagger.parser.v3/swagger-parser-v3/${swagger-openapi3-java-parser-version}</bundle>
-        <bundle dependency='true'>mvn:io.swagger.core.v3/swagger-core-jakarta/${swagger-openapi3-version}</bundle>
-        <bundle dependency='true'>mvn:io.swagger.core.v3/swagger-models-jakarta/${swagger-openapi3-version}</bundle>
+        <bundle dependency='true'>mvn:io.swagger.core.v3/swagger-core-jakarta/${swagger-openapi3.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:io.swagger.core.v3/swagger-models-jakarta/${swagger-openapi3.tesb.version}</bundle>
         <bundle dependency='true'>mvn:commons-io/commons-io/${commons-io.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-rest-openapi/${upstream.version}</bundle>
     </feature>
@@ -3017,7 +3017,7 @@ Chain 2:
     </feature>
     <feature name='camel-spring-ldap' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
-        <bundle dependency='true'>wrap:mvn:org.springframework.ldap/spring-ldap-core/${spring-ldap-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:org.springframework.ldap/spring-ldap-core/${spring-ldap.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-spring-ldap/${upstream.version}</bundle>
     </feature>
     <feature name='camel-spring-main' version='${upstream.version}' start-level='50'>
@@ -3031,9 +3031,9 @@ Chain 2:
         <bundle dependency='true'>wrap:mvn:org.springframework.amqp/spring-rabbit/${spring-rabbitmq-version}</bundle>
         <bundle dependency='true'>wrap:mvn:org.springframework.retry/spring-retry/${auto-detect-version}</bundle>
         <bundle dependency='true'>mvn:com.rabbitmq/amqp-client/${auto-detect-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:io.micrometer/micrometer-commons/${micrometer-version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
-        <bundle dependency='true'>mvn:io.micrometer/micrometer-observation/${micrometer-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:io.micrometer/micrometer-core/${micrometer-version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
+        <bundle dependency='true'>wrap:mvn:io.micrometer/micrometer-commons/${micrometer.tesb.version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
+        <bundle dependency='true'>mvn:io.micrometer/micrometer-observation/${micrometer.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.micrometer/micrometer-core/${micrometer.tesb.version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-spring-rabbitmq/${upstream.version}</bundle>
     </feature>
     <feature name='camel-spring-redis' version='${upstream.version}' start-level='50'>
@@ -3079,7 +3079,7 @@ Chain 2:
     </feature>
     <feature name='camel-stax' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
-        <bundle dependency='true'>mvn:com.fasterxml.woodstox/woodstox-core/${woodstox-core-version}</bundle>
+        <bundle dependency='true'>mvn:com.fasterxml.woodstox/woodstox-core/${woodstox-core.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-stax/${upstream.version}</bundle>
     </feature>
     <feature name='camel-stitch' version='${upstream.version}' start-level='50'>
