@@ -1305,7 +1305,7 @@
         <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3.tesb.version}</bundle>
         <bundle dependency='true'>mvn:com.fasterxml.uuid/java-uuid-generator/${auto-detect-version}</bundle>
         <bundle dependency='true'>mvn:org.mybatis/mybatis/${auto-detect-version}</bundle>
-        <bundle dependency='true'>mvn:joda-time/joda-time/${auto-detect-version}</bundle>
+        <bundle dependency='true'>mvn:joda-time/joda-time/${jodatime2-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-flowable/${upstream.version}</bundle>
     </feature>
     <feature name='camel-fop' version='${upstream.version}' start-level='50'>
@@ -1891,7 +1891,7 @@
         <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-contrib-http-util/${auto-detect-version}$Import-Package=javax.annotation;version="[3,4)",*</bundle>
         <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-api/${auto-detect-version}$Import-Package=javax.annotation;version="[3,4)",*</bundle>
         <bundle dependency='true'>wrap:mvn:io.grpc/grpc-api/${grpc.tesb.version}</bundle>
-        <bundle dependency='true'>mvn:joda-time/joda-time/${auto-detect-version}</bundle>
+        <bundle dependency='true'>mvn:joda-time/joda-time/${jodatime2-version}</bundle>
         <bundle dependency='true'>mvn:org.apache.httpcomponents/httpasyncclient-osgi/${auto-detect-version:alias=org.apache.httpcomponents/httpasyncclient}</bundle>
         <bundle dependency='true'>wrap:mvn:org.apache.httpcomponents/httpasyncclient-cache/${auto-detect-version}$Fragment-Host=org.apache.httpcomponents.httpclient;bundle-version=${httpclient4-version}</bundle>
         <bundle dependency='true'>mvn:io.atlassian.fugue/fugue/${atlassian-fugue-version}</bundle>
@@ -2424,7 +2424,7 @@
         <bundle dependency='true'>wrap:mvn:dev.langchain4j/langchain4j-core/${langchain4j.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.neo4j.driver/neo4j-java-driver/${neo4j-version}</bundle>
         <bundle dependency='true'>mvn:org.reactivestreams/reactive-streams/${reactive-streams-version}</bundle>
-        <bundle dependency='true'>mvn:io.projectreactor/reactor-core/${auto-detect-version}</bundle>
+        <bundle dependency='true'>mvn:io.projectreactor/reactor-core/${reactor.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-neo4j/${upstream.version}</bundle>
     </feature>
     <feature name='camel-nitrite' version='${upstream.version}' start-level='50'>
