@@ -128,6 +128,7 @@
         <couchbase-client.tesb.version>3.7.9</couchbase-client.tesb.version>
         <curator.tesb.version>5.8.0.tesb1</curator.tesb.version>
         <failureaccess.tesb.version>1.0.2</failureaccess.tesb.version>
+        <grpc.tesb.version>1.76.0</grpc.tesb.version>
         <hazelcast.tesb.version>5.5.0.tesb1</hazelcast.tesb.version>
         <httpclient.tesb.version>5.5</httpclient.tesb.version>
         <jackson-asl.tesb.version>1.9.16-TALEND</jackson-asl.tesb.version>
@@ -172,16 +173,16 @@
         <netty.tesb.version>4.1.127.Final</netty.tesb.version>
         <nimbus-jose-jwt.tesb.version>10.4</nimbus-jose-jwt.tesb.version>
         <oauth2-oidc-sdk.tesb.version>11.26</oauth2-oidc-sdk.tesb.version>
-        <okhttp.tesb.version>5.1.0</okhttp.tesb.version>
+        <okhttp.tesb.version>5.3.0</okhttp.tesb.version>
         <okhttp4.tesb.version>4.12.0</okhttp4.tesb.version>
-        <okio.tesb.version>3.16.0</okio.tesb.version>
+        <okio.tesb.version>3.16.2</okio.tesb.version>
         <opennlp.tesb.version>2.5.4</opennlp.tesb.version>
         <opentelemetry.tesb.version>1.52.0</opentelemetry.tesb.version>
         <opentelemetry-semconv.tesb.version>1.29.0-alpha</opentelemetry-semconv.tesb.version>
         <paranamer.tesb.version>2.8</paranamer.tesb.version>
         <parquet-avro.tesb.version>1.15.2</parquet-avro.tesb.version>
         <pax-web.tesb.version>11.0.1</pax-web.tesb.version>
-        <pgjdbc-driver.tesb.version>42.7.7</pgjdbc-driver.tesb.version>
+        <pgjdbc-driver.tesb.version>42.7.8</pgjdbc-driver.tesb.version>
         <protobuf.tesb.version>3.25.5</protobuf.tesb.version>
         <reactor.tesb.version>3.7.8</reactor.tesb.version>
         <reactor-netty.tesb.version>1.2.8</reactor-netty.tesb.version>
@@ -191,7 +192,8 @@
         <spring.tesb.version>6.2.11</spring.tesb.version>
         <spring-ldap.tesb.version>3.2.13</spring-ldap.tesb.version>
         <spring-security.tesb.version>6.4.12</spring-security.tesb.version>
-        <squareup-okio.tesb.version>1.17.6</squareup-okio.tesb.version>
+        <squareup-okhttp-bundle.tesb.version>4.10.0_3</squareup-okhttp-bundle.tesb.version>
+        <squareup-okio-bundle.tesb.version>3.8.0_1</squareup-okio-bundle.tesb.version>
         <stax2-api.tesb.version>4.2.2</stax2-api.tesb.version>
         <swagger-openapi3.tesb.version>2.2.34</swagger-openapi3.tesb.version>
         <typesafe-config.tesb.version>1.4.2</typesafe-config.tesb.version>
@@ -861,6 +863,7 @@
                             <couchbase-client.tesb.version>${couchbase-client.tesb.version}</couchbase-client.tesb.version>
                             <curator.tesb.version>${curator.tesb.version}</curator.tesb.version>
                             <failureaccess.tesb.version>${failureaccess.tesb.version}</failureaccess.tesb.version>
+                            <grpc.tesb.version>${grpc.tesb.version}</grpc.tesb.version>
                             <hazelcast.tesb.version>${hazelcast.tesb.version}</hazelcast.tesb.version>
                             <httpclient.tesb.version>${httpclient.tesb.version}</httpclient.tesb.version>
                             <jackson-asl.tesb.version>${jackson-asl.tesb.version}</jackson-asl.tesb.version>
@@ -923,7 +926,8 @@
                             <spring.tesb.version>${spring.tesb.version}</spring.tesb.version>
                             <spring-ldap.tesb.version>${spring-ldap.tesb.version}</spring-ldap.tesb.version>
                             <spring-security.tesb.version>${spring-security.tesb.version}</spring-security.tesb.version>
-                            <squareup-okio.tesb.version>${squareup-okio.tesb.version}</squareup-okio.tesb.version>
+                            <squareup-okhttp-bundle.tesb.version>${squareup-okhttp-bundle.tesb.version}</squareup-okhttp-bundle.tesb.version>
+                            <squareup-okio-bundle.tesb.version>${squareup-okio-bundle.tesb.version}</squareup-okio-bundle.tesb.version>
                             <stax2-api.tesb.version>${stax2-api.tesb.version}</stax2-api.tesb.version>
                             <swagger-openapi3.tesb.version>${swagger-openapi3.tesb.version}</swagger-openapi3.tesb.version>
                             <typesafe-config.tesb.version>${typesafe-config.tesb.version}</typesafe-config.tesb.version>
