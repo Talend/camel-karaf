@@ -117,6 +117,8 @@
         <awaitility.tesb.version>4.3.0</awaitility.tesb.version>
         <bouncycastle.tesb.version>1.81</bouncycastle.tesb.version>
         <bytebuddy.tesb.version>1.17.6</bytebuddy.tesb.version>
+        <c3p0.tesb.version>0.11.2</c3p0.tesb.version>
+        <c3p0-bundle.tesb.version>0.11.2_1</c3p0-bundle.tesb.version>
         <commons-codec.tesb.version>1.19.0</commons-codec.tesb.version>
         <commons-collections4.tesb.version>4.5.0</commons-collections4.tesb.version>
         <commons-compress.tesb.version>1.28.0</commons-compress.tesb.version>
@@ -163,6 +165,7 @@
         <littleproxy.tesb.version>2.4.3</littleproxy.tesb.version>
         <logback.tesb.version>1.5.18</logback.tesb.version>
         <lucene.tesb.version>9.12.1</lucene.tesb.version>
+        <metrics.tesb.version>4.2.33</metrics.tesb.version>
         <micrometer.tesb.version>1.14.9</micrometer.tesb.version>
         <micrometer-tracing.tesb.version>1.4.8</micrometer-tracing.tesb.version>
         <minio.tesb.version>8.6.0</minio.tesb.version>
@@ -847,6 +850,8 @@
                             <awaitility.tesb.version>${awaitility.tesb.version}</awaitility.tesb.version>
                             <bouncycastle.tesb.version>${bouncycastle.tesb.version}</bouncycastle.tesb.version>
                             <bytebuddy.tesb.version>${bytebuddy.tesb.version}</bytebuddy.tesb.version>
+                            <c3p0.tesb.version>${c3p0.tesb.version}</c3p0.tesb.version>
+                            <c3p0-bundle.tesb.version>${c3p0-bundle.tesb.version}</c3p0-bundle.tesb.version>
                             <commons-codec.tesb.version>${commons-codec.tesb.version}</commons-codec.tesb.version>
                             <commons-collections4.tesb.version>${commons-collections4.tesb.version}</commons-collections4.tesb.version>
                             <commons-compress.tesb.version>${commons-compress.tesb.version}</commons-compress.tesb.version>
@@ -893,6 +898,7 @@
                             <littleproxy.tesb.version>${littleproxy.tesb.version}</littleproxy.tesb.version>
                             <logback.tesb.version>${logback.tesb.version}</logback.tesb.version>
                             <lucene.tesb.version>${lucene.tesb.version}</lucene.tesb.version>
+                            <metrics.tesb.version>${metrics.tesb.version}</metrics.tesb.version>
                             <micrometer.tesb.version>${micrometer.tesb.version}</micrometer.tesb.version>
                             <micrometer-tracing.tesb.version>${micrometer-tracing.tesb.version}</micrometer-tracing.tesb.version>
                             <minio.tesb.version>${minio.tesb.version}</minio.tesb.version>

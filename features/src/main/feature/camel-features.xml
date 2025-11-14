@@ -869,7 +869,7 @@
         <bundle dependency='true'>mvn:org.apache.cassandra/java-driver-query-builder/${cassandra-driver-version}</bundle>
         <bundle dependency="true">mvn:com.datastax.oss/native-protocol/${auto-detect-version}</bundle>
         <bundle dependency="true">mvn:com.datastax.oss/java-driver-shaded-guava/${auto-detect-version}</bundle>
-        <bundle dependency='true'>mvn:io.dropwizard.metrics/metrics-core/${metrics-version}</bundle>
+        <bundle dependency='true'>mvn:io.dropwizard.metrics/metrics-core/${metrics.tesb.version}</bundle>
         <bundle dependency='true'>mvn:com.typesafe/config/${typesafe-config.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.hdrhistogram/HdrHistogram/${hdrhistrogram-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-cassandraql/${upstream.version}</bundle>
@@ -1169,9 +1169,9 @@
         <bundle dependency='true'>mvn:com.typesafe/config/${typesafe-config.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:org.reflections/reflections/0.9.12</bundle>
         <bundle dependency='true'>mvn:org.javassist/javassist/${javassist-version}</bundle>
-        <bundle dependency='true'>mvn:io.dropwizard.metrics/metrics-core/${metrics-version}</bundle>
-        <bundle dependency='true'>mvn:io.dropwizard.metrics/metrics-jmx/${metrics-version}</bundle>
-        <bundle dependency='true'>mvn:io.dropwizard.metrics/metrics-jvm/${metrics-version}</bundle>
+        <bundle dependency='true'>mvn:io.dropwizard.metrics/metrics-core/${metrics.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:io.dropwizard.metrics/metrics-jmx/${metrics.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:io.dropwizard.metrics/metrics-jvm/${metrics.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.apache.commons/commons-text/${commons-text.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.carrotsearch/hppc/0.10.0</bundle>
@@ -2270,9 +2270,9 @@
     <feature name='camel-metrics' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version='${camel-osgi-jackson2.tesb.version}'>jackson</feature>
-        <bundle dependency='true'>mvn:io.dropwizard.metrics/metrics-core/${metrics-version}</bundle>
-        <bundle dependency='true'>mvn:io.dropwizard.metrics/metrics-jmx/${metrics-version}</bundle>
-        <bundle dependency='true'>mvn:io.dropwizard.metrics/metrics-json/${metrics-version}</bundle>
+        <bundle dependency='true'>mvn:io.dropwizard.metrics/metrics-core/${metrics.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:io.dropwizard.metrics/metrics-jmx/${metrics.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:io.dropwizard.metrics/metrics-json/${metrics.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-metrics/${upstream.version}</bundle>
     </feature>
     <feature name='camel-micrometer' version='${upstream.version}' start-level='50'>
@@ -2281,8 +2281,8 @@
         <bundle dependency='true'>wrap:mvn:io.micrometer/micrometer-core/${micrometer.tesb.version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
         <bundle dependency='true'>mvn:io.micrometer/micrometer-commons/${micrometer.tesb.version}</bundle>
         <bundle dependency='true'>mvn:io.micrometer/micrometer-registry-jmx/${micrometer.tesb.version}</bundle>
-        <bundle dependency='true'>mvn:io.dropwizard.metrics/metrics-core/${metrics-version}</bundle>
-        <bundle dependency='true'>mvn:io.dropwizard.metrics/metrics-jmx/${metrics-version}</bundle>
+        <bundle dependency='true'>mvn:io.dropwizard.metrics/metrics-core/${metrics.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:io.dropwizard.metrics/metrics-jmx/${metrics.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-micrometer/${upstream.version}</bundle>
     </feature>
     <feature name='camel-micrometer-prometheus' version='${upstream.version}' start-level='50'>
@@ -2705,7 +2705,8 @@
     <feature name='camel-quartz' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version='${camel-osgi-version-range}'>camel-cron</feature>
-        <bundle dependency='true'>wrap:mvn:com.mchange/c3p0/${c3p0-version}</bundle>
+        <!-- <bundle dependency='true'>wrap:mvn:com.mchange/c3p0/${c3p0.tesb.version}</bundle> -->
+        <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.c3p0/${c3p0-bundle.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:org.quartz-scheduler/quartz/${quartz-version}$overwrite=merge&amp;DynamicImport-Package=org.apache.camel.component.quartz</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-quartz/${upstream.version}</bundle>
     </feature>
