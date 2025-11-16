@@ -3368,7 +3368,7 @@ Chain 2:
     </feature>
     <feature name='camel-xmlsecurity' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
-        <bundle dependency='true'>mvn:org.apache.santuario/xmlsec/${xmlsec-version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.santuario/xmlsec/${xmlsec.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-xmlsecurity/${upstream.version}</bundle>
     </feature>
     <feature name='camel-xmpp' version='${upstream.version}' start-level='50'>

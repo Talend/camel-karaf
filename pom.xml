@@ -202,6 +202,7 @@
         <wildfly-elytron.tesb.version>2.2.10.Final</wildfly-elytron.tesb.version>
         <wiremock.tesb.version>3.13.1</wiremock.tesb.version>
         <woodstox-core.tesb.version>7.1.1</woodstox-core.tesb.version>
+        <xmlsec.tesb.version>4.0.4</xmlsec.tesb.version>
         <zookeeper.tesb.version>3.9.4</zookeeper.tesb.version>
         <zookeeper-server.tesb.version>3.9.4.jetty12.1</zookeeper-server.tesb.version>
         <camel-osgi-cxf.tesb.version>[4.1,4.2)</camel-osgi-cxf.tesb.version>
@@ -936,6 +937,7 @@
                             <wildfly-elytron.tesb.version>${wildfly-elytron.tesb.version}</wildfly-elytron.tesb.version>
                             <wiremock.tesb.version>${wiremock.tesb.version}</wiremock.tesb.version>
                             <woodstox-core.tesb.version>${woodstox-core.tesb.version}</woodstox-core.tesb.version>
+                            <xmlsec.tesb.version>${xmlsec.tesb.version}</xmlsec.tesb.version>
                             <zookeeper.tesb.version>${zookeeper.tesb.version}</zookeeper.tesb.version>
                             <zookeeper-server.tesb.version>${zookeeper-server.tesb.version}</zookeeper-server.tesb.version>
                             <osgi-service-servlet.tesb.version>${osgi-service-servlet.tesb.version}</osgi-service-servlet.tesb.version>
