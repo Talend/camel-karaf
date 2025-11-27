@@ -31,8 +31,10 @@
     <artifactId>camel-langchain4j-core</artifactId>
     <packaging>bundle</packaging>
     <name>Apache Camel :: Karaf :: Components :: Ai :: Core</name>
+    <version>${revision}</version>
 
     <properties>
+        <revision>${camel-langchain4j-core.tesb.version}</revision>
         <camel.osgi.export>
             org.apache.camel*;version=${camel-version}
         </camel.osgi.export>
@@ -45,7 +47,7 @@
         <dependency>
             <groupId>org.apache.camel</groupId>
             <artifactId>camel-langchain4j-core</artifactId>
-            <version>${camel-version}</version>
+            <version>${camel-langchain4j-core.tesb.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.camel</groupId>
