@@ -47,6 +47,8 @@ org.apache.camel.karaf:camel-jaxb,\
 org.apache.camel.karaf:camel-jsonpath,\
 org.apache.camel.karaf:camel-knative-http,\
 org.apache.camel.karaf:camel-kubernetes,\
+org.apache.camel.karaf:camel-langchain4j-core,\
+org.apache.camel.karaf:camel-langchain4j-chat,\
 org.apache.camel.karaf:camel-langchain4j-tools,\
 org.apache.camel.karaf:camel-mina,\
 org.apache.camel.karaf:camel-minio,\
