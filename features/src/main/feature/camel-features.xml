@@ -2720,7 +2720,7 @@
         <feature version="${jetty12.tesb.version-range}">jetty</feature>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version='${camel-osgi-jackson2.tesb.version}'>jackson</feature>
-        <feature version="[32,33)">guava</feature>
+        <feature version="[33,34)">guava</feature>
         <feature version="[3,4)">jakarta-validation</feature>        
         <bundle dependency='true'>mvn:com.fasterxml.jackson.datatype/jackson-datatype-jsr310/${jackson2.tesb.version}</bundle>
         <bundle dependency='true'>mvn:com.fasterxml.jackson.module/jackson-module-jsonSchema/${jackson2.tesb.version}</bundle>
