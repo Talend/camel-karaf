@@ -36,13 +36,14 @@
     <properties>
         <revision>${camel-salesforce.tesb.version}</revision>
         <camel.osgi.export>
-            org.apache.camel*;version=${camel-version},
-            org.talend.salesforce
+            org.apache.camel*;version=${camel-version}
         </camel.osgi.export>
         <camel.osgi.import>
-            !com.salesforce.eventbus.protobuf*,
             *
         </camel.osgi.import>
+        <camel.osgi.private>
+            com.salesforce.eventbus.protobuf*
+        </camel.osgi.private>
     </properties>
 
     <dependencies>
@@ -56,11 +57,6 @@
                     <artifactId>*</artifactId>
                 </exclusion>
             </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>io.grpc</groupId>
-            <artifactId>grpc-protobuf</artifactId>
-            <version>${grpc-version}</version>
         </dependency>
     </dependencies>
 
