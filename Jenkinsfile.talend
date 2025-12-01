@@ -14,6 +14,7 @@ org.apache.camel.karaf:camel-cxf-transport-jetty,\
 org.apache.camel.karaf:camel-drill,\
 org.apache.camel.karaf:camel-langchain4j-chat,\
 org.apache.camel.karaf:camel-langchain4j-tools,\
+org.apache.camel.karaf:camel-salesforce,\
 org.apache.camel.karaf:camel-spring,\
 \
 org.apache.camel.karaf:apache-camel\

@@ -95,6 +95,7 @@
         <camel-cxf-all.tesb.version>4.10.5.20251010</camel-cxf-all.tesb.version>
         <camel-cxf-soap.tesb.version>4.10.5.20251010</camel-cxf-soap.tesb.version>
         <camel-cxf-rest.tesb.version>4.10.5.20251010</camel-cxf-rest.tesb.version>
+        <camel-salesforce.tesb.version>4.10.5.20251010</camel-salesforce.tesb.version>
         <camel-spring.tesb.version>4.10.5.20251010</camel-spring.tesb.version>
         <camel-tooling.tesb.version>4.10.5.20251010</camel-tooling.tesb.version>
         <camel-langchain4j-chat.tesb.version>4.10.5.20251010</camel-langchain4j-chat.tesb.version>
@@ -832,6 +833,7 @@
                             <camel-cxf-all.tesb.version>${camel-cxf-all.tesb.version}</camel-cxf-all.tesb.version>
                             <camel-cxf-soap.tesb.version>${camel-cxf-soap.tesb.version}</camel-cxf-soap.tesb.version>
                             <camel-cxf-rest.tesb.version>${camel-cxf-rest.tesb.version}</camel-cxf-rest.tesb.version>
+                            <camel-salesforce.tesb.version>${camel-salesforce.tesb.version}</camel-salesforce.tesb.version>
                             <camel-spring.tesb.version>${camel-spring.tesb.version}</camel-spring.tesb.version>
                             <camel-tooling.tesb.version>${camel-tooling.tesb.version}</camel-tooling.tesb.version>
                             <camel-langchain4j-chat.tesb.version>${camel-langchain4j-chat.tesb.version}</camel-langchain4j-chat.tesb.version>

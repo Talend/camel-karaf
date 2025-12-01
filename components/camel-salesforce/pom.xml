@@ -31,22 +31,26 @@
     <artifactId>camel-salesforce</artifactId>
     <packaging>bundle</packaging>
     <name>Apache Camel :: Karaf :: Components :: Salesforce</name>
+    <version>${revision}</version>
 
     <properties>
+        <revision>${camel-salesforce.tesb.version}</revision>
         <camel.osgi.export>
             org.apache.camel*;version=${camel-version}
         </camel.osgi.export>
         <camel.osgi.import>
-            !com.salesforce.eventbus.protobuf*,
             *
         </camel.osgi.import>
+        <camel.osgi.private>
+            com.salesforce.eventbus.protobuf*
+        </camel.osgi.private>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.apache.camel</groupId>
             <artifactId>camel-salesforce</artifactId>
-            <version>${camel-version}</version>
+            <version>${camel-salesforce.tesb.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.camel</groupId>
