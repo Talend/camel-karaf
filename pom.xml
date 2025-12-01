@@ -98,6 +98,7 @@
         <camel-salesforce.tesb.version>4.10.5.20251010</camel-salesforce.tesb.version>
         <camel-spring.tesb.version>4.10.5.20251010</camel-spring.tesb.version>
         <camel-tooling.tesb.version>4.10.5.20251010</camel-tooling.tesb.version>
+        <camel-langchain4j-core.tesb.version>4.10.5.20251010</camel-langchain4j-core.tesb.version>
         <camel-langchain4j-chat.tesb.version>4.10.5.20251010</camel-langchain4j-chat.tesb.version>
         <camel-langchain4j-tools.tesb.version>4.10.5.20251010</camel-langchain4j-tools.tesb.version>
         <camel-drill.tesb.version>4.10.5.20251010</camel-drill.tesb.version>
@@ -161,8 +162,8 @@
         <kotlin.tesb.version>2.2.20</kotlin.tesb.version>
         <kotlin-stdlib-common.tesb.version>1.9.10</kotlin-stdlib-common.tesb.version>
         <kudu.tesb.version>1.18.0</kudu.tesb.version>
-        <langchain4j.tesb.version>1.0.0</langchain4j.tesb.version>
-        <langchain4j-mcp.tesb.version>1.0.0-beta5</langchain4j-mcp.tesb.version>
+        <langchain4j.tesb.version>1.6.0</langchain4j.tesb.version>
+        <langchain4j-mcp.tesb.version>1.6.0-beta12</langchain4j-mcp.tesb.version>
         <langchain4j0.tesb.version>0.36.2</langchain4j0.tesb.version>
         <littleproxy.tesb.version>2.4.3</littleproxy.tesb.version>
         <logback.tesb.version>1.5.18</logback.tesb.version>
@@ -836,6 +837,7 @@
                             <camel-salesforce.tesb.version>${camel-salesforce.tesb.version}</camel-salesforce.tesb.version>
                             <camel-spring.tesb.version>${camel-spring.tesb.version}</camel-spring.tesb.version>
                             <camel-tooling.tesb.version>${camel-tooling.tesb.version}</camel-tooling.tesb.version>
+                            <camel-langchain4j-core.tesb.version>${camel-langchain4j-core.tesb.version}</camel-langchain4j-core.tesb.version>
                             <camel-langchain4j-chat.tesb.version>${camel-langchain4j-chat.tesb.version}</camel-langchain4j-chat.tesb.version>
                             <camel-langchain4j-tools.tesb.version>${camel-langchain4j-tools.tesb.version}</camel-langchain4j-tools.tesb.version>
                             <camel-drill.tesb.version>${camel-drill.tesb.version}</camel-drill.tesb.version>

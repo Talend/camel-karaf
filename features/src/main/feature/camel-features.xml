@@ -1457,7 +1457,7 @@
         <bundle dependency='true'>wrap:mvn:com.google.api.grpc/proto-google-cloud-pubsub-v1/${auto-detect-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.auth/google-auth-library-oauth2-http/${grpc-google-auth-library-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.auth/google-auth-library-credentials/${grpc-google-auth-library-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:io.grpc/grpc-api/${grpc.tesb.version}$${spi-consumer}$${spi-consumer}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.grpc/grpc-api/${grpc.tesb.version}$${spi-consumer}</bundle>
         <bundle dependency='true'>mvn:org.threeten/threetenbp/${auto-detect-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.http-client/google-http-client/${google-cloud-http-client-version}$overwrite=merge&amp;Import-Package=com.google.common*;version="[33,34)",*</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.http-client/google-http-client-gson/${google-cloud-http-client-version}</bundle>
@@ -2141,7 +2141,7 @@
     <feature name='camel-langchain4j-core' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <bundle dependency='true'>wrap:mvn:dev.langchain4j/langchain4j-core/${langchain4j.tesb.version}</bundle>
-        <bundle>mvn:org.apache.camel.karaf/camel-langchain4j-core/${upstream.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-langchain4j-core/${camel-langchain4j-core.tesb.version}</bundle>
     </feature>
     <feature name='camel-langchain4j-embeddings' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
@@ -2826,7 +2826,7 @@
         <bundle dependency='true'>mvn:com.google.protobuf/protobuf-java/${protobuf-version}</bundle>
         <bundle dependency='true'>wrap:mvn:io.grpc/grpc-api/${grpc.tesb.version}$${spi-consumer}</bundle>
         <bundle dependency='true'>wrap:mvn:io.grpc/grpc-protobuf/${grpc.tesb.version}</bundle>
-        <bundle dependency='true'>wrap:mvn:io.grpc/grpc-protobuf-light/${grpc.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.grpc/grpc-protobuf-lite/${grpc.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:io.grpc/grpc-stub/${grpc.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:io.grpc/grpc-netty/${grpc.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:io.grpc/grpc-core/${grpc.tesb.version}</bundle>
