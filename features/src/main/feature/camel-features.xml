@@ -941,12 +941,12 @@
         <bundle dependency='true'>wrap:mvn:com.ibm.cloud/sdk-core/${auto-detect-version}</bundle>
         <!-- 'sdk-core' requires 'com.google.gson.internal*', which is not exported by the original bundle -->
         <bundle dependency='true'>wrap:mvn:com.google.code.gson/gson/${gson-version}$overwrite=merge&amp;Export-Package=com.google.gson*;version=${gson-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:com.squareup.okio/okio/${squareup-okio.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:com.squareup.okio/okio-jvm/${okio.tesb.version}</bundle>
         <!-- both 'okhttp' and 'okhttp-urlconnection' export 'okhttp3',
         the fragmented host option will enforce both bundles to share the same class loader,
         'okhttp' was chosen as the host because 'okhttp-urlconnection' contains only one package with 2 classes -->
-        <bundle dependency='true'>wrap:mvn:com.squareup.okhttp3/okhttp/${squareup-okhttp-version}$Bundle-SymbolicName=com.squareup.okhttp3.okhttp</bundle>
-        <bundle dependency='true'>wrap:mvn:com.squareup.okhttp3/okhttp-urlconnection/${squareup-okhttp-version}$Fragment-Host=com.squareup.okhttp3.okhttp;bundle-version=${squareup-okhttp-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:com.squareup.okhttp3/okhttp/${okhttp4.tesb.version}$Bundle-SymbolicName=com.squareup.okhttp3.okhttp</bundle>
+        <bundle dependency='true'>wrap:mvn:com.squareup.okhttp3/okhttp-urlconnection/${okhttp4.tesb.version}$Fragment-Host=com.squareup.okhttp3.okhttp;bundle-version=${okhttp4.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-couchdb/${upstream.version}</bundle>
     </feature>
@@ -1020,7 +1020,7 @@
         <feature version='${camel-osgi-jackson2.tesb.version}'>jackson</feature>
         <bundle dependency='true'>mvn:com.fasterxml.jackson.module/jackson-module-afterburner/${jackson2.tesb.version}</bundle>
         <bundle dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.kafka-clients/${kafka-bundle.tesb.version}</bundle>
-        <bundle dependency="true">mvn:org.lz4/lz4-java/${auto-detect-version}</bundle>
+        <bundle dependency="true">mvn:at.yawk.lz4/lz4-java/${lz4-java.tesb.version}</bundle>
         <!-- Api, runtime and transform have split packages so we merge all into api -->
         <bundle dependency='true'>wrap:mvn:org.apache.kafka/connect-runtime/${kafka.tesb.version}$Fragment-Host=org.apache.kafka.connect-api;bundle-version=${kafka.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:org.apache.kafka/connect-transforms/${kafka.tesb.version}$Fragment-Host=org.apache.kafka.connect-api;bundle-version=${kafka.tesb.version}</bundle>
@@ -1710,9 +1710,9 @@
     <feature name='camel-influxdb' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version="[6,7)">jakarta-servlet</feature>
-        <bundle dependency='true'>wrap:mvn:com.squareup.okhttp3/logging-interceptor/${squareup-okhttp-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:com.squareup.okhttp3/okhttp/${squareup-okhttp-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:com.squareup.okio/okio/${squareup-okio.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:com.squareup.okhttp3/logging-interceptor/${okhttp4.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:com.squareup.okhttp3/okhttp/${okhttp4.tesb.version}$Bundle-SymbolicName=com.squareup.okhttp3.okhttp</bundle>
+        <bundle dependency='true'>wrap:mvn:com.squareup.okio/okio-jvm/${okio.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.squareup.moshi/moshi/${auto-detect-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.squareup.retrofit2/converter-moshi/${auto-detect-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.squareup.retrofit2/retrofit/${auto-detect-version}</bundle>
@@ -1983,7 +1983,7 @@
     <feature name='camel-kafka' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <bundle dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.kafka-clients/${kafka-bundle.tesb.version}</bundle>
-        <bundle dependency="true">mvn:org.lz4/lz4-java/${auto-detect-version}</bundle>
+        <bundle dependency="true">mvn:at.yawk.lz4/lz4-java/${lz4-java.tesb.version}</bundle>
         <bundle dependency='true'>mvn:com.github.luben/zstd-jni/${auto-detect-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-kafka/${upstream.version}</bundle>
     </feature>
@@ -2077,7 +2077,7 @@
         <bundle dependency="true">wrap:mvn:dev.langchain4j/langchain4j-http-client-jdk/${langchain4j.tesb.version}</bundle>
         <bundle dependency="true">wrap:mvn:com.knuddels/jtokkit/${jtokkit.tesb.version}</bundle>
         <bundle dependency="true">wrap:mvn:dev.langchain4j/langchain4j-mcp/${langchain4j-mcp.tesb.version}</bundle>
-        <bundle dependency="true">wrap:mvn:com.squareup.okhttp3/okhttp/${okhttp4.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:com.squareup.okhttp3/okhttp/${okhttp4.tesb.version}$Bundle-SymbolicName=com.squareup.okhttp3.okhttp</bundle>
         <bundle dependency="true">wrap:mvn:com.squareup.okhttp3/okhttp-sse/${okhttp4.tesb.version}</bundle>
         <bundle dependency="true">wrap:mvn:com.squareup.okio/okio-jvm/${okio.tesb.version}</bundle>
         <bundle dependency="true">wrap:mvn:org.jetbrains.kotlin/kotlin-stdlib-common/${kotlin-stdlib-common.tesb.version}</bundle>
@@ -2443,8 +2443,8 @@
         <bundle dependency='true'>mvn:com.github.java-json-tools/btf/${auto-detect-version}</bundle>
         <bundle dependency='true'>mvn:com.google.code.findbugs/jsr305/${jsr305.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.yaml/snakeyaml/${snakeyaml.tesb.version}</bundle>
-        <bundle dependency='true'>wrap:mvn:com.squareup.okhttp3/okhttp/${squareup-okhttp-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:com.squareup.okhttp3/logging-interceptor/${squareup-okhttp-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:com.squareup.okhttp3/okhttp/${okhttp4.tesb.version}$Bundle-SymbolicName=com.squareup.okhttp3.okhttp</bundle>
+        <bundle dependency='true'>wrap:mvn:com.squareup.okhttp3/logging-interceptor/${okhttp4.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-openstack/${upstream.version}</bundle>
     </feature>
     <feature name='camel-opentelemetry' version='${upstream.version}' start-level='50'>
@@ -2825,7 +2825,7 @@
         <bundle dependency='true'>mvn:com.google.code.gson/gson/${gson-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.slack.api/slack-api-client/${slack-api-model-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.slack.api/slack-api-model/${slack-api-model-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:com.squareup.okhttp3/okhttp/${squareup-okhttp-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:com.squareup.okhttp3/okhttp/${okhttp4.tesb.version}$Bundle-SymbolicName=com.squareup.okhttp3.okhttp</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-slack/${upstream.version}</bundle>
     </feature>
     <feature name='camel-smb' version='${upstream.version}' start-level='50'>
@@ -3080,10 +3080,13 @@
     </feature>
     <feature name='camel-tika' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
-        <bundle dependency='true'>mvn:org.apache.tika/tika-core/${tika-version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.tika/tika-parser-html-commons/${tika-version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.tika/tika-core/${tika.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:org.apache.tika/tika-handler-boilerpipe/${tika.tesb.version}</bundle>
+        <!-- <bundle dependency='true'>mvn:org.apache.tika/tika-parser-html-commons/${tika.tesb.version}</bundle> -->
         <bundle dependency='true'>mvn:commons-io/commons-io/${commons-io.tesb.version}</bundle>
-        <bundle>mvn:org.apache.camel.karaf/camel-tika/${upstream.version}</bundle>
+        <bundle dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.xerces/${xerces-bundle.tesb.version}</bundle>
+        <bundle dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.xmlresolver/${xmlresolver-bundle.tesb.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-tika/${camel-tika.tesb.version}</bundle>
     </feature>
     <feature name='camel-tracing' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>

@@ -63,6 +63,7 @@ org.apache.camel.karaf:camel-salesforce,\
 org.apache.camel.karaf:camel-smb,\
 org.apache.camel.karaf:camel-spring,\
 org.apache.camel.karaf:camel-sql,\
+org.apache.camel.karaf:camel-tika,\
 org.apache.camel.karaf:camel-tracing,\
 org.apache.camel.karaf:camel-undertow,\
 org.apache.camel.karaf:camel-vertx-http,\
