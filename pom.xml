@@ -88,7 +88,7 @@
     <!-- TODO use Karaf/Camel bom -->
     <properties>
         <upstream.version>4.8.1</upstream.version>
-        <camel-features.tesb.version>4.8.1.20251208</camel-features.tesb.version>
+        <camel-features.tesb.version>4.8.1.20251209</camel-features.tesb.version>
         <camel-support.tesb.version>4.8.1.20250320</camel-support.tesb.version>
         <camel-vm.tesb.version>4.8.1.20250320</camel-vm.tesb.version>
         <camel-activemq.tesb.version>4.8.1.20250320</camel-activemq.tesb.version>
@@ -234,7 +234,7 @@
         <langchain4j.tesb.version>1.6.0</langchain4j.tesb.version>
         <langchain4j-mcp.tesb.version>1.6.0-beta12</langchain4j-mcp.tesb.version>
         <logback.tesb.version>1.5.18</logback.tesb.version>
-        <lz4-java.tesb.version>1.8.1</lz4-java.tesb.version>
+        <lz4-java.tesb.version>1.10.1</lz4-java.tesb.version>
         <metrics.tesb.version>4.2.30</metrics.tesb.version>
         <micrometer.tesb.version>1.13.11</micrometer.tesb.version>
         <micrometer-tracing.tesb.version>1.3.9</micrometer-tracing.tesb.version>
