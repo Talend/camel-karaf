@@ -88,7 +88,7 @@
     <!-- TODO use Karaf/Camel bom -->
     <properties>
         <upstream.version>4.8.1</upstream.version>
-        <camel-features.tesb.version>4.8.1.20251209</camel-features.tesb.version>
+        <camel-features.tesb.version>4.8.1.20251212</camel-features.tesb.version>
         <camel-support.tesb.version>4.8.1.20250320</camel-support.tesb.version>
         <camel-vm.tesb.version>4.8.1.20250320</camel-vm.tesb.version>
         <camel-activemq.tesb.version>4.8.1.20250320</camel-activemq.tesb.version>
@@ -176,11 +176,11 @@
         <bouncycastle.tesb.version>1.81</bouncycastle.tesb.version>
         <bytebuddy.tesb.version>1.17.6</bytebuddy.tesb.version>
         <commons-beanutils.tesb.version>1.11.0</commons-beanutils.tesb.version>
-        <commons-codec.tesb.version>1.19.0</commons-codec.tesb.version>
+        <commons-codec.tesb.version>1.20.0</commons-codec.tesb.version>
         <commons-collections4.tesb.version>4.5.0</commons-collections4.tesb.version>
         <commons-compress.tesb.version>1.28.0</commons-compress.tesb.version>
-        <commons-lang3.tesb.version>3.18.0</commons-lang3.tesb.version>
-        <commons-io.tesb.version>2.20.0</commons-io.tesb.version>
+        <commons-lang3.tesb.version>3.19.0</commons-lang3.tesb.version>
+        <commons-io.tesb.version>2.21.0</commons-io.tesb.version>
         <commons-pool2.tesb.version>2.12.1</commons-pool2.tesb.version>
         <commons-text.tesb.version>1.14.0</commons-text.tesb.version>
         <couchbase-client.tesb.version>3.7.9</couchbase-client.tesb.version>
@@ -215,7 +215,7 @@
         <jaxb-staxex.tesb.version>2.1.0</jaxb-staxex.tesb.version>
         <jaxb-dtd-parser.tesb.version>1.5.1</jaxb-dtd-parser.tesb.version>
         <jboss-logging.tesb.version>3.6.1.Final</jboss-logging.tesb.version>
-        <jna.tesb.version>5.17.0</jna.tesb.version>
+        <jna.tesb.version>5.18.0</jna.tesb.version>
         <jolokia.tesb.version>2.2.8</jolokia.tesb.version>
         <jooq.tesb.version>3.19.14</jooq.tesb.version>
         <json-smart.tesb.version>2.5.2</json-smart.tesb.version>
