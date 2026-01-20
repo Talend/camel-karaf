@@ -88,8 +88,8 @@
     <!-- TODO use Karaf/Camel bom -->
     <properties>
         <upstream.version>4.8.1</upstream.version>
-        <camel-features.tesb.version>4.8.1.20260112</camel-features.tesb.version>
-        <camel-support.tesb.version>4.8.1.20250320</camel-support.tesb.version>
+        <camel-features.tesb.version>4.8.1.20260120</camel-features.tesb.version>
+        <camel-support.tesb.version>4.8.1.20260120</camel-support.tesb.version>
         <camel-vm.tesb.version>4.8.1.20250320</camel-vm.tesb.version>
         <camel-activemq.tesb.version>4.8.1.20250320</camel-activemq.tesb.version>
         <camel-activemq6.tesb.version>4.8.1.20250320</camel-activemq6.tesb.version>
