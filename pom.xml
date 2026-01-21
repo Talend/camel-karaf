@@ -88,7 +88,7 @@
     <!-- TODO use Karaf/Camel bom -->
     <properties>
         <upstream.version>4.8.1</upstream.version>
-        <camel-features.tesb.version>4.8.1.20260112</camel-features.tesb.version>
+        <camel-features.tesb.version>4.8.1.20260121</camel-features.tesb.version>
         <camel-support.tesb.version>4.8.1.20250320</camel-support.tesb.version>
         <camel-vm.tesb.version>4.8.1.20250320</camel-vm.tesb.version>
         <camel-activemq.tesb.version>4.8.1.20250320</camel-activemq.tesb.version>
@@ -183,7 +183,7 @@
         <commons-io.tesb.version>2.21.0</commons-io.tesb.version>
         <commons-pool2.tesb.version>2.12.1</commons-pool2.tesb.version>
         <commons-text.tesb.version>1.14.0</commons-text.tesb.version>
-        <couchbase-client.tesb.version>3.7.9</couchbase-client.tesb.version>
+        <couchbase-client.tesb.version>3.10.1</couchbase-client.tesb.version>
         <curator.tesb.version>5.8.0.tesb1</curator.tesb.version>
         <djl.tesb.version>0.31.1</djl.tesb.version>
         <failureaccess.tesb.version>1.0.2</failureaccess.tesb.version>
@@ -230,7 +230,7 @@
         <karaf-framework.tesb.version>4.4.6.20250901</karaf-framework.tesb.version>
         <kotlin.tesb.version>2.2.20</kotlin.tesb.version>
         <kotlin-stdlib-common.tesb.version>1.9.10</kotlin-stdlib-common.tesb.version>
-        <kudu.tesb.version>1.18.0</kudu.tesb.version>
+        <kudu.tesb.version>1.18.1</kudu.tesb.version>
         <langchain4j.tesb.version>1.6.0</langchain4j.tesb.version>
         <langchain4j-mcp.tesb.version>1.6.0-beta12</langchain4j-mcp.tesb.version>
         <logback.tesb.version>1.5.18</logback.tesb.version>
