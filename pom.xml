@@ -196,6 +196,7 @@
         <google-cloud-secretmanager.tesb.version>2.48.0</google-cloud-secretmanager.tesb.version>
         <google-cloud-storage-version>2.42.0</google-cloud-storage-version>
         <groovy.tesb.version>4.0.25</groovy.tesb.version>
+        <grpc.tesb.version>1.76.0</grpc.tesb.version>
         <hazelcast.tesb.version>5.5.0.tesb1</hazelcast.tesb.version>
         <httpcore.tesb.version>5.3.4</httpcore.tesb.version>
         <httpclient.tesb.version>5.5</httpclient.tesb.version>
@@ -273,7 +274,7 @@
         <typesafe-config.tesb.version>1.4.2</typesafe-config.tesb.version>
         <undertow.tesb.version>2.3.20.Final</undertow.tesb.version>
         <velocity.tesb.version>2.4.1</velocity.tesb.version>
-        <vertx.tesb.version>4.5.22</vertx.tesb.version>
+        <vertx.tesb.version>4.5.24</vertx.tesb.version>
         <wildfly-elytron.tesb.version>2.2.10.Final</wildfly-elytron.tesb.version>
         <woodstox-core.tesb.version>7.1.0</woodstox-core.tesb.version>
         <xerces-bundle.tesb.version>2.12.2.tesb2_1</xerces-bundle.tesb.version>
@@ -996,6 +997,7 @@
                             <google-cloud-secretmanager.tesb.version>${google-cloud-secretmanager.tesb.version}</google-cloud-secretmanager.tesb.version>
                             <google-cloud-storage-version>${google-cloud-storage-version}</google-cloud-storage-version>
                             <groovy.tesb.version>${groovy.tesb.version}</groovy.tesb.version>
+                            <grpc.tesb.version>${grpc.tesb.version}</grpc.tesb.version>
                             <hazelcast.tesb.version>${hazelcast.tesb.version}</hazelcast.tesb.version>
                             <httpcore.tesb.version>${httpcore.tesb.version}</httpcore.tesb.version>
                             <httpclient.tesb.version>${httpclient.tesb.version}</httpclient.tesb.version>
