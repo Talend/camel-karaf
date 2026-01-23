@@ -2046,10 +2046,9 @@
         <bundle>mvn:org.apache.camel.karaf/camel-kubernetes/${camel-kubernetes.tesb.version}</bundle>
     </feature>
     <feature name='camel-kudu' version='${upstream.version}' start-level='50'>
-        <!-- Disabled because of CVE-2025-55163 (embedded Netty in Kudu client) -->
-        <!-- <feature version='${camel-osgi-version-range}'>camel-core</feature>
+        <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <bundle dependency='true'>wrap:mvn:org.apache.kudu/kudu-client/${kudu.tesb.version}</bundle>
-        <bundle>mvn:org.apache.camel.karaf/camel-kudu/${upstream.version}</bundle> -->
+        <bundle>mvn:org.apache.camel.karaf/camel-kudu/${upstream.version}</bundle>
     </feature>
     <feature name='camel-langchain4j-chat' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>

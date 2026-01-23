@@ -231,7 +231,7 @@
         <karaf-framework.tesb.version>4.4.6.20250901</karaf-framework.tesb.version>
         <kotlin.tesb.version>2.2.20</kotlin.tesb.version>
         <kotlin-stdlib-common.tesb.version>1.9.10</kotlin-stdlib-common.tesb.version>
-        <kudu.tesb.version>1.18.1</kudu.tesb.version>
+        <kudu.tesb.version>1.19.0.tesb1</kudu.tesb.version>
         <langchain4j.tesb.version>1.6.0</langchain4j.tesb.version>
         <langchain4j-mcp.tesb.version>1.6.0-beta12</langchain4j-mcp.tesb.version>
         <logback.tesb.version>1.5.18</logback.tesb.version>
