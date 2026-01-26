@@ -272,7 +272,7 @@
         <stax2-api.tesb.version>4.2.2</stax2-api.tesb.version>
         <tika.tesb.version>3.2.3</tika.tesb.version>
         <typesafe-config.tesb.version>1.4.2</typesafe-config.tesb.version>
-        <undertow.tesb.version>2.3.20.Final</undertow.tesb.version>
+        <undertow.tesb.version>2.3.22.Final</undertow.tesb.version>
         <velocity.tesb.version>2.4.1</velocity.tesb.version>
         <vertx.tesb.version>4.5.24</vertx.tesb.version>
         <wildfly-elytron.tesb.version>2.2.10.Final</wildfly-elytron.tesb.version>
