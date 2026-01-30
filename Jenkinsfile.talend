@@ -17,6 +17,8 @@ org.apache.camel.karaf:camel-langchain4j-chat,\
 org.apache.camel.karaf:camel-langchain4j-tools,\
 org.apache.camel.karaf:camel-salesforce,\
 org.apache.camel.karaf:camel-spring,\
+org.apache.camel.karaf:camel-neo4j,\
+org.apache.camel.karaf:camel-tika,\
 \
 org.apache.camel.karaf:apache-camel\
 '''
