@@ -88,7 +88,7 @@
     <!-- TODO use Karaf/Camel bom -->
     <properties>
         <upstream.version>4.8.1</upstream.version>
-        <camel-features.tesb.version>4.8.1.20260121</camel-features.tesb.version>
+        <camel-features.tesb.version>4.8.1.20260218</camel-features.tesb.version>
         <camel-support.tesb.version>4.8.1.20260120</camel-support.tesb.version>
         <camel-vm.tesb.version>4.8.1.20250320</camel-vm.tesb.version>
         <camel-activemq.tesb.version>4.8.1.20250320</camel-activemq.tesb.version>
@@ -171,6 +171,7 @@
         <asm.tesb.version>9.8</asm.tesb.version>
         <async-http-client.tesb.version>2.12.4</async-http-client.tesb.version>
         <azure-json.tesb.version>1.3.0</azure-json.tesb.version>
+        <azure-storage-common.tesb.version>12.26.1</azure-storage-common.tesb.version>
         <azure-xml.tesb.version>1.1.0</azure-xml.tesb.version>
         <beanio.tesb.version>3.2.0</beanio.tesb.version>
         <bouncycastle.tesb.version>1.81</bouncycastle.tesb.version>
@@ -972,6 +973,7 @@
                             <asm.tesb.version>${asm.tesb.version}</asm.tesb.version>
                             <async-http-client.tesb.version>${async-http-client.tesb.version}</async-http-client.tesb.version>
                             <azure-json.tesb.version>${azure-json.tesb.version}</azure-json.tesb.version>
+                            <azure-storage-common.tesb.version>${azure-storage-common.tesb.version}</azure-storage-common.tesb.version>
                             <azure-xml.tesb.version>${azure-xml.tesb.version}</azure-xml.tesb.version>
                             <beanio.tesb.version>${beanio.tesb.version}</beanio.tesb.version>
                             <bouncycastle.tesb.version>${bouncycastle.tesb.version}</bouncycastle.tesb.version>
