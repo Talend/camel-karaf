@@ -50,6 +50,7 @@ org.apache.camel.karaf:camel-kubernetes,\
 org.apache.camel.karaf:camel-langchain4j-core,\
 org.apache.camel.karaf:camel-langchain4j-chat,\
 org.apache.camel.karaf:camel-langchain4j-tools,\
+org.apache.camel.karaf:camel-leveldb,\
 org.apache.camel.karaf:camel-mina,\
 org.apache.camel.karaf:camel-minio,\
 org.apache.camel.karaf:camel-mongodb,\

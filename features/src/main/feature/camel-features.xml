@@ -2135,7 +2135,7 @@
         <feature version='${camel-osgi-jackson2.tesb.version}'>jackson</feature>
         <bundle dependency='true'>wrap:mvn:org.iq80.leveldb/leveldb/${leveldb-version}</bundle>
         <bundle dependency='true'>mvn:org.fusesource.leveldbjni/leveldbjni-all/${leveldbjni-version}</bundle>
-        <bundle>mvn:org.apache.camel.karaf/camel-leveldb/${upstream.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-leveldb/${camel-leveldb.tesb.version}</bundle>
     </feature>
     <feature name='camel-lra' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
