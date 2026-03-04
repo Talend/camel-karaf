@@ -88,7 +88,7 @@
     <!-- TODO use Karaf/Camel bom -->
     <properties>
         <upstream.version>4.8.1</upstream.version>
-        <camel-features.tesb.version>4.8.1.20260218</camel-features.tesb.version>
+        <camel-features.tesb.version>4.8.1.20260304</camel-features.tesb.version>
         <camel-support.tesb.version>4.8.1.20260120</camel-support.tesb.version>
         <camel-vm.tesb.version>4.8.1.20250320</camel-vm.tesb.version>
         <camel-activemq.tesb.version>4.8.1.20250320</camel-activemq.tesb.version>
@@ -127,6 +127,7 @@
         <camel-jsonpath.tesb.version>4.8.1.20250320</camel-jsonpath.tesb.version>
         <camel-knative-http.tesb.version>4.8.1.20250320</camel-knative-http.tesb.version>
         <camel-kubernetes.tesb.version>4.8.1.20250320</camel-kubernetes.tesb.version>
+        <camel-leveldb.tesb.version>4.8.1.20260304</camel-leveldb.tesb.version>
         <camel-mina.tesb.version>4.8.1.20250320</camel-mina.tesb.version>
         <camel-minio.tesb.version>4.8.1.20250320</camel-minio.tesb.version>
         <camel-mongodb.tesb.version>4.8.1.20250320</camel-mongodb.tesb.version>
@@ -930,6 +931,7 @@
                             <camel-jsonpath.tesb.version>${camel-jsonpath.tesb.version}</camel-jsonpath.tesb.version>
                             <camel-knative-http.tesb.version>${camel-knative-http.tesb.version}</camel-knative-http.tesb.version>
                             <camel-kubernetes.tesb.version>${camel-kubernetes.tesb.version}</camel-kubernetes.tesb.version>
+                            <camel-leveldb.tesb.version>${camel-leveldb.tesb.version}</camel-leveldb.tesb.version>
                             <camel-mina.tesb.version>${camel-mina.tesb.version}</camel-mina.tesb.version>
                             <camel-minio.tesb.version>${camel-minio.tesb.version}</camel-minio.tesb.version>
                             <camel-mongodb.tesb.version>${camel-mongodb.tesb.version}</camel-mongodb.tesb.version>
