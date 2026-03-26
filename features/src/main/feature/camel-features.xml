@@ -143,7 +143,7 @@
         <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2.tesb.version}.spiprov</bundle>
         <!-- wrap needed to add the missing SPI-Provider clause to the manifest -->
         <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2.tesb.version}.spiprov</bundle>
-        <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2-annotations.tesb.version}</bundle>
     </feature>
 
     <feature name="jackson" version="${jackson216-version}">
@@ -390,7 +390,7 @@
     <feature name='camel-amqp' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-jms</feature>
         <feature version='[4.1,5)'>netty</feature>
-        <bundle dependency='true'>mvn:org.apache.qpid/qpid-jms-client/${qpid-jms-client-version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.qpid/qpid-jms-client/${qpid-jms-client.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.apache.qpid/proton-j/${qpid-proton-j-version}</bundle>
         <bundle dependency='true'>mvn:io.netty/netty-codec-http/${netty.tesb.version}</bundle>
         <bundle dependency='true'>mvn:io.netty/netty-transport-classes-epoll/${netty.tesb.version}</bundle>
@@ -2796,19 +2796,19 @@
     </feature>
     <feature name='camel-shiro' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
-        <bundle dependency='true'>mvn:org.apache.shiro/shiro-core/${shiro-version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.shiro/shiro-event/${shiro-version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.shiro/shiro-lang/${shiro-version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.shiro/shiro-cache/${shiro-version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.shiro/shiro-config-core/${shiro-version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.shiro/shiro-config-ogdl/${shiro-version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.shiro/shiro-crypto-core/${shiro-version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.shiro/shiro-crypto-cipher/${shiro-version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.shiro/shiro-crypto-hash/${shiro-version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.shiro/shiro-core/${shiro.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.shiro/shiro-event/${shiro.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.shiro/shiro-lang/${shiro.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.shiro/shiro-cache/${shiro.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.shiro/shiro-config-core/${shiro.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.shiro/shiro-config-ogdl/${shiro.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.shiro/shiro-crypto-core/${shiro.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.shiro/shiro-crypto-cipher/${shiro.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.shiro/shiro-crypto-hash/${shiro.tesb.version}</bundle>
         <bundle dependency='true'>mvn:jakarta.annotation/jakarta.annotation-api/${auto-detect-version}</bundle>
         <bundle dependency='true'>mvn:commons-beanutils/commons-beanutils/${commons-beanutils.tesb.version}</bundle>
         <bundle dependency='true'>mvn:commons-collections/commons-collections/${commons-collections-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:org.apache.shiro/shiro-jakarta-ee/${shiro-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:org.apache.shiro/shiro-jakarta-ee/${shiro.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-shiro/${upstream.version}</bundle>
     </feature>
     <feature name='camel-sjms' version='${upstream.version}' start-level='50'>
