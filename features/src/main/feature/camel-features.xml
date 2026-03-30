@@ -2607,7 +2607,7 @@
     <feature name='camel-quartz' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version='${camel-osgi-version-range}'>camel-cron</feature>
-        <bundle dependency='true'>wrap:mvn:com.mchange/c3p0/${c3p0-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:com.mchange/c3p0/${c3p0.tesb.version}$Bundle-Name=C3P0&amp;Bundle-SymbolicName=com.mchange.c3p0&amp;Bundle-Version=${c3p0.tesb.version}&amp;Export-Package=com.mchange*;version=${c3p0.tesb.version}</bundle>
         <bundle dependency='true'>mvn:com.zaxxer/HikariCP-java7/${auto-detect-version}</bundle>
         <bundle dependency='true'>wrap:mvn:org.quartz-scheduler/quartz/${quartz-version}$overwrite=merge&amp;DynamicImport-Package=org.apache.camel.component.quartz</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-quartz/${camel-quartz.tesb.version}</bundle>
