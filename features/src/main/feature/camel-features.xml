@@ -1311,7 +1311,7 @@
         <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-api/${auto-detect-version}$Import-Package=javax.annotation;version="[3,4)",*</bundle>
         <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-contrib-http-util/${auto-detect-version}$Import-Package=javax.annotation;version="[3,4)",*</bundle>
         <bundle dependency='true'>wrap:mvn:io.grpc/grpc-api/${grpc.tesb.version}$${spi-consumer}</bundle>
-        <bundle dependency='true'>wrap:mvn:com.google.api.grpc/proto-google-common-protos/${auto-detect-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:com.google.api.grpc/proto-google-common-protos/${proto-google-common-protos.tesb.version}$Export-Package=com.google.longrunning*;version=${proto-google-common-protos.tesb.version},*</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.cloud/google-cloud-bigquery/${auto-detect-version}</bundle>
         <bundle dependency='true'>mvn:com.google.code.findbugs/jsr305/${jsr305.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-google-bigquery/${upstream.version}</bundle>
@@ -1419,7 +1419,7 @@
         <bundle dependency='true'>mvn:io.netty/netty-codec-http2/${netty.tesb.version}</bundle>
         <bundle dependency='true'>mvn:io.netty/netty-handler-proxy/${netty.tesb.version}</bundle>
         <bundle dependency='true'>mvn:io.netty/netty-codec-socks/${netty.tesb.version}</bundle>
-        <bundle dependency='true'>wrap:mvn:com.google.api.grpc/proto-google-common-protos/${auto-detect-version}$Export-Package=com.google.longrunning*;version=${auto-detect-version},*</bundle>
+        <bundle dependency='true'>wrap:mvn:com.google.api.grpc/proto-google-common-protos/${proto-google-common-protos.tesb.version}$Export-Package=com.google.longrunning*;version=${proto-google-common-protos.tesb.version},*</bundle>
         <bundle dependency='true'>wrap:mvn:io.perfmark/perfmark-api/${auto-detect-version}</bundle>
         <bundle dependency='true'>wrap:mvn:io.grpc/grpc-stub/${grpc.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:io.grpc/grpc-netty/${grpc.tesb.version}</bundle>

@@ -257,6 +257,7 @@
         <pax-web.tesb.version>11.0.1</pax-web.tesb.version>
         <pgjdbc-driver.tesb.version>42.7.7</pgjdbc-driver.tesb.version>
         <pooled-jms.tesb.version>3.1.7</pooled-jms.tesb.version>
+        <proto-google-common-protos.tesb.version>2.59.2</proto-google-common-protos.tesb.version>
         <protobuf.tesb.version>3.25.5</protobuf.tesb.version>
         <pulsar.tesb.version>3.3.3</pulsar.tesb.version>
         <qpid-jms-client.tesb.version>2.10.0</qpid-jms-client.tesb.version>
@@ -1064,6 +1065,7 @@
                             <pax-web.tesb.version>${pax-web.tesb.version}</pax-web.tesb.version>
                             <pgjdbc-driver.tesb.version>${pgjdbc-driver.tesb.version}</pgjdbc-driver.tesb.version>
                             <pooled-jms.tesb.version>${pooled-jms.tesb.version}</pooled-jms.tesb.version>
+                            <proto-google-common-protos.tesb.version>${proto-google-common-protos.tesb.version}</proto-google-common-protos.tesb.version>
                             <protobuf.tesb.version>${protobuf.tesb.version}</protobuf.tesb.version>
                             <pulsar.tesb.version>${pulsar.tesb.version}</pulsar.tesb.version>
                             <qpid-jms-client.tesb.version>${qpid-jms-client.tesb.version}</qpid-jms-client.tesb.version>
