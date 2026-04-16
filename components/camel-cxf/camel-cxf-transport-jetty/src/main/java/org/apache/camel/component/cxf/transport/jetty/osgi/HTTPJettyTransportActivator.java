@@ -293,7 +293,7 @@ public class HTTPJettyTransportActivator
         } else if ("provider".equals(k)) {
             keyManagers.setProvider(v);
         } else if ("keyPassword".equals(k)) {
-            keyManagers.setKeyPassword(v);
+            keyManagers.setKeyPassword(VaultAccess.resolveValue(v));
         } else if (k.startsWith("keyStore.")) {
             keyManagers.setKeyStore(getKeyStore(keyManagers.getKeyStore(),
                     k.substring("keyStore.".length()),
@@ -309,7 +309,7 @@ public class HTTPJettyTransportActivator
         if ("type".equals(k)) {
             ks.setType(v);
         } else if ("password".equals(k)) {
-            ks.setPassword(v);
+            ks.setPassword(VaultAccess.resolveValue(v));
         } else if ("provider".equals(k)) {
             ks.setProvider(v);
         } else if ("url".equals(k)) {

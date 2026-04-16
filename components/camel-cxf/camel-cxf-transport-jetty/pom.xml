@@ -33,7 +33,7 @@
     <version>${revision}</version>
 
     <properties>
-        <revision>${camel-cxf.tesb.version}</revision>
+        <revision>${camel-cxf-transport-jetty.tesb.version}</revision>
         <camel.osgi.export>
             org.apache.camel.component.cxf.transport.jetty*;version=${camel-version},
             org.apache.cxf.transport.http_jetty*;version=${cxf-version},
@@ -50,6 +50,7 @@
             org.apache.aries.blueprint*,
             org.apache.cxf.*;version="${camel-osgi-cxf-version}",
             org.eclipse.jetty*;resolution:=optional;version="${jetty-version}",
+            org.talend.cxf.crypto.config;version="[8,9)";resolution:=optional,
             org.osgi.framework*,
             org.osgi.service*,
             org.osgi.util*,
