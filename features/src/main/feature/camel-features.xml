@@ -272,9 +272,9 @@
     </feature>
 
     <!-- Wrapped zookeeper jars. -->
-    <feature name='zookeeper-core' version='${zookeeper-version}' start-level='50'>
-        <bundle dependency='true'>wrap:mvn:org.apache.zookeeper/zookeeper/${zookeeper-version}$Bundle-SymbolicName=org.apache.zookeeper&amp;Bundle-Version=${zookeeper-version}&amp;Export-Package=org.apache.zookeeper;version=${zookeeper-version},org.apache.zookeeper.*;version=${zookeeper-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:org.apache.zookeeper/zookeeper-jute/${zookeeper-version}$Bundle-SymbolicName=org.apache.zookeeper-jute&amp;Bundle-Version=${zookeeper-version}&amp;Fragment-Host=org.apache.zookeeper&amp;Export-Package=org.apache.jute;version=${zookeeper-version},org.apache.zookeeper.*;version=${zookeeper-version}</bundle>
+    <feature name='zookeeper-core' version='${zookeeper.tesb.version}' start-level='50'>
+        <bundle dependency='true'>wrap:mvn:org.apache.zookeeper/zookeeper/${zookeeper-server.tesb.version}$Bundle-SymbolicName=org.apache.zookeeper&amp;Bundle-Version=${zookeeper.tesb.version}&amp;Export-Package=org.apache.zookeeper;version=${zookeeper.tesb.version},org.apache.zookeeper.*;version=${zookeeper.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:org.apache.zookeeper/zookeeper-jute/${zookeeper.tesb.version}$Bundle-SymbolicName=org.apache.zookeeper-jute&amp;Bundle-Version=${zookeeper.tesb.version}&amp;Fragment-Host=org.apache.zookeeper&amp;Export-Package=org.apache.jute;version=${zookeeper.tesb.version},org.apache.zookeeper.*;version=${zookeeper.tesb.version}</bundle>
     </feature>
 
     <!-- Apache Camel core features -->
@@ -1050,35 +1050,51 @@
         <feature>http-whiteboard</feature>
         <feature version="[3,4)">jakarta-validation</feature>
         <feature version="${camel-osgi-saaj-version}">jakarta-soap-implementation</feature>
+        <feature version='[33,34)'>guava</feature>
+        <feature version='${camel-osgi-jackson2-version}'>jackson</feature>
+        <feature version='[5,6)'>http-client</feature>
         <bundle dependency="true">mvn:org.glassfish.hk2/osgi-resource-locator/${osgi-resource-locator-version}</bundle>
         <bundle dependency="true">mvn:org.apache.neethi/neethi/${auto-detect-version}</bundle>
         <bundle dependency="true">mvn:org.apache.ws.xmlschema/xmlschema-core/${auto-detect-version}</bundle>
         <bundle dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.cglib/${cglib-version}_1</bundle>
         <bundle dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.wsdl4j/${auto-detect-version:alias=wsdl4j/wsdl4j}_1</bundle>
-        <bundle dependency='true'>wrap:mvn:org.apache.wss4j/wss4j-bindings/${wss4j-version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
-        <bundle dependency='true'>wrap:mvn:org.apache.wss4j/wss4j-ws-security-common/${wss4j-version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
-        <bundle dependency='true'>wrap:mvn:org.apache.wss4j/wss4j-ws-security-dom/${wss4j-version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
-        <bundle dependency='true'>wrap:mvn:org.apache.wss4j/wss4j-policy/${wss4j-version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
-        <bundle dependency='true'>wrap:mvn:org.apache.wss4j/wss4j-ws-security-policy-stax/${wss4j-version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
-        <bundle dependency='true'>wrap:mvn:org.apache.wss4j/wss4j-ws-security-stax/${wss4j-version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
+        <bundle dependency="true">mvn:org.apache.wss4j/wss4j-bindings/${wss4j-version}</bundle>
+        <bundle dependency="true">mvn:org.apache.wss4j/wss4j-ws-security-common/${wss4j-version}</bundle>
+        <bundle dependency="true">mvn:org.apache.wss4j/wss4j-bindings/${wss4j-version}</bundle>
+        <bundle dependency="true">mvn:org.apache.wss4j/wss4j-ws-security-dom/${wss4j-version}</bundle>
+        <bundle dependency="true">mvn:org.apache.wss4j/wss4j-policy/${wss4j-version}</bundle>
+        <bundle dependency="true">mvn:org.apache.wss4j/wss4j-ws-security-stax/${wss4j-version}</bundle>
+        <bundle dependency="true">mvn:org.apache.wss4j/wss4j-ws-security-policy-stax/${wss4j-version}</bundle>
+        <bundle dependency="true">mvn:org.apache.santuario/xmlsec/${xmlsec-version}</bundle>
+        <bundle dependency="true">mvn:jakarta.mail/jakarta.mail-api/${auto-detect-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:org.jasypt/jasypt/${jasypt-version}</bundle>
+        <bundle dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.opensaml/${opensaml.bundle.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:io.dropwizard.metrics/metrics-core/${metrics-version}</bundle>
+        <bundle dependency='true'>mvn:io.dropwizard.metrics/metrics-json/${metrics-version}</bundle>
+        <bundle dependency='true'>mvn:com.fasterxml.jackson.datatype/jackson-datatype-jsr310/${jackson2-version}</bundle>
+        <bundle dependency="true">wrap:mvn:net.shibboleth/shib-networking/${shibboleth.tesb.version}$Bundle-Name=Shibboleth%20Networking&amp;Bundle-SymbolicName=shib-networking&amp;Bundle-Version=${cxf.shibboleth.tesb.version}</bundle>
+        <bundle dependency="true">wrap:mvn:net.shibboleth/shib-security/${shibboleth.tesb.version}$Bundle-Name=Shibboleth%20Security&amp;Bundle-SymbolicName=shib-security&amp;Bundle-Version=${cxf.shibboleth.tesb.version}</bundle>
+        <bundle dependency="true">wrap:mvn:net.shibboleth/shib-support/${shibboleth.tesb.version}$Bundle-Name=Shibboleth%20Support&amp;Bundle-SymbolicName=shib-support&amp;Bundle-Version=${cxf.shibboleth.tesb.version}</bundle>
+        <bundle dependency="true">wrap:mvn:net.shibboleth/shib-velocity/${shibboleth.tesb.version}$Bundle-Name=Shibboleth%20Velocity&amp;Bundle-SymbolicName=shib-velocity&amp;Bundle-Version=${cxf.shibboleth.tesb.version}</bundle>
+        <!--bundle dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.jasypt/${cxf.jasypt.bundle.version}</bundle-->
         <bundle>mvn:org.apache.camel.karaf/camel-attachments/${upstream.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-http-base/${upstream.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-http-common/${upstream.version}</bundle>
         <bundle dependency="true">mvn:org.apache.cxf/cxf-rt-features-logging/${cxf-version}</bundle>
-        <bundle>mvn:org.apache.camel.karaf/camel-cxf-all/${upstream.version}</bundle>
-        <bundle>mvn:org.apache.camel.karaf/camel-cxf-blueprint/${upstream.version}</bundle>
-        <bundle>mvn:org.apache.camel.karaf/camel-cxf-transport-blueprint/${upstream.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-cxf-all/${camel-cxf-all.tesb.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-cxf-blueprint/${camel-cxf-blueprint.tesb.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-cxf-transport-blueprint/${camel-cxf-transport-blueprint.tesb.version}</bundle>
     </feature>
     <feature name='camel-cxf-jetty' version='${upstream.version}' start-level='50'>
         <feature version="[12,13)">jetty</feature>
         <feature version='${camel-osgi-version-range}'>camel-cxf</feature>
         <bundle dependency="true">mvn:org.eclipse.jetty.ee10/jetty-ee10-servlet/${jetty-version}</bundle>
-        <bundle>mvn:org.apache.camel.karaf/camel-cxf-transport-jetty/${upstream.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-cxf-transport-jetty/${camel-cxf-transport-jetty.tesb.version}</bundle>
     </feature>
     <feature name='camel-cxf-spring' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-cxf</feature>
         <feature version='${camel-osgi-version-range}'>camel-spring</feature>
-        <bundle>mvn:org.apache.camel.karaf/camel-cxf-spring-all/${upstream.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-cxf-spring-all/${camel-cxf-spring-all.tesb.version}</bundle>
     </feature>
     <feature name='camel-cyberark-vault' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
@@ -3720,9 +3736,9 @@ Chain 2:
     <feature name='camel-zookeeper' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version='${camel-osgi-jackson2-version}'>jackson</feature>
-        <feature version="[32,33)">guava</feature>
-        <bundle dependency='true'>wrap:mvn:org.apache.zookeeper/zookeeper/${zookeeper-version}$Export-Package=org.apache.zookeeper*;version=${zookeeper-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:org.apache.zookeeper/zookeeper-jute/${zookeeper-version}$Export-Package=org.apache.*;version=${zookeeper-version}</bundle>
+        <feature version="[32,34)">guava</feature>
+        <bundle dependency='true'>wrap:mvn:org.apache.zookeeper/zookeeper/${zookeeper-server.tesb.version}$Bundle-SymbolicName=org.apache.zookeeper&amp;Bundle-Version=${zookeeper.tesb.version}&amp;Export-Package=org.apache.zookeeper*;version=${zookeeper.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:org.apache.zookeeper/zookeeper-jute/${zookeeper.tesb.version}$Bundle-SymbolicName=org.apache.zookeeper-jute&amp;Bundle-Version=${zookeeper.tesb.version}&amp;Export-Package=org.apache.*;version=${zookeeper.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.apache.curator/curator-client/${curator-version}/jar/osgi</bundle>
         <bundle dependency='true'>mvn:org.apache.curator/curator-framework/${curator-version}/jar/osgi</bundle>
         <bundle dependency='true'>wrap:mvn:org.apache.curator/curator-recipes/${curator-version}/jar/osgi$overwrite=merge&amp;Import-Package=javax.annotation;resolution:=optional,*</bundle>
@@ -3733,8 +3749,8 @@ Chain 2:
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version='${camel-osgi-jackson2-version}'>jackson</feature>
         <feature version="[32,33)">guava</feature>
-        <bundle dependency='true'>wrap:mvn:org.apache.zookeeper/zookeeper/${zookeeper-version}$Export-Package=org.apache.zookeeper*;version=${zookeeper-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:org.apache.zookeeper/zookeeper-jute/${zookeeper-version}$Export-Package=org.apache.*;version=${zookeeper-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:org.apache.zookeeper/zookeeper/${zookeeper-server.tesb.version}$Bundle-SymbolicName=org.apache.zookeeper&amp;Bundle-Version=${zookeeper.tesb.version}&amp;Export-Package=org.apache.zookeeper*;version=${zookeeper.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:org.apache.zookeeper/zookeeper-jute/${zookeeper.tesb.version}$Bundle-SymbolicName=org.apache.zookeeper-jute&amp;Bundle-Version=${zookeeper.tesb.version}&amp;Export-Package=org.apache.*;version=${zookeeper.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.apache.curator/curator-client/${curator-version}/jar/osgi</bundle>
         <bundle dependency='true'>mvn:org.apache.curator/curator-framework/${curator-version}/jar/osgi</bundle>
         <bundle dependency='true'>mvn:org.apache.curator/curator-recipes/${curator-version}/jar/osgi</bundle>

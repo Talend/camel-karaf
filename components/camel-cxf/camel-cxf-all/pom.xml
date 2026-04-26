@@ -31,8 +31,10 @@
     <artifactId>camel-cxf-all</artifactId>
     <packaging>bundle</packaging>
     <name>Apache Camel :: Karaf :: Components :: CXF :: All in one</name>
+    <version>${revision}</version>
 
     <properties>
+        <revision>${camel-cxf-all.tesb.version}</revision>
         <camel.osgi.export>
             org.apache.camel.component.cxf*;version=${camel-version},
             org.apache.cxf*;version=${cxf-version},
@@ -89,7 +91,8 @@
             org.w3c*,
             org.apache.ws*,
             org.apache.neethi*,
-            org.glassfish.hk2.osgiresourcelocator
+            org.glassfish.hk2.osgiresourcelocator,
+            org.opensaml.core.xml,
         </camel.osgi.import>
         <camel.osgi.dynamicimport.pkg>
             org.apache.cxf.bus,org.apache.cxf.*,com.ctc.wstx.*

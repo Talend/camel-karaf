@@ -31,8 +31,10 @@
     <artifactId>camel-cxf-spring-all</artifactId>
     <packaging>bundle</packaging>
     <name>Apache Camel :: Karaf :: Components :: CXF :: Spring All in one</name>
+    <version>${revision}</version>
 
     <properties>
+        <revision>${camel-cxf-spring-all.tesb.version}</revision>
         <camel.osgi.export>
             org.apache.camel.component.cxf.spring;version=${camel-version},
             org.apache.camel.component.cxf.spring.jaxrs;version=${camel-version},
