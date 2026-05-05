@@ -103,7 +103,7 @@
                         <feature>framework</feature>
                     </framework>
                     <features>
-                        <feature>camel-z*</feature>
+                        <feature>camel*</feature>
                     </features>
                 </configuration>
                 <executions>

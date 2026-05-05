@@ -97,7 +97,7 @@
         <camel-cxf-transport-jetty.tesb.version>4.18.1.20260401</camel-cxf-transport-jetty.tesb.version>
         <zookeeper.tesb.version>3.9.5</zookeeper.tesb.version>
         <zookeeper-server.tesb.version>3.9.5.jetty12.1</zookeeper-server.tesb.version>
-        <opensaml.bundle.tesb.version>5.1.4_1.tesb1</opensaml.bundle.tesb.version>
+        <opensaml.bundle.tesb.version>5.1.4_1.tesb2</opensaml.bundle.tesb.version>
         <shibboleth.tesb.version>9.1.6</shibboleth.tesb.version>
 
         <jetty11.tesb.version>11.0.21</jetty11.tesb.version>
