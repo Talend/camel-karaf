@@ -985,7 +985,7 @@
         <feature version="[3,4)">jakarta-validation</feature>
         <bundle dependency="true">mvn:org.ops4j.pax.web/pax-web-api/${tesb-pax-web-api-version}</bundle>
         <bundle dependency="true">mvn:org.glassfish.hk2/osgi-resource-locator/${osgi-resource-locator-version}</bundle>
-        <bundle dependency="true">mvn:org.apache.neethi/neethi/${auto-detect-version}</bundle>
+        <bundle dependency="true">mvn:org.apache.neethi/neethi/${neethi.tesb.version}</bundle>
         <bundle dependency="true">mvn:org.apache.ws.xmlschema/xmlschema-core/${auto-detect-version}</bundle>
         <bundle dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.cglib/${cglib-version}_1</bundle>
         <bundle dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.wsdl4j/${auto-detect-version:alias=wsdl4j/wsdl4j}_1</bundle>
@@ -1075,7 +1075,7 @@
     <feature name='camel-debezium-postgres' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-debezium-common</feature>
         <bundle dependency='true'>wrap:mvn:io.debezium/debezium-connector-postgres/${debezium-version}</bundle>
-        <bundle dependency='true'>mvn:org.postgresql/postgresql/${auto-detect-version}</bundle>
+        <bundle dependency='true'>mvn:org.postgresql/postgresql/${pgjdbc-driver.tesb.version}</bundle>
         <bundle dependency='true'>mvn:com.google.protobuf/protobuf-java/${protobuf.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-debezium-postgres/${camel-debezium-postgres.tesb.version}</bundle>
     </feature>
@@ -1180,8 +1180,9 @@
         <bundle dependency="true">mvn:org.glassfish.hk2/osgi-resource-locator/${osgi-resource-locator-version}</bundle>
         <bundle dependency="true">mvn:org.eclipse.parsson/parsson/${parson-version}</bundle>
         <bundle dependency='true'>mvn:jakarta.json/jakarta.json-api/${jakarta-json-api-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-api/${opentelemetry-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-context/${opentelemetry-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-api/${opentelemetry.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-common/${opentelemetry.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-context/${opentelemetry.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:org.apache.httpcomponents/httpasyncclient/${httpasyncclient-version}</bundle>
         <bundle dependency='true'>wrap:mvn:co.elastic.clients/elasticsearch-java/${elasticsearch-java-client-version}</bundle>
         <bundle dependency='true'>wrap:mvn:org.elasticsearch.client/elasticsearch-rest-client/${elasticsearch-java-client-version}</bundle>
@@ -1237,8 +1238,10 @@
         <bundle dependency='true'>mvn:org.apache.commons/commons-text/${commons-text.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3.tesb.version}</bundle>
         <bundle dependency='true'>mvn:commons-io/commons-io/${commons-io.tesb.version}</bundle>
-        <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-api/${auto-detect-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:io.opentelemetry.instrumentation/opentelemetry-instrumentation-annotations/${auto-detect-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-api/${opentelemetry.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-common/${opentelemetry.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-context/${opentelemetry.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.opentelemetry.instrumentation/opentelemetry-instrumentation-annotations/${opentelemetry-instrumentation.tesb.version}</bundle>
         <bundle dependency='true'>mvn:ca.uhn.hapi.fhir/hapi-fhir-base/${hapi-fhir-version}</bundle>
         <bundle dependency='true'>mvn:ca.uhn.hapi.fhir/hapi-fhir-client/${hapi-fhir-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-fhir/${upstream.version}</bundle>
@@ -2450,9 +2453,10 @@
     <feature name='camel-opentelemetry' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version='${camel-osgi-version-range}'>camel-tracing</feature>
-        <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-api/${opentelemetry-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-sdk/${opentelemetry-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-context/${opentelemetry-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-api/${opentelemetry.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-common/${opentelemetry.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-sdk/${opentelemetry.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-context/${opentelemetry.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-semconv/${opentelemetry-alpha-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-opentelemetry/${upstream.version}</bundle>
     </feature>
@@ -3075,7 +3079,7 @@
     </feature>
     <feature name='camel-thymeleaf' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
-        <bundle dependency='true'>wrap:mvn:org.thymeleaf/thymeleaf/${thymeleaf-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:org.thymeleaf/thymeleaf/${thymeleaf.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-thymeleaf/${upstream.version}</bundle>
     </feature>
     <feature name='camel-tika' version='${upstream.version}' start-level='50'>
