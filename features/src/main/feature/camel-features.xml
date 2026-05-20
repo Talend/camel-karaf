@@ -3733,7 +3733,7 @@ Chain 2:
         <bundle dependency='true'>wrap:mvn:org.apache.zookeeper/zookeeper-jute/${zookeeper.tesb.version}$Bundle-SymbolicName=org.apache.zookeeper-jute&amp;Bundle-Version=${zookeeper.tesb.version}&amp;Fragment-Host=org.apache.zookeeper&amp;Export-Package=org.apache.jute;version=${zookeeper.tesb.version},org.apache.zookeeper.*;version=${zookeeper.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.apache.curator/curator-client/${curator.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.apache.curator/curator-framework/${curator.tesb.version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.curator/curator-recipes/${curator.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:org.apache.curator/curator-recipes/${curator.tesb.version}$overwrite=merge&amp;Import-Package=!javax.annotation,!org.apache.curator.shaded.com.google*,com.google*;version="[33,34)",org.apache.curator*;version="[5.9,6)",*</bundle>
         <bundle dependency='true'>mvn:org.apache.curator/curator-x-discovery/${curator.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-zookeeper/${upstream.version}</bundle>
     </feature>
@@ -3745,7 +3745,7 @@ Chain 2:
         <bundle dependency='true'>wrap:mvn:org.apache.zookeeper/zookeeper-jute/${zookeeper.tesb.version}$Bundle-SymbolicName=org.apache.zookeeper-jute&amp;Bundle-Version=${zookeeper.tesb.version}&amp;Fragment-Host=org.apache.zookeeper&amp;Export-Package=org.apache.jute;version=${zookeeper.tesb.version},org.apache.zookeeper.*;version=${zookeeper.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.apache.curator/curator-client/${curator.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.apache.curator/curator-framework/${curator.tesb.version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.curator/curator-recipes/${curator.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:org.apache.curator/curator-recipes/${curator.tesb.version}$overwrite=merge&amp;Import-Package=!javax.annotation,!org.apache.curator.shaded.com.google*,com.google*;version="[33,34)",org.apache.curator*;version="[5.9,6)",*</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-zookeeper-master/${upstream.version}</bundle>
     </feature>
 </features>
