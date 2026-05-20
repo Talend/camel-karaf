@@ -1227,7 +1227,7 @@
     </feature>
     <feature name='camel-docker' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
-        <feature version='[32,33)'>guava</feature>
+        <feature version='[33,34)'>guava</feature>
         <feature version='${camel-osgi-jackson2-version}'>jackson</feature>
         <feature version='[4.1,5)'>netty</feature>
         <!-- both 'docker-java' and 'docker-java-core' export 'com.github.dockerjava.core',
