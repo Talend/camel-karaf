@@ -95,6 +95,7 @@
         <camel-cxf-blueprint.tesb.version>4.18.2.20260522</camel-cxf-blueprint.tesb.version>
         <camel-cxf-transport-blueprint.tesb.version>4.18.2.20260522</camel-cxf-transport-blueprint.tesb.version>
         <camel-cxf-transport-jetty.tesb.version>4.18.2.20260522</camel-cxf-transport-jetty.tesb.version>
+        <curator.tesb.version>5.9.0.tesb1</curator.tesb.version>
         <zookeeper.tesb.version>3.9.5</zookeeper.tesb.version>
         <zookeeper-server.tesb.version>3.9.5.jetty12.1</zookeeper-server.tesb.version>
         <opensaml.bundle.tesb.version>5.1.4_1.tesb2</opensaml.bundle.tesb.version>
@@ -824,6 +825,9 @@
                             <upstream.version>${upstream.version}</upstream.version>
                             <camel-features.tesb.version>${camel-features.tesb.version}</camel-features.tesb.version>
                             <camel-spring.tesb.version>${camel-spring.tesb.version}</camel-spring.tesb.version>
+                            <curator.tesb.version>${curator.tesb.version}</curator.tesb.version>
+                            <zookeeper.tesb.version>${zookeeper.tesb.version}</zookeeper.tesb.version>
+                            <zookeeper-server.tesb.version>${zookeeper-server.tesb.version}</zookeeper-server.tesb.version>
                             <jetty11.tesb.version>${jetty11.tesb.version}</jetty11.tesb.version>
                             <jetty12.tesb.version>${jetty12.tesb.version}</jetty12.tesb.version>
                             <jetty.tesb.version>${jetty.tesb.version}</jetty.tesb.version>
