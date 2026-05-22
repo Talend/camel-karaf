@@ -1,5 +1,5 @@
 @Library('esb') _
  
 Fork(
-        MVN_MODULES: 'org.apache.camel.karaf:camel-spring,org.apache.camel.karaf:apache-camel'
+        MVN_MODULES: 'org.apache.camel.karaf:camel-spring,org.apache.camel.karaf:apache-camel,:camel-cxf-all,:camel-cxf-blueprint,:camel-cxf-transport-jetty,:camel-cxf-transport-blueprint,:camel-cxf-spring-all'
 )

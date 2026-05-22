@@ -90,6 +90,15 @@
         <upstream.version>4.18.2</upstream.version>
         <camel-features.tesb.version>4.18.2.20260522</camel-features.tesb.version>
         <camel-spring.tesb.version>4.18.2.20260522</camel-spring.tesb.version>
+        <camel-cxf-all.tesb.version>4.18.2.20260522</camel-cxf-all.tesb.version>
+        <camel-cxf-spring-all.tesb.version>4.18.2.20260522</camel-cxf-spring-all.tesb.version>
+        <camel-cxf-blueprint.tesb.version>4.18.2.20260522</camel-cxf-blueprint.tesb.version>
+        <camel-cxf-transport-blueprint.tesb.version>4.18.2.20260522</camel-cxf-transport-blueprint.tesb.version>
+        <camel-cxf-transport-jetty.tesb.version>4.18.2.20260522</camel-cxf-transport-jetty.tesb.version>
+        <zookeeper.tesb.version>3.9.5</zookeeper.tesb.version>
+        <zookeeper-server.tesb.version>3.9.5.jetty12.1</zookeeper-server.tesb.version>
+        <opensaml.bundle.tesb.version>5.1.4_1.tesb1</opensaml.bundle.tesb.version>
+        <shibboleth.tesb.version>9.1.6</shibboleth.tesb.version>
 
         <jetty11.tesb.version>11.0.21</jetty11.tesb.version>
         <jetty12.tesb.version>12.1.6</jetty12.tesb.version>
@@ -612,7 +621,7 @@
         <camel-osgi-spring-version>[6.2,6.3)</camel-osgi-spring-version>
         <camel-osgi-saaj-version>[2,4)</camel-osgi-saaj-version>
         <camel-osgi-slf4j-version>[2,3)</camel-osgi-slf4j-version>
-        <camel-osgi-cxf-version>[4.1,4.2)</camel-osgi-cxf-version>
+        <camel-osgi-cxf-version>[4.1.5,4.1.6)</camel-osgi-cxf-version>
 
         <!-- Camel Karaf OSGI version ranges -->
         <camel-osgi-version-clean>4.18</camel-osgi-version-clean>
@@ -681,7 +690,7 @@
         <servicemix-spring-jms-version>6.1.6</servicemix-spring-jms-version>
         <slf4j-version>2.0.13</slf4j-version>
         <spring-amqp-version>3.1.7</spring-amqp-version>
-        <wss4j-version>4.0.0</wss4j-version>
+        <wss4j-version>4.0.1</wss4j-version>
 
         <!-- Plugin versions -->
         <maven-antrun-plugin-version>3.1.0</maven-antrun-plugin-version>
