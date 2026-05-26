@@ -255,6 +255,7 @@
         <okio.tesb.version>3.16.2</okio.tesb.version>
         <opennlp.tesb.version>2.5.9</opennlp.tesb.version>
         <opentelemetry.tesb.version>1.62.0</opentelemetry.tesb.version>
+        <opentelemetry-alpha.tesb.version>1.28.0-alpha</opentelemetry-alpha.tesb.version>
         <opentelemetry-instrumentation.tesb.version>2.27.0</opentelemetry-instrumentation.tesb.version>
         <paranamer.tesb.version>2.8</paranamer.tesb.version>
         <parquet-avro.tesb.version>1.15.2</parquet-avro.tesb.version>
@@ -1068,6 +1069,7 @@
                             <okio.tesb.version>${okio.tesb.version}</okio.tesb.version>
                             <opennlp.tesb.version>${opennlp.tesb.version}</opennlp.tesb.version>
                             <opentelemetry.tesb.version>${opentelemetry.tesb.version}</opentelemetry.tesb.version>
+                            <opentelemetry-alpha.tesb.version>${opentelemetry-alpha.tesb.version}</opentelemetry-alpha.tesb.version>
                             <opentelemetry-instrumentation.tesb.version>${opentelemetry-instrumentation.tesb.version}</opentelemetry-instrumentation.tesb.version>
                             <paranamer.tesb.version>${paranamer.tesb.version}</paranamer.tesb.version>
                             <parquet-avro.tesb.version>${parquet-avro.tesb.version}</parquet-avro.tesb.version>

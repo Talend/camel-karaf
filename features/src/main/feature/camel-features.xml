@@ -2457,7 +2457,7 @@
         <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-common/${opentelemetry.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-sdk/${opentelemetry.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-context/${opentelemetry.tesb.version}</bundle>
-        <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-semconv/${opentelemetry-alpha-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-semconv/${opentelemetry-alpha.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-opentelemetry/${upstream.version}</bundle>
     </feature>
     <feature name='camel-optaplanner' version='${upstream.version}' start-level='50'>
