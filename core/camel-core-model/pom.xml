@@ -31,6 +31,7 @@
     <artifactId>camel-core-model</artifactId>
     <packaging>bundle</packaging>
     <name>Apache Camel :: Karaf :: Core :: Model</name>
+    <version>${revision}</version>
 
     <properties>
         <camel.osgi.export>
@@ -40,13 +41,14 @@
             jdk.jfr;resolution:=optional,
             *
         </camel.osgi.import>
+        <revision>${camel-core-model.tesb.version}</revision>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.apache.camel</groupId>
             <artifactId>camel-core-model</artifactId>
-            <version>${camel-version}</version>
+            <version>${camel-core-model.tesb.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.camel</groupId>

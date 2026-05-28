@@ -103,7 +103,7 @@
                         <feature>framework</feature>
                     </framework>
                     <features>
-                        <feature>camel*</feature>
+                        <feature>camel-zoo*</feature>
                     </features>
                 </configuration>
                 <executions>

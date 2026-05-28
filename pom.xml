@@ -90,6 +90,7 @@
         <upstream.version>4.18.2</upstream.version>
         <camel-features.tesb.version>4.18.2.20260522</camel-features.tesb.version>
         <camel-spring.tesb.version>4.18.2.20260522</camel-spring.tesb.version>
+        <camel-core-model.tesb.version>4.18.2.20260522</camel-core-model.tesb.version>
         <camel-cxf-all.tesb.version>4.18.2.20260522</camel-cxf-all.tesb.version>
         <camel-cxf-spring-all.tesb.version>4.18.2.20260522</camel-cxf-spring-all.tesb.version>
         <camel-cxf-blueprint.tesb.version>4.18.2.20260522</camel-cxf-blueprint.tesb.version>
@@ -825,6 +826,7 @@
                             <upstream.version>${upstream.version}</upstream.version>
                             <camel-features.tesb.version>${camel-features.tesb.version}</camel-features.tesb.version>
                             <camel-spring.tesb.version>${camel-spring.tesb.version}</camel-spring.tesb.version>
+                            <camel-core-model.tesb.version>${camel-core-model.tesb.version}</camel-core-model.tesb.version>
                             <curator.tesb.version>${curator.tesb.version}</curator.tesb.version>
                             <zookeeper.tesb.version>${zookeeper.tesb.version}</zookeeper.tesb.version>
                             <zookeeper-server.tesb.version>${zookeeper-server.tesb.version}</zookeeper-server.tesb.version>

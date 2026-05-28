@@ -296,7 +296,7 @@
         <bundle>mvn:org.apache.camel.karaf/camel-base/${upstream.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-base-engine/${upstream.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-management/${upstream.version}</bundle>
-        <bundle>mvn:org.apache.camel.karaf/camel-core-model/${upstream.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-core-model/${camel-core-model.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-core-reifier/${upstream.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-core-processor/${upstream.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-core-engine/${upstream.version}</bundle>
