@@ -134,20 +134,15 @@
 
     <feature name="jetty" version="${jetty11.tesb.version}">
         <feature version="[5,6)">jakarta-servlet</feature>
-        <bundle dependency="true">mvn:org.eclipse.jetty/jetty-alpn-server/${jetty11.tesb.version}</bundle>
         <bundle dependency="true">mvn:org.eclipse.jetty/jetty-http/${jetty11.tesb.version}</bundle>
         <bundle dependency="true">mvn:org.eclipse.jetty/jetty-io/${jetty11.tesb.version}</bundle>
         <bundle dependency="true">mvn:org.eclipse.jetty/jetty-server/${jetty11.tesb.version}</bundle>
         <bundle dependency="true">mvn:org.eclipse.jetty/jetty-util/${jetty11.tesb.version}</bundle>
         <bundle dependency="true">mvn:org.eclipse.jetty/jetty-security/${jetty11.tesb.version}</bundle>
-        <bundle dependency="true">mvn:org.eclipse.jetty.http2/http2-hpack/${jetty11.tesb.version}</bundle>
-        <bundle dependency="true">mvn:org.eclipse.jetty.http2/http2-common/${jetty11.tesb.version}</bundle>
-        <bundle dependency="true">mvn:org.eclipse.jetty.http2/http2-server/${jetty11.tesb.version}</bundle>
     </feature>
 
     <feature name="jetty" version="${jetty12.tesb.version}">
         <feature version="[6,7)">jakarta-servlet</feature>
-        <bundle dependency="true">mvn:org.eclipse.jetty/jetty-alpn-server/${jetty12.tesb.version}</bundle>
         <bundle dependency="true">mvn:org.eclipse.jetty/jetty-http/${jetty12.tesb.version}</bundle>
         <bundle dependency="true">mvn:org.eclipse.jetty/jetty-io/${jetty12.tesb.version}</bundle>
         <bundle dependency="true">mvn:org.eclipse.jetty/jetty-server/${jetty12.tesb.version}</bundle>
@@ -155,9 +150,6 @@
         <bundle dependency="true">mvn:org.eclipse.jetty/jetty-jmx/${jetty12.tesb.version}</bundle>
         <bundle dependency="true">mvn:org.eclipse.jetty/jetty-util/${jetty12.tesb.version}</bundle>
         <bundle dependency="true">mvn:org.eclipse.jetty/jetty-security/${jetty12.tesb.version}</bundle>
-        <bundle dependency="true">mvn:org.eclipse.jetty.http2/jetty-http2-hpack/${jetty12.tesb.version}</bundle>
-        <bundle dependency="true">mvn:org.eclipse.jetty.http2/jetty-http2-common/${jetty12.tesb.version}</bundle>
-        <bundle dependency="true">mvn:org.eclipse.jetty.http2/jetty-http2-server/${jetty12.tesb.version}</bundle>
     </feature>
 
     <feature name="http-client" version="${httpclient4-version}">
@@ -233,7 +225,7 @@
         <bundle dependency='true'>wrap:mvn:com.azure/azure-core/${azure-core-version}$${spi-consumer}&amp;Import-Package=*;resolution:=optional,com.fasterxml.jackson.dataformat.xml.deser;resolution:=optional,com.fasterxml.jackson.dataformat.xml.ser;resolution:=optional</bundle>
         <bundle dependency='true'>wrap:mvn:com.azure/azure-identity/${azure-identity-version}$Import-Package=com.sun.jna,*;resolution:=optional</bundle>
         <bundle dependency='true'>wrap:mvn:io.projectreactor/reactor-core/${reactor-version}$overwrite=merge&amp;Import-Package=jdk.internal*;resolution:=optional,io.micrometer*;resolution:=optional,javax.annotation*;resolution:=optional,org.jspecify*;resolution:=optional,kotlin*;resolution:=optional,reactor.blockhound*;resolution:=optional,*</bundle>
-        <bundle dependency='true'>mvn:net.java.dev.jna/jna/${auto-detect-version}</bundle>
+        <bundle dependency='true'>mvn:net.java.dev.jna/jna/${jna.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.reactivestreams/reactive-streams/${reactive-streams-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.azure/azure-xml/${azure-xml-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.azure/azure-json/${azure-json-version}</bundle>
@@ -1235,7 +1227,7 @@
     </feature>
     <feature name='camel-docker' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
-        <feature version='[32,33)'>guava</feature>
+        <feature version='[33,34)'>guava</feature>
         <feature version='${camel-osgi-jackson2-version}'>jackson</feature>
         <feature version='[4.1,5)'>netty</feature>
         <!-- both 'docker-java' and 'docker-java-core' export 'com.github.dockerjava.core',
@@ -1744,7 +1736,7 @@
     </feature>
     <feature name='camel-hazelcast' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
-        <bundle dependency='true'>mvn:com.hazelcast/hazelcast/${hazelcast-version}</bundle>
+        <bundle dependency='true'>mvn:com.hazelcast/hazelcast/${hazelcast.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-hazelcast/${upstream.version}</bundle>
     </feature>
     <feature name='camel-headersmap' version='${upstream.version}' start-level='50'>
@@ -3099,7 +3091,7 @@
         <bundle dependency='true'>wrap:mvn:io.grpc/grpc-core/${grpc-version}</bundle>
         <bundle dependency='true'>mvn:io.netty/netty-codec-http2/${netty-version}</bundle>
         <bundle dependency='true'>mvn:org.apache.avro/avro/${avro-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:tech.allegro.schema.json2avro/converter/${auto-detect-version}$Fragment-Host=avro;bundle-version="${avro-version}"&amp;Bundle-SymbolicName=tech.allegro.schema.json2avro.converter.fragment&amp;Bundle-Version=${auto-detect-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:tech.allegro.schema.json2avro/converter/${json2avro.tesb.version}$Fragment-Host=avro;bundle-version="${avro-version}"&amp;Bundle-SymbolicName=tech.allegro.schema.json2avro.converter.fragment&amp;Bundle-Version=${json2avro.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:io.perfmark/perfmark-api/${auto-detect-version}</bundle>
         <bundle dependency='true'>mvn:org.apache.commons/commons-compress/${commons-compress-version}</bundle>
         <bundle dependency='true'>mvn:commons-io/commons-io/${commons-io-version}</bundle>
@@ -3112,7 +3104,6 @@
         <bundle dependency='true'>mvn:org.cometd.java/cometd-java-common/${cometd-java-client-version}</bundle>
         <bundle dependency='true'>mvn:org.eclipse.jetty/jetty-alpn-client/${jetty-version}</bundle>
         <bundle dependency='true'>wrap:mvn:org.eclipse.jetty/jetty-client/${jetty-version}$overwrite=merge&amp;Export-Package=org*;version=${jetty-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:tech.allegro.schema.json2avro/converter/${auto-detect-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-salesforce/${upstream.version}</bundle>
     </feature>
     <feature name='camel-sap-netweaver' version='${upstream.version}' start-level='50'>
@@ -3741,7 +3732,7 @@ Chain 2:
         <bundle dependency='true'>wrap:mvn:org.apache.zookeeper/zookeeper-jute/${zookeeper.tesb.version}$Bundle-SymbolicName=org.apache.zookeeper-jute&amp;Bundle-Version=${zookeeper.tesb.version}&amp;Fragment-Host=org.apache.zookeeper&amp;Export-Package=org.apache.jute;version=${zookeeper.tesb.version},org.apache.zookeeper.*;version=${zookeeper.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.apache.curator/curator-client/${curator.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.apache.curator/curator-framework/${curator.tesb.version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.curator/curator-recipes/${curator.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:org.apache.curator/curator-recipes/${curator.tesb.version}$overwrite=merge&amp;Import-Package=!javax.annotation,!org.apache.curator.shaded.com.google*,com.google*;version="[33,34)",org.apache.curator*;version="[5.9,6)",*</bundle>
         <bundle dependency='true'>mvn:org.apache.curator/curator-x-discovery/${curator.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-zookeeper/${upstream.version}</bundle>
     </feature>
@@ -3753,7 +3744,7 @@ Chain 2:
         <bundle dependency='true'>wrap:mvn:org.apache.zookeeper/zookeeper-jute/${zookeeper.tesb.version}$Bundle-SymbolicName=org.apache.zookeeper-jute&amp;Bundle-Version=${zookeeper.tesb.version}&amp;Fragment-Host=org.apache.zookeeper&amp;Export-Package=org.apache.jute;version=${zookeeper.tesb.version},org.apache.zookeeper.*;version=${zookeeper.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.apache.curator/curator-client/${curator.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.apache.curator/curator-framework/${curator.tesb.version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.curator/curator-recipes/${curator.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:org.apache.curator/curator-recipes/${curator.tesb.version}$overwrite=merge&amp;Import-Package=!javax.annotation,!org.apache.curator.shaded.com.google*,com.google*;version="[33,34)",org.apache.curator*;version="[5.9,6)",*</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-zookeeper-master/${upstream.version}</bundle>
     </feature>
 </features>

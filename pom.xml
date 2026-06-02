@@ -101,7 +101,7 @@
         <zookeeper-server.tesb.version>3.9.5.jetty12.1</zookeeper-server.tesb.version>
         <opensaml.bundle.tesb.version>5.1.4_1.tesb2</opensaml.bundle.tesb.version>
         <shibboleth.tesb.version>9.1.6</shibboleth.tesb.version>
-
+        <hazelcast.tesb.version>5.5.0.tesb1</hazelcast.tesb.version>
         <jetty11.tesb.version>11.0.21</jetty11.tesb.version>
         <jetty12.tesb.version>12.1.6</jetty12.tesb.version>
         <jetty.tesb.version>${jetty12.tesb.version}</jetty.tesb.version>
@@ -116,6 +116,8 @@
         <jaxb-fastinfoset.tesb.version>2.1.1</jaxb-fastinfoset.tesb.version>
         <jaxb-staxex.tesb.version>2.1.0</jaxb-staxex.tesb.version>
         <jaxb-dtd-parser.tesb.version>1.5.1</jaxb-dtd-parser.tesb.version>
+        <jna.tesb.version>5.18.0</jna.tesb.version>
+        <json2avro.tesb.version>0.3.0</json2avro.tesb.version>
 
         <javaVersion>17</javaVersion>
         <project.build.outputTimestamp>1779203564</project.build.outputTimestamp>
@@ -830,6 +832,7 @@
                             <curator.tesb.version>${curator.tesb.version}</curator.tesb.version>
                             <zookeeper.tesb.version>${zookeeper.tesb.version}</zookeeper.tesb.version>
                             <zookeeper-server.tesb.version>${zookeeper-server.tesb.version}</zookeeper-server.tesb.version>
+                            <hazelcast.tesb.version>${hazelcast.tesb.version}</hazelcast.tesb.version>
                             <jetty11.tesb.version>${jetty11.tesb.version}</jetty11.tesb.version>
                             <jetty12.tesb.version>${jetty12.tesb.version}</jetty12.tesb.version>
                             <jetty.tesb.version>${jetty.tesb.version}</jetty.tesb.version>
@@ -844,6 +847,8 @@
                             <jaxb-fastinfoset.tesb.version>${jaxb-fastinfoset.tesb.version}</jaxb-fastinfoset.tesb.version>
                             <jaxb-staxex.tesb.version>${jaxb-staxex.tesb.version}</jaxb-staxex.tesb.version>
                             <jaxb-dtd-parser.tesb.version>${jaxb-dtd-parser.tesb.version}</jaxb-dtd-parser.tesb.version>
+                            <jna.tesb.version>${jna.tesb.version}</jna.tesb.version>
+                            <json2avro.tesb.version>${json2avro.tesb.version}</json2avro.tesb.version>
                         </properties>
                     </configuration>
                     <executions>
