@@ -102,6 +102,7 @@
         <opensaml.bundle.tesb.version>5.1.4_1.tesb2</opensaml.bundle.tesb.version>
         <shibboleth.tesb.version>9.1.6</shibboleth.tesb.version>
 
+        <hazelcast.tesb.version>5.5.0.tesb1</hazelcast.tesb.version>
         <jetty11.tesb.version>11.0.21</jetty11.tesb.version>
         <jetty12.tesb.version>12.1.6</jetty12.tesb.version>
         <jetty.tesb.version>${jetty12.tesb.version}</jetty.tesb.version>
@@ -830,6 +831,7 @@
                             <curator.tesb.version>${curator.tesb.version}</curator.tesb.version>
                             <zookeeper.tesb.version>${zookeeper.tesb.version}</zookeeper.tesb.version>
                             <zookeeper-server.tesb.version>${zookeeper-server.tesb.version}</zookeeper-server.tesb.version>
+                            <hazelcast.tesb.version>${hazelcast.tesb.version}</hazelcast.tesb.version>
                             <jetty11.tesb.version>${jetty11.tesb.version}</jetty11.tesb.version>
                             <jetty12.tesb.version>${jetty12.tesb.version}</jetty12.tesb.version>
                             <jetty.tesb.version>${jetty.tesb.version}</jetty.tesb.version>
