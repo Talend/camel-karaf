@@ -116,6 +116,7 @@
         <jaxb-fastinfoset.tesb.version>2.1.1</jaxb-fastinfoset.tesb.version>
         <jaxb-staxex.tesb.version>2.1.0</jaxb-staxex.tesb.version>
         <jaxb-dtd-parser.tesb.version>1.5.1</jaxb-dtd-parser.tesb.version>
+        <jna.tesb.version>5.18.0</jna.tesb.version>
         <json2avro.tesb.version>0.3.0</json2avro.tesb.version>
 
         <javaVersion>17</javaVersion>
@@ -846,6 +847,7 @@
                             <jaxb-fastinfoset.tesb.version>${jaxb-fastinfoset.tesb.version}</jaxb-fastinfoset.tesb.version>
                             <jaxb-staxex.tesb.version>${jaxb-staxex.tesb.version}</jaxb-staxex.tesb.version>
                             <jaxb-dtd-parser.tesb.version>${jaxb-dtd-parser.tesb.version}</jaxb-dtd-parser.tesb.version>
+                            <jna.tesb.version>${jna.tesb.version}</jna.tesb.version>
                             <json2avro.tesb.version>${json2avro.tesb.version}</json2avro.tesb.version>
                         </properties>
                     </configuration>

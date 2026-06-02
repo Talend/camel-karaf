@@ -225,7 +225,7 @@
         <bundle dependency='true'>wrap:mvn:com.azure/azure-core/${azure-core-version}$${spi-consumer}&amp;Import-Package=*;resolution:=optional,com.fasterxml.jackson.dataformat.xml.deser;resolution:=optional,com.fasterxml.jackson.dataformat.xml.ser;resolution:=optional</bundle>
         <bundle dependency='true'>wrap:mvn:com.azure/azure-identity/${azure-identity-version}$Import-Package=com.sun.jna,*;resolution:=optional</bundle>
         <bundle dependency='true'>wrap:mvn:io.projectreactor/reactor-core/${reactor-version}$overwrite=merge&amp;Import-Package=jdk.internal*;resolution:=optional,io.micrometer*;resolution:=optional,javax.annotation*;resolution:=optional,org.jspecify*;resolution:=optional,kotlin*;resolution:=optional,reactor.blockhound*;resolution:=optional,*</bundle>
-        <bundle dependency='true'>mvn:net.java.dev.jna/jna/${auto-detect-version}</bundle>
+        <bundle dependency='true'>mvn:net.java.dev.jna/jna/${jna.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.reactivestreams/reactive-streams/${reactive-streams-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.azure/azure-xml/${azure-xml-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.azure/azure-json/${azure-json-version}</bundle>
