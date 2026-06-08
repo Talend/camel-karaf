@@ -21,10 +21,13 @@ org.apache.camel.karaf:camel-vm,\
 \
 org.apache.camel.karaf:camel-activemq,\
 org.apache.camel.karaf:camel-activemq6,\
+org.apache.camel.karaf:camel-amqp,\
 org.apache.camel.karaf:camel-as2,\
 org.apache.camel.karaf:camel-aws2-kinesis,\
 org.apache.camel.karaf:camel-aws2-s3,\
 org.apache.camel.karaf:camel-aws2-sqs,\
+org.apache.camel.karaf:camel-coap,\
+org.apache.camel.karaf:camel-consul,\
 org.apache.camel.karaf:camel-crypto,\
 org.apache.camel.karaf:camel-cxf-all,\
 org.apache.camel.karaf:camel-cxf-blueprint,\
@@ -42,8 +45,11 @@ org.apache.camel.karaf:camel-direct,\
 org.apache.camel.karaf:camel-drill,\
 org.apache.camel.karaf:camel-dynamic-router,\
 org.apache.camel.karaf:camel-file,\
+org.apache.camel.karaf:camel-google-pubsub,\
 org.apache.camel.karaf:camel-http,\
+org.apache.camel.karaf:camel-infinispan,\
 org.apache.camel.karaf:camel-jaxb,\
+org.apache.camel.karaf:camel-jms,\
 org.apache.camel.karaf:camel-jsonpath,\
 org.apache.camel.karaf:camel-knative-http,\
 org.apache.camel.karaf:camel-kubernetes,\
@@ -51,6 +57,7 @@ org.apache.camel.karaf:camel-langchain4j-core,\
 org.apache.camel.karaf:camel-langchain4j-chat,\
 org.apache.camel.karaf:camel-langchain4j-tools,\
 org.apache.camel.karaf:camel-leveldb,\
+org.apache.camel.karaf:camel-mail,\
 org.apache.camel.karaf:camel-mina,\
 org.apache.camel.karaf:camel-minio,\
 org.apache.camel.karaf:camel-mongodb,\
@@ -61,6 +68,8 @@ org.apache.camel.karaf:camel-quartz,\
 org.apache.camel.karaf:camel-ref,\
 org.apache.camel.karaf:camel-rest-openapi,\
 org.apache.camel.karaf:camel-salesforce,\
+org.apache.camel.karaf:camel-sjms,\
+org.apache.camel.karaf:camel-sjms2,\
 org.apache.camel.karaf:camel-smb,\
 org.apache.camel.karaf:camel-spring,\
 org.apache.camel.karaf:camel-sql,\

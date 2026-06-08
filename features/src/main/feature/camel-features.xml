@@ -394,7 +394,7 @@
         <bundle dependency='true'>mvn:org.apache.qpid/proton-j/${qpid-proton-j-version}</bundle>
         <bundle dependency='true'>mvn:io.netty/netty-codec-http/${netty.tesb.version}</bundle>
         <bundle dependency='true'>mvn:io.netty/netty-transport-classes-epoll/${netty.tesb.version}</bundle>
-        <bundle>mvn:org.apache.camel.karaf/camel-amqp/${upstream.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-amqp/${camel-amqp.tesb.version}</bundle>
     </feature>
 
     <feature name='camel-arangodb' version='${upstream.version}' start-level='50'>
@@ -892,7 +892,7 @@
         <bundle dependency='true'>wrap:mvn:org.eclipse.californium/element-connector/${californium-version}$overwrite=merge&amp;Import-Package=net.i2p.crypto.eddsa;resolution:=optional,*;resolution:=optional</bundle>
         <bundle dependency='true'>mvn:org.eclipse.californium/element-connector-tcp-netty/${californium-version}</bundle>
         <bundle dependency='true'>mvn:org.eclipse.californium/scandium/${californium-scandium-version}</bundle>
-        <bundle>mvn:org.apache.camel.karaf/camel-coap/${upstream.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-coap/${camel-coap.tesb.version}</bundle>
     </feature>
     <feature name='camel-cometd' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
@@ -923,7 +923,7 @@
         <bundle dependency='true'>mvn:com.fasterxml.jackson.datatype/jackson-datatype-jdk8/${jackson2.tesb.version}</bundle>
         <bundle dependency='true'>mvn:com.fasterxml.jackson.datatype/jackson-datatype-guava/${jackson2.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3.tesb.version}</bundle>
-        <bundle>mvn:org.apache.camel.karaf/camel-consul/${upstream.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-consul/${camel-consul.tesb.version}</bundle>
     </feature>
     <feature name='camel-couchbase' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
@@ -994,7 +994,7 @@
         <bundle>mvn:org.apache.camel.karaf/camel-http-common/${upstream.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-cxf-all/${camel-cxf-all.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-cxf-blueprint/${camel-cxf.tesb.version}</bundle>
-        <bundle>mvn:org.apache.camel.karaf/camel-cxf-transport-blueprint/${camel-cxf.tesb.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-cxf-transport-blueprint/${camel-cxf-transport.tesb.version}</bundle>
     </feature>
     <feature name='camel-cxf-jetty' version='${upstream.version}' start-level='50'>
         <feature version="[12,13)">jetty</feature>
@@ -1434,7 +1434,7 @@
         <bundle dependency='true'>wrap:mvn:io.grpc/grpc-auth/${grpc.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:io.grpc/grpc-util/${grpc.tesb.version}</bundle>
         <bundle dependency='true'>mvn:com.google.code.findbugs/jsr305/${jsr305.tesb.version}</bundle>
-        <bundle>mvn:org.apache.camel.karaf/camel-google-pubsub/${upstream.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-google-pubsub/${camel-google-pubsub.tesb.version}</bundle>
     </feature>
     <feature name='camel-google-pubsub-lite' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
@@ -1695,7 +1695,7 @@
         <feature version='${camel-osgi-version-range}'>camel-infinispan-common</feature>
         <bundle dependency='true'>wrap:mvn:org.infinispan/infinispan-client-hotrod/${infinispan.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:org.infinispan/infinispan-remote-query-client/${infinispan.tesb.version}</bundle>
-        <bundle>mvn:org.apache.camel.karaf/camel-infinispan/${upstream.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-infinispan/${camel-infinispan.tesb.version}</bundle>
     </feature>
     <feature name='camel-infinispan-common' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
@@ -1868,7 +1868,7 @@
     <feature name="camel-jms" version="${upstream.version}" start-level="50">
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version="${camel-osgi-spring-version}">spring-jms</feature>
-        <bundle>mvn:org.apache.camel.karaf/camel-jms/${upstream.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-jms/${camel-jms.tesb.version}</bundle>
     </feature>
     <feature name='camel-jmx' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
@@ -2169,7 +2169,7 @@
         <!-- <bundle dependency='true'>wrap:mvn:org.eclipse.angus/angus-mail/${angus-mail.tesb.version}$overwrite=merge</bundle> -->
         <bundle dependency='true'>wrap:mvn:org.eclipse.angus/jakarta.mail/${angus-mail.tesb.version}$overwrite=merge</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-attachments/${upstream.version}</bundle>
-        <bundle>mvn:org.apache.camel.karaf/camel-mail/${upstream.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-mail/${camel-mail.tesb.version}</bundle>
     </feature>
     <feature name='camel-mail-microsoft-oauth' version='${upstream.version}' start-level='50'>
         <feature version='[${azure-core-version},2)'>azure-msal4j</feature>
@@ -2818,11 +2818,11 @@
     <feature name='camel-sjms' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <bundle dependency="true">mvn:jakarta.jms/jakarta.jms-api/${jakarta-jms-api-version}</bundle>
-        <bundle>mvn:org.apache.camel.karaf/camel-sjms/${upstream.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-sjms/${camel-sjms.tesb.version}</bundle>
     </feature>
     <feature name='camel-sjms2' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-sjms</feature>
-        <bundle>mvn:org.apache.camel.karaf/camel-sjms2/${upstream.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-sjms2/${camel-sjms2.tesb.version}</bundle>
     </feature>
     <feature name='camel-slack' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
