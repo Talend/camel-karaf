@@ -229,7 +229,7 @@
         <jaxb-staxex.tesb.version>2.1.0</jaxb-staxex.tesb.version>
         <jaxb-dtd-parser.tesb.version>1.5.1</jaxb-dtd-parser.tesb.version>
         <jboss-logging.tesb.version>3.6.1.Final</jboss-logging.tesb.version>
-        <jna.tesb.version>5.18.0</jna.tesb.version>
+        <jna.tesb.version>5.18.1</jna.tesb.version>
         <jolokia.tesb.version>2.2.8</jolokia.tesb.version>
         <jooq.tesb.version>3.19.14</jooq.tesb.version>
         <json-smart.tesb.version>2.5.2</json-smart.tesb.version>
