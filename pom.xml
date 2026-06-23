@@ -192,7 +192,7 @@
         <commons-collections4.tesb.version>4.5.0</commons-collections4.tesb.version>
         <commons-compress.tesb.version>1.28.0</commons-compress.tesb.version>
         <commons-lang3.tesb.version>3.19.0</commons-lang3.tesb.version>
-        <commons-io.tesb.version>2.21.0</commons-io.tesb.version>
+        <commons-io.tesb.version>2.22.0</commons-io.tesb.version>
         <commons-pool2.tesb.version>2.13.1</commons-pool2.tesb.version>
         <commons-text.tesb.version>1.14.0</commons-text.tesb.version>
         <couchbase-client.tesb.version>3.11.1</couchbase-client.tesb.version>
