@@ -140,7 +140,7 @@
     </feature>
 
     <feature name="jackson" version="${jackson2.tesb.version}">
-        <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2.tesb.version}.spiprov</bundle>
+        <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson2-databind.tesb.version}.spiprov</bundle>
         <!-- wrap needed to add the missing SPI-Provider clause to the manifest -->
         <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2.tesb.version}.spiprov</bundle>
         <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2-annotations.tesb.version}</bundle>
@@ -900,13 +900,13 @@
         <feature version="${jetty12.tesb.version-range}">jetty</feature>
         <bundle dependency='true'>mvn:org.eclipse.jetty.ee10/jetty-ee10-servlet/${jetty12.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.eclipse.jetty.ee10/jetty-ee10-servlets/${jetty12.tesb.version}</bundle>
-        <bundle dependency='true'>mvn:org.cometd.java/cometd-java-server-common/${cometd-java-server-version}</bundle>
-        <bundle dependency='true'>mvn:org.cometd.java/cometd-java-server-http-jakarta/${cometd-java-server-version}</bundle>
-        <bundle dependency='true'>mvn:org.cometd.java/cometd-java-server-websocket-jetty/${cometd-java-server-version}</bundle>
-        <bundle dependency='true'>mvn:org.cometd.java/cometd-java-common/${cometd-java-server-version}</bundle>
-        <bundle dependency='true'>mvn:org.cometd.java/cometd-java-api-server/${cometd-java-server-version}</bundle>
-        <bundle dependency='true'>mvn:org.cometd.java/cometd-java-api-common/${cometd-java-server-version}</bundle>
-        <bundle dependency='true'>mvn:org.cometd.java/cometd-java-api-client/${cometd-java-server-version}</bundle>
+        <bundle dependency='true'>mvn:org.cometd.java/cometd-java-server-common/${cometd-java-server.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:org.cometd.java/cometd-java-server-http-jakarta/${cometd-java-server.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:org.cometd.java/cometd-java-server-websocket-jetty/${cometd-java-server.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:org.cometd.java/cometd-java-common/${cometd-java-server.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:org.cometd.java/cometd-java-api-server/${cometd-java-server.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:org.cometd.java/cometd-java-api-common/${cometd-java-server.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:org.cometd.java/cometd-java-api-client/${cometd-java-server.tesb.version}</bundle>
         <bundle dependency="true">mvn:org.eclipse.jetty/jetty-util-ajax/${jetty.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-cometd/${upstream.version}</bundle>
     </feature>
@@ -2114,23 +2114,25 @@
     </feature>
     <feature name='camel-ldif' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
-        <bundle dependency='true'>mvn:org.apache.directory.api/api-i18n/${auto-detect-version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.directory.api/api-asn1-api/${auto-detect-version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.directory.api/api-asn1-ber/${auto-detect-version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.directory.api/api-ldap-client-api/${auto-detect-version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.directory.api/api-ldap-codec-core/${auto-detect-version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.directory.api/api-ldap-extras-aci/${auto-detect-version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.directory.api/api-ldap-extras-codec/${auto-detect-version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.directory.api/api-ldap-extras-codec-api/${auto-detect-version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.directory.api/api-ldap-model/${auto-detect-version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.directory.api/api-ldap-schema-data/${auto-detect-version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.directory.api/api-util/${auto-detect-version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.directory.api/api-i18n/${apache-directory-api.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.directory.api/api-asn1-api/${apache-directory-api.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.directory.api/api-asn1-ber/${apache-directory-api.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.directory.api/api-ldap-client-api/${apache-directory-api.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.directory.api/api-ldap-codec-core/${apache-directory-api.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.directory.api/api-ldap-extras-aci/${apache-directory-api.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.directory.api/api-ldap-extras-codec/${apache-directory-api.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.directory.api/api-ldap-extras-codec-api/${apache-directory-api.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.directory.api/api-ldap-model/${apache-directory-api.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.directory.api/api-ldap-schema-data/${apache-directory-api.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.directory.api/api-util/${apache-directory-api.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.apache.directory.server/apacheds-core-api/${apacheds-version}</bundle>
         <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.antlr/${auto-detect-version}</bundle>
         <bundle dependency='true'>mvn:org.apache.commons/commons-collections4/${commons-collections4.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.apache.commons/commons-pool2/${commons-pool2.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.commons/commons-text/${commons-text.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.apache.mina/mina-core/${mina.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:com.github.ben-manes.caffeine/caffeine/${auto-detect-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-ldif/${upstream.version}</bundle>
     </feature>
     <feature name='camel-leveldb' version='${upstream.version}' start-level='50'>
@@ -2742,12 +2744,12 @@
         <bundle dependency='true'>mvn:org.apache.commons/commons-compress/${commons-compress.tesb.version}</bundle>
         <bundle dependency='true'>mvn:commons-io/commons-io/${commons-io.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3.tesb.version}</bundle>
-        <bundle dependency='true'>mvn:org.cometd.java/cometd-java-api-common/${cometd-java-client-version}</bundle>
-        <bundle dependency='true'>mvn:org.cometd.java/cometd-java-api-client/${cometd-java-client-version}</bundle>
-        <bundle dependency='true'>mvn:org.cometd.java/cometd-java-client-common/${cometd-java-client-version}</bundle>
-        <bundle dependency='true'>mvn:org.cometd.java/cometd-java-client-http-jetty/${cometd-java-client-version}</bundle>
-        <bundle dependency='true'>mvn:org.cometd.java/cometd-java-client-http-common/${cometd-java-client-version}</bundle>
-        <bundle dependency='true'>mvn:org.cometd.java/cometd-java-common/${cometd-java-client-version}</bundle>
+        <bundle dependency='true'>mvn:org.cometd.java/cometd-java-api-common/${cometd-java-client.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:org.cometd.java/cometd-java-api-client/${cometd-java-client.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:org.cometd.java/cometd-java-client-common/${cometd-java-client.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:org.cometd.java/cometd-java-client-http-jetty/${cometd-java-client.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:org.cometd.java/cometd-java-client-http-common/${cometd-java-client.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:org.cometd.java/cometd-java-common/${cometd-java-client.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.eclipse.jetty/jetty-alpn-client/${jetty12.tesb.version}</bundle>
         <bundle dependency="true">mvn:org.eclipse.jetty/jetty-alpn-java-client/${jetty12.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:org.eclipse.jetty/jetty-client/${jetty12.tesb.version}$overwrite=merge&amp;Export-Package=org*;version=${jetty12.tesb.version}</bundle>
@@ -3074,7 +3076,7 @@
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <bundle dependency='true'>mvn:commons-io/commons-io/${commons-io.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.javassist/javassist/${javassist-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:org.apache.thrift/libthrift/${libthrift-version}$overwrite=merge&amp;Export-Package=org.apache.thrift*;version=${libthrift-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:org.apache.thrift/libthrift/${libthrift.tesb.version}$overwrite=merge&amp;Export-Package=org.apache.thrift*;version=${libthrift.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-thrift/${upstream.version}</bundle>
     </feature>
     <feature name='camel-thymeleaf' version='${upstream.version}' start-level='50'>
