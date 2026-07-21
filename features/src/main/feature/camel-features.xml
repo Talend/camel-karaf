@@ -146,22 +146,6 @@
         <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson2-annotations.tesb.version}</bundle>
     </feature>
 
-    <feature name="jackson" version="${jackson216-version}">
-        <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson216-version}</bundle>
-        <!-- wrap needed to add the missing SPI-Provider clause to the manifest -->
-        <bundle dependency='true'>wrap:mvn:com.fasterxml.jackson.core/jackson-core/${jackson216-version}$overwrite=merge</bundle>
-        <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson216-version}</bundle>
-    </feature>
-
-    <!-- <feature name="jetty" version="${jetty11.tesb.version}">
-        <feature version="[5,6)">jakarta-servlet</feature>
-        <bundle dependency="true">mvn:org.eclipse.jetty/jetty-http/${jetty11.tesb.version}</bundle>
-        <bundle dependency="true">mvn:org.eclipse.jetty/jetty-io/${jetty11.tesb.version}</bundle>
-        <bundle dependency="true">mvn:org.eclipse.jetty/jetty-server/${jetty11.tesb.version}</bundle>
-        <bundle dependency="true">mvn:org.eclipse.jetty/jetty-util/${jetty11.tesb.version}</bundle>
-        <bundle dependency="true">mvn:org.eclipse.jetty/jetty-security/${jetty11.tesb.version}</bundle>
-    </feature> -->
-
     <feature name="jetty" version="${jetty12.tesb.version}">
         <feature version="[6,7)">jakarta-servlet</feature>
         <bundle dependency="true">mvn:org.eclipse.jetty/jetty-http/${jetty12.tesb.version}</bundle>
@@ -399,11 +383,11 @@
 
     <feature name='camel-arangodb' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
-        <feature version='[2.16,2.17)'>jackson</feature>
+        <feature version='${camel-osgi-jackson2.tesb.version}'>jackson</feature>
         <feature version='[4.1,5)'>netty</feature>
-        <bundle>wrap:mvn:com.arangodb/core/${auto-detect-version}$${spi-consumer}</bundle>
-        <bundle>wrap:mvn:com.arangodb/http-protocol/${auto-detect-version}</bundle>
-        <bundle>wrap:mvn:com.arangodb/jackson-serde-json/${auto-detect-version}$${spi-consumer}</bundle>
+        <bundle>wrap:mvn:com.arangodb/core/${arangodb.tesb.version}$${spi-consumer}</bundle>
+        <bundle>wrap:mvn:com.arangodb/http-protocol/${arangodb.tesb.version}</bundle>
+        <bundle>wrap:mvn:com.arangodb/jackson-serde-json/${arangodb.tesb.version}$${spi-consumer}</bundle>
         <bundle dependency='true'>wrap:mvn:io.vertx/vertx-core/${vertx.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:io.vertx/vertx-web-client/${vertx.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:io.vertx/vertx-web-common/${vertx.tesb.version}</bundle>
