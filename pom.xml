@@ -88,7 +88,7 @@
     <!-- TODO use Karaf/Camel bom -->
     <properties>
         <upstream.version>4.8.1</upstream.version>
-        <camel-features.tesb.version>4.8.1.20260701</camel-features.tesb.version>
+        <camel-features.tesb.version>4.8.1.20260801</camel-features.tesb.version>
         <camel-support.tesb.version>4.8.1.20260120</camel-support.tesb.version>
         <camel-vm.tesb.version>4.8.1.20250320</camel-vm.tesb.version>
         <camel-activemq.tesb.version>4.8.1.20260608</camel-activemq.tesb.version>
@@ -174,7 +174,7 @@
         <jetty11.tesb.version-range>[11,12)</jetty11.tesb.version-range>
         <jetty12.tesb.version-range>[12,13)</jetty12.tesb.version-range>
         <jetty.tesb.version-range>${jetty12.tesb.version-range}</jetty.tesb.version-range>
-        <activemq6.tesb.version>6.2.5</activemq6.tesb.version>
+        <activemq6.tesb.version>6.2.7</activemq6.tesb.version>
         <activemq-artemis.tesb.version>2.40.0</activemq-artemis.tesb.version>
         <angus-mail.tesb.version>2.0.4</angus-mail.tesb.version>
         <apache-directory-api.tesb.version>2.1.8</apache-directory-api.tesb.version>
