@@ -34,7 +34,7 @@
     <version>${revision}</version>
 
     <properties>
-        <revision>${camel-cxf.tesb.version}</revision>
+        <revision>${camel-cxf-spring-all.tesb.version}</revision>
         <camel.osgi.export>
             org.apache.camel.component.cxf.spring;version=${camel-version},
             org.apache.camel.component.cxf.spring.jaxrs;version=${camel-version},
@@ -42,12 +42,12 @@
             org.apache.camel.component.cxf.spring.transport;version=${camel-version}
         </camel.osgi.export>
         <camel.osgi.import>
-            org.springframework*;version="${camel-osgi-spring-version}",
-            org.springframework.beans*;version="${camel-osgi-spring-version}",
-            org.springframework.context*;version="${camel-osgi-spring-version}",
-            org.springframework.core*;version="${camel-osgi-spring-version}",
-            org.springframework.util*;version="${camel-osgi-spring-version}",
-            org.springframework.web*;version="${camel-osgi-spring-version}",
+            org.springframework*;version="${camel-osgi-spring.tesb.version}",
+            org.springframework.beans*;version="${camel-osgi-spring.tesb.version}",
+            org.springframework.context*;version="${camel-osgi-spring.tesb.version}",
+            org.springframework.core*;version="${camel-osgi-spring.tesb.version}",
+            org.springframework.util*;version="${camel-osgi-spring.tesb.version}",
+            org.springframework.web*;version="${camel-osgi-spring.tesb.version}",
             org.apache.cxf.*;version="${camel-osgi-cxf.tesb.version}",
             jakarta.activation;version="${camel-osgi-jakarta-activation-version}",
             jakarta.annotation;version="${camel-osgi-jakarta-annotation-version}",

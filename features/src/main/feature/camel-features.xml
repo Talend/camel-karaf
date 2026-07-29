@@ -345,8 +345,8 @@
         <bundle>mvn:org.apache.camel.karaf/camel-blueprint/${camel-blueprint.tesb.version}</bundle>
     </feature>
     <feature name='camel-spring' version='${upstream.version}' start-level='50'>
-        <feature version='${camel-osgi-spring-version}'>spring</feature>
-        <feature version='${camel-osgi-spring-version}'>spring-tx</feature>
+        <feature version='${camel-osgi-spring.tesb.version}'>spring</feature>
+        <feature version='${camel-osgi-spring.tesb.version}'>spring-tx</feature>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <bundle>mvn:org.apache.camel.karaf/camel-core-xml/${upstream.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-spring/${camel-spring.tesb.version}</bundle>
@@ -989,7 +989,7 @@
     <feature name='camel-cxf-spring' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-cxf</feature>
         <feature version='${camel-osgi-version-range}'>camel-spring</feature>
-        <bundle>mvn:org.apache.camel.karaf/camel-cxf-spring-all/${camel-cxf.tesb.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-cxf-spring-all/${camel-cxf-spring-all.tesb.version}</bundle>
     </feature>
     <feature name='camel-datasonnet' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
@@ -1101,7 +1101,7 @@
     <feature name='camel-dns' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <bundle dependency='true'>wrap:mvn:dnsjava/dnsjava/${dnsjava-version}</bundle>
-        <bundle>mvn:org.apache.camel.karaf/camel-dns/${upstream.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-dns/${camel-dns.tesb.version}</bundle>
     </feature>
     <feature name='camel-docker' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
@@ -1122,7 +1122,7 @@
     </feature>
     <feature name='camel-drill' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
-        <feature version='${camel-osgi-spring-version}'>spring-jdbc</feature>
+        <feature version='${camel-osgi-spring.tesb.version}'>spring-jdbc</feature>
         <feature version='${camel-osgi-jackson2.tesb.version}'>jackson</feature>
         <bundle dependency='true'>mvn:com.typesafe/config/${typesafe-config.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:org.reflections/reflections/0.9.12</bundle>
@@ -1851,7 +1851,7 @@
     </feature>
     <feature name="camel-jms" version="${upstream.version}" start-level="50">
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
-        <feature version="${camel-osgi-spring-version}">spring-jms</feature>
+        <feature version="${camel-osgi-spring.tesb.version}">spring-jms</feature>
         <bundle>mvn:org.apache.camel.karaf/camel-jms/${camel-jms.tesb.version}</bundle>
     </feature>
     <feature name='camel-jmx' version='${upstream.version}' start-level='50'>
@@ -1879,7 +1879,7 @@
     </feature>
     <feature name='camel-jpa' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
-        <feature version='${camel-osgi-spring-version}'>spring-orm</feature>
+        <feature version='${camel-osgi-spring.tesb.version}'>spring-orm</feature>
         <bundle dependency='true'>mvn:jakarta.persistence/jakarta.persistence-api/${jakarta-persistence-api-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-jpa/${upstream.version}</bundle>
     </feature>
@@ -2285,7 +2285,7 @@
         <bundle dependency='true'>mvn:org.mongodb/bson/${mongo-java-driver-version}</bundle>
         <bundle dependency='true'>mvn:org.mongodb/mongodb-driver-core/${mongo-java-driver-version}</bundle>
         <bundle dependency='true'>mvn:org.mongodb/mongodb-driver-sync/${mongo-java-driver-version}</bundle>
-        <bundle>mvn:org.apache.camel.karaf/camel-mongodb-gridfs/${upstream.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-mongodb-gridfs/${camel-mongodb-gridfs.tesb.version}</bundle>
     </feature>
     <feature name='camel-mustache' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
@@ -2633,7 +2633,7 @@
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version='${camel-osgi-jackson2.tesb.version}'>jackson</feature>
         <feature version='[4.1,5)'>netty</feature>
-        <feature version='${camel-osgi-spring-version}'>spring</feature>
+        <feature version='${camel-osgi-spring.tesb.version}'>spring</feature>
         <bundle dependency='true'>mvn:org.redisson/redisson/${redisson-version}</bundle>
         <bundle dependency='true'>mvn:com.esotericsoftware/kryo/${auto-detect-version}</bundle>
         <bundle dependency='true'>mvn:com.esotericsoftware/minlog/${auto-detect-version}</bundle>
@@ -2872,14 +2872,14 @@
     </feature>
     <feature name='camel-spring-batch' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
-        <feature version='${camel-osgi-spring-version}'>spring</feature>
+        <feature version='${camel-osgi-spring.tesb.version}'>spring</feature>
         <bundle dependency='true'>wrap:mvn:org.springframework.batch/spring-batch-core/${spring-batch.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:org.springframework.batch/spring-batch-infrastructure/${spring-batch.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-spring-batch/${upstream.version}</bundle>
     </feature>
     <feature name='camel-spring-jdbc' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-jdbc</feature>
-        <feature version='${camel-osgi-spring-version}'>spring-jdbc</feature>
+        <feature version='${camel-osgi-spring.tesb.version}'>spring-jdbc</feature>
         <bundle>mvn:org.apache.camel.karaf/camel-spring-jdbc/${upstream.version}</bundle>
     </feature>
     <feature name='camel-spring-ldap' version='${upstream.version}' start-level='50'>
@@ -2893,10 +2893,10 @@
     </feature>
     <feature name='camel-spring-rabbitmq' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
-        <feature version='${camel-osgi-spring-version}'>spring-tx</feature>
-        <feature version='${camel-osgi-spring-version}'>spring-messaging</feature>
+        <feature version='${camel-osgi-spring.tesb.version}'>spring-tx</feature>
+        <feature version='${camel-osgi-spring.tesb.version}'>spring-messaging</feature>
         <bundle dependency='true'>wrap:mvn:org.springframework.amqp/spring-rabbit/${spring-rabbit.tesb.version}</bundle>
-        <bundle dependency='true'>wrap:mvn:org.springframework.retry/spring-retry/${auto-detect-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:org.springframework.retry/spring-retry/${spring-retry.tesb.version}</bundle>
         <bundle dependency='true'>mvn:com.rabbitmq/amqp-client/${auto-detect-version}</bundle>
         <bundle dependency='true'>wrap:mvn:io.micrometer/micrometer-commons/${micrometer.tesb.version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
         <bundle dependency='true'>mvn:io.micrometer/micrometer-observation/${micrometer.tesb.version}</bundle>
@@ -2905,7 +2905,7 @@
     </feature>
     <feature name='camel-spring-redis' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
-        <feature version='${camel-osgi-spring-version}'>spring-tx</feature>
+        <feature version='${camel-osgi-spring.tesb.version}'>spring-tx</feature>
         <bundle dependency='true'>wrap:mvn:org.springframework.data/spring-data-commons/${spring-data-redis.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:org.springframework.data/spring-data-redis/${spring-data-redis.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:org.springframework.data/spring-data-keyvalue/${spring-data-redis.tesb.version}</bundle>
@@ -2916,15 +2916,16 @@
         <bundle>mvn:org.apache.camel.karaf/camel-spring-redis/${upstream.version}</bundle>
     </feature>
     <feature name='camel-spring-security' version='${upstream.version}' start-level='50'>
+        <feature prerequisite="true">spifly</feature>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
-        <feature version='${camel-osgi-spring-version}'>spring</feature>
-        <bundle dependency='true'>wrap:mvn:org.springframework.security/spring-security-core/${spring-security.tesb.version}</bundle>
-        <bundle dependency='true'>wrap:mvn:org.springframework.security/spring-security-config/${spring-security.tesb.version}</bundle>
+        <feature version='${camel-osgi-spring.tesb.version}'>spring</feature>
+        <bundle start-level="30">wrap:mvn:org.springframework.security/spring-security-core/${spring-security.tesb.version}$Bundle-SymbolicName=spring-security-core&amp;Bundle-Version=${spring-security.tesb.version}&amp;Export-Package=org.springframework.*;version=${spring-security.tesb.version}&amp;SPI-Provider=*</bundle>
+        <bundle start-level="30">wrap:mvn:org.springframework.security/spring-security-config/${spring-security.tesb.version}$Bundle-SymbolicName=spring-security-config&amp;Bundle-Version=${spring-security.tesb.version}&amp;Export-Package=org.springframework.*;version=${spring-security.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-spring-security/${upstream.version}</bundle>
     </feature>
     <feature name='camel-spring-ws' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-xslt-saxon</feature>
-        <feature version='${camel-osgi-spring-version}'>spring</feature>
+        <feature version='${camel-osgi-spring.tesb.version}'>spring</feature>
         <feature version="[6,7)">jakarta-servlet</feature>
         <bundle dependency='true'>wrap:mvn:org.springframework.ws/spring-ws-core/${spring-ws.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:org.springframework.ws/spring-xml/${spring-ws.tesb.version}</bundle>
@@ -2933,8 +2934,8 @@
     </feature>
     <feature name='camel-sql' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
-        <feature version='${camel-osgi-spring-version}'>spring-tx</feature>
-        <feature version='${camel-osgi-spring-version}'>spring-jdbc</feature>
+        <feature version='${camel-osgi-spring.tesb.version}'>spring-tx</feature>
+        <feature version='${camel-osgi-spring.tesb.version}'>spring-jdbc</feature>
         <bundle>mvn:org.apache.camel.karaf/camel-sql/${camel-sql.tesb.version}</bundle>
     </feature>
     <feature name='camel-ssh' version='${upstream.version}' start-level='50'>
@@ -3109,13 +3110,14 @@
         <bundle>mvn:org.apache.camel.karaf/camel-undertow/${camel-undertow.tesb.version}</bundle>
     </feature>
     <feature name='camel-undertow-spring-security' version='${upstream.version}' start-level='50'>
+        <feature prerequisite="true">spifly</feature>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version='${camel-osgi-version-range}'>camel-undertow</feature>
-        <feature version='${camel-osgi-spring-version}'>spring</feature>
-        <bundle dependency='true'>wrap:mvn:org.springframework.security/spring-security-core/${spring-security.tesb.version}</bundle>
-        <bundle dependency='true'>wrap:mvn:org.springframework.security/spring-security-oauth2-client/${spring-security.tesb.version}</bundle>
-        <bundle dependency='true'>wrap:mvn:org.springframework.security/spring-security-oauth2-jose/${spring-security.tesb.version}</bundle>
-        <bundle dependency='true'>wrap:mvn:org.springframework.security/spring-security-oauth2-resource-server/${spring-security.tesb.version}</bundle>
+        <feature version='${camel-osgi-spring.tesb.version}'>spring</feature>
+        <bundle start-level="30">wrap:mvn:org.springframework.security/spring-security-core/${spring-security.tesb.version}$Bundle-SymbolicName=spring-security-core&amp;Bundle-Version=${spring-security.tesb.version}&amp;Export-Package=org.springframework.*;version=${spring-security.tesb.version}&amp;SPI-Provider=*</bundle>
+        <bundle start-level="30">wrap:mvn:org.springframework.security/spring-security-oauth2-client/${spring-security.tesb.version}$Bundle-SymbolicName=spring-security-oauth2-client&amp;Bundle-Version=${spring-security.tesb.version}&amp;Export-Package=org.springframework.*;version=${spring-security.tesb.version}</bundle>
+        <bundle start-level="30">wrap:mvn:org.springframework.security/spring-security-oauth2-jose/${spring-security.tesb.version}$Bundle-SymbolicName=spring-security-oauth2-jose&amp;Bundle-Version=${spring-security.tesb.version}&amp;Export-Package=org.springframework.*;version=${spring-security.tesb.version}</bundle>
+        <bundle start-level="30">wrap:mvn:org.springframework.security/spring-security-oauth2-resource-server/${spring-security.tesb.version}$Bundle-SymbolicName=spring-security-oauth2-resource-server&amp;Bundle-Version=${spring-security.tesb.version}&amp;Export-Package=org.springframework.*;version=${spring-security.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-undertow-spring-security/${upstream.version}</bundle>
     </feature>
     <feature name='camel-univocity-parsers' version='${upstream.version}' start-level='50'>
