@@ -2194,8 +2194,8 @@
     <feature name='camel-micrometer-prometheus' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-micrometer</feature>
         <feature version='${camel-osgi-version-range}'>camel-platform-http-main</feature>
-        <bundle dependency='true'>mvn:io.prometheus/prometheus-metrics-exposition-formats/${auto-detect-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:io.prometheus/prometheus-metrics-shaded-protobuf/${auto-detect-version}</bundle>
+        <bundle dependency='true'>mvn:io.prometheus/prometheus-metrics-exposition-textformats/${auto-detect-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.prometheus/prometheus-metrics-exposition-formats/${auto-detect-version}$overwrite=merge&amp;Export-Package=io.prometheus.metrics.expositionformats.internal;version=${auto-detect-version},io.prometheus.metrics.expositionformats.*;version=${auto-detect-version}</bundle>
         <bundle dependency='true'>mvn:io.prometheus/prometheus-metrics-core/${auto-detect-version}</bundle>
         <bundle dependency='true'>mvn:io.prometheus/prometheus-metrics-model/${auto-detect-version}</bundle>
         <bundle dependency='true'>mvn:io.prometheus/prometheus-metrics-tracer-common/${auto-detect-version}</bundle>
@@ -2205,6 +2205,8 @@
         <bundle dependency='true'>wrap:mvn:io.prometheus/prometheus-metrics-config/${auto-detect-version}</bundle>
         <bundle dependency='true'>mvn:io.micrometer/micrometer-registry-prometheus/${micrometer.tesb.version}</bundle>
         <bundle dependency='true'>mvn:io.smallrye/jandex/${jandex-version}</bundle>
+        <bundle dependency='true'>mvn:com.google.code.findbugs/jsr305/${jsr305.tesb.version}</bundle>
+        <bundle dependency='true'>mvn:com.google.protobuf/protobuf-java/${protobuf.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-micrometer-prometheus/${upstream.version}</bundle>
     </feature>
     <feature name='camel-microprofile-config' version='${upstream.version}' start-level='50'>
