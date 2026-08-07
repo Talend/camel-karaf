@@ -242,7 +242,7 @@
         <jooq.tesb.version>3.19.14</jooq.tesb.version>
         <json-smart.tesb.version>2.5.2</json-smart.tesb.version>
         <json2avro.tesb.version>0.2.15</json2avro.tesb.version>
-        <jsoup.tesb.version>1.21.1</jsoup.tesb.version>
+        <jsoup.tesb.version>1.23.1</jsoup.tesb.version>
         <jsr305.tesb.version>3.0.2.tesb1</jsr305.tesb.version>
         <jte.tesb.version>3.1.16</jte.tesb.version>
         <jtokkit.tesb.version>1.1.0</jtokkit.tesb.version>
@@ -259,7 +259,7 @@
         <logback.tesb.version>1.5.18</logback.tesb.version>
         <lz4-java.tesb.version>1.11.1</lz4-java.tesb.version>
         <metrics.tesb.version>4.2.30</metrics.tesb.version>
-        <micrometer.tesb.version>1.13.11</micrometer.tesb.version>
+        <micrometer.tesb.version>1.15.12</micrometer.tesb.version>
         <micrometer-tracing.tesb.version>1.3.9</micrometer-tracing.tesb.version>
         <mina.tesb.version>2.2.8</mina.tesb.version>
         <minio.tesb.version>8.6.0</minio.tesb.version>
@@ -280,7 +280,7 @@
         <pgjdbc-driver.tesb.version>42.7.12</pgjdbc-driver.tesb.version>
         <pooled-jms.tesb.version>3.1.7</pooled-jms.tesb.version>
         <proto-google-common-protos.tesb.version>2.59.2</proto-google-common-protos.tesb.version>
-        <protobuf.tesb.version>3.25.5</protobuf.tesb.version>
+        <protobuf.tesb.version>4.35.1</protobuf.tesb.version>
         <pulsar.tesb.version>3.3.3</pulsar.tesb.version>
         <qpid-jms-client.tesb.version>2.10.0</qpid-jms-client.tesb.version>
         <quickfixj.tesb.version>2.3.2</quickfixj.tesb.version>
