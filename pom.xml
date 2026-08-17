@@ -195,7 +195,7 @@
         <cometd-java-client.tesb.version>8.0.12</cometd-java-client.tesb.version>
         <cometd-java-server.tesb.version>8.0.12</cometd-java-server.tesb.version>
         <commons-beanutils.tesb.version>1.11.0</commons-beanutils.tesb.version>
-        <commons-codec.tesb.version>1.22.0</commons-codec.tesb.version>
+        <commons-codec.tesb.version>1.22.1</commons-codec.tesb.version>
         <commons-collections4.tesb.version>4.5.0</commons-collections4.tesb.version>
         <commons-compress.tesb.version>1.28.0</commons-compress.tesb.version>
         <commons-lang3.tesb.version>3.20.0</commons-lang3.tesb.version>
