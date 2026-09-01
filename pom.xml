@@ -88,7 +88,7 @@
     <!-- TODO use Karaf/Camel bom -->
     <properties>
         <upstream.version>4.8.1</upstream.version>
-        <camel-features.tesb.version>4.8.1.20260801</camel-features.tesb.version>
+        <camel-features.tesb.version>4.8.1.20260901</camel-features.tesb.version>
         <camel-support.tesb.version>4.8.1.20260120</camel-support.tesb.version>
         <camel-vm.tesb.version>4.8.1.20250320</camel-vm.tesb.version>
         <camel-activemq.tesb.version>4.8.1.20260608</camel-activemq.tesb.version>
@@ -217,8 +217,8 @@
         <groovy.tesb.version>4.0.25</groovy.tesb.version>
         <grpc.tesb.version>1.76.0</grpc.tesb.version>
         <hazelcast.tesb.version>5.5.0.tesb1</hazelcast.tesb.version>
-        <httpcore.tesb.version>5.3.4</httpcore.tesb.version>
-        <httpclient.tesb.version>5.5</httpclient.tesb.version>
+        <httpcore.tesb.version>5.4.3</httpcore.tesb.version>
+        <httpclient.tesb.version>5.6.4</httpclient.tesb.version>
         <infinispan.tesb.version>15.0.11.Final</infinispan.tesb.version>
         <jackson-asl.tesb.version>1.9.16-TALEND</jackson-asl.tesb.version>
         <jackson2.tesb.version>2.22.1</jackson2.tesb.version>
