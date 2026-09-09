@@ -88,7 +88,7 @@
     <!-- TODO use Karaf/Camel bom -->
     <properties>
         <upstream.version>4.8.1</upstream.version>
-        <camel-features.tesb.version>4.8.1.20260901</camel-features.tesb.version>
+        <camel-features.tesb.version>4.8.1.20260907</camel-features.tesb.version>
         <camel-support.tesb.version>4.8.1.20260120</camel-support.tesb.version>
         <camel-vm.tesb.version>4.8.1.20250320</camel-vm.tesb.version>
         <camel-activemq.tesb.version>4.8.1.20260608</camel-activemq.tesb.version>
@@ -264,7 +264,7 @@
         <mina.tesb.version>2.2.8</mina.tesb.version>
         <minio.tesb.version>8.6.0</minio.tesb.version>
         <neethi.tesb.version>3.2.2</neethi.tesb.version>
-        <netty.tesb.version>4.1.136.Final</netty.tesb.version>
+        <netty.tesb.version>4.1.137.Final</netty.tesb.version>
         <nimbus-jose-jwt.tesb.version>10.4</nimbus-jose-jwt.tesb.version>
         <oauth2-oidc-sdk.tesb.version>11.26</oauth2-oidc-sdk.tesb.version>
         <okhttp.tesb.version>5.3.2</okhttp.tesb.version>
