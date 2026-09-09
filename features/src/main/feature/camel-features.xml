@@ -1592,7 +1592,7 @@
         <feature version="[6,7)">jakarta-servlet</feature>
         <bundle>mvn:org.apache.camel.karaf/camel-attachments/${upstream.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-http-base/${upstream.version}</bundle>
-        <bundle>mvn:org.apache.camel.karaf/camel-http-common/${upstream.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-http-common/${camel-http-common.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-http/${camel-http.tesb.version}</bundle>
         <bundle dependency="true">wrap:mvn:org.apache.httpcomponents.core5/httpcore5-h2/${httpcore.tesb.version}$Bundle-SymbolicName=org.apache.httpcore5.h2&amp;Bundle-Version=${httpcore.tesb.version}</bundle>
     </feature>
