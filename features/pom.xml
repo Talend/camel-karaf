@@ -105,7 +105,7 @@
                         <feature>framework</feature>
                     </framework>
                     <features>
-                        <feature>camel|camel-http(?!(robotframework|other))*</feature>
+                        <feature>camel|camel-(?!(robotframework|other))*</feature>
                     </features>
                 </configuration>
                 <executions>
