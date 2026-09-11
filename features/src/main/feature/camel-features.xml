@@ -616,7 +616,7 @@
         <feature version="${aws-java-sdk2-version}">awssdk</feature>
         <bundle dependency='true'>mvn:commons-io/commons-io/${commons-io.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/sns/${aws-java-sdk2-version}</bundle>
-        <bundle>mvn:org.apache.camel.karaf/camel-aws2-sns/${upstream.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-aws2-sns/${camel-aws2-sns.tesb.version}</bundle>
     </feature>
     <feature name='camel-aws2-sqs' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-cloudevents</feature>
