@@ -88,7 +88,7 @@
     <!-- TODO use Karaf/Camel bom -->
     <properties>
         <upstream.version>4.8.1</upstream.version>
-        <camel-features.tesb.version>4.8.1.20260907</camel-features.tesb.version>
+        <camel-features.tesb.version>4.8.1.20260909</camel-features.tesb.version>
         <camel-support.tesb.version>4.8.1.20260120</camel-support.tesb.version>
         <camel-vm.tesb.version>4.8.1.20250320</camel-vm.tesb.version>
         <camel-activemq.tesb.version>4.8.10-4.14.7-1</camel-activemq.tesb.version>
@@ -234,6 +234,11 @@
         <jaxb3-fastinfoset.tesb.version>2.0.0</jaxb3-fastinfoset.tesb.version>
         <jaxb3-staxex.tesb.version>2.0.1</jaxb3-staxex.tesb.version>
         <jaxb3-dtd-parser.tesb.version>1.4.5</jaxb3-dtd-parser.tesb.version>
+        <jaxb-core.tesb.version>4.0.9</jaxb-core.tesb.version>
+        <jaxb-impl.tesb.version>4.0.9</jaxb-impl.tesb.version>
+        <jaxb-osgi.tesb.version>4.0.9</jaxb-osgi.tesb.version>
+        <jaxb-xjc.tesb.version>4.0.9</jaxb-xjc.tesb.version>
+        <jaxb-jxc.tesb.version>4.0.9</jaxb-jxc.tesb.version>
         <jaxb-istack.tesb.version>4.1.2</jaxb-istack.tesb.version>
         <jaxb-fastinfoset.tesb.version>2.1.1</jaxb-fastinfoset.tesb.version>
         <jaxb-staxex.tesb.version>2.1.0</jaxb-staxex.tesb.version>
@@ -1068,6 +1073,11 @@
                             <jaxb3-fastinfoset.tesb.version>${jaxb3-fastinfoset.tesb.version}</jaxb3-fastinfoset.tesb.version>
                             <jaxb3-staxex.tesb.version>${jaxb3-staxex.tesb.version}</jaxb3-staxex.tesb.version>
                             <jaxb3-dtd-parser.tesb.version>${jaxb3-dtd-parser.tesb.version}</jaxb3-dtd-parser.tesb.version>
+                            <jaxb-core.tesb.version>${jaxb-core.tesb.version}</jaxb-core.tesb.version>
+                            <jaxb-impl.tesb.version>${jaxb-impl.tesb.version}</jaxb-impl.tesb.version>
+                            <jaxb-osgi.tesb.version>${jaxb-osgi.tesb.version}</jaxb-osgi.tesb.version>
+                            <jaxb-xjc.tesb.version>${jaxb-xjc.tesb.version}</jaxb-xjc.tesb.version>
+                            <jaxb-jxc.tesb.version>${jaxb-jxc.tesb.version}</jaxb-jxc.tesb.version>
                             <jaxb-istack.tesb.version>${jaxb-istack.tesb.version}</jaxb-istack.tesb.version>
                             <jaxb-fastinfoset.tesb.version>${jaxb-fastinfoset.tesb.version}</jaxb-fastinfoset.tesb.version>
                             <jaxb-staxex.tesb.version>${jaxb-staxex.tesb.version}</jaxb-staxex.tesb.version>

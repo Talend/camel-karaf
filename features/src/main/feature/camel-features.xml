@@ -90,27 +90,27 @@
 
     <feature name="jaxb-runtime" version="${jaxb-core-version}">
         <feature version="[4,5)">jakarta-xml-bind</feature>
-        <bundle dependency="true">mvn:org.glassfish.jaxb/jaxb-core/${jaxb-core-version}</bundle>
-        <bundle dependency="true">mvn:org.glassfish.jaxb/jaxb-runtime/${jaxb-impl-version}</bundle>
-        <bundle dependency="true">wrap:mvn:org.glassfish.jaxb/txw2/${jaxb-core-version}$Bundle-SymbolicName=org.glassfish.jaxb.txw2&amp;Bundle-Version=${jaxb-core-version}&amp;Export-Package=com.sun.xml.txw2*;version=${jaxb-core-version}</bundle>
+        <bundle dependency="true">mvn:org.glassfish.jaxb/jaxb-core/${jaxb-core.tesb.version}</bundle>
+        <bundle dependency="true">mvn:org.glassfish.jaxb/jaxb-runtime/${jaxb-impl.tesb.version}</bundle>
+        <bundle dependency="true">wrap:mvn:org.glassfish.jaxb/txw2/${jaxb-core.tesb.version}$Bundle-SymbolicName=org.glassfish.jaxb.txw2&amp;Bundle-Version=${jaxb-core.tesb.version}&amp;Export-Package=com.sun.xml.txw2*;version=${jaxb-core.tesb.version}</bundle>
         <bundle dependency="true">mvn:com.sun.istack/istack-commons-runtime/${jaxb-istack.tesb.version}</bundle>
         <bundle dependency="true">mvn:com.sun.xml.fastinfoset/FastInfoset/${jaxb-fastinfoset.tesb.version}</bundle>
         <bundle dependency="true">mvn:org.jvnet.staxex/stax-ex/${jaxb-staxex.tesb.version}</bundle>
         <!-- <bundle>mvn:org.glassfish.hk2/osgi-resource-locator/${osgi-resource-locator-version}</bundle> -->
-        <!-- <bundle dependency="true">mvn:com.sun.xml.bind/jaxb-core/${jaxb-core-version}</bundle> -->
-        <!-- <bundle dependency="true">mvn:com.sun.xml.bind/jaxb-impl/${jaxb-impl-version}</bundle> -->
-        <!-- <bundle dependency="true">mvn:com.sun.xml.bind/jaxb-osgi/${jaxb-osgi-version}</bundle> -->
+        <!-- <bundle dependency="true">mvn:com.sun.xml.bind/jaxb-core/${jaxb-core.tesb.version}</bundle> -->
+        <!-- <bundle dependency="true">mvn:com.sun.xml.bind/jaxb-impl/${jaxb-impl.tesb.version}</bundle> -->
+        <!-- <bundle dependency="true">mvn:com.sun.xml.bind/jaxb-osgi/${jaxb-osgi.tesb.version}</bundle> -->
     </feature>
 
     <feature name="jaxb-tools" version="${jaxb-core-version}">
         <feature version="[4,5)">jaxb-runtime</feature>
-        <bundle dependency="true">mvn:org.glassfish.jaxb/codemodel/${jaxb-impl-version}</bundle>
-        <bundle dependency="true">mvn:org.glassfish.jaxb/xsom/${jaxb-impl-version}</bundle>
-        <bundle dependency="true">wrap:mvn:org.glassfish.jaxb/jaxb-jxc/${jaxb-impl-version}$Bundle-SymbolicName=org.glassfish.jaxb.jxc&amp;Bundle-Version=${jaxb-impl-version}&amp;Export-Package=com.sun.tools.jxc*;version=${jaxb-impl-version}</bundle>
-        <bundle dependency="true">wrap:mvn:org.glassfish.jaxb/jaxb-xjc/${jaxb-impl-version}$Bundle-SymbolicName=org.glassfish.jaxb.xjc&amp;Bundle-Version=${jaxb-impl-version}&amp;Export-Package=com.sun.tools.xjc*;version=${jaxb-impl-version}</bundle>
+        <bundle dependency="true">mvn:org.glassfish.jaxb/codemodel/${jaxb-impl.tesb.version}</bundle>
+        <bundle dependency="true">mvn:org.glassfish.jaxb/xsom/${jaxb-impl.tesb.version}</bundle>
+        <bundle dependency="true">wrap:mvn:org.glassfish.jaxb/jaxb-jxc/${jaxb-impl.tesb.version}$Bundle-SymbolicName=org.glassfish.jaxb.jxc&amp;Bundle-Version=${jaxb-impl.tesb.version}&amp;Export-Package=com.sun.tools.jxc*;version=${jaxb-impl.tesb.version}</bundle>
+        <bundle dependency="true">wrap:mvn:org.glassfish.jaxb/jaxb-xjc/${jaxb-impl.tesb.version}$Bundle-SymbolicName=org.glassfish.jaxb.xjc&amp;Bundle-Version=${jaxb-impl.tesb.version}&amp;Export-Package=com.sun.tools.xjc*;version=${jaxb-impl.tesb.version}</bundle>
         <bundle dependency="true">mvn:com.sun.istack/istack-commons-tools/${jaxb3-istack.tesb.version}</bundle>
-        <bundle dependency="true">mvn:com.sun.xml.bind.external/relaxng-datatype/${jaxb-impl-version}</bundle>
-        <bundle dependency="true">mvn:com.sun.xml.bind.external/rngom/${jaxb-impl-version}</bundle>
+        <bundle dependency="true">mvn:com.sun.xml.bind.external/relaxng-datatype/${jaxb-impl.tesb.version}</bundle>
+        <bundle dependency="true">mvn:com.sun.xml.bind.external/rngom/${jaxb-impl.tesb.version}</bundle>
         <bundle dependency="true">mvn:com.sun.xml.dtd-parser/dtd-parser/${jaxb-dtd-parser.tesb.version}</bundle>
     </feature>
 
