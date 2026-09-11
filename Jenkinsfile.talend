@@ -26,6 +26,7 @@ org.apache.camel.karaf:camel-as2,\
 org.apache.camel.karaf:camel-aws2-kinesis,\
 org.apache.camel.karaf:camel-aws2-s3,\
 org.apache.camel.karaf:camel-aws2-sqs,\
+org.apache.camel.karaf:camel-aws2-sns,\
 org.apache.camel.karaf:camel-coap,\
 org.apache.camel.karaf:camel-consul,\
 org.apache.camel.karaf:camel-crypto,\
@@ -47,6 +48,7 @@ org.apache.camel.karaf:camel-drill,\
 org.apache.camel.karaf:camel-dynamic-router,\
 org.apache.camel.karaf:camel-file,\
 org.apache.camel.karaf:camel-google-pubsub,\
+org.apache.camel.karaf:camel-http-common,\
 org.apache.camel.karaf:camel-http,\
 org.apache.camel.karaf:camel-infinispan,\
 org.apache.camel.karaf:camel-jaxb,\
