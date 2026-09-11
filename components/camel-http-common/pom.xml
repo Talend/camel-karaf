@@ -31,8 +31,10 @@
     <artifactId>camel-http-common</artifactId>
     <packaging>bundle</packaging>
     <name>Apache Camel :: Karaf :: Components :: Common</name>
+    <version>${revision}</version>
 
     <properties>
+        <revision>${camel-http-common.tesb.version}</revision>
         <camel.osgi.export>
             org.apache.camel*;version=${camel-version}
         </camel.osgi.export>
