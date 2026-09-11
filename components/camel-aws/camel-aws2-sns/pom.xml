@@ -31,8 +31,10 @@
     <artifactId>camel-aws2-sns</artifactId>
     <packaging>bundle</packaging>
     <name>Apache Camel :: Karaf :: Components :: AWS :: AWS2 SNS</name>
+    <version>${revision}</version>
 
     <properties>
+        <revision>${camel-aws2-sns.tesb.version}</revision>
         <camel.osgi.export>
             org.apache.camel*;version=${camel-version}
         </camel.osgi.export>
