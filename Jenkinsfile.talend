@@ -54,6 +54,7 @@ org.apache.camel.karaf:camel-infinispan,\
 org.apache.camel.karaf:camel-jaxb,\
 org.apache.camel.karaf:camel-jms,\
 org.apache.camel.karaf:camel-jsonpath,\
+org.apache.camel.karaf:camel-kafka,\
 org.apache.camel.karaf:camel-knative-http,\
 org.apache.camel.karaf:camel-kubernetes,\
 org.apache.camel.karaf:camel-langchain4j-core,\
