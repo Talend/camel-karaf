@@ -1972,7 +1972,7 @@
         <bundle dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.kafka-clients/${kafka-bundle.tesb.version}</bundle>
         <bundle dependency="true">mvn:at.yawk.lz4/lz4-java/${lz4-java.tesb.version}</bundle>
         <bundle dependency='true'>mvn:com.github.luben/zstd-jni/${auto-detect-version}</bundle>
-        <bundle>mvn:org.apache.camel.karaf/camel-kafka/${upstream.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-kafka/${camel-kafka.tesb.version}</bundle>
     </feature>
     <feature name='camel-kamelet' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
