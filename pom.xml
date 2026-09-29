@@ -88,8 +88,8 @@
     <!-- TODO use Karaf/Camel bom -->
     <properties>
         <upstream.version>4.8.1</upstream.version>
-        <camel-features.tesb.version>4.8.1.20260909</camel-features.tesb.version>
-        <camel-support.tesb.version>4.8.1.20260120</camel-support.tesb.version>
+        <camel-features.tesb.version>4.8.1.20260929</camel-features.tesb.version>
+        <camel-support.tesb.version>4.8.1.20260929</camel-support.tesb.version>
         <camel-vm.tesb.version>4.8.1.20250320</camel-vm.tesb.version>
         <camel-activemq.tesb.version>4.8.10-4.14.7-1</camel-activemq.tesb.version>
         <camel-activemq6.tesb.version>4.8.10-4.14.7-1</camel-activemq6.tesb.version>
@@ -127,7 +127,7 @@
         <camel-dns.tesb.version>4.8.1.20260801</camel-dns.tesb.version>
         <camel-drill.tesb.version>4.8.1.20250901</camel-drill.tesb.version>
         <camel-dynamic-router.tesb.version>4.8.1.20250320</camel-dynamic-router.tesb.version>
-        <camel-file.tesb.version>4.8.1.20250320</camel-file.tesb.version>
+        <camel-file.tesb.version>4.8.1.20260929</camel-file.tesb.version>
         <camel-google-pubsub.tesb.version>4.8.10-4.14.7-1</camel-google-pubsub.tesb.version>
         <camel-http.tesb.version>4.8.1.20260909</camel-http.tesb.version>
         <camel-http-common.tesb.version>4.8.1.20260909</camel-http-common.tesb.version>
