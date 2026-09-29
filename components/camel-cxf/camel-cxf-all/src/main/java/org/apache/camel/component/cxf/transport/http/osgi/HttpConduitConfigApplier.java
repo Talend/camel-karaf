@@ -53,6 +53,7 @@ class HttpConduitConfigApplier {
     }
 
     void apply(Dictionary<String, String> d, HTTPConduit c, String address) {
+        VaultAccess.setVaultKey(d.get("org.talend.esb.vault.access,key"));
         applyClientPolicies(d, c);
         applyAuthorization(d, c);
         applyProxyAuthorization(d, c);
@@ -199,7 +200,7 @@ class HttpConduitConfigApplier {
         } else if ("provider".equals(k)) {
             keyManagers.setProvider(v);
         } else if ("keyPassword".equals(k)) {
-            keyManagers.setKeyPassword(v);
+            keyManagers.setKeyPassword(VaultAccess.resolveValue(v));
         } else if (k.startsWith("keyStore.")) {
             keyManagers.setKeyStore(getKeyStore(keyManagers.getKeyStore(),
                     k.substring("keyStore.".length()),
@@ -215,7 +216,7 @@ class HttpConduitConfigApplier {
         if ("type".equals(k)) {
             ks.setType(v);
         } else if ("password".equals(k)) {
-            ks.setPassword(v);
+            ks.setPassword(VaultAccess.resolveValue(v));
         } else if ("provider".equals(k)) {
             ks.setProvider(v);
         } else if ("url".equals(k)) {
@@ -278,7 +279,7 @@ class HttpConduitConfigApplier {
                 if ("UserName".equals(k)) {
                     p.setUserName(v);
                 } else if ("Password".equals(k)) {
-                    p.setPassword(v);
+                    p.setPassword(VaultAccess.resolveValue(v));
                 } else if ("Authorization".equals(k)) {
                     p.setAuthorization(v);
                 } else if ("AuthorizationType".equals(k)) {
@@ -304,7 +305,7 @@ class HttpConduitConfigApplier {
                 if ("UserName".equals(k)) {
                     p.setUserName(v);
                 } else if ("Password".equals(k)) {
-                    p.setPassword(v);
+                    p.setPassword(VaultAccess.resolveValue(v));
                 } else if ("Authorization".equals(k)) {
                     p.setAuthorization(v);
                 } else if ("AuthorizationType".equals(k)) {
