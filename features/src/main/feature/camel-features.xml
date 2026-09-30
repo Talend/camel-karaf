@@ -974,7 +974,7 @@
         <bundle dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.cglib/${cglib-version}_1</bundle>
         <bundle dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.wsdl4j/${auto-detect-version:alias=wsdl4j/wsdl4j}_1</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-attachments/${upstream.version}</bundle>
-        <bundle>mvn:org.apache.camel.karaf/camel-http-base/${upstream.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-http-base/${camel-http-base.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-http-common/${camel-http-common.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-cxf-all/${camel-cxf-all.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-cxf-blueprint/${camel-cxf.tesb.version}</bundle>
@@ -1591,7 +1591,7 @@
         <feature version='[5,6)'>http-client</feature>
         <feature version="[6,7)">jakarta-servlet</feature>
         <bundle>mvn:org.apache.camel.karaf/camel-attachments/${upstream.version}</bundle>
-        <bundle>mvn:org.apache.camel.karaf/camel-http-base/${upstream.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-http-base/${camel-http-base.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-http-common/${camel-http-common.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-http/${camel-http.tesb.version}</bundle>
         <bundle dependency="true">wrap:mvn:org.apache.httpcomponents.core5/httpcore5-h2/${httpcore.tesb.version}$Bundle-SymbolicName=org.apache.httpcore5-h2&amp;Bundle-Name=Apache%20HTTP%20Core%20v5%20HTTP2&amp;Bundle-Version=${httpcore.tesb.version}&amp;Export-Package=org.*;version=${httpcore.tesb.version}</bundle>
@@ -1803,7 +1803,7 @@
         <bundle dependency="true">mvn:org.eclipse.jetty.ee10/jetty-ee10-servlet/${jetty12.tesb.version}</bundle>
         <bundle dependency="true">mvn:org.eclipse.jetty.ee10/jetty-ee10-servlets/${jetty12.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-attachments/${upstream.version}</bundle>
-        <bundle>mvn:org.apache.camel.karaf/camel-http-base/${upstream.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-http-base/${camel-http-base.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-http-common/${camel-http-common.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-jetty-common/${upstream.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-jetty/${upstream.version}</bundle>
@@ -2322,8 +2322,8 @@
         <feature version='${camel-osgi-version-range}'>camel-netty</feature>
         <bundle dependency='true'>mvn:io.netty/netty-codec-http/${netty.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-attachments/${upstream.version}</bundle>
-        <bundle>mvn:org.apache.camel.karaf/camel-http-base/${upstream.version}</bundle>
-        <bundle>mvn:org.apache.camel.karaf/camel-netty-http/${upstream.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-http-base/${camel-http-base.tesb.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-netty-http/${camel-netty-http.tesb.version}</bundle>
     </feature>
     <feature name='camel-nitrite' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
@@ -2505,8 +2505,8 @@
     </feature>
     <feature name='camel-platform-http' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
-        <bundle>mvn:org.apache.camel.karaf/camel-http-base/${upstream.version}</bundle>
-        <bundle>mvn:org.apache.camel.karaf/camel-platform-http/${upstream.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-http-base/${camel-http-base.tesb.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-platform-http/${camel-platform-http.tesb.version}</bundle>
     </feature>
     <feature name='camel-platform-http-jolokia' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-platform-http</feature>
@@ -2782,7 +2782,7 @@
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version="[6,7)">jakarta-servlet</feature>
         <bundle>mvn:org.apache.camel.karaf/camel-attachments/${upstream.version}</bundle>
-        <bundle>mvn:org.apache.camel.karaf/camel-http-base/${upstream.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-http-base/${camel-http-base.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-http-common/${camel-http-common.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-servlet/${upstream.version}</bundle>
     </feature>
@@ -3108,7 +3108,7 @@
         <bundle dependency='true'>wrap:mvn:org.jboss.threads/jboss-threads/${auto-detect-version}</bundle>
         <bundle dependency='true'>mvn:org.wildfly.client/wildfly-client-config/${auto-detect-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-attachments/${upstream.version}</bundle>
-        <bundle>mvn:org.apache.camel.karaf/camel-http-base/${upstream.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-http-base/${camel-http-base.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-undertow/${camel-undertow.tesb.version}</bundle>
     </feature>
     <feature name='camel-undertow-spring-security' version='${upstream.version}' start-level='50'>
@@ -3140,7 +3140,7 @@
     </feature>
     <feature name='camel-vertx-http' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-vertx-common</feature>
-        <bundle dependency='true'>mvn:org.apache.camel.karaf/camel-http-base/${upstream.version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.camel.karaf/camel-http-base/${camel-http-base.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:io.vertx/vertx-web-client/${vertx.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:io.vertx/vertx-web-common/${vertx.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-vertx-http/${camel-vertx-http.tesb.version}</bundle>
