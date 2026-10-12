@@ -728,14 +728,14 @@
         <bundle dependency='true'>mvn:io.netty.incubator/netty-incubator-codec-classes-quic/0.0.73.Final</bundle>
         <bundle dependency='true'>mvn:io.projectreactor.netty/reactor-netty-core/${reactor-netty.tesb.version}</bundle>
         <bundle dependency='true'>mvn:io.projectreactor.netty/reactor-netty-http/${reactor-netty.tesb.version}</bundle>
-        <bundle>mvn:org.apache.camel.karaf/camel-azure-storage-blob/${upstream.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-azure-storage-blob/${camel-azure-storage-blob.tesb.version}</bundle>
     </feature>
     <feature name='camel-azure-storage-datalake' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version='[${azure-core-version},2)'>azure-storage</feature>
         <bundle dependency='true'>mvn:commons-io/commons-io/${commons-io.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.azure/azure-storage-file-datalake/${auto-detect-version}</bundle>
-        <bundle>mvn:org.apache.camel.karaf/camel-azure-storage-datalake/${upstream.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-azure-storage-datalake/${camel-azure-storage-datalake.tesb.version}</bundle>
     </feature>
     <feature name='camel-azure-storage-queue' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
@@ -892,7 +892,7 @@
         <bundle dependency='true'>mvn:org.cometd.java/cometd-java-api-common/${cometd-java-server.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.cometd.java/cometd-java-api-client/${cometd-java-server.tesb.version}</bundle>
         <bundle dependency="true">mvn:org.eclipse.jetty/jetty-util-ajax/${jetty.tesb.version}</bundle>
-        <bundle>mvn:org.apache.camel.karaf/camel-cometd/${upstream.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-cometd/${camel-cometd.tesb.version}</bundle>
     </feature>
     <feature name='camel-consul' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
@@ -2854,7 +2854,7 @@
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version='[4,5)'>http-client</feature>
         <bundle dependency='true'>wrap:mvn:org.apache.solr/solr-solrj/${solr-version}</bundle>
-        <bundle>mvn:org.apache.camel.karaf/camel-solr/${upstream.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-solr/${camel-solr.tesb.version}</bundle>
     </feature>
     <feature name='camel-splunk' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
