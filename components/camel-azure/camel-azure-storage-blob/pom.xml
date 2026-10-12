@@ -31,8 +31,10 @@
     <artifactId>camel-azure-storage-blob</artifactId>
     <packaging>bundle</packaging>
     <name>Apache Camel :: Karaf :: Components :: Azure :: Storage Blob</name>
+    <version>${revision}</version>
 
     <properties>
+        <revision>${camel-azure-storage-blob.tesb.version}</revision>
         <camel.osgi.export>
             org.apache.camel*;version=${camel-version}
         </camel.osgi.export>
@@ -49,7 +51,7 @@
         <dependency>
             <groupId>org.apache.camel</groupId>
             <artifactId>camel-azure-storage-blob</artifactId>
-            <version>${camel-version}</version>
+            <version>${camel-azure-storage-blob.tesb.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.camel</groupId>

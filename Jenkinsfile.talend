@@ -27,7 +27,10 @@ org.apache.camel.karaf:camel-aws2-kinesis,\
 org.apache.camel.karaf:camel-aws2-s3,\
 org.apache.camel.karaf:camel-aws2-sqs,\
 org.apache.camel.karaf:camel-aws2-sns,\
+org.apache.camel.karaf:camel-azure-storage-blob,\
+org.apache.camel.karaf:camel-azure-storage-datalake,\
 org.apache.camel.karaf:camel-coap,\
+org.apache.camel.karaf:camel-cometd,\
 org.apache.camel.karaf:camel-consul,\
 org.apache.camel.karaf:camel-crypto,\
 org.apache.camel.karaf:camel-cxf-all,\
@@ -79,6 +82,7 @@ org.apache.camel.karaf:camel-salesforce,\
 org.apache.camel.karaf:camel-sjms,\
 org.apache.camel.karaf:camel-sjms2,\
 org.apache.camel.karaf:camel-smb,\
+org.apache.camel.karaf:camel-solr,\
 org.apache.camel.karaf:camel-spring,\
 org.apache.camel.karaf:camel-sql,\
 org.apache.camel.karaf:camel-tika,\
