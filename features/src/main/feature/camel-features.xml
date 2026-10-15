@@ -108,7 +108,7 @@
         <bundle dependency="true">mvn:org.glassfish.jaxb/xsom/${jaxb-impl.tesb.version}</bundle>
         <bundle dependency="true">wrap:mvn:org.glassfish.jaxb/jaxb-jxc/${jaxb-impl.tesb.version}$Bundle-SymbolicName=org.glassfish.jaxb.jxc&amp;Bundle-Version=${jaxb-impl.tesb.version}&amp;Export-Package=com.sun.tools.jxc*;version=${jaxb-impl.tesb.version}</bundle>
         <bundle dependency="true">wrap:mvn:org.glassfish.jaxb/jaxb-xjc/${jaxb-impl.tesb.version}$Bundle-SymbolicName=org.glassfish.jaxb.xjc&amp;Bundle-Version=${jaxb-impl.tesb.version}&amp;Export-Package=com.sun.tools.xjc*;version=${jaxb-impl.tesb.version}</bundle>
-        <bundle dependency="true">mvn:com.sun.istack/istack-commons-tools/${jaxb3-istack.tesb.version}</bundle>
+        <bundle dependency="true">mvn:com.sun.istack/istack-commons-tools/${jaxb-istack.tesb.version}</bundle>
         <bundle dependency="true">mvn:com.sun.xml.bind.external/relaxng-datatype/${jaxb-impl.tesb.version}</bundle>
         <bundle dependency="true">mvn:com.sun.xml.bind.external/rngom/${jaxb-impl.tesb.version}</bundle>
         <bundle dependency="true">mvn:com.sun.xml.dtd-parser/dtd-parser/${jaxb-dtd-parser.tesb.version}</bundle>
@@ -2648,7 +2648,7 @@
         <bundle dependency='true'>mvn:io.netty/netty-transport-classes-epoll/${netty.tesb.version}</bundle>
         <bundle dependency='true'>mvn:io.netty/netty-transport-classes-kqueue/${netty.tesb.version}</bundle>
         <bundle dependency='true'>mvn:io.netty.incubator/netty-incubator-transport-classes-io_uring/${netty-incubator-transport-classes-io_uring-version}</bundle>
-        <bundle dependency='true'>mvn:io.reactivex.rxjava3/rxjava/${auto-detect-version}</bundle>
+        <bundle dependency='true'>mvn:io.reactivex.rxjava3/rxjava/${rxjava3.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.reactivestreams/reactive-streams/${reactive-streams-version}</bundle>
         <bundle dependency='true'>mvn:javax.cache/cache-api/${jcache-version}</bundle>
         <bundle dependency='true'>mvn:net.bytebuddy/byte-buddy/${bytebuddy.tesb.version}</bundle>
