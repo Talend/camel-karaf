@@ -254,7 +254,7 @@
         <jaxb-osgi.tesb.version>4.0.9</jaxb-osgi.tesb.version>
         <jaxb-xjc.tesb.version>4.0.9</jaxb-xjc.tesb.version>
         <jaxb-jxc.tesb.version>4.0.9</jaxb-jxc.tesb.version>
-        <jaxb-istack.tesb.version>4.1.2</jaxb-istack.tesb.version>
+        <jaxb-istack.tesb.version>4.2.0</jaxb-istack.tesb.version>
         <jaxb-fastinfoset.tesb.version>2.1.1</jaxb-fastinfoset.tesb.version>
         <jaxb-staxex.tesb.version>2.1.0</jaxb-staxex.tesb.version>
         <jaxb-dtd-parser.tesb.version>1.5.1</jaxb-dtd-parser.tesb.version>
