@@ -245,10 +245,6 @@
         <jakarta-validation-api.tesb.version>3.1.1</jakarta-validation-api.tesb.version>
         <jakarta-xml-bind-api.tesb.version>4.0.5</jakarta-xml-bind-api.tesb.version>
         <jakarta-xml-ws-api.tesb.version>4.0.3</jakarta-xml-ws-api.tesb.version>
-        <jaxb3-istack.tesb.version>4.0.1</jaxb3-istack.tesb.version>
-        <jaxb3-fastinfoset.tesb.version>2.0.0</jaxb3-fastinfoset.tesb.version>
-        <jaxb3-staxex.tesb.version>2.0.1</jaxb3-staxex.tesb.version>
-        <jaxb3-dtd-parser.tesb.version>1.4.5</jaxb3-dtd-parser.tesb.version>
         <jaxb-core.tesb.version>4.0.9</jaxb-core.tesb.version>
         <jaxb-impl.tesb.version>4.0.9</jaxb-impl.tesb.version>
         <jaxb-osgi.tesb.version>4.0.9</jaxb-osgi.tesb.version>
@@ -820,11 +816,7 @@
         <jakarta-servlet5-api-version>5.0.0</jakarta-servlet5-api-version>
         <jakarta-validation-api-version>3.0.2</jakarta-validation-api-version>
         <jakarta-ws-rs-api-version>3.1.0</jakarta-ws-rs-api-version>
-        <jakarta-xml-bind3-api-version>3.0.1</jakarta-xml-bind3-api-version>
         <javax-servlet3-api-version>3.1.0</javax-servlet3-api-version>
-        <jaxb3-core-version>3.0.2</jaxb3-core-version>
-        <jaxb3-impl-version>3.0.2</jaxb3-impl-version>
-        <jaxb3-osgi-version>3.0.2</jaxb3-osgi-version>
         <jetty11-version>11.0.21</jetty11-version>
         <junit4-version>4.13.2</junit4-version>
         <karaf-version>4.4.6</karaf-version>
@@ -1104,10 +1096,6 @@
                             <jakarta-validation-api.tesb.version>${jakarta-validation-api.tesb.version}</jakarta-validation-api.tesb.version>
                             <jakarta-xml-bind-api.tesb.version>${jakarta-xml-bind-api.tesb.version}</jakarta-xml-bind-api.tesb.version>
                             <jakarta-xml-ws-api.tesb.version>${jakarta-xml-ws-api.tesb.version}</jakarta-xml-ws-api.tesb.version>
-                            <jaxb3-istack.tesb.version>${jaxb3-istack.tesb.version}</jaxb3-istack.tesb.version>
-                            <jaxb3-fastinfoset.tesb.version>${jaxb3-fastinfoset.tesb.version}</jaxb3-fastinfoset.tesb.version>
-                            <jaxb3-staxex.tesb.version>${jaxb3-staxex.tesb.version}</jaxb3-staxex.tesb.version>
-                            <jaxb3-dtd-parser.tesb.version>${jaxb3-dtd-parser.tesb.version}</jaxb3-dtd-parser.tesb.version>
                             <jaxb-core.tesb.version>${jaxb-core.tesb.version}</jaxb-core.tesb.version>
                             <jaxb-impl.tesb.version>${jaxb-impl.tesb.version}</jaxb-impl.tesb.version>
                             <jaxb-osgi.tesb.version>${jaxb-osgi.tesb.version}</jaxb-osgi.tesb.version>
