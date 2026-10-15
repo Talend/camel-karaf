@@ -34,13 +34,6 @@
         <bundle dependency="true">mvn:jakarta.annotation/jakarta.annotation-api/${jakarta-annotation-api-version}</bundle>
     </feature>
 
-    <feature name="jakarta-xml-bind" version="${jakarta-xml-bind3-api-version}">
-        <feature version="[2.1,3)">jakarta-activation</feature>
-        <!-- <bundle dependency="true">mvn:jakarta.xml.bind/jakarta.xml.bind-api/${jakarta-xml-bind3-api-version}</bundle> -->
-        <bundle dependency="true">mvn:jakarta.xml.bind/jakarta.xml.bind-api/${jakarta-xml-bind-api.tesb.version}</bundle>
-        <bundle dependency="true">mvn:org.ops4j.pax.web/pax-web-compatibility-jaxb3/${pax-web.tesb.version}</bundle>
-    </feature>
-
     <feature name="jakarta-xml-bind" version="${jakarta-xml-bind-api.tesb.version}">
         <feature version="[2.1,3)">jakarta-activation</feature>
         <bundle dependency="true">mvn:jakarta.xml.bind/jakarta.xml.bind-api/${jakarta-xml-bind-api.tesb.version}</bundle>
@@ -61,32 +54,6 @@
     <!-- <feature name="jakarta-jws" version="${jakarta-jws-api-version}">
         <bundle dependency="true">mvn:jakarta.jws/jakarta.jws-api/${jakarta-jws-api-version}</bundle>
     </feature> -->
-
-    <feature name="jaxb-runtime" version="${jaxb3-core-version}">
-        <feature version="[3,4)">jakarta-xml-bind</feature>
-        <bundle dependency="true">mvn:org.glassfish.jaxb/jaxb-core/${jaxb3-core-version}</bundle>
-        <bundle dependency="true">mvn:org.glassfish.jaxb/jaxb-runtime/${jaxb3-impl-version}</bundle>
-        <bundle dependency="true">wrap:mvn:org.glassfish.jaxb/txw2/${jaxb3-core-version}$Bundle-SymbolicName=org.glassfish.jaxb.txw2&amp;Bundle-Version=${jaxb3-core-version}&amp;Export-Package=com.sun.xml.txw2*;version=${jaxb3-core-version}</bundle>
-        <bundle dependency="true">mvn:com.sun.istack/istack-commons-runtime/${jaxb3-istack.tesb.version}</bundle>
-        <bundle dependency="true">mvn:com.sun.xml.fastinfoset/FastInfoset/${jaxb3-fastinfoset.tesb.version}</bundle>
-        <bundle dependency="true">mvn:org.jvnet.staxex/stax-ex/${jaxb3-staxex.tesb.version}</bundle>
-        <!-- <bundle>mvn:org.glassfish.hk2/osgi-resource-locator/${osgi-resource-locator-version}</bundle> -->
-        <!-- <bundle dependency="true">mvn:com.sun.xml.bind/jaxb-core/${jaxb3-core-version}</bundle> -->
-        <!-- <bundle dependency="true">mvn:com.sun.xml.bind/jaxb-impl/${jaxb3-impl-version}</bundle> -->
-        <!-- <bundle dependency="true">mvn:com.sun.xml.bind/jaxb-osgi/${jaxb3-osgi-version}</bundle> -->
-    </feature>
-
-    <feature name="jaxb-tools" version="${jaxb3-core-version}">
-        <feature version="[3,4)">jaxb-runtime</feature>
-        <bundle dependency="true">mvn:org.glassfish.jaxb/codemodel/${jaxb3-impl-version}</bundle>
-        <bundle dependency="true">mvn:org.glassfish.jaxb/xsom/${jaxb3-impl-version}</bundle>
-        <bundle dependency="true">wrap:mvn:org.glassfish.jaxb/jaxb-jxc/${jaxb3-impl-version}$Bundle-SymbolicName=org.glassfish.jaxb.jxc&amp;Bundle-Version=${jaxb3-impl-version}&amp;Export-Package=com.sun.tools.jxc*;version=${jaxb3-impl-version}</bundle>
-        <bundle dependency="true">wrap:mvn:org.glassfish.jaxb/jaxb-xjc/${jaxb3-impl-version}$Bundle-SymbolicName=org.glassfish.jaxb.xjc&amp;Bundle-Version=${jaxb3-impl-version}&amp;Export-Package=com.sun.tools.xjc*;version=${jaxb3-impl-version}</bundle>
-        <bundle dependency="true">mvn:com.sun.istack/istack-commons-tools/${jaxb3-istack.tesb.version}</bundle>
-        <bundle dependency="true">mvn:com.sun.xml.bind.external/relaxng-datatype/${jaxb3-impl-version}</bundle>
-        <bundle dependency="true">mvn:com.sun.xml.bind.external/rngom/${jaxb3-impl-version}</bundle>
-        <bundle dependency="true">mvn:com.sun.xml.dtd-parser/dtd-parser/${jaxb3-dtd-parser.tesb.version}</bundle>
-    </feature>
 
     <feature name="jaxb-runtime" version="${jaxb-core.tesb.version}">
         <feature version="[4,5)">jakarta-xml-bind</feature>
@@ -796,7 +763,7 @@
     <feature name='camel-bonita' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version='${camel-osgi-jackson2.tesb.version}'>jackson</feature>
-        <feature version="[3,4)">jaxb-runtime</feature>
+        <feature version="[4,5)">jaxb-runtime</feature>
         <feature version="[4,5)">camel-cxf</feature>
         <bundle dependency="true">mvn:org.apache.ws.xmlschema/xmlschema-core/${xmlschema.tesb.version}</bundle>
         <bundle dependency='true'>mvn:com.fasterxml.jackson.jakarta.rs/jackson-jakarta-rs-base/${jackson2.tesb.version}</bundle>
