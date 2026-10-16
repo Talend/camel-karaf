@@ -34,6 +34,13 @@
         <bundle dependency="true">mvn:jakarta.annotation/jakarta.annotation-api/${jakarta-annotation-api-version}</bundle>
     </feature>
 
+    <!-- JAXB 3 package-version facade (4.x API bundle + pax-web jaxb3 compat): needed by swagger-core-jakarta (camel-openapi-java), which imports jakarta.xml.bind.annotation [3,4) -->
+    <feature name="jakarta-xml-bind" version="${jakarta-xml-bind3-api-version}">
+        <feature version="[2.1,3)">jakarta-activation</feature>
+        <bundle dependency="true">mvn:jakarta.xml.bind/jakarta.xml.bind-api/${jakarta-xml-bind-api.tesb.version}</bundle>
+        <bundle dependency="true">mvn:org.ops4j.pax.web/pax-web-compatibility-jaxb3/${pax-web.tesb.version}</bundle>
+    </feature>
+
     <feature name="jakarta-xml-bind" version="${jakarta-xml-bind-api.tesb.version}">
         <feature version="[2.1,3)">jakarta-activation</feature>
         <bundle dependency="true">mvn:jakarta.xml.bind/jakarta.xml.bind-api/${jakarta-xml-bind-api.tesb.version}</bundle>
@@ -2357,6 +2364,7 @@
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version='${camel-osgi-jackson2.tesb.version}'>jackson</feature>
         <feature version='[3,4)'>jakarta-validation</feature>
+        <feature version='[3,4)'>jakarta-xml-bind</feature>
         <bundle dependency='true'>wrap:mvn:org.apache.camel/camel-tooling-util/${camel-version}$Export-Package=org.apache.camel*;version=${camel-version}</bundle>
         <bundle dependency='true'>wrap:mvn:org.apache.camel/camel-xml-io/${camel-version}$Export-Package=org.apache.camel*;version=${camel-version}</bundle>
         <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-yaml/${jackson2.tesb.version}</bundle>
