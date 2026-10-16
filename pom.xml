@@ -816,6 +816,7 @@
         <jakarta-servlet5-api-version>5.0.0</jakarta-servlet5-api-version>
         <jakarta-validation-api-version>3.0.2</jakarta-validation-api-version>
         <jakarta-ws-rs-api-version>3.1.0</jakarta-ws-rs-api-version>
+        <jakarta-xml-bind3-api-version>3.0.1</jakarta-xml-bind3-api-version>
         <javax-servlet3-api-version>3.1.0</javax-servlet3-api-version>
         <jetty11-version>11.0.21</jetty11-version>
         <junit4-version>4.13.2</junit4-version>
