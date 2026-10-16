@@ -898,7 +898,7 @@
         <bundle dependency='true'>wrap:mvn:com.ibm.cloud/cloudant-common/${cloudant-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.ibm.cloud/sdk-core/${auto-detect-version}</bundle>
         <!-- 'sdk-core' requires 'com.google.gson.internal*', which is not exported by the original bundle -->
-        <bundle dependency='true'>wrap:mvn:com.google.code.gson/gson/${gson-version}$overwrite=merge&amp;Export-Package=com.google.gson*;version=${gson-version}</bundle>
+        <bundle dependency='true'>mvn:com.google.code.gson/gson/${gson.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.squareup.okio/okio-jvm/${okio.tesb.version}</bundle>
         <!-- both 'okhttp' and 'okhttp-urlconnection' export 'okhttp3',
         the fragmented host option will enforce both bundles to share the same class loader,
@@ -1056,7 +1056,7 @@
     <feature name='camel-digitalocean' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version="[4,5)">http-client</feature>
-        <bundle dependency='true'>mvn:com.google.code.gson/gson/${gson-version}</bundle>
+        <bundle dependency='true'>mvn:com.google.code.gson/gson/${gson.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.digitalocean-api-client/${digitalocean-api-client-version}_1</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-digitalocean/${upstream.version}</bundle>
@@ -1229,7 +1229,7 @@
     </feature>
     <feature name='camel-freemarker' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
-        <bundle dependency='true'>mvn:org.freemarker/freemarker/${freemarker-version}</bundle>
+        <bundle dependency='true'>mvn:org.freemarker/freemarker/${freemarker.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-freemarker/${upstream.version}</bundle>
     </feature>
     <feature name='camel-ftp' version='${upstream.version}' start-level='50'>
@@ -1304,7 +1304,7 @@
         <bundle dependency='true'>wrap:mvn:com.google.apis/google-api-services-drive/${google-api-services-drive-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.auth/google-auth-library-oauth2-http/${grpc-google-auth-library-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.auth/google-auth-library-credentials/${grpc-google-auth-library-version}</bundle>
-        <bundle dependency='true'>mvn:com.google.code.gson/gson/${gson-version}</bundle>
+        <bundle dependency='true'>mvn:com.google.code.gson/gson/${gson.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.http-client/google-http-client/${google-cloud-http-client-version}$overwrite=merge&amp;Import-Package=com.google.common*;version="[33,34)",*</bundle>
         <bundle dependency='true'>mvn:com.google.http-client/google-http-client-apache-v2/${google-cloud-http-client-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.http-client/google-http-client-gson/${google-cloud-http-client-version}</bundle>
@@ -1587,13 +1587,13 @@
     </feature>
     <feature name='camel-huaweicloud-functiongraph' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-huaweicloud-common</feature>
-        <bundle dependency='true'>wrap:mvn:com.google.code.gson/gson/${gson-version}</bundle>
+        <bundle dependency='true'>mvn:com.google.code.gson/gson/${gson.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.huaweicloud.sdk/huaweicloud-sdk-functiongraph/${huaweicloud-sdk-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-huaweicloud-functiongraph/${upstream.version}</bundle>
     </feature>
     <feature name='camel-huaweicloud-iam' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-huaweicloud-common</feature>
-        <bundle dependency='true'>wrap:mvn:com.google.code.gson/gson/${gson-version}</bundle>
+        <bundle dependency='true'>mvn:com.google.code.gson/gson/${gson.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.huaweicloud.sdk/huaweicloud-sdk-iam/${huaweicloud-sdk-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-huaweicloud-iam/${upstream.version}</bundle>
     </feature>
@@ -1604,7 +1604,7 @@
     </feature>
     <feature name='camel-huaweicloud-obs' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-huaweicloud-common</feature>
-        <bundle dependency='true'>wrap:mvn:com.google.code.gson/gson/${gson-version}</bundle>
+        <bundle dependency='true'>mvn:com.google.code.gson/gson/${gson.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.huaweicloud/esdk-obs-java/${huaweicloud-obs-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-huaweicloud-obs/${upstream.version}</bundle>
     </feature>
@@ -1698,7 +1698,7 @@
         <bundle dependency='true'>wrap:mvn:io.reactivex.rxjava3/rxjava/${rxjava3.tesb.version}$overwrite=merge&amp;Export-Package=io.reactivex.rxjava3.internal*,*</bundle>
         <bundle dependency='true'>wrap:mvn:com.squareup.okio/okio-jvm/${okio.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:org.jetbrains/annotations/${auto-detect-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:com.google.code.gson/gson/${gson-version}</bundle>
+        <bundle dependency='true'>mvn:com.google.code.gson/gson/${gson.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-influxdb2/${upstream.version}</bundle>
     </feature>
     <feature name='camel-irc' version='${upstream.version}' start-level='50'>
@@ -1709,7 +1709,7 @@
     <feature name='camel-ironmq' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.ironmq/${ironmq-version}_1</bundle>
-        <bundle dependency='true'>mvn:com.google.code.gson/gson/${gson-version}</bundle>
+        <bundle dependency='true'>mvn:com.google.code.gson/gson/${gson.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-ironmq/${upstream.version}</bundle>
     </feature>
@@ -2328,7 +2328,7 @@
         <feature version="[4,5)">http-client</feature>
         <bundle dependency='true'>mvn:org.apache.httpcomponents/httpasyncclient-osgi/${httpasyncclient-version}</bundle>
         <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3.tesb.version}</bundle>
-        <bundle dependency='true'>mvn:com.google.code.gson/gson/${gson-version}</bundle>
+        <bundle dependency='true'>mvn:com.google.code.gson/gson/${gson.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.apache.olingo/olingo-odata2-api/${olingo2-version}</bundle>
         <bundle dependency='true'>wrap:mvn:org.apache.olingo/olingo-odata2-core/${olingo2-version}$overwrite=merge&amp;Import-Package=com.*,org.*,javax.xml.*</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-olingo2/${upstream.version}</bundle>
@@ -2489,6 +2489,7 @@
         <feature version="[5,6)">jakarta-servlet</feature>
         <bundle dependency='true'>wrap:mvn:io.vertx/vertx-core/${vertx.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:io.vertx/vertx-web/${vertx.tesb.version}</bundle>
+        <bundle dependency='true'>wrap:mvn:org.jolokia/jolokia-core/${jolokia.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:org.jolokia/jolokia-json/${jolokia.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:org.jolokia/jolokia-agent-jvm/${jolokia.tesb.version}</bundle>
         <!-- Use the wrap protocol to work-around problems with exported and imported packages -->
@@ -2538,7 +2539,7 @@
         <bundle dependency='true'>mvn:com.google.protobuf/protobuf-java/${protobuf-version}</bundle>
         <bundle dependency='true'>mvn:com.google.protobuf/protobuf-java-util/${protobuf-version}</bundle>
         <bundle dependency='true'>mvn:commons-io/commons-io/${commons-io.tesb.version}</bundle>
-        <bundle dependency='true'>mvn:com.google.code.gson/gson/${gson-version}</bundle>
+        <bundle dependency='true'>mvn:com.google.code.gson/gson/${gson.tesb.version}</bundle>
         <bundle dependency='true'>mvn:com.google.code.findbugs/jsr305/${jsr305.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-protobuf/${upstream.version}</bundle>
     </feature>
@@ -2789,7 +2790,7 @@
     </feature>
     <feature name='camel-slack' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
-        <bundle dependency='true'>mvn:com.google.code.gson/gson/${gson-version}</bundle>
+        <bundle dependency='true'>mvn:com.google.code.gson/gson/${gson.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.slack.api/slack-api-client/${slack-api-model-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.slack.api/slack-api-model/${slack-api-model-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.squareup.okhttp3/okhttp/${okhttp4.tesb.version}$Bundle-SymbolicName=com.squareup.okhttp3.okhttp</bundle>
@@ -2887,9 +2888,10 @@
         <bundle dependency='true'>wrap:mvn:org.springframework.data/spring-data-redis/${spring-data-redis.tesb.version}</bundle>
         <bundle dependency='true'>wrap:mvn:org.springframework.data/spring-data-keyvalue/${spring-data-redis.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.apache.commons/commons-pool2/${commons-pool2.tesb.version}</bundle>
-        <bundle dependency='true'>mvn:com.google.code.gson/gson/${gson-version}</bundle>
+        <bundle dependency='true'>mvn:com.google.code.gson/gson/${gson.tesb.version}</bundle>
         <bundle dependency="true">mvn:org.json/json/${auto-detect-version}</bundle>
         <bundle>mvn:redis.clients/jedis/${auto-detect-version}</bundle>
+        <bundle dependency="true">mvn:redis.clients.authentication/redis-authx-core/${auto-detect-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-spring-redis/${upstream.version}</bundle>
     </feature>
     <feature name='camel-spring-security' version='${upstream.version}' start-level='50'>
