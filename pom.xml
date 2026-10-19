@@ -180,6 +180,7 @@
         <!-- <camel-support.tesb.version>4.8.1.20250320</camel-support.tesb.version> -->
 
         <cxf.tesb.version>4.1.8.1</cxf.tesb.version>
+        <cxf-rt-rs-security-jose.tesb.version>4.1.8.1.20261007</cxf-rt-rs-security-jose.tesb.version>
         <jetty9.tesb.version>9.4.58.v20250814</jetty9.tesb.version>
         <jetty11.tesb.version>11.0.26</jetty11.tesb.version>
         <jetty12.tesb.version>12.0.37</jetty12.tesb.version>
@@ -1035,6 +1036,7 @@
                             <camel-management-api.tesb.version>${camel-management-api.tesb.version}</camel-management-api.tesb.version>
                             <!-- <camel-support.tesb.version>${camel-support.tesb.version}</camel-support.tesb.version> -->
                             <cxf.tesb.version>${cxf.tesb.version}</cxf.tesb.version>
+                            <cxf-rt-rs-security-jose.tesb.version>${cxf-rt-rs-security-jose.tesb.version}</cxf-rt-rs-security-jose.tesb.version>
                             <jetty9.tesb.version>${jetty9.tesb.version}</jetty9.tesb.version>
                             <jetty11.tesb.version>${jetty11.tesb.version}</jetty11.tesb.version>
                             <jetty12.tesb.version>${jetty12.tesb.version}</jetty12.tesb.version>
