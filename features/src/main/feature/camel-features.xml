@@ -2751,7 +2751,7 @@
         <bundle dependency='true'>mvn:org.apache.ws.xmlschema/xmlschema-core/${xmlschema.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.apache.cxf/cxf-rt-rs-security-oauth2/${cxf.tesb.version}</bundle>
         <bundle dependency='true'>mvn:org.apache.cxf/cxf-rt-rs-security-jose-jaxrs/${cxf-version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.cxf/cxf-rt-rs-security-jose/${cxf-version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.cxf/cxf-rt-rs-security-jose/${cxf-rt-rs-security-jose.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-servicenow/${upstream.version}</bundle>
     </feature>
     <feature name='camel-servlet' version='${upstream.version}' start-level='50'>
