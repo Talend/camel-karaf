@@ -1530,7 +1530,7 @@
     </feature>
     <feature name='camel-gson' version='${upstream.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
-        <bundle dependency='true'>mvn:com.google.code.gson/gson/${auto-detect-version}</bundle>
+        <bundle dependency='true'>mvn:com.google.code.gson/gson/${gson.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-gson/${upstream.version}</bundle>
     </feature>
     <feature name='camel-guava-eventbus' version='${upstream.version}' start-level='50'>
