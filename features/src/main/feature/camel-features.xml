@@ -1794,7 +1794,7 @@
         <bundle dependency='true'>wrap:mvn:com.atlassian.sal/sal-api/${sal-api-version}$overwrite=merge&amp;Import-Package=*;resolution:=optional&amp;Export-Package=com.atlassian.sal.api*;version=${sal-api-version}</bundle>
         <bundle dependency='true'>mvn:io.atlassian.util.concurrent/atlassian-util-concurrent/${auto-detect-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.http-client/google-http-client/${auto-detect-version}$overwrite=merge&amp;Import-Package=com.google.common*;version="[33,34)",*</bundle>
-        <bundle dependency='true'>wrap:mvn:com.google.http-client/google-http-client-gson/${auto-detect-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:com.google.http-client/google-http-client-gson/${auto-detect-version}$overwrite=merge&amp;Import-Package=com.google.api.client.json,*</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.oauth-client/google-oauth-client/${google-oauth-client-version}$overwrite=merge&amp;Import-Package=com.google.common*;version="[33,34)",*</bundle>
         <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-contrib-http-util/${auto-detect-version}$Import-Package=javax.annotation;version="[3,4)",*</bundle>
         <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-api/${auto-detect-version}$Import-Package=javax.annotation;version="[3,4)",*</bundle>
