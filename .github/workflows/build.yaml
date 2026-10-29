@@ -1,0 +1,154 @@
+# GitHub Actions replacement for the former Jenkinsfile.talend (shared-lib step `Fork`):
+#   Package distribution -> Sanity check (manual approval) -> Deploy distribution.
+# Deployment never runs for pull requests: it needs a manual workflow_dispatch with `deploy` ticked,
+# plus approval on the `global-artifacts-deploy` environment.
+# Packages are read from / published to GitHub Packages (Talend/global-artifacts) with the CI_BUILD_DPE_PAT secret (read:packages, plus write:packages for deploy):
+# the repository must be granted access in the package settings of global-artifacts (read for build, write for deploy).
+name: Build
+
+on:
+  push:
+    branches: ['tesb/**', 'maintenance/**']
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      mvn_modules:
+        description: 'Modules to build (default: MVN_MODULES below)'
+        required: false
+        type: string
+      deploy:
+        description: 'Deploy to global-artifacts after the build (needs approval on the environment)'
+        required: false
+        default: false
+        type: boolean
+      deploy_goal:
+        description: 'Maven deploy goal'
+        required: false
+        default: deploy
+        type: string
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  packages: read
+
+env:
+  MVN_MODULES: 'org.apache.camel.karaf:camel-karaf-feature-maven-plugin,org.apache.camel.karaf:camel-api,org.apache.camel.karaf:camel-base,org.apache.camel.karaf:camel-base-engine,org.apache.camel.karaf:camel-blueprint,org.apache.camel.karaf:camel-console,org.apache.camel.karaf:camel-core-engine,org.apache.camel.karaf:camel-core-model,org.apache.camel.karaf:camel-core-processor,org.apache.camel.karaf:camel-core-reifier,org.apache.camel.karaf:camel-main,org.apache.camel.karaf:camel-management,org.apache.camel.karaf:camel-management-api,org.apache.camel.karaf:camel-support,org.apache.camel.karaf:camel-vm,org.apache.camel.karaf:camel-activemq,org.apache.camel.karaf:camel-activemq6,org.apache.camel.karaf:camel-amqp,org.apache.camel.karaf:camel-as2,org.apache.camel.karaf:camel-aws2-kinesis,org.apache.camel.karaf:camel-aws2-s3,org.apache.camel.karaf:camel-aws2-sqs,org.apache.camel.karaf:camel-aws2-sns,org.apache.camel.karaf:camel-azure-storage-blob,org.apache.camel.karaf:camel-azure-storage-datalake,org.apache.camel.karaf:camel-coap,org.apache.camel.karaf:camel-cometd,org.apache.camel.karaf:camel-consul,org.apache.camel.karaf:camel-crypto,org.apache.camel.karaf:camel-cxf-all,org.apache.camel.karaf:camel-cxf-blueprint,org.apache.camel.karaf:camel-cxf-spring-all,org.apache.camel.karaf:camel-cxf-transport-blueprint,org.apache.camel.karaf:camel-cxf-transport-jetty,org.apache.camel.karaf:camel-debezium-common,org.apache.camel.karaf:camel-debezium-db2,org.apache.camel.karaf:camel-debezium-mongodb,org.apache.camel.karaf:camel-debezium-mysql,org.apache.camel.karaf:camel-debezium-oracle,org.apache.camel.karaf:camel-debezium-postgres,org.apache.camel.karaf:camel-debezium-sqlserver,org.apache.camel.karaf:camel-direct,org.apache.camel.karaf:camel-dns,org.apache.camel.karaf:camel-drill,org.apache.camel.karaf:camel-dynamic-router,org.apache.camel.karaf:camel-file,org.apache.camel.karaf:camel-google-pubsub,org.apache.camel.karaf:camel-http-base,org.apache.camel.karaf:camel-http-common,org.apache.camel.karaf:camel-http,org.apache.camel.karaf:camel-infinispan,org.apache.camel.karaf:camel-jaxb,org.apache.camel.karaf:camel-jms,org.apache.camel.karaf:camel-jsonpath,org.apache.camel.karaf:camel-kafka,org.apache.camel.karaf:camel-knative-http,org.apache.camel.karaf:camel-kubernetes,org.apache.camel.karaf:camel-langchain4j-core,org.apache.camel.karaf:camel-langchain4j-chat,org.apache.camel.karaf:camel-langchain4j-tools,org.apache.camel.karaf:camel-leveldb,org.apache.camel.karaf:camel-mail,org.apache.camel.karaf:camel-mina,org.apache.camel.karaf:camel-minio,org.apache.camel.karaf:camel-mongodb,org.apache.camel.karaf:camel-mongodb-gridfs,org.apache.camel.karaf:camel-netty-http,org.apache.camel.karaf:camel-observation,org.apache.camel.karaf:camel-pdf,org.apache.camel.karaf:camel-platform-http,org.apache.camel.karaf:camel-platform-http-jolokia,org.apache.camel.karaf:camel-quartz,org.apache.camel.karaf:camel-ref,org.apache.camel.karaf:camel-rest-openapi,org.apache.camel.karaf:camel-salesforce,org.apache.camel.karaf:camel-sjms,org.apache.camel.karaf:camel-sjms2,org.apache.camel.karaf:camel-smb,org.apache.camel.karaf:camel-solr,org.apache.camel.karaf:camel-spring,org.apache.camel.karaf:camel-sql,org.apache.camel.karaf:camel-tika,org.apache.camel.karaf:camel-tracing,org.apache.camel.karaf:camel-undertow,org.apache.camel.karaf:camel-vertx-http,org.apache.camel.karaf:apache-camel'
+  GITHUB_ACTOR: ci-build-dpe
+  GLOBAL_ARTIFACTS_TOKEN: ${{ secrets.CI_BUILD_DPE_PAT }}
+  GLOBAL_ARTIFACTS_URL: https://maven.pkg.github.com/Talend/global-artifacts
+  # ${GLOBAL_ARTIFACTS_URL} is expanded by the `Maven options` step (the env context is not available in a workflow-level env)
+  MAVEN_CUSTOM_OPTIONS: >-
+    -U -B
+    -DaltReleaseDeploymentRepository=global-artifacts::default::${GLOBAL_ARTIFACTS_URL}
+    -DaltSnapshotDeploymentRepository=global-artifacts::default::${GLOBAL_ARTIFACTS_URL}
+    -Dorg.slf4j.simpleLogger.showDateTime=true -Dorg.slf4j.simpleLogger.dateTimeFormat=HH:mm:ss,SSS
+
+jobs:
+  build:
+    name: Package distribution
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    outputs:
+      modules: ${{ steps.modules.outputs.modules }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: '17'
+          # writes ~/.m2/settings.xml with the `global-artifacts` server (same id as the repository in the poms)
+          server-id: global-artifacts
+          server-username-env-var: GITHUB_ACTOR
+          server-password-env-var: GLOBAL_ARTIFACTS_TOKEN
+      - name: "Maven dependencies cache"
+        uses: actions/cache@v6
+        with:
+          path: "~/.m2/repository"
+          key: m2-${{ hashFiles('**/pom.xml') }}-build
+          restore-keys: |
+            m2-${{ hashFiles('**/pom.xml') }}
+            m2
+      - name: Maven options
+        run: echo "MAVEN_CUSTOM_OPTIONS=${MAVEN_CUSTOM_OPTIONS//'${GLOBAL_ARTIFACTS_URL}'/$GLOBAL_ARTIFACTS_URL}" >> "$GITHUB_ENV"
+
+      - name: Resolve MVN_MODULES
+        id: modules
+        env:
+          INPUT_MODULES: ${{ inputs.mvn_modules }}
+        run: echo "modules=${INPUT_MODULES:-$MVN_MODULES}" >> "$GITHUB_OUTPUT"
+
+      - name: mvn install
+        env:
+          MVN_MODULES: ${{ steps.modules.outputs.modules }}
+        run: |
+          mvn --version
+          if [ "$MVN_MODULES" = "ALL" ]; then
+            mvn install $MAVEN_CUSTOM_OPTIONS -DskipTests -Dmaven.test.skip.exec=true
+          else
+            mvn install $MAVEN_CUSTOM_OPTIONS -pl "$MVN_MODULES" -DskipTests
+          fi
+
+  deploy:
+    name: Deploy distribution
+    needs: build
+    # Jenkins: `input 'Do you want to proceed to the Deployment?'`. Here: required reviewers on the
+    # `global-artifacts-deploy` environment (Settings > Environments). Never on pull requests.
+    if: github.event_name == 'workflow_dispatch' && inputs.deploy && github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    environment: global-artifacts-deploy
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: '17'
+          server-id: global-artifacts
+          server-username-env-var: GITHUB_ACTOR
+          server-password-env-var: GLOBAL_ARTIFACTS_TOKEN
+
+      - name: "Maven dependencies cache"
+        uses: actions/cache@v6
+        with:
+          path: "~/.m2/repository"
+          key: m2-${{ hashFiles('**/pom.xml') }}-build
+          restore-keys: |
+            m2-${{ hashFiles('**/pom.xml') }}
+            m2
+      - name: Maven options
+        run: echo "MAVEN_CUSTOM_OPTIONS=${MAVEN_CUSTOM_OPTIONS//'${GLOBAL_ARTIFACTS_URL}'/$GLOBAL_ARTIFACTS_URL}" >> "$GITHUB_ENV"
+
+      - name: mvn deploy
+        env:
+          MVN_MODULES: ${{ needs.build.outputs.modules }}
+          MVN_DEPLOY_GOAL: ${{ inputs.deploy_goal }}
+        run: |
+          if [ "$MVN_MODULES" = "ALL" ]; then
+            mvn "$MVN_DEPLOY_GOAL" $MAVEN_CUSTOM_OPTIONS -DskipTests -Dmaven.test.skip.exec=true
+          else
+            mvn "$MVN_DEPLOY_GOAL" $MAVEN_CUSTOM_OPTIONS -pl "$MVN_MODULES" -DskipTests
+          fi
+
+  notify:
+    name: Slack notification
+    needs: [build]
+    if: always() && github.event_name != 'pull_request' && needs.build.result != 'skipped'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Slack
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          RESULT: ${{ contains(needs.*.result, 'failure') && 'FAILURE' || contains(needs.*.result, 'cancelled') && 'ABORTED' || 'SUCCESS' }}
+        run: |
+          [ -n "$SLACK_WEBHOOK_URL" ] || { echo "SLACK_WEBHOOK_URL not set, skipping"; exit 0; }
+          curl -sf -X POST -H 'Content-type: application/json' \
+            --data "{\"text\":\"FORK ${GITHUB_REPOSITORY} ${RESULT} (<${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}|#${GITHUB_RUN_NUMBER}> | ${GITHUB_REF_NAME})\"}" \
+            "$SLACK_WEBHOOK_URL"
