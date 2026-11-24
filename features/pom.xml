@@ -95,8 +95,8 @@
                     <descriptors>
                         <descriptor>file:${project.build.directory}/feature/camel-features.xml</descriptor>
                         <descriptor>mvn:org.apache.karaf.features/specs/${karaf-framework.tesb.version}/xml/features</descriptor>
-                        <descriptor>mvn:org.apache.karaf.features/standard/${karaf-framework.tesb.version}/xml/features</descriptor>
-                        <descriptor>mvn:org.apache.karaf.features/spring/${karaf-framework.tesb.version}/xml/features</descriptor>
+                        <descriptor>mvn:org.apache.karaf.features/standard/${karaf-standard.tesb.version}/xml/features</descriptor>
+                        <descriptor>mvn:org.apache.karaf.features/spring/${karaf-spring.tesb.version}/xml/features</descriptor>
                         <descriptor>mvn:org.apache.karaf.features/framework/${karaf-framework.tesb.version}/xml/features</descriptor>
                     </descriptors>
                     <distribution>org.apache.karaf.features:framework</distribution>
