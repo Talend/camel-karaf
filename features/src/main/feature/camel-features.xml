@@ -280,7 +280,7 @@
         <bundle>mvn:org.apache.camel.karaf/camel-tooling-model/${upstream.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-main/${camel-main.tesb.version}</bundle>
         <!-- core components -->
-        <bundle>mvn:org.apache.camel.karaf/camel-bean/${upstream.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-bean/${camel-bean.tesb.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-browse/${upstream.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-controlbus/${upstream.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-dataformat/${upstream.version}</bundle>
